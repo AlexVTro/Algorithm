@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Кнопка</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>Основное предназначение этого объекта - улавливать клики по нему.</text>
+      </p>
+      <p>
+        <textAll><b>Кнопки</b> это стандартный элемент программ, с помощью них пользователь может управлять действиями 
+        вашей программы. Как и любой объект программировать его можно задавая <b>события</b> и <b>свойства</b>.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>События</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и команды</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Object events.html">Объект события</link><br/>
+      Другие <link file="Objects.html">Объекты</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

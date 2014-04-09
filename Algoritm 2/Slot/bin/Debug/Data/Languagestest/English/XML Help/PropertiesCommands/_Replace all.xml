@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Replace all</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>It searches the text <b> all </b> line, similar to the search pattern. And replaces <b> all </b> these lines to the texts referred to as the replacement text.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Chars length.html"> number of characters </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

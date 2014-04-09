@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Index of regular</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          The command searches in the text a specified pattern of <b>regular expression</b> (e.g. "Image1\.(jpg|gif|png)") and returns the number of character the string starts with.
+          In case nothing was found the command returns "0".
+          How to compose  regular expressions learn there: http://en.wikipedia.org/wiki/Regexp.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of ignore case.html">_Index of ignore case</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Substring.html">_Substring</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

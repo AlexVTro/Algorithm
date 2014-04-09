@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Label</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>The main purpose of this object - display the text that you enter it.</text>
+      </p>
+      <p>
+        <textAll>
+          <b> Signs </b> is a standard element of the program, with the help of them you communicate <b> information </b> to the users of your program. Like any object can be programmed by setting <b> Events </b> and <b> properties </b>.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents />
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и команды</name>
+            <descr>
+              <descrProperties />
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Object events.html"> event object </link>
+      <br /> Other <link file="Objects.html"> Objects </link><br /><link file="UsefulObjects.html"> Useful sites </link><br /></seealso>
+  </file>
+</xml>

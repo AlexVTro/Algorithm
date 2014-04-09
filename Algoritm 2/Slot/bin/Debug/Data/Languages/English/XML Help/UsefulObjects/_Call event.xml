@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Call event</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">Useful Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Using this useful object you can <b>call</b> any <link file="Environment/EventPart.html">event</link> of the program (click, text input, mouse movement) independently of the user actions.
+        </text>
+      </p>
+      <p>
+        <textAll>
+          Example:
+          <imgMy src="_Call event.jpg"></imgMy>
+
+          There <b>Double click</b> on the <b>Button2</b> initiates actions of absolutely <b>other</b> event -
+          of <b>Click</b> on the <b>Button1</b>. Thus the same actions are executed both on click on the <b>Button1</b> and on double click on the <b>Button2</b> (in the example the text of the Label1 is changed). This is a very convenient method in cases there are a <b>lot</b> of different buttons executing the <b>same</b> actions.
+        </textAll>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Environment/EventPart.html">Events</link><br/>
+      Other <link file="UsefulObjects.html">Useful Objects</link><br/>
+    </seealso>
+
+  </file>
+</xml>

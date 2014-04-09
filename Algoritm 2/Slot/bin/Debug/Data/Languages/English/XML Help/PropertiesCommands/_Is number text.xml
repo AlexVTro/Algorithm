@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Is number text</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Checks whether a text is a number or not ("23", "-12,54", "3,2+E12").
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Is numeric text.html">_Is numeric text</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Consist all.html">_Consist all</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of regular.html">_Index of regular</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

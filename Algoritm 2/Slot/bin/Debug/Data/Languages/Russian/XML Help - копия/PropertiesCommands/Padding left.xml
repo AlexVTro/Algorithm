@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Поле слева</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text><b>Участок</b> в левой части объекта, на который не может залезать текст объекта. 
+        Текст будет располагаться правее этого участка.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

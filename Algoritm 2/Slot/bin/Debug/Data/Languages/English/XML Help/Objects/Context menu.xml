@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Context menu</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>This <b>menu</b> usually opens when the user clicks the <b>right</b> button of the mouse. It consists of 
+        <link file="Objects/Items.html">Menu items</link>.</text>
+      </p>
+      <p>
+        <textAll>With the help of the property 
+        <link file="Objects/Window/PropertiesCommands/Context menu.html">Context menu</link> you can assign the objects the <b>Context menu</b>. 
+        After the assignment has been done the click of the right button opens the menu, the <b>name</b> of which is specified in this property.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+
+              <descrProperties/>
+
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Objects/Items.html">Items</link><br/>
+      <link file="UsefulObjects/_Object events.html">Object events</link><br/>
+      Other <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful objects</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

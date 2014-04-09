@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Рисунок</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Рисунок, который будет расположен на объекте. Он будет позади 
+        <link file="Objects\Window\PropertiesCommands\Text.html">текста</link>, но поверх 
+        <link file="Objects\Window\PropertiesCommands\Background image.html">фонового рисунка</link></text>
+      </p>
+      <p>
+        <textAll>
+          <b>Рисунок</b> задается указанием пути к файлу картинки.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+      <text>Путь к рисунку может задаваться как <b>абсолютный</b>, т.е. начинаясь с буквы жесткого диска</text>
+      <codesnip>
+<![CDATA["C:\Images\pic.jpg"]]></codesnip>
+      <text>Так и <b>относительный</b>. В этом случает путь начинает считаться от папки в которой располагается ваш проект</text>
+      <codesnip>
+<![CDATA["\Images\pic.jp"]]></codesnip>
+</remarks>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Варианты изменения рисунка у главного окна</sampletitle>
+        <samplecode>
+<![CDATA[Окно1.Окно1.Рисунок = "C:\1.bmp"
+Окно1.Окно1.Рисунок = "\1.bmp"
+Окно1.Окно1.Рисунок = мои документы & "\2.jpg"
+Окно1.Окно1.Рисунок = Окно1.Кнопка1.Фоновой рисунок]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <link file="Programming/HelpWords.html">Вспомогательные слова</link>, такие как основные
+      <link file="Programming/HelpWords.html#Paths">Папки</link><br/>
+      Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

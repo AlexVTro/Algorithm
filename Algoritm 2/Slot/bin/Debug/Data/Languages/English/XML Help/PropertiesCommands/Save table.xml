@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Save table</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          The command <b>saves</b> a table into specified file. Saving has a <b>simple text format</b>, that's why a saved file can be easily opened (e.g. with notepad) and <b>edited</b>.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link2 file="Open table.html">Open table</link2><br/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+      <eventsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

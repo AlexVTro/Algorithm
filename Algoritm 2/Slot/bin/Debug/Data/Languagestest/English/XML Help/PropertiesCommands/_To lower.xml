@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>To lower</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>command makes all the letters in the text <b> capital </b>, ie translates into lower case ( "A" -!&gt; "a")</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_To upper.html"> Make letters to uppercase </link>
+      <br />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Substring.html"> Take a piece text </link>
+      <br />
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

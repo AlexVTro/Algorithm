@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>_Заменить все</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Ищет в тексте <b>все</b> строки, похожие на шаблон поиска.
+        И заменяет <b>все</b> эти строки на тексты, которые указаны как текст для замены.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Chars length.html">Количество символов</link><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

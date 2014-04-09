@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Download file</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Downloads a file from the Internet using url specified in the field "Url" of the property <b>Download file</b>.</text>
+      </p>
+      <p>
+        <textAll>
+	 
+   </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+     
+      <text>Subproperty "Wait for download" defines whether it is necessary to wait for completion of file loading ("Yes"), or to execute other actions while the file is being downloaded ("No").</text>
+    </remarks>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle></sampletitle>
+        <samplecode>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><li/><propsLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

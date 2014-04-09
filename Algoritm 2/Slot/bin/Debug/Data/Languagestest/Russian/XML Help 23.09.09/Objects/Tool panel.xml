@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Панель инструментов</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text><b>Панель инструментов</b> это набор различных кнопок, собранных в одной панели. Эти кнопки называются
+        <link file="Objects/Items.html">Пункты панели</link>.</text>
+      </p>
+      <p>
+        <textAll><b>Панель инструментов</b> обычно заполняют часто-используемыми пунктами 
+        <link file="Objects/Menu.html">Главного меню</link>.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>События</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и команды</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Objects/Items.html">Пункт панели</link><br/>
+      <link file="UsefulObjects/_Object events.html">Объект события</link><br/>
+      Другие <link file="Objects.html">Объекты</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

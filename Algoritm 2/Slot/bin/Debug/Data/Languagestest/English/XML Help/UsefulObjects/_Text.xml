@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Text</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Facility provides opportunities to work with <b> text </b>, such as searching the text, replace, breaking the text into parts, etc.</text>
+      </p>
+      <p>
+        <textAll>The object is in <link file="Environment/Master.html"> master complex actions </link>.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+              <descrProperties />
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="UsefulObjects.html"> Other Useful Objects </link>
+    </seealso>
+  </file>
+</xml>

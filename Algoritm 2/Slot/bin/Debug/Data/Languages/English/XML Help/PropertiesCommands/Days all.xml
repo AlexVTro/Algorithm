@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Days all</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>Indicates the <b>number of days</b> a trial period can be set for.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link2 file="Days left.html">Days left</link2><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

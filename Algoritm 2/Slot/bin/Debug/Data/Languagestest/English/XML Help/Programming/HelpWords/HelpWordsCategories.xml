@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<hws>
+  <hw cat="others">
+    <text> In this category of speech that are not included in other categories. Here are the most common  and the right words. For example the word "<b> Yes </b>" and "<b> No </b>" is used in a large number of properties, such as Apparent, bold font, it works. And the word "<b> No </b>" is used wherever necessary to give the property an empty value, for example to remove <link file="Objects/Window/PropertiesCommands/Background image.html"> wallpaper </link> at the window Assign this property the word "No". <codesnip> Window1.Window1.Tsvet = NikakoyWindow1.Knopka1.Rabotaet = DaWindow1.Window1.Vidimy = "no" </codesnip><br /><br /><b><i> list of all the words: </i></b><br /></text>
+  </hw>
+  <hw cat="colors">
+    <text> Here are collected all the basic <b> color </b>. Equating one of the auxiliary words of this group (red, blue, yellow) to any color properties (color of the font, color, color cells), you paint the object in the desired color. <codesnip> Window1.Window1.Tsvet = zheltyyWindow1.Knopka1.Tsvet font = yarkoSiniyWindow1.Window1.Tsvet = "red" </codesnip> In addition to the use of auxiliary properties, you can specify color numbers. More about this in the property <link file="Objects/Window/PropertiesCommands/Back color.html"> Color </link><br /><br /><b><i> list of all available colors: </i></b><br /></text>
+  </hw>
+</hws>

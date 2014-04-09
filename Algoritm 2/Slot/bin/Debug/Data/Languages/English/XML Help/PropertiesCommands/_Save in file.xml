@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Save in file</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          The command saves a text or data into the specified file. If the file contains data it is replaced comletely by a new one. If you want just to append the file then use the command <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Append text.html">_Append text</link>
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Append text.html">_Append text</link><br/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Save picture.html">_Save picture</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link>
+      such as <link file="Programming/HelpWords.html#Paths">Paths</link><br/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Exist file.html">_Exist file</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

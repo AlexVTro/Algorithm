@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>_Разбить на части без кавычек</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Позволяет любой текст разбить на части, разделяемые каким-либо символом или строкой. И потом возвращает ту часть
+          текста, номер которой вы укажите. Если во время поиска в тексте встертится кусок текста,
+          обособленный кавычками, то этот кусок пропускается и поиск в нем не производится. 
+        </text>
+        <p>
+          <textAll>
+            Например, если разбить текст <i>Привет, как " , " дела, а?</i> на части, указав
+            разделительным символом ",". То текст разобьется на <i>'привет'</i>, <i>' как " , " дела'</i>
+            и <i>' а?'</i>. И если вы укажите в качестве номера части 2, то получите текст <i>' как " , " дела'</i>.
+
+            Часто необходимо знать, на <b>сколько частей</b> разбился текст. Это доступно командой
+            <link file="UsefulObjects/_Text/PropertiesCommands/_Split without quotes count.html">Количество частей без кавычек</link>.
+          </textAll>
+        </p>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split without quotes count.html">Количество частей без кавычек</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Delete quotes.html">Кавычки убрать</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

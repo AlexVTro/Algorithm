@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Save table</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>command saves  table in that you specify. Preservation is in <b> simple text </b> form, so the saved file can be easily opened by any means (such as Notepad) and edit .</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link2 file="Open table.html"> Open Table </link2>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br /> Other <propsLink /> object <objLink /><br /><eventsLink /> object <objLink /></seealso>
+  </file>
+</xml>

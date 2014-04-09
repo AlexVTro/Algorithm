@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>_Убрать пробелы</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Убирает из конца текста и из начала все пробельные символы (пробелы, символы табуляции, абзацев).
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Trim start.html">Убрать пробелы в начале</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Trim end.html">Убрать пробелы в конце</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

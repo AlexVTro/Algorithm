@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>ID программы</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Для <b>каждой</b> вашей программы генерируется её <b>уникальный ID программы</b>. Все ключи регистрации выдаются
+          на опреденный <b>ID программы</b>. Если вы его измените, то и ранее выданные ключи (на старый ID)
+          не подойдут на новый ID. Также неизменным должен оставаться <link2 file="Key encryption.html">Ключ шифрования</link2>.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <remarks>
+      <text>
+        Если вы используете два объекта Триал - например, один для ввода ключа активации, другой для генерации этих ключей
+        (как в примере <i>Примеры\Сложные проекты\Триал</i>), то следите, чтобы <b>Id программы</b> и <b>Ключ шифрования</b>
+        у них были <b>одинаковые</b>!
+      </text>
+    </remarks>
+ 
+    <seealso>
+      <est/>
+      <link2 file="Id user.html">ID пользователя</link2><br/>
+      <link2 file="Key issue.html">Ключ активации выдать</link2><br/>
+      Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

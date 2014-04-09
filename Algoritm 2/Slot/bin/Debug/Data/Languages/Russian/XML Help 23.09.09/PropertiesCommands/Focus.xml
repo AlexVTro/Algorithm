@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Получить фокус</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Команда <b>получить 
+        <link2 file="Focused.html">фокус</link2></b> делает объект активным и именно с ним будет
+        работает пользователь (например получить фокус <link file="Objects/Text.html">текстовым полем</link>,
+        и последующие нажатия кнопок пользователя будут печататься в текстовом поле).</text>
+      </p>
+      <textAll>
+        <p>
+          Понятие <b>фокус</b> имеет такое же значение как и в фотоаппаратах, т.е. быть в фокусе значит
+          быть в центре внимания. В данном случае быть объектом внимания пользователся. Если объект не в фокусе,
+          то объект все равно в <b>рабочем состоянии</b>, просто пользователь скорее всего его 
+          пока не использует.
+        </p>
+        </textAll>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

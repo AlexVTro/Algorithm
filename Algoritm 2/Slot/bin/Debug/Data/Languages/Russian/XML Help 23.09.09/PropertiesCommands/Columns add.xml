@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Добавить столбец</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Команда <b>добавляет</b> в правом крае таблицы еще один столбец.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link2 file="Columns width.html">Ширина столбца</link2><br/>
+      <link2 file="Columns insert.html">Вставить столбец</link2><br/>
+      <link2 file="Colums remove.html">Удалить столбец</link2><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+      <eventsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

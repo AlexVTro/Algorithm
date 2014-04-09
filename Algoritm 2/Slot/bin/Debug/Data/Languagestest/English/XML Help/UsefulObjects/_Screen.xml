@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Screen</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Object provides access to the properties and command <b> Monitor </b> and <b> desktop </b>.</text>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+              <descrProperties />
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="UsefulObjects.html"> Other Useful Objects </link>
+    </seealso>
+  </file>
+</xml>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>SQL запрос изменения</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          комманда выполняет запрос типа <b>INSERT, UPDATE, DELETE</b>, изменяя таким образом данные в базе данных. Подробнее об SQL:
+          <i>http://sitemaker.ru/technologies/database/sqlqueries/</i>
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link2 file="SQL query select.html">SQL запрос выборки</link2><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+      <eventsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

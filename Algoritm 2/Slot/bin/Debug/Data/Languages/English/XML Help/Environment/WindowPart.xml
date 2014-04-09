@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Window panel</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Development environment</link>
+        ->
+        <link file="Environment/WindowPart.html">Window panel</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Window</b> is a panel where you project graphic design of your program by placing  different <link file="Objects.html">objects</link> <b> in the area of the window panel</b> (buttons, text boxes, tables).
+        </text>
+      </p>
+      <textAll>
+        <p>
+          <b>All objects</b> can be relocated in any way or brought to the front. You can also change sizes,
+          <link file="Programming/Array.html">create arrays</link> and so on.
+        </p>
+        <p>
+          The number of windows is unlimited. For convenience each new window occupies a separate tab.
+        </p>
+        <p>
+          Some objects (memory cells, a stopwatch, print dialog) are located not in the window panel,
+          but on the panel below. These are not graphical objects, but <b>software objects</b>.
+          Such objects are hidden when the program works as they are designed for 
+          <b>auxiliary operations</b> (e.g. data storage, time reckoning, printing)
+        </p>
+      </textAll>
+    </descriptionarticle>
+   
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development environment</link><br/>
+      <link file="Objects.html">Objects</link><br/>
+    </seealso>
+  </file>
+</xml>

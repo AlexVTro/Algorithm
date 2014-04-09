@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Rows</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Rows are data recorded in the table. Rows are specified in the form of
+          "Row1" | "Row1", "Row2" | "Row2" and divided with commas (","). 
+          So the first row of the table is - <i>"Row1" | "Row1"</i>, the second row is <i>"Row2" | "Row2"</i>.
+          Cells inside of one row are divided with the symbol ("|"), i.e. a row <i>"Row1" | "Row1"</i> consists of two cells and every cell contains <i>Row1</i>.
+        </text>
+      </p>
+    </descriptionarticle>
+    <remarks>
+      <text>
+        Quotes in the record <i>"Row1" | "Row1", "Row2" | "Row2"</i> are obligatory. If you want to change columns in the process of program work, then the action should be as follows:
+        <codesnip>
+          <![CDATA[Window1.Table1.Rows = """Row1"" | ""Row1"", ""Row2"" | ""Row2"""]]></codesnip>
+        As two double quotes ("") inside of the text are converted into one double (") we'll get eventually: "Row1" | "Row1", "Row2" | "Row2"
+      </text>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link2 file="Columns.html">Columns</link2><br/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+      <eventsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

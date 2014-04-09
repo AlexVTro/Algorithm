@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Split count</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Is used to know into how many parts the text can be split when its parts are divided by a symbol or a line. For example, if to split the text "Hi! How do you do?" into parts with "!" as a splitter then the text will be split into "Hi" and  "How do you do?" and the command will return the number of parts - "2".
+        </text>
+        <textAll>
+          If you want to get some part of the text then use the command
+          <link file="UsefulObjects/_Text/PropertiesCommands/_Split.html">_Split</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split.html">_Split</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split without quotes.html">_Split without quotes</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

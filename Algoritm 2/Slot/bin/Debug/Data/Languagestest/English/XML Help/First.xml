@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>MY FIRST DRAFT</title>
+    <breadcumbs>
+      <link file="First.html"> My first project </link>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>For <b> dating </b> with the development environment Algorithm 2, let's create a simple project  "The calculation of weight." This program will calculate how much your optimal weight , depending on your <b> growth </b>. Work it will be as follows: the user enters a window, your weight and height, and on pressing the button the program displays the result.</text>
+      </p>
+      <textAll>
+        <imgMy src="First0.jpg">
+        </imgMy>
+        <p>
+          <b> created </b> this project you will get all the basic skills  work in the development environment <b> Algorithm 2 </b>. It takes no more than 30 minutes. Well <link file="First/Step1.html"> Let us get down </link>! </p>
+      </textAll>
+    </descriptionarticle>
+    <remarks>
+      <text>
+        <p> project, which we will create here, lies in <b> Projects \ Examples \ Calculation of weight </b>. So do not necessarily do all the steps in the guide, but it is desirable, especially if you are a beginner in the development environment <b> algorithm </b>. </p>
+        <p> This guide is also available as a video tutorial. View it from the menu <b> Help </b> -&gt; <b> video lesson </b>. At <b> official website </b> program <url file="http://www.Algoritm2.ru"> www.Algoritm2.ru </url> available to other video tutorials, <b> search help </b> and other useful information for the development IDE <b> Algorithm 2 </b>. </p>
+      </text>
+    </remarks>
+    <seealso>
+      <est />
+      <link file="Environment.html"> development environment </link>
+      <br />
+      <link file="First/Step1.html"> Step 1. Graphical interface. </link>
+      <br />
+      <link file="First/Step2.html"> Step 2. Programming. </link>
+      <br />
+      <link file="First/Step3.html"> Step 3. Conditions. </link>
+      <br />
+    </seealso>
+  </file>
+</xml>

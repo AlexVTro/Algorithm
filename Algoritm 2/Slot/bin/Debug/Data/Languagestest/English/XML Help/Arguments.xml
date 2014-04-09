@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <arguments>
+      <argument rus="Путь к файлу" name="The path to the file">Here you must specify the path to the file. The path should be marked in quotation marks, eg "C: \ 1.jpg" or "\ 2.jpg" (in the second case, the file "2.jpg" must be located in the folder with the project)</argument>
+      <argument rus="Что сохранять" name="What to save">The data that you would like to write.</argument>
+      <argument rus="Рисунок для сохранения" name="Figure to save">Figure, which you would like to keep</argument>
+      <argument rus="Команда Windows или имя файла" name="Windows command or file name">Any command windows, referred to here, do (eg "mkdir C: \ a" - will create a folder "a" on the drive C). Also, run any file (eg "notepad.exe", "C: \ 1.html").</argument>
+      <argument rus="Аргументы" name="Arguments">The data that will give enter commands or program. For example, if you run "explorer" with the argument "http://Algoritm2.ru", then you will open your browser to the site of the algorithm.</argument>
+      <argument rus="Симулировать набор следующего текста" name="Simulate the next set of text">The text specified here (specify the text in double quotes) will be printed in the active window or application, during the execution of this action.</argument>
+      <argument rus="Размер вращения" name="The amount of rotation">The number of wheel revolutions.</argument>
+      <argument rus="Путь к папке" name="The path to the folder">Here you must specify the path to the folder. The path should be marked in quotation marks, eg "C: \ folder \" or \ folder (in the second case, the folder "Folder" should be located in the folder with the project)</argument>
+      <argument rus="Что искать" name="Search">Enter here the name of the file you want to find. You can use the search characters, such as "*","?","+". For example, "a *. jpg" - find all files with extension jpg, starting with "A" (for example, "abcdef.jpg", "a2.jpg", "a.jpg"). "a? c.exe" - will find all the applications, consisting of three letters beginning with "a" and ending in "s" (for example, "abc.exe", "a2c.exe")</argument>
+      <argument rus="Кодировка файла" name="File encoding">The file can be written using different encodings (ASCII, UTF8). Here you can specify which encoding to use to open the file.</argument>
+      <argument rus="Только активное окно" name="Only active window">If you pass a data word "Yes", it will be photographed from the desktop only the active application window. If "No", all located on the screen.</argument>
+      <argument rus="Новый путь к файлу" name="A new path to the file">Place where it will be necessary to copy or move a file. For example, "C: \ 1.jpg" or "\ 2.jpg" (in the second case, the file "2.jpg" will be located in the folder with the project).</argument>
+      <argument rus="Путь к файлу или папке" name="The path to the file or folder">Here you must specify the path to the file or folder. The path should be marked in quotation marks, eg "C: \ 1.jpg" or "\ 2.jpg" (in the second case, the file "2.jpg" must be located in the folder with the project).</argument>
+      <argument rus="Значение атрибута" name="Attribute value">Indicates whether this property is set in the file (meaning "yes") or not ( "None").</argument>
+      <argument rus="Время" name="Time">It should specify the time in double quotes, like this "16/07/2009 0:29:31".</argument>
+      <argument rus="Куда сохранить" name="Where to save">File where to save the screenshot.</argument>
+      <argument rus="Путь реестра" name="Registry Path">The path to the key or a folder in the registry in double quotes. For example, "HKEY_LOCAL_MACHINE \ SOFTWARE \ Microsoft \ Windows \ CurrentVersion \ Run" or "HKCU \ Control Panel \ Mouse"</argument>
+      <argument rus="Значение ключа" name="Key Value">The value of the registry key</argument>
+      <argument rus="Тип ключа" name="Type key">The registry has several types of keys (string, number, binary number). Enter here the desired type.</argument>
+      <argument rus="Порядковый номер строки" name="Number lines">The line number that you need. The first row is number 1, second 2, etc.</argument>
+      <argument rus="Порядковый номер символа" name="Number symbol">Number of characters that you want. The first character has number 1, second 2, etc.</argument>
+      <argument rus="Номер строки" name="Line number">The line number that you need. The first row is number 0, second 1, etc.</argument>
+      <argument rus="Номер столбца" name="Сolumn">Column number, which you need. The first column is number 0, second 1, etc.</argument>
+      <argument rus="Содержимое для столбца" name="The content for the column">The text for each column, row</argument>
+      <argument rus="Начальная строка копирования" name="Start line copy">Line number, which should start to copy inclusive</argument>
+      <argument rus="Количество строк для копирования" name="Count rows to copy">The number of rows that are copied from <i> First-line backup </i></argument>
+      <argument rus="Область выборки" name="Field sampling">Where to find the string. For example if the domain sampling "Leased lines" that this feature will show only the selected rows and seek only to them.</argument>
+      <argument rus="Номера строк через запятую" name="Line numbers separated by commas">List the rows, separated by commas within double quotes, for example, "0,1,8,3" or "2".</argument>
+      <argument rus="Номера столбцов через запятую" name="Сolumn numbers separated by commas">List the columns separated by commas within double quotes, for example, "0,1,8,3" or "2".</argument>
+      <argument rus="Номера столбцов через запятую" name="Column numbers separated by commas">Here you want to specify the columns that will be made of. If the column is one, you can ukat so: "0" - the first column, or "2" - the third. If more than one, then: "0,1,3" - the first second and fourth column.</argument>
+      <argument rus="Номера строк через запятую" name="Line numbers separated by commas">Here you want to specify the string that will be made of. If the string is one, you can ukat so: "0" - the first line or "2" - the third. If more than one, then: "0,1,3" - the first second and fourth lines.</argument>
+      <argument rus="Номер столбца куда вставлять" name="Column where to insert">Column number, which you need. The first column is number 0, second 1, etc.</argument>
+      <argument rus="Текст заголовка столбца" name="The text of the column header">Title column, written in double quotes.</argument>
+      <argument rus="Название таблицы" name="Table name">Table name in database</argument>
+      <argument rus="SQL запрос выборки из базы данных" name="SQL query sample from the database">SQL query SELECT, written in SQL-queries in order to get (sample) data from various databases, such as "SELCET * FROM table_name"</argument>
+      <argument rus="SQL запрос изменения базы данных" name="SQL query changes in the database">SQL query in order to change the data in the database (queries INSERT, UPDATE, DELETE), for example, "DELETE * FROM table_name"</argument>
+      <argument rus="Тип базы данных" name="Data base type">Database - an organized repository of information. The algorithm supports two types of long Databases: Access and Excel.</argument>
+      <argument rus="Номер начальной строки" name="Number first lines">String that is common to the sample. The first line has the number "0".</argument>
+      <argument rus="Номер строки куда вставлять" name="Line number where to insert">Insert will occur before the line number specified here.</argument>
+      <argument rus="Сортировать по возрастанию" name="Sort ascending">If "Yes" - the sorting is ascending, "No" - descending</argument>
+      <argument rus="Номер записи в списке" name="Number of entries in the list">Serial number of the desired record from the list. The first entry is numbered "0", the second "1", etc.</argument>
+      <argument rus="Запись из списка" name="Recording from the list">The text record number you want to find.</argument>
+      <argument rus="Текст записи" name="Text record">Text entry in the list.</argument>
+      <argument rus="Место для записи в списке" name="Place to write to the list">Serial number of entry where you want to insert a record. The first entry is numbered "0", the second "1", etc.</argument>
+      <argument rus="Порядковый номер символа в тексте" name="Serial number of the character in the text">Serial number of characters. The first character has number "1", second "2", etc.</argument>
+      <argument rus="Текст с которым сравнивать" name="The text with which to compare">The text that you want to compare different text.</argument>
+      <argument rus="Исходный текст" name="Original text">The text of the original, which will be used by the property or a command.</argument>
+      <argument rus="Что искать в тексте" name="Search text">The search string. What you want to find in the text.</argument>
+      <argument rus="Номер символа откуда начинать поиск" name="Number of character from which to start search">Start Search symbol can be from any location in the text. The first character has number "1", second "2", etc.</argument>
+      <argument rus="Шаблон регулярного выражения" name="Regular Expression Pattern">Template specified in the syntax of the language of regular expressions. This language can be read here: http://ru.wikipedia.org/wiki/Регулярные_выражения. For example, the pattern "Figure 1 \. (Jpg | gif | png)" matches "Risunok1.jpg", "Risunok1.gif, but not suitable for" Risunok1.jpeg "or" Risunok1gif. "</argument>
+      <argument rus="Номер нужной части" name="The number of correct">After the text is broken up into parts, you need to specify what portion of them to take. The first part has the number "1".</argument>
+      <argument rus="Номер символа начала куска" name="Character number beginning piece">Number of characters, from which we must begin to take a piece of text. The first character has number "1", second "2", etc.</argument>
+      <argument rus="Длинна куска" name="Length of piece">The number of characters which will be a long piece of text.</argument>
+      <argument rus="Символ разделения частей" name="The symbol of the division of">Characters that will share part of the text. For example, "", "", "a", "and", etc.</argument>
+      <argument rus="Подряд символы которые должен содержать текст" name="Contracting symbols which must contain the text">List here all the characters, at least one of which must be present in the text.</argument>
+      <argument rus="Подряд символы которые не должен содержать текст" name="Contracting symbols which should not contain text">List here all the characters, which may in no case shall be present in the text.</argument>
+      <argument rus="Порядковый номер строки в тексте" name="Record number of lines in the text">The line number that you need. The first row is number 0, second 1, etc.</argument>
+      <argument rus="Номер символа куда вставлять" name="Character number where to insert">Number of characters in a place where the text will be inserted. The first character has number "1", second "2", etc.</argument>
+      <argument rus="Текст который надо вставить" name="The text which should be inserted">Text insertion.</argument>
+      <argument rus="Что заменять" name="As a substitute">Source text that you want to replace</argument>
+      <argument rus="На что заменять" name="At that replace">Text that you want to replace the original text</argument>
+      <argument rus="Подряд символы из которых должен состоять текст" name="Contracting character of which must be text">Symbols of which must contain text.</argument>
+      <argument rus="Текст сообщения" name="Your message">The text that appears in the message</argument>
+      <argument rus="#Кнопки сообщения" name="Buttons message">Number and type of buttons you can configure the message here</argument>
+      <argument rus="#Тип сообщения" name="Message type">Message type is like "question", "exclamatory", etc.</argument>
+      <argument rus="#Заголовок" name="Title">Subject appears in the top of the message window.</argument>
+      <argument rus="Дата из которой брать" name="Date from which to take">The initial date from which you want to take data. Written in double quotation marks, eg "16/07/2009 0:29:31".</argument>
+      <argument rus="Дата к которой прибавлять" name="Date to which add">The original date to which you want to add anything. Written in double quotation marks, eg "16/07/2009 0:29:31".</argument>
+      <argument rus="Сколько прибавить" name="How to add">Number added.</argument>
+      <argument rus="Дата1 которую вычитать" name="Data1 to deduct">The date that you are going to subtract from the original date. Written in double quotation marks, eg "16/07/2009 0:29:31".</argument>
+      <argument rus="Дата2 из которой вычитать" name="Data2 from which to ">The initial date from which to deduct another date. Written in double quotation marks, eg "17.07.2009 12:29:31".</argument>
+      <argument rus="Дата" name="Date">Date calendar. Written in double quotation marks, eg "17.07.2009 12:29:31".</argument>
+      <argument rus="Номер формата вывода (от 1 до 52)" name="Number of output format (from 1 to 52)">The original date is converted to a string, number format that you specify. All of the possible number of formats and examples of their dates are as follows: 0 - 17.07.2009 1 - 17.07.09 2 - 17.7.09 3 - 17.07.09 4 - 2009-07-17 5 - July 17, 2009 6 - July 17, 2009 g. 7 - 17 July 2009 12:57 8 - July 17, 2009 12:57 PM 9 - 17 July 2009 12:57 10 - July 17, 2009 12:57 PM 11 - July 17, 2009 12 : 57:48 12 - July 17, 2009 12:57:48 13 - July 17, 2009 12:57:48 14 - July 17, 2009 12:57:48 15 - 17.07.2009 12:57 16 -- 17.07.2009 12:57 17 - 17.07.09 12:57 18 - 17.07.09 12:57 19 - 17.7.09 12:57 20 - 17.7.09 12:57 21 - 17.07.09 12:57 22 - 17.07. 09 12:57 23 - 2009-07-17 12:57 24 - 2009-07-17 12:57 25 - 17.07.2009 12:57:48 26 - 17.07.2009 12:57:48 27 - 17.07.09 12 : 57:48 28 - 17.07.09 12:57:48 29 - 17.7.09 12:57:48 30 - 17.7.09 12:57:48 31 - 17.07.09 12:57:48 32 - 17.07.09 12 : 57:48 33 - 2009-07-17 12:57:48 34 - 2009-07-17 12:57:48 35 - июля 17 36 - июля 17 37 - 2009-07-17T12: 57:48.0000000 38 - 2009 -07-17T12: 57:48.0000000 39 - Fri, 17 Jul 2009 12:57:48 GMT 40 - Fri, 17 Jul 2009 12:57:48 GMT 41 - 2009-07-17T12: 57:48 42 - 12:57 43 - 12:57 44 - 12:57:48 45 - 12:57:48 46 - 2009-07-17 12:57:48 Z 47 - July 17, 2009 4:57:48 48 - July 17, 2009 04:57:48 49 - July 17 2009 4:57:48 50 - July 17, 2009 04:57:48 51 - July 2009 52 - July 2009 53 - July 2009 54 - July 2009</argument>
+      <argument rus="Новая дата и время" name="A new date and time">The new date you wish to install. Written in double quotation marks, eg "17.07.2009 12:29:31".</argument>
+      <argument rus="Код VBScript" name="VBScript code">The code in VBScript</argument>
+      <argument rus="Код Алгоритма 2" name="Algorithm 2 code">The code in the language of Algorithm 2</argument>
+      <argument rus="Код VBNet" name="VBNet code">The code in the language VBNet</argument>
+      <argument rus="Код CSharp" name="CSharp code">The code in the language CSharp</argument>
+      <argument rus="ID пользователя" name="Id user">Then specify the user ID for which the generated registration key.</argument>
+      <argument rus="Ключ активации" name="Activation key">Key registration, which should be checked. And if successful, enable the program to him.</argument>
+      <argument rus="Показать в окне" name="Show in window">Show the result of a special window.</argument>
+      <argument rus="X" name="X">X coordinate on the object. The count goes from left to right, ie the left edge of the object X = 0, and X is maximal on the right (to the width of the object)</argument>
+      <argument rus="Y" name="Y">Y coordinate on the object. The countdown goes down, ie the upper edge of the object Y = 0, and at the bottom of Y is maximal (equal to the heights of the object)</argument>
+    </arguments>
+  </file>
+</xml>

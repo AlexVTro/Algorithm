@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Сохранить таблицу</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Команда <b>сохраняет</b> таблицу, в указанном вами файле. Сохранение идет в <b>простой текстовой</b>
+          форме, поэтому сохраненный файл можно легко открывать любым способом (например, Блокнотом)
+          и <b>редактировать</b>.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link2 file="Open table.html">Открыть таблицу</link2><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+      <eventsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

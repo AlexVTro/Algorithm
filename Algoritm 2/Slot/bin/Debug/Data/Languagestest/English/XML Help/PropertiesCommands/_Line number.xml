@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Line number</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Returns the line number.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="Objects.html"> Objects </link>
+      <br /> Other <propsLink /> object <objLink /><br /><eventsLink /> object <objLink /></seealso>
+  </file>
+</xml>

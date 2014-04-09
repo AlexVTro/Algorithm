@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Текст есть число</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Проверяет, является ли текст числом ("23", "-12,54", "3,2+E12").
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Is numeric text.html">Текст есть цыфры</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Consist all.html">Текст состоит из</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of regular.html">Поиск с регулярными выражениями</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

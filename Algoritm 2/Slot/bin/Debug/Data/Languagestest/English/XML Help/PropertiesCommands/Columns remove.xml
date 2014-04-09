@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Columns remove</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>command removes  any column of the table. In <link2 file="Row headers visible.html"> special column </link2>.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link2 file="Row headers visible.html"> Show special column </link2>
+      <link2 file="Columns add.html"> Add column </link2>
+      <br />
+      <link2 file="Colums insert.html "> Insert Column </link2>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br /> Other <propsLink /> object <objLink /><br /><eventsLink /> object <objLink /></seealso>
+  </file>
+</xml>

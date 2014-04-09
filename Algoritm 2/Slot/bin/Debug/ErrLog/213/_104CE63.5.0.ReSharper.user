@@ -1,0 +1,27 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="8BA44F27-B50C-44E2-8F38-8EDEA6C46D28/f:Code.vb" caret="164021" fromTop="28" />
+      <File id="d:Miscellaneous Files/f:104ce6859593c0b.alg/l:D!?Documents?Visual Studio Projects?VB8 проекты?Algoritm 2?Slot?bin?Debug?ErrLog?104ce6859593c0b.alg" caret="45102" fromTop="104" />
+    </RecentFiles>
+    <RecentEdits />
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

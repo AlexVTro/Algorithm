@@ -1,0 +1,17 @@
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\Interop.MSScriptControl.dll
+obj\Release\Compil.vbproj.ResolveComReference.cache
+obj\Release\Compil.Main1.resources
+obj\Release\Compil.Resources.resources
+obj\Release\Compil.EditProperty.resources
+obj\Release\Compil.Progress.resources
+obj\Release\Compil.vbproj.GenerateResource.Cache
+obj\Release\Compil.exe
+obj\Release\Compil.xml
+obj\Release\Compil.pdb
+bin\Debug\Compil.exe
+bin\Debug\Compil.pdb
+bin\Debug\Compil.xml
+bin\Debug\Kennedy.ManagedHooks.dll
+bin\Debug\Kennedy.ManagedHooks.pdb
+bin\Debug\Interop.MSScriptControl.dll

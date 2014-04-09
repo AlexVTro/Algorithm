@@ -1,0 +1,121 @@
+﻿<HTML><HEAD><link href="../../_TemplateMSDN_files/MSDNstyles.css" type="text/css" rel="stylesheet" /><script language="javascript">var gCHM=true;</script><script language="javascript" src="../../_TemplateMSDN_files/common.js">var a;</script><script language="javascript" src="../../_TemplateMSDN_files/script.js">var b;</script><TITLE>Свойства и команды</TITLE></HEAD><BODY class="xsl_file"><div class="notshown"><img src="../../_TemplateMSDN_files/plus.gif" /><img src="../../_TemplateMSDN_files/plus_small.gif" /></div><div class="xsl_file_header"><div class="xsl_file_title">Свойства и команды</div><div class="xsl_file_breadcumbs"><a class="xsl_file" target="_top" href="../../index.html&#xA;          ">
+      Справка
+    </a> -&gt;
+    <a class="xsl_file" href="../../Objects.html">
+        Объекты
+      </a><span class="xsl_file_test">
+        -&gt; <a class="xsl_file" href="../../UsefulObjects/_Files and paths.html&#xA;      ">_Файлы и папки</a></span><span class="xsl_file_test">
+        -&gt; <a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands.html&#xA;      ">
+      Свойства и команды
+    </a></span></div><br /><a class="xsl_file" href="#see">Смотрите также</a></div><div class="xsl_file_header1"><span class="xsl_file_spanLink" onClick="javascript:ChColExpAll('xsl_file_spColexpAll', 'xsl_file_imgColexpAll')"><img id="xsl_file_imgColexpAll" src="../../_TemplateMSDN_files/minus_small.gif" align="absmiddle" /><span id="xsl_file_spColexpAll">Свернуть все</span></span></div><div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divSyntax','xsl_file_imgSyntax');"><img id="xsl_file_imgSyntax" src="../../_TemplateMSDN_files/minus.gif" border="0" /> Описание
+      </span></h4><div><div id="xsl_file_divSyntax" class="xsl_file_container"><p class="xsl_file" align=""><b>Свойства</b> - это настройки <a class="xsl_file" href="../../Objects.html">объектов</a> (цвет, текст, размер), 
+          изменяя которые вы можете настроить объект необходимым образом.
+          Объекты также могут выполнять некоторые действия над собой, которые называются <b>командами</b>.
+        </p><p class="xsl_file" align="">
+          Изменять свойства можно вручную в <a class="xsl_file" href="../../Environment/PropertiesPart.html">Разделе свойств</a>.
+          Или запрограммировать их изменение в <a class="xsl_file" href="../../Environment/ActionPart.html">Разделе действий</a>.
+          Во втором случае сначала для объекта создается <a class="xsl_file" href="Events.html">событие</a> в 
+          <a class="xsl_file" href="../../Environment/EventPart.html">Разделе событий</a>,
+          при котором данное свойтво должно поменяться.
+          Примеры использования свойств и команд в Разделе действий:<pre class="xsl_file_codesnip">Окно1.Объект1.Текст = "Новый текст1"
+Окно1.Объект2.Рисунок = "C:\Картинка.jpg"
+Окно1.Объект2.Получить фокус</pre></p><p class="xsl_file" align=""><i><span class="xsl_file_test" /></i>
+        Список свойств объекта <a class="xsl_file" href="../../UsefulObjects/_Files and paths.html&#xA;      ">_Файлы и папки</a>:
+      <table style="margin-left: 20px" cellpadding="1" cellspacing="1"><col width="20" /><col width="30%" /><col /><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Archive.html" /><name>_Архивный</name></td><td class="xsl_file_lt">
+          Данное свойство показывает, является ли указанный в скобках файл архивным или нет.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Temp.html" /><name>_Временный</name></td><td class="xsl_file_hl">
+          Данное свойство показывает, является ли указанный в скобках файл временным или нет.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Access time.html" /><name>_Время доступа</name></td><td class="xsl_file_lt">
+          Данное свойство показывает, либо изменяет время, когда к файлу последний раз обращались.
+          Например, "16.07.2009 0:29:31".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Edit time.html" /><name>_Время изменения</name></td><td class="xsl_file_hl">
+          Данное свойство показывает, либо изменяет время, когда файл последний раз редактировали.
+          Например, "16.07.2009 0:29:31".
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Create time.html" /><name>_Время создания</name></td><td class="xsl_file_lt">
+          Данное свойство показывает, либо изменяет время, когда был создан файл. Например, "16.07.2009 0:29:31".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Append text.html" /><name>_Добавить текст</name></td><td class="xsl_file_hl">
+          Данное команда дописывает в указанный вами файл текст или данные. 
+          Если же вы хотите полностью переписать файл, воспользуйтесь командой
+          Сохранить в файле</td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Encrypted.html" /><name>_Зашифрованный</name></td><td class="xsl_file_lt">
+          Данное свойство показывает, является ли указанный в скобках файл зашифрованным или нет.
+          Зашифрованные файлы может просматривать только пользователь учетной записи Windows, в которой файлы
+          были зашифрованы. В остальных учетных записях такие файлы не откроются.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Encrypt.html" /><name>_Зашифровать</name></td><td class="xsl_file_hl">
+          Команда шифрует файл для того чтобы другие учетные записи Windows и другие компьютеры не могли прочитать
+          этот файл. При этом данный пользователь учетной записи Windows может читать этот файл свободно.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Copy.html" /><name>_Копировать</name></td><td class="xsl_file_lt">
+          Данная команда копирует файл или папку.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Not indexer.html" /><name>_Не индексируется</name></td><td class="xsl_file_hl">
+          Данное свойство показывает, является ли указанный в скобках файл не индексируемым или нет.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get file name without extension.html" /><name>_Определить без расширения</name></td><td class="xsl_file_lt">
+          Данное свойство определяет имя файла без расширения из переданного ему пути до файла или папки.
+          Например для файла "C:/Program Files/File.jpg", это свойство вернет "File".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get path name.html" /><name>_Определить имя папки</name></td><td class="xsl_file_hl">
+          Данное свойство определяет имя родительской папки для файла или директории.
+          Например, для файла "C:/Program Files/File.jpg" или для папки "C:/Program Files/Алгоритм 2",
+          это свойство вернет "Program Files".
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get file name.html" /><name>_Определить имя файла</name></td><td class="xsl_file_lt">
+          Данное свойство определяет имя файла из переданного ему пути до файла или папки.
+          Например для файла "C:/Program Files/File.jpg", это свойство вернет "File.jpg".
+          Для папки "C:/Program Files/Алгоритм 2", это свойство вернет "Алгоритм 2".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get root.html" /><name>_Определить корневую</name></td><td class="xsl_file_hl">
+          Данное свойство определяет корень - диск для переданного пути. Например для файла "C:/Program Files/File.jpg",
+          это свойство вернет "C:/".
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get file size.html" /><name>_Определить размер файла</name></td><td class="xsl_file_lt">
+          Данное свойство определяет размер файла в байтах.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get extension.html" /><name>_Определить расширение</name></td><td class="xsl_file_hl">
+          Данное свойство определяет путь до файла или папки. Например для файла "C:/Program Files/File.jpg",
+          это свойство вернет "C:/Program Files".
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get parent.html" /><name>_Определить родительскую</name></td><td class="xsl_file_lt">
+          Данное свойство определяет путь до файла или папки.
+          Например, для файла "C:/Program Files/File.jpg" или для папки "C:/Program Files/Алгоритм 2",
+          это свойство вернет "C:/Program Files".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Open file.html" /><name>_Открыть файл</name></td><td class="xsl_file_hl">
+          Данное свойство открывает файл и получает всё его содержимое.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Folder.html" /><name>_Папка</name></td><td class="xsl_file_lt">
+          Данное свойство показывает, является ли указанный в скобках путь папкой или нет.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Rename.html" /><name>_Переименовать</name></td><td class="xsl_file_hl" /></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Move.html" /><name>_Переместить</name></td><td class="xsl_file_lt">
+          Данная команда перемещает файл или папку.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Find file.html" /><name>_Поиск файлов</name></td><td class="xsl_file_hl">
+          Данное свойство ищет файлы и папки в указанной ему директории. При поиске можно пользоваться шаблонами
+          поиска - "*","?","+".
+          Например, "a*.jpg" - найдет все файлы с расширением jpg, начинающиеся на "а"
+          (например, "аbcdef.jpg", "a2.jpg", "a.jpg").
+          "a?c.exe" - найдет все приложения, состоящие
+          из трех букв, начинающиеся на "а" и кончающиеся на "с" (например, "аbc.exe", "a2c.exe")
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get drives.html" /><name>_Получить диски</name></td><td class="xsl_file_lt">
+          Данное свойство возвращает список файлов из указанной папки. Файлы в списке перечислены через "; " и
+          выглядят примерно так: "A:/; C:/; D:/".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get paths.html" /><name>_Получить папки</name></td><td class="xsl_file_hl">
+          Данное свойство возвращает список папок из указанной директории. Папки в списке перечислены через "; " и
+          выглядят примерно так: "C:/Program Files; C:/Windows; C:/Temp".
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Get files.html" /><name>_Получить файлы</name></td><td class="xsl_file_lt">
+          Данное свойство возвращает список файлов из указанной папки. Файлы в списке перечислены через "; " и 
+          выглядят примерно так: "C:/1.jpg; C:/2.bmp; C:/file.exe".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Decrypt.html" /><name>_Расшифровать</name></td><td class="xsl_file_hl">
+          Команда расшифровывает зашифрованный ранее файл. 
+          Зашифрованный файл другие учетные записи Windows и другие компьютеры не могут прочитать. 
+          При этом пользователь учетной записи Windows, в которой был зашифрован файл, может читать
+          его без проблем. Также нельзя расшифровать файлы, зашифрованные в других учетных записях Windows.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_System.html" /><name>_Системный</name></td><td class="xsl_file_lt">
+          Данное свойство показывает, является ли указанный в скобках файл системным или нет.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Hider.html" /><name>_Скрытый</name></td><td class="xsl_file_hl">
+          Данное свойство показывает, является ли указанный в скобках файл скрытым или нет.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Create directory.html" /><name>_Создать папку</name></td><td class="xsl_file_lt">
+          Команда создает папку на компьютере. Причем, например, папки "С:/a/b/c" успешно создадутся, даже
+          если до этого не существовало даже папки "С:/a".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Save in file.html" /><name>_Сохранить в файле</name></td><td class="xsl_file_hl">
+          Данное команда сохраняет в указанном вами файле текст или данные. Если файл содержал данные, они полностью
+          заменятся на новые. Если же вы хотите дописать файл, воспользуйтесь командой
+          Добавить текст</td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Save picture.html" /><name>_Сохранить рисунок</name></td><td class="xsl_file_lt">
+          Данное команда сохраняет в указанном вами файле рисунок.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Exist path.html" /><name>_Существует папка</name></td><td class="xsl_file_hl">
+          Данное свойство показывает, существует ли данная папка на компьютере или нет.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Exist file.html" /><name>_Существует файл</name></td><td class="xsl_file_lt">
+          Данное свойство показывает, существует ли данный файл на компьютере или нет.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Read only.html" /><name>_Только для чтения</name></td><td class="xsl_file_hl">
+          Позволяет узнать является ли файл только для чтения или позволяет сделать его таковым.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Files and paths/PropertiesCommands/_Delete.html" /><name>_Удалить</name></td><td class="xsl_file_lt">
+          Данная команда удаляет файл или папку безвозвратно.
+        </td></tr></table></p></div></div><a class="xsl_file" name="see" /><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="SwapDisplay('xsl_file_divSeealso','xsl_file_imgSeealso');"><img id="xsl_file_imgSeealso" src="../../_TemplateMSDN_files/minus.gif" border="0" /> Смотрите также
+        </span></h4><div id="xsl_file_divSeealso" class="xsl_file_container"><div class="xsl_file_container"><a class="xsl_file" href="Events.html">События</a> объекта <a class="xsl_file" href="../../UsefulObjects/_Files and paths.html&#xA;      ">_Файлы и папки</a></div></div></div><p> </p></BODY></HTML>

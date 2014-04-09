@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Selected rows</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Property <b> highlights </b> row or shows which lines <b> color </b>. The result is given, for example, in this form: <i> 0,2,3 </i>. Ie Highlight <b> first </b>, <b> third </b> and <b> fourth </b> string (because the numbering of rows is 0, 0, - the first line, 1 - second and t . etc.)</text>
+      </p>
+      <p>
+        <textAll>To select, for example, a block of cells should combine this command with the commando <link2 file="Selected columns.html"> numbers of selected columns </link2>: <codesnip>Window1.Tablitsa1.Nomera selected lines = "1,0"
+ Window1.Tablitsa1.Nomera selected columns = "1"</codesnip> This snippet provides <b> first </b> and <b> second </b> box in the second  column.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link2 file="Selected columns.html"> numbers of selected columns </link2>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br /> Other <propsLink /> object <objLink /><br /><eventsLink /> object <objLink /></seealso>
+  </file>
+</xml>

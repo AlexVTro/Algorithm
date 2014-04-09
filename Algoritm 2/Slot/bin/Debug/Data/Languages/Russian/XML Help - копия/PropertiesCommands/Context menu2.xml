@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Контекстное меню2</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>При клике <b>правой</b> кнопкой по объекту всплывает то
+        <link file="Objects\Context menu.html">меню</link>, чьё
+        <link file="Objects\Window\PropertiesCommands\Name.html">имя</link> 
+        указано в этом свойстве.</text>
+      </p>
+      <p>
+        <textAll>
+          Если вы хотите присвоить объекту меню, вы должны сначала <b>создать</b> объект
+          <link file="Objects\Context menu.html">Контекстное меню</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      <link file="Objects\Context menu.html">Контекстное меню</link><br/>
+      Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

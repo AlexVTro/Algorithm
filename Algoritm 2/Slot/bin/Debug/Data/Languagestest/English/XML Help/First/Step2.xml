@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Step 2. Programming.</title>
+    <breadcumbs>
+      <link file="First.html"> My first project </link>
+      <text> -&gt; </text>
+      <link file="First/Step2.html"> Step 2. Programming. </link>
+    </breadcumbs>
+    <descriptionarticle>
+      <textAll>
+        <p> time has come to be the most interesting - <b> programming </b>! Doing this in Algorithm 2 <b> extremely easy </b>. Let's make sure this, <b> programmed </b> button <b> "ButtonCalculate" </b> to calculate your optimal weight. </p>
+        <p> In the previous lesson, we changed <b> properties </b> (text, name, width) of different objects  (buttons, labels, windows). So <b> Programming </b>, this is the same <b> change properties </b>, but not manually, but automatically, <b> software </b>! Thus, our programming is to ensure that when you  on Knock <b> "ButtonCalculate" </b> changed <b> text </b> from the inscriptions <b> "LabelResult" </b> the result of calculating the weight . </p>
+        <p> So, how do we know, <b> when </b> user clicked  button? For this purpose there <b> Events </b>. <b> Events </b> - this <b> the user </b> (clicks, mouse movements, keystrokes), which can <b> catch </b> objects (buttons, text boxes, images). </p>
+        <p> Create a button <b> "ButtonCalculate" </b> event <link file="Objects/Button/Events/Click.html"> Click </link>. To do this, click once on this button, and select <link file="Environment/EventPart.html"> events section </link> in <link file="Environment.html"> IDE Algorithm 2 </link> event <b> click </b>. And then click <b> "Create" </b> (it is slightly below). <b> Section events </b> is the tab <b> "Events" </b>, which is located in the tabs in the bottom right  corner. </p>
+        <imgMy src="First4.jpg">
+        </imgMy>
+        <p>
+          <b> Excellent! </b> click event is created. Now when the user clicks the button, my program will do everything that we put into the created events. And we will put into action . </p>
+        <p>
+          <b> Actions </b> - a command program (change the text of the object, move it, change the color). As we have seen, in most cases it is customary <b> change properties </b> (color, text). Actions are created in <link file="Environment/ActionPart.html"> Action section </link> - this tab <b> "Actions" </b>, which is located in the tabs in the bottom right  corner . </p>
+        <p> Create first <b> simple action </b> - clean <b> text </b> from the inscriptions <b> "LabelResult" </b>. To do this, select the section <b> Action </b> in <b> Window </b> para <b> "Window1" </b> (the name of the window of your program, which are your buttons, labels and texts ), in <b> Object </b> select <b> "LabelResult" </b> (object name, from whom we want to change the property), and in <b> Property </b> select <b> "Text" </b> (name of variable properties). Now, just below the text box under the inscription <b> "to the following value" </b> we can write  anything that we want to see written  in the caption <b> "LabelResult" </b>. Text necessarily introduced in <b> double quotes </b> (such as, "Hello!"), More on this in the property <link file="Objects/Button/PropertiesCommands/Text.html"> text </link>. Thus, if we want to erase <b> text </b>, then enter the place just two <b> double quotes </b> (""), which means that we change the text on <b> empty </b> . </p>
+        <imgMy src="First5.jpg">
+        </imgMy>
+        <p> Click "Create" and the action created! You can check how it works <b> running </b> are <b> program </b> menu <b> Project </b> -&gt; <b> Run </b> (<b> F5 </b>). </p>
+        <p> Okay, now try to create a more complex operation. It actually will calculate how much your weight corresponds to the growth. The result of calculations, we have also been listed in the text of the inscription "LabelResult". And we calculate the well-known formula of body mass index (<url file="http://en.wikipedia.org/wiki/Body-mass_index"> BMI </url>). It must weight divided by height in square. Let's try to create such effect. </p>
+        <p> Click on the Create an action in <link file="Environment/ActionPart.html"> tree action </link> (located at the bottom <link file="Environment.html"> IDE Algorithm 2 </link>). Select a last time in <b> section Action </b> in <b> Window </b> para <b> "Window1" </b>, in <b> Object </b> click <b> "LabelResult" </b>, and in <b> Property </b> select <b> "text" </b>. To the right of the text field under the inscription <b> "to the following value" </b>, click on the button with the wand. You will have <link file="Environment/Master.html"> Master complex actions </link>! </p>
+        <imgMy src="First6.jpg">
+        </imgMy>
+        <p> to work with him very easy ! We act as written formula (weight/height squared). First, we need to take <b> weight </b>, then to split into <b> growth in square </b>. And the weight we have stored in the property <b> Text </b> object <b> "TextWeight" </b>. Click on the button with an arrow  down (under the text field), to open the choices <b> object </b>. Select it <b> "Window1" </b>, <b> "TextWeight" </b>, <b> "text" </b>. Then click the little plus  on the right, and in the list that appears on this button, select "/ (division without remainder). And open the choice of object, select <b> "Window1" </b>, <b> "TextHeight" </b>, <b> "text" </b>. In order to increase erected in the square, select the "Extras. Functions" (it is slightly above) the item "Square". </p>
+        <imgMy src="First7.jpg">
+        </imgMy>
+        <p> Click <b> "Create" </b> in the wizard complex actions, and then click <b> "Create" </b> in the action. <b> Congratulations </b>! You have created a complex operation and is now an application really <b> works </b>. Check it out. <b> Run </b> project (F5), enter your height, weight, and then click "Calculate". You bring up the number - it's your body mass index (<url file="http://en.wikipedia.org/wiki/Body-mass_index"> BMI </url>). If the number from 20 to 25, then your weight is optimal. If less than 20, then you have a deficit of weight. If more than 25, then obesity. </p>
+        <imgMy src="First8.jpg">
+        </imgMy>
+        <p> In principle, the program <b> working </b>, and you can stop here. But it can improve  with <b> conditions </b>. This in <link file="First/Step3.html"> final lesson </link>! <br /></p>
+      </textAll>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="First/Step3.html"> Step 3. Conditions. </link>
+      <br />
+      <link file="First/Step1.html"> Step 1. Graphical interface. </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file="Environment.html"> development environment </link>
+      <br />
+      <link file="First.html"> My first project </link>
+      <br />
+    </seealso>
+  </file>
+</xml>

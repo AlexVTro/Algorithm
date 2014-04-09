@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Номера выделенных столбцов</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Свойство <b>выделяет</b> столбцы таблицы или показывает, какие столбцы <b>выделены</b>. Результат выдается, например, в такой форме:
+          <i>0,2,3</i>. Т.е. выделены <b>первый</b>, <b>третий</b> и <b>четвертый</b> столбец (т.к. нумерация столбцов таблицы начинается с 0; 0 - первый столбец, 1 - второй и т.д.)
+        </text>
+         </p>
+      <p>
+        <textAll>
+          Чтобы выделить, например, блок ячеек следует комбинировать эту команду с командой
+          <link2 file="Selected rows.html">Номера выделенных строк</link2>:
+        <codesnip>
+            <![CDATA[Окно1.Таблица1.Номера выделенных строк = "1,0"
+Окно1.Таблица1.Номера выделенных столбцов = "1"]]></codesnip>
+          Данный фрагмент кода выделяет <b>перую</b> и <b>вторую</b> ячейку во <b>втором</b> столбце.
+        </textAll>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link2 file="Selected rows.html">Номера выделенных строк</link2><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+      <eventsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

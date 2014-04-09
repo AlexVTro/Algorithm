@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Arrays</title>
+    <breadcumbs>
+      <text>
+        <link file="Programming.html"> Programming </link> -&gt; <link file="Programming/Array.html"> Arrays </link></text>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>One of the remarkable tools that simplify the creation of complex programs is <b> array </b>. Array - this <b> more </b> objects, united under one <link file="Objects/Button/PropertiesCommands/Name.html"> name </link>, but with different <link file="Objects/Button/PropertiesCommands/Index.html "> Number </link>, which allows facilities to handle all the events together.</text>
+      </p>
+      <remarks>
+        <i> arrays we consider the example of <b> Calculator </b>. This project is located in the folder where installed Algorithm 2, in the directory projects/examples/calculator. Can you run it and try all possible arrays on it, in the process of reading this material. </i>
+      </remarks>
+      <textAll>
+        <p> When your program <b> lot </b> different objects (buttons, text boxes) perform roughly the same  action, they will be very convenient  to join in an array that will not create for each object separately  event (click for Knopki1, click for Knopki2), and create <b> general </b> events for all objects in the array (click for Knopki1 and Knopki2). An example of the array can serve as a button with the numbers in the project calculator: </p>
+        <imgMy src="Array1.png">
+        </imgMy>
+        <p> Event <link file="Objects/Button/Events/Click.html"> Click </link> one for all the buttons with the numbers, because they all have one name - "Buttons". It gave a lot of advantages. </p>
+        <p>
+          <b> First </b> is <link file="Environment/IfPart.html"> condition </link><i> IF Window1.PamyatStiraniya.Znachenie = "We have to clear the screen" THEN </i>. It must be satisfied for <b> all </b> button, and in this case, we do not have to duplicate  it in <b> every </b> event of each button with the figure, if they were combined into an array. </p>
+        <p>
+          <b> Secondly </b> we are very elegantly out of the situation, when the display screen should display <b> number </b>, written in <b> button </b> ( is the last act events - <i> Window1.Nadpis1.Tekst = Window1.Nadpis1.Tekst&amp;Window1._Obekt sobytiya.Tekst </i>). It is unclear what exactly  button pressed from the array, if a click event for all of them <b> one </b>! For such cases, use <link file="UsefulObjects.html"> useful object </link> with the name <link file="UsefulObjects/_Object events.html"> _Obekt events </link>. It contains the properties and commands it to  object over which <b> now </b> the user has made <b> event </b>. </p>
+        <p> If you want to get to any particular  object <b> array </b>, it can be done by property <link file="Objects/Button/PropertiesCommands/Index.html "> Number </link>: </p>
+        <imgMy src="Array2.png">
+        </imgMy>
+        <p> Rooms You can specify <b> numbers </b> -" 1 "," 2 "," 3 ". Auxiliary words - <link file="Programming/HelpWords.html#Others"> All </link>, which means that the property will be changed from <b> all </b> array of objects. You can also use any design <link file="Environment/Master.html"> master complex actions </link>, ie values of any properties  (eg <link file="Objects/Text/PropertiesCommands/Width.html"> Window1.Tekst1.Shirina </link>) </p>
+        <p> In conclusion we present the overall development of an example in which each <b> second </b> object in the array (ie, even), the text changes to <b> "even" </b>: </p>
+        <imgMy src="Array3. png ">
+        </imgMy>
+        <p> To go through all the objects used <link file="Environment/CyclePart.html"> cycle </link>, and to determine if the object is even, it <b> number </b> is divisible by 2 (% - the remainder of the division), and if the room is shared with no remainder (remainder of the division = 0), then even an object. </p>
+      </textAll>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Object events.html"> _Obekt events </link>
+      <br />
+      <link file="UsefulObjects/_Window events.html"> _Okno events </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file="UsefulObjects.html"> Useful Objects </link>
+      <br />
+      <link file="Environment.html"> Wednesday development Algorithm 2 </link>
+    </seealso>
+  </file>
+</xml>

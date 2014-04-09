@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Row headers visible</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>The property allows you to hide or show the column, which is located at the left edge of the table, and is intended for <b> allocating the entire line </b> when you click it entirely on his cell.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link2 file="Columns width.html"> width of the column </link2>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br /> Other <propsLink /> object <objLink /><br /><eventsLink /> object <objLink /></seealso>
+  </file>
+</xml>

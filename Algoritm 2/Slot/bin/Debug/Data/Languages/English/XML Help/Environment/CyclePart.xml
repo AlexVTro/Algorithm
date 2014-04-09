@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Cycles tab</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Development environment</link>
+        ->
+        <link file="Environment/CyclePart.html">Cycles tab</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Cycles</b> are same <link file="Environment/IfPart.html">conditions</link> except for that
+          all <link file="Environment/ActionPart.html">actions</link> inside of cycles are being executed constantly,
+          <b>until the condition is false</b> (e.g. until the 
+          <link file="Objects/Window/PropertiesCommands/Height.html">height of the window</link> is less than 100)
+        </text>
+      </p>
+      <textAll>
+        <p>
+          You can <b>create a cycle</b> in the Cycles tab of
+          <link file="Environment.html">Algorithm2 development environment</link>:
+          <imgMy src="CyclePart.jpg"></imgMy>
+        </p>
+        <p>
+          There you should specify the <b>condition of cycle itself</b> in the form of: "something" is equal/unequally to "something" 
+          ("unequally" is specified by the symbol &lt;&gt;, "more or equal" - by the symbol &gt;=)
+          <codesnip><![CDATA[Window1.Text1.Text = "Required text"
+Window1.Window1.Width > "200"
+Window1.Button1.Fore color  <> black
+Window1.Window1.X >= Window1.Text1.Text]]></codesnip>
+           After you have clicked the button <b>Create</b> cycle block appears in the 
+          <link file="Environment/TreePart.html">Actions tree</link>.
+        </p>
+        <p>
+          Now all <link file="Environment/ActionPart.html">actions</link> inside of this cycle block  
+          are being <b>constantly cyclically executed</b> until the cycle condition is false. In other respects 
+          cycle conditions function the same way <link file="Environment/IfPart.html">standard conditions</link> function.
+        </p>
+      </textAll>
+    </descriptionarticle>
+    
+    <remarks>
+      <text>Cycle conditions can be not only <b>simple</b> (texts or numbers comparison), but also <b>complex</b>
+      (formula, comparing with a property value of the other object).
+      To create a complex condition use
+      <link file="Environment/Master.html">Complex operations wizard</link> (click on the button with a magic wand on it).
+      <p>
+        You can interrupt a cycle pre-term, without waiting for the rest of actions have been executed. Learn more about it in the section
+        <link file="UsefulObjects.html">Useful Objects</link>.<link file="UsefulObjects/_Interrupts.html">Interrupts</link>
+      </p>
+    </text>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development environment</link><br/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects/Interrupts.html">Interrupts</link>
+    </seealso>
+  </file>
+</xml>

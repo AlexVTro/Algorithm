@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Image align</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>The location of the picture on the site (left, bottom, center).</text>
+      </p>
+      <p>
+        <textAll>All possible <b> position </b> are described in <link file="Programming/HelpWords.html"> Auxiliary words </link> -&gt; <link file="Programming/HelpWords.html#Alignments"> Provisions </link>.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle> Options for the image of a button </sampletitle>
+        <samplecode> Window1.Knopa1.Polozhenie image = TsentrWindow1.Knopa1.Polozhenie pattern = "bottom left" Window1.Knopa1.Polozhenie image = Window1.Knopka2.Polozhenie tekstaWindow1.Knopa1. Picture Position = Window1.Tekst1.Tekst </samplecode>
+      </sample>
+    </samples>
+    <seealso>
+      <est />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file="Programming/HelpWords.html"> Auxiliary words </link> -&gt; <link file="Programming/HelpWords.html#Alignments"> Provisions </link><br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

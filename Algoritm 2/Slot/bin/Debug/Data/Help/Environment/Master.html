@@ -1,0 +1,84 @@
+﻿<HTML><HEAD><link href="../_TemplateMSDN_files/MSDNstyles.css" type="text/css" rel="stylesheet" /><script language="javascript">var gCHM=true;</script><script language="javascript" src="../_TemplateMSDN_files/common.js">var a;</script><script language="javascript" src="../_TemplateMSDN_files/script.js">var b;</script><TITLE>Мастер сложных действий</TITLE></HEAD><BODY class="xsl_file"><div class="notshown"><img src="../_TemplateMSDN_files/plus.gif" /><img src="../_TemplateMSDN_files/plus_small.gif" /></div><div class="xsl_file_header"><div class="xsl_file_title">Мастер сложных действий</div><div class="xsl_file_breadcumbs"><a class="xsl_file" target="_top" href="../index.html&#xA;          ">
+      Справка
+    </a> -&gt;
+    <span class="xsl_file_test"><a class="xsl_file" href="../Environment.html">Среда разработки</a>
+        -&gt;
+        <a class="xsl_file" href="../Environment/Master.html">Мастер сложных действий</a></span></div><br /><a class="xsl_file" href="#see">Смотрите также</a></div><div class="xsl_file_header1"><span class="xsl_file_spanLink" onClick="javascript:ChColExpAll('xsl_file_spColexpAll', 'xsl_file_imgColexpAll')"><img id="xsl_file_imgColexpAll" src="../_TemplateMSDN_files/minus_small.gif" align="absmiddle" /><span id="xsl_file_spColexpAll">Свернуть все</span></span></div><div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divSyntax','xsl_file_imgSyntax');"><img id="xsl_file_imgSyntax" src="../_TemplateMSDN_files/minus.gif" border="0" /> Описание
+      </span></h4><div><div id="xsl_file_divSyntax" class="xsl_file_container"><p class="xsl_file" align=""><b>Мастер сложных действий</b> это самая сложная часть среды разработки Алгоритм, но он
+          предоставляет <b>огромные возможности</b> по созданию самых различных программных решений.
+        </p><p class="xsl_file" align="">
+          Запускается мастер кнопочками с <b>волшебной палочкой</b>, которые располагаются справа от тектовых
+          полей (например в <a class="xsl_file" href="../Environment/ActionPart.html">Разделе действий</a>.
+        </p><p class="xsl_file" align="">
+          Рассмотрим процесс создания сложного действия на примере вычисления сколько лет прошло с введенного в
+          <a class="xsl_file" href="../Objects/Text.html">текстовое поле</a> года:
+          <div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/Master.jpg" alt="" /></div></p><p class="xsl_file" align="">
+          Здесь склеивается (объединяется с другой) строка "Прошло лет: " с результатом вычисления, в котором из года, введенного в 
+          <a class="xsl_file" href="../Objects/Text.html">Текстовое поле</a> (Окно1.Текст1.Текст), вычитается
+          <a class="xsl_file" href="../UsefulObjects/_Date/PropertiesCommands/Today.html">сегодняшний год</a>.
+          Например, если в текстовое поле ввели "2000", а сегодня "2009" год, то результатом сложного действия,
+          котрое сейчас создано в мастере будет: "Прошло лет: -9", т.к. "2000" - "2009" будет "-9".
+          Если мы нажмем кнопку <b>Ок</b> то мастер выдаст нам <b>результат</b> своей работы. Это будет сложное действие,
+          в данном случае: <i>"Прошло лет: " &amp; (Модуль(Окно1.Текст1.Текст) -
+          _Полезные объекты._Дата._Год(_Полезные объекты._Дата._Сегодня))</i></p><p class="xsl_file" align="">
+          Теперь рассмотрим каждый элемент мастера отдельно:
+        </p><p class="xsl_file" align=""><table style="border: 1px #bbbbbb solid;" cellpadding="1" cellspacing="0"><tbody><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>1 - Блоки мастера</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    Мастер состоит из <b>блоков</b>, из которых собираются сложные действия.
+                    Блоков может быть сколько угодно, они
+                    <b>добавляются</b> кнопкой <b>2</b> и <b>удаляются</b> кнопкой <b>4</b>.
+                  </p><p class="xsl_file" align="">
+                    Каждый <b>блок</b> может быть в двух состояниях: в <b>простом</b> - когда просто вводятся данные
+                    (как например в первом блоке на рисунке) и в сложном - когда можно выбрать свойства объекта
+                    (второй и третий блок рисунка). Меняются эти состояния кнопкой <b>6</b>.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>2 - Добавить блок</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    Эта кнопка <b>добавляет</b> новый блок в то место, где данная кнопка расположена.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>3 - Расстановка скобок</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    У каждого блока есть возможность обособить его скобками. Есть <b>левые</b> и <b>правые</b> скобки,
+                    их количество <b>не ограничено</b> и количесво левых может отличаться от количества правых.
+                    Например, если нужно в мастере создать действие (("-2")+"3"), то в первом блоке (где 
+                    будет число "-2") нужно выбрать 2 левые скобки и 1 правую. А во втором блоке (где будет 
+                    число 3) следует выбрать 1 правую скобку.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>4 - Удалить блок</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    Эта кнопка <b>удаляет</b> блок.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>5 - Дополнительная функция</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    Каждый блок может быть дополнительно обработан <b>функцией</b>. Все дополнительные
+                    функции это <b>обычные математичекие</b>
+                    операции - корень, синус, косинус, округление, сменить знак. В данном случает в блоке №2 используется
+                    функция <b>модуль</b> (функция превращает отрицательное число в положительное) на случай если введут 
+                    например "-2000". =)
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>6 - Смена состояния блока</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    Каждый <b>блок</b> может быть в двух состояниях: в <b>простом</b> - когда просто вводятся данные
+                    (как например в первом блоке на рисунке) и в <b>сложном</b> - когда можно выбрать свойства объекта
+                    (второй и третий блок рисунка). Данная кнопка и <b>меняет</b> состояния блока с простого на сложное 
+                    и наоборот.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; "><span class="xsl_file_test"><b>7 - Связи блоков</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    Все блоки связаны друг с другом <b>определенной связья</b>. Связь бывает <b>математическая</b>
+                    (сложение, деление, склеивание) и <b>логическая</b> (неравно, больше, меньше, _И, _ИЛИ).
+                  </p><p class="xsl_file" align="">
+                    В данном случае у нас <b>математическая связь</b>, т.е. блоки связаны какой-то математической
+                    операцией, в данном случае 2-ой и 3-ий блок <b>связаны вычитанием</b>. Таким образом, блок №2 есть
+                    <b>уменьшаемое</b>, а блок №3 <b>вычитаемое</b>. Между блоком 1 и разностью блоков 2 и 3 стоит 
+                    <b>плюс</b>, следовательно они связаны <b>сложением</b> и результатом действия будет <b>сумма</b> 
+                    слагаемых <i>блока №1</i> и <i>(блок №2 - блок №3)</i>.
+                  </p><p class="xsl_file" align="">
+                    Помимо математической связи сущесвует <b>логическая</b> (равно, неравно, больше, меньше либо равно).
+                    Она пригодится вам при создании
+                    <a class="xsl_file" href="../Environment/IfPart.html">условий</a> и
+                    <a class="xsl_file" href="../Environment/CyclePart.html">циклов</a>.
+                    Ведь результатом условия является либо то, что условие <b>верно</b>, либо то, что условие
+                    <b>неверно</b>. Поэтому если требуется создать условие, то используют логические операторы,
+                    которые однозначно говорят <b>либо "Да"</b>, <b>либо "Нет"</b>. 
+                    Например, выражение "2" &lt; "3" будет либо верны условием,
+                    либо неверным. Другого <b>не дано</b>. В данном случае оно верное.
+                  </p><p class="xsl_file" align="">
+                    Кроме того, если условие <b>сложное</b>, то используют специальные логические операции:
+                    <b>_И</b> и <b>_ИЛИ</b>. Если между двумя условиями связь <b>_И</b>, то общим результатом их будет "Да" 
+                    (т.е. они вместе будут верным условием) только тогда, когда <b>оба условия верны</b>.
+                    Например, если требуется проверить чтобы число, введенное в текстовое поле
+                    было больше 5 И меньше 10, то в мастере это выглядело бы так:
+                  </p><p class="xsl_file" align=""><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/Master2.jpg" alt="" /></div></p><p class="xsl_file" align="">
+                    Аналогично, общим результатом двух условий со связью <b>_ИЛИ</b> будет верное условие тогда, когда
+                    <b>хотябы одно из условий верное</b>. Например, если требуется проверить чтобы число, введенное в
+                    текстовое поле было меньше 2 ИЛИ больше 7, то в мастере это выглядело бы так:
+                    <i>Окно1.Окно1.Текст &lt; "2" _ИЛИ Окно1.Текст1.Текст &gt; "7"</i></p></span></td></tr></tbody></table></p></div></div><a class="xsl_file" name="see" /><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="SwapDisplay('xsl_file_divSeealso','xsl_file_imgSeealso');"><img id="xsl_file_imgSeealso" src="../_TemplateMSDN_files/minus.gif" border="0" /> Смотрите также
+        </span></h4><div id="xsl_file_divSeealso" class="xsl_file_container"><div class="xsl_file_container"><a class="xsl_file" href="../Environment.html">Среда разработки</a><br /><a class="xsl_file" href="../Objects.html">Объекты</a><br /><a class="xsl_file" href="../Environment/IfPart.html">Условия</a><a class="xsl_file" href="../Environment/CyclePart.html">Циклы</a></div></div></div><p> </p></BODY></HTML>

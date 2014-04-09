@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Столбцы</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          С помощью этого свойства можно указать количество столбцов и их заголовки. Задаются столбцы в форме:
+          "Столбец1", "Столбец2". Где <i>Столбец1</i> - заголовок первого столбца, <i>Столбец2</i> - заголовок второго.
+        </text>
+      </p>
+    </descriptionarticle>
+    <remarks>
+      <text>
+        Кавычки в записи: "Столбец1", "Столбец2" - обязательны. Если вы хотите изменить столбцы в процессе работы
+        вашей программы, то такое действие должно выглядеть примерно так:
+        <codesnip>
+          <![CDATA[Окно1.Таблица1.Столбцы = """Столбец1"", ""Столбец2"""]]></codesnip>
+        Т.к. две двойных кавычки ("") внутри текста преобразуются в одну двойную (") и на выходе получится как раз: "Столбец1", "Столбец2"
+      </text>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link2 file="Rows.html">Строки</link2><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+      <eventsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Пункт</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>Из <b>Пунктов</b> состоят 
+        <link file="Objects/Menu.html">Меню</link>, <link file="Objects/Context menu.html">Контекстное меню</link>,
+        <link file="Objects/Tool panel.html">Панель инструментов</link>.</text>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>События</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и комманды</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Objects/Menu.html">Меню</link><br/>
+    <link file="Objects/Context menu.html">Контекстное меню</link><br/>
+    <link file="Objects/Tool panel.html">Панель инструментов</link><br/>
+    <link file="UsefulObjects/_Object events.html">Объект события</link><br/>
+      Другие <link file="Objects.html">Объекты</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Растяжка</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          <b>Растягивает</b> объект вдоль какой-нибудь границы окна (левой, нижней). И эта растяжка сохраняется
+          (продолжает растягиваться) при изменении <b>пользователем</b> размеров окна.
+        </text>
+      </p>
+      <p>
+        <textAll>
+          Все возможные <b>растяжки</b> описаны в
+          <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+          <link file="Programming/HelpWords.html#Docks">Растяжки</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Варианты изменения растяжки у кнопки</sampletitle>
+        <samplecode>
+          <![CDATA[Окно1.Кнопа1.Растяжка = "Слева"
+Окно1.Кнопа1.Растяжка = Везде
+Окно1.Кнопа1.Растяжка = Окно1.Кнопка2.Растяжка
+Окно1.Кнопа1.Растяжка = Окно1.Текст1.Текст]]>
+        </samplecode>
+      </sample>
+    </samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+      <link file="Programming/HelpWords.html#Docks">Растяжки</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

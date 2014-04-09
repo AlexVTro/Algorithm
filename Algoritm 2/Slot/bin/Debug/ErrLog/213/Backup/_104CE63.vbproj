@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.50727</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8BA44F27-B50C-44E2-8F38-8EDEA6C46D28}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>_104CE63</RootNamespace>
+    <AssemblyName>_104CE63</AssemblyName>
+    <MyType>Empty</MyType>
+    <StartupObject>_104CE63.MainClass</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.Win32" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Runtime.InteropServices" />
+    <Import Include="System.Text" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ClientServer\AsyncSocket.vb" />
+    <Compile Include="ClientServer\ClientServer1.Designer.vb">
+      <DependentUpon>ClientServer1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ClientServer\ClientServer1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ClientServer\Deque.vb" />
+    <Compile Include="ClientServer\IWinsock.vb" />
+    <Compile Include="ClientServer\ObjectPacker.vb" />
+    <Compile Include="ClientServer\SharedMethods.vb" />
+    <Compile Include="ClientServer\Winsock.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ClientServer\WinsockCollection.vb" />
+    <Compile Include="ClientServer\WinsockFileData.vb" />
+    <Compile Include="Internet\InternetControl.Designer.vb">
+      <DependentUpon>InternetControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Internet\InternetControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Code.vb" />
+    <Compile Include="CodeString.vb" />
+    <Compile Include="Enumerations.vb" />
+    <Compile Include="Errors.vb" />
+    <Compile Include="EventArgs.vb" />
+    <Compile Include="Forms.vb" />
+    <Compile Include="Iz.vb" />
+    <Compile Include="Main.vb" />
+    <Compile Include="MyObjects.vb" />
+    <Compile Include="Objetus.vb" />
+    <Compile Include="Peremens.vb" />
+    <Compile Include="Peremens3.vb" />
+    <Compile Include="Perevodi.vb" />
+    <Compile Include="Progress.Designer.vb">
+      <DependentUpon>Progress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Progress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Propertys.vb" />
+    <Compile Include="Props.vb" />
+    <Compile Include="Run.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Interop.MSScriptControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Interop.MSScriptControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Kennedy.ManagedHooks, Version=1.2.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Kennedy.ManagedHooks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

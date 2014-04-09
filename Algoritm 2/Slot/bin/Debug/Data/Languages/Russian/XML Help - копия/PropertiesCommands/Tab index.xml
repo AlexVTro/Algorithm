@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Таб номер</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>При нажатии кнопки <b>Tab</b> на клавиатуре, все объекты окна <b>по очереди активизируются</b> (становятся
+        <link2 file="Focused.html">в фокусе</link2>). Чем меньше <b>Таб номер</b>, тем дальше <b>в очереди</b>
+          на активизацию объект.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      <link2 file="Focused.html">В фокусе</link2><br/>
+      Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

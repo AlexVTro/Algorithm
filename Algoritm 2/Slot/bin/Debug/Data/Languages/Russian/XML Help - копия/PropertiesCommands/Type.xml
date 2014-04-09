@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Тип</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Это свойство <b>нельзя изменить</b>, оно служит лишь для того что бы сообщить вам какого <b>типа объект</b> 
+          (текстовое поле, кнопка, окно).
+        </text>
+      </p>
+      <textAll>
+        <p>
+          Данное свойство может быть полезно в <link file="Programming\Array.html">массивах</link>
+        </p>
+      </textAll>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      <link file="Programming\Array.html">Массивы</link><br/>
+      Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BC692D0D-FE01-4C9A-90D0-79B8469F5AB4}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>bestCompil</RootNamespace>
+    <AssemblyName>bestCompil</AssemblyName>
+    <MyType>Empty</MyType>
+    <StartupObject>bestCompil.MainClass</StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>
+    </DocumentationFile>
+    <NoWarn>42353,42354,42355</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.Win32" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Runtime.InteropServices" />
+    <Import Include="System.Text" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Code.vb" />
+    <Compile Include="Main.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="Slot\Мои элементы\ClientServer\AsyncSocket.vb" />
+    <Compile Include="Slot\Мои элементы\ClientServer\ClientServer1.Designer.vb">
+      <DependentUpon>ClientServer1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Slot\Мои элементы\ClientServer\ClientServer1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Slot\Мои элементы\ClientServer\Deque.vb" />
+    <Compile Include="Slot\Мои элементы\ClientServer\IWinsock.vb" />
+    <Compile Include="Slot\Мои элементы\ClientServer\ObjectPacker.vb" />
+    <Compile Include="Slot\Мои элементы\ClientServer\SharedMethods.vb" />
+    <Compile Include="Slot\Мои элементы\ClientServer\Winsock.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Slot\Мои элементы\ClientServer\WinsockCollection.vb" />
+    <Compile Include="Slot\Мои элементы\ClientServer\WinsockFileData.vb" />
+    <Compile Include="Slot\Мои элементы\Internet\InternetControl.Designer.vb">
+      <DependentUpon>InternetControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Slot\Мои элементы\Internet\InternetControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Slot\Формы\Progress.Designer.vb">
+      <DependentUpon>Progress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Slot\Формы\Progress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Slot\Ядро\CodeString.vb" />
+    <Compile Include="Slot\Ядро\Enumerations.vb" />
+    <Compile Include="Slot\Ядро\Errors.vb" />
+    <Compile Include="Slot\Ядро\EventArgs.vb" />
+    <Compile Include="Slot\Ядро\Forms.vb" />
+    <Compile Include="Slot\Ядро\Iz.vb" />
+    <Compile Include="Slot\Ядро\MyObjects.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Slot\Ядро\Objetus.vb" />
+    <Compile Include="Slot\Ядро\Peremens.vb" />
+    <Compile Include="Slot\Ядро\Peremens3.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Slot\Ядро\Perevodi.vb" />
+    <Compile Include="Slot\Ядро\Propertys.vb" />
+    <Compile Include="Slot\Ядро\Props.vb" />
+    <Compile Include="Slot\Ядро\Run.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Interop.MSScriptControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Kennedy.ManagedHooks, Version=1.2.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Kennedy.ManagedHooks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Slot\Мои элементы\ClientServer\ClientServer1.resx">
+      <DependentUpon>ClientServer1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slot\Мои элементы\Internet\InternetControl.resx">
+      <DependentUpon>InternetControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Slot\Формы\Progress.resx">
+      <DependentUpon>Progress.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

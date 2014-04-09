@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>_Keyboard key</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Returns the name of the key pressed. It also can be used for conditions, for a check of such kind: "If such-and-such key is pressed then execute the action".</text>
+      </p>
+      <p>
+        <textAll>
+	 
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+    
+    </remarks>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle></sampletitle>
+        <samplecode>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><li/>Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

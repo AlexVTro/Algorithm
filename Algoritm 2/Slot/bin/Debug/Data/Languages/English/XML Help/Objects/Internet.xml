@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Internet</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>The object makes it possible to interact with the Internet, make POST/GET–requests, get the results of requests, download files from the Internet.  With the help of POST/GET-requests you can get the contents of web pages and also post user data (e.g. to substitute Login and Password or other information into variables). The majority of properties return headers parameters received from the server. So when you've learned them, many of your questions would put out of your mind.
+      To analyse the object better see the example "Internet" in <i>Projects\Examples\Simple Examples</i> and also read the web page of <link2 file="http://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol">Wikipedia</link2>
+</text>
+      </p>
+      <p>
+        <textAll></textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+
+              <descrProperties/>
+
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Object events.html">Object events</link><br/>
+      Other <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful objects</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

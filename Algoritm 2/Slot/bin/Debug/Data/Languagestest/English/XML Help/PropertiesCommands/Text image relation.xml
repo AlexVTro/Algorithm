@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Text image relation</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>The situation in the text object on  picture (the text in the front picture, left).</text>
+      </p>
+      <p>
+        <textAll>All possible <b> of text and picture </b> are described in <link file="Programming/HelpWords.html"> Auxiliary words </link> -&gt; <link file="Programming/HelpWords.html#Text image relation"> text and picture </link>.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle> Options for the provision of text and image in a button </sampletitle>
+        <samplecode> Window1.Knopa1.Tekst and pattern = "front" Window1.Knopa1.Tekst and drawing and drawing SlevaWindow1.Knopa1.Tekst = = Window1.Knopka2.Tekst and risunokWindow1.Knopa1.Tekst and drawing = Window1.Tekst1.Tekst </samplecode>
+      </sample>
+    </samples>
+    <seealso>
+      <est />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file="Programming/HelpWords.html"> Auxiliary words </link> -&gt; <link file="Programming/HelpWords.html#Text image relation"> text and picture </link><br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

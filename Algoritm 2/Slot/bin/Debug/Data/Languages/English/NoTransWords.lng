@@ -1,0 +1,45 @@
+﻿У вас дифицит веса~~You have a shortage of weight
+_Полезные объекты._Дата._Год~~_Useful objects._Data._Year
+_Полезные объекты._Дата._Сегодня~~_Useful objects._Data._Today
+Окно1.Окно1.Текст~~Window1.Window1.Text
+Окно1.Текст1.Текст~~Window1.Text1.Text
+Окно1.Окно1.Ширина~~Window1.Window1.Width
+Онко1.Кнопка1.Цвет шрифта~~Window1.Button1.Fore color
+Окно1.Окно1.X~~Window1.Window1.X
+Окно1.Окно1.Вышина~~Window1.Window1.Height
+Окно1.Объект2.Рисунок~~Window1.Object2.Image
+Окно1.Объект2.Получить фокус~~Window1.Object2.Focus
+Окно1.НадписьРезультат.Текст~~Window1.LabelResult.Text
+Окно1.ТекстВес.Текст~~Window1.TextWeight.Text
+Окно1.ТекстРост.Текст~~Window1.TextHeight.Text
+Окно1.ПамятьИМТ.Значение~~Window1.MemoryBMI.Value
+Окно1.ПамятьСтирания.Значение~~Window1.MemoryClear.Value
+Окно1.Надпись1.Текст~~Window1.Label1.Text
+Окно1._Объект события.Текст~~Window1._Object events.Text
+Окно1.Текст1.Ширина~~Window1.Text1.Width
+_Объект события~~_Object events
+_Окно события~~_Window events
+Среда разработки Алгоритм 2~~Development environment Algorithm 2
+_Полезные объекты._Файлы и папки._Существует папка~~_Useful objects._Files and paths._Exist path
+Окно1.ПамятьФайл.Значение~~Window1.MemoryFile.Value
+_Полезные объекты._Вызвать событие.Окно1_ПамятьДляСозданияПутиФайла_Изменение значения~~_Useful objects._Call event.Window1_MemoryToCreatePath_Changing value
+Окно1_ПамятьДляСозданияПутиФайла_Изменение значения~~Window1_MemoryToCreatePath_Changing value
+_Полезные объекты~~_Useful objects
+КнопкаРассчитать~~ButtonCalculate
+ТекстВес~~TextWeight
+ТекстРост~~TextHeight
+НадписьРезультат~~LabelResult
+Окно1~~Window1
+Создать~~Create
+ПамятьИМТ~~MemoryBMI
+подУсловие~~otherCase
+ПодУсловия~~OtherCases
+подУсловия~~otherCases
+ИЛИЕСЛИ~~ELSEIF
+_И~~_AND
+_ИЛИ~~_OR
+абвгд~~ABCDEF
+Картинка.jpg~~Image.jpg
+Перевести проект на~~Translate project on
+Верн<i>О</i>~~True
+<url file="http://ru.wikipedia.org/wiki/Имт">ИМТ</url>~~<url file="http://en.wikipedia.org/wiki/Body-mass_index">BMI</url>

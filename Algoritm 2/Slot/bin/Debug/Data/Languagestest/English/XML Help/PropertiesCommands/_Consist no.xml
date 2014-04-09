@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Consist no</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>command checks for any characters in the source text. If any of these characters is present in the text, the command will return "None" if none of the characters are not contained in the text, the command will be equal to the value of "Yes". For example, if the text "yvAay" to look for "pa8", the command returns "No" (ie, the text contains the character "a").</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Consist.html"> text contains </link>
+      <br />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Consist all.html"> text consists </link>
+      <br />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of ignore case.html"> Search in text </link>
+      <br />
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

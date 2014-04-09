@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Pane</title>
+    <breadcumbs>
+      <text>
+        <link file="Environment.html"> development environment </link> -&gt; <link file="Environment/ObjectsPart.html"> pane </link></text>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>
+          <b> panel objects </b> allows you to create protagonists programs - <link file="Objects.html"> Objects </link> (buttons, text boxes, windows).</text>
+      </p>
+      <textAll>
+        <p>
+          <b> All accessible objects </b> are located on this panel (except <link file="UsefulObjects.html"> Pack Objects </link>). To learn more about each object you can see <link file="Objects.html"> Objects </link>. </p>
+      </textAll>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Environment.html"> development environment </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br />
+    </seealso>
+  </file>
+</xml>

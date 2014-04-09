@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Objects</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>
+          <b> Objects </b> (buttons, windows, graphics) are blocks from which all programs are created and</text>
+      </p>
+      <textAll>
+        <p> Objects can catch <b> the user </b> (they are called <link file="Events.html"> events </link>), such as for example <link file="Objects/Button/Events/Click . html "> click </link>, <link file="Objects/Button/Events/Mouse move.html"> movement of the mouse on the object </link>, <link file=" Objects/Button/Events/Text changed. html "> change the text </link>, etc. To put the capture of any action, use <link file="ActionPart"> Section events </link></p>
+        <p> Objects can be configured as required by a large number of <link file="Environment/PropertiesPart.html"> properties </link>. In addition, properties can be changed at run time by setting the rules of their changes in <link file="ActionPart"> Section Action </link>. These rules modify the properties and <b> are programming </b>. </p>
+      </textAll>
+      <p>
+        <i>
+          <text>Список всех объектов:</text>
+        </i>
+        <childlist>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="UsefulObjects.html"> Useful sites </link>
+    </seealso>
+  </file>
+</xml>

@@ -1,0 +1,89 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Progress.Designer.vb" caret="2778" fromTop="44" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Progress.vb" caret="106" fromTop="3" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/f:ShowObject.vb" caret="7277" fromTop="22" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Forms.vb" caret="10086" fromTop="15" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:intro.vb" caret="189" fromTop="6" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:My Project/f:app.manifest" caret="65" fromTop="1" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/f:CreateDeistv.vb" caret="4244" fromTop="74" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:Project.vb" caret="65334" fromTop="16" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Sinner.vb" caret="140" fromTop="2" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="33703" fromTop="16" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Mecenats.vb" caret="2103" fromTop="40" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:CodeString.vb" caret="1480" fromTop="34" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/d:ClientServer/f:ClientServer1.vb" caret="40219" fromTop="45" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Errors.vb" caret="3332" fromTop="20" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:Peremens2.vb" caret="0" fromTop="0" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/f:EditProperty.vb" caret="15957" fromTop="35" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Demo.vb" caret="3170" fromTop="27" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="219804" fromTop="12" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Objetus.vb" caret="88337" fromTop="16" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Propertys.vb" caret="26345" fromTop="44" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:MyObjects.vb" caret="144370" fromTop="33" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Peremens.vb" caret="820" fromTop="15" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Props.vb" caret="318703" fromTop="17" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/f:Argument.Designer.vb" caret="2416" fromTop="21" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.resx" caret="84327" fromTop="22" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/f:ShowObject.Designer.vb" caret="4747" fromTop="21" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Run.vb" caret="18180" fromTop="16" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:OptionsForm.vb" caret="11350" fromTop="15" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/d:Internet/f:InternetControl.vb" caret="11201" fromTop="0" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="5704" fromTop="48" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="34358" fromTop="29" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="1530" fromTop="31" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="2451" fromTop="33" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="1530" fromTop="21" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="1995" fromTop="32" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="272680" fromTop="21" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="1530" fromTop="0" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="54484" fromTop="24" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="1883" fromTop="18" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Objetus.vb" caret="2540" fromTop="40" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="7243" fromTop="21" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="273572" fromTop="35" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="219463" fromTop="7" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Objetus.vb" caret="97197" fromTop="8" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Objetus.vb" caret="88337" fromTop="16" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:MyObjects.vb" caret="128146" fromTop="19" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:MyObjects.vb" caret="145575" fromTop="25" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="4788" fromTop="24" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="4788" fromTop="24" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="3957" fromTop="9" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="4872" fromTop="17" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="4471" fromTop="11" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="4698" fromTop="15" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="1384" fromTop="37" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="279" fromTop="8" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="1004" fromTop="30" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="8168" fromTop="38" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="5916" fromTop="12" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="6686" fromTop="32" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="5704" fromTop="9" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

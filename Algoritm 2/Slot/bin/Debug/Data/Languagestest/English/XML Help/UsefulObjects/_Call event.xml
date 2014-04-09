@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Call event</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>With the help of this useful facility, any program established in <link file="Environment/EventPart.html"> event </link> (a click, text input, mouse movement) can cause  artificially, without waiting it makes the user.</text>
+      </p>
+      <p>
+        <textAll>For example, in this case <imgMy src="_Call event.jpg"></imgMy> When <b> double click </b> on <b> Knopke2 </b> will be caused by different actions are totally <b></b> Events - <b> Clique </b> on <b> Knopke1 </b>. Thus, when clicking on <b> Knopke1 </b> and double click on <b> Knopke2 </b> occur alone and tezhe action (in this case, change the text Nadpisi1). And this is a very convenient method, in cases where, for example, <b> lot </b> different buttons perform the same  action.</textAll>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Environment/EventPart.html"> Events </link>
+      <br />
+      <link file="UsefulObjects.html"> Other Useful Objects </link>
+      <br />
+    </seealso>
+  </file>
+</xml>

@@ -1,0 +1,26 @@
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Algoritm 2\obj\Debug\bestCompil.pdb
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Algoritm 2\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Algoritm 2\obj\Debug\bestCompil.Progress.resources
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Algoritm 2\obj\Debug\bestCompil.vbproj.GenerateResource.Cache
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Algoritm 2\bin\Debug\bestCompil.exe
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Algoritm 2\bin\Debug\bestCompil.pdb
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Algoritm 2\obj\Debug\bestCompil.exe
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\bestCompil.exe
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\bestCompil.pdb
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\bin\Debug\bestCompil.exe
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\bin\Debug\bestCompil.pdb
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\bestCompil.Progress.resources
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\bestCompil.vbproj.GenerateResource.Cache
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\bestCompil.ClientServerMy.resources
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\bin\Release\bestCompil.exe
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\bin\Release\bestCompil.pdb
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\bin\Release\Kennedy.ManagedHooks.dll
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\ResolveAssemblyReference.cache
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\bestCompil.ClientServerMy.resources
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\bestCompil.Progress.resources
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\bestCompil.vbproj.GenerateResource.Cache
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\bestCompil.exe
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\bestCompil.pdb
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\bestCompil.InternetControl.resources
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\bestCompil.InternetControl.resources

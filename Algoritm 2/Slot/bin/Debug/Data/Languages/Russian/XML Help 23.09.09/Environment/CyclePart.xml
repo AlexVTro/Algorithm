@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Раздел циклов</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Среда разработки</link>
+        ->
+        <link file="Environment/CyclePart.html">Раздел циклов</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Циклы</b> это теже самые <link file="Environment/IfPart.html">условия</link>, за исключением того, что
+          все <link file="Environment/ActionPart.html">дейсвия</link> внутри циклов будут выполяться постоянно,
+          <b>пока условие остается верным</b> (например, пока 
+          <link file="Objects/Window/PropertiesCommands/Height.html">вышина окна</link> больше 100)
+        </text>
+      </p>
+      <textAll>
+        <p>
+          <b>Создать цикл</b> можно зайдя в Раздел циклов
+          <link file="Environment.html">Среды разработки Алгоритм 2</link>:
+          <imgMy src="CyclePart.jpg"></imgMy>
+        </p>
+        <p>
+          Здесь следует ввести само <b>условие цикла</b> в виде: "Что-то" равно/неравно "чему-то" 
+          (неравно обозначается значком &lt;&gt;, больше либо равно значком &gt;=)
+          <codesnip><![CDATA[Окно1.Текст1.Текст = "Ввели нужный текст"
+Окно1.Окно1.Ширина > "200"
+Онко1.Кнопка1.Цвет шрифта <> черный
+Окно1.Окно1.X >= Окно1.Текст1.Текст]]></codesnip>
+          Затем клик по кнопке <b>Создать</b> создаст блок цикла в 
+          <link file="Environment/TreePart.html">дереве действий</link>.
+        </p>
+        <p>
+          Теперь все <link file="Environment/ActionPart.html">дейсвия</link> внутри этого блока цикла 
+          будут <b>постоянно циклично выполняться</b>, пока будет верно условие цикла. В остальном, 
+          условие цикла работает также как <link file="Environment/IfPart.html">обычное условие</link>.
+        </p>
+      </textAll>
+    </descriptionarticle>
+    
+    <remarks>
+      <text>Условия для циклов могут быть не только <b>простыми</b> (сравнение текста, чисел) но и <b>сложными</b>
+      (математическая формула, сравнение со значением свойства другого объекта).
+      Для создания сложных действий воспользуйтесь
+      <link file="Environment/Master.html">Мастером сложных действий</link> (кнопка с волшебной палочкой справа)
+      <p>
+        Выйти из цикла можно досрочно, не ожидая пока выполнятся оставшиеся действия, подробнее об этом в
+        <link file="UsefulObjects.html">Полезные объекты</link>.<link file="UsefulObjects/Interrupts.html">Прерывания</link>
+      </p>
+    </text>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link file="Environment.html">Среда разработки</link><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      <link file="UsefulObjects/Interrupts.html">Прерывания</link>
+    </seealso>
+  </file>
+</xml>

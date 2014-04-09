@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Шрифт</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          <b>Имя шрифта</b>, которым будет написан текст объекта (Arial, Time new roman).
+        </text>
+      </p>
+      <p>
+        <textAll>
+          Все возможные <b>шрифты</b> описаны в
+          <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+          <link file="Programming/HelpWords.html#Font family">Шрифты</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Варианты изменения cтиля кнопки у кнопки</sampletitle>
+        <samplecode>
+          <![CDATA[Окно1.Кнопа1.Шрифт = Arial Black
+Окно1.Кнопа1.Шрифт = "Time" & " new roman"
+Окно1.Кнопа1.Шрифт = Окно1.Кнопка2.Шрифт
+Окно1.Кнопа1.Шрифт = Окно1.Текст1.Текст]]>
+        </samplecode>
+      </sample>
+    </samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+      <link file="Programming/HelpWords.html#Font family">Шрифты</link><br/>
+      <link2 file="Font bold.html">Шрифт жирный</link2><br/>
+      <link2 file="Font italic.html">Шрифт курсив</link2><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

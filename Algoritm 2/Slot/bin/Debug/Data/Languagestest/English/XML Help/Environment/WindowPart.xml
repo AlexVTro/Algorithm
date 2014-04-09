@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Section Window</title>
+    <breadcumbs>
+      <text>
+        <link file="Environment.html"> development environment </link> -&gt; <link file="Environment/WindowPart.html"> Section Window </link></text>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>In Section <b> Window </b> you create the graphic design of your program, having to <b> window </b> Various <link file="Objects.html"> objects </link> (buttons, text fields, table)</text>
+      </p>
+      <textAll>
+        <p>
+          <b> All </b> can arbitrarily move, put forward, resize, <link file="Programming/Array.html"> create arrays </link>, etc. </p>
+        <p> windows in the program can be any number, each of them for convenience will be located in a separate tab. </p>
+        <p> Some objects (memory cell, a stopwatch, the press box) will be placed not at the window, and on the panels below. It is not graphic, but <b> software objects </b>. Such objects are not visible at runtime, they are provided to you for <b> support operations </b> (such as data storage, calculation of time, print) </p>
+      </textAll>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Environment.html"> development environment </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br />
+    </seealso>
+  </file>
+</xml>

@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Memory</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Object <b> stores data </b>, you tell him to keep in the property <link2 file="Memory/PropertiesCommands/Value.html"> value </link2>.</text>
+      </p>
+      <p>
+        <textAll>
+          <b> Memory </b> is not visible in the work of your program, but it will keep <b> all </b>, you tell her. Memory, as well as the usual facilities are available <b> Events </b> and <b> properties </b>.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents />
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и команды</name>
+            <descr>
+              <descrProperties />
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Object events.html"> event object </link>
+      <br /> Other <link file="Objects.html"> Objects </link><br /><link file="UsefulObjects.html"> Useful sites </link><br /></seealso>
+  </file>
+</xml>

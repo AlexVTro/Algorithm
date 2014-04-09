@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Double panel</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>This is a common <link file="Objects/Panel.html"> Panel </link>, but it consists of two  parts - Panel1 and Panel2.</text>
+      </p>
+      <p>
+        <textAll>Its advantage is the possibility <b> user </b> to change the relative sizes of these two panels.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents />
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и команды</name>
+            <descr>
+              <descrProperties />
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Object events.html"> event object </link>
+      <br /> Other <link file="Objects.html"> Objects </link><br /><link file="UsefulObjects.html"> Useful sites </link><br /></seealso>
+  </file>
+</xml>

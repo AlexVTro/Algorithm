@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Date</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Object provides the ability to perform calculations with dates  and <b> time </b>. For example, to calculate the day of the week, the current month, how many hours have passed some time, etc.</text>
+      </p>
+      <p>
+        <textAll>Learn what <b> today </b> date, by setting <link file="UsefulObjects/Date/PropertiesCommands/Now.html"> now </link>.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+              <descrProperties />
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="UsefulObjects.html"> Other Useful Objects </link>
+    </seealso>
+  </file>
+</xml>

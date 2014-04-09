@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>_Поиск в тексте</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Команда ищет в тексте указанную вами строку и возвращает номер символа, начиная с которого, идет
+          ваша искомая строка. Если ничего найдено не будет, то команда вернет значение "0".
+          Регистр букв при поиске <b>не</b> имеет значения, т.е. буквы "А" и "а" считаются одинаковыми.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of.html">Поиск с учетом регистра</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Substring.html">Взять кусок текста</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

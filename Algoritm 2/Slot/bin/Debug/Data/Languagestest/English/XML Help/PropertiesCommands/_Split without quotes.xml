@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Split without quotes</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Allows any text divided into parts, separated by a character or string. And then returns the part of the text number you specify. If during the search in the text to meet a piece of text, isolated quotes, then this piece is passed and the search it is not performed.</text>
+        <p>
+          <textAll>For example, if you break the text <i> Hey, how ',' case, and? </i> apart, indicating separation character ",". That text would break into <i> 'hello' </i>, <i> 'how', 'case' </i> and <i> 'and?' </i>. And if you specify a number of Part 2, you get the text <i> 'how', 'case' </i>. Often you need to know how many parts of  crashed text. It is available commando <link file="UsefulObjects/_Text/PropertiesCommands/_Split without quotes count.html"> number of parts without the quotes </link>.</textAll>
+        </p>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split without quotes count.html"> number of parts without the quotes </link>
+      <br />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Delete quotes.html"> Quotes remove </link>
+      <br />
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

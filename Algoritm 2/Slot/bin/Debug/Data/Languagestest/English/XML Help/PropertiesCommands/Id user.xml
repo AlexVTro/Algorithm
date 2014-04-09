@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Id user</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>For each computer generates it <b> ID </b>, on the basis of entries in the registry. Change the operating system and hardware on the machine in most cases <b> NOT affect </b> on the ID, but still there are exceptions.</text>
+      </p>
+      <p>
+        <textAll>User ID always different: it is now "2323243 ...", then" 432532320 ...". But this should not confuse you. Encrypted <b> content remains the same </b>, only changes the shape  submission.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link2 file="Id program.html"> ID program </link2>
+      <br />
+      <link2 file="Key issue.html"> Activation Key issue </link2>
+      <br /> Other <propsLink /> object <objLink /></seealso>
+  </file>
+</xml>

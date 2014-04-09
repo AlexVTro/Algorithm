@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>An environment in which Algorithm 2</title>
+    <breadcumbs>
+      <link file="Environment.html"> development environment </link>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>
+          <b> Development Environment </b> program of Algorithm 2 is a window divided into several parts. Each part is responsible for a certain <b> stage of development </b> program (the creation of graphical user interface, configuration objects, programming).</text>
+      </p>
+      <textAll>
+        <p> Scheme development environment: </p>
+        <imgMy src="Environment.jpg">
+        </imgMy>
+        <p>
+          <childlist>
+          </childlist>
+        </p>
+        <p> program you can easily create a <b> start </b> and check how it works at any time. To do this, click the menu item <b> Draft -&gt; Run the program </b>. When you run the project, the program can be debugged: pause, set breakpoints, etc. More information about this topic <link file="Programming/Debug.html"> Debugging project </link></p>
+        <p> When the program is complete, you can create a separate *. exe-file of your program to be run without the aid algorithm. To do this, select <b> File -&gt; Create a ready-made program </b>. Created file will be your own program and you can do with it what you want: <b> throw off your friends, sell, distribute freely </b> on the Internet. </p>
+      </textAll>
+    </descriptionarticle>
+    <remarks>
+      <text> development environment can be customized. More on this in <link file="Environment/Options.html"> environment settings </link></text>
+    </remarks>
+    <seealso>
+      <est />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file="Environment/Options.html"> environment settings </link>
+      <br />
+      <link file=" Environment/Master.html "> Master of complex actions </link>
+    </seealso>
+  </file>
+</xml>

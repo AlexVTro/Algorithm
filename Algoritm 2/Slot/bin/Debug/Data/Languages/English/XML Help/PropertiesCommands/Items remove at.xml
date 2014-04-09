@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Items remove at</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Removes a list item in accordance with its index. Indices begin from "0". </text>
+      </p>
+      <p>
+        <textAll>
+	 
+   </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+     
+      <text></text>
+    </remarks>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>The action removes the first item of the list:</sampletitle>
+        <samplecode>
+<![CDATA[Window1.List box1.Items remove at("0")
+]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><li/><propsLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

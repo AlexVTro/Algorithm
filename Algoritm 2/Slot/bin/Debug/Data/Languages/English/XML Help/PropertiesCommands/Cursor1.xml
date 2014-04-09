@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Cursor1</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+     <text>It is a <b>symbol</b> the mouse pointer is changedto when it is moved over the object.</text>
+      </p>
+      <p>
+        <textAll>
+          Every cursor symbol has its own <b>name</b>. All cursor names you can find in <link file="Programming/HelpWords.html">Quick fill words</link>
+          -> <link file="Programming/HelpWords.html#Cursors">Cursors</link>
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how a cursor can be set (after it has been moved over a button):</sampletitle>
+        <samplecode>
+<![CDATA[Window1.Button1.Cursor = "Pan North"
+Window1.Button1.Cursor = Hand
+Window1.Button1.Cursor = Window1.Window1.Cursor
+Window1.Button1.Cursor = Window1.Text1.Text]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <link file="Programming/HelpWords.html">Quick fill words</link>
+      -> <link file="Programming/HelpWords.html#Cursors">Cursors</link><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Текст кнопки</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>На <b>кнопке</b> объекта будет отображаться такой <b>текст</b>, который будет указан в этом свойстве.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+ 
+    <remarks>
+      <text>Если в текст требуется записать кавычки, то это делается двойным повторением кавычек внутри текста, который вы хотите присвоить:</text>
+      <codesnip>
+<![CDATA["Вот идет текст без кавычек, а ""вот в кавычках""."]]></codesnip>
+      <p>
+        <text>Для того чтобы вставить <b>символ новой строки</b> (аналог нажатия клавиши Enter) используйте
+          <link file="Programming/HelpWords.html">Вспомогательные слова</link> -> 
+		  <link file="Programming/HelpWords.html#Others">Прочие</link> или
+          вставьте символ "¶"</text>
+        <codesnip>
+<![CDATA[Окно1.Кнопка1.Текст = "Текст ¶ Текст на новой строке"]]></codesnip>
+      </p>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link2 file="Text field.html">Текст поля</link2><br/>
+      <link file="UsefulObjects.html" >Полезные объекты</link> -> <link file="UsefulObjects/Text.html" >Текст</link><br/>
+     Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

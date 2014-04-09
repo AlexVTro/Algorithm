@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Item</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>From <b> Points </b> are <link file="Objects/Menu.html"> Menu </link>, <link file="Objects/Context menu.html"> Context menu </link>, <link file="Objects/Tool panel.html"> toolbar </link>.</text>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents />
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и команды</name>
+            <descr>
+              <descrProperties />
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Objects/Menu.html"> Menu </link>
+      <br />
+      <link file="Objects/Context menu.html"> Context menu </link>
+      <br />
+      <link file="Objects/Tool panel.html"> toolbar </link>
+      <br />
+      <link file="UsefulObjects/_Object events.html"> event object </link>
+      <br /> Other <link file=" Objects.html "> Objects </link><br /><link file="UsefulObjects.html"> Useful Objects </link><br /></seealso>
+  </file>
+</xml>

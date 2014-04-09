@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Columns add</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Using this command you can <b>add</b> a new column to the right side of the table.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link2 file="Columns width.html">Columns width</link2><br/>
+      <link2 file="Columns insert.html">Columns insert</link2><br/>
+      <link2 file="Colums remove.html">Colums remove</link2><br/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+      <eventsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

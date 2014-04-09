@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Ячейка выделена</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Свойство позволяет узнать <b>выделена ли</b> требуемая ячейки таблицы, либо может выделить любую ячеку.
+        </text>
+         </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    
+    <seealso>
+      <est/>
+      <link2 file="Item value.html">Значение ячейки</link2><br/>
+      <link2 file="Selected rows.html">Номера выделенных строк</link2><br/>
+      <link2 file="Selected columns.html">Номера выделенных столбцов</link2><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+      <eventsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>To lower</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objectsы</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          The command converts all letters into lower case ("А" -> "а").
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_To upper.html">_To upper</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Substring.html">_Substring</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

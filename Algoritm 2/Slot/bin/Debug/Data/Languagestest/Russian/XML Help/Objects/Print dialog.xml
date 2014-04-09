@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Окно печати</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          <b>Окно печати</b> позволяет организовать печать <b>текстового файла</b> или <b>рисунка</b>. Отображение окна
+          вызывается коммандой <link2 file="Print dialog/PropertiesCommands/Show dialog.html">Запустить окно</link2>.
+        </text>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и комманды</name>
+            <descr>
+
+              <descrProperties/>
+
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Object events.html">Объект события</link><br/>
+      Другие <link file="Objects.html">Объекты</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+    </seealso>
+
+  </file>
+</xml>

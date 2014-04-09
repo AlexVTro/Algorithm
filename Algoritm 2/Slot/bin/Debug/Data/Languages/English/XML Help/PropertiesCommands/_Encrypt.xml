@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Encrypt</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          The command encrypts a file so that the file could not be decrypted in other Windows accounts and on other computers. And the user of the Windows account where the file was created <b>could open</b> this file freely.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Decrypt.html">_Decrypt</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link>,
+      such as <link file="Programming/HelpWords.html#Paths">Paths</link><br/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Exist file.html">_Exist file</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

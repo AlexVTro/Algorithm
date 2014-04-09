@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Supporting the words</title>
+    <breadcumbs>
+      <text>
+        <link file="Programming.html"> Programming </link> -&gt; <link file="Programming/HelpWords.html"> Auxiliary words </link></text>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>
+          <b> Support </b> is the word marks of different values (colors, the main folders, cursors). They are used when necessary to specify the value  property.</text>
+      </p>
+      <textAll>
+        <p> example, to make the red box is sufficient to assign property <link file="Objects/Window/PropertiesCommands/Back color.html"> color </link> auxiliary word "Red". Or if you want to specify certain <link file="Objects/Button/PropertiesCommands/Text Align.html"> position of the text </link> on the button, then you want to assign the property clause of the auxiliary word "Center". </p>
+        <p> Auxiliary words do not change  and do not, it's just information, which is usually used to transfer it to the properties of objects. All auxiliary words are grouped by categories  (folder, position the figure, cursors) and are <b> menu </b>, which is caused by right-clicking on any text field <link file="Environment. html "> development environment Algoritm2 </link>. </p>
+      </textAll>
+      <childlist type="HelpWords">
+      </childlist>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file="UsefulObjects.html"> Useful Objects </link>
+    </seealso>
+  </file>
+</xml>

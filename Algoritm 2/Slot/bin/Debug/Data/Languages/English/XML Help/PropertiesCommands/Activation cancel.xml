@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Activation cancel</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>This command <b>cancels</b> activation if the program has been activated earlier and the trial period is going on as though no activation was done.</text> 
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link2 file="Key validation.html">Key validation</link2><br/>
+      <link2 file="Activation.html">Activation</link2><br/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

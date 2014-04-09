@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Auto ellipsis</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>If the text does not fit all in the object, the text on the site of breakage subscribe <b> ellipsis </b>.</text>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Objects.html"> Objects </link>
+      <br /> Other <propsLink /> object <objLink /></seealso>
+  </file>
+</xml>

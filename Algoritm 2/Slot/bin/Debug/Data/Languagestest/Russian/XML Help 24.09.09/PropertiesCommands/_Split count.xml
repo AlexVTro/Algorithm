@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Разбить на части</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Позволяет узнать на сколько частей можно разбить текст, части которого будут разделяются каким-либо символом 
+          или строкой. Например, если разбить текст "привет, как дела, а?" на части, указав
+          разделительным символом ",". То текст разобьется на "привет", " как дела" и " а?", и комманда вернет вам их 
+          количество равное "3".
+        </text>
+        <textAll>
+          Если вы хотите взять какую-либо одну часть, то воспользуйтесь коммандой
+          <link file="UsefulObjects/_Text/PropertiesCommands/_Split.html">Разбить на части</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split.html">Разбить на части</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split without quotes.html">Разбить на части без кавычек</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

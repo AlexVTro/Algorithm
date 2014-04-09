@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Decrypt</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>command decrypts the previously encrypted file. The encrypted file other accounts in Windows and other computers can not read. The user account Windows, which was encrypted file can read it without problems. You also can not decipher the encrypted files of other accounts in Windows.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Encrypt.html"> Encrypt </link>
+      <br />
+      <link file="Programming/HelpWords.html"> Auxiliary words </link>, such as basic <link file="Programming/HelpWords.html#Paths"> Folders </link><br /><link file="UsefulObjects/_Files and paths/PropertiesCommands/_Exist file.html"> There is a file </link><br /><link file="UsefulObjects.html"> Useful sites </link><br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

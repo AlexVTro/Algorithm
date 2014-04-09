@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Selected columns</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          The property <b>selects</b> table columns or displays which columns are <b>selected</b>. The output is given in the form of <i>0,2,3</i>, i.e. selected columns are the <b>first</b>, <b>third</b> and <b>forth</b> columns (numbering begins from "0"; 0 - is the first column, 1 - is the second one, etc.).
+        </text>
+         </p>
+      <p>
+        <textAll>
+          To select a block of cells this command should be combined with the command
+          <link2 file="Selected rows.html">Selected rows</link2>:
+        <codesnip>
+            <![CDATA[Window1.Table1.Selected rows = "1,0"
+Window1.Table1.Selected columns = "1"]]></codesnip>
+          This fragment of code selects the <b>first</b> and <b>second</b> cells of the <b>second</b> column.
+        </textAll>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link2 file="Selected rows.html">Selected rows</link2><br/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+      <eventsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

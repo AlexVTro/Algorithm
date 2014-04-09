@@ -1,0 +1,21 @@
+﻿<documents>
+<books>
+<book id="Book1">
+<title>Макроэномические показатели экономики Римской Империи в период ее расцвета</title>
+<author>Иван Петров</author>
+<date>21.08.98</date>
+</book>
+<book id="Book2">
+<title>Цветоводство и животноводство. Практические советы</title>
+<author>Петр Сидоров</author>
+<date>10.10.98</date>
+</book>
+</books>
+<articles>
+<article id="Article1">
+<author>Петр Иванов</author>
+<title>Влияние повышения тарифов оплаты за телефон на продолжительность жизни населения</title>
+<date>12.09.98</date>
+</article>
+</articles>
+</documents>

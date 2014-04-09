@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Видимый</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Объекты в любой момент можно сделать <b>видимыми</b> или <b>невидимыми</b> изменяя это свойство.</text>
+      </p>
+      <textAll>
+        <p>
+          Это свойство не удаляет объект, а лишь <b>скрывает</b> его. В любой момент вы можете опять отобразить объект.
+        </p>
+        </textAll>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

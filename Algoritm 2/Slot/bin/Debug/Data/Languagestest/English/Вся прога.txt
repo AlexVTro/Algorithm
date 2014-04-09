@@ -1,0 +1,370 @@
+#################################################
+###                GetTrans 1                 ###
+#################################################
+И~~AND
+ИЛИ~~OR
+Файл * не существует~~File * does not exist 
+Внимение! Программа запущена НЕ от имени Администратора. Это может повлечь ограничение некоторых функций программы и ошибки. Настоятельно рекомендуем запустить программу от имени Администратора. Для этого кликните правой кнопкой мыши по Алгоритм2.ехе и выберите пункт "Запуск от имени Администратора"~~Warning! This program is running not under Administrator's account. This can lead to limitation of certain functions of the program and errors. We strongly recommend to run this program under Administrator's account. To do this, do right click on Algoritm2.exe and select "Run as Administrator"
+Ключ или папка * не существует в реестре~~Key or folder * does not exist in the registry
+Путь * содержит недопустимые символы~~Pathname * contains illegal characters
+Значение ** имеет недопустимый формат для ключа реестра *.~~Value ** is incompatible with the registry key *.
+Невозможно обратиться к файлу. Проверьте правильность написания пути. Ошибка:~~Unable to access a file. Check the pathname. Error:
+Проект "*" не найден~~Unable to find the project "*"
+Попытка деления на 0 в действии "*". По правилам арифметики это запрещено!~~An attempt to divide by 0 in the action "*".
+* не существует. Проверьте правильность написания. Доступны следующие варианты:~~* does not exist. Check your spelling. The following choices are:
+Подробнее в пункте меню~~More in the menu item
+Вспомогательные слова~~Quick fill
+Также цвета можно задать перечисляя через точку с запятой интенсивности красного, зеленого, синего. Интенсивности задаются в диапазоне от 0 до 255.~~Also you can set the color by enumerating values of red, green and blue components. You can choose these values from 0 up to 255.
+Данное свойство может принимать только значения "Да", либо "Нет". А вы ввели *.~~This property can take the values "Yes" or "No" only. You entered *.
+Инверсия может принимать только значения "Да", "Нет", "1", "0". А вы ввели *.~~Inversion can take the values "Yes", "No", "1", "0" only. You entered *.
+Для того чтобы сохранить файл Access, нужно его сначала открыть командой "Открыть Access".~~In order to save file to Access file format, it must be opened at first by the "Open Access" command.
+Строка * не является символом. Свойству требуется только символ.~~String * is not a symbol. This property requires only a symbol.
+Передано недостаточное количество информация для свойства *. Вы указали не все данные что нужны ему.~~Insufficient amount of information for * property. You passed not all data that it needs.
+В свойстве ** был указан слишком большой номер записи *. В списке меньше, чем * записей.~~** Too large number of record (*) was specified in the property **. There is less than * records in the list.
+В свойстве ** был указан слишком большой номер строки *. В таблице меньше, чем * строк.~~** Too large row number (*) was specified in the property **. There is less than * strings in the table.
+В свойстве ** был указан слишком большой номер столбца *. В таблице меньше, чем * столбцов.~~** Too large column number (*) was specified in the property **. There is less than * columns in the table.
+Не понятно, что имеется ввиду выражением *.~~It is not clear what does the expression * mean
+В свойстве * нужно было указать строку из таблицы. А в таблице меньше чем ** строк.~~* You had to specify a row from the table in the property *. The table contains less than ** rows.
+В свойстве * нужно было указать столбец из таблицы. А в таблице меньше чем ** столбцов.~~* You had to specify a column from the table in the property *. The table contains less than ** column.
+** не является целым числом, либо слишком велико. А свойство * может принимать только целые числовые значения.~~** is not an integer value or it is too large. Property * can take only integer values.
+В свойстве *** невозможно добраться до символа номер *, т.к. строка ** имеет длинну ****.~~Impossible to get to character number * in the property ***, since string length is ****.
+** не является числом, либо слишком велико. А функция * работает только с числами.~~** is not a number, or it is too large. Function * works only with numbers.
+** не является положительным числом. А свойство * может принимать только положительные числовые значения.~~** is not a positive number. Property * can take only positive numeric values.
+Дата *** должна быть в диапазоне от ** до *~~Date *** should be in range from ** to *
+** отрицательное число. А свойство * не может принимать отрицательные числа.~~** is negative number. Property * can not take negative numbers.
+Строка * не возвращает никакого значения.~~String * returns no value.
+Файл * не является иконкой.~~File * is not an icon.
+Невозможно получить доступ к файлу, укажите другой файл. Произошла ошибка:~~Unable to access the file, specify another one. Error occured:
+Файл или папка * не существует, проверьте правильность пути~~File or folder * does not exist, check the pathname
+Файл * не существует, проверьте правильность пути~~File * does not exist, check the pathname
+Папка * не существует, проверьте правильность пути~~Folder * does not exist, check the pathname
+Нельзя изменять свойство *, оно доступно только для чтения.~~Unable to change property *, it is read-only.
+Значение * не может перевестись в дату и время. Допустимы следующие варианты:~~Value * can not be transformed to the date and time. Valid options are:
+Значение * не может перевестись во временной интервал. Допустимый формат ЧЧ:ММ:СС.мм~~Value * can not be transformed into the time interval. A valid format is HH:MM:SS.mm
+Ошибка шрифта *. Возможно шрифт не сочетается со стилем (жирность, курсив, подчеркивание и т.д.), задайте другие параметры стиля и попробуйте еще раз выбрать данный шрифт:~~Error in font *. Apparently the font is not compatible with the style (bold, italic, underline, etc.), set another style settings and try to choose the font again:
+Объект с индексом * уже существует, задайте другой индекс~~Object with index * already exists, specify a different index
+Раздел "В остальных случаях" уже присутствует в данном условии. В условии может быть только один такой раздел~~The "Else" section is already present in this conditional construction. Only one such section can be present in conditional construction 
+Имя * задано неверно. Объект не может иметь такое имя.~~Name * is invalid. Object can not have such name.
+Имя объекта не может отсутствовать~~Name of the object can not be missing
+Имя объекта не может начинаться с побела~~Object's name can not begin with whitewashed
+Имя объекта не может начинаться с цифры~~The object's name can not begin with numeral
+Не известно, что означает одинарная кавычка~~It is unknown what does that single quote mean
+Не верно задано свойство или метод объекта~~Object's property or method specified illegally
+Такой объект не существует~~Such object does not exist
+Объект * не существует~~Object * does not exist
+Не известно, что означают несколько знаков равно( "=" ). Используйте скобки, чтобы указать программе как интерпритировать эти знаки.~~It is unclear what several characters ( "=" ) mean. Use parentheses to tell the program how to interpret these characters.
+Не найдено завершение условия *. Условия должны заканчиваться действием "Конец условия".~~Unable to find condition's ending (*). Conditional construction should end with the action "End of the condition."
+У данного объекта не существует свойства или метода *. Проверьте правильность его написания.~~Object does not has property or method *. Please check the spelling.
+Отсутствует обязательный класс MainClass, с которого начинает выполняться код. Ошибочный код:*~~There is no mandatory class MainClass, from which code execution begins. Error in code: *
+Невозможно выполнить строку *. Выполняться могут только Действия, Условия и Циклы.~~Unable execute line *. Only Actions, Conditions and Loops can be executed.
+Контектсного меню с именем **, заданного для объекта * не существует~~Context menu ** of the object * does not exist
+Браузера с именем * не существует~~There is no browser named *
+Вызов функцией ** самой себя, повторился более * раз. Возможно рекурсия бесконечная. Дальнейшая работа может быть крайне нестабильна. Вы хотите продолжить выполнение данной рекурсии?~~Recursive call of the function ** repeated more than * times. Perhaps it is an infinite recursion. Further execution can be unstable. Do you want to continue execution?
+Цикл ** повторился более, повторился более * раз. Возможно цикл бесконечный. Вы хотите продолжить выполнение данного цикла?~~Cycle ** repeated more than * times. Perhaps it's an infinite loop. Do you want to continue execution?
+Произошла непредвиденная ошибка~~ Unhandled error
+Невозможно назначить комбинацию клавиш **, объекту *~~Unable to assign ** key combination to object *
+Невозможно перейти по ссылке *. Ссылка имеет не верный формат.~~Unable to follow the link *. Illegal link format.
+Объект с именем *уже существует, хотите создать массив объектов?~~Object named * already exists. Do you want to create objects array?
+Объект с именем *уже существует, задайте другое имя~~Object named * already exists. Specify a different name
+Имя *содержит недопустимые символы. В написании имени объектов можно использовать только буквы, цыфры и пробелы~~Name * contains invalid characters. In the objects name you can use only letters, numbers and spaces
+В программе существует функция с именем *, задайте другое имя.~~Function named * already exists. Specify a different name
+В программе существует вспомогательное слово *, задайте другое имя.~~Quick fill item named * already exists. Specify a different name
+Данный объект можно разместить только на объектах такого же типа, как он сам.~~This object can be placed only on the objects of the same type as himself. 
+X~~X
+Y~~Y
+Свойства~~Properties
+команды~~Commands
+Объекты~~Objects
+Вращается колесико~~Scroll
+Страница~~Page
+Центр~~Center
+Рисунки~~Pictures
+Все файлы~~All files
+по выбору~~Custom
+Нижний~~Bottom
+Включить триальный отсчет~~Enable trial countdown
+Активировать~~Activate
+Ключ шифрования публичный~~Public encryption key
+Ключ шифрования личный~~Personal encryption key
+Вы хотите разместить объект на первой из двух панелей?~~Do you want to place the object on the first panel?
+Столбец~~Column
+Запись~~Record
+Действие~~Action
+Событие~~Event
+Файл~~File
+Произошла ошибка, при выполнении проекта~~An error occurred during project execution
+Непредвиденная ошибка~~Unhandled error
+Ошибка в строке~~Error in line
+Описание ошибки~~Error Description
+Копирование~~Copy
+ДаНет~~Yes\No
+Положение~~Position
+"Да"~~"Yes"
+Добавьте сюда действия~~Add actions here
+Загрузка~~Download
+АЛГОРИТМ 2~~Algorithm 2
+есть в мастере сложных действий~~present in the complex actions wizard
+Создать массив~~Create an array
+Объединение элементов одним именем. Различаться они будут по индексам.~~Elements union under one name. They differ in index.
+Создать подмассив~~Create a subarray
+Создать массив, в уже существующем массиве.~~Create an array in the existing one.
+Работа с массивами~~Work with arrays
+Функции для удобного редактирования ваших массивов.~~Options for easy arrays edition.
+Объединить в подмассиве~~Join into the subarray
+Объединить объекты в одном индексе массива.~~Merge objects under one array index.
+Выделить массив~~Select array
+Выделятся все объекты, с которыми данный объект находится в массиве.~~All objects will be selected that this object is in the array with.
+Выделить подмассив~~Select subarray
+Выделятся все объекты, с которыми данный объект находится в подмассиве.~~All objects will be selected that this object is in the subarray with.
+Добавить в массив~~Add into the array
+Добавить объект в уже существующий массив.~~Add object into an already existing array.
+Исключить из массива~~Exclude from the array
+Объекту присвоится новое имя, и обнулится индекс.~~Assign a new name to object and set index to zero.
+Перенести~~Move
+Переместить на другой объект-контейнер.~~Move to another container object.
+Создать событие для~~Create an event for
+Создать действие, для события~~Create an action for the event
+объекта~~Object
+Создать условие, для события~~Create a condition for the event
+Создать цикл, для события~~Create a loop for the event
+Левая~~Left
+Правая~~Right
+Колесико~~Scroll
+ДопКнопка1~~AdditionalButton1
+ДопКнопка2~~AdditionalButton2
+Советуем воспользоваться более надежным методом, таким как "_Копировать"~~We recommend to use a more reliable method such as "_Copy"
+Выполнялось~~Performed
+В строке~~In line
+Microsoft Sans Serif~~Microsoft Sans Serif
+Невозможно открыть/воспроизвести файл~~Unable to open/play the file
+Возможно формат файла не поддерживается или файл не существует~~Perhaps the file format is not supported or file does not exist
+Соединение к БД закрыто~~Connection to the database is closed
+Ошибка в написании RTF кода.~~Error in RTF code.
+Ключ верный!~~The key is valid!
+Ключ неверный.~~The key is invalid.
+Ваш ключ активации~~Your activation key
+Триальный период еще не запускался, либо был удален.~~The trial period has not been run yet, or has been overpassed.
+Попытка удалить триальный период.~~Attempt to overpass the trial period.
+Поледний запуск был после окончания триального периода.~~Last execution was after the end of the trial period.
+Системное время было изменено на более раннее.~~The system time has been changed to earlier one.
+Заменять совпадающие файлы~~Overwrite files
+Этот текст печатает программа~~This text is printed by the program
+HKEY_CURRENT_USER\Control Panel\Mouse~~HKEY_CURRENT_USER\Control Panel\Mouse
+У~~Y
+0~~0
+Подряд символы которые должен не содержать текст~~Characters that should not be in the text
+Ок~~Ok
+Привет~~Hello
+Класс MainClass и функция Main должны обязательно присутствовать~~Class MainClass and Main function must be present
+яркосиний~~lightblue
+Длинная дата~~Long Date
+Короткая дата~~Short date
+Верхний~~Top
+Средний~~Medium
+Юникод~~Unicode
+Символ новой строки~~Newline
+Сменить знак (+/-)~~Change sign (+/-)
+Инвертировать (Да/Нет)~~Invert (Yes / No)
+Случайное число (от 1 до введенного)~~Random number (between 1 and specified)
+_И~~_AND
+_ИЛИ~~_OR
+Сложить~~Summation
+Вычесть~~Subtraction
+Умножить~~Multiplication
+Разделить~~Division
+Разделить нацело~~Integer division
+Остаток деления~~Remainder of the division
+Возведение в степень~~Exponentiation
+Склеить строки~~Concatenate strings
+Если равно~~If equal
+Равно c учетом регистра~~Equally match case
+Если неравно~~If unequally
+Если больше~~If more
+Если меньше~~If less
+Больше либо равно~~If more or equal
+Меньше либо равно~~If less or equal
+Лишнее действие "Конец условия"~~Extra action "end condition"
+Эти значения не равны~~These values are not equal
+Эти значения одинаковы~~These values are equal
+это не число~~It is not a number
+Не известно, что означают несколько знаков равно("="~~Meaning of several "=" is unknown
+на следующее значение~~to the following value
+Изменить~~Change
+Изменить следующее свойство~~Change the following property
+Выполнить следующую команду~~Run the following command
+Все рисунки~~All pictures
+Все аудиофайлы~~All audio
+Все видеофайлы~~All video
+Продукт успешно зарегистрирован, спасибо!~~The product has been successfully registered, thank you!
+Ключ неверен~~The key is wrong
+Примеры~~Examples
+Невозможно записать информацию в реестр об ассоциации файлов *.alg c программой Алгоритм. Если вам вам нужна такая связь, разрешите программе обратиться к реестру. Ошибка:~Unable to associate files *.alg with program Algorithm. If you you need a connection, allow the program to use the registry. Error:
+Проект~~Project
+Ваш пояснительный комментарий~~Your explanatory comment
+Создать~~Create
+Добавить~~Add
+Для исправления ошибки скопируйте в папку с файлом который только что запустили библиотеки Kennedy.ManagedHooks.dll и SystemHookCore.dll. Они находятся в корне папки с Алгоритмом 2.~~To fix this problem, copy Kennedy.ManagedHooks.dll and SystemHookCore.dll libraries to the folder with the file you have just executed. These libraries are in the root folder of Algorithm 2.
+Подробнее~~More
+Хозяин~Owner object
+Хозяин меню~~Owner Menu
+Свойства~~Properties
+Значения~~Values
+Применить~~Apply
+Проекты Алгоритма~~Algorithms Projects
+Готовые программы~~Ready program
+Проекты VB.NET~~VB.NET Projects
+Отменение~~Cancellation
+Повторение~~Repetition
+уже существует, замените его?~~already exists. Do you want to replace it?
+Вставка~~Past
+Удаление~~Delete
+не улавливается объектом~~is not detected by the object
+Сохранение~~Save
+Компиляция~~Compile
+ОШИБКА КОМПИЛЯЦИИ! Отчет об ошибке открылся в коммандном окне (черное окошко). Если вы не знаете как исправить ошибку, то скопируйте содержимое окна и отправьте его нам на support@algoritm2.ru~~Compilation error! An error report has be opened in the command console. If you do not know how to fix the problem copy the contents of the window and send it to us at support@algoritm2.ru
+Поздравляем! Проект успешно скомпилирован в готовую программу и расположен по адресу~~Congratulations! The project has been successfully compiled into the final program and is located at
+Открыть папку с программой?~~Open the programs folder?
+Экспорт~~Export
+Поздравляем! Проект успешно экспортирован в VB.NET-проект и расположен по адресу~~Congratulations! The project has been successfully exported to a VB.NET-Project and is located at
+Открыть папку с проектом?~~Open the projects folder?
+Сборка~~Build
+Проект сейчас запущен, для продолжения его надо прервать. Остановить проект?~~The project is running now, in order to continue execution must be terminated. Terminate project execution?
+Сохранить изменения перед закрытием данного проекта?~~Save changes to this project?
+Проект запущен. Остановить выполнение проекта?~~The project is running. Terminate project execution?
+Внимание! Данная функция переводит только свойства объектов, значения свойств, события и некоторые ветки дерева программы. И не переводит основную часть программного кода дерева программы, ее вам следует переводить уже самостоятельно. Настоятельно рекомендуется сделать сначала резервную копию проекта. Все равно продолжить?~~Warning! This function translates only the properties of objects, the values of properties, events, and some branches of program's tree. The main part of program's tree code is not translated, you should translate it yourself. It is strongly recommended that you make a backup copy of the project. Continue anyway?
+Перевод~~Translation
+Мастер сложных действий~~Complex operations wizard
+Иконки~~Icons
+Применение~~Application
+
+
+
+
+
+#################################################
+###                GetTrans 2                 ###
+#################################################
+Приобрести лицензионный Алгоритм 2!~~Purchase a license Algorithm 2!
+http://www.Algoritm2.ru~~http://www.Algoritm2.ru
+Если вы хотите компилировать готовые программы сразу из среды Алгоритм2 - приобретите программу. Это займет менее 3 минут! Этим вы ОЧЕНЬ поможете нам:~~If you want to compile your programs from Algoritm2 at once - purchase the program. It will take less than 3 minutes! This will GREATLY assist us:
+Создать готовую программу БЕСПЛАТНО!~~Compile your program for FREE!
+Бесплатная версия~~Free version
+Аргумент1~~Argument1
+Доп. функция~~ Extra function
+Повторяться пока выполняется условие:~~Repeat until the following condition is true:
+Приобрести Алгоритм 2 сейчас!~~Buy Algorithm 2 now!
+Если вы приобрели программу, то введите ключ сюда...~~If you purchased the program, enter the key here...
+Ok~~Ok
+Если вы хотите компилировать готовые программы сразу из среды Алгоритм2 - приобретите программу. Это займет менее 3 минут! И вы ОЧЕНЬ поможете нам:~~If you want to compile your programs from Algoritm2 at once - purchase the program. It will take less than 3 minutes! This will GREATLY assist us:
+При регистрации потребуется ввести ваш УНИКАЛЬНЫЙ ID:~~When you  you will need to enter your UNIQUE ID:
+БЕСПЛАТНЫЙ On-Line сервис компиляции!~~FREE On-Line compilation service!
+Регистрация~~ Registration
+Посмотреть видео урок "Мой первый проект"~~Watch video lesson "My first project"
+Прочитать "Первый урок"~~Read "The first lesson"
+Не выводить это окно больше~~Do not show this box again
+Знакомство с Алгоритмом~~Getting started with the Algorithm
+Новый проект~~New Project
+Открыть проект~~Open Project
+Сохранить проект~~Save Project
+Сохранить как...~~Save As...
+Создать готовую программу~~Compile Executable
+Экспорт в VB.NET-проект~~Export to VB.NET-Project
+Последние проекты~~Recent Projects
+Выход~~Exit
+Правка~~Edit
+Запустить программу~~Run
+Пошагово (внутрь)~~Step into
+Пошагово~~Step over
+Пошагово (наружу)~~Step out
+Инструменты~~Tools
+Перевести проект на~~Translate project into
+Настройки~~Settings
+Справка~~Help
+Обновления~~Updates
+Видео-уроки~~Video Lessons
+Видео-урок "Мой первый проект"~~Video lesson "My first project"
+Еще видео-уроки...~~More video lessons...
+Примеры проектов~~Project examples
+Примеры проектов базовые~~Base project examples
+Еще примеры проектов...~~More project examples...
+ToolStripContainer1~~ToolStripContainer1
+Выполнить действие~~Execute the action
+Действие, на котором кликнули этот пункт меню выполнится при запуске проекта~~Selected action will be executed after resuming the project
+Не выполнять действие~~Do not execute
+Действие, на котором кликнули этот пункт меню не выполнится при запуске проекта~~Selected action will not be executed after resuming the project
+Редактировать~~Edit
+Выделение~~Select
+Выделить действие/объект~~Select action/object
+Выделить все действия~~Select all actions
+Убрать выделения~~Remove selection
+Расвернуть внутри~~Unwrap inside
+Свернуть внутри~~Collapse inside
+Расвернуть все~~Unwrap all
+Свернуть все~~Collapse all
+Контрольная точка~~Checkpoint
+Выше~~Move up
+Ниже~~Move down
+TabPage2~~TabPage2
+Создать событие~~Create event
+TabPage3~~TabPage3
+Создание действия~~Create action
+TabPage4~~TabPage4
+Создание условие~~Create condition
+TabPage5~~TabPage5
+Создание циклических повторений~~Create cyclic repetitions
+TabPage1~~TabPage1
+Сделать пояснительный комментарий~~Wtrite an explanatory comment
+Отмена~~Cancel
+Peremeschatel~~Peremeschatel
+Уровни~~Levels
+Преимущественное расположение объекта, относительно других объектов~~Preferential location of the object relative to other objects
+На передний план~~Bring to front
+На уровень выше~~One level up
+На уровень ниже~~One level down
+На задний план~~Send to back
+ToolStripButton1~~ToolStripButton1
+Закончить выполнение программы~~Stop the program
+Выполнять программу, прерываясь на каждом действии~~Run the program, stopping at each step
+Выполнять программу, прерываясь на каждом действии, не заходя во внутрь их~~Run the program, stopping at each step without stepping into them
+Выполнять программу, прерываясь на каждом выходе из блока действии~~Run the program, stopping at each action block end
+Шрифты~~Fonts
+Текст к рисунку~~Picture caption position
+Ориентация панелей~~Panels orientation 
+Form1~~Form1
+В этом окне вы можете создавать действия любой сложности. Подробнее о Мастере действий.~~In this window, you can create of any complexity. More about Complex Operations Wizard.
+Master~~Master
+Общие~~General
+Папка в проекте, куда будут сохраняться рисунки проекта~~Folder which will contain project images
+Папка с рисунками проекта по умолчанию~~Default folder with project images
+Папка, в которую по умолчанию сохраняются проекты~~Default project folder
+Папка с проектами~~Project Folder
+Стиль оформления среды разработки Алгоритм 2~~Algorithm 2 IDE skin
+На котором по умолчанию программируют в Алгоритме2~~At which by default are programmed in Algoritm2
+Язык программирования~~Programming Language
+Язык среды разработки Алгоритм2~~Algoritm2 IDE language
+Скин~~Skin
+Язык интерфейса~~Language
+Настройки проекта~~Project Settings
+Значок exe-файла вашей будущей программы~~Exe-file icon for your program
+Иконка программы~~Program's icon
+Окно загрузки появляется при запуске вашей программы~~Loading window appears when you start your program
+Показывать окно загрузки при запуске проекта~~Show loading window at the project start
+В папке рисунков проекта будут файлы с такими именами~~Project images folder will contain files named
+Имя для файлов рисунков по умолчанию~~Default image filename
+Папка в проекте, куда сохраняются рисунки проекта~~Folder which will contain project images
+Папка с рисунками этого проекта~~Current project's images folder
+Быстродействие~~Performance
+Отключить подсветку текста в кавычках~~Disable quoted text highlighting
+Отключить подсветку свойств и команд~~Disable properties and commands highlighting
+Отключить подсветку имен объектов~~Disable object name highlighting
+Отключить подсветку вспомогательных слов~~Disable quick fill highlighting
+Ускоряет создание действий благодаря отсутствию цветов~~Increases performance because of 
+Отключить подсветку дополнительных функций~~Disable additional functions highlighting
+Ускорит при вставке большого количества объектов~~Increases performance of large number of objects inserting
+Отключить возможность Отменить/Повторить~~Disable Undo/Redo functions
+Перед созданием действий не будет провряться верность~~Disable correctness verification before creation of action
+Отключить проверку написания команд и кода~~Disable checking of commands and code spelling
+Данное свойство или команда "*" создана, чтобы возвращать результат, поэтому если вы хотите воспользоваться результатом работы "*", то выберите его находять с мастере сложных действий.~~This property or command "*" is designed to return the result, so if you want to use the result of "*" select it in Complex Operations Wizard.
+Вызвать его можно нажав на такую кнопку ->~~It can be opened by clicking on this button ->
+Уведомление~~Notification
+

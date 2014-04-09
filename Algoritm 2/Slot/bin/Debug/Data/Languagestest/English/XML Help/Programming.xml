@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Programming</title>
+    <breadcumbs>
+      <link file="Programming.html"> Programming </link>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>
+          <b> Development Environment </b> Program Algorithm 2 also provides a set of complex programming tools. They facilitate the development and allow you to develop complex programs with minimum effort.</text>
+      </p>
+      <p>
+        <childlist>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Environment.html"> Development Environment Algorithm 2 </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file=" UsefulObjects.html "> Useful sites </link>
+      <br />
+    </seealso>
+  </file>
+</xml>

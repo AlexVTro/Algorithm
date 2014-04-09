@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Context menu2</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>A <link file="Objects/Context menu.html">menu</link> which 
+        <link file="Objects/Window/PropertiesCommands/Name.html">name</link> was specified in this property  
+       is displayed after clicking of the object with the <b>right</b> button.</text>
+      </p>
+      <p>
+        <textAll>
+          If you want to create a menu for an object then you should firstly <b>create</b> an object
+          <link file="Objects/Context menu.html">Context menu</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="Objects/Context menu.html">Context menu</link><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

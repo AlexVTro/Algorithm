@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Split</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Allows any text divided into parts, separated by a character or string. And then returns the part of the text number you specify. For example, if you break the text "Hello, how are you, eh?" apart, indicating separation character ",". That text would break into "hello", "how are you" and "huh?". And if you specify a number of Part 3, you get the text "as well?".</text>
+        <textAll>Often you need to know how many parts of  crashed text. It is available commando <link file="UsefulObjects/_Text/PropertiesCommands/_Split count.html"> number of parts of the text </link>.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split count.html"> number of parts of the text </link>
+      <br />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split without quotes.html"> Split into parts without the quotes </link>
+      <br />
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

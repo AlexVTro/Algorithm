@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Context menu</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>When clicking <b> right </b> click on the object that floats <link file="Objects/Context menu.html"> menu </link>, whose <link file="Objects/Window/PropertiesCommands/Name.html"> name </link> indicated in this property.</text>
+      </p>
+      <p>
+        <textAll>If you want to assign to the object menu, you must first create  object <link file="Objects/Context menu.html"> Context menu </link>.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file="Objects/Context menu.html"> Context menu </link>
+      <br /> Other <propsLink /> object <objLink /></seealso>
+  </file>
+</xml>

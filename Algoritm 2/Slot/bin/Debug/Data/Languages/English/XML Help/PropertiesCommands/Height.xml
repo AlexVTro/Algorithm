@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Height</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>It is the <b>size</b> of vertical part of the object in pixels.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link2 file="Width.html">Width</link2><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

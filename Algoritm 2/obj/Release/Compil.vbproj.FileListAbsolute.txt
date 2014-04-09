@@ -1,0 +1,5 @@
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\Interop.MSScriptControl.dll
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\Compil.vbproj.ResolveComReference.cache
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\Compil.exe
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\Compil.xml
+D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Release\Compil.pdb

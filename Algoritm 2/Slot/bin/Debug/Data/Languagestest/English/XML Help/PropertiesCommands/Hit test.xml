@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Hit test</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Returns the value of the cell, which <b> fall </b> passed the coordinates X and Y. Coordinates can take, for example, from the properties <link2 file="_Mouse X.html"> _Mysh X </link2>, <link2 file="_Mouse Y.html"> _Mysh Y </link2>.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link2 file="_Mouse X.html"> _Mysh X </link2>
+      <br />
+      <link2 file="_Mouse Y.html"> _Mysh Y </link2>
+      <br />
+      <link2 file="Hit test row.html"> line number of the coordinates </link2>
+      <br />
+      <link2 file="Hit test column.html"> column number in the coordinates </link2>
+      <br />
+      <link file="Objects . html "> Objects </link>
+      <br /> Other <propsLink /> object <objLink /><br /><eventsLink /> object <objLink /></seealso>
+  </file>
+</xml>

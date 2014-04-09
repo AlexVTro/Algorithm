@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Trial started</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          It checks whether counting down of a trial period was <b>started</b> or not.
+        </text>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link2 file="Trial start.html">Trial start</link2><br/>
+      <link2 file="Days left.html">Days left</link2><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

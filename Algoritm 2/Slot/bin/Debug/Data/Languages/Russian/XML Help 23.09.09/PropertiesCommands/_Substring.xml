@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Взять кусок текста</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Позволяет взять из текста любую его часть, если известен порядковый номер первого символа части и ее длинна.
+          Например, из текста "Привет мир!" можно получить второе слово ("мир") указав, что начало куска 8-ой символ,
+          а длинна куска 3 символа. В этом случае результатом работы команды будет слово "мир".
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of ignore case.html">Поиск в тексте</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split.html">Разбить текст на части</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

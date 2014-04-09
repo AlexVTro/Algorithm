@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Window</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>This <b> main </b> object. At <b> windows </b> are <b> all </b> other objects.</text>
+      </p>
+      <p>
+        <textAll>
+          <b> Window </b> is the same ordinary object program, for which you can create <b> Events </b> and <b> properties </b>. Its main purpose is the location for its remaining facilities. Windows in the program can be <b> any </b> number. Which of the windows will be <b> main </b> defines the property <link2 file="Window/PropertiesCommands/Main window.html"> main window </link2>.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents />
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и команды</name>
+            <descr>
+              <descrProperties />
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link2 file="Window/PropertiesCommands/Main window.html"> main window </link2>
+      <br />
+      <link file="UsefulObjects/_Window events.html"> event window </link>
+      <br /> Other <link file="Objects.html"> Objects </link><br /><link file="UsefulObjects.html"> Useful Objects </link><br /></seealso>
+  </file>
+</xml>

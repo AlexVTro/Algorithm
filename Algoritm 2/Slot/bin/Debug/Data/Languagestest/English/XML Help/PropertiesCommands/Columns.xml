@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Columns</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>With this property, you can specify the number of columns and their headers. Indicates the columns in the form: "Stolbets1", "col2". Where <i> Stolbets1 </i> - the title of the first column, <i> col2 </i> - the title of the second.</text>
+      </p>
+    </descriptionarticle>
+    <remarks>
+      <text> quotes in writing: "Stolbets1", "col2" - are required. If you want to change the columns in your program, then such action should look something like this: <codesnip>Window1.Tablitsa1.Stolbtsy = "" "Stolbets1" "," "column2" ""</codesnip> Since two double quotes ( "") within the text is converted to a double ( ") and the output obtained as a time:" Stolbets1 "," col2 "</text>
+    </remarks>
+    <seealso>
+      <est />
+      <link2 file="Rows.html"> Lines </link2>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br /> Other <propsLink /> object <objLink /><br /><eventsLink /> object <objLink /></seealso>
+  </file>
+</xml>

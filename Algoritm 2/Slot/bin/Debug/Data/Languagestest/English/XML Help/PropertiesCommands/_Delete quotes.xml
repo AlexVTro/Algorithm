@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Delete quotes</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>If the source is isolated quotes, the command removes those quotes. Also, if you meet two double quotes ( "") within the text, a separate quotation marks, then they will turn into one double quotes ( "" -!&gt; "). For example, the text <i>" Hello, "" Other "" "</i> after the work of this command will become <i> Hello "Friend" </i>.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Put in quotes.html"> marginalize quotes </link>
+      <br />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Split without quotes.html"> Split into parts without the quotes </link>
+      <br />
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

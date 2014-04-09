@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Actions tree</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Development environment</link>
+        ->
+        <link file="Environment/TreePart.html">Actions tree</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          In the <b>Actions tree</b> all <b>software contents</b> of you program are created. All
+          <link file="Objects.html">objects</link>,
+          <link file="Environment/EventPart.html">events</link>,
+          <link file="Environment/ActionPart.html">actions</link>,
+          <link file="Environment/IfPart.html">conditions</link>,
+          <link file="Environment/CyclePart.html">cycles</link>,
+          <link file="Environment/CommPart.html">comments</link>
+          are contained there.
+        </text>
+    </p>
+    <textAll>
+      <p>
+        <b>Structure</b> of the actions tree:<br/>
+        <p>
+          <imgMy src="TreePart.jpg"></imgMy>
+        </p>
+      </p>
+      <p> 
+        The first, fundamental branches are <link file="Objects/Window.html">Windows</link>.
+        These branches include all <link file="Objects.html">objects</link> of the given window.
+        Then there are <link file="Environment/EventPart.html">Events</link> of each object. Events
+        include in their turn all <link file="Environment/ActionPart.html">actions</link>,
+        <link file="Environment/IfPart.html">conditions</link> and
+        <link file="Environment/CyclePart.html">cycles</link>. 
+        <link file="Environment/CommPart.html">Comments</link> can be located in any part of the actions tree.
+      </p>
+      <p>
+        You can easily relocate, copy, insert, delete all elements of the actions tree. Besides, you
+        can <b>edit</b> them in two ways:<br/>
+        1) Select a necessary action and edit it <b>in the text box</b> which is placed below the actions tree.<br/>
+        2) Select a necessary action and click the right button of the mouse, then select menu item <b>Edit</b> (or simply click twice on the action). The action will appear in the <link file="Environment/ActionPart.html">actions panel</link> so you can edit it now.        
+      </p>
+      <p>
+        Besides you can flag all actions with <b>checkpoints</b>:
+       <imgMy src="BreakpointPassive.gif"></imgMy>
+        All information on checkpoints and flagging you can find in the section <link file="Programming/Debug.html">Project debugging</link>
+    </p>
+  </textAll>
+</descriptionarticle>
+
+<seealso>
+  <est/>
+    <link file="Programming/Debug.html">Project debugging</link><br/>
+    <link file="Environment.html">Development environment</link><br/>
+    <link file="Objects.html">Objects</link>
+    </seealso>
+  </file>
+</xml>

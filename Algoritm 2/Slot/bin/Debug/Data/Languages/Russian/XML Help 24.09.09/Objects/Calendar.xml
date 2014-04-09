@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Календарь</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text><b>Календарь</b> предоставляет возможность пользователю удобно выбрать дату.</text>
+      </p>
+      <p>
+        <textAll><b>Календарь</b> имеет удобный интерфейс для выбора даты. Дату, которую сейчас выбрали, можно узнать
+        из свойства <link file="Calendar/PropertiesCommands/Selected date.html">Выбранная дата</link>
+      </textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>События</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и комманды</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Object events.html">Объект события</link><br/>
+      Другие <link file="Objects.html">Объекты</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      <link file="Calendar/PropertiesCommands/Selected date.html">Выбранная дата</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

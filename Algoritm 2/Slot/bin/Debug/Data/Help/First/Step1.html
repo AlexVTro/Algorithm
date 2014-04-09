@@ -1,0 +1,52 @@
+﻿<HTML><HEAD><link href="../_TemplateMSDN_files/MSDNstyles.css" type="text/css" rel="stylesheet" /><script language="javascript">var gCHM=true;</script><script language="javascript" src="../_TemplateMSDN_files/common.js">var a;</script><script language="javascript" src="../_TemplateMSDN_files/script.js">var b;</script><TITLE>Шаг 1. Графический интерфейс.</TITLE></HEAD><BODY class="xsl_file"><div class="notshown"><img src="../_TemplateMSDN_files/plus.gif" /><img src="../_TemplateMSDN_files/plus_small.gif" /></div><div class="xsl_file_header"><div class="xsl_file_title">Шаг 1. Графический интерфейс.</div><div class="xsl_file_breadcumbs"><a class="xsl_file" target="_top" href="../index.html&#xA;          ">
+      Справка
+    </a> -&gt;
+    <a class="xsl_file" href="../First.html">Мой первый проект</a><span class="xsl_file_test"> -&gt; </span><a class="xsl_file" href="../First/Step1.html">Шаг 1. Графический интерфейс.</a></div><br /><a class="xsl_file" href="#see">Смотрите также</a></div><div class="xsl_file_header1"><span class="xsl_file_spanLink" onClick="javascript:ChColExpAll('xsl_file_spColexpAll', 'xsl_file_imgColexpAll')"><img id="xsl_file_imgColexpAll" src="../_TemplateMSDN_files/minus_small.gif" align="absmiddle" /><span id="xsl_file_spColexpAll">Свернуть все</span></span></div><div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divSyntax','xsl_file_imgSyntax');"><img id="xsl_file_imgSyntax" src="../_TemplateMSDN_files/minus.gif" border="0" /> Описание
+      </span></h4><div><div id="xsl_file_divSyntax" class="xsl_file_container"><p class="xsl_file" align="">
+          Начнем. При запуске среды разработки создается <b>пустой</b> проект. <b>Сохраним</b> его в какую-нибудь
+          отдельную папку. Для этого нажмите <b>Файл -&gt; Сохранить как</b>. Назовем папку и проект <b>"Расчет веса"</b>.
+        </p><p class="xsl_file" align="">
+          Теперь создадим, так называемый, пользовательский <b>интерфейс</b> программы. Это окна, кнопки, надписи,
+          текстовые поля и т.д. В алгоритме 2 они называются <a class="xsl_file" href="../Objects.html">объектами</a>.
+          Чтобы создать какой-нибудь <b>объект</b> надо кликнуть по нему в
+          <a class="xsl_file" href="../Environment/ObjectsPart.html">панели объектов</a>, которая располагается <b>слева</b>.
+          Создадим для начала объект <a class="xsl_file" href="../Objects/Button.html">Кнопку</a>, чтобы при клике по ней
+          расчитывался ваш вес, и выводились результаты.
+        </p><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/First1.jpg" alt="" /></div><p class="xsl_file" align=""><b>Внешний вид</b> этой кнопки можно легко <b>изменить</b>, все настройки <b>объектов</b> 
+          (кнопок, надписей, окон) производятся в <b>правой</b> части окна, в 
+          <a class="xsl_file" href="../Environment/PropertiesPart.html">разделе свойств</a> в
+          <a class="xsl_file" href="../Environment.html">среде разработки Алгоритм 2</a>.
+          Это обычная таблица, где каждому <b>свойству</b> (цвет, текст, ширина) соответсвует его <b>значение</b>
+          (красный, "абвгд", 247). Изменяя <b>значения свойств</b> вы настраиваете объект, в данном случае кнопку.
+        </p><p class="xsl_file" align="">
+          Итак, давайте поменяем <b>текст</b> кнопки на <b>"Рассчитать"</b>.
+          Для этого найдите в <b>разделе свойств</b> (табличка справа) свойство
+          <a class="xsl_file" href="../Objects/Button/PropertiesCommands/Text.html">Текст</a>,
+          и поменяйте его значение с "Кнопка1" на <b>"Рассчитать"</b>.
+        </p><p class="xsl_file" align="">
+          Очень <b>важным</b> свойством является свойство 
+          <a class="xsl_file" href="../Objects/Button/PropertiesCommands/Name.html">Имя</a>.
+          По <b>именам</b> мы будем <b>обращаться</b> ко всем <b>объектам</b>
+          в программе, поэтому укажем нашей кнопке понятное имя <b>"КнопкаРассчитать"</b>. 
+          Для этого найдите в раделе свойств (табличка справа) свойство <b>Имя</b>,
+          и поменяйте его значение с "Кнопка1" на <b>"КнопкаРассчитать"</b>.
+        </p><p class="xsl_file" align="">
+          Отлично! Кнопка <b>готова</b>, теперь можно было бы начинать ее программировать, но
+          нам надо откуда-то узнать <b>вес</b> и <b>рост</b> пользователя. Это решается с помощью объекта
+          <a class="xsl_file" href="../Objects/Text.html">Текстовое поле</a>. Создайте и расположите два <b>текстовых поля</b>.
+        </p><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/First2.jpg" alt="" /></div><p class="xsl_file" align="">
+          Сотрите <b>текст</b> созданных <b>текстовых полей</b>, и измените <b>имя</b> у первого поля на <b>"ТекстВес"</b>,
+          а у второго на <b>"ТекстРост"</b>.
+        </p><p class="xsl_file" align="">
+          И <b>наконец</b>, для завершения картины <b>создадим</b> объекты 
+          <a class="xsl_file" href="../Objects/Label.html">Надписи</a>. <b>Две</b> из них поместите над <b>текстовыми полями</b>, 
+          для того, чтобы пользователь <b>понял</b> что в них вводить. <b>Имена</b> им можете задать <b>любые</b>,
+          а <b>текст</b> как на <b>картинке</b> ниже.
+        </p><p class="xsl_file" align=""><b>Третью надпись</b> расположим внизу, в нее мы выведем <b>результат</b> (в норме ли вес или имеется проблемы).
+          В качестве <b>имени</b> укажите <b>"НадписьРезультат"</b>. В итоге у вас должно получиться похожее окно:
+        </p><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/First3.jpg" alt="" /></div><p class="xsl_file" align="">
+          Если хотите, то можете <b>запустить</b> созданную <b>программу</b> и <b>посмотреть</b> как она работает.
+          Это делается через меню <b>Проект</b> -&gt; <b>Запустить программу</b> или клавишей <b>F5</b>. Если все нормально,
+          то переходим к <a class="xsl_file" href="../First/Step2.html">СЛЕДУЮЩЕМУ УРОКУ</a>!
+          <br /></p></div></div><a class="xsl_file" name="see" /><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="SwapDisplay('xsl_file_divSeealso','xsl_file_imgSeealso');"><img id="xsl_file_imgSeealso" src="../_TemplateMSDN_files/minus.gif" border="0" /> Смотрите также
+        </span></h4><div id="xsl_file_divSeealso" class="xsl_file_container"><div class="xsl_file_container"><a class="xsl_file" href="../First/Step2.html">Шаг 2. Программирование.</a><br /><a class="xsl_file" href="../First/Step3.html">Шаг 3. Условия.</a><br /><a class="xsl_file" href="../Objects.html">Объекты</a><br /><a class="xsl_file" href="../Environment.html">Среда разработки</a><br /><a class="xsl_file" href="../First.html">Мой первый проект</a><br /></div></div></div><p> </p></BODY></HTML>

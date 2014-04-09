@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Click</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <eventsLink/>
+      </text>
+      <text>
+        -> <eventLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>This event is called when the user <b>clicks</b> an object with a mouse.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions type="eventProperties">   
+    </exceptions>
+
+    <seealso>
+      <est/>
+      Other <eventsLink/> of the object <objLink/><br/>
+      <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

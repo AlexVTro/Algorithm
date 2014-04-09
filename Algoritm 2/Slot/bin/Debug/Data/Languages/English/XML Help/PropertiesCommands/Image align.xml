@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Image align</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>The image position (alignment) on the object (On left,  On bottom, Centered, etc.).</text>
+      </p>
+      <p>
+        <textAll>
+          All available <b>alignments</b> are described in: 
+ <link file="Programming/HelpWords.html">Quick fill words</link> ->
+		      <link file="Programming/HelpWords.html#Alignments">Alignments</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how button image alignment can be set:</sampletitle>
+        <samplecode>
+<![CDATA[Window1.Button1.Image align = Center
+Window1.Button1.Image align = "Bottom left"
+Window1.Button1.Image align = Window1.Button2.Text align
+Window1.Button1.Image align = Window1.Text1.Text]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link> ->
+      <link file="Programming/HelpWords.html#Alignments">Alignments</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

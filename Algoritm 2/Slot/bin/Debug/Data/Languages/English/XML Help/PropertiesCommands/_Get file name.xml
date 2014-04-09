@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Get file name</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          The property returns the name of a file located in specified path.
+          E.g. for the file "C:/Program Files/File.jpg" it returns "File.jpg".
+          For the folder "C:/Program Files/Algoithm2" it returns "Algoithm2".
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="Programming/HelpWords.html">Quick fill words</link>
+      such as <link file="Programming/HelpWords.html#Paths">Paths</link><br/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Exist file.html">_Exist file</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

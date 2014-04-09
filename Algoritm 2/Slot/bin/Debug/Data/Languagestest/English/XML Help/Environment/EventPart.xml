@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Section Events</title>
+    <breadcumbs>
+      <text>
+        <link file="Environment.html"> development environment </link> -&gt; <link file="Environment/EventPart.html"> Section events </link></text>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>
+          <b> Events </b> is the user actions (clicks, cursor movement, keystrokes), which can catch <link file="Objects.html"> objects </link> (buttons, text boxes, windows). <b> Section events </b> allows you to assign objects to those events that will catch them in the process of your program.</text>
+      </p>
+      <textAll>
+        <p>
+          <b> Create Event </b> for an object, you can simply select it from the list of events, and then click Create. All of this is the section events <link file="Environment.html"> Development Environments Algorithm 2 </link></p>
+        <p> Thus, if <b> create </b> event <b> Click </b> object <b> Button </b>, then all actions within this event will be executed when clicking on the button: <imgMy src="EventPart.jpg"></imgMy></p>
+        <p> ie when clicking on the button title text box will change to "Window1". </p>
+      </textAll>
+    </descriptionarticle>
+    <remarks>
+      <text> events are not only user actions (clicks, text input, resizing) and events occurring within objects. For example, <link file="Objects/Memory/Events/Changing value.html"> Change the value of memory cell </link>, <link file="Objects/Media/Events/On end.html"> end playing video file </link>, <link file="Objects/Stopwatch/Events/Tick.html"> Stopwatch tiknul </link>, etc. </text>
+    </remarks>
+    <seealso>
+      <est />
+      <link file="Environment.html"> development environment </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+    </seealso>
+  </file>
+</xml>

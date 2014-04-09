@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Текст не содержит</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Команда проверяет наличие любых символов в исходном тексте. Если хотя бы один из указанных символов присутствует
+          в текстке, то команда вернет значение "Нет", если ни один из перечисленных символов не содержится в тексте,
+          то команда будет равна значению "Да". Например, если в тексте
+          "ывАаы" искать символы "па8", то комада возвратит "Нет" (т.е. текст содержит символ "а").
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Consist.html">Текст содержит</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Consist all.html">Текст состоит из</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of ignore case.html">Поиск в тексте</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

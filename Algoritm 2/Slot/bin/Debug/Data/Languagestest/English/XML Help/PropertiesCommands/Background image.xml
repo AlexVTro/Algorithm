@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Background image</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Figure, which will be located on the background object.</text>
+      </p>
+      <p>
+        <textAll>
+          <b> Figure </b> set the path to the image file.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <remarks>
+      <text> path to the picture can be specified as <b> absolute </b>, ie beginning with the letter of the hard drive </text>
+      <codesnip>"C:/Images/pic.jpg"</codesnip>
+      <text> and <b> relative </b>. In this case, the path begins to be from the folder in which your project is </text>
+      <codesnip> "/ Images/pic.jp" </codesnip>
+    </remarks>
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle> Options change the background image in the main window </sampletitle>
+        <samplecode> Window1.Window1.Fonovoy pattern = "C:/1.bmp" Window1.Window1.Fonovoy pattern = "/ 1.bmp" Window1.Window1.Fonovoy picture = My Documents&amp;"/ 2.jpg" Window1.Window1.Fonovoy image = Window1.Knopka1.Fonovoy picture </samplecode>
+      </sample>
+    </samples>
+    <seealso>
+      <est />
+      <li />
+      <link2 file="Background image layout.html"> background style </link2>
+      <br />
+      <li />
+      <link file="Programming/HelpWords.html"> Auxiliary words </link>, such as basic <link file="Programming/HelpWords.html#Paths"> Folders </link><li /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

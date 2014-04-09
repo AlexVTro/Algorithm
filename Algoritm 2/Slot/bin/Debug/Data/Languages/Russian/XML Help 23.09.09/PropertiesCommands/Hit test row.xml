@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Номер строки по координатам</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Возвращает <b>номер</b> строки, на которую <b>попадают</b> переданные координаты X и Y.
+          Координаты можно взять, например, из свойств <link2 file="_Mouse X.html">_Мышь X</link2>, 
+          <link2 file="_Mouse Y.html">_Мышь Y</link2>.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link2 file="_Mouse X.html">_Мышь X</link2><br/>
+      <link2 file="_Mouse Y.html">_Мышь Y</link2><br/>
+      <link2 file="Hit test column.html">Номер столбца по координатам</link2><br/>
+      <link2 file="Hit test.html">Значение по координатам</link2><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+      <eventsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

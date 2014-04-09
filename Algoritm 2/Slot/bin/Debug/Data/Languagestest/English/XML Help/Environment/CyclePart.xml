@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Section cycles</title>
+    <breadcumbs>
+      <text>
+        <link file="Environment.html"> development environment </link> -&gt; <link file="Environment/CyclePart.html"> Section cycles </link></text>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>
+          <b> Cycles </b> is the most tezhe <link file="Environment/IfPart.html"> conditions </link>, except that all <link file="Environment/ActionPart.html"> steps </link> inside the loop will run continuously, <b> while condition remains true </b> (for example, while the height <link file="Objects/Window/PropertiesCommands/Height.html"> windows </link> above 100)</text>
+      </p>
+      <textAll>
+        <p>
+          <b> Create cycle </b> You can go to the section cycles <link file="Environment.html"> Development Environments Algorithm 2 </link>: <imgMy src="CyclePart.jpg"></imgMy></p>
+        <p> It should introduce itself <b> loop condition </b> in the form of: "Something" is equal/unequal "something" (unequal indicated &lt;&gt;, more or equal symbol &gt;=) <codesnip>Window1.Tekst1.Tekst = "introduced the text you want"
+ Window1.Window1.Shirina&amp;gt; "200"
+ Window1.Button1.Fore color &amp;lt;&amp;gt; black
+ Window1.Window1.X&amp;gt; = Window1.Tekst1.Tekst</codesnip> Then click on the button <b> Create </b> will block cycle <link file="Environment/TreePart.html"> tree action </link>. </p>
+        <p> Now all <link file="Environment/ActionPart.html"> action </link> inside this loop block will <b> always run in cycles </b>, as long as the true condition of the cycle. Otherwise, the loop condition has also worked as <link file="Environment/IfPart.html"> usual condition </link>. </p>
+      </textAll>
+    </descriptionarticle>
+    <remarks>
+      <text> conditions for cycles can be not only simple  (a comparison of the text, numbers) and complex  (mathematical formula, the comparison with the value of the properties of another object). To create complex actions, use <link file="Environment/Master.html"> Master complex actions </link> (the button with the wand on the right) <p> Exit from the cycle can be early, not waiting until then follow the remaining steps, more on this in <link file="UsefulObjects.html"> Useful sites </link>. <link file="UsefulObjects/_Interrupts.html"> Interrupts </link></p></text>
+    </remarks>
+    <seealso>
+      <est />
+      <link file="Environment.html"> development environment </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file="UsefulObjects/Interrupts.html "> Interrupts </link>
+    </seealso>
+  </file>
+</xml>

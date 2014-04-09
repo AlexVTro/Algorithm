@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Вращение колесика</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <eventsLink/>
+      </text>
+      <text>
+        -> <eventLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Событие происходит у объекта, когда пользователь <b>двигает по нему</b> мышкой. У объекта, на
+          котором произошло данное событие, появляются дополнительные свойства.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions type="eventProperties">   
+    </exceptions>
+
+    <seealso>
+      <est/>
+      Другие <eventsLink/> объекта <objLink/><br/>
+      <propsLink/> объекта <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

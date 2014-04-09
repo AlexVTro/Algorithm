@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Положение текста</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Место расположения текста на объекте (слева, снизу, по центру).</text>
+      </p>
+      <p>
+        <textAll>
+          Все возможные <b>положения</b> описаны в
+          <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+		      <link file="Programming/HelpWords.html#Alignments">Положения</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Варианты изменения положения текста у кнопки</sampletitle>
+        <samplecode>
+<![CDATA[Окно1.Кнопа1.Положение текста = Центр
+Окно1.Кнопа1.Положение текста = "низ слева"
+Окно1.Кнопа1.Положение текста = Окно1.Кнопка2.Положение рисунка
+Окно1.Кнопа1.Положение текста = Окно1.Текст1.Текст]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+      <link file="Programming/HelpWords.html#Alignments">Положения</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

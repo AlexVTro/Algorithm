@@ -1,0 +1,81 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">True</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Progress.Designer.vb" caret="2778" fromTop="44" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Progress.vb" caret="106" fromTop="3" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/f:ShowObject.vb" caret="7277" fromTop="22" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Forms.vb" caret="10086" fromTop="15" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:intro.vb" caret="189" fromTop="6" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:My Project/f:app.manifest" caret="65" fromTop="1" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="254" fromTop="8" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/f:CreateDeistv.vb" caret="4244" fromTop="74" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Errors.vb" caret="3332" fromTop="21" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:Peremens2.vb" caret="28342" fromTop="2" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Demo.vb" caret="3085" fromTop="17" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Propertys.vb" caret="36830" fromTop="64" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/f:EditProperty.vb" caret="21435" fromTop="19" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Мои элементы/d:ClientServer/f:ClientServer1.vb" caret="40219" fromTop="927" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:MyObjects.vb" caret="198162" fromTop="70" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Objetus.vb" caret="11421" fromTop="0" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Props.vb" caret="34" fromTop="1" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:CodeString.vb" caret="1480" fromTop="35" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Mecenats.vb" caret="2103" fromTop="41" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Sinner.vb" caret="140" fromTop="3" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:OptionsForm.vb" caret="13693" fromTop="8" />
+      <File id="d:Miscellaneous Files/f:Code.vb" caret="0" fromTop="0" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="252244" fromTop="18" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Peremens.vb" caret="15136" fromTop="16" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Run.vb" caret="69765" fromTop="15" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:Project.vb" caret="65334" fromTop="16" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="33703" fromTop="17" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="6856" fromTop="8" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/f:HttpCompil.vb" caret="7738" fromTop="8" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="272842" fromTop="34" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="272292" fromTop="19" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="123811" fromTop="18" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="272628" fromTop="35" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="272300" fromTop="31" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:MainForm.vb" caret="272097" fromTop="26" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Propertys.vb" caret="37346" fromTop="104" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:MyObjects.vb" caret="196060" fromTop="32" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:MyObjects.vb" caret="195664" fromTop="28" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:MyObjects.vb" caret="195069" fromTop="10" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:MyObjects.vb" caret="198150" fromTop="31" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Peremens.vb" caret="67721" fromTop="20" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Peremens.vb" caret="67685" fromTop="18" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="46765" fromTop="11" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="47289" fromTop="28" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="48113" fromTop="41" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="47912" fromTop="33" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="48072" fromTop="37" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Run.vb" caret="69736" fromTop="18" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Peremens.vb" caret="6707" fromTop="10" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Mecenats.vb" caret="2079" fromTop="23" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:Sinner.vb" caret="217" fromTop="3" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:OptionsForm.vb" caret="14526" fromTop="25" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Формы/f:OptionsForm.vb" caret="18193" fromTop="8" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Peremens.vb" caret="16914" fromTop="77" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Peremens.vb" caret="16597" fromTop="44" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="33748" fromTop="20" />
+      <File id="7CF52108-59A9-4C8D-94F8-6978E80833E7/d:Ядро/f:Perevodi.vb" caret="34358" fromTop="29" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+</Configuration>

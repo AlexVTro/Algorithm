@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Settings</title>
+    <breadcumbs>
+      <text>
+        <link file="Environment.html"> development environment </link> -&gt; <link file="Environment/Options.html"> Settings </link></text>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>Preferences window opens click on the <b> Tools </b> -&gt; <b> Settings </b>. Sections of the Settings window:</text>
+      </p>
+      <textAll>
+        <p>
+          <b> Language: </b>
+          <br /> Here you can select the language <b> development environment </b>. In this language will be all the menus and inscriptions, but all actions and programming will continue on the language in which the project was established. </p>
+        <p>
+          <b> Programming Language: </b>
+          <br /> This is the language which will <b> programmed all new projects </b>, created after changing this setting. All activities and programming <b> current project </b> will continue on the language in which <b> was created </b> project. To change the programming language of the current project, use the <b> Tools </b> -&gt; <b> Translate project on </b>. </p>
+        <p>
+          <b> Skin: </b>
+          <br /> Theme design development environment Algorithm 2. </p>
+        <p>
+          <b> the project folder: </b>
+          <br /> folder, which by default creates projects. You can ask here any your folder. </p>
+        <p>
+          <b> folder with pictures of the project by default: </b>
+          <br /> When your project in the program you <link file="Environment/PropertiesPart.html"> section properties </link> specify the drawings, they are automatically copied to special folder <b> pictures </b>, which is located inside <b> folder of your project </b>. <b> Name </b> this folder of drawings and you can change this setting, and all <b> new </b> projects, it will be such as you have. But in the current project she <b> not change </b>. </p>
+        <p>
+          <b> folder with pictures of the project: </b>
+          <br /> When your project in the program you <link file="Environment/PropertiesPart.html"> section properties </link> specify drawings, they are automatically copied to special folder <b> pictures </b>, which is located inside <b> folder of your project </b>. <b> Name </b> this folder of drawings and you can change this setting. And in the current project she <b> change </b>. </p>
+        <p>
+          <b> name for the image files by default: </b>
+          <br /> When your project in the program you <link file="Environment/PropertiesPart.html"> section properties </link> specify the drawings, they are automatically copied to the drawings, which is located inside the folder of your project. This <b> picture name </b> changes to specified in this setting. </p>
+        <p>
+          <b> Icon program: </b>
+          <br /> When you create a project from its executable <b> exe </b>-file (File -&gt; Create an existing program) it marked the file icon will be presented here. </p>
+        <p>
+          <b> Show download window when you start the project: </b>
+          <br /> When your program will run  user, then before the program finally loaded and displayed in front of him will <b> some time </b>. At this time, will be displayed <b> download window </b>, which run through a strip-light download the program. This setting you can disable this option. </p>
+      </textAll>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Environment.html"> development environment </link>
+    </seealso>
+  </file>
+</xml>

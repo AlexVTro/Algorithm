@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Полезные объекты</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">Полезные объекты</link>
+    </breadcumbs>
+    <descriptionarticle >
+      <p>
+        <text><b>Полезные объекты</b> (дата, файлы и папки, реестр) работают также как  
+        <link file="Objects.html">обычные объекты</link>, но не имеют графического интерфейса и служат для
+        <b>взаимодействия с операционной системой</b> Windows (открыть файл, узнать дату и время, координаты курсора)
+      </text>
+      </p>
+      <textAll>
+        <p>
+          Полезные объекты сильно <b>расширяют</b> ваши возможности. С помощью них можно добраться до самых дальних уголков
+          операционной системы (например
+          <link file="UsefulObjects/_Screen/PropertiesCommands/WallPaper.html">изменить рисунок рабочего стола</link>
+          ). А также они облегчают некоторые вычисления (например вычисление 
+          <link file="UsefulObjects/_Date.html">дат</link>).
+          
+        </p>
+      </textAll>
+      <p>
+        <i>
+          <text>Список всех полезных объектов:</text>
+        </i>
+        <childlist>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link>
+    </seealso>
+  </file>
+</xml>

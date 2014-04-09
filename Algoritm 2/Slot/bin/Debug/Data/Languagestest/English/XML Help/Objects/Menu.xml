@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Menu</title>
+    <breadcumbs>
+      <link file="Objects.html"> Objects </link>
+      <text> -&gt; <objLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>This <b> main menu </b>, which is located at the top of the window. It consists of <link file="Objects/Items.html"> menu </link>.</text>
+      </p>
+      <p>
+        <textAll>
+          <b> Main Menu </b> is often the basis for many interface applications.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents />
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и команды</name>
+            <descr>
+              <descrProperties />
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Objects/Items.html"> menu item </link>
+      <br />
+      <link file="UsefulObjects/_Object events.html"> event object </link>
+      <br /> Other <link file="Objects.html"> Objects </link><br /><link file="UsefulObjects.html"> Useful Objects </link><br /></seealso>
+  </file>
+</xml>

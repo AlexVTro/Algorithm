@@ -1,0 +1,439 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7CF52108-59A9-4C8D-94F8-6978E80833E7}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>WindowsApplication1.My.MyApplication</StartupObject>
+    <RootNamespace>WindowsApplication1</RootNamespace>
+    <AssemblyName>Algoritm 2</AssemblyName>
+    <MyType>WindowsForms</MyType>
+    <SignAssembly>false</SignAssembly>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetZone>LocalIntranet</TargetZone>
+    <GenerateManifests>true</GenerateManifests>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Algoritm 2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DefineConstants>Ver="Http"</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Algoritm 2.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DefineConstants>Ver="All"</DefineConstants>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Interop.MSScriptControl, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Kennedy.ManagedHooks, Version=1.2.0.10, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Hooks\bin\Debug\Kennedy.ManagedHooks.dll</HintPath>
+    </Reference>
+    <Reference Include="MyButton, Version=1.0.2744.18811, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\MyButton\bin\Release\MyButton.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.Win32" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Runtime.InteropServices" />
+    <Import Include="System.Text" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="HttpCompil.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Peremens2.vb" />
+    <Compile Include="Console.vb" />
+    <Compile Include="Мои элементы\Bloks.Designer.vb">
+      <DependentUpon>Bloks.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\Bloks.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\ClientServer\AsyncSocket.vb" />
+    <Compile Include="Мои элементы\ClientServer\Deque.vb" />
+    <Compile Include="Мои элементы\ClientServer\IWinsock.vb" />
+    <Compile Include="Мои элементы\ClientServer\ObjectPacker.vb" />
+    <Compile Include="Мои элементы\ClientServer\SharedMethods.vb" />
+    <Compile Include="Мои элементы\ClientServer\ClientServer1.Designer.vb">
+      <DependentUpon>ClientServer1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\ClientServer\ClientServer1.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\ClientServer\Winsock.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\ClientServer\WinsockCollection.vb" />
+    <Compile Include="Мои элементы\ClientServer\WinsockFileData.vb" />
+    <Compile Include="Мои элементы\CreateCycle.Designer.vb">
+      <DependentUpon>CreateCycle.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\CreateCycle.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\CreateIf.Designer.vb">
+      <DependentUpon>CreateIf.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\CreateIf.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\CreateDeistv.Designer.vb">
+      <DependentUpon>CreateDeistv.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\CreateDeistv.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\Internet\InternetControl.Designer.vb">
+      <DependentUpon>InternetControl.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\Internet\InternetControl.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Формы\About.Designer.vb">
+      <DependentUpon>About.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\About.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Mecenats.Designer.vb">
+      <DependentUpon>Mecenats.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Mecenats.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Edu.Designer.vb">
+      <DependentUpon>Edu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Edu.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Demo.Designer.vb">
+      <DependentUpon>Demo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Demo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\OutputFrm.Designer.vb">
+      <DependentUpon>OutputFrm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\OutputFrm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Sinner.Designer.vb">
+      <DependentUpon>Sinner.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Sinner.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Uvedomlenie.Designer.vb">
+      <DependentUpon>Uvedomlenie.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Uvedomlenie.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\CodeVE.Designer.vb">
+      <DependentUpon>CodeVE.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\CodeVE.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\intro.Designer.vb">
+      <DependentUpon>intro.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\intro.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Master.Designer.vb">
+      <DependentUpon>Master.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Master.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\Argument.Designer.vb">
+      <DependentUpon>Argument.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\Argument.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\Arguments.Designer.vb">
+      <DependentUpon>Arguments.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\Arguments.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\ShowObject.Designer.vb">
+      <DependentUpon>ShowObject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\ShowObject.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\Blok.Designer.vb">
+      <DependentUpon>Blok.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\Blok.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Мои элементы\EditProperty.Designer.vb">
+      <DependentUpon>EditProperty.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Мои элементы\EditProperty.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Формы\MainForm.Designer.vb">
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\MainForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="My Project\ApplicationEvents.vb" />
+    <Compile Include="Project.vb">
+    </Compile>
+    <Compile Include="Формы\OptionsForm.Designer.vb">
+      <DependentUpon>OptionsForm.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\OptionsForm.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Формы\Progress.Designer.vb">
+      <DependentUpon>Progress.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Формы\Progress.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Ядро\CodeString.vb" />
+    <Compile Include="Ядро\Enumerations.vb" />
+    <Compile Include="Ядро\Errors.vb" />
+    <Compile Include="Ядро\EventArgs.vb" />
+    <Compile Include="Ядро\Forms.vb" />
+    <Compile Include="Ядро\Iz.vb" />
+    <Compile Include="Ядро\MyObjects.vb">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Ядро\Objetus.vb" />
+    <Compile Include="Ядро\Peremens.vb" />
+    <Compile Include="Ядро\Perevodi.vb" />
+    <Compile Include="Ядро\Propertys.vb" />
+    <Compile Include="Ядро\Props.vb" />
+    <Compile Include="Ядро\Run.vb" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Мои элементы\ClientServer\ClientServer1.resx">
+      <DependentUpon>ClientServer1.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\Internet\InternetControl.resx">
+      <DependentUpon>InternetControl.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\About.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>About.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Mecenats.resx">
+      <DependentUpon>Mecenats.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Edu.resx">
+      <DependentUpon>Edu.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Demo.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Demo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\OutputFrm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OutputFrm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Sinner.resx">
+      <DependentUpon>Sinner.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Uvedomlenie.resx">
+      <DependentUpon>Uvedomlenie.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\CodeVE.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CodeVE.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\intro.resx">
+      <DependentUpon>intro.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Master.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Master.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\Bloks.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Bloks.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\CreateCycle.resx">
+      <DependentUpon>CreateCycle.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\CreateIf.resx">
+      <DependentUpon>CreateIf.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\CreateDeistv.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>CreateDeistv.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\Argument.resx">
+      <DependentUpon>Argument.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\Arguments.resx">
+      <DependentUpon>Arguments.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\ShowObject.resx">
+      <DependentUpon>ShowObject.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\EditProperty.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>EditProperty.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\MainForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>MainForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Мои элементы\Blok.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Blok.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\OptionsForm.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>OptionsForm.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Формы\Progress.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>Progress.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <BaseApplicationManifest Include="My Project\app.manifest" />
+    <None Include="app.config" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Sql.Server.Express.1.0">
+      <Visible>False</Visible>
+      <ProductName>SQL Server 2005 Express Edition</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 3.1</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+</Project>

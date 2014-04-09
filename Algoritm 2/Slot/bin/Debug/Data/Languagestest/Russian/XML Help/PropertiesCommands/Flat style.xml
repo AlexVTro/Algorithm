@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Стиль кнопки</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Задает <b>вид отображения</b> объекта на форме (плоский вид, объемный).
+        </text>
+      </p>
+      <p>
+        <textAll>
+          Все возможные <b>стили кнопки</b> описаны в
+          <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+          <link file="Programming/HelpWords.html#Flat style">Стили кнопки</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Варианты изменения cтиля кнопки у кнопки</sampletitle>
+        <samplecode>
+          <![CDATA[Окно1.Кнопа1.Стиль кнопки = "обычный"
+Окно1.Кнопа1.Стиль кнопки = Поднимающийся
+Окно1.Кнопа1.Стиль кнопки = Окно1.Кнопка2.Стиль кнопки
+Окно1.Кнопа1.Стиль кнопки = Окно1.Текст1.Текст]]>
+        </samplecode>
+      </sample>
+    </samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+      <link file="Programming/HelpWords.html#Flat style">Стили кнопки</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

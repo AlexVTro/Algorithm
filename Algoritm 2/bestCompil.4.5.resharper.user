@@ -1,0 +1,41 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Ядро/f:Run.vb" caret="84238" fromTop="0" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Ядро/f:Propertys.vb" caret="304" fromTop="9" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="44659" fromTop="12" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Ядро/f:Propertys.vb" caret="24461" fromTop="44" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="32" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="33" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="29" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="34" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="29" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="4711502" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="84238" fromTop="12" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="44659" fromTop="12" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+</Configuration>

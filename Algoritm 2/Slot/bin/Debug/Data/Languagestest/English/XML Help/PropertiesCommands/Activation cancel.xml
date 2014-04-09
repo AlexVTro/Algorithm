@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Activation cancel</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>If the program was already activated, this command removes  activation. And the trial period continues as if the registration program and was not.</text>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link2 file="Key validation.html"> Activation Key check </link2>
+      <br />
+      <link2 file="Activation.html"> Activated </link2>
+      <br />
+      <link file=" Objects.html "> Objects </link>
+      <br /> Other <propsLink /> object <objLink /></seealso>
+  </file>
+</xml>

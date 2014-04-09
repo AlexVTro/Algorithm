@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Section Action</title>
+    <breadcumbs>
+      <text>
+        <link file="Environment.html"> development environment </link> -&gt; <link file="Environment/EventPart.html"> Section Action </link></text>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>
+          <b> Actions </b> is some program commands (<link file="Objects/Window/PropertiesCommands/Text.html"> change the text box </link>, <link file="Objects/Button/PropertiesCommands/Back color . html "> change the color of a button </link>), that run the program and programmed by you.</text>
+      </p>
+      <textAll>
+        <p>
+          <b> Create action </b> for an object you can go to the section Action <link file="Environment.html"> Development Environments Algorithm 2 </link>: <imgMy src="ActionPart.jpg"></imgMy></p>
+        <p> Suffice <b> select an object </b>, who will perform your action and <b> set property </b> which will vary with the object. By setting below <b> new value </b> for the property and clicking <b> Create </b>, you and create the action: <imgMy src="EventPart.jpg"></imgMy></p>
+        <p> Thus, when the object <b> Button </b> will produce <b> Click </b>, then all actions within this event will be run . In this case, the title text box will change to a "window" </p>
+      </textAll>
+    </descriptionarticle>
+    <remarks>
+      <text> new values for properties can be not only simple  (text, number) but <b> complex </b> (a mathematical formula, the values of the properties of another object). To create complex actions, use <link file="Environment/Master.html"> Master complex actions </link> (the button with the wand on the right) </text>
+    </remarks>
+    <seealso>
+      <est />
+      <link file="Environment.html"> development environment </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+    </seealso>
+  </file>
+</xml>

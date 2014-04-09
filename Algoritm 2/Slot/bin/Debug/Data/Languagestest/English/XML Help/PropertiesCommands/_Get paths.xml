@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Get paths</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>This property returns the list of folders from the specified directory. Folders in the list are listed by ";" and look like this: "C:/Program Files; C:/Windows; C:/Temp".</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="Programming/HelpWords.html"> Auxiliary words </link>, such as basic <link file="Programming/HelpWords.html#Paths"> Folders </link><br /><link file="UsefulObjects/_Files and paths/PropertiesCommands/_Exist path.html"> There is a folder </link><link file="UsefulObjects.html"> Useful sites </link><br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

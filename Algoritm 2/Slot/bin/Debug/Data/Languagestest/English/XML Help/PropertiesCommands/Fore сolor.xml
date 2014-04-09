@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Fore color</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Color of text in the object.</text>
+      </p>
+      <p>
+        <textAll>
+          <b> All colors </b> can be specified verbally symbol colors (red, blue, black), more on this topic <link file="Programming/HelpWords.html"> Auxiliary words </link> -&gt; <link file="Programming/HelpWords.html#Colors"> Colors </link>. Either color can be specified in the special form , where the first is the intensity of red color, then a semicolon intensity of the green, and after the semicolon blue. The maximum intensity of 255, minimum 0. For example: <codesnip>"255, 0, 0," = red
+ "0, 0, 255; = blue
+" 0, 0, 0, "= black
+" 255, 255, 255, "= white
+ "255, 255, 128," = light yellow</codesnip></textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <remarks>
+      <text> If you want to make a color transparent  (not all objects have this feature), set this property to "No" or "".</text>
+    </remarks>
+    <samples>
+      <sample lang="Aлгоритм2">Options <sampletitle> change the font color for main buttons </sampletitle><samplecode> Window1.Knopka1.Tsvet font = font krasnyyWindow1.Knopka1.Tsvet = "255, 201, 128;" Window1.Knopka1.Tsvet font size = "128, 128 , 0, "Window1.Knopka1.Tsvet font = Window1.Knopka1.Tsvet </samplecode></sample>
+    </samples>
+    <seealso>
+      <est />
+      <li />
+      <link file="Programming/HelpWords.html"> Auxiliary words </link>, such as basic <link file="Programming/HelpWords.html#Colors"> Colors </link><li /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

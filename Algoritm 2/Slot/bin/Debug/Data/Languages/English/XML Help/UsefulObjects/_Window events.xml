@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Window events</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">Useful Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>The useful object <b>Window events</b> makes accessible the properties and commands of <b>that</b>
+          <link file="Objects/Window.html">window</link>,
+           or of <b>that</b> object of <b>this</b> window where the event is being executed at the moment.</text>
+      </p>
+       <p>
+        <textAll>Example:
+          <imgMy src="EventObj.jpg"></imgMy>
+
+          There <b>Window events</b> makes accessible properties and commands of the <b>Window1</b>, because the event is executed under the <b>Button1</b> and this button locates in the <b>Window1</b>.
+          <p>
+            Thereby <b>Window events</b> has <b>nothing new</b>, it just <b>simplifies</b> the process of actions creation. Now in case it is necessary to <b>change the property</b> of the window where the <b>event has been executed</b>, there is no need to specify its <b>name</b> (e.g.  Window1), but simply the universal name "Window events" can be specified.
+          </p>
+          </textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Object events.html">Object events</link><br/>
+      <link file="Objects/Window.html">Window</link><br/>
+      Other <link file="UsefulObjects.html">Useful Objects</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

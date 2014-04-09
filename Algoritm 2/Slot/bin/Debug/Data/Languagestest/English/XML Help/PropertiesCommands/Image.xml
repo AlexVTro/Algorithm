@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Image</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Figure, which will be located at the facility. He will be behind <link file="Objects/Window/PropertiesCommands/Text.html"> text </link>, but over <link file="Objects/Window/PropertiesCommands/Background image.html"> wallpaper </link></text>
+      </p>
+      <p>
+        <textAll>
+          <b> Figure </b> set the path to the image file.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <remarks>
+      <text> path to the picture can be specified as <b> absolute </b>, ie beginning with the letter of the hard drive </text>
+      <codesnip>"C:/Images/pic.jpg"</codesnip>
+      <text> and <b> relative </b>. In this case, the path begins to be from the folder in which your project is </text>
+      <codesnip> "/ Images/pic.jp" </codesnip>
+    </remarks>
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle> Options for the drawing in the main window </sampletitle>
+        <samplecode> Window1.Window1.Risunok = "C:/1.bmp" Window1.Window1.Risunok = "/ 1.bmp" Window1.Window1.Risunok = My Documents&amp;"/ 2.jpg" Window1.Window1.Risunok = Window1.Knopka1.Fonovoy picture </samplecode>
+      </sample>
+    </samples>
+    <seealso>
+      <est />
+      <link file="Programming/HelpWords.html"> Auxiliary words </link>, such as basic <link file="Programming/HelpWords.html#Paths"> Folders </link><br /> Other <propsLink /> object <objLink /></seealso>
+  </file>
+</xml>

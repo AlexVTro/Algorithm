@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Стиль фона</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Стиль отображения <b>фонового рисунка</b> на объекте (замостить плиткой, растянуть на объект).
+        </text>
+      </p>
+      <p>
+        <textAll>
+          Все возможные <b>стили фона</b> описаны в
+          <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+          <link file="Programming/HelpWords.html#Background image layout">Стили фона</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Варианты изменения cтиля фона у кнопки</sampletitle>
+        <samplecode>
+          <![CDATA[Окно1.Кнопа1.Стиль фона = "Масштабируемый"
+Окно1.Кнопа1.Стиль фона = Растянутый
+Окно1.Кнопа1.Стиль фона = Окно1.Кнопка2.Стиль фона
+Окно1.Кнопа1.Стиль фона = Окно1.Текст1.Текст]]>
+        </samplecode>
+      </sample>
+    </samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      <link file="Programming/HelpWords.html">Вспомогательные слова</link> ->
+      <link file="Programming/HelpWords.html#Background image layout">Стили фона</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

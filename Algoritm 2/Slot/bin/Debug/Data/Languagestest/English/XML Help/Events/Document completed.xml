@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Document completed</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <eventsLink /></text>
+      <text> -&gt; <eventLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>This event fires when the web page <b> completely </b> loaded and displayed by your browser. The object on which the event occurred, there are additional properties.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions type="eventProperties">
+    </exceptions>
+    <seealso>
+      <est /> Other <eventsLink /> object <objLink /><br /><propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

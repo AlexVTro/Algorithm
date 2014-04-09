@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Поиск без кавычек</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          комманда ищет указанный вами текст и возвращает номер символа, начиная с которого, идет 
+          ваш искомый текст. Регистр букв при поиске <b>не</b> имеет значения, 
+          т.е. буквы "А" и "а" считаются одинаковыми. Если во время поиска в тексте встретится кусок текста,
+          обособленный кавычками, то этот кусок пропускается и поиск в нем не производится. Если ничего найдено
+          не будет, то комманда вернет значение "0".
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of ignore case.html">Поиск в тексте</link><br/>
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Put in quotes.html">Кавычками обособить</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

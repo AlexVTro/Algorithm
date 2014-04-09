@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Определить корневую</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Полезные объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Данное свойство определяет имя файла без расширения из переданного ему пути до файла или папки.
+          Например для файла "C:/Program Files/File.jpg", это свойство вернет "File".
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="Programming/HelpWords.html">Вспомогательные слова</link>,
+      такие как основные <link file="Programming/HelpWords.html#Paths">Папки</link><br/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Exist file.html">Существует файл</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

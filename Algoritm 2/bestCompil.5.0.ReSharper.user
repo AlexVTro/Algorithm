@@ -1,0 +1,59 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Ядро/f:Run.vb" caret="84238" fromTop="0" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Ядро/f:Propertys.vb" caret="304" fromTop="9" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="49428" fromTop="21" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Мои элементы/d:Internet/f:InternetControl.vb" caret="383" fromTop="7" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Ядро/f:MyObjects.vb" caret="202978" fromTop="0" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Ядро/f:Propertys.vb" caret="24461" fromTop="44" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="32" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="33" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="29" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="34" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="29" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="45" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="12" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="44" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="44" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="27" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="25" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="32" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="40" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="0" fromTop="44" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="52079" fromTop="44" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="49708" fromTop="26" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/f:Code.vb" caret="49353" fromTop="21" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Мои элементы/d:Internet/f:InternetControl.vb" caret="309" fromTop="7" />
+      <File id="BC692D0D-FE01-4C9A-90D0-79B8469F5AB4/d:Slot/d:Ядро/f:MyObjects.vb" caret="206885" fromTop="8" />
+    </RecentEdits>
+  </RecentFiles>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerMSTest>
+    <UseTestRunConfigFromMetadataFile>False</UseTestRunConfigFromMetadataFile>
+  </UnitTestRunnerMSTest>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

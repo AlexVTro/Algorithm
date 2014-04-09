@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Append text</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>This command appends  in the file you specify text or data. If you want to completely overwrite the file, use the commando <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Save in file.html"> Save the file </link></text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Save in file.html"> Save the file </link>
+      <br />
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Save picture . html "> Save Image </link>
+      <br />
+      <link file="Programming/HelpWords.html"> Auxiliary words </link>, such as basic <link file="Programming/HelpWords.html#Paths"> Folders </link><br /><link file="UsefulObjects/_Files and paths/PropertiesCommands/_Exist file.html"> There is a file </link><br /><link file="UsefulObjects.html"> Useful sites </link><br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>

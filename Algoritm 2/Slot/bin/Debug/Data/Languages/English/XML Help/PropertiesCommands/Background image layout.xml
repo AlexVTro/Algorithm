@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Background image layout</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>This is a style of the object <b>background</b> (Tile, Stretch).
+        </text>
+      </p>
+      <p>
+        <textAll>
+          All available <b>Background image layouts</b> are described in:
+          <link file="Programming/HelpWords.html">Quick fill words</link> ->
+          <link file="Programming/HelpWords.html#Background image layout">Background image layout</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how Background image layout can be set:</sampletitle>
+        <samplecode>
+          <![CDATA[Window1.Button1.Background image layout = "Zoom"
+Window1.Button1.Background image layout = Stretch
+Window1.Button1.Background image layout = Window1.Button2.Background image layout
+Window1.Button1.Background image layout = Window1.Text1.Text]]>
+        </samplecode>
+      </sample>
+    </samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link> ->
+      <link file="Programming/HelpWords.html#Background image layout">Background image layout</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

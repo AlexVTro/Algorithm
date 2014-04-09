@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Раздел действий</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Среда разработки</link>
+        ->
+        <link file="Environment/EventPart.html">Раздел действий</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Действия</b> это некие комманды программе
+          (<link file="Objects/Window/PropertiesCommands/Text.html">изменить текст окна</link>,
+          <link file="Objects/Button/PropertiesCommands/Back color.html">изменить цвет кнопки</link>),
+          которые выполняются программой и программируются вами.
+        </text>
+      </p>
+      <textAll>
+        <p>
+          <b>Создать действие</b> для объекта можно зайдя в Раздел действий
+          <link file="Environment.html">Среды разработки Алгоритм 2</link>:
+          <imgMy src="ActionPart.jpg"></imgMy>
+        </p>
+        <p>
+          Здесь достаточно <b>выбрать объект</b>, который будет выполнять ваше действие и <b>выбрать свойство</b>
+            которое будет изменяться у данного объекта.
+            Задав чуть ниже <b>новое значение</b> для этого свойства и нажав кнопку <b>Создать</b>, вы и создадите действие:
+          <imgMy src="EventPart.jpg"></imgMy>
+        </p>
+        <p>
+          Таким образом, когда по объекту <b>Кнопка</b> произведут <b>Клик</b>, то все действия внутри этого события будут <b>выполнятся</b>.
+          В данном случае текст заголовка окна изменится на "Окошко"
+        </p>
+      </textAll>
+    </descriptionarticle>
+    
+    <remarks>
+      <text>Новые значения для свойств могут быть не только <b>простыми</b> (текст, число) но и <b>сложными</b>
+      (математическая формула, значения свойства у другого объекта). Для создания сложных действий воспользуйтесь
+      <link file="Environment/Master.html">Мастером сложных действий</link> (кнопка с волшебной палочкой справа)
+    </text>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link file="Environment.html">Среда разработки</link><br/>
+      <link file="Objects.html">Объекты</link>
+    </seealso>
+  </file>
+</xml>

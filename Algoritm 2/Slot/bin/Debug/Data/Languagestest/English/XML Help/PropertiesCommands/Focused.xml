@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Focused</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text> Objects </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>If <b> in Focus </b> equals "Yes", then the object is active and is now working with the user (eg typing in <link file="Objects/Text.html"> text box </link>) .</text>
+      </p>
+      <textAll>Concept <p><b> Focus </b> has the same meaning as in cameras, ie be in focus means to be in the spotlight. In this case, be the object of your attention. If this property is equal to "No", then the object is still in working condition , just the user probably does not use it yet. </p></textAll>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Objects.html"> Objects </link>
+      <br /> Other <propsLink /> object <objLink /></seealso>
+  </file>
+</xml>

@@ -1,0 +1,33 @@
+Изменилась видимость
+Удерживать соединение~~KeepAlive
+Автоматически перенаправляться~~AllowAutoRedirect
+Ссылка запроса~~UrlToGo
+Ссылка откуда пришли~~UrlReferer
+Ссылка перенаправления~~UrlRedirect
+Тип браузера~~UserAgent
+Принимать~~Accept
+Прокси IP~~ProxyIp
+Прокси порт~~ProxyPort
+Кодировка страницы~~EncodingPage
+Язык страницы~~LanguagePage
+Содержимое запроса~~ContentQuery
+Тип содержимого~~ContentType
+Длинна содержимого~~ContentLength  
+Метод запроса~~HttpMethod   
+Код результата~~ResultCode  
+Таймаут~~TimeOut
+Время задержки~~TimeDelay
+Заголовки запроса~~Headers
+Куки запросов~~CookiesQueries
+Результат запроса~~ResultQuery
+Тип файла~~File type
+
+Получить код страницы~~GetSourceCodePage
+Получить рисунок~~GetImage
+Получить файл~~GetFile
+Выполнить запрос~~ExecuteQuery
+Очистить куки~~ClearCookie
+
+Отправляется запрос~~SendingQuery
+Отправился запрос~~SentQuery
+Пришел ответ~~ReceivedResponse

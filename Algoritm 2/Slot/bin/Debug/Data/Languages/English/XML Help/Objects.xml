@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Objects</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+    </breadcumbs>
+    <descriptionarticle >
+      <p>
+        <text><b>Objects</b> (buttons, windows, images) are blocks which are used for creation of any program.</text>
+      </p>
+      <textAll>
+        <p>
+          Objects can register <b>user's actions</b> (which are called <link file="Events.html">events</link>),
+          such as <link file="Objects/Button/Events/Click.html">click</link>,
+          <link file="Objects/Button/Events/Mouse move.html">moving of a mouse on some object</link>,
+          <link file="Objects/Button/Events/Text changed.html">changing of a text</link> and so on.
+          To set registering of any action use <link file="ActionPart">Events tab</link>.
+        </p>
+        <p>
+          Objects can be set in a way you need by using a great number of  
+          <link file="Environment/PropertiesPart.html">properties</link>.
+          Besides, you can change properties while the program is functioning by setting the algorithm in <link file="ActionPart">Actions tab</link>.
+          These algorithms which change properties are <b>programming</b>.
+        </p>
+      </textAll>
+      <p>
+        <i>
+          <text>The list of all objects:</text>
+        </i>
+        <childlist>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link file="UsefulObjects.html">Useful objects</link>
+    </seealso>
+  </file>
+</xml>

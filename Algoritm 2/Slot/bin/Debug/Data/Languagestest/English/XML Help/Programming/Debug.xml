@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Debugging</title>
+    <breadcumbs>
+      <text>
+        <link file="Programming.html"> Programming </link> -&gt; <link file="Programming/Debug.html"> Debug programs </link></text>
+    </breadcumbs>
+    <descriptionarticle>
+      <p>
+        <text>Running in the IDE Algorithm 2 program, you can fully control . You can, for example, <b> pause </b> program execution at any <b> action </b>, to see what is some <b> property </b>, or even to say do some other <b> Action </b>.</text>
+      </p>
+      <remarks>
+        <i> debugging we consider the example <b> File Manager </b>. This project is located in the folder where installed Algorithm 2, in the directory projects/examples/File Manager. Can you run it and try all possible debug it, in the process of reading this material. </i>
+      </remarks>
+      <textAll>
+        <p> Any action you can mark the special <b> tag </b>, it is called <b> "Checkpoint" </b>. To do this, click on <b> action </b> in <link file="Environment/TreePart.html"> tree action </link> in <link file="Environment.html"> IDE Algorithm 2 </link>, and then on the button with a red dot , which is located on the left  from the tree of action. Either click on the Effects of Right-click to open the menu, select <b> "Checkpoint" </b>. Or, click <b> F9 </b>. This activity is as follows: </p>
+        <imgMy src="Debug1.png">
+        </imgMy>
+        <p> Then, when you run the project, your program will work for as long as it does not meet marked by <b> control </b> point of action. Once this action occurs, the program launched <b> suspended </b>, and you get back into the development environment Algorithm 2. Here you can change  action, see what are currently <b> properties </b> objects and can <b> send </b> the program on track. Stop the program at the control point is as follows: </p>
+        <imgMy src="Debug2.png">
+        </imgMy>
+        <p> At the bottom there is a new <b> text box </b>. It displays all information about the action , which is allocated  in the tree action. For example in the picture above, be automatically have written what is <b> Window1.PamyatNomerStroki.Znachenie </b> (it is a vacuum, ie, the property value is still no vacant), and brought what is <b> Window1.Tablitsa1._Nomer rows </b> (it is equal to 0, then clicked on the first line). </p>
+        <p> In this text box, you can also learn <b> value </b> any <b> properties </b> any object. It's enough to write in the test field, located just above the desired property (eg, Window1.Tekst1.Tekst), and then select  it with the mouse: </p>
+        <imgMy src="Debug3.png">
+        </imgMy>
+        <p> Once you have it all, perhaps some of the changes, you can just as if nothing had happened <b> run </b> on the project (click F5). And can do it <b> step by step </b>. </p>
+        <p> This means that running the project <b> execute </b><b> only one </b>, and the action itself automatically <b> interrupted </b>, and give you the opportunity <b> look </b> which are now <b> properties </b>. This mode (single step) start button <b> F11 </b>, or the <b> Project </b> -&gt; <b> Walkthrough </b>. If we click <b> F11 </b> in this example (remember we stopped at the checkpoint), the project starts, perform an action, where we stayed (with effect from the reference point) and then stops at the first <b> next </b> Action: </p>
+        <imgMy src="Debug4.png">
+        </imgMy>
+        <p> If you again click <b> F11 </b> (incrementally), then execute <b> current </b> action and <b> pass </b> to the following (<i> IF _Poleznye obekty._Fayly and papki._Suschestvuet folder (Window1.PamyatFayl.Znachenie) THEN </i>). But if you want to enter into  the current action (<i> _Poleznye obekty._Vyzvat sobytie.Window1_PamyatDlyaSozdaniyaPutiFayla_ANDzmenenie value </i>), ie go step by step on all actions <b> Events </b><i> Window1_PamyatDlyaSozdaniyaPutiFayla_ANDzmenenie value </i>, then click <b> F10 </b> (the <b> Project </b> -&gt; <b> Step by Step (inside) </b>). You will be redirected to this event: </p>
+        <imgMy src="Debug5.png">
+        </imgMy>
+        <p> Then you can continue to go step by step in this event, and when you reach the end, you will return again  back to where you came from. In addition to pressing <b> F12 </b> (the <b> Project </b> -&gt; <b> Walkthrough (out) </b>) you can always go  from the current branch of a tree (at the moment of the current events) to <b> level up </b>. And all of <b> executed </b>, just to have the program will not be interrupted. </p>
+      </textAll>
+    </descriptionarticle>
+    <seealso>
+      <est />
+      <link file="Environment.html"> Development Environment Algorithm 2 </link>
+      <br />
+      <link file="Objects.html"> Objects </link>
+      <br />
+      <link file=" UsefulObjects.html "> Useful sites </link>
+    </seealso>
+  </file>
+</xml>

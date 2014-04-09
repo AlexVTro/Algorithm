@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Hit test row</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Returns the <b>number</b> of a row with the specified coordinates X and Y.
+          Coordinates can be received, for example, from properties <link2 file="_Mouse X.html">_Mouse X</link2>, 
+          <link2 file="_Mouse Y.html">_Mouse Y</link2>.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <est/>
+      <link2 file="_Mouse X.html">_Mouse X</link2><br/>
+      <link2 file="_Mouse Y.html">_Mouse Y</link2><br/>
+      <link2 file="Hit test column.html">Hit test column</link2><br/>
+      <link2 file="Hit test.html">Hit test</link2><br/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+      <eventsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Flat style</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Sets the <b>shape</b> of the object (flat, three-dimensional).
+        </text>
+      </p>
+      <p>
+        <textAll>
+          All available <b>button styles</b> are described in <link file="Programming/HelpWords.html">Quick fill words</link> ->
+          <link file="Programming/HelpWords.html#Flat style">Flat style</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how the button style can be set:</sampletitle>
+        <samplecode>
+          <![CDATA[Window1.Button1.Flat style = "Default"
+Window1.Button1.Flat style = Popup
+Window1.Button1.Flat style = Window1.Button2.Flat style
+Window1.Button1.Flat style = Window1.Text1.Text]]>
+        </samplecode>
+      </sample>
+    </samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link> ->
+      <link file="Programming/HelpWords.html#Flat style">Flat style</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,32 @@
+<Configuration>
+  <SettingsComponent>
+    <string />
+    <integer />
+    <boolean>
+      <setting name="SolutionAnalysisEnabled">False</setting>
+    </boolean>
+  </SettingsComponent>
+  <RecentFiles>
+    <RecentFiles>
+      <File id="C730AF0D-D02B-4B37-A559-AF563F8F107F/d:Slot/f:Helps.vb" caret="3476" fromTop="31" />
+    </RecentFiles>
+    <RecentEdits>
+      <File id="C730AF0D-D02B-4B37-A559-AF563F8F107F/d:Slot/f:Helps.vb" caret="3799" fromTop="27" />
+      <File id="C730AF0D-D02B-4B37-A559-AF563F8F107F/d:Slot/f:Helps.vb" caret="4320" fromTop="28" />
+      <File id="C730AF0D-D02B-4B37-A559-AF563F8F107F/d:Slot/f:Helps.vb" caret="9377" fromTop="18" />
+      <File id="C730AF0D-D02B-4B37-A559-AF563F8F107F/d:Slot/f:Helps.vb" caret="9377" fromTop="18" />
+      <File id="C730AF0D-D02B-4B37-A559-AF563F8F107F/d:Slot/f:Helps.vb" caret="3108" fromTop="44" />
+    </RecentEdits>
+  </RecentFiles>
+  <NAntValidationSettings>
+    <NAntPath value="" />
+  </NAntValidationSettings>
+  <UnitTestRunner>
+    <Providers />
+  </UnitTestRunner>
+  <UnitTestRunnerNUnit>
+    <NUnitInstallDir IsNull="False">
+    </NUnitInstallDir>
+    <UseAddins>Never</UseAddins>
+  </UnitTestRunnerNUnit>
+</Configuration>

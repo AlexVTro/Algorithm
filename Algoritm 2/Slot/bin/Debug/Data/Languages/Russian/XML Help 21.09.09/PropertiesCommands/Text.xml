@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Текст</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>На объекте будет отображаться такой <b>текст</b>, который будет указан в этом свойстве.</text>
+      </p>
+      <p>
+        <textAll>Например у объекта <link file="Objects/Window.html">Окно</link> текст это его заголовок,
+        а у объекта <link file="Objects/Text Box.html">Текстовое поле</link> это текст записанный в него.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Варианты изменения текста у главного окна</sampletitle>
+        <samplecode><![CDATA[Окно1.Окно1.Текст = "Новый текст заголовка окна"
+Окно1.Окно1.Текст = "Новый" & " текст заголовка окна"
+Окно1.Окно1.Текст = Окно1.Окно1.Текст & "<- текст окна"
+Окно1.Окно1.Текст = "Ширина окна: """ & Окно1.Окно1.Ширина & """"]]></samplecode>
+      </sample>
+    </samples>
+    
+    <remarks>
+      <text>Если в текст требуется записать ковычки, то это делается двойным повторением ковычек внутри текста, который вы хотите присвоить:</text>
+      <codesnip>
+<![CDATA["Вот идет текст без ковычек, а ""вот в ковычках""."]]></codesnip>
+      <p>
+        <text>Для того чтобы вставить <b>символ новой строки</b> (аналог нажатия клавиши Enter) используйте
+          <link file="Programming/HelpWords.html">Вспомогательные слова</link> -> 
+		  <link file="Programming/HelpWords.html#Others">Прочие</link> или
+          вставьте символ "¶"</text>
+        <codesnip>
+<![CDATA[Окно1.Кнопка1.Текст = "Текст ¶ Текст на новой строке"]]></codesnip>
+      </p>
+    </remarks>
+
+    <seealso>
+      <est/>
+       <link file="UsefulObjects.html" >Полезные объекты</link> -> <link file="UsefulObjects/Text.html" >Текст</link><br/>
+     Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

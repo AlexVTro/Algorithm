@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Работает</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Объекты в любой момент можно сделать <b>нерабочим</b>. Он будет присутствовать на окне, но
+          <b>пользователь</b> ничего с ним не сможет сделать (нажать, изменить текст, размер)
+        </text>
+      </p>
+      <textAll>
+        <p>
+          В любой момент вы можете опять вернуть объект в <b>рабочее состояние</b>, сделав данное свойство равным "Да".
+        </p>
+        <codesnip>
+          <![CDATA[Окно1.Кнопка1.Работает = Да]]>
+        </codesnip>
+      </textAll>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,17 @@
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\bestCompil.Progress.resources
+obj\Debug\bestCompil.vbproj.GenerateResource.Cache
+obj\Release\ResolveAssemblyReference.cache
+obj\Release\bestCompil.Progress.resources
+obj\Release\bestCompil.vbproj.GenerateResource.Cache
+bin\Debug\bestCompil.exe
+bin\Debug\bestCompil.pdb
+bin\Debug\Kennedy.ManagedHooks.pdb
+obj\Debug\bestCompil.exe
+obj\Debug\bestCompil.pdb
+bin\Release\bestCompil.exe
+bin\Release\bestCompil.pdb
+obj\Release\bestCompil.exe
+obj\Release\bestCompil.pdb
+bin\Release\Kennedy.ManagedHooks.dll
+bin\Release\Kennedy.ManagedHooks.pdb

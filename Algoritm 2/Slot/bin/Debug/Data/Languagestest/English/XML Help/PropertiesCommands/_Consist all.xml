@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Consist all</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text> Useful sites </text>
+      </link>
+      <text> -&gt; <objLink /></text>
+      <text> -&gt; <propsLink /></text>
+      <text> -&gt; <propLink /></text>
+    </breadcumbs>
+    <descriptionarticle only="false">
+      <p>
+        <text>Verifies that the text was extremely  of the characters to convey the command. If at least one character is not the same command will return a "No".</text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <seealso>
+      <est />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Consist.html"> text contains </link>
+      <br />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Consist no.html"> text does not contain </link>
+      <br />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of ignore case.html"> Search in text </link>
+      <br />
+      <link file="UsefulObjects/_Text/PropertiesCommands/_Index of regular.html "> search with regular expressions </link>
+      <br />
+      <link file="UsefulObjects.html"> Useful sites </link>
+      <br /> Other <propsLink /> object <objLink /><br /></seealso>
+  </file>
+</xml>
