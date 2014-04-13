@@ -1,4 +1,4 @@
-Public Class Bloks
+п»їPublic Class Bloks
     Dim blks As BlokiVRyad
     Dim neRisovat As Boolean
     'Dim OwnerScroll As Object
@@ -45,7 +45,7 @@ Public Class Bloks
         For i = 0 To Pattern.Bloki.texty.Length - 1
             Dim bl As Blok = New Blok(Pattern)
             If Pattern.Bloki.texty(i) Is Nothing Then Continue For
-            ' сделать чтоб если функция или метод, то полылалась вся строка в скобках
+            ' СЃРґРµР»Р°С‚СЊ С‡С‚РѕР± РµСЃР»Рё С„СѓРЅРєС†РёСЏ РёР»Рё РјРµС‚РѕРґ, С‚Рѕ РїРѕР»С‹Р»Р°Р»Р°СЃСЊ РІСЃСЏ СЃС‚СЂРѕРєР° РІ СЃРєРѕР±РєР°С…
             m = System.Text.RegularExpressions.Regex.Match(Pattern.Bloki.texty(i), "[^(]+")
             If Array.IndexOf(DopFunsSimple, UCase(m.Value)) <> -1 Then
                 actStr = Trim(Pattern.Bloki.texty(i).Substring(m.Index + m.Length)) : fl = 1

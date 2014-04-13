@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class CreateDeistv
     Inherits System.Windows.Forms.UserControl
 
@@ -39,7 +39,7 @@ Partial Class CreateDeistv
         Me.TopLabel.Name = "TopLabel"
         Me.TopLabel.Size = New System.Drawing.Size(298, 16)
         Me.TopLabel.TabIndex = 1
-        Me.TopLabel.Text = "Изменить следующее свойство"
+        Me.TopLabel.Text = "РР·РјРµРЅРёС‚СЊ СЃР»РµРґСѓСЋС‰РµРµ СЃРІРѕР№СЃС‚РІРѕ"
         Me.TopLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'forEditPr

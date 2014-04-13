@@ -1,4 +1,4 @@
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 Imports System.ComponentModel.Design
 Imports System.Drawing
 Imports System.Net
@@ -480,7 +480,7 @@ Public Class Winsock
     Public Sub Send(ByVal data As Object)
         Dim byt() As Byte
         If LegacySupport AndAlso data.GetType Is GetType(String) Then
-            byt = System.Text.Encoding.Default.GetBytes(CStr(data))
+            byt = System.Text.Encoding.UTF8.GetBytes(CStr(data))
         Else
             byt = ObjectPacker.GetBytes(data)
         End If
@@ -535,7 +535,7 @@ Public Class Winsock
         Dim byt() As Byte = _asSock.GetData()
         Dim obj As Object
         If LegacySupport AndAlso GetType(dataType) Is GetType(String) Then
-            obj = System.Text.Encoding.Default.GetString(byt)
+            obj = System.Text.Encoding.UTF8.GetString(byt)
         Else
             obj = ObjectPacker.GetObject(byt)
         End If
@@ -568,7 +568,7 @@ Public Class Winsock
         Dim byt() As Byte = _asSock.PeekData()
         Dim obj As Object
         If LegacySupport AndAlso GetType(dataType) Is GetType(String) Then
-            obj = System.Text.Encoding.Default.GetString(byt)
+            obj = System.Text.Encoding.UTF8.GetString(byt)
         Else
             obj = ObjectPacker.GetObject(byt)
         End If

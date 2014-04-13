@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Progress
     Inherits System.Windows.Forms.Form
 
@@ -41,7 +41,7 @@ Partial Class Progress
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(85, 15)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Компиляция"
+        Me.Label1.Text = "РљРѕРјРїРёР»СЏС†РёСЏ"
         '
         'Timer1
         '

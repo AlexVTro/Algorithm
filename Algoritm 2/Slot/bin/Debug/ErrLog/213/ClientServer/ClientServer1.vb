@@ -1,4 +1,4 @@
-Public Class ClientServerMy
+п»їPublic Class ClientServerMy
     Implements IWinSockEvents
 
 #Region " Events "
@@ -62,7 +62,7 @@ Public Class ClientServerMy
     Private Sub cmdServerClose_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles cmdClose.Click
         If IsDevelop Then Exit Sub
         If TypeServer = "Server" Then
-            If cmdClose.Text.ToUpper = trans("Стоп поиск").ToUpper Then
+            If cmdClose.Text.ToUpper = trans("РЎС‚РѕРї РїРѕРёСЃРє").ToUpper Then
                 CloseListener()
             Else
                 CloseServer()
@@ -90,14 +90,14 @@ Public Class ClientServerMy
 
     Private Sub ComboType_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ComboType.SelectedIndexChanged
         If IsDevelop Then Exit Sub
-        If ComboType.SelectedItem.ToUpper = trans("Сервер").ToUpper Then
+        If ComboType.SelectedItem.ToUpper = trans("РЎРµСЂРІРµСЂ").ToUpper Then
             TypeServer = "Server"
-            cmdCreateConn.Text = trans("Создать")
-            cmdClose.Text = trans("Стоп поиск")
+            cmdCreateConn.Text = trans("РЎРѕР·РґР°С‚СЊ")
+            cmdClose.Text = trans("РЎС‚РѕРї РїРѕРёСЃРє")
         Else
             TypeServer = "Client"
-            cmdCreateConn.Text = trans("Присоединиться")
-            cmdClose.Text = trans("Отключиться")
+            cmdCreateConn.Text = trans("РџСЂРёСЃРѕРµРґРёРЅРёС‚СЊСЃСЏ")
+            cmdClose.Text = trans("РћС‚РєР»СЋС‡РёС‚СЊСЃСЏ")
         End If
     End Sub
 
@@ -106,7 +106,7 @@ Public Class ClientServerMy
         If e.KeyData = Keys.Enter Then cmdSendText_Click(Nothing, Nothing)
     End Sub
 
-    ' ПОЛУЧЕНИЕ УНИКАЛЬНОГО ИДЕНТИФИКАТОРА
+    ' РџРћР›РЈР§Р•РќРР• РЈРќРРљРђР›Р¬РќРћР“Рћ РР”Р•РќРўРР¤РРљРђРўРћР Рђ
     Function GetUIN() As String
         Static rnd As New Random()
         Dim i, n As Integer, str As String = ""
@@ -124,9 +124,9 @@ Public Class ClientServerMy
 #Region " Client Server "
 
     Private Sub wskListen_ConnectionRequest(ByVal sender As System.Object, ByVal e As WinsockConnectionRequestEventArgs) Handles wskListen.ConnectionRequest
-        Log(trans("Запрос соединения") & " (" & e.ClientIP & ")")
+        Log(trans("Р—Р°РїСЂРѕСЃ СЃРѕРµРґРёРЅРµРЅРёСЏ") & " (" & e.ClientIP & ")")
         If e.ClientIP = "bad IP" Then
-            Log(trans("Запрос отвергнут") & ": " & trans("Неверный IP"))
+            Log(trans("Р—Р°РїСЂРѕСЃ РѕС‚РІРµСЂРіРЅСѓС‚") & ": " & trans("РќРµРІРµСЂРЅС‹Р№ IP"))
             e.Cancel = True
         Else
             RaiseEvent ConnectionClient(sender, e)
@@ -160,7 +160,7 @@ Public Class ClientServerMy
         Try
             Dim obj As Object
 
-            Log(trans("Пришли данные") & " (" & e.SourceIP & ": " & e.TotalBytes & " " & "bytes" & ")")
+            Log(trans("РџСЂРёС€Р»Рё РґР°РЅРЅС‹Рµ") & " (" & e.SourceIP & ": " & e.TotalBytes & " " & "bytes" & ")")
             If TypeServer = "Server" Then
                 Dim uid As String = wskClients.findKey(CType(sender, Winsock))
                 Try
@@ -173,17 +173,17 @@ Public Class ClientServerMy
             End If
 
             If obj.GetType() Is GetType(String) Then
-                ' Получаем строку
+                ' РџРѕР»СѓС‡Р°РµРј СЃС‚СЂРѕРєСѓ
                 ReceivStr = CStr(obj)
-                Log(trans("Получено") & ": " & """" & ReceivStr & """")
+                Log(trans("РџРѕР»СѓС‡РµРЅРѕ") & ": " & """" & ReceivStr & """")
                 RunCommand(ReceivStr)
             Else
                 If obj.GetType() IsNot GetType(WinsockFileData) Then
                     MsgBox("Serialization error!") : Exit Sub
                 End If
-                ' Получаем файл
+                ' РџРѕР»СѓС‡Р°РµРј С„Р°Р№Р»
                 Dim wfd As Object = obj ' = DirectCast(obj, WinsockFileData)
-                ' Если не задана папка для закачек, то показать диалог
+                ' Р•СЃР»Рё РЅРµ Р·Р°РґР°РЅР° РїР°РїРєР° РґР»СЏ Р·Р°РєР°С‡РµРє, С‚Рѕ РїРѕРєР°Р·Р°С‚СЊ РґРёР°Р»РѕРі
                 If PathForDownloads = "" Then
                     dlgSave.FileName = wfd.FileName
                     SavingFile = True
@@ -193,14 +193,14 @@ Public Class ClientServerMy
                         ReceivedFile = ""
                     End If
                 Else
-                    ' Создаем директорию, если таковой еще нет
+                    ' РЎРѕР·РґР°РµРј РґРёСЂРµРєС‚РѕСЂРёСЋ, РµСЃР»Рё С‚Р°РєРѕРІРѕР№ РµС‰Рµ РЅРµС‚
                     PathForDownloads = GetMaxPath(PathForDownloads)
                     If IO.Directory.Exists(PathForDownloads) = False Then
                         IO.Directory.CreateDirectory(PathForDownloads)
                     End If
                     Dim fl As String = (PathForDownloads & "\" & wfd.FileName).Replace("\\", "\")
                     ReceivedFile = fl
-                    ' Если такой файл уже существует, то подобрать имя
+                    ' Р•СЃР»Рё С‚Р°РєРѕР№ С„Р°Р№Р» СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, С‚Рѕ РїРѕРґРѕР±СЂР°С‚СЊ РёРјСЏ
                     Dim num As Integer = 1
                     While IO.File.Exists(ReceivedFile)
                         ReceivedFile = IO.Path.GetDirectoryName(fl) & "\" _
@@ -209,15 +209,15 @@ Public Class ClientServerMy
                         num += 1
                     End While
                 End If
-                ' Сохранить полученный файл
+                ' РЎРѕС…СЂР°РЅРёС‚СЊ РїРѕР»СѓС‡РµРЅРЅС‹Р№ С„Р°Р№Р»
                 If ReceivedFile <> "" Then
                     wfd.SaveFile(ReceivedFile)
-                    Log(trans("Файл получен") & ": " & ReceivedFile)
+                    Log(trans("Р¤Р°Р№Р» РїРѕР»СѓС‡РµРЅ") & ": " & ReceivedFile)
                     RaiseEvent FileReceived(sender, Nothing)
                 Else
-                    Log(trans("Отмена получения файла"))
+                    Log(trans("РћС‚РјРµРЅР° РїРѕР»СѓС‡РµРЅРёСЏ С„Р°Р№Р»Р°"))
                 End If
-                ' Если сохраняли файл, пока приходила команда, то она ничего не сохранила, надо её заново вызвать
+                ' Р•СЃР»Рё СЃРѕС…СЂР°РЅСЏР»Рё С„Р°Р№Р», РїРѕРєР° РїСЂРёС…РѕРґРёР»Р° РєРѕРјР°РЅРґР°, С‚Рѕ РѕРЅР° РЅРёС‡РµРіРѕ РЅРµ СЃРѕС…СЂР°РЅРёР»Р°, РЅР°РґРѕ РµС‘ Р·Р°РЅРѕРІРѕ РІС‹Р·РІР°С‚СЊ
                 If SavingFile And SavingFileTo <> "" Then
                     SavingFile = False
                     RunCommand(SavingFileTo)
@@ -231,15 +231,15 @@ Public Class ClientServerMy
     Private Sub wskClient_Disconnected(ByVal sender As Object, ByVal e As System.EventArgs) Handles wskClient.Disconnected, wskClients.Disconnected
         If TypeServer = "Server" Then
             Dim uid As String = wskClients.findKey(sender)
-            Log(trans("Отключился клиент") & " " & uid)
+            Log(trans("РћС‚РєР»СЋС‡РёР»СЃСЏ РєР»РёРµРЅС‚") & " " & uid)
             wskClients.Remove(uid)
             RaiseEvent Disconnected(sender, e)
             If wskClients.Count = 0 Then
-                cmdClose.Text = trans("Стоп поиск")
+                cmdClose.Text = trans("РЎС‚РѕРї РїРѕРёСЃРє")
                 cmdClose.Enabled = True
             End If
         Else
-            Log(trans("Соединение разорвано"))
+            Log(trans("РЎРѕРµРґРёРЅРµРЅРёРµ СЂР°Р·РѕСЂРІР°РЅРѕ"))
             RaiseEvent Disconnected(sender, e)
             ClientsNames = ""
         End If
@@ -257,13 +257,13 @@ Public Class ClientServerMy
 
     Private Sub wsk_StateChanged(ByVal sender As Object, ByVal e As WinsockStateChangedEventArgs) Handles wskClient.StateChanged, wskListen.StateChanged, wskClients.StateChanged
         Dim name As String = ""
-        If sender Is wskListen Then name = trans("Прослушка")
-        If sender Is wskClient Then name = trans("Клиент")
-        If name = "" Then name = trans("Сервер")
-        Dim msg As String = name & ". " & trans("Статус соединения") & ": " _
+        If sender Is wskListen Then name = trans("РџСЂРѕСЃР»СѓС€РєР°")
+        If sender Is wskClient Then name = trans("РљР»РёРµРЅС‚")
+        If name = "" Then name = trans("РЎРµСЂРІРµСЂ")
+        Dim msg As String = name & ". " & trans("РЎС‚Р°С‚СѓСЃ СЃРѕРµРґРёРЅРµРЅРёСЏ") & ": " _
                             & trans(e.New_State.ToString, , True)
         Select Case name
-            Case trans("Прослушка")
+            Case trans("РџСЂРѕСЃР»СѓС€РєР°")
                 If wskListen.Protocol = WinsockProtocol.Tcp Then
                     Select Case wskListen.State
                         Case WinsockStates.Listening
@@ -275,7 +275,7 @@ Public Class ClientServerMy
                     End Select
                 End If
                 Log(msg)
-            Case trans("Сервер")
+            Case trans("РЎРµСЂРІРµСЂ")
                 If wskListen.Protocol = WinsockProtocol.Tcp Then
                     Select Case sender.State
                         Case WinsockStates.Closed, WinsockStates.Closing
@@ -293,7 +293,7 @@ Public Class ClientServerMy
                     End Select
                 End If
                 Log(msg)
-            Case trans("Клиент")
+            Case trans("РљР»РёРµРЅС‚")
                 If wskClient.Protocol = WinsockProtocol.Tcp Then
                     Select Case wskClient.State
                         Case WinsockStates.Closed
@@ -319,7 +319,7 @@ Public Class ClientServerMy
     End Sub
 
     Private Sub wskCountChanged(ByVal sender As Object, ByVal e As WinsockCollectionCountChangedEventArgs) Handles wskClients.CountChanged
-        Log(String.Format(trans("Клиентов") & ": {0}    ", e.NewCount))
+        Log(String.Format(trans("РљР»РёРµРЅС‚РѕРІ") & ": {0}    ", e.NewCount))
         SendToClients(CommandSymbol & "Names" & Spl(0) & ClientsNames)
         SendToClients(CommandSymbol & "IPs" & Spl(0) & ClientsIPs)
         RaiseEvent CountChanged(sender, e)
@@ -327,7 +327,7 @@ Public Class ClientServerMy
 
     Private Sub wskListener_ConnectionRequest(ByVal sender As System.Object, ByVal e As WinsockConnectionRequestEventArgs) Handles wskClients.ConnectionRequest
         Dim gid As String = wskClients.Accept(e.Client)
-        Log(trans("Новый клиент") & ": " & gid.ToString)
+        Log(trans("РќРѕРІС‹Р№ РєР»РёРµРЅС‚") & ": " & gid.ToString)
     End Sub
 
     Private Sub wskServer_SendProgress(ByVal sender As System.Object, ByVal e As WinsockSendEventArgs) Handles wskClients.SendProgress, wskClient.SendProgress
@@ -374,19 +374,19 @@ Public Class ClientServerMy
     End Function
 
     Public Sub SendToServer(ByVal msg As String)
-        Log(trans("Отправлен серверу текст") & " """ & msg & """")
+        Log(trans("РћС‚РїСЂР°РІР»РµРЅ СЃРµСЂРІРµСЂСѓ С‚РµРєСЃС‚") & " """ & msg & """")
         SentCommand = msg
         wskClient.Send(msg)
     End Sub
     Public Sub SendFileToServer(ByVal file As String)
-        Log(trans("Отправлен серверу файл") & " """ & file & """")
+        Log(trans("РћС‚РїСЂР°РІР»РµРЅ СЃРµСЂРІРµСЂСѓ С„Р°Р№Р»") & " """ & file & """")
         SentFile = file
         wskClient.SendFile(file)
         FileIsSent = True : FileAction = ""
     End Sub
 
     Public Sub SendToClients(ByVal msg As String)
-        Log(trans("Отправлен клиентам текст") & " """ & msg & """")
+        Log(trans("РћС‚РїСЂР°РІР»РµРЅ РєР»РёРµРЅС‚Р°Рј С‚РµРєСЃС‚") & " """ & msg & """")
         If TypeServer = "Server" Then
             Dim i As Integer
             For i = 0 To wskClients.Count - 1
@@ -400,7 +400,7 @@ Public Class ClientServerMy
         End If
     End Sub
     Public Sub SendToClientsBut(ByVal but As String, ByVal msg As String)
-        Log(trans("Отправлен клиентам, кроме *, текст").Replace("*", but) & " """ & msg & """")
+        Log(trans("РћС‚РїСЂР°РІР»РµРЅ РєР»РёРµРЅС‚Р°Рј, РєСЂРѕРјРµ *, С‚РµРєСЃС‚").Replace("*", but) & " """ & msg & """")
         but = ConvertToNames(but)
         If TypeServer = "Server" Then
             For Each cl As Object In wskClients.Keys
@@ -414,7 +414,7 @@ Public Class ClientServerMy
         End If
     End Sub
     Public Sub SendToClient(ByVal uid As String, ByVal msg As String)
-        Log(trans("Отправлен клиенту *, текст").Replace("*", uid) & " """ & msg & """")
+        Log(trans("РћС‚РїСЂР°РІР»РµРЅ РєР»РёРµРЅС‚Сѓ *, С‚РµРєСЃС‚").Replace("*", uid) & " """ & msg & """")
         uid = ConvertToNames(uid)
         If TypeServer = "Server" Then
             For Each cl As Object In wskClients.Keys
@@ -428,7 +428,7 @@ Public Class ClientServerMy
         End If
     End Sub
     Public Sub SendFileToClients(ByVal msg As String)
-        Log(trans("Отправлен клиентам файл") & " """ & msg & """")
+        Log(trans("РћС‚РїСЂР°РІР»РµРЅ РєР»РёРµРЅС‚Р°Рј С„Р°Р№Р»") & " """ & msg & """")
         If TypeServer = "Server" Then
             Dim i As Integer
             For i = 0 To wskClients.Count - 1
@@ -445,7 +445,7 @@ Public Class ClientServerMy
         FileIsSent = True
     End Sub
     Public Sub SendFileToClientsBut(ByVal but As String, ByVal msg As String)
-        Log(trans("Отправлен клиентам, кроме *, файл").Replace("*", but) & " """ & msg & """")
+        Log(trans("РћС‚РїСЂР°РІР»РµРЅ РєР»РёРµРЅС‚Р°Рј, РєСЂРѕРјРµ *, С„Р°Р№Р»").Replace("*", but) & " """ & msg & """")
         but = ConvertToNames(but)
         If TypeServer = "Server" Then
             For Each cl As Object In wskClients.Keys
@@ -462,7 +462,7 @@ Public Class ClientServerMy
         FileIsSent = True
     End Sub
     Public Sub SendFileToClient(ByVal uid As String, ByVal msg As String)
-        Log(trans("Отправлен клиенту *, файл").Replace("*", uid) & " """ & msg & """")
+        Log(trans("РћС‚РїСЂР°РІР»РµРЅ РєР»РёРµРЅС‚Сѓ *, С„Р°Р№Р»").Replace("*", uid) & " """ & msg & """")
         uid = ConvertToNames(uid)
         If TypeServer = "Server" Then
             For Each cl As Object In wskClients.Keys
@@ -494,30 +494,30 @@ Public Class ClientServerMy
     Public Sub ConnectToServer()
         RemoteHost = RemoteHost
         RemotePort = RemotePort
-        Log(trans("Соединяемся") & " (" & wskClient.RemoteHost & ")...")
+        Log(trans("РЎРѕРµРґРёРЅСЏРµРјСЃСЏ") & " (" & wskClient.RemoteHost & ")...")
         wskClient.Connect()
-        cmdClose.Text = trans("Отключиться")
+        cmdClose.Text = trans("РћС‚РєР»СЋС‡РёС‚СЊСЃСЏ")
     End Sub
     Public Sub CreateServer()
         wskListen.Listen()
-        cmdClose.Text = trans("Стоп поиск")
+        cmdClose.Text = trans("РЎС‚РѕРї РїРѕРёСЃРє")
     End Sub
     Public Sub BeginListen()
         wskListen.Listen()
-        cmdClose.Text = trans("Стоп поиск")
+        cmdClose.Text = trans("РЎС‚РѕРї РїРѕРёСЃРє")
     End Sub
     Public Sub CloseServer()
         CloseListener()
         wskClients.Clear()
-        cmdClose.Text = trans("Стоп поиск")
-        cmdCreateConn.Text = trans("Создать")
+        cmdClose.Text = trans("РЎС‚РѕРї РїРѕРёСЃРє")
+        cmdCreateConn.Text = trans("РЎРѕР·РґР°С‚СЊ")
         cmdClose.Enabled = False
         ComboType.Enabled = True
     End Sub
     Public Sub CloseListener()
         wskListen.Close()
-        cmdClose.Text = trans("Стоп сервер")
-        cmdCreateConn.Text = trans("Слушать")
+        cmdClose.Text = trans("РЎС‚РѕРї СЃРµСЂРІРµСЂ")
+        cmdCreateConn.Text = trans("РЎР»СѓС€Р°С‚СЊ")
     End Sub
     Public Sub CloseClient()
         wskClient.Close()
@@ -529,78 +529,78 @@ Public Class ClientServerMy
             Dim cmd As String = str
             str = str.Substring(CommandSymbol.Length)
             Dim Spls() As String = str.Split(Spl, StringSplitOptions.None)
-            ' Если клиент передал команду - ОТПРАВИТЬ ВСЕМ кроме меня и/или еще кого-то
+            ' Р•СЃР»Рё РєР»РёРµРЅС‚ РїРµСЂРµРґР°Р» РєРѕРјР°РЅРґСѓ - РћРўРџР РђР’РРўР¬ Р’РЎР•Рњ РєСЂРѕРјРµ РјРµРЅСЏ Рё/РёР»Рё РµС‰Рµ РєРѕРіРѕ-С‚Рѕ
             If Spls(0) = "AllFrom" Then
                 If Spls.Length > 1 Then
                     Dim startStr As Integer = "AllFrom".Length + Spls(1).Length + Spl(0).Length * 2
-                    If onlyRetTxt Then Return str.Substring(startStr).Trim ' Если надо только узнать текст в команде
+                    If onlyRetTxt Then Return str.Substring(startStr).Trim ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
                     SendToClientsBut(Spls(1), str.Substring(startStr).Trim)
                 End If
-                ' Если клиент передал команду - ОТПРАВИТЬ ВСЕМ ФАЙЛ кроме меня и/или еще кого-то
+                ' Р•СЃР»Рё РєР»РёРµРЅС‚ РїРµСЂРµРґР°Р» РєРѕРјР°РЅРґСѓ - РћРўРџР РђР’РРўР¬ Р’РЎР•Рњ Р¤РђР™Р› РєСЂРѕРјРµ РјРµРЅСЏ Рё/РёР»Рё РµС‰Рµ РєРѕРіРѕ-С‚Рѕ
             ElseIf Spls(0) = "AllFileFrom" Then
-                If onlyRetTxt Then Return "" ' Если надо только узнать текст в команде
+                If onlyRetTxt Then Return "" ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
                 If Spls.Length > 1 Then
-                    ' Если сейчас открыто окно сохранения файла (т.е. файл еще не сохранили, а уже хотит отправить)
+                    ' Р•СЃР»Рё СЃРµР№С‡Р°СЃ РѕС‚РєСЂС‹С‚Рѕ РѕРєРЅРѕ СЃРѕС…СЂР°РЅРµРЅРёСЏ С„Р°Р№Р»Р° (С‚.Рµ. С„Р°Р№Р» РµС‰Рµ РЅРµ СЃРѕС…СЂР°РЅРёР»Рё, Р° СѓР¶Рµ С…РѕС‚РёС‚ РѕС‚РїСЂР°РІРёС‚СЊ)
                     If SavingFile = True Then
                         SavingFileTo = CommandSymbol & str
                     Else
                         SendFileToClientsBut(Spls(1), ReceivedFile)
                     End If
                 End If
-                ' Если клиент передал команду - ОТПРАВИТЬ кому-то
+                ' Р•СЃР»Рё РєР»РёРµРЅС‚ РїРµСЂРµРґР°Р» РєРѕРјР°РЅРґСѓ - РћРўРџР РђР’РРўР¬ РєРѕРјСѓ-С‚Рѕ
             ElseIf Spls(0) = "To" Then
                 If Spls.Length > 1 Then
                     Dim startStr As Integer = "To".Length + Spls(1).Length + Spl(0).Length * 2
-                    If onlyRetTxt Then Return str.Substring(startStr).Trim ' Если надо только узнать текст в команде
+                    If onlyRetTxt Then Return str.Substring(startStr).Trim ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
                     SendToClient(Spls(1), str.Substring(startStr).Trim)
                 End If
-                ' Если клиент передал команду - ОТПРАВИТЬ ФАЙЛ кому-то
+                ' Р•СЃР»Рё РєР»РёРµРЅС‚ РїРµСЂРµРґР°Р» РєРѕРјР°РЅРґСѓ - РћРўРџР РђР’РРўР¬ Р¤РђР™Р› РєРѕРјСѓ-С‚Рѕ
             ElseIf Spls(0) = "FileTo" Then
-                If onlyRetTxt Then Return "" ' Если надо только узнать текст в команде
+                If onlyRetTxt Then Return "" ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
                 If Spls.Length > 1 Then
-                    ' Если сейчас открыто окно сохранения файла (т.е. файл еще не сохранили, а уже хотит отправить)
+                    ' Р•СЃР»Рё СЃРµР№С‡Р°СЃ РѕС‚РєСЂС‹С‚Рѕ РѕРєРЅРѕ СЃРѕС…СЂР°РЅРµРЅРёСЏ С„Р°Р№Р»Р° (С‚.Рµ. С„Р°Р№Р» РµС‰Рµ РЅРµ СЃРѕС…СЂР°РЅРёР»Рё, Р° СѓР¶Рµ С…РѕС‚РёС‚ РѕС‚РїСЂР°РІРёС‚СЊ)
                     If SavingFile = True Then
                         SavingFileTo = CommandSymbol & str
                     Else
                         SendFileToClient(Spls(1), ReceivedFile)
                     End If
                 End If
-                ' Если клиенту отправили его ИМЯ
+                ' Р•СЃР»Рё РєР»РёРµРЅС‚Сѓ РѕС‚РїСЂР°РІРёР»Рё РµРіРѕ РРњРЇ
             ElseIf Spls(0) = "Name" Then
-                If onlyRetTxt Then Return "" ' Если надо только узнать текст в команде
+                If onlyRetTxt Then Return "" ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
                 If Spls.Length > 1 Then
-                    If onlyRetTxt Then Exit Function ' Если надо только узнать текст в команде
+                    If onlyRetTxt Then Exit Function ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
                     If ClSrName = "" Or zhdemImya Then
                         zhdemImya = False
-                        ClSrName = str.Substring("Name".Length + Spl(0).Length).Trim ' Задаем имя через закрытую переменную
-                        ' Если токо подключились, то вывести соответствующее событие
+                        ClSrName = str.Substring("Name".Length + Spl(0).Length).Trim ' Р—Р°РґР°РµРј РёРјСЏ С‡РµСЂРµР· Р·Р°РєСЂС‹С‚СѓСЋ РїРµСЂРµРјРµРЅРЅСѓСЋ
+                        ' Р•СЃР»Рё С‚РѕРєРѕ РїРѕРґРєР»СЋС‡РёР»РёСЃСЊ, С‚Рѕ РІС‹РІРµСЃС‚Рё СЃРѕРѕС‚РІРµС‚СЃС‚РІСѓСЋС‰РµРµ СЃРѕР±С‹С‚РёРµ
                         If ConnSender IsNot Nothing Then
                             RaiseEvent ConnectedToServer(ConnSender, ConnE)
                             ConnSender = Nothing : ConnE = Nothing
                         End If
                     Else
                         zhdemImya = True
-                        ' Симулируем переименование
+                        ' РЎРёРјСѓР»РёСЂСѓРµРј РїРµСЂРµРёРјРµРЅРѕРІР°РЅРёРµ
                         Dim tmp As String = ClSrName
                         ClSrName = str.Substring("Name".Length + Spl(0).Length).Trim
                         NameInNetwork = tmp
                     End If
                 End If
-                ' Если клиенту отправили ВСЕ ИМЕНА
+                ' Р•СЃР»Рё РєР»РёРµРЅС‚Сѓ РѕС‚РїСЂР°РІРёР»Рё Р’РЎР• РРњР•РќРђ
             ElseIf Spls(0) = "Names" Then
-                If onlyRetTxt Then Return "" ' Если надо только узнать текст в команде
+                If onlyRetTxt Then Return "" ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
                 If Spls.Length > 1 Then
                     ClientsNames = str.Substring("Names".Length + Spl(0).Length).Trim
                 End If
-                ' Если клиенту отправили ВСЕ ИМЕНА
+                ' Р•СЃР»Рё РєР»РёРµРЅС‚Сѓ РѕС‚РїСЂР°РІРёР»Рё Р’РЎР• РРњР•РќРђ
             ElseIf Spls(0) = "IPs" Then
-                If onlyRetTxt Then Return "" ' Если надо только узнать текст в команде
+                If onlyRetTxt Then Return "" ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
                 If Spls.Length > 1 Then
                     ClientsIPs = str.Substring("IPs".Length + Spl(0).Length).Trim
                 End If
-                ' Если клиент захотел ПЕРЕИМЕНОВАТЬСЯ
+                ' Р•СЃР»Рё РєР»РёРµРЅС‚ Р·Р°С…РѕС‚РµР» РџР•Р Р•РРњР•РќРћР’РђРўР¬РЎРЇ
             ElseIf Spls(0) = "Rename" Then
-                If onlyRetTxt Then Return "" ' Если надо только узнать текст в команде
+                If onlyRetTxt Then Return "" ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
                 If Spls.Length > 1 Then
                     Dim namOld As String = Spls(1).Split(",")(0)
                     Dim namNew As String = Spls(1).Split(",")(1)
@@ -608,24 +608,24 @@ Public Class ClientServerMy
                     Dim ind As Integer = Array.IndexOf(nams, namOld)
                     Dim indNew As Integer = Array.IndexOf(nams, namNew)
                     If ind <> -1 And indNew = -1 Then
-                        ' меняем имя в коллекции сокетов
+                        ' РјРµРЅСЏРµРј РёРјСЏ РІ РєРѕР»Р»РµРєС†РёРё СЃРѕРєРµС‚РѕРІ
                         wskClients.ChangeKey(namOld, namNew)
-                        ' меняем имя в свойствах
+                        ' РјРµРЅСЏРµРј РёРјСЏ РІ СЃРІРѕР№СЃС‚РІР°С…
                         nams(ind) = namNew
-                        ' отправить изменения
+                        ' РѕС‚РїСЂР°РІРёС‚СЊ РёР·РјРµРЅРµРЅРёСЏ
                         SendToClient(namNew, CommandSymbol & "Name" & Spl(0) & namNew)
                         SendToClients(CommandSymbol & "Names" & Spl(0) & ClientsNames)
                         SendToClients(CommandSymbol & "IPs" & Spl(0) & ClientsIPs)
-                        ' Если сменили имя, то вызвать событие CountChanged
+                        ' Р•СЃР»Рё СЃРјРµРЅРёР»Рё РёРјСЏ, С‚Рѕ РІС‹Р·РІР°С‚СЊ СЃРѕР±С‹С‚РёРµ CountChanged
                         RaiseEvent CountChanged(wskClients(namNew), New WinsockCollectionCountChangedEventArgs(wskClients.Count, wskClients.Count))
                     End If
                 End If
             End If
-            If onlyRetTxt Then Return "" ' Если надо только узнать текст в команде
+            If onlyRetTxt Then Return "" ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
             ReceivCmd = cmd
             RaiseEvent CommandReceived(Nothing, Nothing)
         Else
-            If onlyRetTxt Then Return str ' Если надо только узнать текст в команде
+            If onlyRetTxt Then Return str ' Р•СЃР»Рё РЅР°РґРѕ С‚РѕР»СЊРєРѕ СѓР·РЅР°С‚СЊ С‚РµРєСЃС‚ РІ РєРѕРјР°РЅРґРµ
             RaiseEvent TextReceived(Nothing, Nothing)
         End If
         If onlyRetTxt Then Return ""
@@ -718,21 +718,21 @@ Public Class ClientServerMy
         End Get
         Set(ByVal value As String)
             If value <> "" Then
-                ' Проверки на корректность имени
+                ' РџСЂРѕРІРµСЂРєРё РЅР° РєРѕСЂСЂРµРєС‚РЅРѕСЃС‚СЊ РёРјРµРЅРё
                 If Array.IndexOf(ClientsNames.Split(","), value) <> -1 Then
                     zhdemImya = False
                     Throw New Exception(Errors.NameExist(value))
                 ElseIf IsNumeric(value) Then
                     zhdemImya = False
-                    Throw New Exception(trans("Имя не может состоять только из цифр") & " " & value)
+                    Throw New Exception(trans("РРјСЏ РЅРµ РјРѕР¶РµС‚ СЃРѕСЃС‚РѕСЏС‚СЊ С‚РѕР»СЊРєРѕ РёР· С†РёС„СЂ") & " " & value)
                 ElseIf value.IndexOf(CommandSymbol) <> -1 Then
                     zhdemImya = False
-                    Throw New Exception(trans("Имя не может содержать") & " " & CommandSymbol)
+                    Throw New Exception(trans("РРјСЏ РЅРµ РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ") & " " & CommandSymbol)
                 ElseIf value.IndexOf(",") <> -1 Then
                     zhdemImya = False
-                    Throw New Exception(trans("Имя не может содержать") & " "",""")
+                    Throw New Exception(trans("РРјСЏ РЅРµ РјРѕР¶РµС‚ СЃРѕРґРµСЂР¶Р°С‚СЊ") & " "",""")
                 End If
-                ' Если надо переименовать везде в сети 
+                ' Р•СЃР»Рё РЅР°РґРѕ РїРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ РІРµР·РґРµ РІ СЃРµС‚Рё 
                 If (value <> NameInNetwork And ClientsNames <> "") Or zhdemImya Then
                     SendToServer(CommandSymbol & "Rename" & Spl(0) & ClSrName & "," & value)
                 End If
@@ -777,20 +777,20 @@ Public Class ClientServerMy
         Get
             If TypeServer = "Server" Or TypeServer = "" Then
                 TypeServer = "Server"
-                Return trans("Сервер")
+                Return trans("РЎРµСЂРІРµСЂ")
             Else
                 TypeServer = "Client"
-                Return trans("Клиент")
+                Return trans("РљР»РёРµРЅС‚")
             End If
             Return ComboType.SelectedItem
         End Get
         Set(ByVal value As String)
-            If value.ToUpper = trans("Сервер").ToUpper Or value = "" Then
+            If value.ToUpper = trans("РЎРµСЂРІРµСЂ").ToUpper Or value = "" Then
                 TypeServer = "Server"
-                ComboType.SelectedItem = trans("Сервер")
+                ComboType.SelectedItem = trans("РЎРµСЂРІРµСЂ")
             Else
                 TypeServer = "Client"
-                ComboType.SelectedItem = trans("Клиент")
+                ComboType.SelectedItem = trans("РљР»РёРµРЅС‚")
             End If
         End Set
     End Property
@@ -928,8 +928,8 @@ Public Class ClientServerMy
         wskClient.BufferSize = 100000
         wskListen.BufferSize = 100000
         ComboType.Items.Clear()
-        ComboType.Items.Add(trans("Клиент"))
-        ComboType.Items.Add(trans("Сервер"))
+        ComboType.Items.Add(trans("РљР»РёРµРЅС‚"))
+        ComboType.Items.Add(trans("РЎРµСЂРІРµСЂ"))
         ClientServerType = ClientServerType
         cmdSendText.Text = trans(cmdSendText.Text)
         cmdSendFile.Text = trans(cmdSendFile.Text)

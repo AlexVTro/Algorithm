@@ -1,4 +1,4 @@
-Public Class CreateCycle
+ÔªøPublic Class CreateCycle
     Dim EditPrWhile As EditProperty
     Dim args As New Arguments()
     Public border As Integer = 0
@@ -8,8 +8,8 @@ Public Class CreateCycle
         EditPrWhile.Dock = DockStyle.Fill
         WhileLabel.Text = transInfc(WhileLabel.Text)
         EditPrWhile.Text = proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & "." & _
-            trans("“ÂÍÒÚ") & " = " & proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & _
-            "." & trans("“ÂÍÒÚ")
+            trans("–¢–µ–∫—Å—Ç") & " = " & proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & _
+            "." & trans("–¢–µ–∫—Å—Ç")
         PalkaWhile.RefreshPic(SkinPictures)
     End Sub
 

@@ -1940,7 +1940,7 @@
                     names &= ", " & SobytMyObjs(i).obj.Props.name
                 End If
             Next
-            MainForm.Label1.Text = trans("Создать событие для") & " " & names.Substring(2)
+            MainForm.Label1.Text = transInfc("Создать событие для") & " " & names.Substring(2)
             ind = SobytsTab.Tag
             If tab.TabPages.Count < ind Then ind = tab.TabPages.Count
             If tab.TabPages(SobytsTab.Name) Is Nothing Then tab.TabPages.Insert(ind, SobytsTab) : tab.SelectedTab = SobytsTab

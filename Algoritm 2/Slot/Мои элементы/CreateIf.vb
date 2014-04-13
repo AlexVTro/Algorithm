@@ -1,4 +1,4 @@
-Public Class CreateIf
+п»їPublic Class CreateIf
     Public WithEvents ShowObj As ShowObject
     Public EditPrUsually, EditPrPodIf As EditProperty
     Dim args As New Arguments()
@@ -15,7 +15,7 @@ Public Class CreateIf
             ifUsually.Checked = True
         Else
             IfPodIfPanel.Visible = True
-            ' Если элсе уже есть в данном условии
+            ' Р•СЃР»Рё СЌР»СЃРµ СѓР¶Рµ РµСЃС‚СЊ РІ РґР°РЅРЅРѕРј СѓСЃР»РѕРІРёРё
             If proj.GetElseOrElseIf(Tree.SelectedNode) Is Nothing = False Then
                 ifElsePanel.Visible = False
                 If ifElse.Checked = True Then
@@ -63,13 +63,13 @@ Public Class CreateIf
         LabelElseIf.Text = UCase(trans(LabelElseIf.Text))
         LabelThen.Text = UCase(trans(LabelThen.Text))
         LabelThen2.Text = UCase(trans(LabelThen2.Text))
-        EditPrUsually.Text = proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & "." & trans("Текст") & " = " & proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & "." & trans("Текст")
+        EditPrUsually.Text = proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & "." & trans("РўРµРєСЃС‚") & " = " & proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & "." & trans("РўРµРєСЃС‚")
 
         EditPrPodIf = New EditProperty() : forEditPrPodIf.Controls.Add(EditPrPodIf)
         EditPrPodIf.Dock = DockStyle.Fill
         IfPodIf.Text = transInfc(IfPodIf.Text)
         ifElse.Text = transInfc(ifElse.Text)
-        EditPrPodIf.Text = proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & "." & trans("Текст") & " = " & proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & "." & trans("Текст")
+        EditPrPodIf.Text = proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & "." & trans("РўРµРєСЃС‚") & " = " & proj.ActiveForm.obj.Props.name & "." & proj.ActiveForm.obj.Props.name & "." & trans("РўРµРєСЃС‚")
 
         PalkaUsually.RefreshPic(SkinPictures)
         PalkaPodIf.RefreshPic(SkinPictures)

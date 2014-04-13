@@ -1,4 +1,4 @@
-Public Class Form1
+﻿Public Class Form1
     Dim referral As String
     Private Sub Form1_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim txt As String = IO.File.ReadAllText(Environment.GetCommandLineArgs()(0))

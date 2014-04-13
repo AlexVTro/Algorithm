@@ -1,4 +1,4 @@
-''' <summary>
+﻿''' <summary>
 ''' Enumeration containing the various supported network protocols.
 ''' </summary>
 Public Enum WinsockProtocol

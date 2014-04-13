@@ -19,13 +19,12 @@ Partial Class Edu
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.Button2 = New System.Windows.Forms.Button
-        Me.CheckBox1 = New System.Windows.Forms.CheckBox
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Button3 = New System.Windows.Forms.Button
-        Me.Label3 = New System.Windows.Forms.Label
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.Button2 = New System.Windows.Forms.Button()
+        Me.CheckBox1 = New System.Windows.Forms.CheckBox()
+        Me.Button3 = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
         Me.SuspendLayout()
         '
         'Label1
@@ -72,16 +71,6 @@ Partial Class Edu
         Me.CheckBox1.Text = "Не выводить это окно больше"
         Me.CheckBox1.UseVisualStyleBackColor = False
         '
-        'Label2
-        '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.ForeColor = System.Drawing.Color.Red
-        Me.Label2.Location = New System.Drawing.Point(12, 138)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(370, 158)
-        Me.Label2.TabIndex = 4
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
         'Button3
         '
         Me.Button3.BackColor = System.Drawing.Color.Transparent
@@ -101,7 +90,7 @@ Partial Class Edu
         Me.Label3.Size = New System.Drawing.Size(370, 33)
         Me.Label3.TabIndex = 6
         Me.Label3.Text = "Для знакомства с Алгоритмом, рекумендумем вам воспользоваться одним из следующих " & _
-            "вариантов:"
+    "вариантов:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Edu
@@ -111,7 +100,6 @@ Partial Class Edu
         Me.ClientSize = New System.Drawing.Size(394, 138)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Button3)
-        Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.CheckBox1)
         Me.Controls.Add(Me.Button2)
         Me.Controls.Add(Me.Button1)
@@ -129,7 +117,6 @@ Partial Class Edu
     Friend WithEvents Button1 As System.Windows.Forms.Button
     Friend WithEvents Button2 As System.Windows.Forms.Button
     Friend WithEvents CheckBox1 As System.Windows.Forms.CheckBox
-    Friend WithEvents Label2 As System.Windows.Forms.Label
     Friend WithEvents Button3 As System.Windows.Forms.Button
     Friend WithEvents Label3 As System.Windows.Forms.Label
 End Class

@@ -19,21 +19,21 @@ Partial Class About
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel
+        Me.VersionLabel = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.SuspendLayout()
         '
-        'Label2
+        'VersionLabel
         '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label2.Location = New System.Drawing.Point(280, 282)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(108, 13)
-        Me.Label2.TabIndex = 1
-        Me.Label2.Text = "Algorithm 2.5.6"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.VersionLabel.BackColor = System.Drawing.Color.Transparent
+        Me.VersionLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.VersionLabel.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.VersionLabel.Location = New System.Drawing.Point(280, 282)
+        Me.VersionLabel.Name = "VersionLabel"
+        Me.VersionLabel.Size = New System.Drawing.Size(108, 13)
+        Me.VersionLabel.TabIndex = 1
+        Me.VersionLabel.Text = "Algorithm 2.5.6"
+        Me.VersionLabel.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'LinkLabel1
         '
@@ -53,7 +53,7 @@ Partial Class About
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(400, 300)
         Me.Controls.Add(Me.LinkLabel1)
-        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.VersionLabel)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "About"
         Me.Text = "О программе"
@@ -61,6 +61,6 @@ Partial Class About
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents VersionLabel As System.Windows.Forms.Label
     Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
 End Class

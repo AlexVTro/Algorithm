@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ClientServerMy
     Inherits System.Windows.Forms.UserControl
 
@@ -44,7 +44,7 @@ Partial Class ClientServerMy
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboType.FormattingEnabled = True
-        Me.ComboType.Items.AddRange(New Object() {"Сервер", "Клиент"})
+        Me.ComboType.Items.AddRange(New Object() {"РЎРµСЂРІРµСЂ", "РљР»РёРµРЅС‚"})
         Me.ComboType.Location = New System.Drawing.Point(3, 3)
         Me.ComboType.Name = "ComboType"
         Me.ComboType.Size = New System.Drawing.Size(72, 21)
@@ -79,7 +79,7 @@ Partial Class ClientServerMy
         Me.cmdClose.Name = "cmdClose"
         Me.cmdClose.Size = New System.Drawing.Size(100, 23)
         Me.cmdClose.TabIndex = 23
-        Me.cmdClose.Text = "Стоп поиск"
+        Me.cmdClose.Text = "РЎС‚РѕРї РїРѕРёСЃРє"
         Me.cmdClose.UseVisualStyleBackColor = True
         '
         'cmdSendFile
@@ -90,7 +90,7 @@ Partial Class ClientServerMy
         Me.cmdSendFile.Name = "cmdSendFile"
         Me.cmdSendFile.Size = New System.Drawing.Size(100, 23)
         Me.cmdSendFile.TabIndex = 22
-        Me.cmdSendFile.Text = "Отправить файл"
+        Me.cmdSendFile.Text = "РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р»"
         Me.cmdSendFile.UseVisualStyleBackColor = True
         '
         'cmdCreateConn
@@ -100,7 +100,7 @@ Partial Class ClientServerMy
         Me.cmdCreateConn.Name = "cmdCreateConn"
         Me.cmdCreateConn.Size = New System.Drawing.Size(100, 23)
         Me.cmdCreateConn.TabIndex = 19
-        Me.cmdCreateConn.Text = "Создать"
+        Me.cmdCreateConn.Text = "РЎРѕР·РґР°С‚СЊ"
         Me.cmdCreateConn.UseVisualStyleBackColor = True
         '
         'cmdSendText
@@ -111,7 +111,7 @@ Partial Class ClientServerMy
         Me.cmdSendText.Name = "cmdSendText"
         Me.cmdSendText.Size = New System.Drawing.Size(100, 23)
         Me.cmdSendText.TabIndex = 21
-        Me.cmdSendText.Text = "Отправить текст"
+        Me.cmdSendText.Text = "РћС‚РїСЂР°РІРёС‚СЊ С‚РµРєСЃС‚"
         Me.cmdSendText.UseVisualStyleBackColor = True
         '
         'ClientServerMy

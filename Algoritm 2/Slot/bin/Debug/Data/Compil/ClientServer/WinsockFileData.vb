@@ -1,4 +1,4 @@
-''' <summary>
+﻿''' <summary>
 ''' A class that wraps a file allowing you to serialize it for transport.
 ''' </summary>
 <Serializable()> _

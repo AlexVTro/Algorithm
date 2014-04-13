@@ -160,12 +160,6 @@
     <Compile Include="Формы\About.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Формы\Mecenats.Designer.vb">
-      <DependentUpon>Mecenats.vb</DependentUpon>
-    </Compile>
-    <Compile Include="Формы\Mecenats.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="Формы\Edu.Designer.vb">
       <DependentUpon>Edu.vb</DependentUpon>
     </Compile>
@@ -303,10 +297,6 @@
     <EmbeddedResource Include="Формы\About.resx">
       <SubType>Designer</SubType>
       <DependentUpon>About.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Формы\Mecenats.resx">
-      <DependentUpon>Mecenats.vb</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Формы\Edu.resx">
       <DependentUpon>Edu.vb</DependentUpon>

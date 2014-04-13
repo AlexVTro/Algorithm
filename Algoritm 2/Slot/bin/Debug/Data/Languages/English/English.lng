@@ -1576,7 +1576,10 @@ _ИЛИ~~_OR
 Сохранение~~Save
 Компиляция~~Compile
 ОШИБКА КОМПИЛЯЦИИ!~~Compilation error!
-Отчет об ошибке написан ниже. Если вы не знаете как исправить ошибку, то скопируйте содержимое окна и отправьте его нам на support@algoritm2.ru - мы быстро решим вашу проблему!~~An error report has be opened in textbox below. If you do not know how to fix the problem copy the text of the textbox and send it to us at support@algorithm2.com
+Отчет об ошибке написан ниже. Попробуйте найти в дереве действий подчеркнутые слова, и исправить ситуацию.~~An error report has be opened in textbox below.
+Если вы не знаете как исправить ошибку, то скачайте Visual Studio Express (кнопка ниже), Экспортируйте ваш проект в VB.NET, Запустите получившейся файл *.vbproj в Visual Studio и попробуйте выполнить программу (клавиша F5). Ошибка вам подсветится.~~If you do not know how to fix the error, you can download the Visual Studio Express (button below), Export your project in VB.NET, Run the resulting file *.vbproj in Visual Studio and try to run a program (press F5). Error you highlighted.
+Если вы все равно не знаете как исправить ошибку, то скопируйте содержимое этого окна и отправьте его нам на support@algoritm2.ru - мы быстро решим вашу проблему!~~If you do not know how to fix the problem copy the text of the textbox and send it to us at support@algorithm2.com - we will fix the problem soon.
+Скачать Visual Studio Express~~Download Visual Studio Express
 Поздравляем! Проект успешно скомпилирован в готовую программу и расположен по адресу~~Congratulations! The project has been successfully compiled into the final program and is located at
 Открыть папку с программой?~~Open the programs folder?
 Экспорт~~Export

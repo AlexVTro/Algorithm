@@ -1,4 +1,4 @@
-Public Class Progress
+﻿Public Class Progress
     Public Property ProgressBarValue() As Integer
         Get
             Return ProgressBar1.Value

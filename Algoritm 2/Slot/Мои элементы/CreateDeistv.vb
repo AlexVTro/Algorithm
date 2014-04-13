@@ -1,4 +1,4 @@
-Public Class CreateDeistv
+п»їPublic Class CreateDeistv
     Public WithEvents ShowObj As ShowObject
     'Dim EditPr As EditProperty
     Public args As New Arguments()
@@ -33,17 +33,17 @@ Public Class CreateDeistv
             If tempArgs Is Nothing = False Then
                 If tempArgs(tempArgs.Length - 1) = "" Then GoTo nenadoArga
             End If
-            If UCase(MainForm.Create1.Text) = UCase(trans("Изменить")) Then
+            If UCase(MainForm.Create1.Text) = UCase(trans("РР·РјРµРЅРёС‚СЊ")) Then
                 If GetTypeProperty(nowProp) = GetTypeProperty(propOld) Then Exit Sub 
                 If tempArgs Is Nothing And GetArguments(propOld, MyObj) Is Nothing And args.Args Is Nothing = False Then Exit Sub
             End If
-            args.ShowArgs(New String() {transInfc("на следующее значение")}, Nothing, "")
+            args.ShowArgs(New String() {transInfc("РЅР° СЃР»РµРґСѓСЋС‰РµРµ Р·РЅР°С‡РµРЅРёРµ")}, Nothing, "")
             args.borderIn = SkinOptions("RamkaCDEditPrIn")
             args.colBorder = SkinColors("RamkaCDEditPr")
-            TopLabel.Text = transInfc("Изменить следующее свойство")
+            TopLabel.Text = transInfc("РР·РјРµРЅРёС‚СЊ СЃР»РµРґСѓСЋС‰РµРµ СЃРІРѕР№СЃС‚РІРѕ")
         Else
 nenadoArga: args.ShowArgs(Nothing, Nothing, "")
-            TopLabel.Text = transInfc("Выполнить следующую команду")
+            TopLabel.Text = transInfc("Р’С‹РїРѕР»РЅРёС‚СЊ СЃР»РµРґСѓСЋС‰СѓСЋ РєРѕРјР°РЅРґСѓ")
         End If
         ' MainForm.InfoPropsShow(nowProp, proj.GetMyAllFromName(ShowObj.objects.Text, , ShowObj.forms.Text))
         CreateDeistv_Resize(Nothing, Nothing) : Me.Refresh()
@@ -54,11 +54,11 @@ nenadoArga: args.ShowArgs(Nothing, Nothing, "")
     End Sub
     Sub SetProperty(Optional ByVal reazon As Boolean = False)
         Static fl As Boolean = False
-        ' Только в очень ограничеченом варианте случаев(reazon = True) перезапускать шоу объект
+        ' РўРѕР»СЊРєРѕ РІ РѕС‡РµРЅСЊ РѕРіСЂР°РЅРёС‡РµС‡РµРЅРѕРј РІР°СЂРёР°РЅС‚Рµ СЃР»СѓС‡Р°РµРІ(reazon = True) РїРµСЂРµР·Р°РїСѓСЃРєР°С‚СЊ С€РѕСѓ РѕР±СЉРµРєС‚
         If (ShowObj Is Nothing = False And fl = False) Or (reazon = True And fl = True) Then
             ShowObj.ShowObj(New MasterPattern(Nothing, "All", False)) : fl = True : Exit Sub
         End If
-        ' событОбъекты должны измениться чаще - при изменения выбранного узла в разных событиях
+        ' СЃРѕР±С‹С‚РћР±СЉРµРєС‚С‹ РґРѕР»Р¶РЅС‹ РёР·РјРµРЅРёС‚СЊСЃСЏ С‡Р°С‰Рµ - РїСЂРё РёР·РјРµРЅРµРЅРёСЏ РІС‹Р±СЂР°РЅРЅРѕРіРѕ СѓР·Р»Р° РІ СЂР°Р·РЅС‹С… СЃРѕР±С‹С‚РёСЏС…
         If ShowObj Is Nothing = False Then
             If ShowObj.Sobyt <> proj.GetSobytNameFromTreeNode Then
                 ShowObj.Sobyt = proj.GetSobytNameFromTreeNode() : ShowObj.MySobyt = proj.GetSobytObj()

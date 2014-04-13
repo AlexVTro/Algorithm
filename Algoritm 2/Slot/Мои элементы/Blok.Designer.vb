@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Blok
     Inherits System.Windows.Forms.UserControl
 
@@ -53,7 +53,7 @@ Partial Class Blok
         Me.DopFunctionsLabel.Name = "DopFunctionsLabel"
         Me.DopFunctionsLabel.Size = New System.Drawing.Size(106, 15)
         Me.DopFunctionsLabel.TabIndex = 12
-        Me.DopFunctionsLabel.Text = "Доп. функция"
+        Me.DopFunctionsLabel.Text = "Р”РѕРї. С„СѓРЅРєС†РёСЏ"
         Me.DopFunctionsLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'forShowObj
@@ -83,7 +83,7 @@ Partial Class Blok
         Me.EditPrLabel.Name = "EditPrLabel"
         Me.EditPrLabel.Size = New System.Drawing.Size(175, 17)
         Me.EditPrLabel.TabIndex = 17
-        Me.EditPrLabel.Text = "Значение"
+        Me.EditPrLabel.Text = "Р—РЅР°С‡РµРЅРёРµ"
         Me.EditPrLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         Me.EditPrLabel.Visible = False
         '

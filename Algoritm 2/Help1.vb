@@ -1,4 +1,4 @@
-Public Class Help1
+﻿Public Class Help1
 
     Private Sub Help1_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         ' Button1_Click(Nothing, Nothing)

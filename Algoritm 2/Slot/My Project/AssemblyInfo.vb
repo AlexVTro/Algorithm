@@ -1,4 +1,4 @@
-Imports System
+ï»¿Imports System
 Imports System.Reflection
 Imports System.Runtime.InteropServices
 
@@ -8,11 +8,11 @@ Imports System.Runtime.InteropServices
 
 ' Review the values of the assembly attributes
 
-<Assembly: AssemblyTitle("ÀËÃÎÐÈÒÌ 2")> 
-<Assembly: AssemblyDescription("Ñðåäà ðàçðàáîòêè äëÿ ñîçäàíèÿ ïðîãðàìì")> 
+<Assembly: AssemblyTitle("ÐÐ›Ð“ÐžÐ Ð˜Ð¢Ðœ 2")> 
+<Assembly: AssemblyDescription("Ð¡Ñ€ÐµÐ´Ð° Ñ€Ð°Ð·Ñ€Ð°Ð±Ð¾Ñ‚ÐºÐ¸ Ð´Ð»Ñ ÑÐ¾Ð·Ð´Ð°Ð½Ð¸Ñ Ð¿Ñ€Ð¾Ð³Ñ€Ð°Ð¼Ð¼")> 
 <Assembly: AssemblyCompany("")> 
 <Assembly: AssemblyProduct("Algorithm 2")> 
-<Assembly: AssemblyCopyright("Copyright ©  2009")> 
+<Assembly: AssemblyCopyright("Copyright Â©  2009")> 
 <Assembly: AssemblyTrademark("")> 
 
 <Assembly: CLSCompliant(True)> 

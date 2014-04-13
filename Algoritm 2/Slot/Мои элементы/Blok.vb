@@ -1,4 +1,4 @@
-Public Class Blok
+п»їPublic Class Blok
     Public WithEvents ShowObj As ShowObject
     Dim EditPr As EditProperty
     Public lLink, rLink As Blok
@@ -33,7 +33,7 @@ Public Class Blok
 
         Palka1.RefreshPic(SkinPictures)
         TudaSuda1.RefreshPic(SkinPictures)
-        ' чтобы кнопочка тудасюда приняла нужный У, а то шоу объект долго свой хайт не выдает
+        ' С‡С‚РѕР±С‹ РєРЅРѕРїРѕС‡РєР° С‚СѓРґР°СЃСЋРґР° РїСЂРёРЅСЏР»Р° РЅСѓР¶РЅС‹Р№ РЈ, Р° С‚Рѕ С€РѕСѓ РѕР±СЉРµРєС‚ РґРѕР»РіРѕ СЃРІРѕР№ С…Р°Р№С‚ РЅРµ РІС‹РґР°РµС‚
         Timer1.Start()
     End Sub
     Sub ShowObj_PropertyChange(ByVal nowProp As String, ByVal typeChanged As String, ByVal MyObj As Object)
@@ -115,7 +115,7 @@ vnutr:      OpenCombo.Text = Trim(text.Substring(0, indStr))
     Private Sub Combo_TextChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles OpenCombo.TextChanged, CloseCombo.TextChanged
         Dim lab As Windows.Forms.Label
         If sender Is OpenCombo Then lab = OpenLabel Else lab = CloseLabel
-        If NikakoiEsli(sender.Text) = trans("Никакой") Then
+        If NikakoiEsli(sender.Text) = trans("РќРёРєР°РєРѕР№") Then
             lab.Text = lab.Tag
         Else
             Dim text As String = System.Text.RegularExpressions.Regex.Replace(sender.Text, "[^\" & sender.tag & "]", "")
@@ -157,7 +157,7 @@ vnutr:      OpenCombo.Text = Trim(text.Substring(0, indStr))
             If bistro_orfo = False Then str = New CodeString(EditPr.Text).Text
         End If
         dop = DopFunctions.SelectedItem
-        If UCase(dop) <> UCase(trans("Нет")) Then
+        If UCase(dop) <> UCase(trans("РќРµС‚")) Then
             If dop.IndexOf(" (") <> -1 Then dop = dop.Substring(0, dop.IndexOf(" ("))
             str = dop & "(" & str & ")"
         End If

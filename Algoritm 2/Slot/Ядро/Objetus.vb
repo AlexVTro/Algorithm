@@ -1,40 +1,40 @@
-Public Class Objetus
-    Public eventObj As Windows.Forms.Control ' Переменная для объкта, что бы можно было ему задать события
-    Public obj, MyObj, MyForm As Object ' Переменая где собственно и хранится объект 
-    Public conteiner As Object ' Контейнер объекта как мой класс, а не Windows.Forms.Control
+п»їPublic Class Objetus
+    Public eventObj As Windows.Forms.Control ' РџРµСЂРµРјРµРЅРЅР°СЏ РґР»СЏ РѕР±СЉРєС‚Р°, С‡С‚Рѕ Р±С‹ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ РµРјСѓ Р·Р°РґР°С‚СЊ СЃРѕР±С‹С‚РёСЏ
+    Public obj, MyObj, MyForm As Object ' РџРµСЂРµРјРµРЅР°СЏ РіРґРµ СЃРѕР±СЃС‚РІРµРЅРЅРѕ Рё С…СЂР°РЅРёС‚СЃСЏ РѕР±СЉРµРєС‚ 
+    Public conteiner As Object ' РљРѕРЅС‚РµР№РЅРµСЂ РѕР±СЉРµРєС‚Р° РєР°Рє РјРѕР№ РєР»Р°СЃСЃ, Р° РЅРµ Windows.Forms.Control
     Dim click As Boolean
     Public dx, dy, mdx, mdy As Integer
     Dim markers_perenos As Integer = -1
     Public markers(MarkCount - 1) As PictureBox
     Dim raznicaSize(), raznicaLoc() As Point
-    Public HideMarker As PictureBox ' Маркеры для того, чтобы не мешал скролинг изменять размеры и положение
-    Public na4Point, endPoint As Point ' Начальная точки прямоугольника и его размер
-    Public NodeTemp As TreeNode ' хранит узел при копировании
-    Public ParentTemp, IndexTemp As String ' хранит куда добавлять узел при копировании
-    Public HistoryTemp As String  ' хранит уровень хисторилевела
-    Public OldFormTemp As String  ' хранит прошлую форму объекта
-    Public VstavkaOrCreate As Boolean ' вставляется ли сейчас объект или просто создается новый
-    Public SplitCont As Windows.Forms.SplitContainer 'делит пространство между формой и полуобъектами
+    Public HideMarker As PictureBox ' РњР°СЂРєРµСЂС‹ РґР»СЏ С‚РѕРіРѕ, С‡С‚РѕР±С‹ РЅРµ РјРµС€Р°Р» СЃРєСЂРѕР»РёРЅРі РёР·РјРµРЅСЏС‚СЊ СЂР°Р·РјРµСЂС‹ Рё РїРѕР»РѕР¶РµРЅРёРµ
+    Public na4Point, endPoint As Point ' РќР°С‡Р°Р»СЊРЅР°СЏ С‚РѕС‡РєРё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРєР° Рё РµРіРѕ СЂР°Р·РјРµСЂ
+    Public NodeTemp As TreeNode ' С…СЂР°РЅРёС‚ СѓР·РµР» РїСЂРё РєРѕРїРёСЂРѕРІР°РЅРёРё
+    Public ParentTemp, IndexTemp As String ' С…СЂР°РЅРёС‚ РєСѓРґР° РґРѕР±Р°РІР»СЏС‚СЊ СѓР·РµР» РїСЂРё РєРѕРїРёСЂРѕРІР°РЅРёРё
+    Public HistoryTemp As String  ' С…СЂР°РЅРёС‚ СѓСЂРѕРІРµРЅСЊ С…РёСЃС‚РѕСЂРёР»РµРІРµР»Р°
+    Public OldFormTemp As String  ' С…СЂР°РЅРёС‚ РїСЂРѕС€Р»СѓСЋ С„РѕСЂРјСѓ РѕР±СЉРµРєС‚Р°
+    Public VstavkaOrCreate As Boolean ' РІСЃС‚Р°РІР»СЏРµС‚СЃСЏ Р»Рё СЃРµР№С‡Р°СЃ РѕР±СЉРµРєС‚ РёР»Рё РїСЂРѕСЃС‚Рѕ СЃРѕР·РґР°РµС‚СЃСЏ РЅРѕРІС‹Р№
+    Public SplitCont As Windows.Forms.SplitContainer 'РґРµР»РёС‚ РїСЂРѕСЃС‚СЂР°РЅСЃС‚РІРѕ РјРµР¶РґСѓ С„РѕСЂРјРѕР№ Рё РїРѕР»СѓРѕР±СЉРµРєС‚Р°РјРё
     Public Sobytia(), VBname As String
     Public tree As TreeView
     Public proj As Object = proj
     Public isRun As Boolean
     Public ToolTipa As ToolTip
 
-    '<<<<<<<< СОЗДАНИЕ ОБЪЕКТА >>>>>>>>>
+    '<<<<<<<< РЎРћР—Р”РђРќРР• РћР‘РЄР•РљРўРђ >>>>>>>>>
 #Region "CREATE"
-    Public Sub CreateObject(ByVal ob As Object, Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False) ' Создание нового объкта
+    Public Sub CreateObject(ByVal ob As Object, Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False) ' РЎРѕР·РґР°РЅРёРµ РЅРѕРІРѕРіРѕ РѕР±СЉРєС‚Р°
         Dim i As Integer, cont As Object
         If isRun = False Then proj = peremens2.proj
         If proj Is Nothing = False Then
             If proj.f Is Nothing = False Then
-                ' Чтобы когда удалили все формы (кроме полезн.объектов) нельзя было создавать кнопки, панели и т.д.
+                ' Р§С‚РѕР±С‹ РєРѕРіРґР° СѓРґР°Р»РёР»Рё РІСЃРµ С„РѕСЂРјС‹ (РєСЂРѕРјРµ РїРѕР»РµР·РЅ.РѕР±СЉРµРєС‚РѕРІ) РЅРµР»СЊР·СЏ Р±С‹Р»Рѕ СЃРѕР·РґР°РІР°С‚СЊ РєРЅРѕРїРєРё, РїР°РЅРµР»Рё Рё С‚.Рґ.
                 If proj.f.Length <= 1 And ob.GetType.ToString <> ClassAplication & "F" And holostoi = False Then Exit Sub
             End If
         End If
-        ' Настройка и размещение созданного объкта
+        ' РќР°СЃС‚СЂРѕР№РєР° Рё СЂР°Р·РјРµС‰РµРЅРёРµ СЃРѕР·РґР°РЅРЅРѕРіРѕ РѕР±СЉРєС‚Р°
         obj = ob : MyObj = Me : Me.isRun = isRun : obj.MyObj = MyObj
-        ' Пункт не может быть типом Контрол
+        ' РџСѓРЅРєС‚ РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚РёРїРѕРј РљРѕРЅС‚СЂРѕР»
         If isHelp Then Exit Sub
         If Iz.IsMMs(MyObj) = False Then
             If Iz.isNoControlObj(obj) = False Then eventObj = obj
@@ -43,7 +43,7 @@ Public Class Objetus
         If obj.TypeObj = "Polezniy" Then Exit Sub
         If Iz.IsFORM(MyObj) And isRun = False Then
             If MyObj.tab Is Nothing Then
-                ' Создание и настройка таба
+                ' РЎРѕР·РґР°РЅРёРµ Рё РЅР°СЃС‚СЂРѕР№РєР° С‚Р°Р±Р°
                 MyObj.tab = New TabPage(obj.Props.Name) : MyObj.tab.Name = obj.Props.name : MyObj.tab.BackColor = Color.White
                 MyObj.tab.UseVisualStyleBackColor = True
             End If
@@ -53,7 +53,7 @@ Public Class Objetus
 
         If isRun Then
             If Iz.IsMMs(MyObj) Then
-                ' У элементов меню евентОбъект свой
+                ' РЈ СЌР»РµРјРµРЅС‚РѕРІ РјРµРЅСЋ РµРІРµРЅС‚РћР±СЉРµРєС‚ СЃРІРѕР№
                 Dim eventObj As ToolStripMenuItem = ob
                 AddHandler eventObj.Click, AddressOf obj_ClickRun
                 AddHandler eventObj.MouseDown, AddressOf obj_MouseDownRun
@@ -64,14 +64,14 @@ Public Class Objetus
                 AddHandler eventObj.DropDownOpened, AddressOf obj_DropDownOpenedRun
                 AddHandler eventObj.DropDownOpening, AddressOf obj_DropDownOpeningRun
             ElseIf Iz.IsCM(MyObj) Then
-                ' У контекстного меню свой евент
+                ' РЈ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ СЃРІРѕР№ РµРІРµРЅС‚
                 Dim eventObj As ContextMenuStrip = ob.cnmn
                 AddHandler eventObj.Opening, AddressOf obj_OpeningRun
                 AddHandler eventObj.Opened, AddressOf obj_OpenedRun
                 AddHandler eventObj.Closing, AddressOf obj_ClosingRun
                 AddHandler eventObj.Closed, AddressOf obj_ClosedRun
             ElseIf Iz.IsDP(MyObj) Then
-                ' У двойной панели свои события
+                ' РЈ РґРІРѕР№РЅРѕР№ РїР°РЅРµР»Рё СЃРІРѕРё СЃРѕР±С‹С‚РёСЏ
                 Dim eventObj As runDP = ob
                 AddHandler eventObj.Click, AddressOf obj_ClickRun
                 AddHandler eventObj.Panel1.Click, AddressOf obj_ClickRun
@@ -129,60 +129,60 @@ Public Class Objetus
             Else
 
 
-                ' Мышь
-                If Array.IndexOf(Sobytia, trans("Клик").ToUpper) <> -1 Then
+                ' РњС‹С€СЊ
+                If Array.IndexOf(Sobytia, trans("РљР»РёРє").ToUpper) <> -1 Then
                     AddHandler eventObj.Click, AddressOf obj_ClickRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Нажатие кнопки мыши").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё").ToUpper) <> -1 Then
                     AddHandler eventObj.MouseDown, AddressOf obj_MouseDownRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Отжатие кнопки мыши").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё").ToUpper) <> -1 Then
                     AddHandler eventObj.MouseUp, AddressOf obj_MouseUpRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Наведение курсора").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°").ToUpper) <> -1 Then
                     AddHandler eventObj.MouseEnter, AddressOf obj_MouseEnterRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Отведение курсора").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°").ToUpper) <> -1 Then
                     AddHandler eventObj.MouseLeave, AddressOf obj_MouseLeaveRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Курсор на объекте").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ").ToUpper) <> -1 Then
                     AddHandler eventObj.MouseHover, AddressOf obj_MouseHoverRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Движение курсора").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°").ToUpper) <> -1 Then
                     AddHandler eventObj.MouseMove, AddressOf obj_MouseMoveRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Двойной клик").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє").ToUpper) <> -1 Then
                     AddHandler eventObj.MouseDoubleClick, AddressOf obj_DoubleClickRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Вращение колесика").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°").ToUpper) <> -1 Then
                     AddHandler eventObj.MouseWheel, AddressOf obj_MouseWheelRun
                 End If
 
-                ' Клавиатура
-                If Array.IndexOf(Sobytia, trans("Нажатие клавиатуры").ToUpper) <> -1 Then
+                ' РљР»Р°РІРёР°С‚СѓСЂР°
+                If Array.IndexOf(Sobytia, trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹").ToUpper) <> -1 Then
                     AddHandler eventObj.KeyPress, AddressOf obj_KeyPressRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Нажатие вниз кнопки").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё").ToUpper) <> -1 Then
                     AddHandler eventObj.KeyDown, AddressOf obj_KeyDownRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Отжатие кнопки").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё").ToUpper) <> -1 Then
                     AddHandler eventObj.KeyUp, AddressOf obj_KeyUpRun
                 End If
 
-                ' Прочие
-                If Array.IndexOf(Sobytia, trans("Изменение текста").ToUpper) <> -1 Then
+                ' РџСЂРѕС‡РёРµ
+                If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°").ToUpper) <> -1 Then
                     AddHandler eventObj.TextChanged, AddressOf obj_TextChangedRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Получение фокуса").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°").ToUpper) <> -1 Then
                     AddHandler eventObj.GotFocus, AddressOf obj_GotFocusRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Потеря фокуса").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°").ToUpper) <> -1 Then
                     AddHandler eventObj.LostFocus, AddressOf obj_LostFocusRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Прорисовка").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РџСЂРѕСЂРёСЃРѕРІРєР°").ToUpper) <> -1 Then
                     AddHandler eventObj.Paint, AddressOf obj_PaintRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Прокрутка").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РџСЂРѕРєСЂСѓС‚РєР°").ToUpper) <> -1 Then
                     If Iz.IsFORM(MyObj) Then
                         Dim panel As runF = eventObj
                         AddHandler Panel.Scroll, AddressOf obj_ScrollRun
@@ -194,242 +194,242 @@ Public Class Objetus
                         AddHandler Panel.Scroll, AddressOf obj_ScrollRun
                     End If
                 End If
-                If Array.IndexOf(Sobytia, trans("Изменение размеров").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРµРЅРёРµ СЂР°Р·РјРµСЂРѕРІ").ToUpper) <> -1 Then
                     Dim panel As Windows.Forms.Panel = eventObj
                     AddHandler Panel.Resize, AddressOf obj_ResizeRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Закрытие окна").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("Р—Р°РєСЂС‹С‚РёРµ РѕРєРЅР°").ToUpper) <> -1 Then
                     Dim panel As runF = eventObj
                     AddHandler panel.FormClosing, AddressOf obj_FormClosingRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Изменились размеры").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹").ToUpper) <> -1 Then
                     AddHandler eventObj.SizeChanged, AddressOf obj_SizeChangedRun
                 End If
-                If Array.IndexOf(Sobytia, trans("Изменились размеры").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹").ToUpper) <> -1 Then
                     AddHandler eventObj.VisibleChanged, AddressOf obj_VisibleChangedRun
                 End If
 
-                ' Браузер
+                ' Р‘СЂР°СѓР·РµСЂ
                 If Iz.IsW(MyObj) Then
                     Dim panel As runW = eventObj
-                    If Array.IndexOf(Sobytia, trans("Назад можно изменилось").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РќР°Р·Р°Рґ РјРѕР¶РЅРѕ РёР·РјРµРЅРёР»РѕСЃСЊ").ToUpper) <> -1 Then
                         AddHandler Panel.CanGoBackChanged, AddressOf WebBrowser1_CanGoBackChanged
                     End If
-                    If Array.IndexOf(Sobytia, trans("Вперед можно изменилось").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р’РїРµСЂРµРґ РјРѕР¶РЅРѕ РёР·РјРµРЅРёР»РѕСЃСЊ").ToUpper) <> -1 Then
                         AddHandler Panel.CanGoForwardChanged, AddressOf WebBrowser1_CanGoForwardChanged
                     End If
-                    If Array.IndexOf(Sobytia, trans("Страница загрузилась").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР·РёР»Р°СЃСЊ").ToUpper) <> -1 Then
                         AddHandler Panel.DocumentCompleted, AddressOf WebBrowser1_DocumentCompleted
                     End If
-                    If Array.IndexOf(Sobytia, trans("Страница загружается").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ").ToUpper) <> -1 Then
                         AddHandler Panel.FileDownload, AddressOf WebBrowser1_FileDownload
                     End If
-                    If Array.IndexOf(Sobytia, trans("Перешел по ссылке").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РџРµСЂРµС€РµР» РїРѕ СЃСЃС‹Р»РєРµ").ToUpper) <> -1 Then
                         AddHandler Panel.Navigated, AddressOf WebBrowser1_Navigated
                     End If
-                    If Array.IndexOf(Sobytia, trans("Переходит по ссылке").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РџРµСЂРµС…РѕРґРёС‚ РїРѕ СЃСЃС‹Р»РєРµ").ToUpper) <> -1 Then
                         AddHandler Panel.Navigating, AddressOf WebBrowser1_Navigating
                     End If
-                    If Array.IndexOf(Sobytia, trans("Открытие в новом окне").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РћС‚РєСЂС‹С‚РёРµ РІ РЅРѕРІРѕРј РѕРєРЅРµ").ToUpper) <> -1 Then
                         AddHandler Panel.NewWindow, AddressOf WebBrowser1_NewWindow
                     End If
-                    If Array.IndexOf(Sobytia, trans("Статусная строка изменилась").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЎС‚Р°С‚СѓСЃРЅР°СЏ СЃС‚СЂРѕРєР° РёР·РјРµРЅРёР»Р°СЃСЊ").ToUpper) <> -1 Then
                         AddHandler Panel.StatusTextChanged, AddressOf WebBrowser1_StatusTextChanged
                     End If
                 End If
 
-                ' табпейдж
+                ' С‚Р°Р±РїРµР№РґР¶
                 If Iz.IsTP(MyObj) Then
                     Dim panel As runTP = eventObj
-                    If Array.IndexOf(Sobytia, trans("Снялось выделение закладки").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЎРЅСЏР»РѕСЃСЊ РІС‹РґРµР»РµРЅРёРµ Р·Р°РєР»Р°РґРєРё").ToUpper) <> -1 Then
                         AddHandler Panel.Deselected, AddressOf TabControl_Deselected
                     End If
-                    If Array.IndexOf(Sobytia, trans("Снимается выделение закладки").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЎРЅРёРјР°РµС‚СЃСЏ РІС‹РґРµР»РµРЅРёРµ Р·Р°РєР»Р°РґРєРё").ToUpper) <> -1 Then
                         AddHandler Panel.Deselecting, AddressOf TabControl_Deselecting
                     End If
-                    If Array.IndexOf(Sobytia, trans("Выделили закладку").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р’С‹РґРµР»РёР»Рё Р·Р°РєР»Р°РґРєСѓ").ToUpper) <> -1 Then
                         AddHandler Panel.SelectedIndexChanged, AddressOf TabControl_SelectedIndexChanged
                     End If
-                    If Array.IndexOf(Sobytia, trans("Выделяют закладку").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р’С‹РґРµР»СЏСЋС‚ Р·Р°РєР»Р°РґРєСѓ").ToUpper) <> -1 Then
                         AddHandler Panel.Selecting, AddressOf TabControl_Selecting
                     End If
                 End If
 
-                ' таблица
+                ' С‚Р°Р±Р»РёС†Р°
                 If Iz.IsTl(MyObj) Then
                     Dim panel As runTl = eventObj
-                    If Array.IndexOf(Sobytia, trans("Изменилось выделение").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРёР»РѕСЃСЊ РІС‹РґРµР»РµРЅРёРµ").ToUpper) <> -1 Then
                         AddHandler Panel.SelectionChanged, AddressOf Table_SelectionChangedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Начало редактирования ячейки").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РќР°С‡Р°Р»Рѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЏС‡РµР№РєРё").ToUpper) <> -1 Then
                         AddHandler Panel.CellBeginEdit, AddressOf Table_CellBeginEditRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Клик по ячейке").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљР»РёРє РїРѕ СЏС‡РµР№РєРµ").ToUpper) <> -1 Then
                         AddHandler Panel.CellClick, AddressOf Table_CellClickRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Клик по выделенной ячейке").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљР»РёРє РїРѕ РІС‹РґРµР»РµРЅРЅРѕР№ СЏС‡РµР№РєРµ").ToUpper) <> -1 Then
                         AddHandler Panel.CellMouseDown, AddressOf Table_CellMouseDownRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Двойной клик по ячейке").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє РїРѕ СЏС‡РµР№РєРµ").ToUpper) <> -1 Then
                         AddHandler Panel.CellDoubleClick, AddressOf Table_CellDoubleClickRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Конец редактирования ячеки").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљРѕРЅРµС† СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЏС‡РµРєРё").ToUpper) <> -1 Then
                         AddHandler Panel.CellEndEdit, AddressOf Table_CellEndEditRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Ячейка в фокусе").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЇС‡РµР№РєР° РІ С„РѕРєСѓСЃРµ").ToUpper) <> -1 Then
                         AddHandler Panel.CellEnter, AddressOf Table_CellEnterRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Ячека потеряла фокус").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЇС‡РµРєР° РїРѕС‚РµСЂСЏР»Р° С„РѕРєСѓСЃ").ToUpper) <> -1 Then
                         AddHandler Panel.CellLeave, AddressOf Table_CellLeaveRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Столбец переместили").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЎС‚РѕР»Р±РµС† РїРµСЂРµРјРµСЃС‚РёР»Рё").ToUpper) <> -1 Then
                         AddHandler Panel.ColumnDisplayIndexChanged, AddressOf Table_ColumnDisplayIndexChangedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Клик по заголовку столбца").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљР»РёРє РїРѕ Р·Р°РіРѕР»РѕРІРєСѓ СЃС‚РѕР»Р±С†Р°").ToUpper) <> -1 Then
                         AddHandler Panel.ColumnHeaderMouseClick, AddressOf Table_ColumnHeaderMouseClickRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Двойной клик по заголовку столбца").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє РїРѕ Р·Р°РіРѕР»РѕРІРєСѓ СЃС‚РѕР»Р±С†Р°").ToUpper) <> -1 Then
                         AddHandler Panel.ColumnHeaderMouseDoubleClick, AddressOf Table_ColumnHeaderMouseDoubleClickRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Сортировка столбца").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЎРѕСЂС‚РёСЂРѕРІРєР° СЃС‚РѕР»Р±С†Р°").ToUpper) <> -1 Then
                         AddHandler Panel.ColumnSortModeChanged, AddressOf Table_ColumnSortModeChangedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Изменилась ширина столбца").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРёР»Р°СЃСЊ С€РёСЂРёРЅР° СЃС‚РѕР»Р±С†Р°").ToUpper) <> -1 Then
                         AddHandler Panel.ColumnWidthChanged, AddressOf Table_ColumnWidthChangedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Клик по заголовку строки").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљР»РёРє РїРѕ Р·Р°РіРѕР»РѕРІРєСѓ СЃС‚СЂРѕРєРё").ToUpper) <> -1 Then
                         AddHandler Panel.RowHeaderMouseClick, AddressOf Table_RowHeaderMouseClickRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Изменилась вышина строки").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРёР»Р°СЃСЊ РІС‹С€РёРЅР° СЃС‚СЂРѕРєРё").ToUpper) <> -1 Then
                         AddHandler Panel.RowHeightChanged, AddressOf Table_RowHeightChangedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Добавли строку").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р”РѕР±Р°РІР»Рё СЃС‚СЂРѕРєСѓ").ToUpper) <> -1 Then
                         AddHandler Panel.RowsAdded, AddressOf Table_RowsAddedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Удалили строку").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЈРґР°Р»РёР»Рё СЃС‚СЂРѕРєСѓ").ToUpper) <> -1 Then
                         AddHandler Panel.RowsRemoved, AddressOf Table_RowsRemovedRun
                     End If
                 End If
 
-                ' список
+                ' СЃРїРёСЃРѕРє
                 If Iz.IsC(MyObj) Then
                     Dim panel As runC = eventObj
-                    If Array.IndexOf(Sobytia, trans("Изменение выбранной записи").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё").ToUpper) <> -1 Then
                         AddHandler Panel.SelectedIndexChanged, AddressOf obj_SelectedIndexChangedRun
                     End If
                 End If
                 If Iz.IsL(MyObj) Then
                     Dim panel As runL = eventObj
-                    If Array.IndexOf(Sobytia, trans("Изменение выбранной записи").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё").ToUpper) <> -1 Then
                         AddHandler panel.SelectedIndexChanged, AddressOf obj_SelectedIndexChangedRun
                     End If
                 End If
                 If Iz.IsCL(MyObj) Then
                     Dim panel As runCL = eventObj
-                    If Array.IndexOf(Sobytia, trans("Изменение выбранной записи").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё").ToUpper) <> -1 Then
                         AddHandler panel.SelectedIndexChanged, AddressOf obj_SelectedIndexChangedRun
                     End If
                 End If
 
                 If Iz.IsCr(MyObj) Then
                     Dim panel As runCr = eventObj
-                    If Array.IndexOf(Sobytia, trans("Календарь закрылся").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљР°Р»РµРЅРґР°СЂСЊ Р·Р°РєСЂС‹Р»СЃСЏ").ToUpper) <> -1 Then
                         AddHandler Panel.CloseUp, AddressOf obj_CloseUp
                     End If
-                    If Array.IndexOf(Sobytia, trans("Календарь раскрылся").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљР°Р»РµРЅРґР°СЂСЊ СЂР°СЃРєСЂС‹Р»СЃСЏ").ToUpper) <> -1 Then
                         AddHandler Panel.DropDown, AddressOf obj_DropDown
                     End If
-                    If Array.IndexOf(Sobytia, trans("Значение изменилось").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р—РЅР°С‡РµРЅРёРµ РёР·РјРµРЅРёР»РѕСЃСЊ").ToUpper) <> -1 Then
                         AddHandler Panel.ValueChanged, AddressOf obj_ValueChanged
                     End If
                 End If
 
                 If Iz.IsTb(MyObj) Then
                     Dim panel As runTb = eventObj
-                    If Array.IndexOf(Sobytia, trans("Значение изменилось").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р—РЅР°С‡РµРЅРёРµ РёР·РјРµРЅРёР»РѕСЃСЊ").ToUpper) <> -1 Then
                         AddHandler Panel.ValueChanged, AddressOf obj_ValueChanged
                     End If
-                    If Array.IndexOf(Sobytia, trans("Движение бегунка").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р”РІРёР¶РµРЅРёРµ Р±РµРіСѓРЅРєР°").ToUpper) <> -1 Then
                         AddHandler Panel.Scroll, AddressOf obj_ScrollRun
                     End If
                 End If
 
-                ' Клиент сервер
+                ' РљР»РёРµРЅС‚ СЃРµСЂРІРµСЂ
                 If Iz.IsCS(MyObj) Then
                     Dim panel As IWinSockEvents = eventObj
-                    If Array.IndexOf(Sobytia, trans("Присоединились к серверу").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РџСЂРёСЃРѕРµРґРёРЅРёР»РёСЃСЊ Рє СЃРµСЂРІРµСЂСѓ").ToUpper) <> -1 Then
                         AddHandler panel.ConnectedToServer, AddressOf obj_ConnectedToServerRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Присоединился клиент").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ РєР»РёРµРЅС‚").ToUpper) <> -1 Then
                         AddHandler panel.ConnectionClient, AddressOf obj_ConnectionClientRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Изменилось число клиентов").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРёР»РѕСЃСЊ С‡РёСЃР»Рѕ РєР»РёРµРЅС‚РѕРІ").ToUpper) <> -1 Then
                         AddHandler panel.CountChanged, AddressOf obj_CountChangedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Пришел текст").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РџСЂРёС€РµР» С‚РµРєСЃС‚").ToUpper) <> -1 Then
                         AddHandler panel.TextReceived, AddressOf obj_TextReceivedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Пришла команда").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РџСЂРёС€Р»Р° РєРѕРјР°РЅРґР°").ToUpper) <> -1 Then
                         AddHandler panel.CommandReceived, AddressOf obj_CommandReceivedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Пришел файл").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РџСЂРёС€РµР» С„Р°Р№Р»").ToUpper) <> -1 Then
                         AddHandler panel.FileReceived, AddressOf obj_FileReceivedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Отключение").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РћС‚РєР»СЋС‡РµРЅРёРµ").ToUpper) <> -1 Then
                         AddHandler panel.Disconnected, AddressOf obj_DisconnectedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Произошла ошибка").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°").ToUpper) <> -1 Then
                         AddHandler panel.ErrorReceived, AddressOf obj_ErrorReceivedRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Отправился текст").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РћС‚РїСЂР°РІРёР»СЃСЏ С‚РµРєСЃС‚").ToUpper) <> -1 Then
                         AddHandler panel.SendTextComplete, AddressOf obj_SendTextCompleteRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Отправился файл").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РћС‚РїСЂР°РІРёР»СЃСЏ С„Р°Р№Р»").ToUpper) <> -1 Then
                         AddHandler panel.SendFileComplete, AddressOf obj_SendFileCompleteRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Идет отправление").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РРґРµС‚ РѕС‚РїСЂР°РІР»РµРЅРёРµ").ToUpper) <> -1 Then
                         AddHandler panel.SendProgress, AddressOf obj_SendProgressRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Идет прием данных").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РРґРµС‚ РїСЂРёРµРј РґР°РЅРЅС‹С…").ToUpper) <> -1 Then
                         AddHandler panel.ReceiveProgress, AddressOf obj_ReceiveProgressRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Изменился статус").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРёР»СЃСЏ СЃС‚Р°С‚СѓСЃ").ToUpper) <> -1 Then
                         AddHandler panel.StateChanged, AddressOf obj_StateChangedRun
                     End If
                 End If
 
-                ' Интернет
+                ' РРЅС‚РµСЂРЅРµС‚
                 If Iz.IsI(MyObj) Then
                     Dim panel As IInternetEvents = eventObj
-                    If Array.IndexOf(Sobytia, trans("Отправляется запрос").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РћС‚РїСЂР°РІР»СЏРµС‚СЃСЏ Р·Р°РїСЂРѕСЃ").ToUpper) <> -1 Then
                         AddHandler panel.SendingQuery, AddressOf obj_SendingQueryRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Отправился запрос").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РћС‚РїСЂР°РІРёР»СЃСЏ Р·Р°РїСЂРѕСЃ").ToUpper) <> -1 Then
                         AddHandler panel.SentQuery, AddressOf obj_SentQueryRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Пришел ответ").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РџСЂРёС€РµР» РѕС‚РІРµС‚").ToUpper) <> -1 Then
                         AddHandler panel.ReceivedResponse, AddressOf obj_ReceivedResponseRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Идет прием данных").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РРґРµС‚ РїСЂРёРµРј РґР°РЅРЅС‹С…").ToUpper) <> -1 Then
                         AddHandler panel.ReceiveProgress, AddressOf obj_ReceiveProgressRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Загрузка отменена").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р—Р°РіСЂСѓР·РєР° РѕС‚РјРµРЅРµРЅР°").ToUpper) <> -1 Then
                         AddHandler panel.DownloadCancelled, AddressOf obj_DownloadCancelledRun
                     End If
                 End If
 
 
-                ' Редкие
+                ' Р РµРґРєРёРµ
                 If Iz.IsFORM(MyObj) Then
                     Dim panel As runF = eventObj
-                    If Array.IndexOf(Sobytia, trans("Сворачивание").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РЎРІРѕСЂР°С‡РёРІР°РЅРёРµ").ToUpper) <> -1 Then
                         AddHandler panel.Minimize, AddressOf Minimize
                     End If
-                    If Array.IndexOf(Sobytia, trans("Двойной клик по трею").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє РїРѕ С‚СЂРµСЋ").ToUpper) <> -1 Then
                         AddHandler panel.DoubleClickTray, AddressOf DoubleClickTray
                     End If
                 End If
-                If Array.IndexOf(Sobytia, trans("Конец проигрывания").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РљРѕРЅРµС† РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ").ToUpper) <> -1 Then
                     If Iz.IsMd(MyObj) Then
                         Dim panel As runMd = eventObj
                         AddHandler panel.OnEnd, AddressOf obj_OnEndRun
@@ -438,7 +438,7 @@ Public Class Objetus
                         AddHandler panel.OnEnd, AddressOf obj_OnEndRun
                     End If
                 End If
-                If Array.IndexOf(Sobytia, trans("Изменение отметки").ToUpper) <> -1 Then
+                If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРµРЅРёРµ РѕС‚РјРµС‚РєРё").ToUpper) <> -1 Then
                     If Iz.IsCB(MyObj) Then
                         Dim check As CheckBox = eventObj
                         AddHandler check.CheckedChanged, AddressOf obj_CheckedChangedRun
@@ -449,58 +449,58 @@ Public Class Objetus
                 End If
                 If Iz.IsM(MyObj) Then
                     Dim panel As runM = eventObj
-                    If Array.IndexOf(Sobytia, trans("Изменение значения").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ").ToUpper) <> -1 Then
                         AddHandler panel.ChangingValue, AddressOf obj_ChangingValueRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Изменилось значение").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РР·РјРµРЅРёР»РѕСЃСЊ Р·РЅР°С‡РµРЅРёРµ").ToUpper) <> -1 Then
                         AddHandler panel.ChangedValue, AddressOf obj_ChangedValueRun
                     End If
                 End If
                 If Iz.IsLLb(MyObj) Then
                     Dim panel As runLLb = eventObj
-                    If Array.IndexOf(Sobytia, trans("Клик по ссылке").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљР»РёРє РїРѕ СЃСЃС‹Р»РєРµ").ToUpper) <> -1 Then
                         AddHandler panel.LinkClicked, AddressOf obj_LinkClicked
                     End If
                 End If
                 If Iz.IsRT(MyObj) Then
                     Dim panel As runRT = eventObj
-                    If Array.IndexOf(Sobytia, trans("Горизонтальная прокрутка").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°").ToUpper) <> -1 Then
                         AddHandler panel.HScroll, AddressOf obj_HScroll
                     End If
-                    If Array.IndexOf(Sobytia, trans("Вертикальная прокрутка").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°").ToUpper) <> -1 Then
                         AddHandler panel.VScroll, AddressOf obj_VScroll
                     End If
-                    If Array.IndexOf(Sobytia, trans("Клик по ссылке документа").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљР»РёРє РїРѕ СЃСЃС‹Р»РєРµ РґРѕРєСѓРјРµРЅС‚Р°").ToUpper) <> -1 Then
                         AddHandler panel.LinkClicked, AddressOf obj_LinkClicked
                     End If
                 End If
                 If Iz.IsTm(MyObj) Then
                     Dim panel As runTm = obj
-                    If Array.IndexOf(Sobytia, trans("Тикнул").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РўРёРєРЅСѓР»").ToUpper) <> -1 Then
                         AddHandler panel.Tick, AddressOf obj_Tick
                     End If
                 End If
                 If Iz.IsTr(MyObj) Then
                     Dim spis As runTr = eventObj
-                    If Array.IndexOf(Sobytia, trans("Клик кнопки").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РљР»РёРє РєРЅРѕРїРєРё").ToUpper) <> -1 Then
                         AddHandler spis.ClickButton, AddressOf obj_ClickButtonRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Активация успешная").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РђРєС‚РёРІР°С†РёСЏ СѓСЃРїРµС€РЅР°СЏ").ToUpper) <> -1 Then
                         AddHandler spis.ActivationSuccessul, AddressOf obj_ActivationSuccessulRun
                     End If
-                    If Array.IndexOf(Sobytia, trans("Активация неудачная").ToUpper) <> -1 Then
+                    If Array.IndexOf(Sobytia, trans("РђРєС‚РёРІР°С†РёСЏ РЅРµСѓРґР°С‡РЅР°СЏ").ToUpper) <> -1 Then
                         AddHandler spis.ActivationFailed, AddressOf obj_ActivationFailedRun
                     End If
                 End If
 
 
 
-                ' Нужные программе2
+                ' РќСѓР¶РЅС‹Рµ РїСЂРѕРіСЂР°РјРјРµ2
                 If Iz.isNoControlObj(obj) = False Then
                     AddHandler eventObj.Disposed, AddressOf obj_DisposedNado
                     AddHandler eventObj.Resize, AddressOf obj_ResizeNado
                 End If
-                ' нужные программе1
+                ' РЅСѓР¶РЅС‹Рµ РїСЂРѕРіСЂР°РјРјРµ1
                 If Iz.IsW(MyObj) Then
                     Dim panel As runW = obj
                     AddHandler panel.NewWindow, AddressOf WebBrowser_NewWindowNado
@@ -509,18 +509,18 @@ Public Class Objetus
 
             End If
 
-            ' мои
+            ' РјРѕРё
             Dim MyEventObj As MyEvents = obj
-            If Array.IndexOf(Sobytia, trans("Создание").ToUpper) <> -1 Then
+            If Array.IndexOf(Sobytia, trans("РЎРѕР·РґР°РЅРёРµ").ToUpper) <> -1 Then
                 AddHandler MyEventObj.Created, AddressOf obj_LoadRun
             End If
         End If
 
         If holostoi = True And fromEng = False Then Exit Sub
-        ' #### Конец холостого обоъекта ###
+        ' #### РљРѕРЅРµС† С…РѕР»РѕСЃС‚РѕРіРѕ РѕР±РѕСЉРµРєС‚Р° ###
 
         If Iz.IsFORM(MyObj) Then 'And isRun = False Then
-            ' Создание СплитКонтрола для таба
+            ' РЎРѕР·РґР°РЅРёРµ РЎРїР»РёС‚РљРѕРЅС‚СЂРѕР»Р° РґР»СЏ С‚Р°Р±Р°
             SplitCont = New Windows.Forms.SplitContainer()
             SplitCont.Orientation = Orientation.Horizontal
             SplitCont.Panel1.AutoScroll = True : SplitCont.Panel2.AutoScroll = False
@@ -537,16 +537,16 @@ Public Class Objetus
             AddHandler SplitCont.Panel2.Paint, AddressOf obj_Paint
         End If
 
-        ' Если сейчас не происходит открытие проекта, а просто создается очередной объект пользователем
+        ' Р•СЃР»Рё СЃРµР№С‡Р°СЃ РЅРµ РїСЂРѕРёСЃС…РѕРґРёС‚ РѕС‚РєСЂС‹С‚РёРµ РїСЂРѕРµРєС‚Р°, Р° РїСЂРѕСЃС‚Рѕ СЃРѕР·РґР°РµС‚СЃСЏ РѕС‡РµСЂРµРґРЅРѕР№ РѕР±СЉРµРєС‚ РїРѕР»СЊР·РѕРІР°С‚РµР»РµРј
         '    If fromEng = False Then
-        ' Dim frma As Forms = conteiner ' это  для полуобъектов
-        ' Если объект еще нигде не размещен
-        ' Если объект не является лишь составной частью большого объекта
+        ' Dim frma As Forms = conteiner ' СЌС‚Рѕ  РґР»СЏ РїРѕР»СѓРѕР±СЉРµРєС‚РѕРІ
+        ' Р•СЃР»Рё РѕР±СЉРµРєС‚ РµС‰Рµ РЅРёРіРґРµ РЅРµ СЂР°Р·РјРµС‰РµРЅ
+        ' Р•СЃР»Рё РѕР±СЉРµРєС‚ РЅРµ СЏРІР»СЏРµС‚СЃСЏ Р»РёС€СЊ СЃРѕСЃС‚Р°РІРЅРѕР№ С‡Р°СЃС‚СЊСЋ Р±РѕР»СЊС€РѕРіРѕ РѕР±СЉРµРєС‚Р°
         If obj.TypeObj <> "IncludeObj" And MyObj.conteiner Is Nothing Or Iz.isPoluObj(obj) Then
-            ' Если создается форма, то её не надо размещать, это сделает конструктор Forms
+            ' Р•СЃР»Рё СЃРѕР·РґР°РµС‚СЃСЏ С„РѕСЂРјР°, С‚Рѕ РµС‘ РЅРµ РЅР°РґРѕ СЂР°Р·РјРµС‰Р°С‚СЊ, СЌС‚Рѕ СЃРґРµР»Р°РµС‚ РєРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Forms
             If Iz.IsFORM(MyObj) = False Then
 
-                If obj.TypeObj = "PoluObj" Then ' Если это полуобъкет, то контейнер для него сплитпанель
+                If obj.TypeObj = "PoluObj" Then ' Р•СЃР»Рё СЌС‚Рѕ РїРѕР»СѓРѕР±СЉРєРµС‚, С‚Рѕ РєРѕРЅС‚РµР№РЅРµСЂ РґР»СЏ РЅРµРіРѕ СЃРїР»РёС‚РїР°РЅРµР»СЊ
                     Dim splt As SplitContainer
                     If conteiner Is Nothing = False Then
                         splt = conteiner.SplitCont
@@ -559,19 +559,19 @@ Public Class Objetus
                         splt.SplitterDistance = splt.Height - splt.Panel2MinSize
                     End If
                     cont = conteiner
-                Else ' Если это обычный объект, то его контейнер может быть форма, панель, панель в панели и т.д.
+                Else ' Р•СЃР»Рё СЌС‚Рѕ РѕР±С‹С‡РЅС‹Р№ РѕР±СЉРµРєС‚, С‚Рѕ РµРіРѕ РєРѕРЅС‚РµР№РЅРµСЂ РјРѕР¶РµС‚ Р±С‹С‚СЊ С„РѕСЂРјР°, РїР°РЅРµР»СЊ, РїР°РЅРµР»СЊ РІ РїР°РЅРµР»Рё Рё С‚.Рґ.
                     conteiner = proj.ActiveForm
                     If proj.ActiveForm Is Nothing = False Then
                         If proj.ActiveForm.ActiveObj Is Nothing = False Then
                             If proj.ActiveForm.ActiveObj(0) Is Nothing = False Then
-                                ' Если это панель, то можно разместить на ней
+                                ' Р•СЃР»Рё СЌС‚Рѕ РїР°РЅРµР»СЊ, С‚Рѕ РјРѕР¶РЅРѕ СЂР°Р·РјРµСЃС‚РёС‚СЊ РЅР° РЅРµР№
                                 If Iz.isPanel(proj.ActiveForm.ActiveObj(0).obj) Then
                                     If proj.ActiveForm.ActiveObj.Length = 1 Then
-                                        conteiner = proj.ActiveForm.ActiveObj(0) ' Контейнером будет выделеная панель
+                                        conteiner = proj.ActiveForm.ActiveObj(0) ' РљРѕРЅС‚РµР№РЅРµСЂРѕРј Р±СѓРґРµС‚ РІС‹РґРµР»РµРЅР°СЏ РїР°РЅРµР»СЊ
                                     ElseIf proj.ActiveForm.ActiveObj(0).conteiner Is Nothing = False Then
-                                        ' Если контенер выделенного объекта не панель для полуобъектов
+                                        ' Р•СЃР»Рё РєРѕРЅС‚РµРЅРµСЂ РІС‹РґРµР»РµРЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РЅРµ РїР°РЅРµР»СЊ РґР»СЏ РїРѕР»СѓРѕР±СЉРµРєС‚РѕРІ
                                         If proj.ActiveForm.ActiveObj(0).conteiner Is proj.ActiveForm.SplitCont.Panel2 = False Then
-                                            conteiner = proj.ActiveForm.ActiveObj(0).conteiner ' Контейнером будет контейнер выделенного объекта
+                                            conteiner = proj.ActiveForm.ActiveObj(0).conteiner ' РљРѕРЅС‚РµР№РЅРµСЂРѕРј Р±СѓРґРµС‚ РєРѕРЅС‚РµР№РЅРµСЂ РІС‹РґРµР»РµРЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
                                         End If
                                     End If
                                 Else
@@ -581,11 +581,11 @@ Public Class Objetus
                         End If
                     End If
 
-                    ' Сохранить найденый контенер в переменной
-                    If Iz.IsDP(conteiner) Then ' Если выделена двойная панель
+                    ' РЎРѕС…СЂР°РЅРёС‚СЊ РЅР°Р№РґРµРЅС‹Р№ РєРѕРЅС‚РµРЅРµСЂ РІ РїРµСЂРµРјРµРЅРЅРѕР№
+                    If Iz.IsDP(conteiner) Then ' Р•СЃР»Рё РІС‹РґРµР»РµРЅР° РґРІРѕР№РЅР°СЏ РїР°РЅРµР»СЊ
                         Dim res As MsgBoxResult
                         If conteiner.ActivePanel = "" Then
-                            res = MsgBox(transInfc("Вы хотите разместить объект на первой из двух панелей?"), MsgBoxStyle.YesNoCancel + MsgBoxStyle.Question)
+                            res = MsgBox(transInfc("Р’С‹ С…РѕС‚РёС‚Рµ СЂР°Р·РјРµСЃС‚РёС‚СЊ РѕР±СЉРµРєС‚ РЅР° РїРµСЂРІРѕР№ РёР· РґРІСѓС… РїР°РЅРµР»РµР№?"), MsgBoxStyle.YesNoCancel + MsgBoxStyle.Question)
                         Else
                             If conteiner.ActivePanel = "Panel1" Then res = MsgBoxResult.Yes Else res = MsgBoxResult.No
                             conteiner.ActivePanel = ""
@@ -608,30 +608,30 @@ Public Class Objetus
                     End If
                 End If
 
-                ' В составные объекты нельзя вставлять не в их инклуд объекты
+                ' Р’ СЃРѕСЃС‚Р°РІРЅС‹Рµ РѕР±СЉРµРєС‚С‹ РЅРµР»СЊР·СЏ РІСЃС‚Р°РІР»СЏС‚СЊ РЅРµ РІ РёС… РёРЅРєР»СѓРґ РѕР±СЉРµРєС‚С‹
                 If Iz.isSostObj(cont) Then
                     If obj.GetType.ToString.IndexOf(cont.GetType.ToString) <> 0 Then conteiner = proj.activeForm : cont = proj.activeform.obj
                 End If
-                ' Последяя проверка, что на вычисленный контенер можно добавлять объекты
+                ' РџРѕСЃР»РµРґСЏСЏ РїСЂРѕРІРµСЂРєР°, С‡С‚Рѕ РЅР° РІС‹С‡РёСЃР»РµРЅРЅС‹Р№ РєРѕРЅС‚РµРЅРµСЂ РјРѕР¶РЅРѕ РґРѕР±Р°РІР»СЏС‚СЊ РѕР±СЉРµРєС‚С‹
                 If Iz.isIncludeObj(obj) = False And Iz.isPoluObj(obj) = False Then
                     While Iz.isPanel(cont) = False And cont.GetType.ToString <> "System.Windows.Forms.SplitterPanel"
                         cont = cont.myobj.conteiner.obj
                     End While
                 End If
 
-                ' Задать х и у в контенере
+                ' Р—Р°РґР°С‚СЊ С… Рё Сѓ РІ РєРѕРЅС‚РµРЅРµСЂРµ
                 Dim loc As Point
                 If obj.TypeObj <> "PoluObj" Then
-                    ' Разместить объект в центре формы и если там уже чтото есть то сместить его в другое место
+                    ' Р Р°Р·РјРµСЃС‚РёС‚СЊ РѕР±СЉРµРєС‚ РІ С†РµРЅС‚СЂРµ С„РѕСЂРјС‹ Рё РµСЃР»Рё С‚Р°Рј СѓР¶Рµ С‡С‚РѕС‚Рѕ РµСЃС‚СЊ С‚Рѕ СЃРјРµСЃС‚РёС‚СЊ РµРіРѕ РІ РґСЂСѓРіРѕРµ РјРµСЃС‚Рѕ
                     Loc = GetXY(obj, cont, cont.Width / 2 - eventObj.Width / 2, cont.Height / 2 - eventObj.Height / 2)
                 Else
-                    ' если на этом месте в сплитПанели2 уже чтото есть, то сместить объект в другое место
+                    ' РµСЃР»Рё РЅР° СЌС‚РѕРј РјРµСЃС‚Рµ РІ СЃРїР»РёС‚РџР°РЅРµР»Рё2 СѓР¶Рµ С‡С‚РѕС‚Рѕ РµСЃС‚СЊ, С‚Рѕ СЃРјРµСЃС‚РёС‚СЊ РѕР±СЉРµРєС‚ РІ РґСЂСѓРіРѕРµ РјРµСЃС‚Рѕ
                     Loc = GetXY(obj, cont, setka, setka) : BackPoluObj(True, MyObj)
                 End If
                 If Iz.isNoMove(obj) Then
                     obj.left = Loc.X : obj.top = Loc.Y
                 Else
-                    ' Если объекты вставляется, то надо их пропорциональное расстояние 
+                    ' Р•СЃР»Рё РѕР±СЉРµРєС‚С‹ РІСЃС‚Р°РІР»СЏРµС‚СЃСЏ, С‚Рѕ РЅР°РґРѕ РёС… РїСЂРѕРїРѕСЂС†РёРѕРЅР°Р»СЊРЅРѕРµ СЂР°СЃСЃС‚РѕСЏРЅРёРµ 
                     If proj.UndoRedoNoWrite Then
                     ElseIf VstavkaOrCreate Then
                         obj.Props.X += setka : obj.Props.Y += setka
@@ -642,45 +642,45 @@ Public Class Objetus
 
 
 
-                ' ДОБАВИТЬ ОБЪЕКТ В КОНТЕНЕР
+                ' Р”РћР‘РђР’РРўР¬ РћР‘РЄР•РљРў Р’ РљРћРќРўР•РќР•Р 
                 cont.Controls.Add(obj)
 
-                ' Добавить две начальные закладки, если это не загрузка проекта
+                ' Р”РѕР±Р°РІРёС‚СЊ РґРІРµ РЅР°С‡Р°Р»СЊРЅС‹Рµ Р·Р°РєР»Р°РґРєРё, РµСЃР»Рё СЌС‚Рѕ РЅРµ Р·Р°РіСЂСѓР·РєР° РїСЂРѕРµРєС‚Р°
                 If Iz.IsTP(MyObj) And fromEng = False Then
                     If MyObj.obj.tabPages.Count = 0 And VstavkaOrCreate = False Then addTabPage(New TPages) : addTabPage(New TPages)
                 ElseIf (Iz.IsMM(MyObj) Or Iz.IsCM(MyObj) Or Iz.IsTPl(MyObj)) And fromEng = False Then
                     If MyObj.obj.items.Count = 0 And VstavkaOrCreate = False Then
                         Dim mmenus As New MMenus
-                        ' У ToolPanel нужно задать для примера рисунок
+                        ' РЈ ToolPanel РЅСѓР¶РЅРѕ Р·Р°РґР°С‚СЊ РґР»СЏ РїСЂРёРјРµСЂР° СЂРёСЃСѓРЅРѕРє
                         If Iz.IsTPl(MyObj) Then MMenus = New MMenus(, , , True)
 
                         addMMenuItem(MMenus, False)
                     End If
                 ElseIf Iz.IsTl(MyObj) And fromEng = False Then
                     If MyObj.obj.Columns.Count = 0 And VstavkaOrCreate = False Then
-                        'MyObj.obj.props.Columns = """" & trans("Столбец") & "1"", """ & trans("Столбец") & "2"""
-                        'MyObj.obj.props.Rows = """" & trans("Строка") & "1"" | """ & trans("Строка") & "1"", " & _
-                        '                       """" & trans("Строка") & "2"" | """ & trans("Строка") & "2"""
-                        MyObj.obj.props.Columns = trans("Столбец") & "1, " & trans("Столбец") & "2"
-                        MyObj.obj.props.Rows = trans("Строка") & "1 | " & trans("Строка") & "1, " & _
-                                               trans("Строка") & "2 | " & trans("Строка") & "2"
+                        'MyObj.obj.props.Columns = """" & trans("РЎС‚РѕР»Р±РµС†") & "1"", """ & trans("РЎС‚РѕР»Р±РµС†") & "2"""
+                        'MyObj.obj.props.Rows = """" & trans("РЎС‚СЂРѕРєР°") & "1"" | """ & trans("РЎС‚СЂРѕРєР°") & "1"", " & _
+                        '                       """" & trans("РЎС‚СЂРѕРєР°") & "2"" | """ & trans("РЎС‚СЂРѕРєР°") & "2"""
+                        MyObj.obj.props.Columns = trans("РЎС‚РѕР»Р±РµС†") & "1, " & trans("РЎС‚РѕР»Р±РµС†") & "2"
+                        MyObj.obj.props.Rows = trans("РЎС‚СЂРѕРєР°") & "1 | " & trans("РЎС‚СЂРѕРєР°") & "1, " & _
+                                               trans("РЎС‚СЂРѕРєР°") & "2 | " & trans("РЎС‚СЂРѕРєР°") & "2"
                     End If
                 ElseIf (Iz.IsC(MyObj) Or Iz.IsL(MyObj) Or Iz.IsCL(MyObj)) And fromEng = False Then
                     If MyObj.obj.Items.Count = 0 And VstavkaOrCreate = False Then
-                        'MyObj.obj.props.Items = """" & trans("Запись") & "1"", """ & trans("Запись") & "2"""
-                        'MyObj.obj.props.text = trans("Запись") & "1"
-                        MyObj.obj.props.Items = trans("Запись") & "1, " & trans("Запись") & "2"
-                        MyObj.obj.props.text = trans("Запись") & "1"
+                        'MyObj.obj.props.Items = """" & trans("Р—Р°РїРёСЃСЊ") & "1"", """ & trans("Р—Р°РїРёСЃСЊ") & "2"""
+                        'MyObj.obj.props.text = trans("Р—Р°РїРёСЃСЊ") & "1"
+                        MyObj.obj.props.Items = trans("Р—Р°РїРёСЃСЊ") & "1, " & trans("Р—Р°РїРёСЃСЊ") & "2"
+                        MyObj.obj.props.text = trans("Р—Р°РїРёСЃСЊ") & "1"
                         MyObj.obj.props.SelectedItem = MyObj.obj.props.Text
                     End If
                 End If
 
             End If
         ElseIf obj.TypeObj = "IncludeObj" And VstavkaOrCreate = True And MyObj.conteiner Is Nothing Then
-            ' Это условие срабатывает, если вставляют инлудобъект из буфера
-            ' Если это вложенный объект и ему еще не назначен контенер, то назначить можно только контенер такого же типа как сам инклудобъект
+            ' Р­С‚Рѕ СѓСЃР»РѕРІРёРµ СЃСЂР°Р±Р°С‚С‹РІР°РµС‚, РµСЃР»Рё РІСЃС‚Р°РІР»СЏСЋС‚ РёРЅР»СѓРґРѕР±СЉРµРєС‚ РёР· Р±СѓС„РµСЂР°
+            ' Р•СЃР»Рё СЌС‚Рѕ РІР»РѕР¶РµРЅРЅС‹Р№ РѕР±СЉРµРєС‚ Рё РµРјСѓ РµС‰Рµ РЅРµ РЅР°Р·РЅР°С‡РµРЅ РєРѕРЅС‚РµРЅРµСЂ, С‚Рѕ РЅР°Р·РЅР°С‡РёС‚СЊ РјРѕР¶РЅРѕ С‚РѕР»СЊРєРѕ РєРѕРЅС‚РµРЅРµСЂ С‚Р°РєРѕРіРѕ Р¶Рµ С‚РёРїР° РєР°Рє СЃР°Рј РёРЅРєР»СѓРґРѕР±СЉРµРєС‚
             Dim SostObj As Object = proj.GetSostObjFromIncludeObj(MyObj)
-            ' Если выделеный объект является родителем инклуд объекта, то добавить его
+            ' Р•СЃР»Рё РІС‹РґРµР»РµРЅС‹Р№ РѕР±СЉРµРєС‚ СЏРІР»СЏРµС‚СЃСЏ СЂРѕРґРёС‚РµР»РµРј РёРЅРєР»СѓРґ РѕР±СЉРµРєС‚Р°, С‚Рѕ РґРѕР±Р°РІРёС‚СЊ РµРіРѕ
             If SostObj Is Nothing = False Then
                 If Iz.IsTP(SostObj) Then SostObj.addTabPage(MyObj, , True)
                 If Iz.IsMM(SostObj) Or Iz.IsCM(SostObj) Or Iz.IsMMs(SostObj) Or Iz.IsTPl(SostObj) Then SostObj.addMMenuItem(MyObj)
@@ -692,7 +692,7 @@ Public Class Objetus
         ' End If
 
         If Iz.IsMMs(MyObj) Then
-            ' У элементов меню евентОбъект свой
+            ' РЈ СЌР»РµРјРµРЅС‚РѕРІ РјРµРЅСЋ РµРІРµРЅС‚РћР±СЉРµРєС‚ СЃРІРѕР№
             Dim eventObj As ToolStripItem = ob
             AddHandler eventObj.MouseDown, AddressOf obj_MouseDown
             AddHandler eventObj.MouseMove, AddressOf obj_MouseMove
@@ -701,7 +701,7 @@ Public Class Objetus
             AddHandler eventObj.Click, AddressOf obj_Click
             AddHandler eventObj.Paint, AddressOf obj_Paint
         ElseIf Iz.IsDP(MyObj) Then
-            ' У двойной панели свои события
+            ' РЈ РґРІРѕР№РЅРѕР№ РїР°РЅРµР»Рё СЃРІРѕРё СЃРѕР±С‹С‚РёСЏ
             Dim eventObj As DP = ob
             AddHandler eventObj.Panel1.MouseDown, AddressOf obj_MouseDown
             AddHandler eventObj.Panel2.MouseDown, AddressOf obj_MouseDown
@@ -734,7 +734,7 @@ Public Class Objetus
                 AddHandler scrol.Resize, AddressOf obj_ResizeNado
             End If
             ReDim Preserve HelpObjs(HelpObjs.Length) : HelpObjs(HelpObjs.Length - 1) = obj
-            ' У таблицы много своих дополнительных событий
+            ' РЈ С‚Р°Р±Р»РёС†С‹ РјРЅРѕРіРѕ СЃРІРѕРёС… РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… СЃРѕР±С‹С‚РёР№
             If Iz.IsTl(MyObj) Then
                 Dim tbl As Windows.Forms.DataGridView = eventObj
                 AddHandler tbl.CellClick, AddressOf obj_CellContentClick
@@ -753,7 +753,7 @@ Public Class Objetus
 
         'If isRun Then Exit Sub
 
-        ' Создать и настроить маркеры
+        ' РЎРѕР·РґР°С‚СЊ Рё РЅР°СЃС‚СЂРѕРёС‚СЊ РјР°СЂРєРµСЂС‹
         For i = 0 To MarkCount - 1
             markers(i) = New PictureBox()
             markers(i).Width = markerX : markers(i).Height = markerY : markers(i).Visible = False
@@ -773,17 +773,17 @@ Public Class Objetus
             markers(i).ContextMenuStrip = MainForm.ObjsMenu
             markers(i).Tag = MyObj : markers(i).Name = "Markers"
         Next
-        ' Настроить курсоры маркеров
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ РєСѓСЂСЃРѕСЂС‹ РјР°СЂРєРµСЂРѕРІ
         If obj.TypeObj <> "PoluObj" Then
             markers(0).Cursor = Cursors.SizeNWSE : markers(7).Cursor = Cursors.SizeNWSE
             markers(1).Cursor = Cursors.SizeNS : markers(6).Cursor = Cursors.SizeNS
             markers(2).Cursor = Cursors.SizeNESW : markers(5).Cursor = Cursors.SizeNESW
             markers(3).Cursor = Cursors.SizeWE : markers(4).Cursor = Cursors.SizeWE
-            ' У Формы добалять всего надо побольше
+            ' РЈ Р¤РѕСЂРјС‹ РґРѕР±Р°Р»СЏС‚СЊ РІСЃРµРіРѕ РЅР°РґРѕ РїРѕР±РѕР»СЊС€Рµ
             If Iz.IsFORM(MyObj) = False Then
                 GetMyForm.tab.Controls.AddRange(markers)
             Else
-                ' Размещение всего
+                ' Р Р°Р·РјРµС‰РµРЅРёРµ РІСЃРµРіРѕ
                 SplitCont.Panel1.Controls.Add(obj) : MyObj.tab.Controls.Add(SplitCont) : MyObj.tab.Controls.AddRange(markers)
                 SplitCont.Panel2MinSize = 0 : SplitCont.SplitterDistance = SplitCont.Height
                 SplitCont.BackColor = SkinColors("FormsTab")
@@ -806,30 +806,30 @@ Public Class Objetus
             End If
         End If
         markers(8).Cursor = Cursors.SizeAll : markers(9).Cursor = Cursors.Hand
-        ' Создание мнимого маркера, чтобы скролинг не мешал менять размеры формы
+        ' РЎРѕР·РґР°РЅРёРµ РјРЅРёРјРѕРіРѕ РјР°СЂРєРµСЂР°, С‡С‚РѕР±С‹ СЃРєСЂРѕР»РёРЅРі РЅРµ РјРµС€Р°Р» РјРµРЅСЏС‚СЊ СЂР°Р·РјРµСЂС‹ С„РѕСЂРјС‹
         HideMarker = New PictureBox : HideMarker.SendToBack()
         HideMarker.BackColor = Color.Transparent : HideMarker.Width = markerX : HideMarker.Height = markerY
-        ' Форма добавляет мнимый маркер в свое место
+        ' Р¤РѕСЂРјР° РґРѕР±Р°РІР»СЏРµС‚ РјРЅРёРјС‹Р№ РјР°СЂРєРµСЂ РІ СЃРІРѕРµ РјРµСЃС‚Рѕ
         If Iz.IsFORM(MyObj) Then
             SplitCont.Panel1.Controls.Add(HideMarker)
         ElseIf obj.TypeObj <> "PoluObj" And obj.TypeObj <> "IncludeObj" Then
             If obj.parent Is Nothing Then Exit Sub
             obj.parent.Controls.Add(HideMarker)
         End If
-        ' Добавить объект в дерево действий
+        ' Р”РѕР±Р°РІРёС‚СЊ РѕР±СЉРµРєС‚ РІ РґРµСЂРµРІРѕ РґРµР№СЃС‚РІРёР№
         If fromEng = False Then AddNode()
-        ' Добавить объект в историю ХисториЛевел
+        ' Р”РѕР±Р°РІРёС‚СЊ РѕР±СЉРµРєС‚ РІ РёСЃС‚РѕСЂРёСЋ РҐРёСЃС‚РѕСЂРёР›РµРІРµР»
         If Iz.IsFORM(MyObj) = False And Iz.IsMMs(MyObj) = False And fromEng = False Then
-            GetMyForm.HistoryLevelRun("на передний план", MyObj)
+            GetMyForm.HistoryLevelRun("РЅР° РїРµСЂРµРґРЅРёР№ РїР»Р°РЅ", MyObj)
         End If
-        ' И в конце дать фокус созданному объекту
+        ' Р РІ РєРѕРЅС†Рµ РґР°С‚СЊ С„РѕРєСѓСЃ СЃРѕР·РґР°РЅРЅРѕРјСѓ РѕР±СЉРµРєС‚Сѓ
         obj_GotFocus(obj, New EventArgs)
-        ' Настроить свойства ФОРМЫ
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР° Р¤РћР РњР«
         If Iz.IsFORM(MyObj) Then
             If proj Is Nothing = False Then
                 If proj.f Is Nothing = False Then
                     If fromEng Then ReDims(proj.f) : proj.f(proj.f.Length - 1) = MyObj : proj.activeform = MyObj
-                    If proj.f.length > 2 Then MyObj.obj.Props.mainform = trans("Нет")
+                    If proj.f.length > 2 Then MyObj.obj.Props.mainform = trans("РќРµС‚")
                     MyObj.SetActiveObject(Me) : MyObj.marker_vis(True)
                 Else
                     If fromEng Then
@@ -840,13 +840,13 @@ Public Class Objetus
             End If
         End If
         If VstavkaOrCreate = False And proj Is Nothing = False And MyObj.obj.Props.name <> MyZnak & "none" And fromEng = False Then
-            proj.UndoRedo("Создать", "объект", Perevodi.ToStrFromObj(MyObj, True, , , False))
+            proj.UndoRedo("РЎРѕР·РґР°С‚СЊ", "РѕР±СЉРµРєС‚", Perevodi.ToStrFromObj(MyObj, True, , , False))
         End If
     End Sub
     Function addTabPage(ByVal TabPage As TPages, Optional ByVal withUndo As Boolean = False, Optional ByVal isPaste As Boolean = False) As TPages
         Dim oldNam As String = TabPage.obj.Props.name
         If TabPage.obj.Props.name = MyZnak & "none" Then
-            TabPage.obj.Props.name = proj.GiveName(obj.Props.name & " " & trans("Закладка"))
+            TabPage.obj.Props.name = proj.GiveName(obj.Props.name & " " & trans("Р—Р°РєР»Р°РґРєР°"))
             TabPage.obj.Props.text = TabPage.obj.Props.name
         End If
         TabPage.conteiner = MyObj
@@ -861,23 +861,23 @@ Public Class Objetus
         End If
         If oldNam = MyZnak & "none" Then TabPage.NodeRefresh(MyZnak & "none")
         If withUndo Then
-            proj.UndoRedo("Создать", "объект", Perevodi.ToStrFromObj(TabPage, True))
+            proj.UndoRedo("РЎРѕР·РґР°С‚СЊ", "РѕР±СЉРµРєС‚", Perevodi.ToStrFromObj(TabPage, True))
         End If
         Return TabPage
     End Function
     Function addMMenuItem(ByVal MMenus As MMenus, Optional ByVal withUndo As Boolean = False) As MMenus
         Dim oldNam As String = MMenus.obj.Props.name
-        ' При создании пункта меню по умолчанию, присвоить стандартные имена и текст
+        ' РџСЂРё СЃРѕР·РґР°РЅРёРё РїСѓРЅРєС‚Р° РјРµРЅСЋ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ, РїСЂРёСЃРІРѕРёС‚СЊ СЃС‚Р°РЅРґР°СЂС‚РЅС‹Рµ РёРјРµРЅР° Рё С‚РµРєСЃС‚
         If MMenus.obj.Props.name = MyZnak & "none" Then
-            MMenus.obj.Props.name = proj.GiveName(obj.Props.name & " " & trans("Пункт"))
+            MMenus.obj.Props.name = proj.GiveName(obj.Props.name & " " & trans("РџСѓРЅРєС‚"))
             MMenus.obj.Props.text = MMenus.obj.Props.name
         End If
-        ' Создать объект
+        ' РЎРѕР·РґР°С‚СЊ РѕР±СЉРµРєС‚
         MMenus.conteiner = MyObj
         If GetMyForm() Is Nothing = False Then
             GetMyForm.AddObject(MMenus)
         End If
-        ' Определить какого типа коллекция у контенера
+        ' РћРїСЂРµРґРµР»РёС‚СЊ РєР°РєРѕРіРѕ С‚РёРїР° РєРѕР»Р»РµРєС†РёСЏ Сѓ РєРѕРЅС‚РµРЅРµСЂР°
         Dim contCollec As System.Windows.Forms.ToolStripItemCollection
         If obj.GetType.ToString = ClassAplication & "MM" Or obj.GetType.ToString = ClassAplication & "runMM" _
         Or obj.GetType.ToString = ClassAplication & "CM" Or obj.GetType.ToString = ClassAplication & "runCM" _
@@ -887,9 +887,9 @@ Public Class Objetus
         Else
             contCollec = obj.DropDownItems
         End If
-        ' Добавление пункта меню в коллекцию
+        ' Р”РѕР±Р°РІР»РµРЅРёРµ РїСѓРЅРєС‚Р° РјРµРЅСЋ РІ РєРѕР»Р»РµРєС†РёСЋ
         contCollec.Add(MMenus.obj)
-        ' Высчитать позицию объекта или переместить в позицию указанную в свойстве объекта
+        ' Р’С‹СЃС‡РёС‚Р°С‚СЊ РїРѕР·РёС†РёСЋ РѕР±СЉРµРєС‚Р° РёР»Рё РїРµСЂРµРјРµСЃС‚РёС‚СЊ РІ РїРѕР·РёС†РёСЋ СѓРєР°Р·Р°РЅРЅСѓСЋ РІ СЃРІРѕР№СЃС‚РІРµ РѕР±СЉРµРєС‚Р°
         If oldNam = MyZnak & "none" Then
             MMenus.obj.Props.position = contCollec.Count - 1
         Else
@@ -897,9 +897,9 @@ Public Class Objetus
         End If
         If oldNam = MyZnak & "none" Then MMenus.NodeRefresh(MyZnak & "none")
         If withUndo Then
-            proj.UndoRedo("Создать", "объект", Perevodi.ToStrFromObj(MMenus, True))
+            proj.UndoRedo("РЎРѕР·РґР°С‚СЊ", "РѕР±СЉРµРєС‚", Perevodi.ToStrFromObj(MMenus, True))
         End If
-        ' для преобразования в сепаратор если надо
+        ' РґР»СЏ РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ РІ СЃРµРїР°СЂР°С‚РѕСЂ РµСЃР»Рё РЅР°РґРѕ
         MMenus.obj.props.text = MMenus.obj.props.text
         Return MMenus
     End Function
@@ -907,9 +907,9 @@ Public Class Objetus
         Dim i As Integer
         If proj.ActiveForm Is Nothing Then Exit Function
         If proj.ActiveForm.MyObjs Is Nothing = False Then
-            ' Если в na4x и na4y уже есть какойто объект то сместить координаты в другое место
+            ' Р•СЃР»Рё РІ na4x Рё na4y СѓР¶Рµ РµСЃС‚СЊ РєР°РєРѕР№С‚Рѕ РѕР±СЉРµРєС‚ С‚Рѕ СЃРјРµСЃС‚РёС‚СЊ РєРѕРѕСЂРґРёРЅР°С‚С‹ РІ РґСЂСѓРіРѕРµ РјРµСЃС‚Рѕ
             For i = 0 To proj.ActiveForm.MyObjs.Length - 1
-                ' Объеты сравниваются с объектами, полуобъекты с полуобъетами
+                ' РћР±СЉРµС‚С‹ СЃСЂР°РІРЅРёРІР°СЋС‚СЃСЏ СЃ РѕР±СЉРµРєС‚Р°РјРё, РїРѕР»СѓРѕР±СЉРµРєС‚С‹ СЃ РїРѕР»СѓРѕР±СЉРµС‚Р°РјРё
                 If proj.ActiveForm.MyObjs(i).obj.TypeObj = obj.TypeObj Then
                     If proj.ActiveForm.MyObjs(i).obj.left = na4alX And proj.ActiveForm.MyObjs(i).obj.Top = na4alY Then
                         Return GetXY(obj, cont, na4alX + setka, na4alY + setka)
@@ -917,35 +917,35 @@ Public Class Objetus
                 End If
             Next
         End If
-        If obj.TypeObj = "PoluObj" And na4alY > cont.height - obj.height Then 'полуобъекты не должны заходить за панель
+        If obj.TypeObj = "PoluObj" And na4alY > cont.height - obj.height Then 'РїРѕР»СѓРѕР±СЉРµРєС‚С‹ РЅРµ РґРѕР»Р¶РЅС‹ Р·Р°С…РѕРґРёС‚СЊ Р·Р° РїР°РЅРµР»СЊ
             Return GetXY(obj, cont, na4alX, na4alY - setka / 2)
         End If
         Return New Point(na4alX, na4alY)
     End Function
 #End Region
 
-    '<<<<<<<< ПРОЦЕДУРЫ МАРКЕРОВ >>>>>>>>>
+    '<<<<<<<< РџР РћР¦Р•Р”РЈР Р« РњРђР РљР•Р РћР’ >>>>>>>>>
 #Region "MARKERS SUBS"
     Private Sub markers_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
         'cm.Close()
         MainForm.Peremeschatel.Focus()
-        markers_perenos = Array.IndexOf(markers, sender) ' Индекс нажатого маркера
+        markers_perenos = Array.IndexOf(markers, sender) ' РРЅРґРµРєСЃ РЅР°Р¶Р°С‚РѕРіРѕ РјР°СЂРєРµСЂР°
         If markers_perenos = -1 Then Exit Sub
-        mdx = e.X : mdy = e.Y  ' Высчитать разницу в координатах для операции перемещения
-        proj.ActiveForm.marker_vis(False) ' Скрыть все маркеры
-        SolvRaznica() ' занести в массивы raznicaSize и raznicaLoc разницу координат и размеров объектов относительно obj
+        mdx = e.X : mdy = e.Y  ' Р’С‹СЃС‡РёС‚Р°С‚СЊ СЂР°Р·РЅРёС†Сѓ РІ РєРѕРѕСЂРґРёРЅР°С‚Р°С… РґР»СЏ РѕРїРµСЂР°С†РёРё РїРµСЂРµРјРµС‰РµРЅРёСЏ
+        proj.ActiveForm.marker_vis(False) ' РЎРєСЂС‹С‚СЊ РІСЃРµ РјР°СЂРєРµСЂС‹
+        SolvRaznica() ' Р·Р°РЅРµСЃС‚Рё РІ РјР°СЃСЃРёРІС‹ raznicaSize Рё raznicaLoc СЂР°Р·РЅРёС†Сѓ РєРѕРѕСЂРґРёРЅР°С‚ Рё СЂР°Р·РјРµСЂРѕРІ РѕР±СЉРµРєС‚РѕРІ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ obj
         If markers_perenos = 8 And Iz.isNoMove(obj) Then proj.ActiveForm.marker_vis()
     End Sub
     Private Sub markers_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
         Dim i As Integer
         If markers_perenos = 8 And Iz.isNoMove(obj) Then Exit Sub
-        If (mdx = e.X And mdy = e.Y) Or markers_perenos = 9 Then Exit Sub ' Если никакого перемещения небыло
+        If (mdx = e.X And mdy = e.Y) Or markers_perenos = 9 Then Exit Sub ' Р•СЃР»Рё РЅРёРєР°РєРѕРіРѕ РїРµСЂРµРјРµС‰РµРЅРёСЏ РЅРµР±С‹Р»Рѕ
         If markers_perenos <> -1 Then
-            If Control.ModifierKeys = Keys.Control Then ' Если удерживается ктрл, то перемещать по пиксельно
+            If Control.ModifierKeys = Keys.Control Then ' Р•СЃР»Рё СѓРґРµСЂР¶РёРІР°РµС‚СЃСЏ РєС‚СЂР», С‚Рѕ РїРµСЂРµРјРµС‰Р°С‚СЊ РїРѕ РїРёРєСЃРµР»СЊРЅРѕ
                 markers(markers_perenos).Left = markers(markers_perenos).Left + e.X - mdx
                 markers(markers_perenos).Top = markers(markers_perenos).Top + e.Y - mdy
-            Else ' Перемещать по сетке
-                '  If obj.TypeObj<>"PoluObj" Then ' Учитывать скрол формы, она же может прокручиваться
+            Else ' РџРµСЂРµРјРµС‰Р°С‚СЊ РїРѕ СЃРµС‚РєРµ
+                '  If obj.TypeObj<>"PoluObj" Then ' РЈС‡РёС‚С‹РІР°С‚СЊ СЃРєСЂРѕР» С„РѕСЂРјС‹, РѕРЅР° Р¶Рµ РјРѕР¶РµС‚ РїСЂРѕРєСЂСѓС‡РёРІР°С‚СЊСЃСЏ
                 'markers(markers_perenos).Left = ((markers(markers_perenos).Left + e.X - mdx) \ setka) * setka
                 'markers(markers_perenos).Top = ((markers(markers_perenos).Top + e.Y - mdy) \ setka) * setka
                 'Else
@@ -953,24 +953,24 @@ Public Class Objetus
                 markers(markers_perenos).Top = ((markers(markers_perenos).Top + e.Y - mdy) \ setka) * setka
                 ' End If
             End If
-            ' Менять размеры у всех активных объектов
+            ' РњРµРЅСЏС‚СЊ СЂР°Р·РјРµСЂС‹ Сѓ РІСЃРµС… Р°РєС‚РёРІРЅС‹С… РѕР±СЉРµРєС‚РѕРІ
             For i = 0 To proj.ActiveForm.ActiveObj.Length - 1
                 Dim cx, cy As Integer
                 cx = markers(markers_perenos).Left  ' - proj.ActiveForm.SplitCont.Panel1.HorizontalScroll.Value
                 cy = markers(markers_perenos).Top '- proj.ActiveForm.SplitCont.Panel1.VerticalScroll.Value
-                ' Учитывание вложенных контенеров
+                ' РЈС‡РёС‚С‹РІР°РЅРёРµ РІР»РѕР¶РµРЅРЅС‹С… РєРѕРЅС‚РµРЅРµСЂРѕРІ
                 Dim cont As Point = proj.ActiveForm.ContenerAbsXY(Me)
-                ' У двойной панели надо учитывать в какой панели объект
+                ' РЈ РґРІРѕР№РЅРѕР№ РїР°РЅРµР»Рё РЅР°РґРѕ СѓС‡РёС‚С‹РІР°С‚СЊ РІ РєР°РєРѕР№ РїР°РЅРµР»Рё РѕР±СЉРµРєС‚
                 'If obj.Parent.Parent.GetType.ToString = ClassAplication & "DP" Then
                 ' cx -= obj.Parent.Parent.ParentPanelLeft(obj)
                 ' cy -= obj.Parent.Parent.ParentPanelTop(obj)
                 ' Else
                 cx -= cont.X : cy -= cont.Y
                 'End If
-                Dim aObj = proj.ActiveForm.ActiveObj(i).obj ' Один из активных объектов
+                Dim aObj = proj.ActiveForm.ActiveObj(i).obj ' РћРґРёРЅ РёР· Р°РєС‚РёРІРЅС‹С… РѕР±СЉРµРєС‚РѕРІ
                 Dim left = aObj.Left, top = aObj.Top, hei = aObj.height, wid As Double = aObj.Width
                 Select Case markers_perenos
-                    Case 0 ' Левый верхний маркер, меняет размеры только своего объекта, а не всех активных
+                    Case 0 ' Р›РµРІС‹Р№ РІРµСЂС…РЅРёР№ РјР°СЂРєРµСЂ, РјРµРЅСЏРµС‚ СЂР°Р·РјРµСЂС‹ С‚РѕР»СЊРєРѕ СЃРІРѕРµРіРѕ РѕР±СЉРµРєС‚Р°, Р° РЅРµ РІСЃРµС… Р°РєС‚РёРІРЅС‹С…
                         wid = (obj.Left - cx) + obj.Width - markers(markers_perenos).Width - raznicaSize(i).X
                         hei = (obj.Top - cy) + obj.Height - markers(markers_perenos).Height - raznicaSize(i).Y
                         left = cx + markers(markers_perenos).Width - raznicaLoc(i).X
@@ -985,7 +985,7 @@ Public Class Objetus
                     Case 3
                         wid = (obj.Left - cx) + obj.Width - markers(markers_perenos).Width - raznicaSize(i).X
                         left = cx + markers(markers_perenos).Width - raznicaLoc(i).X
-                    Case 4 ' Правый средний маркер, меняет размеры всех активных объектов
+                    Case 4 ' РџСЂР°РІС‹Р№ СЃСЂРµРґРЅРёР№ РјР°СЂРєРµСЂ, РјРµРЅСЏРµС‚ СЂР°Р·РјРµСЂС‹ РІСЃРµС… Р°РєС‚РёРІРЅС‹С… РѕР±СЉРµРєС‚РѕРІ
                         If aObj.TypeObj = "PoluObj" Then Exit Select
                         wid = cx - obj.Left - raznicaSize(i).X
                     Case 5
@@ -999,11 +999,11 @@ Public Class Objetus
                         If aObj.TypeObj = "PoluObj" Then Exit Select
                         wid = cx - obj.Left - raznicaSize(i).X + markers(markers_perenos).Width
                         hei = cy - obj.Top - raznicaSize(i).Y + markers(markers_perenos).Height
-                    Case 8 ' Маркер для перемещения объекта
+                    Case 8 ' РњР°СЂРєРµСЂ РґР»СЏ РїРµСЂРµРјРµС‰РµРЅРёСЏ РѕР±СЉРµРєС‚Р°
                         left = cx - raznicaLoc(i).X - markerX
                         top = cy - raznicaLoc(i).Y + markers(markers_perenos).Height
                 End Select
-                If Control.ModifierKeys = Keys.Control Then ' Если удерживается ктрл, то перемещать по пиксельно
+                If Control.ModifierKeys = Keys.Control Then ' Р•СЃР»Рё СѓРґРµСЂР¶РёРІР°РµС‚СЃСЏ РєС‚СЂР», С‚Рѕ РїРµСЂРµРјРµС‰Р°С‚СЊ РїРѕ РїРёРєСЃРµР»СЊРЅРѕ
                     aObj.Width = wid
                     aObj.Height = hei
                     aObj.Left = left
@@ -1019,9 +1019,9 @@ Public Class Objetus
     End Sub
     Private Sub markers_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
         If markers_perenos = 8 And Iz.isNoMove(obj) Then Exit Sub
-        BackPoluObj(proj.ActiveForm.ActiveObj) ' Если полуобъект ушел за границы контейнера, то вернуть его
-        proj.ActiveForm.marker_vis(True) ' сделать маркеры видимыми
-        ' Обработка нажатия плюсика
+        BackPoluObj(proj.ActiveForm.ActiveObj) ' Р•СЃР»Рё РїРѕР»СѓРѕР±СЉРµРєС‚ СѓС€РµР» Р·Р° РіСЂР°РЅРёС†С‹ РєРѕРЅС‚РµР№РЅРµСЂР°, С‚Рѕ РІРµСЂРЅСѓС‚СЊ РµРіРѕ
+        proj.ActiveForm.marker_vis(True) ' СЃРґРµР»Р°С‚СЊ РјР°СЂРєРµСЂС‹ РІРёРґРёРјС‹РјРё
+        ' РћР±СЂР°Р±РѕС‚РєР° РЅР°Р¶Р°С‚РёСЏ РїР»СЋСЃРёРєР°
         If markers_perenos = 9 Then
             If e.Button = MouseButtons.Left Then
                 MainForm.AddMenu_Click(Nothing, Nothing)
@@ -1029,7 +1029,7 @@ Public Class Objetus
                 markers(markers_perenos).ContextMenuStrip.Show(markers(markers_perenos), 2, 2)
             End If
         Else
-            If obj.TypeObj <> "PoluObj" Then ' Чтобы скролинг не мешал менять размеры и положене объекта
+            If obj.TypeObj <> "PoluObj" Then ' Р§С‚РѕР±С‹ СЃРєСЂРѕР»РёРЅРі РЅРµ РјРµС€Р°Р» РјРµРЅСЏС‚СЊ СЂР°Р·РјРµСЂС‹ Рё РїРѕР»РѕР¶РµРЅРµ РѕР±СЉРµРєС‚Р°
                 HideMarker.Left = obj.Left + obj.width - HideMarker.Width
                 HideMarker.Top = obj.Top + obj.height - HideMarker.Height
                 If Iz.IsFORM(MyObj) Then
@@ -1037,7 +1037,7 @@ Public Class Objetus
                 End If
                 proj.ActiveForm.marker_vis(True)
             End If
-            ' Если перемещение маркера было
+            ' Р•СЃР»Рё РїРµСЂРµРјРµС‰РµРЅРёРµ РјР°СЂРєРµСЂР° Р±С‹Р»Рѕ
             If mdx <> e.X Or mdy <> e.Y Then obj.ContextMenuStrip.visible = False : IzmenenieBylo()
         End If
         markers_perenos = -1
@@ -1056,28 +1056,28 @@ Public Class Objetus
     End Sub
 #End Region
 
-    '<<<<<<<< ПРОЦЕДУРЫ ОБЪЕКТА OBJ >>>>>>>>>
+    '<<<<<<<< РџР РћР¦Р•Р”РЈР Р« РћР‘РЄР•РљРўРђ OBJ >>>>>>>>>
 #Region "OBJ SUBS"
     Dim zashita As Boolean
     Public Sub obj_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
         If e.Button = MouseButtons.Left Then
-            ' Форму и панели нельзя перемещать
+            ' Р¤РѕСЂРјСѓ Рё РїР°РЅРµР»Рё РЅРµР»СЊР·СЏ РїРµСЂРµРјРµС‰Р°С‚СЊ
             If Iz.isPanel(obj) Then
                 na4Point = e.Location : click = True : Exit Sub
             End If
         End If
-        ' Выделить объект если он небыл выделен и если не хотят сделать мультивыделение (не нажат ктрл)
+        ' Р’С‹РґРµР»РёС‚СЊ РѕР±СЉРµРєС‚ РµСЃР»Рё РѕРЅ РЅРµР±С‹Р» РІС‹РґРµР»РµРЅ Рё РµСЃР»Рё РЅРµ С…РѕС‚СЏС‚ СЃРґРµР»Р°С‚СЊ РјСѓР»СЊС‚РёРІС‹РґРµР»РµРЅРёРµ (РЅРµ РЅР°Р¶Р°С‚ РєС‚СЂР»)
         If (proj.ActiveForm.IsActiveObject(Me) = False And Control.ModifierKeys <> Keys.Control) Or proj.ActiveForm.ActiveObj Is Nothing Then
 
             proj.ActiveForm.SetActiveObject(Me)
 
             If Me.markers(8).Visible = False Then proj.ActiveForm.marker_vis(True)
         End If
-        ' Если на объект нажали не левой кнопкой, но он не выделен, то выделить его
+        ' Р•СЃР»Рё РЅР° РѕР±СЉРµРєС‚ РЅР°Р¶Р°Р»Рё РЅРµ Р»РµРІРѕР№ РєРЅРѕРїРєРѕР№, РЅРѕ РѕРЅ РЅРµ РІС‹РґРµР»РµРЅ, С‚Рѕ РІС‹РґРµР»РёС‚СЊ РµРіРѕ
         If e.Button = MouseButtons.Left Or proj.ActiveForm.IsActiveObject(Me) = False Then
             perenos = True : dx = e.X : dy = e.Y : click = True
             If Iz.isMoveOnlyMarker(MyObj.obj) = False Then obj.Cursor = Cursors.NoMove2D ' proj.ActiveForm.marker_vis(False)
-            SolvRaznica() ' занести в массивы raznicaSize и raznicaLoc разницу координат и размеров объектов относительно obj
+            SolvRaznica() ' Р·Р°РЅРµСЃС‚Рё РІ РјР°СЃСЃРёРІС‹ raznicaSize Рё raznicaLoc СЂР°Р·РЅРёС†Сѓ РєРѕРѕСЂРґРёРЅР°С‚ Рё СЂР°Р·РјРµСЂРѕРІ РѕР±СЉРµРєС‚РѕРІ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ obj
         End If
         zashita = True
     End Sub
@@ -1086,7 +1086,7 @@ Public Class Objetus
         If Iz.isNoMove(obj) Then perenos = False : Exit Sub
         If Iz.isMoveOnlyMarker(MyObj.obj) Then Exit Sub
         If zashita = True Then zashita = False : dx = e.X : dy = e.Y : Exit Sub
-        ' Форму и панели нельзя перемещать
+        ' Р¤РѕСЂРјСѓ Рё РїР°РЅРµР»Рё РЅРµР»СЊР·СЏ РїРµСЂРµРјРµС‰Р°С‚СЊ
         If na4Point <> Nothing Then
             If Iz.isPanel(obj) Then
                 click = False ': proj.ActiveForm.ClearActiveObject()
@@ -1094,13 +1094,13 @@ Public Class Objetus
             End If
             Exit Sub
         End If
-        If perenos = True And (e.X <> dx Or e.Y <> dy) Then ' Если перемещение началось
+        If perenos = True And (e.X <> dx Or e.Y <> dy) Then ' Р•СЃР»Рё РїРµСЂРµРјРµС‰РµРЅРёРµ РЅР°С‡Р°Р»РѕСЃСЊ
             If proj.ActiveForm.ActiveObj Is Nothing Or raznicaLoc Is Nothing Then perenos = False : Exit Sub
             If Iz.isMoveOnlyMarker(sender) Then perenos = False : Exit Sub
-            ' Переместить активные объекты относительно obj
+            ' РџРµСЂРµРјРµСЃС‚РёС‚СЊ Р°РєС‚РёРІРЅС‹Рµ РѕР±СЉРµРєС‚С‹ РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ obj
             If raznicaLoc.Length = proj.ActiveForm.ActiveObj.length Then
                 For i = 0 To raznicaLoc.Length - 1
-                    If Iz.IsFORM(proj.ActiveForm.ActiveObj(i)) Then Continue For ' форму нельзя перемещать
+                    If Iz.IsFORM(proj.ActiveForm.ActiveObj(i)) Then Continue For ' С„РѕСЂРјСѓ РЅРµР»СЊР·СЏ РїРµСЂРµРјРµС‰Р°С‚СЊ
                     If Control.ModifierKeys = Keys.Control Then
                         proj.ActiveForm.ActiveObj(i).obj.Left = obj.Bounds.X + e.X - dx - raznicaLoc(i).X
                         proj.ActiveForm.ActiveObj(i).obj.Top = obj.Bounds.Y + e.Y - dy - raznicaLoc(i).Y
@@ -1109,7 +1109,7 @@ Public Class Objetus
                         proj.ActiveForm.ActiveObj(i).obj.Top = ((obj.Bounds.Y + e.Y - dy - raznicaLoc(i).Y) \ setka) * setka
                     End If
                 Next
-                click = False ' рас что-то перемещали, то это уже не клик по объекту
+                click = False ' СЂР°СЃ С‡С‚Рѕ-С‚Рѕ РїРµСЂРµРјРµС‰Р°Р»Рё, С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РєР»РёРє РїРѕ РѕР±СЉРµРєС‚Сѓ
             End If
         ElseIf perenos = False Then
             obj.Cursor = Cursori(obj.Props.cursor) 'Cursors.Default
@@ -1119,25 +1119,25 @@ Public Class Objetus
         Dim i As Integer
         'tree.Tag = "nelzya" : tree.SelectedNode = GetNode() : tree.Tag = ""
         perenos = False
-        ' Если панель, то возможно растягивали прямоугольник
+        ' Р•СЃР»Рё РїР°РЅРµР»СЊ, С‚Рѕ РІРѕР·РјРѕР¶РЅРѕ СЂР°СЃС‚СЏРіРёРІР°Р»Рё РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє
         If e.Button = MouseButtons.Left Or proj.ActiveForm.IsActiveObject(Me) = False Then
             If Iz.isMoveOnlyMarker(MyObj.obj) Then Exit Sub
             If Iz.isPanel(obj) Then
                 If click = False Then
                     With proj.ActiveForm
-                        If Control.ModifierKeys <> Keys.Control Then .ClearActiveObject() ' Если хотели просто выделить объект
+                        If Control.ModifierKeys <> Keys.Control Then .ClearActiveObject() ' Р•СЃР»Рё С…РѕС‚РµР»Рё РїСЂРѕСЃС‚Рѕ РІС‹РґРµР»РёС‚СЊ РѕР±СЉРµРєС‚
                         If .MyObjs Is Nothing = False Then
                             For i = 0 To .MyObjs.Length - 1
-                                If .MyObjs(i).conteiner Is Nothing Then Continue For ' Пропустить форму
-                                If sender Is proj.ActiveForm.SplitCont.Panel2 Then ' если sender панель полуобъектов
-                                    If .MyObjs(i).obj.TypeObj <> "PoluObj" Then Continue For ' Пропускать не полуобъекты
+                                If .MyObjs(i).conteiner Is Nothing Then Continue For ' РџСЂРѕРїСѓСЃС‚РёС‚СЊ С„РѕСЂРјСѓ
+                                If sender Is proj.ActiveForm.SplitCont.Panel2 Then ' РµСЃР»Рё sender РїР°РЅРµР»СЊ РїРѕР»СѓРѕР±СЉРµРєС‚РѕРІ
+                                    If .MyObjs(i).obj.TypeObj <> "PoluObj" Then Continue For ' РџСЂРѕРїСѓСЃРєР°С‚СЊ РЅРµ РїРѕР»СѓРѕР±СЉРµРєС‚С‹
                                 Else
-                                    If .MyObjs(i).obj.TypeObj = "PoluObj" Then Continue For ' Пропускать полуобъекты
+                                    If .MyObjs(i).obj.TypeObj = "PoluObj" Then Continue For ' РџСЂРѕРїСѓСЃРєР°С‚СЊ РїРѕР»СѓРѕР±СЉРµРєС‚С‹
                                 End If
 
-                                ' Если объект находится в нужном контенере (на котором растягивается прямоугольник) и сам не является этим контенером
+                                ' Р•СЃР»Рё РѕР±СЉРµРєС‚ РЅР°С…РѕРґРёС‚СЃСЏ РІ РЅСѓР¶РЅРѕРј РєРѕРЅС‚РµРЅРµСЂРµ (РЅР° РєРѕС‚РѕСЂРѕРј СЂР°СЃС‚СЏРіРёРІР°РµС‚СЃСЏ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє) Рё СЃР°Рј РЅРµ СЏРІР»СЏРµС‚СЃСЏ СЌС‚РёРј РєРѕРЅС‚РµРЅРµСЂРѕРј
                                 If (.MyObjs(i).obj.parent Is sender) And (.MyObjs(i).obj Is sender = False) Then
-                                    ' Если объект входит в выделенную зону, то добавить его в активные
+                                    ' Р•СЃР»Рё РѕР±СЉРµРєС‚ РІС…РѕРґРёС‚ РІ РІС‹РґРµР»РµРЅРЅСѓСЋ Р·РѕРЅСѓ, С‚Рѕ РґРѕР±Р°РІРёС‚СЊ РµРіРѕ РІ Р°РєС‚РёРІРЅС‹Рµ
                                     If .inRectangle(.MyObjs(i).obj, na4Point, endPoint) Then
                                         .AddActiveObject(proj.ActiveForm.MyObjs(i), True)
                                     End If
@@ -1145,7 +1145,7 @@ Public Class Objetus
                             Next
                             .FillListView()
                         End If
-                        If sender Is proj.ActiveForm.SplitCont.Panel2 = False Then ' если sender не панель полуобъектов
+                        If sender Is proj.ActiveForm.SplitCont.Panel2 = False Then ' РµСЃР»Рё sender РЅРµ РїР°РЅРµР»СЊ РїРѕР»СѓРѕР±СЉРµРєС‚РѕРІ
                             If .ActiveObj Is Nothing And click = False Then .SetActiveObject(Me)
                         End If
                     End With
@@ -1153,7 +1153,7 @@ Public Class Objetus
                 na4Point = Nothing : endPoint = Nothing : sender.refresh()
             End If
             na4Point = Nothing : endPoint = Nothing
-            If click = True Then ' Если это был клик а не перемещение
+            If click = True Then ' Р•СЃР»Рё СЌС‚Рѕ Р±С‹Р» РєР»РёРє Р° РЅРµ РїРµСЂРµРјРµС‰РµРЅРёРµ
                 If Control.ModifierKeys = Keys.Control Then
                     proj.ActiveForm.AddActiveObject(Me)
                 Else
@@ -1163,13 +1163,13 @@ Public Class Objetus
                     End If
                 End If
 
-                ' Вывести при клике без движения контекстное меню одноименного элемента
+                ' Р’С‹РІРµСЃС‚Рё РїСЂРё РєР»РёРєРµ Р±РµР· РґРІРёР¶РµРЅРёСЏ РєРѕРЅС‚РµРєСЃС‚РЅРѕРµ РјРµРЅСЋ РѕРґРЅРѕРёРјРµРЅРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
                 If Iz.IsCM(MyObj) Then MyObj.obj.CnMn.Show(obj, e.X, e.Y)
             Else
-                BackPoluObj(proj.ActiveForm.ActiveObj) ' Если полуобъект ушел за границы контейнера, то вернуть его
+                BackPoluObj(proj.ActiveForm.ActiveObj) ' Р•СЃР»Рё РїРѕР»СѓРѕР±СЉРµРєС‚ СѓС€РµР» Р·Р° РіСЂР°РЅРёС†С‹ РєРѕРЅС‚РµР№РЅРµСЂР°, С‚Рѕ РІРµСЂРЅСѓС‚СЊ РµРіРѕ
             End If
 
-            If obj.TypeObj <> "PoluObj" Then ' Чтобы скролинг не мешал менять размеры и положене объекта
+            If obj.TypeObj <> "PoluObj" Then ' Р§С‚РѕР±С‹ СЃРєСЂРѕР»РёРЅРі РЅРµ РјРµС€Р°Р» РјРµРЅСЏС‚СЊ СЂР°Р·РјРµСЂС‹ Рё РїРѕР»РѕР¶РµРЅРµ РѕР±СЉРµРєС‚Р°
                 HideMarker.Left = obj.Left + obj.width - HideMarker.Width
                 HideMarker.Top = obj.Top + obj.height - HideMarker.Height
                 If Iz.IsFORM(MyObj) Then
@@ -1200,10 +1200,10 @@ Public Class Objetus
         'MainForm.TreeView1_AfterSelect(sender, New TreeViewEventArgs(MyObj.getNode))
     End Sub
     Private Sub obj_GotFocus(ByVal sender As Object, ByVal e As System.EventArgs)
-        ' Передать фокус текст. полю перемещателю, что бы можно было управлять объкектом с клавиатуры
+        ' РџРµСЂРµРґР°С‚СЊ С„РѕРєСѓСЃ С‚РµРєСЃС‚. РїРѕР»СЋ РїРµСЂРµРјРµС‰Р°С‚РµР»СЋ, С‡С‚Рѕ Р±С‹ РјРѕР¶РЅРѕ Р±С‹Р»Рѕ СѓРїСЂР°РІР»СЏС‚СЊ РѕР±СЉРєРµРєС‚РѕРј СЃ РєР»Р°РІРёР°С‚СѓСЂС‹
         If Iz.isMoveOnlyMarker(MyObj.obj) = False Then MainForm.Peremeschatel.Focus()
     End Sub
-    Sub BackPoluObj(ByVal ob() As Object) ' Если полуобъект ушел за границы контейнера, то вернуть его
+    Sub BackPoluObj(ByVal ob() As Object) ' Р•СЃР»Рё РїРѕР»СѓРѕР±СЉРµРєС‚ СѓС€РµР» Р·Р° РіСЂР°РЅРёС†С‹ РєРѕРЅС‚РµР№РЅРµСЂР°, С‚Рѕ РІРµСЂРЅСѓС‚СЊ РµРіРѕ
         Dim i As Integer
         If ob Is Nothing Or proj.ActiveForm Is Nothing Then Exit Sub
         For i = 0 To ob.Length - 1
@@ -1215,7 +1215,7 @@ Public Class Objetus
             End If
         Next
     End Sub
-    Sub BackPoluObj(ByVal odin As Boolean, ByVal ob As Object)    ' Если полуобъект ушел за границы контейнера, то вернуть его
+    Sub BackPoluObj(ByVal odin As Boolean, ByVal ob As Object)    ' Р•СЃР»Рё РїРѕР»СѓРѕР±СЉРµРєС‚ СѓС€РµР» Р·Р° РіСЂР°РЅРёС†С‹ РєРѕРЅС‚РµР№РЅРµСЂР°, С‚Рѕ РІРµСЂРЅСѓС‚СЊ РµРіРѕ
         Dim o(0) As Object : o(0) = ob : BackPoluObj(o)
     End Sub
     Private Sub obj_Scroll(ByVal sender As Object, ByVal e As System.Windows.Forms.ScrollEventArgs)
@@ -1232,7 +1232,7 @@ Public Class Objetus
             e.Graphics.DrawPolygon(Pens.Black, ppp)
         End If
         If obj.Props.index <> "0" Then 'Or proj.ExistName(obj.Props.name, obj) Then
-            If Iz.IsM(MyObj) Then ' У памяти негде писать
+            If Iz.IsM(MyObj) Then ' РЈ РїР°РјСЏС‚Рё РЅРµРіРґРµ РїРёСЃР°С‚СЊ
                 e.Graphics.FillRectangle(Brushes.White, 2, 2, (obj.Props.index.length + 2) * 3, 6)
                 e.Graphics.DrawString("(" & obj.Props.index & ")", New Font("Arial", 6), Brushes.Black, 0, 0)
             Else
@@ -1246,7 +1246,7 @@ Public Class Objetus
                 e.Graphics.DrawRectangle(Pens.Black, 3, 3, obj.width - 6, obj.height - 6)
             End If
         End If
-        ' Рисование сетки на форме
+        ' Р РёСЃРѕРІР°РЅРёРµ СЃРµС‚РєРё РЅР° С„РѕСЂРјРµ
         If (Iz.isPanel(sender)) Then
             Dim drawSetka As Integer = setka * 2
             Dim pn As New Pen(Color.Black, 1), i As Integer
@@ -1270,7 +1270,7 @@ Public Class Objetus
         MyObj.obj.Visible = False : MyObj.obj.Visible = True
     End Sub
     Private Sub obj_SelectionChanged(ByVal sender As Object, ByVal e As System.EventArgs)
-        ' Если сейчас не критическая секция
+        ' Р•СЃР»Рё СЃРµР№С‡Р°СЃ РЅРµ РєСЂРёС‚РёС‡РµСЃРєР°СЏ СЃРµРєС†РёСЏ
         If obj.Props.semaforSelect = False Then
             IzmenenieByloExpert()
         End If
@@ -1281,15 +1281,15 @@ Public Class Objetus
 
 #End Region
 
-    '<<<<<<<< RUN-ПРОЦЕДУРЫ ОБЪЕКТА OBJ >>>>>>>>>
+    '<<<<<<<< RUN-РџР РћР¦Р•Р”РЈР Р« РћР‘РЄР•РљРўРђ OBJ >>>>>>>>>
 #Region "RUN OBJ SUBS"
     Sub RunSobyt(ByVal sender As Object, ByVal sobyt As String, ByVal e As Object, ByVal type As System.Type)
         Dim es As ErrString
         If tree Is Nothing Or peremens.isRUN = False Then Exit Sub
-        ' Ищем в ноде объекта нужное событие
+        ' РС‰РµРј РІ РЅРѕРґРµ РѕР±СЉРµРєС‚Р° РЅСѓР¶РЅРѕРµ СЃРѕР±С‹С‚РёРµ
         Dim eventNode As TreeNode = proj.FindSobyt(sobyt, GetNode(, True))
         If eventNode Is Nothing Then Exit Sub
-        ' Выполняем найденное событие
+        ' Р’С‹РїРѕР»РЅСЏРµРј РЅР°Р№РґРµРЅРЅРѕРµ СЃРѕР±С‹С‚РёРµ
         Try
             es = proj.RunBlock(eventNode, 0, New PropertysSobyt(sender, e, type), True)
             If es.err <> "" Then Errors.MessangeCritic(es.err)
@@ -1298,10 +1298,10 @@ Public Class Objetus
                 Dim deist As String
                 If peremens.isRUN Then
                     If proj.NowNode Is Nothing = False Then
-                        deist = vbCrLf & trans("Действие") & ": """ & proj.NowNode.text & """"
+                        deist = vbCrLf & trans("Р”РµР№СЃС‚РІРёРµ") & ": """ & proj.NowNode.text & """"
                     End If
                 End If
-                Errors.MessangeCritic(ex.Message & vbCrLf & trans("Событие") & ": """ & eventNode.FullPath & """" & deist)
+                Errors.MessangeCritic(ex.Message & vbCrLf & trans("РЎРѕР±С‹С‚РёРµ") & ": """ & eventNode.FullPath & """" & deist)
             Else
                 If proj.NowNode Is Nothing = False Then
                     proj.RunBlock(proj.NowNode, 0, New PropertysSobyt(sender, e, type), True)
@@ -1311,113 +1311,113 @@ Public Class Objetus
         proj.recurs = 0
     End Sub
 
-    ' СОБЫТИЯ МЫШИ
+    ' РЎРћР‘Р«РўРРЇ РњР«РЁР
     Public Sub obj_ClickRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Клик"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљР»РёРє"), e, e.GetType)
     End Sub
     Public Sub obj_MouseDownRun(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
-        RunSobyt(MyObj, trans("Нажатие кнопки мыши"), e, e.GetType)
+        RunSobyt(MyObj, trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), e, e.GetType)
     End Sub
     Public Sub obj_MouseUpRun(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
-        RunSobyt(MyObj, trans("Отжатие кнопки мыши"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), e, e.GetType)
     End Sub
     Public Sub obj_MouseMoveRun(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
         If proj.alreadyRun Then Exit Sub
-        RunSobyt(MyObj, trans("Движение курсора"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), e, e.GetType)
     End Sub
     Public Sub obj_MouseEnterRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Наведение курсора"), e, e.GetType)
+        RunSobyt(MyObj, trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), e, e.GetType)
     End Sub
     Public Sub obj_MouseLeaveRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Отведение курсора"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), e, e.GetType)
     End Sub
     Public Sub obj_MouseHoverRun(ByVal sender As Object, ByVal e As System.EventArgs)
         If proj.alreadyRun Then Exit Sub
-        RunSobyt(MyObj, trans("Курсор на объекте"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), e, e.GetType)
     End Sub
     Public Sub obj_MouseWheelRun(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
-        RunSobyt(MyObj, trans("Вращение колесика"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), e, e.GetType)
     End Sub
     Public Sub obj_DoubleClickRun(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
-        RunSobyt(MyObj, trans("Двойной клик"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), e, e.GetType)
     End Sub
 
-    ' СОБЫТИЯ КЛАВИАТУРЫ
+    ' РЎРћР‘Р«РўРРЇ РљР›РђР’РРђРўРЈР Р«
     Private Sub obj_KeyPressRun(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs)
         e.Handled = TextBoxAllow(sender, e)
         If e.Handled Then Exit Sub
-        RunSobyt(MyObj, trans("Нажатие клавиатуры"), e, e.GetType)
+        RunSobyt(MyObj, trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), e, e.GetType)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить ввод"))) = trans("Да") Then e.Handled = True
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ РІРІРѕРґ"))) = trans("Р”Р°") Then e.Handled = True
         End If
     End Sub
     Private Sub obj_KeyDownRun(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
-        RunSobyt(MyObj, trans("Нажатие вниз кнопки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), e, e.GetType)
     End Sub
     Private Sub obj_KeyUpRun(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
-        RunSobyt(MyObj, trans("Отжатие кнопки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), e, e.GetType)
     End Sub
 
-    ' СОБЫТИЯ МЕНЮ
+    ' РЎРћР‘Р«РўРРЇ РњР•РќР®
     Private Sub obj_DropDownClosedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Вложенное меню закрылось"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РјРµРЅСЋ Р·Р°РєСЂС‹Р»РѕСЃСЊ"), e, e.GetType)
     End Sub
     Private Sub obj_DropDownOpenedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Вложенное меню открылось"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РјРµРЅСЋ РѕС‚РєСЂС‹Р»РѕСЃСЊ"), e, e.GetType)
     End Sub
     Private Sub obj_DropDownOpeningRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Вложенное меню открывается"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РјРµРЅСЋ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ"), e, e.GetType)
     End Sub
 
-    ' ПРОЧИЕ СОБЫТИЯ
+    ' РџР РћР§РР• РЎРћР‘Р«РўРРЇ
     Private Sub obj_TextChangedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Изменение текста"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), e, e.GetType)
     End Sub
     Public Sub obj_GotFocusRun(ByVal sender As Object, ByVal e As System.EventArgs)
         If proj.isINITIALIZATED = False Then
-            RunSobyt(MyObj, trans("Получение фокуса"), e, e.GetType)
+            RunSobyt(MyObj, trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), e, e.GetType)
         End If
     End Sub
     Private Sub obj_LostFocusRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Потеря фокуса"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), e, e.GetType)
     End Sub
     Public Sub obj_PaintRun(ByVal sender As Object, ByVal e As System.Windows.Forms.PaintEventArgs)
         If proj.isINITIALIZATED = False Then
             ' If proj.alreadyRun Then Exit Sub
-            RunSobyt(MyObj, trans("Прорисовка"), e, e.GetType)
+            RunSobyt(MyObj, trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), e, e.GetType)
         End If
     End Sub
     Public Sub obj_LoadRun(ByVal sender As Object, ByVal e As EventArgs)
-        RunSobyt(MyObj, trans("Создание"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЎРѕР·РґР°РЅРёРµ"), e, e.GetType)
     End Sub
     Public Sub obj_ScrollRun(ByVal sender As Object, ByVal e As System.Windows.Forms.ScrollEventArgs)
-        RunSobyt(MyObj, trans("Прокрутка"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџСЂРѕРєСЂСѓС‚РєР°"), e, e.GetType)
     End Sub
     Public Sub obj_ScrollRun1(ByVal sender As Object, ByVal e As System.Windows.Forms.ScrollEventArgs)
-        RunSobyt(MyObj, trans("Прокрутка1"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџСЂРѕРєСЂСѓС‚РєР°1"), e, e.GetType)
     End Sub
     Public Sub obj_ScrollRun2(ByVal sender As Object, ByVal e As System.Windows.Forms.ScrollEventArgs)
-        RunSobyt(MyObj, trans("Прокрутка2"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџСЂРѕРєСЂСѓС‚РєР°2"), e, e.GetType)
     End Sub
     Public Sub obj_ScrollRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Движение бегунка"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р”РІРёР¶РµРЅРёРµ Р±РµРіСѓРЅРєР°"), e, e.GetType)
     End Sub
     Public Sub obj_ResizeRun(ByVal sender As Object, ByVal e As System.EventArgs)
         ' obj.props.height = obj.height
         '  obj.props.width = obj.width
     End Sub
     'Private Sub obj_DisposedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-    '    If UCase(obj.Props.mainForm) = UCase(trans("Да")) Then proj.StopProject()
+    '    If UCase(obj.Props.mainForm) = UCase(trans("Р”Р°")) Then proj.StopProject()
     'End Sub
     Private Sub obj_FormClosingRun(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs)
-        RunSobyt(MyObj, trans("Закрытие окна"), New EventArgs, (New EventArgs).GetType)
-        If UCase(obj.Props.ForbidClose) = UCase(trans("Да")) Then e.Cancel = True : Exit Sub
-        If UCase(obj.Props.mainForm) = UCase(trans("Да")) And proj.isCLOSING = False Then
+        RunSobyt(MyObj, trans("Р—Р°РєСЂС‹С‚РёРµ РѕРєРЅР°"), New EventArgs, (New EventArgs).GetType)
+        If UCase(obj.Props.ForbidClose) = UCase(trans("Р”Р°")) Then e.Cancel = True : Exit Sub
+        If UCase(obj.Props.mainForm) = UCase(trans("Р”Р°")) And proj.isCLOSING = False Then
             obj.hide() : HookStops()
-            ' Выставить флаг чтобы поток вызвал функцию StopProject т.к. нельзя работать с объектами созданными не в этом потоке
+            ' Р’С‹СЃС‚Р°РІРёС‚СЊ С„Р»Р°Рі С‡С‚РѕР±С‹ РїРѕС‚РѕРє РІС‹Р·РІР°Р» С„СѓРЅРєС†РёСЋ StopProject С‚.Рє. РЅРµР»СЊР·СЏ СЂР°Р±РѕС‚Р°С‚СЊ СЃ РѕР±СЉРµРєС‚Р°РјРё СЃРѕР·РґР°РЅРЅС‹РјРё РЅРµ РІ СЌС‚РѕРј РїРѕС‚РѕРєРµ
             If proj.isPotok Then proj.StopPr = True Else proj.StopProject()
         Else
-            ' Если проекты запущен в режиме только АКТИВНОЕ окно
+            ' Р•СЃР»Рё РїСЂРѕРµРєС‚С‹ Р·Р°РїСѓС‰РµРЅ РІ СЂРµР¶РёРјРµ С‚РѕР»СЊРєРѕ РђРљРўРР’РќРћР• РѕРєРЅРѕ
             If proj.isONLYFORM Then
                 If proj.isPotok Then proj.StopPr = True Else proj.StopProject()
                 Exit Sub
@@ -1430,65 +1430,65 @@ Public Class Objetus
     'End Sub
     Private Sub obj_SplitterMovedRun(ByVal sender As Object, ByVal e As System.Windows.Forms.SplitterEventArgs)
         '  obj.props.SplitterDistance = obj.SplitterDistance
-        RunSobyt(MyObj, trans("Разделитель перемещен"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р Р°Р·РґРµР»РёС‚РµР»СЊ РїРµСЂРµРјРµС‰РµРЅ"), e, e.GetType)
     End Sub
     Private Sub obj_SplitterMovingRun(ByVal sender As Object, ByVal e As System.Windows.Forms.SplitterCancelEventArgs)
         'obj.props.SplitterDistance = obj.SplitterDistance
-        RunSobyt(MyObj, trans("Разделитель перемещается"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р Р°Р·РґРµР»РёС‚РµР»СЊ РїРµСЂРµРјРµС‰Р°РµС‚СЃСЏ"), e, e.GetType)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить перемещение"))) = trans("Да") Then e.Cancel = True
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ РїРµСЂРµРјРµС‰РµРЅРёРµ"))) = trans("Р”Р°") Then e.Cancel = True
         End If
     End Sub
     Private Sub obj_SizeChangedRun(ByVal sender As Object, ByVal e As System.EventArgs)
         If Iz.IsFORM(MyObj) Then If MyObj.MyObjs Is Nothing Then Exit Sub
-        RunSobyt(MyObj, trans("Изменились размеры"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), e, e.GetType)
     End Sub
     Private Sub obj_VisibleChangedRun(ByVal sender As Object, ByVal e As System.EventArgs)
         If proj.isINITIALIZATED = False Then
-            RunSobyt(MyObj, trans("Изменилась видимость"), e, e.GetType)
+            RunSobyt(MyObj, trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), e, e.GetType)
         End If
     End Sub
 
-    ' СОБЫТИЯ БРАУЗЕРА
+    ' РЎРћР‘Р«РўРРЇ Р‘Р РђРЈР—Р•Р Рђ
     Private Sub WebBrowser1_CanGoBackChanged(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Назад можно изменилось"), e, e.GetType)
+        RunSobyt(MyObj, trans("РќР°Р·Р°Рґ РјРѕР¶РЅРѕ РёР·РјРµРЅРёР»РѕСЃСЊ"), e, e.GetType)
     End Sub
     Private Sub WebBrowser1_CanGoForwardChanged(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Вперед можно изменилось"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р’РїРµСЂРµРґ РјРѕР¶РЅРѕ РёР·РјРµРЅРёР»РѕСЃСЊ"), e, e.GetType)
     End Sub
     Private Sub WebBrowser1_DocumentCompleted(ByVal sender As System.Object, ByVal e As System.Windows.Forms.WebBrowserDocumentCompletedEventArgs)
-        RunSobyt(MyObj, trans("Страница загрузилась"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР·РёР»Р°СЃСЊ"), e, e.GetType)
     End Sub
     Private Sub WebBrowser1_FileDownload(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Страница загружается"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ"), e, e.GetType)
     End Sub
     Private Sub WebBrowser1_Navigated(ByVal sender As Object, ByVal e As System.Windows.Forms.WebBrowserNavigatedEventArgs)
-        RunSobyt(MyObj, trans("Перешел по ссылке"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџРµСЂРµС€РµР» РїРѕ СЃСЃС‹Р»РєРµ"), e, e.GetType)
     End Sub
     Private Sub WebBrowser1_Navigating(ByVal sender As Object, ByVal e As System.Windows.Forms.WebBrowserNavigatingEventArgs)
-        RunSobyt(MyObj, trans("Переходит по ссылке"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџРµСЂРµС…РѕРґРёС‚ РїРѕ СЃСЃС‹Р»РєРµ"), e, e.GetType)
     End Sub
 
     Private Sub WebBrowser1_NewWindow(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs)
-        RunSobyt(MyObj, trans("Открытие в новом окне"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚РєСЂС‹С‚РёРµ РІ РЅРѕРІРѕРј РѕРєРЅРµ"), e, e.GetType)
         'If proj.Param.ParamyUp Is Nothing = False Then
-        '    If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить в новом окне"))) = trans("Да") Then e.Cancel = True
+        '    If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ"))) = trans("Р”Р°") Then e.Cancel = True
         'End If
     End Sub
     Private Sub WebBrowser1_StatusTextChanged(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Статусная строка изменилась"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЎС‚Р°С‚СѓСЃРЅР°СЏ СЃС‚СЂРѕРєР° РёР·РјРµРЅРёР»Р°СЃСЊ"), e, e.GetType)
     End Sub
-    '' Значит нам передали имя браузера в виде Окно.Браузер
+    '' Р—РЅР°С‡РёС‚ РЅР°Рј РїРµСЂРµРґР°Р»Рё РёРјСЏ Р±СЂР°СѓР·РµСЂР° РІ РІРёРґРµ РћРєРЅРѕ.Р‘СЂР°СѓР·РµСЂ
     'Dim brw, frm, ob, indx As String
     'brw = obj.props.OpenNewWindowLink
-    '' Разделяем имя на имя окна и имя браузера
+    '' Р Р°Р·РґРµР»СЏРµРј РёРјСЏ РЅР° РёРјСЏ РѕРєРЅР° Рё РёРјСЏ Р±СЂР°СѓР·РµСЂР°
     'Dim spl() As String = brw.Split(".")
     'If spl.Length <> 2 Then Errors.MessangeExclamen(Errors.InvalidWebBrowser(brw)) : Exit Sub
-    '' Заносим предварительное имя
+    '' Р—Р°РЅРѕСЃРёРј РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕРµ РёРјСЏ
     'frm = spl(0)
     'ob = spl(1)
     'indx = 0
-    '' Если браузер с индексом, то извлечь его из имени
+    '' Р•СЃР»Рё Р±СЂР°СѓР·РµСЂ СЃ РёРЅРґРµРєСЃРѕРј, С‚Рѕ РёР·РІР»РµС‡СЊ РµРіРѕ РёР· РёРјРµРЅРё
     'If ob.IndexOf("[") <> -1 Then
     '    If ob.IndexOf("]") = -1 Then Errors.MessangeExclamen(Errors.InvalidWebBrowser(brw)) : Exit Sub
     '    indx = ob.Split("[")(1).Split("]")(0)
@@ -1496,232 +1496,232 @@ Public Class Objetus
     'End If
 
 
-    ' СОБЫТИЯ ТАБПЕЙДЖ
+    ' РЎРћР‘Р«РўРРЇ РўРђР‘РџР•Р™Р”Р–
     Private Sub TabControl_Deselected(ByVal sender As Object, ByVal e As System.Windows.Forms.TabControlEventArgs)
-        RunSobyt(MyObj, trans("Снялось выделение закладки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЎРЅСЏР»РѕСЃСЊ РІС‹РґРµР»РµРЅРёРµ Р·Р°РєР»Р°РґРєРё"), e, e.GetType)
     End Sub
     Private Sub TabControl_Deselecting(ByVal sender As Object, ByVal e As System.Windows.Forms.TabControlCancelEventArgs)
-        RunSobyt(MyObj, trans("Снимается выделение закладки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЎРЅРёРјР°РµС‚СЃСЏ РІС‹РґРµР»РµРЅРёРµ Р·Р°РєР»Р°РґРєРё"), e, e.GetType)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить событие"))) = trans("Да") Then e.Cancel = True
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))) = trans("Р”Р°") Then e.Cancel = True
         End If
     End Sub
     Private Sub TabControl_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Выделили закладку"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р’С‹РґРµР»РёР»Рё Р·Р°РєР»Р°РґРєСѓ"), e, e.GetType)
     End Sub
     Private Sub TabControl_Selecting(ByVal sender As Object, ByVal e As System.Windows.Forms.TabControlCancelEventArgs)
-        RunSobyt(MyObj, trans("Выделяют закладку"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р’С‹РґРµР»СЏСЋС‚ Р·Р°РєР»Р°РґРєСѓ"), e, e.GetType)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить событие"))) = trans("Да") Then e.Cancel = True
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))) = trans("Р”Р°") Then e.Cancel = True
         End If
     End Sub
 
-    ' СОБЫТИЯ ТАБЛИЦ
+    ' РЎРћР‘Р«РўРРЇ РўРђР‘Р›РР¦
     Private Sub Table_SelectionChangedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Изменилось выделение"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРёР»РѕСЃСЊ РІС‹РґРµР»РµРЅРёРµ"), e, e.GetType)
     End Sub
     Private Sub Table_CellBeginEditRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellCancelEventArgs)
-        RunSobyt(MyObj, trans("Начало редактирования ячейки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РќР°С‡Р°Р»Рѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЏС‡РµР№РєРё"), e, e.GetType)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить событие"))) = trans("Да") Then e.Cancel = True
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))) = trans("Р”Р°") Then e.Cancel = True
         End If
     End Sub
     Private Sub Table_CellClickRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        RunSobyt(MyObj, trans("Клик по ячейке"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљР»РёРє РїРѕ СЏС‡РµР№РєРµ"), e, e.GetType)
     End Sub
     Private Sub Table_CellMouseDownRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs)
         If e.RowIndex > -1 And e.ColumnIndex > -1 Then
             If obj.Rows(e.RowIndex).Cells(e.ColumnIndex).Selected = True Then
-                RunSobyt(MyObj, trans("Клик по выделенной ячейке"), e, e.GetType)
+                RunSobyt(MyObj, trans("РљР»РёРє РїРѕ РІС‹РґРµР»РµРЅРЅРѕР№ СЏС‡РµР№РєРµ"), e, e.GetType)
             End If
         End If
     End Sub
     Private Sub Table_CellDoubleClickRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        RunSobyt(MyObj, trans("Двойной клик по ячейке"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє РїРѕ СЏС‡РµР№РєРµ"), e, e.GetType)
     End Sub
     Private Sub Table_CellEndEditRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        RunSobyt(MyObj, trans("Конец редактирования ячеки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљРѕРЅРµС† СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЏС‡РµРєРё"), e, e.GetType)
     End Sub
     Private Sub Table_CellEnterRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        RunSobyt(MyObj, trans("Ячейка в фокусе"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЇС‡РµР№РєР° РІ С„РѕРєСѓСЃРµ"), e, e.GetType)
     End Sub
     Private Sub Table_CellLeaveRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellEventArgs)
-        RunSobyt(MyObj, trans("Ячека потеряла фокус"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЇС‡РµРєР° РїРѕС‚РµСЂСЏР»Р° С„РѕРєСѓСЃ"), e, e.GetType)
     End Sub
     Private Sub Table_ColumnDisplayIndexChangedRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewColumnEventArgs)
-        RunSobyt(MyObj, trans("Столбец переместили"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЎС‚РѕР»Р±РµС† РїРµСЂРµРјРµСЃС‚РёР»Рё"), e, e.GetType)
     End Sub
     Private Sub Table_ColumnHeaderMouseClickRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs)
-        RunSobyt(MyObj, trans("Клик по заголовку столбца"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљР»РёРє РїРѕ Р·Р°РіРѕР»РѕРІРєСѓ СЃС‚РѕР»Р±С†Р°"), e, e.GetType)
     End Sub
     Private Sub Table_ColumnHeaderMouseDoubleClickRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs)
-        RunSobyt(MyObj, trans("Двойной клик по заголовку столбца"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє РїРѕ Р·Р°РіРѕР»РѕРІРєСѓ СЃС‚РѕР»Р±С†Р°"), e, e.GetType)
     End Sub
     Private Sub Table_ColumnSortModeChangedRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewColumnEventArgs)
-        RunSobyt(MyObj, trans("Сортировка столбца"), e, e.GetType)
+        RunSobyt(MyObj, trans("РЎРѕСЂС‚РёСЂРѕРІРєР° СЃС‚РѕР»Р±С†Р°"), e, e.GetType)
     End Sub
     Private Sub Table_ColumnWidthChangedRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewColumnEventArgs)
-        RunSobyt(MyObj, trans("Изменилась ширина столбца"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРёР»Р°СЃСЊ С€РёСЂРёРЅР° СЃС‚РѕР»Р±С†Р°"), e, e.GetType)
     End Sub
     Private Sub Table_RowHeaderMouseClickRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewCellMouseEventArgs)
-        RunSobyt(MyObj, trans("Клик по заголовку строки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљР»РёРє РїРѕ Р·Р°РіРѕР»РѕРІРєСѓ СЃС‚СЂРѕРєРё"), e, e.GetType)
     End Sub
     Private Sub Table_RowHeightChangedRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewRowEventArgs)
-        RunSobyt(MyObj, trans("Изменилась вышина строки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРёР»Р°СЃСЊ РІС‹С€РёРЅР° СЃС‚СЂРѕРєРё"), e, e.GetType)
     End Sub
     Private Sub Table_RowsAddedRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewRowsAddedEventArgs)
-        If obj.props.isSelecExecute = False Then RunSobyt(MyObj, trans("Добавли строку"), e, e.GetType)
+        If obj.props.isSelecExecute = False Then RunSobyt(MyObj, trans("Р”РѕР±Р°РІР»Рё СЃС‚СЂРѕРєСѓ"), e, e.GetType)
     End Sub
     Private Sub Table_RowsRemovedRun(ByVal sender As Object, ByVal e As System.Windows.Forms.DataGridViewRowsRemovedEventArgs)
-        If obj.props.isSelecExecute = False Then RunSobyt(MyObj, trans("Удалили строку"), e, e.GetType)
+        If obj.props.isSelecExecute = False Then RunSobyt(MyObj, trans("РЈРґР°Р»РёР»Рё СЃС‚СЂРѕРєСѓ"), e, e.GetType)
     End Sub
 
-    ' СОБЫТИЯ СПИСКА И ЛИНКЛАБЕЛИ
+    ' РЎРћР‘Р«РўРРЇ РЎРџРРЎРљРђ Р Р›РРќРљР›РђР‘Р•Р›Р
     Private Sub obj_SelectedIndexChangedRun(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Изменение выбранной записи"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё"), e, e.GetType)
     End Sub
     Private Sub obj_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs)
         If DaOrNet(MyObj.obj.props.InternetLink) Then MyObj.obj.props.GoInternetLink()
-        RunSobyt(MyObj, trans("Клик по ссылке"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљР»РёРє РїРѕ СЃСЃС‹Р»РєРµ"), e, e.GetType)
     End Sub
 
-    ' СОБЫТИЯ КАЛЕНДАРЯ
+    ' РЎРћР‘Р«РўРРЇ РљРђР›Р•РќР”РђР РЇ
     Private Sub obj_CloseUp(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Календарь закрылся"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљР°Р»РµРЅРґР°СЂСЊ Р·Р°РєСЂС‹Р»СЃСЏ"), e, e.GetType)
     End Sub
     Private Sub obj_DropDown(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Календарь раскрылся"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљР°Р»РµРЅРґР°СЂСЊ СЂР°СЃРєСЂС‹Р»СЃСЏ"), e, e.GetType)
     End Sub
     Private Sub obj_ValueChanged(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Значение изменилось"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р—РЅР°С‡РµРЅРёРµ РёР·РјРµРЅРёР»РѕСЃСЊ"), e, e.GetType)
     End Sub
 
-    ' КОНТЕКСТНОЕ МЕНЮ
+    ' РљРћРќРўР•РљРЎРўРќРћР• РњР•РќР®
     Private Sub obj_OpeningRun(ByVal sender As System.Object, ByVal e As System.ComponentModel.CancelEventArgs)
-        RunSobyt(MyObj, trans("Открытие"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚РєСЂС‹С‚РёРµ"), e, e.GetType)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить событие"))) = trans("Да") Then e.Cancel = True
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))) = trans("Р”Р°") Then e.Cancel = True
         End If
     End Sub
     Private Sub obj_ClosedRun(ByVal sender As Object, ByVal e As System.Windows.Forms.ToolStripDropDownClosedEventArgs)
-        RunSobyt(MyObj, trans("Закрылось"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р—Р°РєСЂС‹Р»РѕСЃСЊ"), e, e.GetType)
     End Sub
     Private Sub obj_ClosingRun(ByVal sender As Object, ByVal e As System.Windows.Forms.ToolStripDropDownClosingEventArgs)
-        RunSobyt(MyObj, trans("Закрытие"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р—Р°РєСЂС‹С‚РёРµ"), e, e.GetType)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить событие"))) = trans("Да") Then e.Cancel = True
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))) = trans("Р”Р°") Then e.Cancel = True
         End If
     End Sub
     Private Sub obj_OpenedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Открылось"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚РєСЂС‹Р»РѕСЃСЊ"), e, e.GetType)
     End Sub
 
-    '  КЛИЕНТ-СЕРВЕР
+    '  РљР›РР•РќРў-РЎР•Р Р’Р•Р 
     Private Sub obj_ConnectedToServerRun(ByVal sender As Object, ByVal e As WinsockConnectedEventArgs)
-        RunSobyt(MyObj, trans("Присоединились к серверу"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџСЂРёСЃРѕРµРґРёРЅРёР»РёСЃСЊ Рє СЃРµСЂРІРµСЂСѓ"), e, e.GetType)
     End Sub
     Private Sub obj_ConnectionClientRun(ByVal sender As Object, ByVal e As WinsockConnectionRequestEventArgs)
-        RunSobyt(MyObj, trans("Присоединился клиент"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ РєР»РёРµРЅС‚"), e, e.GetType)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить событие"))) = trans("Да") Then e.Cancel = True
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))) = trans("Р”Р°") Then e.Cancel = True
         End If
     End Sub
     Private Sub obj_CountChangedRun(ByVal sender As Object, ByVal e As WinsockCollectionCountChangedEventArgs)
-        RunSobyt(MyObj, trans("Изменилось число клиентов"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРёР»РѕСЃСЊ С‡РёСЃР»Рѕ РєР»РёРµРЅС‚РѕРІ"), e, e.GetType)
     End Sub
     Private Sub obj_TextReceivedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Пришел текст"), Nothing, Me.GetType)
+        RunSobyt(MyObj, trans("РџСЂРёС€РµР» С‚РµРєСЃС‚"), Nothing, Me.GetType)
     End Sub
     Private Sub obj_CommandReceivedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Пришла команда"), Nothing, Me.GetType)
+        RunSobyt(MyObj, trans("РџСЂРёС€Р»Р° РєРѕРјР°РЅРґР°"), Nothing, Me.GetType)
     End Sub
     Private Sub obj_FileReceivedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Пришел файл"), Nothing, Me.GetType)
+        RunSobyt(MyObj, trans("РџСЂРёС€РµР» С„Р°Р№Р»"), Nothing, Me.GetType)
     End Sub
     Private Sub obj_DisconnectedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Отключение"), Nothing, Me.GetType)
+        RunSobyt(MyObj, trans("РћС‚РєР»СЋС‡РµРЅРёРµ"), Nothing, Me.GetType)
     End Sub
     Private Sub obj_ErrorReceivedRun(ByVal sender As Object, ByVal e As WinsockErrorReceivedEventArgs)
-        RunSobyt(MyObj, trans("Произошла ошибка"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°"), e, e.GetType)
     End Sub
     Private Sub obj_SendTextCompleteRun(ByVal sender As Object, ByVal e As WinsockSendEventArgs)
-        RunSobyt(MyObj, trans("Отправился текст"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚РїСЂР°РІРёР»СЃСЏ С‚РµРєСЃС‚"), e, e.GetType)
     End Sub
     Private Sub obj_SendFileCompleteRun(ByVal sender As Object, ByVal e As WinsockSendEventArgs)
-        RunSobyt(MyObj, trans("Отправился файл"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚РїСЂР°РІРёР»СЃСЏ С„Р°Р№Р»"), e, e.GetType)
     End Sub
     Private Sub obj_SendProgressRun(ByVal sender As Object, ByVal e As WinsockSendEventArgs)
-        RunSobyt(MyObj, trans("Идет отправление"), e, e.GetType)
+        RunSobyt(MyObj, trans("РРґРµС‚ РѕС‚РїСЂР°РІР»РµРЅРёРµ"), e, e.GetType)
     End Sub
     Private Sub obj_ReceiveProgressRun(ByVal sender As Object, ByVal e As WinsockReceiveProgressEventArgs)
-        RunSobyt(MyObj, trans("Идет прием данных"), e, e.GetType)
+        RunSobyt(MyObj, trans("РРґРµС‚ РїСЂРёРµРј РґР°РЅРЅС‹С…"), e, e.GetType)
     End Sub
     Private Sub obj_StateChangedRun(ByVal sender As Object, ByVal e As WinsockStateChangedEventArgs)
-        RunSobyt(MyObj, trans("Изменился статус"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРёР»СЃСЏ СЃС‚Р°С‚СѓСЃ"), e, e.GetType)
     End Sub
 
-    ' ИНТЕРНЕТ
+    ' РРќРўР•Р РќР•Рў
     Private Sub obj_SendingQueryRun(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs)
-        RunSobyt(MyObj, trans("Отправляется запрос"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚РїСЂР°РІР»СЏРµС‚СЃСЏ Р·Р°РїСЂРѕСЃ"), e, e.GetType)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить событие"))) = trans("Да") Then e.Cancel = True
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))) = trans("Р”Р°") Then e.Cancel = True
         End If
     End Sub
     Private Sub obj_SentQueryRun(ByVal sender As Object, ByVal e As EventArgs)
-        RunSobyt(MyObj, trans("Отправился запрос"), e, e.GetType)
+        RunSobyt(MyObj, trans("РћС‚РїСЂР°РІРёР»СЃСЏ Р·Р°РїСЂРѕСЃ"), e, e.GetType)
     End Sub
     Private Sub obj_ReceivedResponseRun(ByVal sender As Object, ByVal e As EventArgs)
-        RunSobyt(MyObj, trans("Пришел ответ"), e, e.GetType)
+        RunSobyt(MyObj, trans("РџСЂРёС€РµР» РѕС‚РІРµС‚"), e, e.GetType)
     End Sub
     Private Sub obj_DownloadCancelledRun(ByVal sender As Object, ByVal e As EventArgs)
-        RunSobyt(MyObj, trans("Загрузка отменена"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р—Р°РіСЂСѓР·РєР° РѕС‚РјРµРЅРµРЅР°"), e, e.GetType)
     End Sub
 
-    ' РЕДКИЕ
+    ' Р Р•Р”РљРР•
     Sub Minimize(ByVal s As Object, ByVal e As EventArgs)
-        RunSobyt(MyObj, trans("Сворачивание"), Nothing, Me.GetType)
+        RunSobyt(MyObj, trans("РЎРІРѕСЂР°С‡РёРІР°РЅРёРµ"), Nothing, Me.GetType)
     End Sub
     Sub DoubleClickTray(ByVal s As Object, ByVal e As EventArgs)
-        RunSobyt(MyObj, trans("Двойной клик по трею"), Nothing, Me.GetType)
+        RunSobyt(MyObj, trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє РїРѕ С‚СЂРµСЋ"), Nothing, Me.GetType)
     End Sub
     Private Sub obj_ChangingValueRun(ByVal sender As Object, ByVal e As String)
-        RunSobyt(MyObj, trans("Изменение значения"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ"), e, e.GetType)
     End Sub
     Private Sub obj_ChangedValueRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Изменилось значение"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРёР»РѕСЃСЊ Р·РЅР°С‡РµРЅРёРµ"), e, e.GetType)
     End Sub
     Private Sub obj_OnEndRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Конец проигрывания"), Nothing, Me.GetType)
+        RunSobyt(MyObj, trans("РљРѕРЅРµС† РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ"), Nothing, Me.GetType)
     End Sub
     Public Sub obj_CheckedChangedRun(ByVal sender As Object, ByVal e As EventArgs)
-        RunSobyt(MyObj, trans("Изменение отметки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РР·РјРµРЅРµРЅРёРµ РѕС‚РјРµС‚РєРё"), e, e.GetType)
     End Sub
     Private Sub obj_HScroll(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Горизонтальная прокрутка"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°"), e, e.GetType)
     End Sub
     Private Sub obj_VScroll(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Вертикальная прокрутка"), e, e.GetType)
+        RunSobyt(MyObj, trans("Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°"), e, e.GetType)
     End Sub
     Private Sub obj_LinkClicked(ByVal sender As Object, ByVal e As System.Windows.Forms.LinkClickedEventArgs)
         If DaOrNet(MyObj.obj.props.InternetLink) Then MyObj.obj.props.GoInternetLink(e.LinkText)
-        RunSobyt(MyObj, trans("Клик по ссылке документа"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљР»РёРє РїРѕ СЃСЃС‹Р»РєРµ РґРѕРєСѓРјРµРЅС‚Р°"), e, e.GetType)
     End Sub
     Private Sub obj_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If proj.alreadyRun Then Exit Sub
         obj.props.IntervalCount += 1
-        RunSobyt(MyObj, trans("Тикнул"), e, e.GetType)
+        RunSobyt(MyObj, trans("РўРёРєРЅСѓР»"), e, e.GetType)
     End Sub
     Public Sub obj_ClickButtonRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Клик кнопки"), e, e.GetType)
+        RunSobyt(MyObj, trans("РљР»РёРє РєРЅРѕРїРєРё"), e, e.GetType)
     End Sub
     Public Sub obj_ActivationSuccessulRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Активация успешная"), e, e.GetType)
+        RunSobyt(MyObj, trans("РђРєС‚РёРІР°С†РёСЏ СѓСЃРїРµС€РЅР°СЏ"), e, e.GetType)
     End Sub
     Public Sub obj_ActivationFailedRun(ByVal sender As Object, ByVal e As System.EventArgs)
-        RunSobyt(MyObj, trans("Активация неудачная"), e, e.GetType)
+        RunSobyt(MyObj, trans("РђРєС‚РёРІР°С†РёСЏ РЅРµСѓРґР°С‡РЅР°СЏ"), e, e.GetType)
     End Sub
 
-    ' нужные
+    ' РЅСѓР¶РЅС‹Рµ
     Private Sub obj_DisposedNado(ByVal sender As Object, ByVal e As System.EventArgs)
         Dim i As Integer
         If Iz.IsFORM(MyObj) Then
@@ -1736,18 +1736,18 @@ Public Class Objetus
     End Sub
     Private Sub WebBrowser_NewWindowNado(ByVal sender As Object, ByVal e As System.ComponentModel.CancelEventArgs)
         If proj.Param.ParamyUp Is Nothing = False Then
-            If proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить в новом окне"))) = trans("Да") Then
-                proj.Param.ParamyUp(UCase(MyZnak & trans("Отменить в новом окне"))) = ""
+            If proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ"))) = trans("Р”Р°") Then
+                proj.Param.ParamyUp(UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ"))) = ""
                 e.Cancel = True : Exit Sub
             End If
         End If
         If e.Cancel = False And obj.lastLink <> "" Then
-            If UCase(obj.props.OpenNewWindowLink) = UCase(trans("В данном браузере")) Then
+            If UCase(obj.props.OpenNewWindowLink) = UCase(trans("Р’ РґР°РЅРЅРѕРј Р±СЂР°СѓР·РµСЂРµ")) Then
                 obj.Navigate(obj.lastlink)
                 e.Cancel = True
-            ElseIf UCase(obj.props.OpenNewWindowLink) = UCase(trans("По умолчанию")) Then
+            ElseIf UCase(obj.props.OpenNewWindowLink) = UCase(trans("РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")) Then
             Else
-                ' Пробуем получить переданный браузер
+                ' РџСЂРѕР±СѓРµРј РїРѕР»СѓС‡РёС‚СЊ РїРµСЂРµРґР°РЅРЅС‹Р№ Р±СЂР°СѓР·РµСЂ
                 Dim brws As Object = RunProj.GetObjFromUniqName(obj.props.OpenNewWindowLink)
                 If brws Is Nothing Then Errors.MessangeExclamen(Errors.InvalidWebBrowser(obj.props.OpenNewWindowLink)) : Exit Sub
                 brws.props.Url = obj.lastLink
@@ -1762,7 +1762,7 @@ Public Class Objetus
     End Sub
 #End Region
 
-    '<<<<<<<< ДЕЙСТВИЯ >>>>>>>>>
+    '<<<<<<<< Р”Р•Р™РЎРўР’РРЇ >>>>>>>>>
 #Region "DEISTVIA"
     Sub AddNode(Optional ByVal name As String = "", Optional ByVal index As Integer = -1)
         If name = "" Then name = obj.Props.name
@@ -1854,7 +1854,7 @@ Public Class Objetus
         If isPoleznie(MyObj.obj) Then MyForm = peremens2.proj.f(peremens2.proj.f.Length - 1) : Return MyForm
         Dim cont = MyObj, i, j As Integer
         If Iz.IsCM(cont.conteiner) Then MyForm = cont.conteiner.GetMyForm : Return MyForm
-        If obj.TypeObj = "PoluObj" Then ' Определение формы для полуобъектов
+        If obj.TypeObj = "PoluObj" Then ' РћРїСЂРµРґРµР»РµРЅРёРµ С„РѕСЂРјС‹ РґР»СЏ РїРѕР»СѓРѕР±СЉРµРєС‚РѕРІ
             If MyObj.conteiner Is Nothing = False Then
                 If Iz.IsFORM(MyObj.conteiner) Then MyForm = MyObj.conteiner : Return MyForm
             End If
@@ -1867,17 +1867,17 @@ Public Class Objetus
                     If MyObj Is proj.f(i).MyObjs(j) Then If Iz.IsFORM(proj.f(i).MyObjs(0)) Then MyForm = proj.f(i).MyObjs(0) : Return MyForm
                 Next
             Next
-            ' если проект не в запуске
+            ' РµСЃР»Рё РїСЂРѕРµРєС‚ РЅРµ РІ Р·Р°РїСѓСЃРєРµ
             If proj.ActiveForm Is Nothing = False Then Return Nothing
-            ' если проект run
+            ' РµСЃР»Рё РїСЂРѕРµРєС‚ run
             MyForm = proj.f(proj.f.Length - 1) : Return MyForm
-        Else ' Определение формы для обычных объектов
+        Else ' РћРїСЂРµРґРµР»РµРЅРёРµ С„РѕСЂРјС‹ РґР»СЏ РѕР±С‹С‡РЅС‹С… РѕР±СЉРµРєС‚РѕРІ
             Dim iters As Integer
             While cont.conteiner Is Nothing = False
                 cont = cont.conteiner
                 If Iz.IsCM(cont) Then MyForm = cont.GetMyForm : Return MyForm
                 iters += 1
-                If iters > 200 Then Throw New Exception("Ошибка объекта " + cont.conteiner.NodeTemp.Text)
+                If iters > 200 Then Throw New Exception("РћС€РёР±РєР° РѕР±СЉРµРєС‚Р° " + cont.conteiner.NodeTemp.Text)
             End While
             If cont.obj.TypeObj = "IncludeObj" And withNothing = False Then MyForm = proj.ActiveForm : Return MyForm
             If Iz.IsFORM(MyObj) Then MyForm = cont : Return MyForm
@@ -1899,8 +1899,8 @@ Public Class Objetus
         Dim name As String = obj.Props.name ', i, j As Integer
         If oldName = Nothing Then oldName = obj.Props.name
         If ExistNode(oldName) = False Then Exit Sub
-        ' Обновление имени
-        ' Если ветки с новым инемен еще не существует или её переименовывают
+        ' РћР±РЅРѕРІР»РµРЅРёРµ РёРјРµРЅРё
+        ' Р•СЃР»Рё РІРµС‚РєРё СЃ РЅРѕРІС‹Рј РёРЅРµРјРµРЅ РµС‰Рµ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РёР»Рё РµС‘ РїРµСЂРµРёРјРµРЅРѕРІС‹РІР°СЋС‚
         If ExistNode(name, oldName) = False Or name <> oldName Then
             Dim temp
             Try

@@ -1,4 +1,4 @@
-Imports System.Net.Sockets
+﻿Imports System.Net.Sockets
 
 ''' <summary>
 ''' This call contains shared methods that any class can use.

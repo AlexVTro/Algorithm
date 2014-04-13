@@ -8,7 +8,7 @@
         If Me.Tag <> "" Then End
     End Sub
     Private Sub Demo_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.BackgroundImage = Image.FromFile(SkinsPath & "\oblozhka.jpg")
+        Me.BackgroundImage = Image.FromFile(OblozhkaPath)
         TextBox2.Text = LoadProgress()
         Me.Text = transInfc(Me.Text)
         Label1.Text = transInfc(Label1.Text)

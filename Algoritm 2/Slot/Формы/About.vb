@@ -2,13 +2,14 @@
 
     Private Sub About_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Try
-            Me.BackgroundImage = Image.FromFile(SkinsPath & "\oblozhka.jpg")
+            Me.BackgroundImage = Image.FromFile(OblozhkaPath)
             If lang_interface = "Russian" Then
                 LinkLabel1.Text = "www.Algoritm2.ru"
             Else
                 LinkLabel1.Text = "www.Algorithm2.com"
             End If
             Me.Text = transInfc(Me.Text)
+            VersionLabel.Text = AppNameWithVersion
         Catch ex As Exception
             MsgBox(ex.Message, MsgBoxStyle.Critical)
         End Try

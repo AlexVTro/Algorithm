@@ -117,4 +117,7 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Label3.Text" xml:space="preserve">
+    <value>Если вы не знаете как исправить ошибку, то скачайте Visual Studio Express (кнопка ниже), Экспортируйте ваш проект в VB.NET, Запустите получившейся файл *.vbproj в Visual Studio и попробуйте выполнить программу (клавиша F5). Ошибка вам подсветится.</value>
+  </data>
 </root>

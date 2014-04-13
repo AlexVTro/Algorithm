@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Argument
     Inherits System.Windows.Forms.UserControl
 
@@ -35,7 +35,7 @@ Partial Class Argument
         Me.ArgLabel.Name = "ArgLabel"
         Me.ArgLabel.Size = New System.Drawing.Size(307, 14)
         Me.ArgLabel.TabIndex = 2
-        Me.ArgLabel.Text = "Аргумент1"
+        Me.ArgLabel.Text = "РђСЂРіСѓРјРµРЅС‚1"
         Me.ArgLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'forEditPr

@@ -2,7 +2,7 @@
 
     Dim EdPr As New EditProperty(True, True)
     Private Sub Edu_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-        Me.BackgroundImage = Image.FromFile(SkinsPath & "\oblozhka.jpg")
+        Me.BackgroundImage = Image.FromFile(OblozhkaPath)
         Button1.Text = transInfc(Button1.Text)
         Button3.Text = transInfc(Button3.Text)
         Me.Text = transInfc(Me.Text)

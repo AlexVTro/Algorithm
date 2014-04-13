@@ -1,4 +1,4 @@
-Public Class Arguments
+﻿Public Class Arguments
     Public Args() As Argument
     Public border As Integer = 0
     Public borderIn As Integer = 0

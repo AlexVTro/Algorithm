@@ -1,23 +1,23 @@
-' ОБЪЕКТ СОБЫТИЙ    
+п»ї' РћР‘РЄР•РљРў РЎРћР‘Р«РўРР™    
 #Region "SOBYTIYA"
-' ТАК СКАЗАТЬ MyObj МОИХ СОБЫТИЙ.
+' РўРђРљ РЎРљРђР—РђРўР¬ MyObj РњРћРРҐ РЎРћР‘Р«РўРР™.
 Public Class Sobitiya
     Inherits Objetus
-    Public Propertys(), Methods(), Sobyts() As String ' Все свойства и события данного объекта
+    Public Propertys(), Methods(), Sobyts() As String ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° Рё СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
     Public PropertysUp(), MethodsUp(), SobytsUp() As String
     Sub New(ByVal sobyt As String)
-        ' занести все свойства события sobyt в propertys
+        ' Р·Р°РЅРµСЃС‚Рё РІСЃРµ СЃРІРѕР№СЃС‚РІР° СЃРѕР±С‹С‚РёСЏ sobyt РІ propertys
         Dim Sobyts As New PropertysSobyt(Nothing, Nothing, Nothing, sobyt)
         ReDim Propertys(Sobyts.Paramy.Count - 1)
         Sobyts.Paramy.Keys.CopyTo(Propertys, 0)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
     End Sub
     Sub New(ByVal param As PropertysSobyt)
-        ' занести все свойства события sobyt в propertys
+        ' Р·Р°РЅРµСЃС‚Рё РІСЃРµ СЃРІРѕР№СЃС‚РІР° СЃРѕР±С‹С‚РёСЏ sobyt РІ propertys
         ReDim Propertys(param.Paramy.Count - 1)
         param.Paramy.Keys.CopyTo(Propertys, 0)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
     End Sub
     Public Function EstProperty(ByVal prop As String) As Boolean
@@ -28,9 +28,9 @@ Public Class Sobitiya
 End Class
 #End Region
 
-' ПОЛЕЗНЫЕ ОБЪЕКТЫ
+' РџРћР›Р•Р—РќР«Р• РћР‘РЄР•РљРўР«
 #Region "POLEZNIE"
-' ТАК СКАЗАТЬ Obj ВСЕХ ПОЛЕЗНЫХ ОБЪЕКТОВ
+' РўРђРљ РЎРљРђР—РђРўР¬ Obj Р’РЎР•РҐ РџРћР›Р•Р—РќР«РҐ РћР‘РЄР•РљРўРћР’
 Public Class PoleznieObj
     Inherits Windows.Forms.Control
     Public TypeObj As String = "Polezniy"
@@ -44,193 +44,193 @@ Public Class PoleznieObj
         Props.Name = n
     End Sub
 End Class
-' ТАК СКАЗАТЬ MyObj ВСЕХ ПОЛЕЗНЫХ ОБЪЕКТОВ
+' РўРђРљ РЎРљРђР—РђРўР¬ MyObj Р’РЎР•РҐ РџРћР›Р•Р—РќР«РҐ РћР‘РЄР•РљРўРћР’
 Public Class Poleznie
     Inherits Objetus
-    Public Propertys(), Sobyts(), Methods() As String ' Все свойства объекта
+    Public Propertys(), Sobyts(), Methods() As String ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РѕР±СЉРµРєС‚Р°
     Public PropertysUp(), SobytsUp(), MethodsUp(), type As String
 
     Sub New(ByVal tip As String)
         type = tip
-        CreateObject(New PoleznieObj(type)) ' Создать контрол
+        CreateObject(New PoleznieObj(type)) ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         obj.defaultName = tip
 
         Select Case type
-            Case MyZnak & trans("Экран")
-                Dim tempP() As String = {MyZnak & trans("Рисунок рабочего стола"), MyZnak & trans("Стиль рабочего стола"), _
-                    MyZnak & trans("Разрешение экрана"), _
-                    MyZnak & trans("Скриншот"), MyZnak & trans("Скриншот объекта"), _
-                    MyZnak & trans("Частота экрана"), MyZnak & trans("Качество цветопередачи"), MyZnak & trans("Заставка")}
-                'Объект съемки~~Shooting object
+            Case MyZnak & trans("Р­РєСЂР°РЅ")
+                Dim tempP() As String = {MyZnak & trans("Р РёСЃСѓРЅРѕРє СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°"), MyZnak & trans("РЎС‚РёР»СЊ СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°"), _
+                    MyZnak & trans("Р Р°Р·СЂРµС€РµРЅРёРµ СЌРєСЂР°РЅР°"), _
+                    MyZnak & trans("РЎРєСЂРёРЅС€РѕС‚"), MyZnak & trans("РЎРєСЂРёРЅС€РѕС‚ РѕР±СЉРµРєС‚Р°"), _
+                    MyZnak & trans("Р§Р°СЃС‚РѕС‚Р° СЌРєСЂР°РЅР°"), MyZnak & trans("РљР°С‡РµСЃС‚РІРѕ С†РІРµС‚РѕРїРµСЂРµРґР°С‡Рё"), MyZnak & trans("Р—Р°СЃС‚Р°РІРєР°")}
+                'РћР±СЉРµРєС‚ СЃСЉРµРјРєРё~~Shooting object
 
-                'Сделать скриншот~~ScreenshotToClipboard M
-                'Скриншот~~Screenshot RO
-                'Сделать скриншот объекта~~ScreenshotOfObjectToClipboard M
-                'Скриншот объекта~~ScreenshotOfObject RO
-                'Объект на печать~~PrintObject 
+                'РЎРґРµР»Р°С‚СЊ СЃРєСЂРёРЅС€РѕС‚~~ScreenshotToClipboard M
+                'РЎРєСЂРёРЅС€РѕС‚~~Screenshot RO
+                'РЎРґРµР»Р°С‚СЊ СЃРєСЂРёРЅС€РѕС‚ РѕР±СЉРµРєС‚Р°~~ScreenshotOfObjectToClipboard M
+                'РЎРєСЂРёРЅС€РѕС‚ РѕР±СЉРµРєС‚Р°~~ScreenshotOfObject RO
+                'РћР±СЉРµРєС‚ РЅР° РїРµС‡Р°С‚СЊ~~PrintObject 
                 Propertys = tempP
-                Dim tempM() As String = {MyZnak & trans("Сделать скриншот")}
+                Dim tempM() As String = {MyZnak & trans("РЎРґРµР»Р°С‚СЊ СЃРєСЂРёРЅС€РѕС‚")}
                 Methods = tempM
-                obj.LastProp = MyZnak & trans("Рисунок рабочего стола")
-            Case MyZnak & trans("Файлы и папки")
-                Dim tempP() As String = {MyZnak & trans("Скрытый"), MyZnak & trans("Только для чтения"), _
-                    MyZnak & trans("Архивный"), MyZnak & trans("Папка"), MyZnak & trans("Зашифрованный"), _
-                    MyZnak & trans("Не индексируется"), MyZnak & trans("Системный"), MyZnak & trans("Временный"), _
-                    MyZnak & trans("Время создания"), MyZnak & trans("Время доступа"), _
-                    MyZnak & trans("Время изменения"), MyZnak & trans("Существует файл"), _
-                    MyZnak & trans("Существует папка"), MyZnak & trans("Получить файлы"), _
-                    MyZnak & trans("Получить папки"), MyZnak & trans("Определить корневую"), _
-                    MyZnak & trans("Определить родительскую"), MyZnak & trans("Получить диски"), _
-                    MyZnak & trans("Определить имя папки"), MyZnak & trans("Определить имя файла"), _
-                    MyZnak & trans("Определить расширение"), MyZnak & trans("Определить без расширения"), _
-                    MyZnak & trans("Определить размер файла"), MyZnak & trans("Поиск файлов"), _
-                    MyZnak & trans("Открыть файл"), _
-                    MyZnak & trans("Количество файлов"), MyZnak & trans("Количество папок") _
+                obj.LastProp = MyZnak & trans("Р РёСЃСѓРЅРѕРє СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°")
+            Case MyZnak & trans("Р¤Р°Р№Р»С‹ Рё РїР°РїРєРё")
+                Dim tempP() As String = {MyZnak & trans("РЎРєСЂС‹С‚С‹Р№"), MyZnak & trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"), _
+                    MyZnak & trans("РђСЂС…РёРІРЅС‹Р№"), MyZnak & trans("РџР°РїРєР°"), MyZnak & trans("Р—Р°С€РёС„СЂРѕРІР°РЅРЅС‹Р№"), _
+                    MyZnak & trans("РќРµ РёРЅРґРµРєСЃРёСЂСѓРµС‚СЃСЏ"), MyZnak & trans("РЎРёСЃС‚РµРјРЅС‹Р№"), MyZnak & trans("Р’СЂРµРјРµРЅРЅС‹Р№"), _
+                    MyZnak & trans("Р’СЂРµРјСЏ СЃРѕР·РґР°РЅРёСЏ"), MyZnak & trans("Р’СЂРµРјСЏ РґРѕСЃС‚СѓРїР°"), _
+                    MyZnak & trans("Р’СЂРµРјСЏ РёР·РјРµРЅРµРЅРёСЏ"), MyZnak & trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ С„Р°Р№Р»"), _
+                    MyZnak & trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ РїР°РїРєР°"), MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ С„Р°Р№Р»С‹"), _
+                    MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ РїР°РїРєРё"), MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РєРѕСЂРЅРµРІСѓСЋ"), _
+                    MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂРѕРґРёС‚РµР»СЊСЃРєСѓСЋ"), MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ РґРёСЃРєРё"), _
+                    MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РёРјСЏ РїР°РїРєРё"), MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РёРјСЏ С„Р°Р№Р»Р°"), _
+                    MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ"), MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ Р±РµР· СЂР°СЃС€РёСЂРµРЅРёСЏ"), _
+                    MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р°"), MyZnak & trans("РџРѕРёСЃРє С„Р°Р№Р»РѕРІ"), _
+                    MyZnak & trans("РћС‚РєСЂС‹С‚СЊ С„Р°Р№Р»"), _
+                    MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С„Р°Р№Р»РѕРІ"), MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°РїРѕРє") _
                 }
-                Dim tempM() As String = {MyZnak & trans("Сохранить в файле"), MyZnak & trans("Копировать"), _
-                     MyZnak & trans("Зашифровать"), MyZnak & trans("Расшифровать"), MyZnak & trans("Добавить текст"), _
-                     MyZnak & trans("Переместить"), MyZnak & trans("Удалить"), MyZnak & trans("Создать папку"), _
-                     MyZnak & trans("Сохранить рисунок"), MyZnak & trans("Переименовать"), _
-                     MyZnak & trans("Открыть папку") _
+                Dim tempM() As String = {MyZnak & trans("РЎРѕС…СЂР°РЅРёС‚СЊ РІ С„Р°Р№Р»Рµ"), MyZnak & trans("РљРѕРїРёСЂРѕРІР°С‚СЊ"), _
+                     MyZnak & trans("Р—Р°С€РёС„СЂРѕРІР°С‚СЊ"), MyZnak & trans("Р Р°СЃС€РёС„СЂРѕРІР°С‚СЊ"), MyZnak & trans("Р”РѕР±Р°РІРёС‚СЊ С‚РµРєСЃС‚"), _
+                     MyZnak & trans("РџРµСЂРµРјРµСЃС‚РёС‚СЊ"), MyZnak & trans("РЈРґР°Р»РёС‚СЊ"), MyZnak & trans("РЎРѕР·РґР°С‚СЊ РїР°РїРєСѓ"), _
+                     MyZnak & trans("РЎРѕС…СЂР°РЅРёС‚СЊ СЂРёСЃСѓРЅРѕРє"), MyZnak & trans("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ"), _
+                     MyZnak & trans("РћС‚РєСЂС‹С‚СЊ РїР°РїРєСѓ") _
                 }
                 Propertys = tempP
                 Methods = tempM
-                obj.LastProp = MyZnak & trans("Существует файл")
-            Case MyZnak & trans("Прерывания")
+                obj.LastProp = MyZnak & trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ С„Р°Р№Р»")
+            Case MyZnak & trans("РџСЂРµСЂС‹РІР°РЅРёСЏ")
                 Dim tempP() As String = {}
                 Propertys = tempP
-                Dim tempM() As String = {MyZnak & trans("Завершить программу"), MyZnak & trans("Завершить событие"), _
-                    MyZnak & trans("Завершить цикл"), MyZnak & trans("Пропускать ошибки")}
+                Dim tempM() As String = {MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ"), MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ СЃРѕР±С‹С‚РёРµ"), _
+                    MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ С†РёРєР»"), MyZnak & trans("РџСЂРѕРїСѓСЃРєР°С‚СЊ РѕС€РёР±РєРё")}
                 Methods = tempM
-                obj.LastProp = MyZnak & trans("Завершить программу")
-            Case MyZnak & trans("Система")
-                Dim tempP() As String = {MyZnak & trans("Мышь X"), MyZnak & trans("Мышь Y"), _
-                    MyZnak & trans("Клавиша клавиатуры"), _
-                    MyZnak & trans("Нажат альт"), MyZnak & trans("Нажат шифт"), _
-                    MyZnak & trans("Нажат контрол"), MyZnak & trans("Нажата мыши левая"), _
-                    MyZnak & trans("Нажата мыши правая"), MyZnak & trans("Вращается колесико"), _
-                    MyZnak & trans("Рисунок буфера обмена"), MyZnak & trans("Текст буфера обмена"), _
-                    MyZnak & trans("Выполнить с результатом"), _
-                    MyZnak & trans("Окно в фокусе"), MyZnak & trans("Процессы системы"), _
-                    MyZnak & trans("Окна системы") _
+                obj.LastProp = MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ")
+            Case MyZnak & trans("РЎРёСЃС‚РµРјР°")
+                Dim tempP() As String = {MyZnak & trans("РњС‹С€СЊ X"), MyZnak & trans("РњС‹С€СЊ Y"), _
+                    MyZnak & trans("РљР»Р°РІРёС€Р° РєР»Р°РІРёР°С‚СѓСЂС‹"), _
+                    MyZnak & trans("РќР°Р¶Р°С‚ Р°Р»СЊС‚"), MyZnak & trans("РќР°Р¶Р°С‚ С€РёС„С‚"), _
+                    MyZnak & trans("РќР°Р¶Р°С‚ РєРѕРЅС‚СЂРѕР»"), MyZnak & trans("РќР°Р¶Р°С‚Р° РјС‹С€Рё Р»РµРІР°СЏ"), _
+                    MyZnak & trans("РќР°Р¶Р°С‚Р° РјС‹С€Рё РїСЂР°РІР°СЏ"), MyZnak & trans("Р’СЂР°С‰Р°РµС‚СЃСЏ РєРѕР»РµСЃРёРєРѕ"), _
+                    MyZnak & trans("Р РёСЃСѓРЅРѕРє Р±СѓС„РµСЂР° РѕР±РјРµРЅР°"), MyZnak & trans("РўРµРєСЃС‚ Р±СѓС„РµСЂР° РѕР±РјРµРЅР°"), _
+                    MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ СЃ СЂРµР·СѓР»СЊС‚Р°С‚РѕРј"), _
+                    MyZnak & trans("РћРєРЅРѕ РІ С„РѕРєСѓСЃРµ"), MyZnak & trans("РџСЂРѕС†РµСЃСЃС‹ СЃРёСЃС‚РµРјС‹"), _
+                    MyZnak & trans("РћРєРЅР° СЃРёСЃС‚РµРјС‹") _
                     }
-                Dim tempM() As String = {MyZnak & trans("Выполнить"), MyZnak & trans("Очистить буфер обмена"), _
-                    MyZnak & trans("Вращать колесико"), MyZnak & trans("Выключить компьютер"), _
-                    MyZnak & trans("Перезагрузить компьютер"), MyZnak & trans("Набрать текст"), _
-                    MyZnak & trans("Процесс убить") _
+                Dim tempM() As String = {MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ"), MyZnak & trans("РћС‡РёСЃС‚РёС‚СЊ Р±СѓС„РµСЂ РѕР±РјРµРЅР°"), _
+                    MyZnak & trans("Р’СЂР°С‰Р°С‚СЊ РєРѕР»РµСЃРёРєРѕ"), MyZnak & trans("Р’С‹РєР»СЋС‡РёС‚СЊ РєРѕРјРїСЊСЋС‚РµСЂ"), _
+                    MyZnak & trans("РџРµСЂРµР·Р°РіСЂСѓР·РёС‚СЊ РєРѕРјРїСЊСЋС‚РµСЂ"), MyZnak & trans("РќР°Р±СЂР°С‚СЊ С‚РµРєСЃС‚"), _
+                    MyZnak & trans("РџСЂРѕС†РµСЃСЃ СѓР±РёС‚СЊ") _
                   }
                 Propertys = tempP
                 Methods = tempM
-                obj.LastProp = MyZnak & trans("Выполнить")
-            Case MyZnak & trans("Реестр")
-                Dim tempP() As String = {MyZnak & trans("Значение реестра"), MyZnak & trans("Ключ существует"), _
-                    MyZnak & trans("Папка существует"), MyZnak & trans("Тип ключа") _
+                obj.LastProp = MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ")
+            Case MyZnak & trans("Р РµРµСЃС‚СЂ")
+                Dim tempP() As String = {MyZnak & trans("Р—РЅР°С‡РµРЅРёРµ СЂРµРµСЃС‚СЂР°"), MyZnak & trans("РљР»СЋС‡ СЃСѓС‰РµСЃС‚РІСѓРµС‚"), _
+                    MyZnak & trans("РџР°РїРєР° СЃСѓС‰РµСЃС‚РІСѓРµС‚"), MyZnak & trans("РўРёРї РєР»СЋС‡Р°") _
                     }
-                Dim tempM() As String = {MyZnak & trans("Удалить значение"), MyZnak & trans("Удалить папку"), _
-                    MyZnak & trans("Создать подпапку"), MyZnak & trans("Создать ключ") _
+                Dim tempM() As String = {MyZnak & trans("РЈРґР°Р»РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ"), MyZnak & trans("РЈРґР°Р»РёС‚СЊ РїР°РїРєСѓ"), _
+                    MyZnak & trans("РЎРѕР·РґР°С‚СЊ РїРѕРґРїР°РїРєСѓ"), MyZnak & trans("РЎРѕР·РґР°С‚СЊ РєР»СЋС‡") _
                     }
                 Propertys = tempP
                 Methods = tempM
-                obj.LastProp = MyZnak & trans("Значение реестра")
-            Case MyZnak & trans("Вызвать событие")
-                ' все создается здесь - CreateSobytCalls()
+                obj.LastProp = MyZnak & trans("Р—РЅР°С‡РµРЅРёРµ СЂРµРµСЃС‚СЂР°")
+            Case MyZnak & trans("Р’С‹Р·РІР°С‚СЊ СЃРѕР±С‹С‚РёРµ")
+                ' РІСЃРµ СЃРѕР·РґР°РµС‚СЃСЏ Р·РґРµСЃСЊ - CreateSobytCalls()
                 Propertys = Nothing
                 Methods = Nothing
-            Case MyZnak & trans("Текст")
-                Dim tempP() As String = {MyZnak & trans("Символ по номеру"), MyZnak & trans("Сравнить тексты"), _
-                    MyZnak & trans("Поиск в тексте"), MyZnak & trans("Поиск номера строки"), MyZnak & trans("Поиск в тексте с конца"), _
-                    MyZnak & trans("Поиск с учетом регистра"), MyZnak & trans("Поиск с регулярными выражениями"), _
-                    MyZnak & trans("Количество символов"), MyZnak & trans("Разбить на части"), _
-                    MyZnak & trans("Взять кусок текста"), MyZnak & trans("Количество частей текста"), _
-                    MyZnak & trans("Кавычки убрать"), MyZnak & trans("Кавычками обособить"), _
-                    MyZnak & trans("Поиск без кавычек"), MyZnak & trans("Разбить на части без кавычек"), _
-                    MyZnak & trans("Количество частей без кавычек"), _
-                    MyZnak & trans("Текст содержит"), MyZnak & trans("Текст не содержит"), _
-                    MyZnak & trans("Строка по номеру"), MyZnak & trans("Количество строк"), _
-                    MyZnak & trans("Вставить символы в текст"), _
-                    MyZnak & trans("Удалить кусок текста"), MyZnak & trans("Заменить"), _
-                    MyZnak & trans("Заменить все"), MyZnak & trans("Сделать буквы прописными"), _
-                    MyZnak & trans("Сделать буквы заглавными"), MyZnak & trans("Убрать пробелы"), _
-                    MyZnak & trans("Убрать пробелы в начале"), MyZnak & trans("Убрать пробелы в конце"), _
-                    MyZnak & trans("Текст состоит из"), MyZnak & trans("Текст есть число"), _
-                    MyZnak & trans("Текст есть цифры"), _
-                    MyZnak & trans("Зашифровать текст"), MyZnak & trans("Расшифровать текст") _
+            Case MyZnak & trans("РўРµРєСЃС‚")
+                Dim tempP() As String = {MyZnak & trans("РЎРёРјРІРѕР» РїРѕ РЅРѕРјРµСЂСѓ"), MyZnak & trans("РЎСЂР°РІРЅРёС‚СЊ С‚РµРєСЃС‚С‹"), _
+                    MyZnak & trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ"), MyZnak & trans("РџРѕРёСЃРє РЅРѕРјРµСЂР° СЃС‚СЂРѕРєРё"), MyZnak & trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ СЃ РєРѕРЅС†Р°"), _
+                    MyZnak & trans("РџРѕРёСЃРє СЃ СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°"), MyZnak & trans("РџРѕРёСЃРє СЃ СЂРµРіСѓР»СЏСЂРЅС‹РјРё РІС‹СЂР°Р¶РµРЅРёСЏРјРё"), _
+                    MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ"), MyZnak & trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё"), _
+                    MyZnak & trans("Р’Р·СЏС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°"), MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ С‚РµРєСЃС‚Р°"), _
+                    MyZnak & trans("РљР°РІС‹С‡РєРё СѓР±СЂР°С‚СЊ"), MyZnak & trans("РљР°РІС‹С‡РєР°РјРё РѕР±РѕСЃРѕР±РёС‚СЊ"), _
+                    MyZnak & trans("РџРѕРёСЃРє Р±РµР· РєР°РІС‹С‡РµРє"), MyZnak & trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё Р±РµР· РєР°РІС‹С‡РµРє"), _
+                    MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ Р±РµР· РєР°РІС‹С‡РµРє"), _
+                    MyZnak & trans("РўРµРєСЃС‚ СЃРѕРґРµСЂР¶РёС‚"), MyZnak & trans("РўРµРєСЃС‚ РЅРµ СЃРѕРґРµСЂР¶РёС‚"), _
+                    MyZnak & trans("РЎС‚СЂРѕРєР° РїРѕ РЅРѕРјРµСЂСѓ"), MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє"), _
+                    MyZnak & trans("Р’СЃС‚Р°РІРёС‚СЊ СЃРёРјРІРѕР»С‹ РІ С‚РµРєСЃС‚"), _
+                    MyZnak & trans("РЈРґР°Р»РёС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°"), MyZnak & trans("Р—Р°РјРµРЅРёС‚СЊ"), _
+                    MyZnak & trans("Р—Р°РјРµРЅРёС‚СЊ РІСЃРµ"), MyZnak & trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ РїСЂРѕРїРёСЃРЅС‹РјРё"), _
+                    MyZnak & trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ Р·Р°РіР»Р°РІРЅС‹РјРё"), MyZnak & trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹"), _
+                    MyZnak & trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РЅР°С‡Р°Р»Рµ"), MyZnak & trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РєРѕРЅС†Рµ"), _
+                    MyZnak & trans("РўРµРєСЃС‚ СЃРѕСЃС‚РѕРёС‚ РёР·"), MyZnak & trans("РўРµРєСЃС‚ РµСЃС‚СЊ С‡РёСЃР»Рѕ"), _
+                    MyZnak & trans("РўРµРєСЃС‚ РµСЃС‚СЊ С†РёС„СЂС‹"), _
+                    MyZnak & trans("Р—Р°С€РёС„СЂРѕРІР°С‚СЊ С‚РµРєСЃС‚"), MyZnak & trans("Р Р°СЃС€РёС„СЂРѕРІР°С‚СЊ С‚РµРєСЃС‚") _
                 }
                 Dim tempM() As String = {}
                 Propertys = tempP
                 Methods = tempM
-                obj.LastProp = MyZnak & trans("Взять кусок текста")
-            Case MyZnak & trans("Показать сообщение")
-                Dim tempP() As String = {MyZnak & trans("Была нажата Отмена"), MyZnak & trans("Была нажата Ок") _
-                    , MyZnak & trans("Была нажата Повторить"), MyZnak & trans("Была нажата Да") _
-                    , MyZnak & trans("Была нажата Нет"), MyZnak & trans("Была нажата Прервать") _
-                    , MyZnak & trans("Была нажата Пропустить"), MyZnak & trans("Была нажата Справка") _
+                obj.LastProp = MyZnak & trans("Р’Р·СЏС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°")
+            Case MyZnak & trans("РџРѕРєР°Р·Р°С‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ")
+                Dim tempP() As String = {MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РћС‚РјРµРЅР°"), MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РћРє") _
+                    , MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџРѕРІС‚РѕСЂРёС‚СЊ"), MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° Р”Р°") _
+                    , MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РќРµС‚"), MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџСЂРµСЂРІР°С‚СЊ") _
+                    , MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџСЂРѕРїСѓСЃС‚РёС‚СЊ"), MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РЎРїСЂР°РІРєР°") _
                     }
-                Dim tempM() As String = {MyZnak & trans("Запустить сообщение") _
-                    }
-                Propertys = tempP
-                Methods = tempM
-                obj.LastProp = MyZnak & trans("Запустить сообщение")
-            Case MyZnak & trans("Дата")
-                Dim tempP() As String = {MyZnak & trans("День месяца"), MyZnak & trans("День года") _
-                    , MyZnak & trans("День в неделе"), MyZnak & trans("Час") _
-                    , MyZnak & trans("Минута"), MyZnak & trans("Секунда") _
-                    , MyZnak & trans("Квартал"), MyZnak & trans("Неделя в году") _
-                    , MyZnak & trans("Год"), MyZnak & trans("Месяц"), MyZnak & trans("Время") _
-                    , MyZnak & trans("Секунд всего в дате"), MyZnak & trans("Дней в месяце") _
-                    , MyZnak & trans("Сейчас"), MyZnak & trans("Сегодня") _
-                    , MyZnak & trans("Прибавить дни"), MyZnak & trans("Прибавить часы") _
-                    , MyZnak & trans("Прибавить минуты"), MyZnak & trans("Прибавить секунды") _
-                    , MyZnak & trans("Прибавить кварталы"), MyZnak & trans("Прибавить недели") _
-                    , MyZnak & trans("Прибавить годы"), MyZnak & trans("Прибавить месяцы") _
-                    , MyZnak & trans("Разница в днях"), MyZnak & trans("Разница в часах") _
-                    , MyZnak & trans("Разница в минутах"), MyZnak & trans("Разница в секундах") _
-                    , MyZnak & trans("Разница в кварталах"), MyZnak & trans("Разница в неделях") _
-                    , MyZnak & trans("Разница в годах"), MyZnak & trans("Разница в месяцах") _
-                    , MyZnak & trans("День недели"), MyZnak & trans("Название месяца") _
-                    , MyZnak & trans("Дата в определенном формате") _
-                    }
-                Dim tempM() As String = {MyZnak & trans("Изменить время компьютера") _
+                Dim tempM() As String = {MyZnak & trans("Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ") _
                     }
                 Propertys = tempP
                 Methods = tempM
-                obj.LastProp = MyZnak & trans("Сейчас")
-            Case MyZnak & trans("Расширенные возможности")
+                obj.LastProp = MyZnak & trans("Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ")
+            Case MyZnak & trans("Р”Р°С‚Р°")
+                Dim tempP() As String = {MyZnak & trans("Р”РµРЅСЊ РјРµСЃСЏС†Р°"), MyZnak & trans("Р”РµРЅСЊ РіРѕРґР°") _
+                    , MyZnak & trans("Р”РµРЅСЊ РІ РЅРµРґРµР»Рµ"), MyZnak & trans("Р§Р°СЃ") _
+                    , MyZnak & trans("РњРёРЅСѓС‚Р°"), MyZnak & trans("РЎРµРєСѓРЅРґР°") _
+                    , MyZnak & trans("РљРІР°СЂС‚Р°Р»"), MyZnak & trans("РќРµРґРµР»СЏ РІ РіРѕРґСѓ") _
+                    , MyZnak & trans("Р“РѕРґ"), MyZnak & trans("РњРµСЃСЏС†"), MyZnak & trans("Р’СЂРµРјСЏ") _
+                    , MyZnak & trans("РЎРµРєСѓРЅРґ РІСЃРµРіРѕ РІ РґР°С‚Рµ"), MyZnak & trans("Р”РЅРµР№ РІ РјРµСЃСЏС†Рµ") _
+                    , MyZnak & trans("РЎРµР№С‡Р°СЃ"), MyZnak & trans("РЎРµРіРѕРґРЅСЏ") _
+                    , MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РґРЅРё"), MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ С‡Р°СЃС‹") _
+                    , MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РјРёРЅСѓС‚С‹"), MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ СЃРµРєСѓРЅРґС‹") _
+                    , MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РєРІР°СЂС‚Р°Р»С‹"), MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РЅРµРґРµР»Рё") _
+                    , MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РіРѕРґС‹"), MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РјРµСЃСЏС†С‹") _
+                    , MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РґРЅСЏС…"), MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ С‡Р°СЃР°С…") _
+                    , MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РјРёРЅСѓС‚Р°С…"), MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ СЃРµРєСѓРЅРґР°С…") _
+                    , MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РєРІР°СЂС‚Р°Р»Р°С…"), MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РЅРµРґРµР»СЏС…") _
+                    , MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РіРѕРґР°С…"), MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РјРµСЃСЏС†Р°С…") _
+                    , MyZnak & trans("Р”РµРЅСЊ РЅРµРґРµР»Рё"), MyZnak & trans("РќР°Р·РІР°РЅРёРµ РјРµСЃСЏС†Р°") _
+                    , MyZnak & trans("Р”Р°С‚Р° РІ РѕРїСЂРµРґРµР»РµРЅРЅРѕРј С„РѕСЂРјР°С‚Рµ") _
+                    }
+                Dim tempM() As String = {MyZnak & trans("РР·РјРµРЅРёС‚СЊ РІСЂРµРјСЏ РєРѕРјРїСЊСЋС‚РµСЂР°") _
+                    }
+                Propertys = tempP
+                Methods = tempM
+                obj.LastProp = MyZnak & trans("РЎРµР№С‡Р°СЃ")
+            Case MyZnak & trans("Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё")
                 Dim tempP() As String = {}
-                Dim tempM() As String = {MyZnak & trans("Выполнить код VBScript"), MyZnak & trans("Выполнить код Алгоритма2") _
-                    , MyZnak & trans("Выполнить код VBNet"), MyZnak & trans("Выполнить код CSharp") _
+                Dim tempM() As String = {MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ VBScript"), MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ РђР»РіРѕСЂРёС‚РјР°2") _
+                    , MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ VBNet"), MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ CSharp") _
                     }
                 Propertys = tempP
                 Methods = tempM
-                obj.LastProp = MyZnak & trans("Выполнить код VBNet")
+                obj.LastProp = MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ VBNet")
             Case Else
                 Exit Sub
         End Select
 
-        CreatePropertySobytsUp(Me) ' Настроить свойства
+        CreatePropertySobytsUp(Me) ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
     End Sub
-    ' Создание списка событий проекта
+    ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° СЃРѕР±С‹С‚РёР№ РїСЂРѕРµРєС‚Р°
     Public Sub CreateSobytCalls()
         Dim tempM() As String = Nothing, i As Integer
 
-        ' Чтобы не тормозило по чем зря
+        ' Р§С‚РѕР±С‹ РЅРµ С‚РѕСЂРјРѕР·РёР»Рѕ РїРѕ С‡РµРј Р·СЂСЏ
         If isDevelop = False And ProjEvents Is Nothing = False Then Exit Sub
 
         Dim tr As Object = tree
         If isDevelop = False Then tr = RunProj.tree
         Dim Nds() As TreeNode = GetNodesFromTypeTag("Sobyt", tr)
-        ' Чтобы не тормозило по чем зря. Если количество событий не изменилось в проекте, то непересоздавать из заново
+        ' Р§С‚РѕР±С‹ РЅРµ С‚РѕСЂРјРѕР·РёР»Рѕ РїРѕ С‡РµРј Р·СЂСЏ. Р•СЃР»Рё РєРѕР»РёС‡РµСЃС‚РІРѕ СЃРѕР±С‹С‚РёР№ РЅРµ РёР·РјРµРЅРёР»РѕСЃСЊ РІ РїСЂРѕРµРєС‚Рµ, С‚Рѕ РЅРµРїРµСЂРµСЃРѕР·РґР°РІР°С‚СЊ РёР· Р·Р°РЅРѕРІРѕ
         If isDevelop And ProjEvents Is Nothing = False And peremens.isRUN Then
             If Nds.Length = ProjEvents.Length Then Exit Sub
         End If
-        ' Создание списка событий
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° СЃРѕР±С‹С‚РёР№
         If Nds Is Nothing = False Then
             For i = 0 To Nds.Length - 1
                 Dim MyOs() As Object = GetMyObjsFromTreeNode(Nds(i))
                 If MyOs Is Nothing = False Then
                     If MyOs(0).GetType.ToString = "System.Windows.Forms.TreeNode" Then Exit Sub
                     Dim frObj As Object = MyOs(0).getMyForm().obj
-                    ' составление строки события
+                    ' СЃРѕСЃС‚Р°РІР»РµРЅРёРµ СЃС‚СЂРѕРєРё СЃРѕР±С‹С‚РёСЏ
                     ReDims(tempM)
                     tempM(tempM.Length - 1) = frObj.name & "_" & MyOs(0).obj.name & "_" & Nds(i).Text
                 End If
@@ -238,13 +238,13 @@ Public Class Poleznie
         End If
 
         Methods = tempM : ProjEvents = tempM
-        CreatePropertySobytsUp(Me) ' Настроить свойства
+        CreatePropertySobytsUp(Me) ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
     End Sub
 End Class
 
 #End Region
 
-' ИНТЕРФЕЙС ДЛЯ СОБЫТИЙ, ИСКУССТВЕННО СОЗДАННЫХ МНОЙ
+' РРќРўР•Р Р¤Р•Р™РЎ Р”Р›РЇ РЎРћР‘Р«РўРР™, РРЎРљРЈРЎРЎРўР’Р•РќРќРћ РЎРћР—Р”РђРќРќР«РҐ РњРќРћР™
 #Region "INTERFACE"
 Interface MyEvents
     Event Created(ByVal sender As Object, ByVal e As EventArgs)
@@ -254,14 +254,14 @@ Interface MyDialogs
 End Interface
 #End Region
 
-' ФОРМА FORM
+' Р¤РћР РњРђ FORM
 #Region "FORM"
 Public Class F
     Inherits Windows.Forms.Panel
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Окно")
-    Public LastProp As String = trans("Текст")
-    Public LastSobyt As String = trans("Клик")
+    Public defaultName As String = trans("РћРєРЅРѕ")
+    Public LastProp As String = trans("РўРµРєСЃС‚")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public LastObj As String = ""
     Public Props As New Propertys(Me)
     Public MyObj As Object
@@ -285,7 +285,7 @@ Class runF
     Inherits Windows.Forms.Form
     Implements MyEvents
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Окно")
+    Public defaultName As String = trans("РћРєРЅРѕ")
     ' Public Event MyFormClosing(ByRef cancel As Boolean)
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
@@ -309,8 +309,8 @@ Class runF
     '    Dispose(cancel_disposing)
     'End Sub
     Public Shadows Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
-        Props.AddContextMenu(, True) ' Присвоение главного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
+        Props.AddContextMenu(, True) ' РџСЂРёСЃРІРѕРµРЅРёРµ РіР»Р°РІРЅРѕРіРѕ РјРµРЅСЋ
         If StatusTemp IsNot Nothing Then Props.WindowState = StatusTemp
         AddHandler ni.MouseDoubleClick, AddressOf ni_DoubleClickTray
         AddHandler Me.Resize, AddressOf ResizeF
@@ -323,20 +323,20 @@ Class runF
         If Props.Sem = False And Me.WindowState = FormWindowState.Minimized Then RaiseEvent Minimize(Me, Nothing)
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 #End Region
 
-' МЕДИА MEDIAPLAYER
+' РњР•Р”РРђ MEDIAPLAYER
 #Region "MEDIAPLAYER"
 Public Class Md
     Inherits Windows.Forms.Panel
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Медиа")
+    Public defaultName As String = trans("РњРµРґРёР°")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Плей")
-    Public LastSobyt As String = trans("Конец проигрывания")
+    Public LastProp As String = trans("РџР»РµР№")
+    Public LastSobyt As String = trans("РљРѕРЅРµС† РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -358,12 +358,12 @@ Class runMd
         Props.strAlias = GetUIN()
     End Sub
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         Props.MediaWindow = Me
-        If Props.nadoProigrat And NikakoiEsli(Props.FileNamePlayed) <> trans("Никакой") Then Props.PlayMovie()
+        If Props.nadoProigrat And NikakoiEsli(Props.FileNamePlayed) <> trans("РќРёРєР°РєРѕР№") Then Props.PlayMovie()
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Private Sub tmrScroll_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmr.Tick
         If Props.PlayPosition >= Props.TotalPosition And Props.bPlaying Then
@@ -374,37 +374,37 @@ End Class
 
 Public Class Media
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("Вспомогательное поле"), trans("Видимый"), trans("Тип"), trans("Подсказка"), _
-        trans("Файл проигрывания"), trans("Проигрывается"), trans("Громкость"), _
-        trans("Баланс"), trans("Звук отключен"), trans("Скорость"), _
-        trans("Длительность общая"), trans("Длительность время"), _
-        trans("Проигралось времени"), trans("Позиция проигрывания"), _
-        trans("Оригинальная ширина"), trans("Оригинальная вышина"), trans("На весь экран") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’РёРґРёРјС‹Р№"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°"), _
+        trans("Р¤Р°Р№Р» РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ"), trans("РџСЂРѕРёРіСЂС‹РІР°РµС‚СЃСЏ"), trans("Р“СЂРѕРјРєРѕСЃС‚СЊ"), _
+        trans("Р‘Р°Р»Р°РЅСЃ"), trans("Р—РІСѓРє РѕС‚РєР»СЋС‡РµРЅ"), trans("РЎРєРѕСЂРѕСЃС‚СЊ"), _
+        trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕР±С‰Р°СЏ"), trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РІСЂРµРјСЏ"), _
+        trans("РџСЂРѕРёРіСЂР°Р»РѕСЃСЊ РІСЂРµРјРµРЅРё"), trans("РџРѕР·РёС†РёСЏ РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ"), _
+        trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РќР° РІРµСЃСЊ СЌРєСЂР°РЅ") _
        }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Перенести наперед"), trans("Перенести назад"), _
-        trans("Плей"), trans("Стоп медиа"), trans("Пауза"), trans("Открыть медиафайл"), trans("Закрыть файл")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Прорисовка"), trans("Конец проигрывания"), _
-                                trans("Изменились размеры"), trans("Изменилась видимость") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), _
+        trans("РџР»РµР№"), trans("РЎС‚РѕРї РјРµРґРёР°"), trans("РџР°СѓР·Р°"), trans("РћС‚РєСЂС‹С‚СЊ РјРµРґРёР°С„Р°Р№Р»"), trans("Р—Р°РєСЂС‹С‚СЊ С„Р°Р№Р»")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), trans("РљРѕРЅРµС† РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ"), _
+                                trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "media"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runMd, holostoi, isRun, fromEng)
         Else
@@ -414,15 +414,15 @@ Public Class Media
 End Class
 #End Region
 
-' МЕДИА AUDIOPLAYER
+' РњР•Р”РРђ AUDIOPLAYER
 #Region "AUDIOPLAYER"
 Public Class A
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Аудио")
+    Public defaultName As String = trans("РђСѓРґРёРѕ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Плей")
-    Public LastSobyt As String = trans("Конец проигрывания")
+    Public LastProp As String = trans("РџР»РµР№")
+    Public LastSobyt As String = trans("РљРѕРЅРµС† РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -445,12 +445,12 @@ Class runA
         Props.strAlias = GetUIN()
     End Sub
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         Props.MediaWindow = Me
         If Props.nadoProigrat Then Props.PlayMovie()
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Private Sub tmrScroll_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles tmr.Tick
         If Props.PlayPosition >= Props.TotalPosition And Props.bPlaying Then
@@ -461,35 +461,35 @@ End Class
 
 Public Class Audio
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("Вспомогательное поле"), trans("Видимый"), trans("Тип"), trans("Подсказка"), _
-        trans("Файл проигрывания"), trans("Проигрывается"), trans("Громкость"), _
-        trans("Баланс"), trans("Звук отключен"), trans("Скорость"), _
-        trans("Длительность общая"), trans("Длительность время"), _
-        trans("Проигралось времени"), trans("Позиция проигрывания"), _
-        trans("Оригинальная ширина"), trans("Оригинальная вышина") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’РёРґРёРјС‹Р№"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°"), _
+        trans("Р¤Р°Р№Р» РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ"), trans("РџСЂРѕРёРіСЂС‹РІР°РµС‚СЃСЏ"), trans("Р“СЂРѕРјРєРѕСЃС‚СЊ"), _
+        trans("Р‘Р°Р»Р°РЅСЃ"), trans("Р—РІСѓРє РѕС‚РєР»СЋС‡РµРЅ"), trans("РЎРєРѕСЂРѕСЃС‚СЊ"), _
+        trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕР±С‰Р°СЏ"), trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РІСЂРµРјСЏ"), _
+        trans("РџСЂРѕРёРіСЂР°Р»РѕСЃСЊ РІСЂРµРјРµРЅРё"), trans("РџРѕР·РёС†РёСЏ РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ"), _
+        trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
        }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Перенести наперед"), trans("Перенести назад"), _
-        trans("Плей"), trans("Стоп медиа"), trans("Пауза"), trans("Открыть медиафайл"), trans("Закрыть файл")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Прорисовка"), trans("Конец проигрывания")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), _
+        trans("РџР»РµР№"), trans("РЎС‚РѕРї РјРµРґРёР°"), trans("РџР°СѓР·Р°"), trans("РћС‚РєСЂС‹С‚СЊ РјРµРґРёР°С„Р°Р№Р»"), trans("Р—Р°РєСЂС‹С‚СЊ С„Р°Р№Р»")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), trans("РљРѕРЅРµС† РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ")}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "audio"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runA, holostoi, isRun, fromEng)
         Else
@@ -500,21 +500,21 @@ Public Class Audio
 End Class
 #End Region
 
-' КНОПКА BUTTON
+' РљРќРћРџРљРђ BUTTON
 #Region "BUTTON"
 Public Class B
     Inherits Windows.Forms.Button
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Кнопка")
-    Public LastProp As String = trans("Текст")
-    Public LastSobyt As String = trans("Клик")
+    Public defaultName As String = trans("РљРЅРѕРїРєР°")
+    Public LastProp As String = trans("РўРµРєСЃС‚")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public Props As New Propertys(Me)
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
         Props.Width = 75 : Props.Height = 23
-        Props.BackColor = trans("Никакой")
+        Props.BackColor = trans("РќРёРєР°РєРѕР№")
         Me.UseVisualStyleBackColor = True
     End Sub
 End Class
@@ -525,45 +525,45 @@ Class runB
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class Button
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("АвтоТроеточие"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), trans("Стиль кнопки"), _
-        trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый"), _
-        trans("Шрифт зачеркнутый"), trans("Цвет шрифта"), trans("Рисунок"), trans("Положение рисунка"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Поле слева"), trans("Поле сверху"), _
-        trans("Поле справа"), trans("Поле снизу"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Шрифт размер"), _
-        trans("Положение текста"), trans("Текст и рисунок"), trans("Видимый"), trans("В фокусе"), trans("Тип"), _
-        trans("Подсказка")}
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("РђРІС‚РѕРўСЂРѕРµС‚РѕС‡РёРµ"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РЎС‚РёР»СЊ РєРЅРѕРїРєРё"), _
+        trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"), _
+        trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), trans("Р РёСЃСѓРЅРѕРє"), trans("РџРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РџРѕР»Рµ СЃР»РµРІР°"), trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ"), _
+        trans("РџРѕР»Рµ СЃРїСЂР°РІР°"), trans("РџРѕР»Рµ СЃРЅРёР·Сѓ"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), _
+        trans("РџРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РўРµРєСЃС‚ Рё СЂРёСЃСѓРЅРѕРє"), trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), _
+        trans("РџРѕРґСЃРєР°Р·РєР°")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "button"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runB, holostoi, isRun, fromEng)
         Else
@@ -573,15 +573,15 @@ Public Class Button
 End Class
 #End Region
 
-' ЗАКЛАДКИ TABPAGE
+' Р—РђРљР›РђР”РљР TABPAGE
 #Region "TABPAGE"
 Public Class TP
     Inherits Windows.Forms.TabControl
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Закладки")
+    Public defaultName As String = trans("Р—Р°РєР»Р°РґРєРё")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Номер выделенной закладки")
-    Public LastSobyt As String = trans("Выделили закладку")
+    Public LastProp As String = trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё")
+    Public LastSobyt As String = trans("Р’С‹РґРµР»РёР»Рё Р·Р°РєР»Р°РґРєСѓ")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -595,48 +595,48 @@ Class runTP
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
     Public Shadows Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         Props.SelectedTabPosition = Props.SelectedTabPosition
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class TPage
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), trans("Растяжка"), _
-        trans("Всплывающее меню"), _
-        trans("Курсор"), trans("Работает"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("Многострочность"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Видимый"), trans("Тип"), trans("Подсказка"), _
-        trans("Положение закладок"), trans("Номер выделенной закладки"), trans("Позиция выделенной закладки"), _
-        trans("Поле по горизонтали"), trans("Поле по вертикали") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), trans("Р Р°СЃС‚СЏР¶РєР°"), _
+        trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РњРЅРѕРіРѕСЃС‚СЂРѕС‡РЅРѕСЃС‚СЊ"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°"), _
+        trans("РџРѕР»РѕР¶РµРЅРёРµ Р·Р°РєР»Р°РґРѕРє"), trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё"), trans("РџРѕР·РёС†РёСЏ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё"), _
+        trans("РџРѕР»Рµ РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё"), trans("РџРѕР»Рµ РїРѕ РІРµСЂС‚РёРєР°Р»Рё") _
         }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Снялось выделение закладки"), trans("Снимается выделение закладки"), _
-                                trans("Выделили закладку"), trans("Выделяют закладку") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РЎРЅСЏР»РѕСЃСЊ РІС‹РґРµР»РµРЅРёРµ Р·Р°РєР»Р°РґРєРё"), trans("РЎРЅРёРјР°РµС‚СЃСЏ РІС‹РґРµР»РµРЅРёРµ Р·Р°РєР»Р°РґРєРё"), _
+                                trans("Р’С‹РґРµР»РёР»Рё Р·Р°РєР»Р°РґРєСѓ"), trans("Р’С‹РґРµР»СЏСЋС‚ Р·Р°РєР»Р°РґРєСѓ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "tpage"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runTP, holostoi, isRun, fromEng)
         Else
@@ -646,15 +646,15 @@ Public Class TPage
 End Class
 #End Region
 
-' ЗАКЛАДКА TABPAGES
+' Р—РђРљР›РђР”РљРђ TABPAGES
 #Region "TABPAGES"
 Public Class TPs
     Inherits Windows.Forms.TabPage
     Public TypeObj As String = "IncludeObj"
-    Public defaultName As String = trans("Закладка")
+    Public defaultName As String = trans("Р—Р°РєР»Р°РґРєР°")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Текст")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("РўРµРєСЃС‚")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public MyObj As Object
     Sub New()
         Me.Name = MyZnak & "none"
@@ -669,7 +669,7 @@ Public Class TPs
             If Props.obj.Props.pos > cont.TabPages.Count Then Props.obj.Props.pos = cont.TabPages.Count
             Dim bylo As Integer = cont.TabPages.Count
             cont.TabPages.Insert(Props.obj.Props.pos, Me)
-            If bylo = cont.TabPages.Count Then cont.TabPages.add(Me) ' глупость vb
+            If bylo = cont.TabPages.Count Then cont.TabPages.add(Me) ' РіР»СѓРїРѕСЃС‚СЊ vb
             cont.SelectedIndex = Props.pos
         End If
 
@@ -688,45 +688,45 @@ Class runTPs
         Me.Name = MyZnak & "none"
     End Sub
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class TPages
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Позиция"), trans("Номер"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Работает"), trans("Прокрутка"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Стиль рамки"), trans("Всплывающая подсказка"), _
-        trans("Прокрутка минимальная ширина"), trans("Прокрутка минимальная вышина"), _
-        trans("Прокручено по X"), trans("Прокручено по Y"), trans("Тип") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РџРѕР·РёС†РёСЏ"), trans("РќРѕРјРµСЂ"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РџСЂРѕРєСЂСѓС‚РєР°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), trans("Р’СЃРїР»С‹РІР°СЋС‰Р°СЏ РїРѕРґСЃРєР°Р·РєР°"), _
+        trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ X"), trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ Y"), trans("РўРёРї") _
         }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Прокрутка") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РџСЂРѕРєСЂСѓС‚РєР°") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "tpage"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runTPs, holostoi, isRun, fromEng)
         Else
@@ -736,15 +736,15 @@ Public Class TPages
 End Class
 #End Region
 
-' ГЛАВНОЕ МЕНЮ MAINMENU
+' Р“Р›РђР’РќРћР• РњР•РќР® MAINMENU
 #Region "MAINMENU"
 Public Class MM
     Inherits Windows.Forms.MenuStrip
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Меню")
+    Public defaultName As String = trans("РњРµРЅСЋ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Цвет")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("Р¦РІРµС‚")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Me.Name = defaultName & "1" Else Me.Name = proj.GiveName(defaultName)
@@ -765,42 +765,42 @@ Class runMM
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class MMenu
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-         trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-         trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), _
-         trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-         trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-         trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-         trans("Ориентация инструментов"), trans("Видимый"), trans("В фокусе"), trans("Тип"), trans("Подсказка")}
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), _
-                                trans("Изменились размеры"), trans("Изменилась видимость") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+         trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+         trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+         trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+         trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+         trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+         trans("РћСЂРёРµРЅС‚Р°С†РёСЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ"), trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), _
+                                trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ") _
                                  }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "mmenu"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runMM, holostoi, isRun, fromEng)
         Else
@@ -810,15 +810,15 @@ Public Class MMenu
 End Class
 #End Region
 
-' КОНТЕКСТНОГО МЕНЮ CONTEXTMENU
+' РљРћРќРўР•РљРЎРўРќРћР“Рћ РњР•РќР® CONTEXTMENU
 #Region "CONTEXTMENU"
 Public Class CM
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Всплывающее меню")
+    Public defaultName As String = trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Имя")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("РРјСЏ")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public CnMn As New ContextMenuStrip
     Public MyObj As Object
     Sub New()
@@ -844,26 +844,26 @@ Class runCM
     Public Sub Load()
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class CMenu
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Хозяин объект"), trans("Номер"), trans("X"), trans("Y"), trans("Тип")}
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Открытие"), trans("Открылось"), trans("Закрытие"), trans("Закрылось")}
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РҐРѕР·СЏРёРЅ РѕР±СЉРµРєС‚"), trans("РќРѕРјРµСЂ"), trans("X"), trans("Y"), trans("РўРёРї")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РћС‚РєСЂС‹С‚РёРµ"), trans("РћС‚РєСЂС‹Р»РѕСЃСЊ"), trans("Р—Р°РєСЂС‹С‚РёРµ"), trans("Р—Р°РєСЂС‹Р»РѕСЃСЊ")}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "cmenu"
 
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runCM, holostoi, isRun, fromEng)
         Else
@@ -874,15 +874,15 @@ Public Class CMenu
 End Class
 #End Region
 
-' ЭЛЕМЕНТА МЕНЮ MAINMENUS
+' Р­Р›Р•РњР•РќРўРђ РњР•РќР® MAINMENUS
 #Region "MAINMENUS"
 Public Class MMs
     Inherits System.Windows.Forms.ToolStripMenuItem
     Public TypeObj As String = "IncludeObj"
-    Public defaultName As String = trans("Пункт")
+    Public defaultName As String = trans("РџСѓРЅРєС‚")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Текст")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("РўРµРєСЃС‚")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public MyObj As Object
     Sub New()
         Me.Name = MyZnak & "none"
@@ -945,7 +945,7 @@ Public Class MMs
             If Props.obj.Props.pos > contCollec.Count Then Props.obj.Props.pos = contCollec.Count
             Dim bylo As Integer = contCollec.Count
             contCollec.Insert(Props.obj.Props.pos, obj)
-            If bylo = contCollec.Count Then contCollec.Add(obj) ' глупость vb
+            If bylo = contCollec.Count Then contCollec.Add(obj) ' РіР»СѓРїРѕСЃС‚СЊ vb
         End If
 
         For i = 0 To contCollec.Count - 1
@@ -968,47 +968,47 @@ Class runMMs
         Me.Props.DropDown(True) = Me.Props.DropDown
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class MMenus
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Позиция"), _
-        trans("Цвет"), trans("Фоновой рисунок"), _
-        trans("Стиль фона"), trans("Работает"), _
-        trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый"), _
-        trans("Шрифт зачеркнутый"), trans("Цвет шрифта"), trans("Рисунок"), trans("Положение рисунка"), _
-        trans("Поле слева"), trans("Поле сверху"), trans("Поле справа"), trans("Поле снизу"), _
-        trans("Вспомогательное поле"), trans("Текст и рисунок"), _
-        trans("Видимый"), trans("Шрифт размер"), trans("Тип"), _
-        trans("Расположен слева"), trans("Показывать подсказку"), trans("Отмечено"), trans("Отметка по клику"), _
-        trans("Стиль отображения"), trans("Родительское меню"), trans("Вложенное всплывающее меню"), _
-        trans("Рисунок растянут"), trans("Прозрачный цвет рисунка"), trans("Горячая клавиша"), _
-        trans("Отображать горячие клавиши"), trans("Направление текста"), trans("Всплывающая подсказка"), _
-        trans("Родительский пункт") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџРѕР·РёС†РёСЏ"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+        trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"), _
+        trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), trans("Р РёСЃСѓРЅРѕРє"), trans("РџРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР°"), _
+        trans("РџРѕР»Рµ СЃР»РµРІР°"), trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ"), trans("РџРѕР»Рµ СЃРїСЂР°РІР°"), trans("РџРѕР»Рµ СЃРЅРёР·Сѓ"), _
+        trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("РўРµРєСЃС‚ Рё СЂРёСЃСѓРЅРѕРє"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), trans("РўРёРї"), _
+        trans("Р Р°СЃРїРѕР»РѕР¶РµРЅ СЃР»РµРІР°"), trans("РџРѕРєР°Р·С‹РІР°С‚СЊ РїРѕРґСЃРєР°Р·РєСѓ"), trans("РћС‚РјРµС‡РµРЅРѕ"), trans("РћС‚РјРµС‚РєР° РїРѕ РєР»РёРєСѓ"), _
+        trans("РЎС‚РёР»СЊ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ"), trans("Р РѕРґРёС‚РµР»СЊСЃРєРѕРµ РјРµРЅСЋ"), trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РІСЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("Р РёСЃСѓРЅРѕРє СЂР°СЃС‚СЏРЅСѓС‚"), trans("РџСЂРѕР·СЂР°С‡РЅС‹Р№ С†РІРµС‚ СЂРёСЃСѓРЅРєР°"), trans("Р“РѕСЂСЏС‡Р°СЏ РєР»Р°РІРёС€Р°"), _
+        trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РіРѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё"), trans("РќР°РїСЂР°РІР»РµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("Р’СЃРїР»С‹РІР°СЋС‰Р°СЏ РїРѕРґСЃРєР°Р·РєР°"), _
+        trans("Р РѕРґРёС‚РµР»СЊСЃРєРёР№ РїСѓРЅРєС‚") _
         }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Перенести наперед"), _
-        trans("Перенести назад"), trans("Вложенное меню закрылось"), trans("Вложенное меню открылось"), _
-        trans("Вложенное меню открывается")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РјРµРЅСЋ Р·Р°РєСЂС‹Р»РѕСЃСЊ"), trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РјРµРЅСЋ РѕС‚РєСЂС‹Р»РѕСЃСЊ"), _
+        trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РјРµРЅСЋ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ")}
 
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменение отметки"), _
-                                trans("Вложенное меню закрылось"), trans("Вложенное меню открылось"), _
-                                trans("Вложенное меню открывается")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРµРЅРёРµ РѕС‚РјРµС‚РєРё"), _
+                                trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РјРµРЅСЋ Р·Р°РєСЂС‹Р»РѕСЃСЊ"), trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РјРµРЅСЋ РѕС‚РєСЂС‹Р»РѕСЃСЊ"), _
+                                trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РјРµРЅСЋ РѕС‚РєСЂС‹РІР°РµС‚СЃСЏ")}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "mmenu"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False, Optional ByVal ToolPanel As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runMMs, holostoi, isRun, fromEng)
         Else
@@ -1016,7 +1016,7 @@ Public Class MMenus
         End If
         If ToolPanel = True Then
             obj.props.Paddingleft = 10
-            obj.props.DisplayStyle = trans("Рисунок")
+            obj.props.DisplayStyle = trans("Р РёСЃСѓРЅРѕРє")
             If IO.File.Exists(PicturesPath & "\Icons\Objects\tpanel.png") Then
                 obj.props.Image = copyImage(PicturesPath & "\Icons\Objects\tpanel.png")
             End If
@@ -1025,14 +1025,14 @@ Public Class MMenus
 End Class
 #End Region
 
-' ПАМЯТЬ MEMORY 
+' РџРђРњРЇРўР¬ MEMORY 
 #Region "MEMORY"
 Public Class M
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Память")
-    Public LastProp As String = trans("Значение")
-    Public LastSobyt As String = trans("Изменилось значение")
+    Public defaultName As String = trans("РџР°РјСЏС‚СЊ")
+    Public LastProp As String = trans("Р—РЅР°С‡РµРЅРёРµ")
+    Public LastSobyt As String = trans("РР·РјРµРЅРёР»РѕСЃСЊ Р·РЅР°С‡РµРЅРёРµ")
     Public Props As New Propertys(Me)
     Public MyObj As Object
     Sub New()
@@ -1065,7 +1065,7 @@ Class runM
     Public Sub Load()
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Public Sub RaiseChangingValue(ByVal val As String)
         RaiseEvent ChangingValue(Me, val)
@@ -1077,20 +1077,20 @@ End Class
 
 Public Class Memory
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Значение"), trans("Имя"), trans("Номер"), trans("Тип"), trans("Работает"), _
-                                    trans("Вспомогательное поле"), trans("X"), trans("Y")}
-    ' Все методы данного объекта
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("Р—РЅР°С‡РµРЅРёРµ"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РўРёРї"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+                                    trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("X"), trans("Y")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
     Public Methods() As String = {}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Изменение значения"), trans("Изменилось значение")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РР·РјРµРЅРµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ"), trans("РР·РјРµРЅРёР»РѕСЃСЊ Р·РЅР°С‡РµРЅРёРµ")}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "memory"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runM, holostoi, isRun, fromEng)
         Else
@@ -1101,20 +1101,20 @@ Public Class Memory
 End Class
 #End Region
 
-' ПАНЕЛЬ PANEL
+' РџРђРќР•Р›Р¬ PANEL
 #Region "PANEL"
 Public Class P
     Inherits Windows.Forms.Panel
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Панель") & " "
+    Public defaultName As String = trans("РџР°РЅРµР»СЊ") & " "
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Ширина")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("РЁРёСЂРёРЅР°")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Me.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
-        Props.BorderStyle = trans("линия")
+        Props.BorderStyle = trans("Р»РёРЅРёСЏ")
     End Sub
 End Class
 
@@ -1124,45 +1124,45 @@ Class runP
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class Panel
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), trans("Растяжка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Работает"), trans("Прокрутка"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Видимый"), trans("Стиль рамки"), trans("Тип"), trans("Подсказка"), _
-        trans("Прокрутка минимальная ширина"), trans("Прокрутка минимальная вышина"), _
-        trans("Прокручено по X"), trans("Прокручено по Y") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), trans("Р Р°СЃС‚СЏР¶РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РџСЂРѕРєСЂСѓС‚РєР°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°"), _
+        trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ X"), trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ Y") _
         }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Прокрутка") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РџСЂРѕРєСЂСѓС‚РєР°") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "panel"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runP, holostoi, isRun, fromEng)
         Else
@@ -1172,20 +1172,20 @@ Public Class Panel
 End Class
 #End Region
 
-' ДВОЙНАЯ ПАНЕЛЬ DOUBLEPANEL
+' Р”Р’РћР™РќРђРЇ РџРђРќР•Р›Р¬ DOUBLEPANEL
 #Region "DOUBLEPANEL"
 Public Class DP
     Inherits Windows.Forms.SplitContainer
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Двойная панель")
+    Public defaultName As String = trans("Р”РІРѕР№РЅР°СЏ РїР°РЅРµР»СЊ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Расстояние разделителя")
-    Public LastSobyt As String = trans("Разделитель перемещен")
+    Public LastProp As String = trans("Р Р°СЃСЃС‚РѕСЏРЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ")
+    Public LastSobyt As String = trans("Р Р°Р·РґРµР»РёС‚РµР»СЊ РїРµСЂРµРјРµС‰РµРЅ")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Me.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Text = Me.Name
-        Props.BorderStyle = trans("Линия")
+        Props.BorderStyle = trans("Р›РёРЅРёСЏ")
         Props.Width = 200 : Props.Height = 150
         Props.SplitterDistance = Me.Width / 2
         Me.Panel1.Name = "Panel1" : Me.Panel2.Name = "Panel2"
@@ -1235,56 +1235,56 @@ Class runDP
 
     End Sub
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
-        Props.AddContextMenu("panel1") ' Присвоение контекстного меню
-        Props.AddContextMenu("panel2") ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
+        Props.AddContextMenu("panel1") ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
+        Props.AddContextMenu("panel2") ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         Dim pw = Props.Width, ph As Integer = Props.Height
         Props.Anchor = Props.Anchor
         Props.Width = pw : Props.Height = ph
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class DPanel
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Цвет1"), trans("Цвет2"), trans("Фоновой рисунок"), trans("Фоновой рисунок1"), _
-        trans("Фоновой рисунок2"), trans("Стиль фона1"), trans("Стиль фона2"), trans("Стиль рамки"), _
-        trans("Всплывающее меню"), trans("Всплывающее меню1"), trans("Всплывающее меню2"), _
-        trans("Курсор"), trans("Курсор1"), trans("Курсор2"), trans("Прокрутка1"), trans("Прокрутка2"), _
-        trans("Растяжка"), trans("Работает"), trans("Фиксированная часть"), trans("Фиксированный разделитель"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Видимый"), _
-        trans("Ориентация"), trans("Панель1 скрыта"), trans("Панель2 скрыта"), _
-        trans("Ширина разделителя"), trans("Расстояние разделителя"), trans("Инкремент разделителя"), _
-        trans("Панель1 минимум"), trans("Панель2 минимум"), trans("В фокусе"), trans("Подсказка"), trans("Тип") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¦РІРµС‚1"), trans("Р¦РІРµС‚2"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє1"), _
+        trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє2"), trans("РЎС‚РёР»СЊ С„РѕРЅР°1"), trans("РЎС‚РёР»СЊ С„РѕРЅР°2"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), _
+        trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ1"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ2"), _
+        trans("РљСѓСЂСЃРѕСЂ"), trans("РљСѓСЂСЃРѕСЂ1"), trans("РљСѓСЂСЃРѕСЂ2"), trans("РџСЂРѕРєСЂСѓС‚РєР°1"), trans("РџСЂРѕРєСЂСѓС‚РєР°2"), _
+        trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ С‡Р°СЃС‚СЊ"), trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ СЂР°Р·РґРµР»РёС‚РµР»СЊ"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’РёРґРёРјС‹Р№"), _
+        trans("РћСЂРёРµРЅС‚Р°С†РёСЏ"), trans("РџР°РЅРµР»СЊ1 СЃРєСЂС‹С‚Р°"), trans("РџР°РЅРµР»СЊ2 СЃРєСЂС‹С‚Р°"), _
+        trans("РЁРёСЂРёРЅР° СЂР°Р·РґРµР»РёС‚РµР»СЏ"), trans("Р Р°СЃСЃС‚РѕСЏРЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ"), trans("РРЅРєСЂРµРјРµРЅС‚ СЂР°Р·РґРµР»РёС‚РµР»СЏ"), _
+        trans("РџР°РЅРµР»СЊ1 РјРёРЅРёРјСѓРј"), trans("РџР°РЅРµР»СЊ2 РјРёРЅРёРјСѓРј"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РџРѕРґСЃРєР°Р·РєР°"), trans("РўРёРї") _
         }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), _
-                                trans("Разделитель перемещается"), trans("Разделитель перемещен"), _
-                                trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Прокрутка") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), _
+                                trans("Р Р°Р·РґРµР»РёС‚РµР»СЊ РїРµСЂРµРјРµС‰Р°РµС‚СЃСЏ"), trans("Р Р°Р·РґРµР»РёС‚РµР»СЊ РїРµСЂРµРјРµС‰РµРЅ"), _
+                                trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РџСЂРѕРєСЂСѓС‚РєР°") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "dpanel"
     Public ActivePanel As String
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runDP, holostoi, isRun, fromEng)
         Else
@@ -1294,23 +1294,23 @@ Public Class DPanel
 End Class
 #End Region
 
-' ТЕКСТОВОЕ ПОЛЕ TEXTBOKS
+' РўР•РљРЎРўРћР’РћР• РџРћР›Р• TEXTBOKS
 #Region "TEXTBOKS"
 Public Class T
     Inherits Windows.Forms.TextBox
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Текст")
+    Public defaultName As String = trans("РўРµРєСЃС‚")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Текст")
-    Public LastSobyt As String = trans("Изменение текста")
+    Public LastProp As String = trans("РўРµРєСЃС‚")
+    Public LastSobyt As String = trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
         Props.Width = 75 : Props.Height = 23
         Props.BackColor = ToMyColor(Color.White)
-        Props.BorderStyle = LCase(trans("объем"))
-        Props.HideSelection = trans("Нет")
+        Props.BorderStyle = LCase(trans("РѕР±СЉРµРј"))
+        Props.HideSelection = trans("РќРµС‚")
 
     End Sub
 End Class
@@ -1321,53 +1321,53 @@ Class runT
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class TextBoks
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка") _
-        , trans("Цвет"), trans("Стиль рамки") _
-        , trans("Всплывающее меню"), trans("Растяжка"), trans("Работает") _
-        , trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый") _
-        , trans("Шрифт зачеркнутый"), trans("Шрифт размер"), trans("Цвет шрифта"), trans("Скрывать выделение") _
-        , trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина") _
-        , trans("Минимальная ширина"), trans("Минимальная вышина") _
-        , trans("Максимальная длинна"), trans("Многострочность"), trans("Символ пароля") _
-        , trans("Только для чтения"), trans("Полосы прокрутки"), trans("Ширина"), trans("Вышина") _
-        , trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле") _
-        , trans("Расположение текста"), trans("Видимый"), trans("Перенос по словам") _
-        , trans("Выделенный текст"), trans("Начало выделения"), trans("Длинна выделения") _
-        , trans("Номер символа по координатам"), trans("Номер первого символа строки") _
-        , trans("Номер первого символа текущей строки"), trans("Номер строки по номеру символа") _
-        , trans("X по номеру символа"), trans("Y по номеру символа") _
-        , trans("Строка"), trans("Количество строк"), trans("Символ"), trans("Количество символов") _
-        , trans("В фокусе"), trans("Тип"), trans("Подсказка"), trans("Разрешить вводить")}
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°") _
+        , trans("Р¦РІРµС‚"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё") _
+        , trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚") _
+        , trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№") _
+        , trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), trans("РЎРєСЂС‹РІР°С‚СЊ РІС‹РґРµР»РµРЅРёРµ") _
+        , trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅРЅР°"), trans("РњРЅРѕРіРѕСЃС‚СЂРѕС‡РЅРѕСЃС‚СЊ"), trans("РЎРёРјРІРѕР» РїР°СЂРѕР»СЏ") _
+        , trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"), trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°") _
+        , trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ") _
+        , trans("Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("Р’РёРґРёРјС‹Р№"), trans("РџРµСЂРµРЅРѕСЃ РїРѕ СЃР»РѕРІР°Рј") _
+        , trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚"), trans("РќР°С‡Р°Р»Рѕ РІС‹РґРµР»РµРЅРёСЏ"), trans("Р”Р»РёРЅРЅР° РІС‹РґРµР»РµРЅРёСЏ") _
+        , trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј"), trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° СЃС‚СЂРѕРєРё") _
+        , trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРё"), trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°") _
+        , trans("X РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°"), trans("Y РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°") _
+        , trans("РЎС‚СЂРѕРєР°"), trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє"), trans("РЎРёРјРІРѕР»"), trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ") _
+        , trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°"), trans("Р Р°Р·СЂРµС€РёС‚СЊ РІРІРѕРґРёС‚СЊ")}
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед") _
-        , trans("Перенести назад"), trans("Копировать"), trans("Вырезать"), trans("Вставить"), trans("Выделить все") _
-        , trans("Отменить"), trans("Повторить")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ") _
+        , trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), trans("РљРѕРїРёСЂРѕРІР°С‚СЊ"), trans("Р’С‹СЂРµР·Р°С‚СЊ"), trans("Р’СЃС‚Р°РІРёС‚СЊ"), trans("Р’С‹РґРµР»РёС‚СЊ РІСЃРµ") _
+        , trans("РћС‚РјРµРЅРёС‚СЊ"), trans("РџРѕРІС‚РѕСЂРёС‚СЊ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "textboks"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runT, holostoi, isRun, fromEng)
         Else
@@ -1377,15 +1377,15 @@ Public Class TextBoks
 End Class
 #End Region
 
-' ГАЛОЧКА CHECKBOKS
+' Р“РђР›РћР§РљРђ CHECKBOKS
 #Region "CHECKBOKS"
 Public Class CB
     Inherits Windows.Forms.CheckBox
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Галочка")
+    Public defaultName As String = trans("Р“Р°Р»РѕС‡РєР°")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Отмечено")
-    Public LastSobyt As String = trans("Изменение отметки")
+    Public LastProp As String = trans("РћС‚РјРµС‡РµРЅРѕ")
+    Public LastSobyt As String = trans("РР·РјРµРЅРµРЅРёРµ РѕС‚РјРµС‚РєРё")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -1402,48 +1402,48 @@ Class runCB
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         Me.AutoCheck = True
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class CheckBoks
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("АвтоТроеточие"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), trans("Стиль кнопки"), _
-        trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый"), _
-        trans("Шрифт зачеркнутый"), trans("Цвет шрифта"), trans("Рисунок"), trans("Положение рисунка"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Поле слева"), trans("Поле сверху"), _
-        trans("Поле справа"), trans("Поле снизу"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Положение текста"), trans("Текст и рисунок"), trans("Видимый"), trans("В фокусе"), trans("Тип") _
-        , trans("Отмечено"), trans("Шрифт размер"), trans("Подсказка") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("РђРІС‚РѕРўСЂРѕРµС‚РѕС‡РёРµ"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РЎС‚РёР»СЊ РєРЅРѕРїРєРё"), _
+        trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"), _
+        trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), trans("Р РёСЃСѓРЅРѕРє"), trans("РџРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РџРѕР»Рµ СЃР»РµРІР°"), trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ"), _
+        trans("РџРѕР»Рµ СЃРїСЂР°РІР°"), trans("РџРѕР»Рµ СЃРЅРёР·Сѓ"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("РџРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РўРµРєСЃС‚ Рё СЂРёСЃСѓРЅРѕРє"), trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї") _
+        , trans("РћС‚РјРµС‡РµРЅРѕ"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), trans("РџРѕРґСЃРєР°Р·РєР°") _
         }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменение отметки"), _
-                                trans("Изменились размеры"), trans("Изменилась видимость") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРµРЅРёРµ РѕС‚РјРµС‚РєРё"), _
+                                trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "checkboks"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runCB, holostoi, isRun, fromEng)
         Else
@@ -1453,15 +1453,15 @@ Public Class CheckBoks
 End Class
 #End Region
 
-' ГАЛОЧКА RADIOBUT
+' Р“РђР›РћР§РљРђ RADIOBUT
 #Region "RADIOBUT"
 Public Class RB
     Inherits Windows.Forms.RadioButton
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Точка")
+    Public defaultName As String = trans("РўРѕС‡РєР°")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Отмечено")
-    Public LastSobyt As String = trans("Изменение отметки")
+    Public LastProp As String = trans("РћС‚РјРµС‡РµРЅРѕ")
+    Public LastSobyt As String = trans("РР·РјРµРЅРµРЅРёРµ РѕС‚РјРµС‚РєРё")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -1478,48 +1478,48 @@ Class runRB
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         Me.AutoCheck = True
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class RadioBut
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("АвтоТроеточие"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), trans("Стиль кнопки"), _
-        trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый"), _
-        trans("Шрифт зачеркнутый"), trans("Цвет шрифта"), trans("Рисунок"), trans("Положение рисунка"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Поле слева"), trans("Поле сверху"), _
-        trans("Поле справа"), trans("Поле снизу"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Положение текста"), trans("Текст и рисунок"), trans("Видимый"), trans("В фокусе"), trans("Тип") _
-        , trans("Отмечено"), trans("Шрифт размер"), trans("Подсказка") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("РђРІС‚РѕРўСЂРѕРµС‚РѕС‡РёРµ"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РЎС‚РёР»СЊ РєРЅРѕРїРєРё"), _
+        trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"), _
+        trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), trans("Р РёСЃСѓРЅРѕРє"), trans("РџРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РџРѕР»Рµ СЃР»РµРІР°"), trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ"), _
+        trans("РџРѕР»Рµ СЃРїСЂР°РІР°"), trans("РџРѕР»Рµ СЃРЅРёР·Сѓ"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("РџРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РўРµРєСЃС‚ Рё СЂРёСЃСѓРЅРѕРє"), trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї") _
+        , trans("РћС‚РјРµС‡РµРЅРѕ"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), trans("РџРѕРґСЃРєР°Р·РєР°") _
         }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменение отметки"), _
-                                trans("Изменились размеры"), trans("Изменилась видимость") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРµРЅРёРµ РѕС‚РјРµС‚РєРё"), _
+                                trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "radiobut"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runRB, holostoi, isRun, fromEng)
         Else
@@ -1529,15 +1529,15 @@ Public Class RadioBut
 End Class
 #End Region
 
-' ЭЛЕМЕНТА МЕНЮ TOOLPANEL
+' Р­Р›Р•РњР•РќРўРђ РњР•РќР® TOOLPANEL
 #Region "TOOLPANEL"
 Public Class TPl
     Inherits Windows.Forms.ToolStrip
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Панель инструментов")
+    Public defaultName As String = trans("РџР°РЅРµР»СЊ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Ширина")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("РЁРёСЂРёРЅР°")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public MyObj As Object
     Sub New()
         MyBase.New()
@@ -1559,41 +1559,41 @@ Class runTPl
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class TPanel
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-         trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-         trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), trans("Ориентация инструментов"), _
-         trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-         trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-         trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-         trans("Видимый"), trans("В фокусе"), trans("Тип"), trans("Подсказка")}
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+         trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+         trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РћСЂРёРµРЅС‚Р°С†РёСЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ"), _
+         trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+         trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+         trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+         trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "tpanel"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runTPl, holostoi, isRun, fromEng)
         Else
@@ -1603,22 +1603,22 @@ Public Class TPanel
 End Class
 #End Region
 
-' БРАУЗЕР WEBBROWSER
+' Р‘Р РђРЈР—Р•Р  WEBBROWSER
 #Region "WEBBROWSER"
 Public Class W
     Inherits Windows.Forms.WebBrowser
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Браузер")
+    Public defaultName As String = trans("Р‘СЂР°СѓР·РµСЂ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Ссылка")
-    Public LastSobyt As String = trans("Страница загрузилась")
+    Public LastProp As String = trans("РЎСЃС‹Р»РєР°")
+    Public LastSobyt As String = trans("РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР·РёР»Р°СЃСЊ")
     Public lastLink As String
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName)
         Props.Width = 400 : Props.Height = 300
-        Props.ScriptErrorsSuppressed = trans("Нет")
+        Props.ScriptErrorsSuppressed = trans("РќРµС‚")
     End Sub
 End Class
 
@@ -1628,52 +1628,52 @@ Class runW
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class WBrowser
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Всплывающее меню"), trans("Растяжка"), trans("Работает"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Видимый"), trans("В фокусе"), trans("Тип"), _
-        trans("Переходить по сссылкам"), trans("Разрешить перетаскивания"), trans("Назад возможно"), _
-        trans("Вперед возможно"), trans("Текст страницы"), trans("Заголовок страницы"), _
-        trans("Тип страницы"), trans("Браузер занят"), trans("Браузер offline"), _
-        trans("Всплывающее меню браузера"), trans("Статус готовности"), trans("Статусная строка"), _
-        trans("Отображать ошибки сценариев"), trans("Полосы прокрутки активны"), trans("Ссылка"), _
-        trans("Горячие клавиши работают"), trans("Кодировка"), trans("Кодировка по умолчанию"), trans("Куки"), _
-        trans("Открытие ссылок нового окна"), trans("Подсказка") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), _
+        trans("РџРµСЂРµС…РѕРґРёС‚СЊ РїРѕ СЃСЃСЃС‹Р»РєР°Рј"), trans("Р Р°Р·СЂРµС€РёС‚СЊ РїРµСЂРµС‚Р°СЃРєРёРІР°РЅРёСЏ"), trans("РќР°Р·Р°Рґ РІРѕР·РјРѕР¶РЅРѕ"), _
+        trans("Р’РїРµСЂРµРґ РІРѕР·РјРѕР¶РЅРѕ"), trans("РўРµРєСЃС‚ СЃС‚СЂР°РЅРёС†С‹"), trans("Р—Р°РіРѕР»РѕРІРѕРє СЃС‚СЂР°РЅРёС†С‹"), _
+        trans("РўРёРї СЃС‚СЂР°РЅРёС†С‹"), trans("Р‘СЂР°СѓР·РµСЂ Р·Р°РЅСЏС‚"), trans("Р‘СЂР°СѓР·РµСЂ offline"), _
+        trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ Р±СЂР°СѓР·РµСЂР°"), trans("РЎС‚Р°С‚СѓСЃ РіРѕС‚РѕРІРЅРѕСЃС‚Рё"), trans("РЎС‚Р°С‚СѓСЃРЅР°СЏ СЃС‚СЂРѕРєР°"), _
+        trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РѕС€РёР±РєРё СЃС†РµРЅР°СЂРёРµРІ"), trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё Р°РєС‚РёРІРЅС‹"), trans("РЎСЃС‹Р»РєР°"), _
+        trans("Р“РѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё СЂР°Р±РѕС‚Р°СЋС‚"), trans("РљРѕРґРёСЂРѕРІРєР°"), trans("РљРѕРґРёСЂРѕРІРєР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ"), trans("РљСѓРєРё"), _
+        trans("РћС‚РєСЂС‹С‚РёРµ СЃСЃС‹Р»РѕРє РЅРѕРІРѕРіРѕ РѕРєРЅР°"), trans("РџРѕРґСЃРєР°Р·РєР°") _
     }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Получить фокус"), trans("Перенести наперед"), trans("Перенести назад"), _
-        trans("Обновить страницу"), trans("Назад"), trans("Вперед"), trans("Домой"), trans("Страница поиска"), _
-        trans("Открыть в новом окне"), trans("Открыть в фрейме"), trans("Печать"), trans("Окно параметров страницы"), _
-        trans("Окно печати"), trans("Окно предварительного просмотра"), trans("Окно свойств"), _
-        trans("Окно сохранить"), trans("Остановить") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), _
+        trans("РћР±РЅРѕРІРёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ"), trans("РќР°Р·Р°Рґ"), trans("Р’РїРµСЂРµРґ"), trans("Р”РѕРјРѕР№"), trans("РЎС‚СЂР°РЅРёС†Р° РїРѕРёСЃРєР°"), _
+        trans("РћС‚РєСЂС‹С‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ"), trans("РћС‚РєСЂС‹С‚СЊ РІ С„СЂРµР№РјРµ"), trans("РџРµС‡Р°С‚СЊ"), trans("РћРєРЅРѕ РїР°СЂР°РјРµС‚СЂРѕРІ СЃС‚СЂР°РЅРёС†С‹"), _
+        trans("РћРєРЅРѕ РїРµС‡Р°С‚Рё"), trans("РћРєРЅРѕ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕРіРѕ РїСЂРѕСЃРјРѕС‚СЂР°"), trans("РћРєРЅРѕ СЃРІРѕР№СЃС‚РІ"), _
+        trans("РћРєРЅРѕ СЃРѕС…СЂР°РЅРёС‚СЊ"), trans("РћСЃС‚Р°РЅРѕРІРёС‚СЊ") _
     }
 
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Назад можно изменилось"), trans("Вперед можно изменилось"), _
-                                trans("Страница загрузилась"), trans("Страница загружается"), trans("Перешел по ссылке"), _
-                                trans("Переходит по ссылке"), trans("Открытие в новом окне"), _
-                                trans("Статусная строка изменилась"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость") _
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РќР°Р·Р°Рґ РјРѕР¶РЅРѕ РёР·РјРµРЅРёР»РѕСЃСЊ"), trans("Р’РїРµСЂРµРґ РјРѕР¶РЅРѕ РёР·РјРµРЅРёР»РѕСЃСЊ"), _
+                                trans("РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР·РёР»Р°СЃСЊ"), trans("РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ"), trans("РџРµСЂРµС€РµР» РїРѕ СЃСЃС‹Р»РєРµ"), _
+                                trans("РџРµСЂРµС…РѕРґРёС‚ РїРѕ СЃСЃС‹Р»РєРµ"), trans("РћС‚РєСЂС‹С‚РёРµ РІ РЅРѕРІРѕРј РѕРєРЅРµ"), _
+                                trans("РЎС‚Р°С‚СѓСЃРЅР°СЏ СЃС‚СЂРѕРєР° РёР·РјРµРЅРёР»Р°СЃСЊ"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "wbrowser"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runW, holostoi, isRun, fromEng)
         Else
@@ -1683,27 +1683,27 @@ Public Class WBrowser
 End Class
 #End Region
 
-' ТАБЛИЦА TABLE
+' РўРђР‘Р›РР¦Рђ TABLE
 #Region "TABLE"
 Public Class Tl
     Inherits Windows.Forms.DataGridView
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Таблица")
+    Public defaultName As String = trans("РўР°Р±Р»РёС†Р°")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Номера выделенных строк")
-    Public LastSobyt As String = trans("Клик по ячейке")
+    Public LastProp As String = trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє")
+    Public LastSobyt As String = trans("РљР»РёРє РїРѕ СЏС‡РµР№РєРµ")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Me.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
         Props.BackColor = ToMyColor(SystemColors.AppWorkspace)
         Props.Height = 130 : Props.Width = 244
-        Props.ScrollBars = trans("обе")
+        Props.ScrollBars = trans("РѕР±Рµ")
         RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.EnableResizing
         RowHeadersWidth = 20
     End Sub
 
-    ' ПЕЧАТЬ ТАБЛИЦЫ
+    ' РџР•Р§РђРўР¬ РўРђР‘Р›РР¦Р«
     Private TheDataGridView As DataGridView ' The DataGridView Control which will be printed
     Private ThePrintDocument As Printing.PrintDocument ' The PrintDocument to be used for printing
     Private IsCenterOnPage As Boolean ' Determine if the report will be printed in the Top-Center of the page
@@ -1869,7 +1869,7 @@ Public Class Tl
         ' Printing the page number (if isWithPaging is set to true)
         PageNumber += 1
         If (IsWithPaging) Then
-            Dim PageString As String = trans("Страница") & " " & PageNumber.ToString()
+            Dim PageString As String = trans("РЎС‚СЂР°РЅРёС†Р°") & " " & PageNumber.ToString()
 
             Dim PageStringFormat As New StringFormat()
             PageStringFormat.Trimming = StringTrimming.Word
@@ -2108,82 +2108,82 @@ Class runTl
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         Props.SelectedColumns = Props.selCol
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class Table
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), trans("Растяжка"), _
-        trans("Цвет"), trans("Всплывающее меню"), trans("Курсор"), trans("Работает"), trans("Полосы прокрутки"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Видимый"), trans("Стиль рамки"), _
-        trans("Позволить добавлять строки"), trans("Позволить удалять строки"), trans("Позволить переставлять столбцы"), _
-        trans("Позволить растягивать столбцы"), trans("Позволить растягивать строки"), trans("Стиль рамки ячейки"), _
-        trans("Отображать заголовки столбцов"), trans("Вышина заголовков столбцов"), trans("Столбцы"), trans("Строки"), _
-        trans("Цвет фона ячеек"), trans("Цвет фона выделенных ячеек"), trans("Цвет шрифта ячеек"), _
-        trans("Цвет шрифта выделенных ячеек"), trans("Режим редактирования"), trans("Цвет сетки"), _
-        trans("Выбор нескольких ячеек"), trans("Только для чтения таблица"), trans("Режим выделения"), _
-        trans("Номера выделенных строк"), trans("Номера выделенных столбцов"), trans("Значение ячейки"), _
-        trans("Ячейка выделена"), trans("Строка только для чтения"), trans("Столбец только для чтения"), _
-        trans("Ячейка только для чтения"), trans("Ширина столбца"), _
-        trans("Номер первой строки"), trans("Номер последней строки"), trans("Номер следующей строки"), _
-        trans("Номер предыдущей строки"), trans("Значение по координатам"), trans("Номер строки по координатам"), _
-        trans("Номер столбца по координатам"), trans("Количество строк таблицы"), trans("Количество столбцов"), _
-        trans("Количество выделенных строк"), trans("Количество выделенных столбцов"), _
-        trans("Отображать специальный столбец"), trans("Подсказка"), _
-        trans("Значение выделеных ячеек"), trans("Поиск в таблице"), trans("Поиск в выделеных ячейках"), _
-        trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый"), _
-        trans("Шрифт зачеркнутый"), trans("Шрифт размер"), trans("Ширина столбцов"), trans("Вышина строки"), _
-        trans("Вышина строк") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), trans("Р Р°СЃС‚СЏР¶РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), _
+        trans("РџРѕР·РІРѕР»РёС‚СЊ РґРѕР±Р°РІР»СЏС‚СЊ СЃС‚СЂРѕРєРё"), trans("РџРѕР·РІРѕР»РёС‚СЊ СѓРґР°Р»СЏС‚СЊ СЃС‚СЂРѕРєРё"), trans("РџРѕР·РІРѕР»РёС‚СЊ РїРµСЂРµСЃС‚Р°РІР»СЏС‚СЊ СЃС‚РѕР»Р±С†С‹"), _
+        trans("РџРѕР·РІРѕР»РёС‚СЊ СЂР°СЃС‚СЏРіРёРІР°С‚СЊ СЃС‚РѕР»Р±С†С‹"), trans("РџРѕР·РІРѕР»РёС‚СЊ СЂР°СЃС‚СЏРіРёРІР°С‚СЊ СЃС‚СЂРѕРєРё"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё СЏС‡РµР№РєРё"), _
+        trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ Р·Р°РіРѕР»РѕРІРєРё СЃС‚РѕР»Р±С†РѕРІ"), trans("Р’С‹С€РёРЅР° Р·Р°РіРѕР»РѕРІРєРѕРІ СЃС‚РѕР»Р±С†РѕРІ"), trans("РЎС‚РѕР»Р±С†С‹"), trans("РЎС‚СЂРѕРєРё"), _
+        trans("Р¦РІРµС‚ С„РѕРЅР° СЏС‡РµРµРє"), trans("Р¦РІРµС‚ С„РѕРЅР° РІС‹РґРµР»РµРЅРЅС‹С… СЏС‡РµРµРє"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р° СЏС‡РµРµРє"), _
+        trans("Р¦РІРµС‚ С€СЂРёС„С‚Р° РІС‹РґРµР»РµРЅРЅС‹С… СЏС‡РµРµРє"), trans("Р РµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ"), trans("Р¦РІРµС‚ СЃРµС‚РєРё"), _
+        trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… СЏС‡РµРµРє"), trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ С‚Р°Р±Р»РёС†Р°"), trans("Р РµР¶РёРј РІС‹РґРµР»РµРЅРёСЏ"), _
+        trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє"), trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ"), trans("Р—РЅР°С‡РµРЅРёРµ СЏС‡РµР№РєРё"), _
+        trans("РЇС‡РµР№РєР° РІС‹РґРµР»РµРЅР°"), trans("РЎС‚СЂРѕРєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"), trans("РЎС‚РѕР»Р±РµС† С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"), _
+        trans("РЇС‡РµР№РєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"), trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†Р°"), _
+        trans("РќРѕРјРµСЂ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРё"), trans("РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ СЃС‚СЂРѕРєРё"), trans("РќРѕРјРµСЂ СЃР»РµРґСѓСЋС‰РµР№ СЃС‚СЂРѕРєРё"), _
+        trans("РќРѕРјРµСЂ РїСЂРµРґС‹РґСѓС‰РµР№ СЃС‚СЂРѕРєРё"), trans("Р—РЅР°С‡РµРЅРёРµ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј"), trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј"), _
+        trans("РќРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј"), trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє С‚Р°Р±Р»РёС†С‹"), trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ"), _
+        trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє"), trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ"), _
+        trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ СЃРїРµС†РёР°Р»СЊРЅС‹Р№ СЃС‚РѕР»Р±РµС†"), trans("РџРѕРґСЃРєР°Р·РєР°"), _
+        trans("Р—РЅР°С‡РµРЅРёРµ РІС‹РґРµР»РµРЅС‹С… СЏС‡РµРµРє"), trans("РџРѕРёСЃРє РІ С‚Р°Р±Р»РёС†Рµ"), trans("РџРѕРёСЃРє РІ РІС‹РґРµР»РµРЅС‹С… СЏС‡РµР№РєР°С…"), _
+        trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"), _
+        trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†РѕРІ"), trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРєРё"), _
+        trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРє") _
     }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад"), trans("Выделить все"), trans("Очистить таблицу"), _
-        trans("Добавить строку"), trans("Добавить копию строк"), _
-        trans("Вставить строку"), trans("Вставить копию строк"), _
-        trans("Удалить строку"), trans("Сохранить таблицу"), trans("Открыть таблицу"), _
-        trans("Сортировать"), _
-        trans("Открыть Access"), trans("Открыть Excel"), trans("Сохранить Access"), _
-        trans("SQL запрос выборки"), trans("SQL запрос изменения"), _
-        trans("Добавить столбец"), trans("Вставить столбец"), trans("Удалить столбец"), _
-        trans("Поиск с выделением") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), trans("Р’С‹РґРµР»РёС‚СЊ РІСЃРµ"), trans("РћС‡РёСЃС‚РёС‚СЊ С‚Р°Р±Р»РёС†Сѓ"), _
+        trans("Р”РѕР±Р°РІРёС‚СЊ СЃС‚СЂРѕРєСѓ"), trans("Р”РѕР±Р°РІРёС‚СЊ РєРѕРїРёСЋ СЃС‚СЂРѕРє"), _
+        trans("Р’СЃС‚Р°РІРёС‚СЊ СЃС‚СЂРѕРєСѓ"), trans("Р’СЃС‚Р°РІРёС‚СЊ РєРѕРїРёСЋ СЃС‚СЂРѕРє"), _
+        trans("РЈРґР°Р»РёС‚СЊ СЃС‚СЂРѕРєСѓ"), trans("РЎРѕС…СЂР°РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ"), trans("РћС‚РєСЂС‹С‚СЊ С‚Р°Р±Р»РёС†Сѓ"), _
+        trans("РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ"), _
+        trans("РћС‚РєСЂС‹С‚СЊ Access"), trans("РћС‚РєСЂС‹С‚СЊ Excel"), trans("РЎРѕС…СЂР°РЅРёС‚СЊ Access"), _
+        trans("SQL Р·Р°РїСЂРѕСЃ РІС‹Р±РѕСЂРєРё"), trans("SQL Р·Р°РїСЂРѕСЃ РёР·РјРµРЅРµРЅРёСЏ"), _
+        trans("Р”РѕР±Р°РІРёС‚СЊ СЃС‚РѕР»Р±РµС†"), trans("Р’СЃС‚Р°РІРёС‚СЊ СЃС‚РѕР»Р±РµС†"), trans("РЈРґР°Р»РёС‚СЊ СЃС‚РѕР»Р±РµС†"), _
+        trans("РџРѕРёСЃРє СЃ РІС‹РґРµР»РµРЅРёРµРј") _
     }
 
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Прокрутка"), _
-                                trans("Изменилось выделение"), trans("Начало редактирования ячейки"), _
-                                trans("Клик по ячейке"), trans("Двойной клик по ячейке"), _
-                                trans("Конец редактирования ячеки"), trans("Ячейка в фокусе"), _
-                                trans("Ячека потеряла фокус"), trans("Столбец переместили"), _
-                                trans("Клик по заголовку столбца"), trans("Двойной клик по заголовку столбца"), _
-                                trans("Сортировка столбца"), trans("Изменилась ширина столбца"), _
-                                trans("Клик по заголовку строки"), trans("Изменилась вышина строки"), _
-                                trans("Добавли строку"), trans("Удалили строку"), _
-                                trans("Клик по выделенной ячейке") _
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РџСЂРѕРєСЂСѓС‚РєР°"), _
+                                trans("РР·РјРµРЅРёР»РѕСЃСЊ РІС‹РґРµР»РµРЅРёРµ"), trans("РќР°С‡Р°Р»Рѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЏС‡РµР№РєРё"), _
+                                trans("РљР»РёРє РїРѕ СЏС‡РµР№РєРµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє РїРѕ СЏС‡РµР№РєРµ"), _
+                                trans("РљРѕРЅРµС† СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ СЏС‡РµРєРё"), trans("РЇС‡РµР№РєР° РІ С„РѕРєСѓСЃРµ"), _
+                                trans("РЇС‡РµРєР° РїРѕС‚РµСЂСЏР»Р° С„РѕРєСѓСЃ"), trans("РЎС‚РѕР»Р±РµС† РїРµСЂРµРјРµСЃС‚РёР»Рё"), _
+                                trans("РљР»РёРє РїРѕ Р·Р°РіРѕР»РѕРІРєСѓ СЃС‚РѕР»Р±С†Р°"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє РїРѕ Р·Р°РіРѕР»РѕРІРєСѓ СЃС‚РѕР»Р±С†Р°"), _
+                                trans("РЎРѕСЂС‚РёСЂРѕРІРєР° СЃС‚РѕР»Р±С†Р°"), trans("РР·РјРµРЅРёР»Р°СЃСЊ С€РёСЂРёРЅР° СЃС‚РѕР»Р±С†Р°"), _
+                                trans("РљР»РёРє РїРѕ Р·Р°РіРѕР»РѕРІРєСѓ СЃС‚СЂРѕРєРё"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІС‹С€РёРЅР° СЃС‚СЂРѕРєРё"), _
+                                trans("Р”РѕР±Р°РІР»Рё СЃС‚СЂРѕРєСѓ"), trans("РЈРґР°Р»РёР»Рё СЃС‚СЂРѕРєСѓ"), _
+                                trans("РљР»РёРє РїРѕ РІС‹РґРµР»РµРЅРЅРѕР№ СЏС‡РµР№РєРµ") _
                                 }
 
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "panel"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runTl, holostoi, isRun, fromEng)
         Else
@@ -2193,21 +2193,21 @@ Public Class Table
 End Class
 #End Region
 
-' СПИСКОК COMBOBOX
+' РЎРџРРЎРљРћРљ COMBOBOX
 #Region "COMBOBOX"
 Public Class C
     Inherits Windows.Forms.ComboBox
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Список")
+    Public defaultName As String = trans("РЎРїРёСЃРѕРє")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Выделенная запись")
-    Public LastSobyt As String = trans("Изменение выбранной записи")
+    Public LastProp As String = trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ")
+    Public LastSobyt As String = trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
         Props.Width = 75 : Props.Height = 23
-        Props.DropDownStyle = trans("Нет")
+        Props.DropDownStyle = trans("РќРµС‚")
         Props.BackColor = ToMyColor(SystemColors.Window)
     End Sub
 End Class
@@ -2218,55 +2218,55 @@ Class runC
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         Me.SelectionLength = 0
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class ComboBoks
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка") _
-        , trans("Цвет"), trans("Всплывающее меню"), trans("Растяжка"), trans("Работает") _
-        , trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый") _
-        , trans("Шрифт зачеркнутый"), trans("Шрифт размер"), trans("Цвет шрифта") _
-        , trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина") _
-        , trans("Минимальная ширина"), trans("Минимальная вышина") _
-        , trans("Максимальная длинна"), trans("Ширина"), trans("Вышина") _
-        , trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Видимый") _
-        , trans("В фокусе"), trans("Тип") _
-        , trans("Ширина раскрывающегося списка") _
-        , trans("Список упрощенный"), trans("Высота записей списка") _
-        , trans("Записи списка"), trans("Количество раскрывающихся записей") _
-        , trans("Сортирован список"), trans("Список раскрыт"), trans("Номер выделенной записи") _
-        , trans("Выделенная запись"), trans("Запись по номеру"), trans("Найти номер записи") _
-        , trans("Количество записей"), trans("Подсказка") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°") _
+        , trans("Р¦РІРµС‚"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚") _
+        , trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№") _
+        , trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°") _
+        , trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°") _
+        , trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’РёРґРёРјС‹Р№") _
+        , trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї") _
+        , trans("РЁРёСЂРёРЅР° СЂР°СЃРєСЂС‹РІР°СЋС‰РµРіРѕСЃСЏ СЃРїРёСЃРєР°") _
+        , trans("РЎРїРёСЃРѕРє СѓРїСЂРѕС‰РµРЅРЅС‹Р№"), trans("Р’С‹СЃРѕС‚Р° Р·Р°РїРёСЃРµР№ СЃРїРёСЃРєР°") _
+        , trans("Р—Р°РїРёСЃРё СЃРїРёСЃРєР°"), trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЂР°СЃРєСЂС‹РІР°СЋС‰РёС…СЃСЏ Р·Р°РїРёСЃРµР№") _
+        , trans("РЎРѕСЂС‚РёСЂРѕРІР°РЅ СЃРїРёСЃРѕРє"), trans("РЎРїРёСЃРѕРє СЂР°СЃРєСЂС‹С‚"), trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РїРёСЃРё") _
+        , trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ"), trans("Р—Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ"), trans("РќР°Р№С‚Рё РЅРѕРјРµСЂ Р·Р°РїРёСЃРё") _
+        , trans("РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№"), trans("РџРѕРґСЃРєР°Р·РєР°") _
         }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед") _
-        , trans("Перенести назад"), trans("Очистить"), trans("Добавить запись"), trans("Вставить запись") _
-        , trans("Удалить запись"), trans("Удалить запись по номеру")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ") _
+        , trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), trans("РћС‡РёСЃС‚РёС‚СЊ"), trans("Р”РѕР±Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ"), trans("Р’СЃС‚Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ") _
+        , trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ"), trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ")}
 
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Изменение выбранной записи") _
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "comboboks"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runC, holostoi, isRun, fromEng)
         Else
@@ -2276,15 +2276,15 @@ Public Class ComboBoks
 End Class
 #End Region
 
-' СПИСОК ГАЛОЧЕК COMBOBOX
+' РЎРџРРЎРћРљ Р“РђР›РћР§Р•Рљ COMBOBOX
 #Region "CHECKED LIST"
 Public Class CL
     Inherits Windows.Forms.CheckedListBox
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Список галочек")
+    Public defaultName As String = trans("РЎРїРёСЃРѕРє РіР°Р»РѕС‡РµРє")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Отмеченные записи")
-    Public LastSobyt As String = trans("Изменение выбранной записи")
+    Public LastProp As String = trans("РћС‚РјРµС‡РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё")
+    Public LastSobyt As String = trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -2300,53 +2300,53 @@ Class runCL
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class CheckedList
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка") _
-        , trans("Цвет"), trans("Всплывающее меню"), trans("Растяжка"), trans("Работает") _
-        , trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый") _
-        , trans("Шрифт зачеркнутый"), trans("Шрифт размер"), trans("Цвет шрифта") _
-        , trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина") _
-        , trans("Минимальная ширина"), trans("Минимальная вышина") _
-        , trans("Ширина"), trans("Вышина") _
-        , trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Видимый") _
-        , trans("В фокусе"), trans("Тип"), trans("Подсказка") _
-        , trans("Записи списка"), trans("Сортирован список"), trans("Номер выделенной записи") _
-        , trans("Выделенная запись"), trans("Запись по номеру"), trans("Найти номер записи") _
-        , trans("Количество записей"), trans("Отметка по клику") _
-        , trans("Ширина колонок списка"), trans("Горизонтальная прокрутка"), trans("Многоколонность") _
-        , trans("Позволить выбирать записи"), trans("Номера отмеченых записей"), trans("Отмеченные записи") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°") _
+        , trans("Р¦РІРµС‚"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚") _
+        , trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№") _
+        , trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°") _
+        , trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°") _
+        , trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’РёРґРёРјС‹Р№") _
+        , trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°") _
+        , trans("Р—Р°РїРёСЃРё СЃРїРёСЃРєР°"), trans("РЎРѕСЂС‚РёСЂРѕРІР°РЅ СЃРїРёСЃРѕРє"), trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РїРёСЃРё") _
+        , trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ"), trans("Р—Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ"), trans("РќР°Р№С‚Рё РЅРѕРјРµСЂ Р·Р°РїРёСЃРё") _
+        , trans("РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№"), trans("РћС‚РјРµС‚РєР° РїРѕ РєР»РёРєСѓ") _
+        , trans("РЁРёСЂРёРЅР° РєРѕР»РѕРЅРѕРє СЃРїРёСЃРєР°"), trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°"), trans("РњРЅРѕРіРѕРєРѕР»РѕРЅРЅРѕСЃС‚СЊ") _
+        , trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ Р·Р°РїРёСЃРё"), trans("РќРѕРјРµСЂР° РѕС‚РјРµС‡РµРЅС‹С… Р·Р°РїРёСЃРµР№"), trans("РћС‚РјРµС‡РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё") _
       }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед") _
-        , trans("Перенести назад"), trans("Очистить"), trans("Добавить запись"), trans("Вставить запись") _
-        , trans("Удалить запись"), trans("Удалить запись по номеру")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ") _
+        , trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), trans("РћС‡РёСЃС‚РёС‚СЊ"), trans("Р”РѕР±Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ"), trans("Р’СЃС‚Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ") _
+        , trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ"), trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ")}
 
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Изменение выбранной записи") _
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "checkedlist"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runCL, holostoi, isRun, fromEng)
         Else
@@ -2356,15 +2356,15 @@ Public Class CheckedList
 End Class
 #End Region
 
-' БОЛЬШОЙ COMBOBOX
+' Р‘РћР›Р¬РЁРћР™ COMBOBOX
 #Region "LISTBOKS"
 Public Class L
     Inherits Windows.Forms.ListBox
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Большой список")
+    Public defaultName As String = trans("Р‘РѕР»СЊС€РѕР№ СЃРїРёСЃРѕРє")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Отмеченные записи")
-    Public LastSobyt As String = trans("Изменение выбранной записи")
+    Public LastProp As String = trans("РћС‚РјРµС‡РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё")
+    Public LastSobyt As String = trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -2386,54 +2386,54 @@ Class runL
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         Props.MultiSelectItems = Props.MultiSelectItems
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class ListBoks
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка") _
-        , trans("Цвет"), trans("Всплывающее меню"), trans("Растяжка"), trans("Работает") _
-        , trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый") _
-        , trans("Шрифт зачеркнутый"), trans("Шрифт размер"), trans("Цвет шрифта") _
-        , trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина") _
-        , trans("Минимальная ширина"), trans("Минимальная вышина") _
-        , trans("Ширина"), trans("Вышина") _
-        , trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Видимый") _
-        , trans("В фокусе"), trans("Тип"), trans("Подсказка") _
-        , trans("Записи списка"), trans("Сортирован список"), trans("Номер выделенной записи") _
-        , trans("Выделенная запись"), trans("Запись по номеру"), trans("Найти номер записи") _
-        , trans("Количество записей"), trans("Выбор нескольких записей") _
-        , trans("Ширина колонок списка"), trans("Горизонтальная прокрутка"), trans("Многоколонность") _
-        , trans("Позволить выбирать записи"), trans("Номера выделенных записей"), trans("Выделенные записи") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°") _
+        , trans("Р¦РІРµС‚"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚") _
+        , trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№") _
+        , trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°") _
+        , trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°") _
+        , trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’РёРґРёРјС‹Р№") _
+        , trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°") _
+        , trans("Р—Р°РїРёСЃРё СЃРїРёСЃРєР°"), trans("РЎРѕСЂС‚РёСЂРѕРІР°РЅ СЃРїРёСЃРѕРє"), trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РїРёСЃРё") _
+        , trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ"), trans("Р—Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ"), trans("РќР°Р№С‚Рё РЅРѕРјРµСЂ Р·Р°РїРёСЃРё") _
+        , trans("РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№"), trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… Р·Р°РїРёСЃРµР№") _
+        , trans("РЁРёСЂРёРЅР° РєРѕР»РѕРЅРѕРє СЃРїРёСЃРєР°"), trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°"), trans("РњРЅРѕРіРѕРєРѕР»РѕРЅРЅРѕСЃС‚СЊ") _
+        , trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ Р·Р°РїРёСЃРё"), trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… Р·Р°РїРёСЃРµР№"), trans("Р’С‹РґРµР»РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё") _
       }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед") _
-        , trans("Перенести назад"), trans("Очистить"), trans("Добавить запись"), trans("Вставить запись") _
-        , trans("Удалить запись"), trans("Удалить запись по номеру"), trans("Выделить все")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ") _
+        , trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), trans("РћС‡РёСЃС‚РёС‚СЊ"), trans("Р”РѕР±Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ"), trans("Р’СЃС‚Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ") _
+        , trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ"), trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ"), trans("Р’С‹РґРµР»РёС‚СЊ РІСЃРµ")}
 
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Изменение выбранной записи") _
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РР·РјРµРЅРµРЅРёРµ РІС‹Р±СЂР°РЅРЅРѕР№ Р·Р°РїРёСЃРё") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "listboks"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runL, holostoi, isRun, fromEng)
         Else
@@ -2443,21 +2443,21 @@ Public Class ListBoks
 End Class
 #End Region
 
-' НАДПИСЬ LABEL
+' РќРђР”РџРРЎР¬ LABEL
 #Region "LABEL"
 Public Class Lb
     Inherits Windows.Forms.Label
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Надпись")
+    Public defaultName As String = trans("РќР°РґРїРёСЃСЊ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Текст")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("РўРµРєСЃС‚")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
         Props.Width = 75 : Props.Height = 13
-        Props.TextAlign = trans("Центр")
+        Props.TextAlign = trans("Р¦РµРЅС‚СЂ")
     End Sub
 End Class
 
@@ -2467,44 +2467,44 @@ Class runLb
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class Label
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("АвтоТроеточие"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), trans("Стиль рамки"), _
-        trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый"), _
-        trans("Шрифт зачеркнутый"), trans("Цвет шрифта"), trans("Рисунок"), trans("Положение рисунка"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Поле слева"), trans("Поле сверху"), _
-        trans("Поле справа"), trans("Поле снизу"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Шрифт размер"), _
-        trans("Положение текста"), trans("Видимый"), trans("В фокусе"), trans("Тип"), trans("Подсказка")}
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("РђРІС‚РѕРўСЂРѕРµС‚РѕС‡РёРµ"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), _
+        trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"), _
+        trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), trans("Р РёСЃСѓРЅРѕРє"), trans("РџРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РџРѕР»Рµ СЃР»РµРІР°"), trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ"), _
+        trans("РџРѕР»Рµ СЃРїСЂР°РІР°"), trans("РџРѕР»Рµ СЃРЅРёР·Сѓ"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), _
+        trans("РџРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "label"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runLb, holostoi, isRun, fromEng)
         Else
@@ -2514,15 +2514,15 @@ Public Class Label
 End Class
 #End Region
 
-' НАДПИСЬ LINKLABEL
+' РќРђР”РџРРЎР¬ LINKLABEL
 #Region "LinkLabel"
 Public Class LLb
     Inherits Windows.Forms.LinkLabel
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Ссылка")
+    Public defaultName As String = trans("РЎСЃС‹Р»РєР°")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Ссылка надписи")
-    Public LastSobyt As String = trans("Клик по ссылке")
+    Public LastProp As String = trans("РЎСЃС‹Р»РєР° РЅР°РґРїРёСЃРё")
+    Public LastSobyt As String = trans("РљР»РёРє РїРѕ СЃСЃС‹Р»РєРµ")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -2537,57 +2537,57 @@ Class runLLb
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class LinkLabel
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("АвтоТроеточие"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), trans("Стиль рамки"), _
-        trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый"), _
-        trans("Шрифт зачеркнутый"), trans("Цвет шрифта"), trans("Рисунок"), trans("Положение рисунка"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Поле слева"), trans("Поле сверху"), _
-        trans("Поле справа"), trans("Поле снизу"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Шрифт размер"), _
-        trans("Положение текста"), trans("Видимый"), trans("В фокусе"), trans("Тип"), _
-        trans("Цвет активной ссылки"), trans("Цвет нерабочей ссылки"), trans("Цвет ссылки"), _
-        trans("Цвет посещенной ссылки"), trans("Начало ссылки"), trans("Длинна ссылки"), _
-        trans("Стиль подчеркивания"), trans("Ссылка посещена"), trans("Ссылка рабочая"), _
-        trans("Переходить в интернет по ссылке"), trans("Ссылка надписи"), trans("Подсказка") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("РђРІС‚РѕРўСЂРѕРµС‚РѕС‡РёРµ"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), _
+        trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"), _
+        trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), trans("Р РёСЃСѓРЅРѕРє"), trans("РџРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РџРѕР»Рµ СЃР»РµРІР°"), trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ"), _
+        trans("РџРѕР»Рµ СЃРїСЂР°РІР°"), trans("РџРѕР»Рµ СЃРЅРёР·Сѓ"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), _
+        trans("РџРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), _
+        trans("Р¦РІРµС‚ Р°РєС‚РёРІРЅРѕР№ СЃСЃС‹Р»РєРё"), trans("Р¦РІРµС‚ РЅРµСЂР°Р±РѕС‡РµР№ СЃСЃС‹Р»РєРё"), trans("Р¦РІРµС‚ СЃСЃС‹Р»РєРё"), _
+        trans("Р¦РІРµС‚ РїРѕСЃРµС‰РµРЅРЅРѕР№ СЃСЃС‹Р»РєРё"), trans("РќР°С‡Р°Р»Рѕ СЃСЃС‹Р»РєРё"), trans("Р”Р»РёРЅРЅР° СЃСЃС‹Р»РєРё"), _
+        trans("РЎС‚РёР»СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ"), trans("РЎСЃС‹Р»РєР° РїРѕСЃРµС‰РµРЅР°"), trans("РЎСЃС‹Р»РєР° СЂР°Р±РѕС‡Р°СЏ"), _
+        trans("РџРµСЂРµС…РѕРґРёС‚СЊ РІ РёРЅС‚РµСЂРЅРµС‚ РїРѕ СЃСЃС‹Р»РєРµ"), trans("РЎСЃС‹Р»РєР° РЅР°РґРїРёСЃРё"), trans("РџРѕРґСЃРєР°Р·РєР°") _
     }
-    'ActiveLinkColor("Цвет активной ссылки"), DisabledLinkColor("Цвет нерабочей ссылки"), LinkColor("Цвет ссылки"), _
-    'VisitedLinkColor("Цвет посещенной ссылки"), LinkStart("Начало ссылки"), LinkLength("Длинна ссылки"), _
-    'LinkBehavior("Стиль подчеркивания"), LinkVisited("Ссылка посещена"), LinkEnabled("Ссылка рабочая"), _
-    'InternetLink("Переходить в интернет по ссылке"), LinkName("Ссылка надписи") _
+    'ActiveLinkColor("Р¦РІРµС‚ Р°РєС‚РёРІРЅРѕР№ СЃСЃС‹Р»РєРё"), DisabledLinkColor("Р¦РІРµС‚ РЅРµСЂР°Р±РѕС‡РµР№ СЃСЃС‹Р»РєРё"), LinkColor("Р¦РІРµС‚ СЃСЃС‹Р»РєРё"), _
+    'VisitedLinkColor("Р¦РІРµС‚ РїРѕСЃРµС‰РµРЅРЅРѕР№ СЃСЃС‹Р»РєРё"), LinkStart("РќР°С‡Р°Р»Рѕ СЃСЃС‹Р»РєРё"), LinkLength("Р”Р»РёРЅРЅР° СЃСЃС‹Р»РєРё"), _
+    'LinkBehavior("РЎС‚РёР»СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ"), LinkVisited("РЎСЃС‹Р»РєР° РїРѕСЃРµС‰РµРЅР°"), LinkEnabled("РЎСЃС‹Р»РєР° СЂР°Р±РѕС‡Р°СЏ"), _
+    'InternetLink("РџРµСЂРµС…РѕРґРёС‚СЊ РІ РёРЅС‚РµСЂРЅРµС‚ РїРѕ СЃСЃС‹Р»РєРµ"), LinkName("РЎСЃС‹Р»РєР° РЅР°РґРїРёСЃРё") _
     '
-    ', GoInternetLink("Перейти в интернет по ссылке")
+    ', GoInternetLink("РџРµСЂРµР№С‚Рё РІ РёРЅС‚РµСЂРЅРµС‚ РїРѕ СЃСЃС‹Р»РєРµ")
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад"), trans("Перейти в интернет по ссылке")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Клик по ссылке") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), trans("РџРµСЂРµР№С‚Рё РІ РёРЅС‚РµСЂРЅРµС‚ РїРѕ СЃСЃС‹Р»РєРµ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РљР»РёРє РїРѕ СЃСЃС‹Р»РєРµ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "linklabel"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runLLb, holostoi, isRun, fromEng)
         Else
@@ -2597,15 +2597,15 @@ Public Class LinkLabel
 End Class
 #End Region
 
-' РИСУНОК PICTUREBOKS
+' Р РРЎРЈРќРћРљ PICTUREBOKS
 #Region "PictureBoks"
 Public Class Pb
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Рисунок")
+    Public defaultName As String = trans("Р РёСЃСѓРЅРѕРє")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Рисунок")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("Р РёСЃСѓРЅРѕРє")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -2621,42 +2621,42 @@ Class runPb
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class PictureBoks
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), trans("Стиль рамки"), _
-        trans("Рисунок"), trans("Стиль рисунка"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-         trans("Видимый"), trans("В фокусе"), trans("Тип"), trans("Подсказка")}
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), _
+        trans("Р РёСЃСѓРЅРѕРє"), trans("РЎС‚РёР»СЊ СЂРёСЃСѓРЅРєР°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+         trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "pictureboks"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runPb, holostoi, isRun, fromEng)
         Else
@@ -2666,26 +2666,26 @@ Public Class PictureBoks
 End Class
 #End Region
 
-' ДОКУМЕНТ RICHTEXT
+' Р”РћРљРЈРњР•РќРў RICHTEXT
 #Region "RICHTEXT"
 Public Class RT
     Inherits Windows.Forms.RichTextBox
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Текстовый документ")
+    Public defaultName As String = trans("РўРµРєСЃС‚РѕРІС‹Р№ РґРѕРєСѓРјРµРЅС‚")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Текст")
-    Public LastSobyt As String = trans("Изменение текста")
+    Public LastProp As String = trans("РўРµРєСЃС‚")
+    Public LastSobyt As String = trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
         Props.Width = 100 : Props.Height = 100
         Props.BackColor = ToMyColor(Color.White)
-        Props.BorderStyle = LCase(trans("объем"))
-        Props.EnableAutoDragDrop = trans("Да")
-        Props.HideSelection = trans("Нет")
-        Props.MultiLine = trans("Да")
-        Props.ScrollBars = trans("Вертикальная")
+        Props.BorderStyle = LCase(trans("РѕР±СЉРµРј"))
+        Props.EnableAutoDragDrop = trans("Р”Р°")
+        Props.HideSelection = trans("РќРµС‚")
+        Props.MultiLine = trans("Р”Р°")
+        Props.ScrollBars = trans("Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ")
     End Sub
     ' Convert the unit that is used by the .NET framework (1/100 inch) 
     ' and the unit that is used by Win32 API calls (twips 1/1440 inch)
@@ -2783,68 +2783,68 @@ Class runRT
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class RichText
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка") _
-        , trans("Цвет"), trans("Стиль рамки") _
-        , trans("Всплывающее меню"), trans("Растяжка"), trans("Работает") _
-        , trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый") _
-        , trans("Шрифт зачеркнутый"), trans("Цвет шрифта"), trans("Скрывать выделение") _
-        , trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина") _
-        , trans("Минимальная ширина"), trans("Минимальная вышина") _
-        , trans("Максимальная длинна"), trans("Многострочность"), trans("Шрифт размер") _
-        , trans("Только для чтения"), trans("Полосы прокрутки"), trans("Ширина"), trans("Вышина") _
-        , trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле") _
-        , trans("Видимый"), trans("Перенос по словам") _
-        , trans("Выделенный текст"), trans("Начало выделения"), trans("Длинна выделения") _
-        , trans("Номер символа по координатам"), trans("Номер первого символа строки") _
-        , trans("Номер первого символа текущей строки"), trans("Номер строки по номеру символа") _
-        , trans("X по номеру символа"), trans("Y по номеру символа") _
-        , trans("Строка"), trans("Количество строк"), trans("Символ"), trans("Количество символов") _
-        , trans("В фокусе"), trans("Тип"), trans("Переходить в интернет по ссылке") _
-        , trans("Подсвечивать ссылки"), trans("Позволить перенос выделенного") _
-        , trans("Масштаб"), trans("RTF код документа") _
-        , trans("Выделенный RTF"), trans("Выделенное положение текста") _
-        , trans("Выделенный задний фон"), trans("Выделенный цвет текста") _
-        , trans("Выделенный размер красной строки"), trans("Выделенный отступ слева") _
-        , trans("Выделенный отступ справа"), trans("Выделенный имеет маркер") _
-        , trans("Выделенное вертикальное смещение"), trans("Выделенный шрифт размер") _
-        , trans("Выделенный шрифт"), trans("Выделенный шрифт жирный"), trans("Выделенный шрифт курсив") _
-        , trans("Выделенный шрифт подчеркнутый"), trans("Выделенный шрифт зачеркнутый") _
-        , trans("Выделенный текст заблокирован"), trans("Подсказка") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°") _
+        , trans("Р¦РІРµС‚"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё") _
+        , trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚") _
+        , trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№") _
+        , trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), trans("РЎРєСЂС‹РІР°С‚СЊ РІС‹РґРµР»РµРЅРёРµ") _
+        , trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°") _
+        , trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅРЅР°"), trans("РњРЅРѕРіРѕСЃС‚СЂРѕС‡РЅРѕСЃС‚СЊ"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ") _
+        , trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"), trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°") _
+        , trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ") _
+        , trans("Р’РёРґРёРјС‹Р№"), trans("РџРµСЂРµРЅРѕСЃ РїРѕ СЃР»РѕРІР°Рј") _
+        , trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚"), trans("РќР°С‡Р°Р»Рѕ РІС‹РґРµР»РµРЅРёСЏ"), trans("Р”Р»РёРЅРЅР° РІС‹РґРµР»РµРЅРёСЏ") _
+        , trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј"), trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° СЃС‚СЂРѕРєРё") _
+        , trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРё"), trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°") _
+        , trans("X РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°"), trans("Y РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°") _
+        , trans("РЎС‚СЂРѕРєР°"), trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє"), trans("РЎРёРјРІРѕР»"), trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ") _
+        , trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), trans("РџРµСЂРµС…РѕРґРёС‚СЊ РІ РёРЅС‚РµСЂРЅРµС‚ РїРѕ СЃСЃС‹Р»РєРµ") _
+        , trans("РџРѕРґСЃРІРµС‡РёРІР°С‚СЊ СЃСЃС‹Р»РєРё"), trans("РџРѕР·РІРѕР»РёС‚СЊ РїРµСЂРµРЅРѕСЃ РІС‹РґРµР»РµРЅРЅРѕРіРѕ") _
+        , trans("РњР°СЃС€С‚Р°Р±"), trans("RTF РєРѕРґ РґРѕРєСѓРјРµРЅС‚Р°") _
+        , trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ RTF"), trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°") _
+        , trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ Р·Р°РґРЅРёР№ С„РѕРЅ"), trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С†РІРµС‚ С‚РµРєСЃС‚Р°") _
+        , trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РєСЂР°СЃРЅРѕР№ СЃС‚СЂРѕРєРё"), trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃР»РµРІР°") _
+        , trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃРїСЂР°РІР°"), trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РёРјРµРµС‚ РјР°СЂРєРµСЂ") _
+        , trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РІРµСЂС‚РёРєР°Р»СЊРЅРѕРµ СЃРјРµС‰РµРЅРёРµ"), trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ СЂР°Р·РјРµСЂ") _
+        , trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚"), trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ РєСѓСЂСЃРёРІ") _
+        , trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"), trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№") _
+        , trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ"), trans("РџРѕРґСЃРєР°Р·РєР°") _
     }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед") _
-        , trans("Перенести назад"), trans("Копировать"), trans("Вырезать"), trans("Вставить"), trans("Выделить все") _
-        , trans("Отменить"), trans("Повторить") _
-        , trans("Сохранить документ"), trans("Открыть документ"), trans("Прокрутить до курсора") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ") _
+        , trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), trans("РљРѕРїРёСЂРѕРІР°С‚СЊ"), trans("Р’С‹СЂРµР·Р°С‚СЊ"), trans("Р’СЃС‚Р°РІРёС‚СЊ"), trans("Р’С‹РґРµР»РёС‚СЊ РІСЃРµ") _
+        , trans("РћС‚РјРµРЅРёС‚СЊ"), trans("РџРѕРІС‚РѕСЂРёС‚СЊ") _
+        , trans("РЎРѕС…СЂР°РЅРёС‚СЊ РґРѕРєСѓРјРµРЅС‚"), trans("РћС‚РєСЂС‹С‚СЊ РґРѕРєСѓРјРµРЅС‚"), trans("РџСЂРѕРєСЂСѓС‚РёС‚СЊ РґРѕ РєСѓСЂСЃРѕСЂР°") _
         }
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Горизонтальная прокрутка"), trans("Вертикальная прокрутка"), _
-                                trans("Клик по ссылке документа") _
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°"), trans("Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°"), _
+                                trans("РљР»РёРє РїРѕ СЃСЃС‹Р»РєРµ РґРѕРєСѓРјРµРЅС‚Р°") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "richtext"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runRT, holostoi, isRun, fromEng)
         Else
@@ -2854,14 +2854,14 @@ Public Class RichText
 End Class
 #End Region
 
-' ОКНО ЦВЕТА COLORDIALOG 
+' РћРљРќРћ Р¦Р’Р•РўРђ COLORDIALOG 
 #Region "COLORDIALOG"
 Public Class CD
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно цвета")
+    Public defaultName As String = trans("РћРєРЅРѕ С†РІРµС‚Р°")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Запустить окно")
+    Public LastProp As String = trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")
     Public LastSobyt As String
     Public MyObj As Object
     Sub New()
@@ -2889,7 +2889,7 @@ Class runCD
     Inherits System.Windows.Forms.ColorDialog
     Implements MyEvents, MyDialogs
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно цвета")
+    Public defaultName As String = trans("РћРєРЅРѕ С†РІРµС‚Р°")
     Public MyObj As Object
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
@@ -2897,7 +2897,7 @@ Class runCD
     Public Sub Load()
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Dim nam As String
     Property Name() As String Implements MyDialogs.Name
@@ -2931,20 +2931,20 @@ End Class
 
 Public Class ColorDialog
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Тип"), trans("X"), trans("Y"), _
-                                    trans("Вспомогательное поле"), trans("Выбранный цвет"), trans("Была нажата отмена")}
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Запустить окно")}
-    ' Все события данного объекта
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РўРёРї"), trans("X"), trans("Y"), _
+                                    trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’С‹Р±СЂР°РЅРЅС‹Р№ С†РІРµС‚"), trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РѕС‚РјРµРЅР°")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
     Public Sobyts() As String = {}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "colordialog"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runCD, holostoi, isRun, fromEng)
         Else
@@ -2955,14 +2955,14 @@ Public Class ColorDialog
 End Class
 #End Region
 
-' ОКНО ШРИФТА FONTDIALOG 
+' РћРљРќРћ РЁР РР¤РўРђ FONTDIALOG 
 #Region "FONTDIALOG"
 Public Class FD
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно шрифта")
+    Public defaultName As String = trans("РћРєРЅРѕ С€СЂРёС„С‚Р°")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Запустить окно")
+    Public LastProp As String = trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")
     Public LastSobyt As String
     Public MyObj As Object
     Sub New()
@@ -2990,7 +2990,7 @@ Class runFD
     Inherits System.Windows.Forms.FontDialog
     Implements MyEvents, MyDialogs
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно шрифта")
+    Public defaultName As String = trans("РћРєРЅРѕ С€СЂРёС„С‚Р°")
     Public MyObj As Object
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
@@ -2998,7 +2998,7 @@ Class runFD
     Public Sub Load()
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Dim nam As String
     Property Name() As String Implements MyDialogs.Name
@@ -3032,25 +3032,25 @@ End Class
 
 Public Class FontDialog
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Тип"), _
-            trans("Вспомогательное поле"), trans("Выбранный цвет"), trans("Была нажата отмена") _
-            , trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый") _
-            , trans("Шрифт зачеркнутый"), trans("Шрифт размер"), trans("Позволить выбирать цвет") _
-            , trans("Позволить выбирать подчеркивания"), trans("X"), trans("Y") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РўРёРї"), _
+            trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’С‹Р±СЂР°РЅРЅС‹Р№ С†РІРµС‚"), trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РѕС‚РјРµРЅР°") _
+            , trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№") _
+            , trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ С†РІРµС‚") _
+            , trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ"), trans("X"), trans("Y") _
         }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Запустить окно")}
-    ' Все события данного объекта
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
     Public Sobyts() As String = {}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "fontdialog"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runFD, holostoi, isRun, fromEng)
         Else
@@ -3061,14 +3061,14 @@ Public Class FontDialog
 End Class
 #End Region
 
-' ОКНО ШРИФТА PATHDIALOG 
+' РћРљРќРћ РЁР РР¤РўРђ PATHDIALOG 
 #Region "PATHDIALOG"
 Public Class PD
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно папок")
+    Public defaultName As String = trans("РћРєРЅРѕ РїР°РїРѕРє")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Запустить окно")
+    Public LastProp As String = trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")
     Public LastSobyt As String
     Public MyObj As Object
     Sub New()
@@ -3096,7 +3096,7 @@ Class runPD
     Inherits System.Windows.Forms.ColorDialog
     Implements MyEvents, MyDialogs
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно папок")
+    Public defaultName As String = trans("РћРєРЅРѕ РїР°РїРѕРє")
     Public MyObj As Object
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
@@ -3105,7 +3105,7 @@ Class runPD
     Public Sub Load()
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Dim nam As String
     Property Name() As String Implements MyDialogs.Name
@@ -3139,23 +3139,23 @@ End Class
 
 Public Class PathDialog
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Тип"), _
-            trans("Вспомогательное поле"), trans("Была нажата отмена") _
-            , trans("Надпись в окне"), trans("Выбранная папка"), trans("X"), trans("Y") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РўРёРї"), _
+            trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РѕС‚РјРµРЅР°") _
+            , trans("РќР°РґРїРёСЃСЊ РІ РѕРєРЅРµ"), trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РїР°РїРєР°"), trans("X"), trans("Y") _
         }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Запустить окно")}
-    ' Все события данного объекта
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
     Public Sobyts() As String = {}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "pathdialog"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runPD, holostoi, isRun, fromEng)
         Else
@@ -3166,21 +3166,21 @@ Public Class PathDialog
 End Class
 #End Region
 
-' ОКНО СОХРАНЕНИЯ SAVEDIALOG 
+' РћРљРќРћ РЎРћРҐР РђРќР•РќРРЇ SAVEDIALOG 
 #Region "SAVEDIALOG"
 Public Class SD
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно сохранения")
+    Public defaultName As String = trans("РћРєРЅРѕ СЃРѕС…СЂР°РЅРµРЅРёСЏ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Запустить окно")
+    Public LastProp As String = trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")
     Public LastSobyt As String
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Me.Name = defaultName & "1" Else Me.Name = proj.GiveName(defaultName)
         Me.SizeMode = PictureBoxSizeMode.StretchImage : MyBase.Height = 16 : MyBase.Width = 16
         MyBase.BackColor = Color.Transparent
-        Props.CheckFileExists = trans("Нет")
+        Props.CheckFileExists = trans("РќРµС‚")
     End Sub
     Overloads Property Height()
         Get
@@ -3202,7 +3202,7 @@ Class runSD
     Inherits System.Windows.Forms.ColorDialog
     Implements MyEvents, MyDialogs
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно сохранения")
+    Public defaultName As String = trans("РћРєРЅРѕ СЃРѕС…СЂР°РЅРµРЅРёСЏ")
     Public MyObj As Object
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
@@ -3212,7 +3212,7 @@ Class runSD
 
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Dim nam As String
     Property Name() As String Implements MyDialogs.Name
@@ -3246,44 +3246,44 @@ End Class
 
 Public Class SaveDialog
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Тип"), _
-            trans("Вспомогательное поле"), trans("Была нажата отмена"), trans("X"), trans("Y") _
-            , trans("Добавлять расширение файлу"), trans("Проверять наличие файла") _
-            , trans("Проверять наличие папки"), trans("Имя файла"), trans("Фильтр файлов") _
-            , trans("Номер фильтра"), trans("Начальная папка"), trans("Заголовок") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РўРёРї"), _
+            trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РѕС‚РјРµРЅР°"), trans("X"), trans("Y") _
+            , trans("Р”РѕР±Р°РІР»СЏС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ С„Р°Р№Р»Сѓ"), trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°") _
+            , trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ РїР°РїРєРё"), trans("РРјСЏ С„Р°Р№Р»Р°"), trans("Р¤РёР»СЊС‚СЂ С„Р°Р№Р»РѕРІ") _
+            , trans("РќРѕРјРµСЂ С„РёР»СЊС‚СЂР°"), trans("РќР°С‡Р°Р»СЊРЅР°СЏ РїР°РїРєР°"), trans("Р—Р°РіРѕР»РѕРІРѕРє") _
         }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Запустить окно")}
-    ' Все события данного объекта
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
     Public Sobyts() As String = {}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "savedialog"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runSD, holostoi, isRun, fromEng)
         Else
             CreateObject(New SD, holostoi, isRun, fromEng)
-            If holostoi = False Then obj.Props.Filter = trans("Рисунки") & "|*.jpg;*.bmp|" & trans("Все файлы") & "|*.*"
+            If holostoi = False Then obj.Props.Filter = trans("Р РёСЃСѓРЅРєРё") & "|*.jpg;*.bmp|" & trans("Р’СЃРµ С„Р°Р№Р»С‹") & "|*.*"
             Me.obj.image = Pictures32.Images(Picture)
         End If
     End Sub
 End Class
 #End Region
 
-' ОКНО ЗАГРУЗКИ OPENDIALOG 
+' РћРљРќРћ Р—РђР“Р РЈР—РљР OPENDIALOG 
 #Region "OPENDIALOG"
 Public Class OD
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно открытия")
+    Public defaultName As String = trans("РћРєРЅРѕ РѕС‚РєСЂС‹С‚РёСЏ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Запустить окно")
+    Public LastProp As String = trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")
     Public LastSobyt As String
     Public MyObj As Object
     Sub New()
@@ -3311,7 +3311,7 @@ Class runOD
     Inherits System.Windows.Forms.ColorDialog
     Implements MyEvents, MyDialogs
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно открытия")
+    Public defaultName As String = trans("РћРєРЅРѕ РѕС‚РєСЂС‹С‚РёСЏ")
     Public MyObj As Object
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
@@ -3320,7 +3320,7 @@ Class runOD
     Public Sub Load()
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Dim nam As String
     Property Name() As String Implements MyDialogs.Name
@@ -3354,45 +3354,45 @@ End Class
 
 Public Class OpenDialog
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Тип"), _
-            trans("Вспомогательное поле"), trans("Была нажата отмена"), trans("X"), trans("Y") _
-            , trans("Добавлять расширение файлу"), trans("Проверять наличие файла") _
-            , trans("Проверять наличие папки"), trans("Имя файла"), trans("Фильтр файлов") _
-            , trans("Номер фильтра"), trans("Начальная папка"), trans("Заголовок") _
-            , trans("Выбор нескольких файлов") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РўРёРї"), _
+            trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РѕС‚РјРµРЅР°"), trans("X"), trans("Y") _
+            , trans("Р”РѕР±Р°РІР»СЏС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ С„Р°Р№Р»Сѓ"), trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°") _
+            , trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ РїР°РїРєРё"), trans("РРјСЏ С„Р°Р№Р»Р°"), trans("Р¤РёР»СЊС‚СЂ С„Р°Р№Р»РѕРІ") _
+            , trans("РќРѕРјРµСЂ С„РёР»СЊС‚СЂР°"), trans("РќР°С‡Р°Р»СЊРЅР°СЏ РїР°РїРєР°"), trans("Р—Р°РіРѕР»РѕРІРѕРє") _
+            , trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… С„Р°Р№Р»РѕРІ") _
         }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Запустить окно")}
-    ' Все события данного объекта
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
     Public Sobyts() As String = {}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "opendialog"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runOD, holostoi, isRun, fromEng)
         Else
             CreateObject(New OD, holostoi, isRun, fromEng)
-            If holostoi = False Then obj.Props.Filter = trans("Рисунки") & "|*.jpg;*.bmp|" & trans("Все файлы") & "|*.*"
+            If holostoi = False Then obj.Props.Filter = trans("Р РёСЃСѓРЅРєРё") & "|*.jpg;*.bmp|" & trans("Р’СЃРµ С„Р°Р№Р»С‹") & "|*.*"
             Me.obj.image = Pictures32.Images(Picture)
         End If
     End Sub
 End Class
 #End Region
 
-' ОКНО ПЕЧАТИ PRINTDIALOG 
+' РћРљРќРћ РџР•Р§РђРўР PRINTDIALOG 
 #Region "PRINTDIALOG"
 Public Class PrD
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно печати")
+    Public defaultName As String = trans("РћРєРЅРѕ РїРµС‡Р°С‚Рё")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Запустить окно печати")
+    Public LastProp As String = trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ РїРµС‡Р°С‚Рё")
     Public LastSobyt As String
     Public MyObj As Object
 
@@ -3429,7 +3429,7 @@ Class runPrD
     Inherits System.Windows.Forms.FontDialog
     Implements MyEvents, MyDialogs
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Окно печати")
+    Public defaultName As String = trans("РћРєРЅРѕ РїРµС‡Р°С‚Рё")
     Public MyObj As Object
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
@@ -3443,7 +3443,7 @@ Class runPrD
         PrinDialog.AllowSomePages = True
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Dim nam As String
     Property Name() As String Implements MyDialogs.Name
@@ -3456,7 +3456,7 @@ Class runPrD
         End Set
     End Property
 
-    ' ПЕЧАТАЕТ ТО ЧТО НАХОДИТСЯ В СВОЙСТВАХ ТЕКСТ НА ПЕЧАТЬ, РИСУНОК НАПЕЧАТЬ И Т.Д.
+    ' РџР•Р§РђРўРђР•Рў РўРћ Р§РўРћ РќРђРҐРћР”РРўРЎРЇ Р’ РЎР’РћР™РЎРўР’РђРҐ РўР•РљРЎРў РќРђ РџР•Р§РђРўР¬, Р РРЎРЈРќРћРљ РќРђРџР•Р§РђРўР¬ Р Рў.Р”.
     Public rtfPrint As Object
     Public tablPrint As Object
     Public objPrint As String
@@ -3467,13 +3467,13 @@ Class runPrD
     Dim checkPrint As Integer, txtRT As runRT
     Dim imObj As String
     Public Sub PrintDoc_BeginPrint(ByVal sender As Object, ByVal e As System.Drawing.Printing.PrintEventArgs) Handles PrintDoc.BeginPrint
-        ' обнуление рисунка
+        ' РѕР±РЅСѓР»РµРЅРёРµ СЂРёСЃСѓРЅРєР°
         imageTyped = False : objTyped = False
         Threading.Thread.CurrentThread.Sleep(1)
         If objPrint <> "" Then imObj = New PropertysOther(Nothing).ScreenshotOfObject(objPrint)
-        ' обнуление документа и текста
+        ' РѕР±РЅСѓР»РµРЅРёРµ РґРѕРєСѓРјРµРЅС‚Р° Рё С‚РµРєСЃС‚Р°
         checkPrint = 0 : txtRT = Nothing : rtfTyped = False
-        ' обнуление таблицы
+        ' РѕР±РЅСѓР»РµРЅРёРµ С‚Р°Р±Р»РёС†С‹
         tableTyped = False
         If tablPrint IsNot Nothing Then
             If IsArray(tablPrint) Then tablPrint = tablPrint(0)
@@ -3489,79 +3489,79 @@ Class runPrD
                 e.Graphics.Clear(Drawing.Color.White)
                 numPage += 1
 
-                ' Если так и не нашлось страниц для печати, то всё отменить
+                ' Р•СЃР»Рё С‚Р°Рє Рё РЅРµ РЅР°С€Р»РѕСЃСЊ СЃС‚СЂР°РЅРёС† РґР»СЏ РїРµС‡Р°С‚Рё, С‚Рѕ РІСЃС‘ РѕС‚РјРµРЅРёС‚СЊ
                 If isPreview = False Then
                     If numPage > e.PageSettings.PrinterSettings.ToPage Then
                         e.Cancel = True : e.HasMorePages = False : numPage = 0 : Exit Sub
                     End If
                 End If
 
-                ' РИСУНОК. Если рисунок еще небыл нарисован
+                ' Р РРЎРЈРќРћРљ. Р•СЃР»Рё СЂРёСЃСѓРЅРѕРє РµС‰Рµ РЅРµР±С‹Р» РЅР°СЂРёСЃРѕРІР°РЅ
                 If imageTyped = False And picPrint Is Nothing = False Then
                     xPosition = e.MarginBounds.Left : yPosition = e.MarginBounds.Top
                     hSize = picPrint.Height : wSize = picPrint.Width
-                    ' настройка рисунка по ширине
+                    ' РЅР°СЃС‚СЂРѕР№РєР° СЂРёСЃСѓРЅРєР° РїРѕ С€РёСЂРёРЅРµ
                     If e.MarginBounds.Width < wSize Then
                         Dim proporc As Double = e.MarginBounds.Width / wSize
                         hSize *= proporc : wSize *= proporc
                     End If
-                    ' настройка рисунка по вышине
+                    ' РЅР°СЃС‚СЂРѕР№РєР° СЂРёСЃСѓРЅРєР° РїРѕ РІС‹С€РёРЅРµ
                     If e.MarginBounds.Height < hSize Then
                         Dim proporc As Double = e.MarginBounds.Height / hSize
                         hSize *= proporc : wSize *= proporc
                     End If
-                    ' расположение рисунка по середине
+                    ' СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР° РїРѕ СЃРµСЂРµРґРёРЅРµ
                     If e.MarginBounds.Width > wSize Then xPosition = e.MarginBounds.Left + (e.MarginBounds.Width - wSize) / 2
-                    ' рисование рисунка 
+                    ' СЂРёСЃРѕРІР°РЅРёРµ СЂРёСЃСѓРЅРєР° 
                     e.Graphics.DrawImage(picPrint, New Rectangle(xPosition, yPosition, wSize, hSize))
-                    ' перенести указатель текущей позиции ниже рисунка
+                    ' РїРµСЂРµРЅРµСЃС‚Рё СѓРєР°Р·Р°С‚РµР»СЊ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё РЅРёР¶Рµ СЂРёСЃСѓРЅРєР°
                     yPosition += hSize + Font.GetHeight(e.Graphics)
-                    ' отметиться что рисунок уже напечатался
+                    ' РѕС‚РјРµС‚РёС‚СЊСЃСЏ С‡С‚Рѕ СЂРёСЃСѓРЅРѕРє СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°Р»СЃСЏ
                     imageTyped = True
                 End If
 
-                ' ОБЪЕКТ. Если объект еще небыл нарисован
+                ' РћР‘РЄР•РљРў. Р•СЃР»Рё РѕР±СЉРµРєС‚ РµС‰Рµ РЅРµР±С‹Р» РЅР°СЂРёСЃРѕРІР°РЅ
                 If objTyped = False And objPrint <> "" And imObj <> "" Then
                     Dim picObj As Image = Image.FromFile(imObj)
                     If yPosition > 0 And yPosition + picObj.Height > e.MarginBounds.Height Then e.HasMorePages = True : GoTo cikl
                     xPosition = e.MarginBounds.Left
                     If yPosition = 0 Then yPosition = e.MarginBounds.Top
                     hSize = picObj.Height : wSize = picObj.Width
-                    ' настройка рисунка по ширине
+                    ' РЅР°СЃС‚СЂРѕР№РєР° СЂРёСЃСѓРЅРєР° РїРѕ С€РёСЂРёРЅРµ
                     If e.MarginBounds.Width < wSize Then
                         Dim proporc As Double = e.MarginBounds.Width / wSize
                         hSize *= proporc : wSize *= proporc
                     End If
-                    ' настройка рисунка по вышине
+                    ' РЅР°СЃС‚СЂРѕР№РєР° СЂРёСЃСѓРЅРєР° РїРѕ РІС‹С€РёРЅРµ
                     If e.MarginBounds.Height < hSize Then
                         Dim proporc As Double = e.MarginBounds.Height / hSize
                         hSize *= proporc : wSize *= proporc
                     End If
-                    ' расположение рисунка по середине
+                    ' СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР° РїРѕ СЃРµСЂРµРґРёРЅРµ
                     If e.MarginBounds.Width > wSize Then xPosition = e.MarginBounds.Left + (e.MarginBounds.Width - wSize) / 2
-                    ' рисование рисунка 
+                    ' СЂРёСЃРѕРІР°РЅРёРµ СЂРёСЃСѓРЅРєР° 
                     e.Graphics.DrawImage(picObj, New Rectangle(xPosition, yPosition, wSize, hSize))
-                    ' перенести указатель текущей позиции ниже рисунка
+                    ' РїРµСЂРµРЅРµСЃС‚Рё СѓРєР°Р·Р°С‚РµР»СЊ С‚РµРєСѓС‰РµР№ РїРѕР·РёС†РёРё РЅРёР¶Рµ СЂРёСЃСѓРЅРєР°
                     yPosition += hSize + Font.GetHeight(e.Graphics)
-                    ' отметиться что рисунок уже напечатался
+                    ' РѕС‚РјРµС‚РёС‚СЊСЃСЏ С‡С‚Рѕ СЂРёСЃСѓРЅРѕРє СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°Р»СЃСЏ
                     objTyped = True
                 End If
 
-                ' ТЕКСТ. Подготовка текста на печать
+                ' РўР•РљРЎРў. РџРѕРґРіРѕС‚РѕРІРєР° С‚РµРєСЃС‚Р° РЅР° РїРµС‡Р°С‚СЊ
                 If Props.PrintText <> "" And txtRT Is Nothing And tablPrint Is Nothing Then
-                    ' вклинить текст в ртф документ
+                    ' РІРєР»РёРЅРёС‚СЊ С‚РµРєСЃС‚ РІ СЂС‚С„ РґРѕРєСѓРјРµРЅС‚
                     txtRT = New runRT
                     txtRT.Text = Props.PrintText
                     txtRT.SelectAll() : txtRT.SelectionFont = Font : txtRT.SelectionColor = Color
                     txtRT.Text &= vbCrLf & vbCrLf
                 End If
-                ' ДОКУМЕНТ. Подготовка документа на печать
+                ' Р”РћРљРЈРњР•РќРў. РџРѕРґРіРѕС‚РѕРІРєР° РґРѕРєСѓРјРµРЅС‚Р° РЅР° РїРµС‡Р°С‚СЊ
                 If rtfPrint IsNot Nothing Then
                     If IsArray(rtfPrint) Then rtfPrint = rtfPrint(0)
-                    ' Не было перед ним просто текста на печать или был
+                    ' РќРµ Р±С‹Р»Рѕ РїРµСЂРµРґ РЅРёРј РїСЂРѕСЃС‚Рѕ С‚РµРєСЃС‚Р° РЅР° РїРµС‡Р°С‚СЊ РёР»Рё Р±С‹Р»
                     If txtRT Is Nothing Then
                         txtRT = rtfPrint.obj
-                        ' Если был, то если он еще не присвоен, то дописать ртф к простому тексту
+                        ' Р•СЃР»Рё Р±С‹Р», С‚Рѕ РµСЃР»Рё РѕРЅ РµС‰Рµ РЅРµ РїСЂРёСЃРІРѕРµРЅ, С‚Рѕ РґРѕРїРёСЃР°С‚СЊ СЂС‚С„ Рє РїСЂРѕСЃС‚РѕРјСѓ С‚РµРєСЃС‚Сѓ
                     ElseIf checkPrint = 0 Then
                         txtRT.SelectionStart = txtRT.TextLength - 1
                         Dim tmpRt As New runRT : tmpRt.Rtf = rtfPrint.obj.rtf
@@ -3569,9 +3569,9 @@ Class runPrD
                         txtRT.SelectedRtf = tmpRt.SelectedRtf
                     End If
                 End If
-                ' Итоговая печать объединенного документа (Текст + ртф)
+                ' РС‚РѕРіРѕРІР°СЏ РїРµС‡Р°С‚СЊ РѕР±СЉРµРґРёРЅРµРЅРЅРѕРіРѕ РґРѕРєСѓРјРµРЅС‚Р° (РўРµРєСЃС‚ + СЂС‚С„)
                 If txtRT IsNot Nothing And rtfTyped = False Then
-                    ' После рисунка не осталось места для текста на этой странице
+                    ' РџРѕСЃР»Рµ СЂРёСЃСѓРЅРєР° РЅРµ РѕСЃС‚Р°Р»РѕСЃСЊ РјРµСЃС‚Р° РґР»СЏ С‚РµРєСЃС‚Р° РЅР° СЌС‚РѕР№ СЃС‚СЂР°РЅРёС†Рµ
                     If yPosition > e.MarginBounds.Height Then e.HasMorePages = True : GoTo cikl
                     ' Print the content of the RichTextBox. Store the last character printed.
                     checkPrint = txtRT.Print(checkPrint, txtRT.TextLength, e, yPosition)
@@ -3584,11 +3584,11 @@ Class runPrD
                     End If
                 End If
 
-                ' ТАБЛИЦА. Печать таблицы
+                ' РўРђР‘Р›РР¦Рђ. РџРµС‡Р°С‚СЊ С‚Р°Р±Р»РёС†С‹
                 If tablPrint IsNot Nothing And tableTyped = False Then
-                    ' пропустить страницу, т.к. на ней уже напечатали чтото
+                    ' РїСЂРѕРїСѓСЃС‚РёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ, С‚.Рє. РЅР° РЅРµР№ СѓР¶Рµ РЅР°РїРµС‡Р°С‚Р°Р»Рё С‡С‚РѕС‚Рѕ
                     If yPosition > 0 Then e.HasMorePages = True : GoTo cikl
-                    ' Печать таблицы
+                    ' РџРµС‡Р°С‚СЊ С‚Р°Р±Р»РёС†С‹
                     Dim more As Boolean = tablPrint.obj.DrawDataGridView(e.Graphics)
 
                     ' Look for more pages
@@ -3599,17 +3599,17 @@ Class runPrD
                     End If
                 End If
 
-                ' Тут смотрим, если еще не дошли до страницы, с которой надо начинать печатать, 
-cikl:           ' то пройти этот раз будет холостым - пройдемся заново. Как бы уже следующей страницей
+                ' РўСѓС‚ СЃРјРѕС‚СЂРёРј, РµСЃР»Рё РµС‰Рµ РЅРµ РґРѕС€Р»Рё РґРѕ СЃС‚СЂР°РЅРёС†С‹, СЃ РєРѕС‚РѕСЂРѕР№ РЅР°РґРѕ РЅР°С‡РёРЅР°С‚СЊ РїРµС‡Р°С‚Р°С‚СЊ, 
+cikl:           ' С‚Рѕ РїСЂРѕР№С‚Рё СЌС‚РѕС‚ СЂР°Р· Р±СѓРґРµС‚ С…РѕР»РѕСЃС‚С‹Рј - РїСЂРѕР№РґРµРјСЃСЏ Р·Р°РЅРѕРІРѕ. РљР°Рє Р±С‹ СѓР¶Рµ СЃР»РµРґСѓСЋС‰РµР№ СЃС‚СЂР°РЅРёС†РµР№
             Loop While numPage < (e.PageSettings.PrinterSettings.FromPage) And isPreview = False
 
-            ' Чтобы если страницы кончились, то не печатать дальше ничего
+            ' Р§С‚РѕР±С‹ РµСЃР»Рё СЃС‚СЂР°РЅРёС†С‹ РєРѕРЅС‡РёР»РёСЃСЊ, С‚Рѕ РЅРµ РїРµС‡Р°С‚Р°С‚СЊ РґР°Р»СЊС€Рµ РЅРёС‡РµРіРѕ
             If isPreview = False Then
                 If numPage >= e.PageSettings.PrinterSettings.ToPage Then
                     e.HasMorePages = False
                 End If
             End If
-            ' Обнулить данные если конец печати
+            ' РћР±РЅСѓР»РёС‚СЊ РґР°РЅРЅС‹Рµ РµСЃР»Рё РєРѕРЅРµС† РїРµС‡Р°С‚Рё
             If e.HasMorePages = False Then numPage = 0
 
         Catch ex As Exception
@@ -3639,35 +3639,35 @@ End Class
 
 Public Class PrintDialog
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Тип") _
-            , trans("Вспомогательное поле"), trans("Выбранный цвет"), trans("Была нажата отмена") _
-            , trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый") _
-            , trans("Шрифт зачеркнутый"), trans("Шрифт размер") _
-            , trans("Текст на печать"), trans("Документ на печать"), trans("Таблица на печать"), trans("Рисунок на печать") _
-            , trans("Объект на печать") _
-            , trans("Поле слева"), trans("Поле сверху"), trans("Поле справа"), trans("Поле снизу") _
-            , trans("X"), trans("Таблица в центре"), trans("Y") _
-            , trans("Страница начала печати"), trans("Страница конца печати"), trans("Число копий") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РўРёРї") _
+            , trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’С‹Р±СЂР°РЅРЅС‹Р№ С†РІРµС‚"), trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РѕС‚РјРµРЅР°") _
+            , trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№") _
+            , trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ") _
+            , trans("РўРµРєСЃС‚ РЅР° РїРµС‡Р°С‚СЊ"), trans("Р”РѕРєСѓРјРµРЅС‚ РЅР° РїРµС‡Р°С‚СЊ"), trans("РўР°Р±Р»РёС†Р° РЅР° РїРµС‡Р°С‚СЊ"), trans("Р РёСЃСѓРЅРѕРє РЅР° РїРµС‡Р°С‚СЊ") _
+            , trans("РћР±СЉРµРєС‚ РЅР° РїРµС‡Р°С‚СЊ") _
+            , trans("РџРѕР»Рµ СЃР»РµРІР°"), trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ"), trans("РџРѕР»Рµ СЃРїСЂР°РІР°"), trans("РџРѕР»Рµ СЃРЅРёР·Сѓ") _
+            , trans("X"), trans("РўР°Р±Р»РёС†Р° РІ С†РµРЅС‚СЂРµ"), trans("Y") _
+            , trans("РЎС‚СЂР°РЅРёС†Р° РЅР°С‡Р°Р»Р° РїРµС‡Р°С‚Рё"), trans("РЎС‚СЂР°РЅРёС†Р° РєРѕРЅС†Р° РїРµС‡Р°С‚Рё"), trans("Р§РёСЃР»Рѕ РєРѕРїРёР№") _
         }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Запустить предварительный просмотр"), trans("Запустить настройки страницы") _
-            , trans("Запустить окно печати"), trans("Напечатать")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹Р№ РїСЂРѕСЃРјРѕС‚СЂ"), trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё СЃС‚СЂР°РЅРёС†С‹") _
+            , trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ РїРµС‡Р°С‚Рё"), trans("РќР°РїРµС‡Р°С‚Р°С‚СЊ")}
 
-    ' trans("Текст на печать"), trans("Рисунок на печать") _
-    '  trans("Запустить предварительный просмотр"), trans("Запустить настройки страницы") _
-    ', trans("Запустить окно печати")
+    ' trans("РўРµРєСЃС‚ РЅР° РїРµС‡Р°С‚СЊ"), trans("Р РёСЃСѓРЅРѕРє РЅР° РїРµС‡Р°С‚СЊ") _
+    '  trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹Р№ РїСЂРѕСЃРјРѕС‚СЂ"), trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё СЃС‚СЂР°РЅРёС†С‹") _
+    ', trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ РїРµС‡Р°С‚Рё")
 
-    ' Все события данного объекта
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
     Public Sobyts() As String = {}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "printdialog"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runPrD, holostoi, isRun, fromEng)
         Else
@@ -3678,21 +3678,21 @@ Public Class PrintDialog
 End Class
 #End Region
 
-' СЕКУНДОМЕР TIMER 
+' РЎР•РљРЈРќР”РћРњР•Р  TIMER 
 #Region "TIMER"
 Public Class Tm
     Inherits Windows.Forms.PictureBox
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Секундомер")
+    Public defaultName As String = trans("РЎРµРєСѓРЅРґРѕРјРµСЂ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Старт")
-    Public LastSobyt As String = trans("Тикнул")
+    Public LastProp As String = trans("РЎС‚Р°СЂС‚")
+    Public LastSobyt As String = trans("РўРёРєРЅСѓР»")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Me.Name = defaultName & "1" Else Me.Name = proj.GiveName(defaultName)
         Me.SizeMode = PictureBoxSizeMode.StretchImage : MyBase.Height = 16 : MyBase.Width = 16
         MyBase.BackColor = Color.Transparent
-        Props.Enabled = trans("Нет")
+        Props.Enabled = trans("РќРµС‚")
     End Sub
     Overloads Property Height()
         Get
@@ -3714,14 +3714,14 @@ Class runTm
     Inherits Windows.Forms.Timer
     Implements MyEvents, MyDialogs
     Public TypeObj As String = "PoluObj"
-    Public defaultName As String = trans("Секундомер")
+    Public defaultName As String = trans("РЎРµРєСѓРЅРґРѕРјРµСЂ")
     Public MyObj As Object
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Props As New PropertysRun(Me)
     Public Sub Load()
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Dim nam As String
     Property Name() As String Implements MyDialogs.Name
@@ -3756,50 +3756,50 @@ End Class
 
 Public Class Timer
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Тип"), trans("Работает"), _
-                                    trans("Интервал отсчета"), trans("Прошло интервалов"), trans("Вспомогательное поле") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РўРёРї"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+                                    trans("РРЅС‚РµСЂРІР°Р» РѕС‚СЃС‡РµС‚Р°"), trans("РџСЂРѕС€Р»Рѕ РёРЅС‚РµСЂРІР°Р»РѕРІ"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ") _
                                     , trans("X"), trans("Y")}
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Старт"), trans("Стоп")}
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РЎС‚Р°СЂС‚"), trans("РЎС‚РѕРї")}
 
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Тикнул")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РўРёРєРЅСѓР»")}
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "timer"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runTm, holostoi, isRun, fromEng)
         Else
             CreateObject(New Tm, holostoi, isRun, fromEng)
             Me.obj.image = Pictures32.Images(Picture)
-            '  If holostoi = False Then Me.obj.props.enabled = trans("Нет")
+            '  If holostoi = False Then Me.obj.props.enabled = trans("РќРµС‚")
             If holostoi = False Then Me.obj.props.interval = 1000
         End If
     End Sub
 End Class
 #End Region
 
-' КАЛЕНДАРЬ CALENDAR
+' РљРђР›Р•РќР”РђР Р¬ CALENDAR
 #Region "CALENDAR"
 Public Class Cr
     Inherits Windows.Forms.DateTimePicker
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Календарь")
+    Public defaultName As String = trans("РљР°Р»РµРЅРґР°СЂСЊ")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Выбранная дата")
-    Public LastSobyt As String = trans("Значение изменилось")
+    Public LastProp As String = trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РґР°С‚Р°")
+    Public LastSobyt As String = trans("Р—РЅР°С‡РµРЅРёРµ РёР·РјРµРЅРёР»РѕСЃСЊ")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName)
         Props.Width = 175 : Props.Height = 13
-        Props.CalendarDateFormat = trans("по выбору")
-        Props.CustomDateFormat = "dd MMM yyyy" & " " & trans("г") & "."
+        Props.CalendarDateFormat = trans("РїРѕ РІС‹Р±РѕСЂСѓ")
+        Props.CustomDateFormat = "dd MMM yyyy" & " " & trans("Рі") & "."
     End Sub
 End Class
 
@@ -3809,52 +3809,52 @@ Class runCr
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class Calendar
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Всплывающее меню"), trans("Курсор"), trans("Растяжка"), trans("Работает"), _
-        trans("Шрифт"), trans("Шрифт жирный"), trans("Шрифт курсив"), trans("Шрифт подчеркнутый"), _
-        trans("Шрифт зачеркнутый"), trans("Цвет шрифта"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Шрифт размер"), _
-        trans("Видимый"), trans("В фокусе"), trans("Тип"), _
-        trans("Формат даты"), trans("Формат даты по выбору"), trans("Кнопки вверх вниз"), _
-        trans("Выбранная дата"), trans("Подсказка") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+        trans("РЁСЂРёС„С‚"), trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"), trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"), trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"), _
+        trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), _
+        trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹"), trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ"), trans("РљРЅРѕРїРєРё РІРІРµСЂС… РІРЅРёР·"), _
+        trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РґР°С‚Р°"), trans("РџРѕРґСЃРєР°Р·РєР°") _
     }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Значение изменилось"), trans("Календарь раскрылся"), trans("Календарь закрылся") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("Р—РЅР°С‡РµРЅРёРµ РёР·РјРµРЅРёР»РѕСЃСЊ"), trans("РљР°Р»РµРЅРґР°СЂСЊ СЂР°СЃРєСЂС‹Р»СЃСЏ"), trans("РљР°Р»РµРЅРґР°СЂСЊ Р·Р°РєСЂС‹Р»СЃСЏ") _
                                 }
 
-    'trans("Формат даты"), trans("Формат даты по выбору"), trans("Кнопки вверх вниз"), _
-    'trans("Выбранная дата") _
+    'trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹"), trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ"), trans("РљРЅРѕРїРєРё РІРІРµСЂС… РІРЅРёР·"), _
+    'trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РґР°С‚Р°") _
 
-    'trans("Значение изменилось"), trans("Календарь раскрылся"), trans("Календарь закрылся") _
+    'trans("Р—РЅР°С‡РµРЅРёРµ РёР·РјРµРЅРёР»РѕСЃСЊ"), trans("РљР°Р»РµРЅРґР°СЂСЊ СЂР°СЃРєСЂС‹Р»СЃСЏ"), trans("РљР°Р»РµРЅРґР°СЂСЊ Р·Р°РєСЂС‹Р»СЃСЏ") _
 
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "calendar"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runCr, holostoi, isRun, fromEng)
         Else
@@ -3864,25 +3864,25 @@ Public Class Calendar
 End Class
 #End Region
 
-' БЕГУНОК TRACKBAR
+' Р‘Р•Р“РЈРќРћРљ TRACKBAR
 #Region "TRACKBAR"
 Public Class Tb
     Inherits Windows.Forms.TrackBar
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Бегунок")
+    Public defaultName As String = trans("Р‘РµРіСѓРЅРѕРє")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Значение")
-    Public LastSobyt As String = trans("Значение изменилось")
+    Public LastProp As String = trans("Р—РЅР°С‡РµРЅРёРµ")
+    Public LastSobyt As String = trans("Р—РЅР°С‡РµРЅРёРµ РёР·РјРµРЅРёР»РѕСЃСЊ")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Me.AutoSize = False
         Props.Name = proj.GiveName(defaultName)
         Props.Width = 150 : Props.Height = 40
-        Props.TickStyle = trans("Нижний")
+        Props.TickStyle = trans("РќРёР¶РЅРёР№")
         Props.Value = "0"
         Props.BackColor = ToMyColor(Me.BackColor)
-        Props.Orientation = trans("горизонтальная")
+        Props.Orientation = trans("РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ")
     End Sub
 End Class
 
@@ -3892,48 +3892,48 @@ Class runTb
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class TrackBar
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Всплывающее меню"), trans("Курсор"), trans("Растяжка"), trans("Работает"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Видимый"), trans("В фокусе"), trans("Тип"), trans("Значение"), trans("Ориентация"), _
-        trans("Сдвиг большой"), trans("Сдвиг малый"), trans("Максимум"), _
-        trans("Минимум"), trans("Стиль бегунка"), trans("Частота отметок"), trans("Подсказка") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), trans("Р—РЅР°С‡РµРЅРёРµ"), trans("РћСЂРёРµРЅС‚Р°С†РёСЏ"), _
+        trans("РЎРґРІРёРі Р±РѕР»СЊС€РѕР№"), trans("РЎРґРІРёРі РјР°Р»С‹Р№"), trans("РњР°РєСЃРёРјСѓРј"), _
+        trans("РњРёРЅРёРјСѓРј"), trans("РЎС‚РёР»СЊ Р±РµРіСѓРЅРєР°"), trans("Р§Р°СЃС‚РѕС‚Р° РѕС‚РјРµС‚РѕРє"), trans("РџРѕРґСЃРєР°Р·РєР°") _
     }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Значение изменилось"), trans("Движение бегунка") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("Р—РЅР°С‡РµРЅРёРµ РёР·РјРµРЅРёР»РѕСЃСЊ"), trans("Р”РІРёР¶РµРЅРёРµ Р±РµРіСѓРЅРєР°") _
                                 }
 
-    'LargeChange("Сдвиг большой"), SmallChange("Сдвиг малый"), Maximum("Максимум"), _
-    'Minimum("Минимум"), TickStyle("Стиль бегунка"), TickFrequency("Частота отметок") _
+    'LargeChange("РЎРґРІРёРі Р±РѕР»СЊС€РѕР№"), SmallChange("РЎРґРІРёРі РјР°Р»С‹Р№"), Maximum("РњР°РєСЃРёРјСѓРј"), _
+    'Minimum("РњРёРЅРёРјСѓРј"), TickStyle("РЎС‚РёР»СЊ Р±РµРіСѓРЅРєР°"), TickFrequency("Р§Р°СЃС‚РѕС‚Р° РѕС‚РјРµС‚РѕРє") _
 
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "trackbar"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runTb, holostoi, isRun, fromEng)
         Else
@@ -3943,25 +3943,25 @@ Public Class TrackBar
 End Class
 #End Region
 
-' Триал Trial
+' РўСЂРёР°Р» Trial
 #Region "TRIAL"
 Public Class Tr
     Inherits Windows.Forms.Panel
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Триал")
+    Public defaultName As String = trans("РўСЂРёР°Р»")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Включить триальный отсчет")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("Р’РєР»СЋС‡РёС‚СЊ С‚СЂРёР°Р»СЊРЅС‹Р№ РѕС‚СЃС‡РµС‚")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public MyObj As Object
-    ' Переменные Триала
+    ' РџРµСЂРµРјРµРЅРЅС‹Рµ РўСЂРёР°Р»Р°
     Public TextB As TextBox
     Public Buttn As Windows.Forms.Button
     Sub New()
         If proj Is Nothing Then Me.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
-        Props.BorderStyle = trans("линия")
+        Props.BorderStyle = trans("Р»РёРЅРёСЏ")
         Props.Height = 29 : Props.Width = 291
-        ' настройка объектов Триала
+        ' РЅР°СЃС‚СЂРѕР№РєР° РѕР±СЉРµРєС‚РѕРІ РўСЂРёР°Р»Р°
         Buttn = New Windows.Forms.Button
         Me.Controls.Add(Buttn)
         Buttn.Width = 90
@@ -3974,13 +3974,13 @@ Public Class Tr
         TextB.Left = 3 : TextB.Top = 3
         TextB.Anchor = AnchorStyles.Bottom + AnchorStyles.Right + AnchorStyles.Left + AnchorStyles.Top
         TextB.Multiline = True
-        ' Настройка ключей
+        ' РќР°СЃС‚СЂРѕР№РєР° РєР»СЋС‡РµР№
         Dim RSA As New Security.Cryptography.RSACryptoServiceProvider
         Props.KeyEncryption = RSA.ToXmlString(True)
         Dim rnd As New Random
         Props.IdProgram = rnd.Next(1000, Int32.MaxValue)
         Props.IdRegistryProgram = rnd.Next(1000, Int32.MaxValue)
-        Buttn.Text = trans("Активировать")
+        Buttn.Text = trans("РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ")
     End Sub
 End Class
 
@@ -3993,16 +3993,16 @@ Class runTr
     Shadows Event ActivationFailed(ByVal sender As Object, ByVal e As EventArgs)
     Public Shadows Props As New PropertysRun(Me)
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
         AddHandler Buttn.Click, AddressOf Buttn_Click
         AddHandler TextB.KeyUp, AddressOf TextB_KeyUpRun
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
     Private Sub Buttn_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         RaiseEvent ClickButton(sender, e)
-        Dim ret As String = Me.Props.KeyValidation(TextB.Text, trans("Да"))
+        Dim ret As String = Me.Props.KeyValidation(TextB.Text, trans("Р”Р°"))
         If DaOrNet(ret) Then RaiseEvent ActivationSuccessul(sender, e) Else RaiseEvent ActivationFailed(sender, e)
     End Sub
     Private Sub TextB_KeyUpRun(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs)
@@ -4012,41 +4012,41 @@ End Class
 
 Public Class Trial
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), trans("Растяжка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Работает"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Видимый"), trans("Стиль рамки"), trans("Тип"), trans("Подсказка"), _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), trans("Р Р°СЃС‚СЏР¶РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°"), _
  _
-        trans("Текст кнопки"), trans("Текст поля"), trans("Сообщение успешной активации"), trans("Сообщение неудачной активации"), _
-        trans("ID пользователя"), trans("ID программы"), _
-        trans("ID в реестре"), trans("Ключ шифрования"), _
-        trans("Ключ активации выдать"), trans("Ключ активации проверить"), _
-        trans("Дней триала всего"), trans("Дней триала осталось"), trans("Активирована"), trans("Примечание"), _
-        trans("Триальный период запущен") _
+        trans("РўРµРєСЃС‚ РєРЅРѕРїРєРё"), trans("РўРµРєСЃС‚ РїРѕР»СЏ"), trans("РЎРѕРѕР±С‰РµРЅРёРµ СѓСЃРїРµС€РЅРѕР№ Р°РєС‚РёРІР°С†РёРё"), trans("РЎРѕРѕР±С‰РµРЅРёРµ РЅРµСѓРґР°С‡РЅРѕР№ Р°РєС‚РёРІР°С†РёРё"), _
+        trans("ID РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ"), trans("ID РїСЂРѕРіСЂР°РјРјС‹"), _
+        trans("ID РІ СЂРµРµСЃС‚СЂРµ"), trans("РљР»СЋС‡ С€РёС„СЂРѕРІР°РЅРёСЏ"), _
+        trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РІС‹РґР°С‚СЊ"), trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РїСЂРѕРІРµСЂРёС‚СЊ"), _
+        trans("Р”РЅРµР№ С‚СЂРёР°Р»Р° РІСЃРµРіРѕ"), trans("Р”РЅРµР№ С‚СЂРёР°Р»Р° РѕСЃС‚Р°Р»РѕСЃСЊ"), trans("РђРєС‚РёРІРёСЂРѕРІР°РЅР°"), trans("РџСЂРёРјРµС‡Р°РЅРёРµ"), _
+        trans("РўСЂРёР°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ Р·Р°РїСѓС‰РµРЅ") _
         }
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад"), trans("Триальный период запустить"), trans("Активацию отменить")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), trans("Изменилась видимость"), _
-                                trans("Клик кнопки"), trans("Активация успешная"), trans("Активация неудачная") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), trans("РўСЂРёР°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ Р·Р°РїСѓСЃС‚РёС‚СЊ"), trans("РђРєС‚РёРІР°С†РёСЋ РѕС‚РјРµРЅРёС‚СЊ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РљР»РёРє РєРЅРѕРїРєРё"), trans("РђРєС‚РёРІР°С†РёСЏ СѓСЃРїРµС€РЅР°СЏ"), trans("РђРєС‚РёРІР°С†РёСЏ РЅРµСѓРґР°С‡РЅР°СЏ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "trial"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runTr, holostoi, isRun, fromEng)
         Else
@@ -4056,21 +4056,21 @@ Public Class Trial
 End Class
 #End Region
 
-' КлиентСервер CLIENTSERVER
+' РљР»РёРµРЅС‚РЎРµСЂРІРµСЂ CLIENTSERVER
 #Region "ClientServer"
 Public Class CS
     Inherits ClientServerMy
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("КлиентСервер")
-    Public LastProp As String = trans("Принятый текст")
-    Public LastSobyt As String = trans("Пришел текст")
+    Public defaultName As String = trans("РљР»РёРµРЅС‚РЎРµСЂРІРµСЂ")
+    Public LastProp As String = trans("РџСЂРёРЅСЏС‚С‹Р№ С‚РµРєСЃС‚")
+    Public LastSobyt As String = trans("РџСЂРёС€РµР» С‚РµРєСЃС‚")
     Public Props As New Propertys(Me)
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
         Props.Width = 290 : Props.Height = 290
-        Props.BackColor = trans("Никакой")
+        Props.BackColor = trans("РќРёРєР°РєРѕР№")
     End Sub
 End Class
 
@@ -4080,10 +4080,10 @@ Class runCS
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
@@ -4091,47 +4091,47 @@ Public Class ClientServer
     Inherits Objetus
     Public dx As Integer
 
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Стиль фона"), trans("Растяжка"), _
-        trans("Работает"), trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Видимый"), trans("В фокусе"), _
-        trans("Тип"), trans("Подсказка"), trans("Стиль рамки"), _
-        trans("Файл отправляется"), trans("Обозначение команд"), trans("Принятая команда"), trans("Принятый текст"), _
-        trans("Принятый файл"), trans("Имя в сети"), trans("IP для соединения"), trans("Порт для соединения"), _
-        trans("Папка для загрузок"), trans("Имена клиентов"), trans("Текст поля ввода"), trans("Текст поля лога"), _
-        trans("Ip клиентов"), trans("Ip клиента"), trans("Тип клиент сервера"), _
-        trans("Скрыть отправку файлов"), trans("Скрыть отправку текста"), trans("Скрыть список"), _
-        trans("Отправленная команда"), trans("Отправленый текст"), trans("Отправленый файл") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("Р Р°СЃС‚СЏР¶РєР°"), _
+        trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), _
+        trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), _
+        trans("Р¤Р°Р№Р» РѕС‚РїСЂР°РІР»СЏРµС‚СЃСЏ"), trans("РћР±РѕР·РЅР°С‡РµРЅРёРµ РєРѕРјР°РЅРґ"), trans("РџСЂРёРЅСЏС‚Р°СЏ РєРѕРјР°РЅРґР°"), trans("РџСЂРёРЅСЏС‚С‹Р№ С‚РµРєСЃС‚"), _
+        trans("РџСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»"), trans("РРјСЏ РІ СЃРµС‚Рё"), trans("IP РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ"), trans("РџРѕСЂС‚ РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ"), _
+        trans("РџР°РїРєР° РґР»СЏ Р·Р°РіСЂСѓР·РѕРє"), trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ"), trans("РўРµРєСЃС‚ РїРѕР»СЏ РІРІРѕРґР°"), trans("РўРµРєСЃС‚ РїРѕР»СЏ Р»РѕРіР°"), _
+        trans("Ip РєР»РёРµРЅС‚РѕРІ"), trans("Ip РєР»РёРµРЅС‚Р°"), trans("РўРёРї РєР»РёРµРЅС‚ СЃРµСЂРІРµСЂР°"), _
+        trans("РЎРєСЂС‹С‚СЊ РѕС‚РїСЂР°РІРєСѓ С„Р°Р№Р»РѕРІ"), trans("РЎРєСЂС‹С‚СЊ РѕС‚РїСЂР°РІРєСѓ С‚РµРєСЃС‚Р°"), trans("РЎРєСЂС‹С‚СЊ СЃРїРёСЃРѕРє"), _
+        trans("РћС‚РїСЂР°РІР»РµРЅРЅР°СЏ РєРѕРјР°РЅРґР°"), trans("РћС‚РїСЂР°РІР»РµРЅС‹Р№ С‚РµРєСЃС‚"), trans("РћС‚РїСЂР°РІР»РµРЅС‹Р№ С„Р°Р№Р»") _
         }
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад"), _
-        trans("Отправить серверу"), trans("Отправить файл серверу"), trans("Отправить клиентам"), _
-        trans("Отправить клиентам кроме"), trans("Отправить клиенту"), trans("Отправить файл клиентам"), _
-        trans("Отправить файл клиентам кроме"), trans("Отправить файл клиенту"), trans("Добавить в лог"), _
-        trans("Соединиться с сервером"), trans("Создать сервер"), trans("Начать прослушку"), _
-        trans("Отключить сервер"), trans("Отключить прослушку"), trans("Отключиться"), trans("Выполнить команду") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), _
+        trans("РћС‚РїСЂР°РІРёС‚СЊ СЃРµСЂРІРµСЂСѓ"), trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» СЃРµСЂРІРµСЂСѓ"), trans("РћС‚РїСЂР°РІРёС‚СЊ РєР»РёРµРЅС‚Р°Рј"), _
+        trans("РћС‚РїСЂР°РІРёС‚СЊ РєР»РёРµРЅС‚Р°Рј РєСЂРѕРјРµ"), trans("РћС‚РїСЂР°РІРёС‚СЊ РєР»РёРµРЅС‚Сѓ"), trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Р°Рј"), _
+        trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Р°Рј РєСЂРѕРјРµ"), trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Сѓ"), trans("Р”РѕР±Р°РІРёС‚СЊ РІ Р»РѕРі"), _
+        trans("РЎРѕРµРґРёРЅРёС‚СЊСЃСЏ СЃ СЃРµСЂРІРµСЂРѕРј"), trans("РЎРѕР·РґР°С‚СЊ СЃРµСЂРІРµСЂ"), trans("РќР°С‡Р°С‚СЊ РїСЂРѕСЃР»СѓС€РєСѓ"), _
+        trans("РћС‚РєР»СЋС‡РёС‚СЊ СЃРµСЂРІРµСЂ"), trans("РћС‚РєР»СЋС‡РёС‚СЊ РїСЂРѕСЃР»СѓС€РєСѓ"), trans("РћС‚РєР»СЋС‡РёС‚СЊСЃСЏ"), trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРјР°РЅРґСѓ") _
       }
 
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Прорисовка"), trans("Создание"), _
-        trans("Присоединились к серверу"), trans("Присоединился клиент"), trans("Изменилось число клиентов"), _
-        trans("Пришел текст"), trans("Пришла команда"), trans("Пришел файл"), _
-        trans("Отключение"), trans("Произошла ошибка"), trans("Отправился текст"), _
-        trans("Отправился файл"), trans("Идет отправление"), trans("Идет прием данных"), _
-        trans("Изменился статус") _
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), trans("РЎРѕР·РґР°РЅРёРµ"), _
+        trans("РџСЂРёСЃРѕРµРґРёРЅРёР»РёСЃСЊ Рє СЃРµСЂРІРµСЂСѓ"), trans("РџСЂРёСЃРѕРµРґРёРЅРёР»СЃСЏ РєР»РёРµРЅС‚"), trans("РР·РјРµРЅРёР»РѕСЃСЊ С‡РёСЃР»Рѕ РєР»РёРµРЅС‚РѕРІ"), _
+        trans("РџСЂРёС€РµР» С‚РµРєСЃС‚"), trans("РџСЂРёС€Р»Р° РєРѕРјР°РЅРґР°"), trans("РџСЂРёС€РµР» С„Р°Р№Р»"), _
+        trans("РћС‚РєР»СЋС‡РµРЅРёРµ"), trans("РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°"), trans("РћС‚РїСЂР°РІРёР»СЃСЏ С‚РµРєСЃС‚"), _
+        trans("РћС‚РїСЂР°РІРёР»СЃСЏ С„Р°Р№Р»"), trans("РРґРµС‚ РѕС‚РїСЂР°РІР»РµРЅРёРµ"), trans("РРґРµС‚ РїСЂРёРµРј РґР°РЅРЅС‹С…"), _
+        trans("РР·РјРµРЅРёР»СЃСЏ СЃС‚Р°С‚СѓСЃ") _
     }
 
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "clientserver"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runCS, holostoi, isRun, fromEng)
         Else
@@ -4184,21 +4184,21 @@ End Interface
 
 #End Region
 
-' Интернет INTERNET
+' РРЅС‚РµСЂРЅРµС‚ INTERNET
 #Region "Internet"
 Public Class I
     Inherits InternetControl
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Интернет")
-    Public LastProp As String = trans("Выполнить запрос")
-    Public LastSobyt As String = trans("Пришел ответ")
+    Public defaultName As String = trans("РРЅС‚РµСЂРЅРµС‚")
+    Public LastProp As String = trans("Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РїСЂРѕСЃ")
+    Public LastSobyt As String = trans("РџСЂРёС€РµР» РѕС‚РІРµС‚")
     Public Props As New Propertys(Me)
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
         Props.Name = proj.GiveName(defaultName) : Props.Text = Props.Name
         Props.Width = 490 : Props.Height = 200
-        Props.BackColor = trans("Никакой")
+        Props.BackColor = trans("РќРёРєР°РєРѕР№")
     End Sub
 End Class
 
@@ -4208,69 +4208,69 @@ Class runI
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Shadows Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class Internet
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Стиль фона"), trans("Растяжка"), _
-        trans("Работает"), trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), trans("Видимый"), trans("В фокусе"), _
-        trans("Тип"), trans("Подсказка"), trans("Стиль рамки"), _
-        trans("Удерживать соединение"), trans("Автоматически перенаправляться"), _
-        trans("Ссылка запроса"), trans("Ссылка откуда пришли"), trans("Ссылка перенаправления"), _
-        trans("Тип браузера"), trans("Принимать"), trans("Прокси IP"), trans("Прокси порт"), _
-        trans("Кодировка страницы"), trans("Язык страницы"), trans("Содержимое запроса"), _
-        trans("Тип содержимого"), trans("Длинна содержимого"), trans("Метод запроса"), _
-        trans("Код результата"), trans("Таймаут"), trans("Время задержки"), _
-        trans("Заголовки запроса"), trans("Куки запросов"), trans("Результат запроса"), _
-        trans("Папка для загрузок"), trans("Размер буфера"), trans("Скачивается файл"), trans("Скачка пауза"), _
-        trans("Наличие соединения") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("Р Р°СЃС‚СЏР¶РєР°"), _
+        trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), _
+        trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), _
+        trans("РЈРґРµСЂР¶РёРІР°С‚СЊ СЃРѕРµРґРёРЅРµРЅРёРµ"), trans("РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРµСЂРµРЅР°РїСЂР°РІР»СЏС‚СЊСЃСЏ"), _
+        trans("РЎСЃС‹Р»РєР° Р·Р°РїСЂРѕСЃР°"), trans("РЎСЃС‹Р»РєР° РѕС‚РєСѓРґР° РїСЂРёС€Р»Рё"), trans("РЎСЃС‹Р»РєР° РїРµСЂРµРЅР°РїСЂР°РІР»РµРЅРёСЏ"), _
+        trans("РўРёРї Р±СЂР°СѓР·РµСЂР°"), trans("РџСЂРёРЅРёРјР°С‚СЊ"), trans("РџСЂРѕРєСЃРё IP"), trans("РџСЂРѕРєСЃРё РїРѕСЂС‚"), _
+        trans("РљРѕРґРёСЂРѕРІРєР° СЃС‚СЂР°РЅРёС†С‹"), trans("РЇР·С‹Рє СЃС‚СЂР°РЅРёС†С‹"), trans("РЎРѕРґРµСЂР¶РёРјРѕРµ Р·Р°РїСЂРѕСЃР°"), _
+        trans("РўРёРї СЃРѕРґРµСЂР¶РёРјРѕРіРѕ"), trans("Р”Р»РёРЅРЅР° СЃРѕРґРµСЂР¶РёРјРѕРіРѕ"), trans("РњРµС‚РѕРґ Р·Р°РїСЂРѕСЃР°"), _
+        trans("РљРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°"), trans("РўР°Р№РјР°СѓС‚"), trans("Р’СЂРµРјСЏ Р·Р°РґРµСЂР¶РєРё"), _
+        trans("Р—Р°РіРѕР»РѕРІРєРё Р·Р°РїСЂРѕСЃР°"), trans("РљСѓРєРё Р·Р°РїСЂРѕСЃРѕРІ"), trans("Р РµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°"), _
+        trans("РџР°РїРєР° РґР»СЏ Р·Р°РіСЂСѓР·РѕРє"), trans("Р Р°Р·РјРµСЂ Р±СѓС„РµСЂР°"), trans("РЎРєР°С‡РёРІР°РµС‚СЃСЏ С„Р°Р№Р»"), trans("РЎРєР°С‡РєР° РїР°СѓР·Р°"), _
+        trans("РќР°Р»РёС‡РёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ") _
         }
-    'Удерживать соединение~~KeepAlive
-    'Автоматически перенаправляться~~AllowAutoRedirect
-    'Ссылка запроса~~UrlToGo
-    'Ссылка откуда пришли~~UrlReferer
-    'Ссылка перенаправления~~UrlRedirect
-    'Тип браузера~~UserAgent
-    'Принимать~~Accept
-    'Прокси IP~~ProxyIp
-    'Прокси порт~~ProxyPort
-    'Кодировка страницы~~EncodingPage
-    'Язык страницы~~LanguagePage
-    'Содержимое запроса~~ContentQuery
-    'Тип содержимого~~ContentType
-    'Длинна содержимого~~ContentLength   RO
-    'Метод запроса~~HttpMethod   
-    'Код результата~~ResultCode  RO
-    'Таймаут~~TimeOut
-    'Время задержки~~TimeDelay
-    'Заголовки запроса~~Headers   RO
-    'Куки запросов~~CookiesQueries
-    'Результат запроса~~ResultQuery
-    'Тип файла~~File type
-    'Размер буфера~~BufferSize
-    'Скачивается файл~~FileDownloading
-    'Скачка пауза~~DownloadPause
+    'РЈРґРµСЂР¶РёРІР°С‚СЊ СЃРѕРµРґРёРЅРµРЅРёРµ~~KeepAlive
+    'РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРµСЂРµРЅР°РїСЂР°РІР»СЏС‚СЊСЃСЏ~~AllowAutoRedirect
+    'РЎСЃС‹Р»РєР° Р·Р°РїСЂРѕСЃР°~~UrlToGo
+    'РЎСЃС‹Р»РєР° РѕС‚РєСѓРґР° РїСЂРёС€Р»Рё~~UrlReferer
+    'РЎСЃС‹Р»РєР° РїРµСЂРµРЅР°РїСЂР°РІР»РµРЅРёСЏ~~UrlRedirect
+    'РўРёРї Р±СЂР°СѓР·РµСЂР°~~UserAgent
+    'РџСЂРёРЅРёРјР°С‚СЊ~~Accept
+    'РџСЂРѕРєСЃРё IP~~ProxyIp
+    'РџСЂРѕРєСЃРё РїРѕСЂС‚~~ProxyPort
+    'РљРѕРґРёСЂРѕРІРєР° СЃС‚СЂР°РЅРёС†С‹~~EncodingPage
+    'РЇР·С‹Рє СЃС‚СЂР°РЅРёС†С‹~~LanguagePage
+    'РЎРѕРґРµСЂР¶РёРјРѕРµ Р·Р°РїСЂРѕСЃР°~~ContentQuery
+    'РўРёРї СЃРѕРґРµСЂР¶РёРјРѕРіРѕ~~ContentType
+    'Р”Р»РёРЅРЅР° СЃРѕРґРµСЂР¶РёРјРѕРіРѕ~~ContentLength   RO
+    'РњРµС‚РѕРґ Р·Р°РїСЂРѕСЃР°~~HttpMethod   
+    'РљРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°~~ResultCode  RO
+    'РўР°Р№РјР°СѓС‚~~TimeOut
+    'Р’СЂРµРјСЏ Р·Р°РґРµСЂР¶РєРё~~TimeDelay
+    'Р—Р°РіРѕР»РѕРІРєРё Р·Р°РїСЂРѕСЃР°~~Headers   RO
+    'РљСѓРєРё Р·Р°РїСЂРѕСЃРѕРІ~~CookiesQueries
+    'Р РµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°~~ResultQuery
+    'РўРёРї С„Р°Р№Р»Р°~~File type
+    'Р Р°Р·РјРµСЂ Р±СѓС„РµСЂР°~~BufferSize
+    'РЎРєР°С‡РёРІР°РµС‚СЃСЏ С„Р°Р№Р»~~FileDownloading
+    'РЎРєР°С‡РєР° РїР°СѓР·Р°~~DownloadPause
 
 
-    'Получить код страницы~~GetSourceCodePage
-    'Скачать файл~~DownloadFile
-    'Выполнить запрос~~ExecuteQuery
-    'Очистить куки~~ClearCookie
-    'Скачка отменить~~DownloadCancel
-    'Скачка возобновить~~DownloadResume
+    'РџРѕР»СѓС‡РёС‚СЊ РєРѕРґ СЃС‚СЂР°РЅРёС†С‹~~GetSourceCodePage
+    'РЎРєР°С‡Р°С‚СЊ С„Р°Р№Р»~~DownloadFile
+    'Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РїСЂРѕСЃ~~ExecuteQuery
+    'РћС‡РёСЃС‚РёС‚СЊ РєСѓРєРё~~ClearCookie
+    'РЎРєР°С‡РєР° РѕС‚РјРµРЅРёС‚СЊ~~DownloadCancel
+    'РЎРєР°С‡РєР° РІРѕР·РѕР±РЅРѕРІРёС‚СЊ~~DownloadResume
 
-    'Отправляется запрос~~SendingQuery
-    'Отправился запрос~~SentQuery
-    'Пришел ответ~~ReceivedResponse
+    'РћС‚РїСЂР°РІР»СЏРµС‚СЃСЏ Р·Р°РїСЂРѕСЃ~~SendingQuery
+    'РћС‚РїСЂР°РІРёР»СЃСЏ Р·Р°РїСЂРѕСЃ~~SentQuery
+    'РџСЂРёС€РµР» РѕС‚РІРµС‚~~ReceivedResponse
     '"What is your pet&#039;s name?","What is the name of your favorite restaurant?","What is your favorite place to travel?","What is the title of your favorite book?","What is the title of your favorite movie?","What is your favorite computer game?","What is your favorite music album?","What is the name of your favorite sports team?","Who is your favorite artist?" 
 
     'action="/register/index.php
@@ -4291,27 +4291,27 @@ Public Class Internet
     'userq1=What is the name of your favorite restaurant?&answer1=aaaaa&gnm=A1ED0&word=123&
 
     'qa1=custom&age=20&key=&lang=en&service=30&lg_id=&qtype=user&fname=&lname=&gender=0&nickname=AlgoritmTest1&email=algoritm2@mail.ru&password=qwer68m&password_confirm=qwer68m&userq=SDAFSeettrr&userq=SDAFSeettrr&answer1=aaaaa&gnm=&word=&icq_ln=
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад"), _
-        trans("Получить код страницы"), trans("Скачать файл"), _
-        trans("Выполнить запрос"), trans("Очистить куки"), _
-        trans("Скачка отменить"), trans("Скачка возобновить") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"), _
+        trans("РџРѕР»СѓС‡РёС‚СЊ РєРѕРґ СЃС‚СЂР°РЅРёС†С‹"), trans("РЎРєР°С‡Р°С‚СЊ С„Р°Р№Р»"), _
+        trans("Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РїСЂРѕСЃ"), trans("РћС‡РёСЃС‚РёС‚СЊ РєСѓРєРё"), _
+        trans("РЎРєР°С‡РєР° РѕС‚РјРµРЅРёС‚СЊ"), trans("РЎРєР°С‡РєР° РІРѕР·РѕР±РЅРѕРІРёС‚СЊ") _
       }
 
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Прорисовка"), trans("Создание"), _
-        trans("Отправляется запрос"), trans("Отправился запрос"), trans("Пришел ответ"), _
-        trans("Идет прием данных"), trans("Загрузка отменена") _
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), trans("РЎРѕР·РґР°РЅРёРµ"), _
+        trans("РћС‚РїСЂР°РІР»СЏРµС‚СЃСЏ Р·Р°РїСЂРѕСЃ"), trans("РћС‚РїСЂР°РІРёР»СЃСЏ Р·Р°РїСЂРѕСЃ"), trans("РџСЂРёС€РµР» РѕС‚РІРµС‚"), _
+        trans("РРґРµС‚ РїСЂРёРµРј РґР°РЅРЅС‹С…"), trans("Р—Р°РіСЂСѓР·РєР° РѕС‚РјРµРЅРµРЅР°") _
     }
 
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "internet"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runI, holostoi, isRun, fromEng)
         Else
@@ -4330,15 +4330,15 @@ End Interface
 
 #End Region
 
-' Полоса загрузки PROGRESSBAR
+' РџРѕР»РѕСЃР° Р·Р°РіСЂСѓР·РєРё PROGRESSBAR
 #Region "ProgressBar"
 Public Class PrB
     Inherits Windows.Forms.ProgressBar
     Public TypeObj As String = "Obi4niy"
-    Public defaultName As String = trans("Полоса загрузки")
+    Public defaultName As String = trans("РџРѕР»РѕСЃР° Р·Р°РіСЂСѓР·РєРё")
     Public Props As New Propertys(Me)
-    Public LastProp As String = trans("Значение")
-    Public LastSobyt As String = trans("Клик")
+    Public LastProp As String = trans("Р—РЅР°С‡РµРЅРёРµ")
+    Public LastSobyt As String = trans("РљР»РёРє")
     Public MyObj As Object
     Sub New()
         If proj Is Nothing Then Props.Name = defaultName & "1" Else Props.Name = proj.GiveName(defaultName)
@@ -4356,50 +4356,50 @@ Class runPrB
     Public Shadows Props As New PropertysRun(Me)
     Shadows Event Created(ByVal sender As Object, ByVal e As EventArgs) Implements MyEvents.Created
     Public Sub Load()
-        Props.AddContextMenu() ' Присвоение контекстного меню
+        Props.AddContextMenu() ' РџСЂРёСЃРІРѕРµРЅРёРµ РєРѕРЅС‚РµРєСЃС‚РЅРѕРіРѕ РјРµРЅСЋ
     End Sub
     Public Sub RaiseCreate()
-        RaiseEvent Created(Me, New EventArgs()) ' Вызов МоегоСобытия
+        RaiseEvent Created(Me, New EventArgs()) ' Р’С‹Р·РѕРІ РњРѕРµРіРѕРЎРѕР±С‹С‚РёСЏ
     End Sub
 End Class
 
 Public Class ProgressBar
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Имя"), trans("Номер"), trans("Привязка"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Растяжка"), trans("Работает"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Видимый"), trans("В фокусе"), trans("Тип"), _
-        trans("Подсказка"), trans("Максимум"), trans("Минимум"), trans("Значение"), _
-        trans("Стиль загрузки"), trans("Скорость анимации"), trans("Шаг загрузки"), trans("Справа налево") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), trans("РџСЂРёРІСЏР·РєР°"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°СЃС‚СЏР¶РєР°"), trans("Р Р°Р±РѕС‚Р°РµС‚"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("Р’ С„РѕРєСѓСЃРµ"), trans("РўРёРї"), _
+        trans("РџРѕРґСЃРєР°Р·РєР°"), trans("РњР°РєСЃРёРјСѓРј"), trans("РњРёРЅРёРјСѓРј"), trans("Р—РЅР°С‡РµРЅРёРµ"), _
+        trans("РЎС‚РёР»СЊ Р·Р°РіСЂСѓР·РєРё"), trans("РЎРєРѕСЂРѕСЃС‚СЊ Р°РЅРёРјР°С†РёРё"), trans("РЁР°Рі Р·Р°РіСЂСѓР·РєРё"), trans("РЎРїСЂР°РІР° РЅР°Р»РµРІРѕ") _
     }
 
-    'Стиль~~Style
-    'Скорость анимации~~MarqueeAnimationSpeed
-    'Шаг загрузки~~StepProgress
-    'Справа налево~~RightToLeftLayout
+    'РЎС‚РёР»СЊ~~Style
+    'РЎРєРѕСЂРѕСЃС‚СЊ Р°РЅРёРјР°С†РёРё~~MarqueeAnimationSpeed
+    'РЁР°Рі Р·Р°РіСЂСѓР·РєРё~~StepProgress
+    'РЎРїСЂР°РІР° РЅР°Р»РµРІРѕ~~RightToLeftLayout
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Получить фокус"), trans("Перенести наперед"), _
-        trans("Перенести назад")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Создание"), trans("Прорисовка"), trans("Изменилась видимость"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"), _
+        trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹") _
                                 }
 
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "progressbar"
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
-        ' Настроить свойства
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ СЃРІРѕР№СЃС‚РІР°
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
-        ' Создать контрол
+        ' РЎРѕР·РґР°С‚СЊ РєРѕРЅС‚СЂРѕР»
         If isRun Then
             CreateObject(New runPrB, holostoi, isRun, fromEng)
         Else

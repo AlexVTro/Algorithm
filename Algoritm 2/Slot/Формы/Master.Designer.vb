@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Master
     Inherits System.Windows.Forms.Form
 
@@ -61,7 +61,7 @@ Partial Class Master
         Me.Cancel.Name = "Cancel"
         Me.Cancel.Size = New System.Drawing.Size(57, 35)
         Me.Cancel.TabIndex = 2
-        Me.Cancel.Text = "Отмена"
+        Me.Cancel.Text = "РћС‚РјРµРЅР°"
         Me.Cancel.UseVisualStyleBackColor = False
         '
         'MasterPanel
@@ -131,8 +131,8 @@ Partial Class Master
         Me.InfoPropsLabel.Size = New System.Drawing.Size(402, 85)
         Me.InfoPropsLabel.TabIndex = 3
         Me.InfoPropsLabel.TabStop = True
-        Me.InfoPropsLabel.Text = "В этом окне вы можете создавать действия любой сложности. Подробнее о Мастере сло" & _
-            "жных действий"
+        Me.InfoPropsLabel.Text = "Р’ СЌС‚РѕРј РѕРєРЅРµ РІС‹ РјРѕР¶РµС‚Рµ СЃРѕР·РґР°РІР°С‚СЊ РґРµР№СЃС‚РІРёСЏ Р»СЋР±РѕР№ СЃР»РѕР¶РЅРѕСЃС‚Рё. РџРѕРґСЂРѕР±РЅРµРµ Рѕ РњР°СЃС‚РµСЂРµ СЃР»Рѕ" & _
+            "Р¶РЅС‹С… РґРµР№СЃС‚РІРёР№"
         Me.InfoPropsLabel.UseCompatibleTextRendering = True
         Me.InfoPropsLabel.VisitedLinkColor = System.Drawing.Color.Gold
         '

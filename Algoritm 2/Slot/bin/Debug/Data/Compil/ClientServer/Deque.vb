@@ -1,4 +1,4 @@
-''' <summary>
+﻿''' <summary>
 ''' Represents both a last-in, first-out (LIFO) and a first-in, first-out (FIFO) non-generic collection of objects.
 ''' </summary>
 ''' <remarks>

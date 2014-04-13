@@ -1,4 +1,4 @@
-Public Class Master
+п»їPublic Class Master
     Dim lishnee As Size = New Size(Me.Width - Me.DisplayRectangle.Width, Me.Height - Me.DisplayRectangle.Height)
     Dim WithEvents blks As Bloks
     Dim Pattern As MasterPattern
@@ -11,7 +11,7 @@ Public Class Master
         Timer1.Start()
         Me.MinimumSize = New Size(1, 1)
         Me.Size = Me.MinimumSize
-        Me.Text = transInfc("Мастер сложных действий")
+        Me.Text = transInfc("РњР°СЃС‚РµСЂ СЃР»РѕР¶РЅС‹С… РґРµР№СЃС‚РІРёР№")
         Dim text As New CodeString(Pattern.text, "None")
         If Pattern.withUslovie Then
             Me.Pattern.SetBloki(text.Split("Vezde", uslovs))
@@ -27,7 +27,7 @@ Public Class Master
         If blks.BlksCount = 1 Then blks.BlkTop.TudaSuda1_Click(Nothing, Nothing)
         Me.Width += 60
         InfoPropsLabel.Text = transInfc(InfoPropsLabel.Text)
-        InfoPropsLabel.LinkArea = New LinkArea(InfoPropsLabel.Text.Length - 1 - transInfc("Мастер сложных действий").Length, 999)
+        InfoPropsLabel.LinkArea = New LinkArea(InfoPropsLabel.Text.Length - 1 - transInfc("РњР°СЃС‚РµСЂ СЃР»РѕР¶РЅС‹С… РґРµР№СЃС‚РІРёР№").Length, 999)
         InfoPropsLabel.Links(0).Name = "Master"
     End Sub
 
@@ -36,13 +36,13 @@ Public Class Master
     End Sub
 
     Private Sub Master_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
-        ' Параметры окна мастера
+        ' РџР°СЂР°РјРµС‚СЂС‹ РѕРєРЅР° РјР°СЃС‚РµСЂР°
         MasterHeight = Me.Height : MasterSplit = Me.RamkaCDSplit.SplitterDistance
         If blks.BlksCount = 1 Then MasterWidth = Me.Width
     End Sub
 
     Private Sub Master_Shown(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Shown
-        ' Параметры окна мастера
+        ' РџР°СЂР°РјРµС‚СЂС‹ РѕРєРЅР° РјР°СЃС‚РµСЂР°
         If blks.BlksCount = 1 And MasterHeight <> 0 Then
             Me.Height = MasterHeight : Me.Width = MasterWidth : Me.RamkaCDSplit.SplitterDistance = MasterSplit
         End If
@@ -141,7 +141,7 @@ Public Class Master
         Timer1.Stop() : Panel1_SizeChanged(Nothing, Nothing)
     End Sub
 
-    ' ОТОБРАЖАЮТ ИНФОРМАЦИЮ О СВОЙСТВЕ В InfoPropsLabel МАСТЕРА
+    ' РћРўРћР‘Р РђР–РђР®Рў РРќР¤РћР РњРђР¦РР® Рћ РЎР’РћР™РЎРўР’Р• Р’ InfoPropsLabel РњРђРЎРўР•Р Рђ
     Public Sub InfoPropsShow(ByVal prop As String, ByVal MyObj As Object)
         MainForm.InfoPropsShow(prop, MyObj, InfoPropsLabel)
     End Sub

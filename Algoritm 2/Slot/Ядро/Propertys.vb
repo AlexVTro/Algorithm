@@ -5365,7 +5365,7 @@ Public Class Propertys
     Sub SaveTable(ByVal ParamArray args() As String)
         Try
             args(0) = GetMaxPath(args(0))
-            System.IO.File.WriteAllText(UbratKovich(args(0)).str, Columns & "~""""""~" & Rows, System.Text.Encoding.Default)
+            System.IO.File.WriteAllText(UbratKovich(args(0)).str, Columns & "~""""""~" & Rows, System.Text.Encoding.UTF8)
         Catch ex As Exception
             If IgnorEr = False Then MessangeCritic(Errors.FileNotCreate(ex.Message))
         End Try
@@ -5373,7 +5373,7 @@ Public Class Propertys
     Sub OpenTable(ByVal ParamArray args() As String)
         typeName = "" : dbName = "" : tablName = ""
         args(0) = GetMaxPath(args(0))
-        Dim dat As String = System.IO.File.ReadAllText(UbratKovich(args(0)).str, System.Text.Encoding.Default)
+        Dim dat As String = System.IO.File.ReadAllText(UbratKovich(args(0)).str, System.Text.Encoding.UTF8)
         Dim sep() As String = {"~""""""~"}
         Columns = dat.Split(sep, StringSplitOptions.None)(0)
         Rows = dat.Split(sep, StringSplitOptions.None)(1)
@@ -6801,7 +6801,7 @@ Public Class Propertys
         ' Для шифрования нам достаточно публичного ключа
         RSA.FromXmlString(KeyEncryption)
         ' Получаем данные
-        Data = System.Text.Encoding.Default.GetBytes(str)
+        Data = System.Text.Encoding.UTF8.GetBytes(str)
         ' Шифруем данные
         Data = RSA.Encrypt(Data, True)
         ' Преобразуем байтовый массив в строку и покажем юзеру
@@ -6814,12 +6814,12 @@ Public Class Propertys
         ' Для дешифрования нам понадобится закрытый ключ
         RSA.FromXmlString(KeyEncryption)
         ' Получаем данные
-        '    Data = System.Text.Encoding.Default.GetBytes(str)
+        '    Data = System.Text.Encoding.UTF8.GetBytes(str)
         Data = toByteArray(str)
         ' Дешифруем данные
         Data = RSA.Decrypt(Data, True)
         ' Преобразуем байтовый массив в строку и покажем юзеру
-        Return System.Text.Encoding.Default.GetString(Data)
+        Return System.Text.Encoding.UTF8.GetString(Data)
     End Function
     Sub TrialStart()
         Dim dniTrial As Long = DaysAll * 60 * 60 * 24 : dniTrial *= 10000000

@@ -1,166 +1,166 @@
-Module Errors
+п»їModule Errors
     Function notFile(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильное имя файла
-        Return trans("Файл * не существует").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ С„Р°Р№Р»Р°
+        Return trans("Р¤Р°Р№Р» * РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚").Replace("*", str)
     End Function
     Function notRegistry(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильное имя файла
-        Return trans("Ключ или папка * не существует в реестре").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ С„Р°Р№Р»Р°
+        Return trans("РљР»СЋС‡ РёР»Рё РїР°РїРєР° * РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РІ СЂРµРµСЃС‚СЂРµ").Replace("*", str)
     End Function
     Function InvalidPathChars(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильное имя файла
-        Return trans("Путь * содержит недопустимые символы").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ С„Р°Р№Р»Р°
+        Return trans("РџСѓС‚СЊ * СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹").Replace("*", str)
     End Function
     Function InvalidFormatRegistry(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """" 
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("Значение ** имеет недопустимый формат для ключа реестра *.").Replace("**", str1).Replace("*", str2)
+        Return trans("Р—РЅР°С‡РµРЅРёРµ ** РёРјРµРµС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Р№ С„РѕСЂРјР°С‚ РґР»СЏ РєР»СЋС‡Р° СЂРµРµСЃС‚СЂР° *.").Replace("**", str1).Replace("*", str2)
     End Function
     Function FileNotCreate(ByVal str1 As String) As String
-        Return trans("Невозможно обратиться к файлу. Проверьте правильность написания пути. Ошибка:") & " " & str1
+        Return trans("РќРµРІРѕР·РјРѕР¶РЅРѕ РѕР±СЂР°С‚РёС‚СЊСЃСЏ Рє С„Р°Р№Р»Сѓ. РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РЅР°РїРёСЃР°РЅРёСЏ РїСѓС‚Рё. РћС€РёР±РєР°:") & " " & str1
     End Function
     Function ProjNotFound(ByVal str1 As String) As String
-        Return trans("Проект ""*"" не найден").Replace("*", str1)
+        Return trans("РџСЂРѕРµРєС‚ ""*"" РЅРµ РЅР°Р№РґРµРЅ").Replace("*", str1)
     End Function
     Function DivideByZero(ByVal str1 As String) As String
-        Return trans("Попытка деления на 0 в действии ""*"". По правилам арифметики это запрещено!").Replace("*", str1)
+        Return trans("РџРѕРїС‹С‚РєР° РґРµР»РµРЅРёСЏ РЅР° 0 РІ РґРµР№СЃС‚РІРёРё ""*"". РџРѕ РїСЂР°РІРёР»Р°Рј Р°СЂРёС„РјРµС‚РёРєРё СЌС‚Рѕ Р·Р°РїСЂРµС‰РµРЅРѕ!").Replace("*", str1)
     End Function
     Function notCollection(ByVal nameColl As String, ByVal val As String, ByVal coll As String()) As String
         val = """" & val & """"
-        val = nameColl & trans(" * не существует. Проверьте правильность написания. Доступны следующие варианты:").Replace("*", val)
+        val = nameColl & trans(" * РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚. РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РЅР°РїРёСЃР°РЅРёСЏ. Р”РѕСЃС‚СѓРїРЅС‹ СЃР»РµРґСѓСЋС‰РёРµ РІР°СЂРёР°РЅС‚С‹:").Replace("*", val)
         Dim i As Integer : val &= " "
         For i = 0 To coll.Length - 1
             val &= """" & coll(i) & """"
             If i < coll.Length - 1 Then val &= ", "
         Next
-        val &= "." & vbCrLf & vbCrLf & trans("Подробнее в пункте меню") & " """ & trans("Вспомогательные слова") & """."
+        val &= "." & vbCrLf & vbCrLf & trans("РџРѕРґСЂРѕР±РЅРµРµ РІ РїСѓРЅРєС‚Рµ РјРµРЅСЋ") & " """ & trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Рµ СЃР»РѕРІР°") & """."
         Return val
     End Function
     Function notCollectionCols(ByVal nameColl As String, ByVal val As String, ByVal coll As String()) As String
         val = notCollection(nameColl, val, coll)
-        val &= vbCrLf & vbCrLf & trans("Также цвета можно задать перечисляя через точку с запятой интенсивности красного, зеленого, синего. Интенсивности задаются в диапазоне от 0 до 255.")
+        val &= vbCrLf & vbCrLf & trans("РўР°РєР¶Рµ С†РІРµС‚Р° РјРѕР¶РЅРѕ Р·Р°РґР°С‚СЊ РїРµСЂРµС‡РёСЃР»СЏСЏ С‡РµСЂРµР· С‚РѕС‡РєСѓ СЃ Р·Р°РїСЏС‚РѕР№ РёРЅС‚РµРЅСЃРёРІРЅРѕСЃС‚Рё РєСЂР°СЃРЅРѕРіРѕ, Р·РµР»РµРЅРѕРіРѕ, СЃРёРЅРµРіРѕ. РРЅС‚РµРЅСЃРёРІРЅРѕСЃС‚Рё Р·Р°РґР°СЋС‚СЃСЏ РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ 0 РґРѕ 255.")
         Return val
     End Function
     Function notDaOrNet(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильную привязку
-        Return trans("Данное свойство может принимать только значения ""Да"", либо ""Нет"". А вы ввели *.").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅСѓСЋ РїСЂРёРІСЏР·РєСѓ
+        Return trans("Р”Р°РЅРЅРѕРµ СЃРІРѕР№СЃС‚РІРѕ РјРѕР¶РµС‚ РїСЂРёРЅРёРјР°С‚СЊ С‚РѕР»СЊРєРѕ Р·РЅР°С‡РµРЅРёСЏ ""Р”Р°"", Р»РёР±Рѕ ""РќРµС‚"". Рђ РІС‹ РІРІРµР»Рё *.").Replace("*", str)
     End Function
     Function notInvers(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильную привязку
-        Return trans("Инверсия может принимать только значения ""Да"", ""Нет"", ""1"", ""0"". А вы ввели *.").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅСѓСЋ РїСЂРёРІСЏР·РєСѓ
+        Return trans("РРЅРІРµСЂСЃРёСЏ РјРѕР¶РµС‚ РїСЂРёРЅРёРјР°С‚СЊ С‚РѕР»СЊРєРѕ Р·РЅР°С‡РµРЅРёСЏ ""Р”Р°"", ""РќРµС‚"", ""1"", ""0"". Рђ РІС‹ РІРІРµР»Рё *.").Replace("*", str)
     End Function
     Function notTableAccess() As String
-        Return trans("Для того чтобы сохранить файл Access, нужно его сначала открыть командой ""Открыть Access"".")
+        Return trans("Р”Р»СЏ С‚РѕРіРѕ С‡С‚РѕР±С‹ СЃРѕС…СЂР°РЅРёС‚СЊ С„Р°Р№Р» Access, РЅСѓР¶РЅРѕ РµРіРѕ СЃРЅР°С‡Р°Р»Р° РѕС‚РєСЂС‹С‚СЊ РєРѕРјР°РЅРґРѕР№ ""РћС‚РєСЂС‹С‚СЊ Access"".")
     End Function
     Function notChar(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильную привязку
-        Return trans("Строка * не является символом. Свойству требуется только символ.").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅСѓСЋ РїСЂРёРІСЏР·РєСѓ
+        Return trans("РЎС‚СЂРѕРєР° * РЅРµ СЏРІР»СЏРµС‚СЃСЏ СЃРёРјРІРѕР»РѕРј. РЎРІРѕР№СЃС‚РІСѓ С‚СЂРµР±СѓРµС‚СЃСЏ С‚РѕР»СЊРєРѕ СЃРёРјРІРѕР».").Replace("*", str)
     End Function
     Function noArguments(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильную привязку
-        Return trans("Передано недостаточное количество информация для свойства *. Вы указали не все данные что нужны ему.").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅСѓСЋ РїСЂРёРІСЏР·РєСѓ
+        Return trans("РџРµСЂРµРґР°РЅРѕ РЅРµРґРѕСЃС‚Р°С‚РѕС‡РЅРѕРµ РєРѕР»РёС‡РµСЃС‚РІРѕ РёРЅС„РѕСЂРјР°С†РёСЏ РґР»СЏ СЃРІРѕР№СЃС‚РІР° *. Р’С‹ СѓРєР°Р·Р°Р»Рё РЅРµ РІСЃРµ РґР°РЅРЅС‹Рµ С‡С‚Рѕ РЅСѓР¶РЅС‹ РµРјСѓ.").Replace("*", str)
     End Function
     Function noItems(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("В свойстве ** был указан слишком большой номер записи *. В списке меньше, чем * записей.").Replace("**", str1).Replace("*", str2)
+        Return trans("Р’ СЃРІРѕР№СЃС‚РІРµ ** Р±С‹Р» СѓРєР°Р·Р°РЅ СЃР»РёС€РєРѕРј Р±РѕР»СЊС€РѕР№ РЅРѕРјРµСЂ Р·Р°РїРёСЃРё *. Р’ СЃРїРёСЃРєРµ РјРµРЅСЊС€Рµ, С‡РµРј * Р·Р°РїРёСЃРµР№.").Replace("**", str1).Replace("*", str2)
     End Function
     Function noRows(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("В свойстве ** был указан слишком большой номер строки *. В таблице меньше, чем * строк.").Replace("**", str1).Replace("*", str2)
+        Return trans("Р’ СЃРІРѕР№СЃС‚РІРµ ** Р±С‹Р» СѓРєР°Р·Р°РЅ СЃР»РёС€РєРѕРј Р±РѕР»СЊС€РѕР№ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё *. Р’ С‚Р°Р±Р»РёС†Рµ РјРµРЅСЊС€Рµ, С‡РµРј * СЃС‚СЂРѕРє.").Replace("**", str1).Replace("*", str2)
     End Function
     Function noColumns(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("В свойстве ** был указан слишком большой номер столбца *. В таблице меньше, чем * столбцов.").Replace("**", str1).Replace("*", str2)
+        Return trans("Р’ СЃРІРѕР№СЃС‚РІРµ ** Р±С‹Р» СѓРєР°Р·Р°РЅ СЃР»РёС€РєРѕРј Р±РѕР»СЊС€РѕР№ РЅРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° *. Р’ С‚Р°Р±Р»РёС†Рµ РјРµРЅСЊС€Рµ, С‡РµРј * СЃС‚РѕР»Р±С†РѕРІ.").Replace("**", str1).Replace("*", str2)
     End Function
     Function notUnderstand(ByVal str As String) As String
         If str <> "" Then str = """" & str & """"
-        Return trans("Не понятно, что имеется ввиду выражением *.").Replace("*", str)
+        Return trans("РќРµ РїРѕРЅСЏС‚РЅРѕ, С‡С‚Рѕ РёРјРµРµС‚СЃСЏ РІРІРёРґСѓ РІС‹СЂР°Р¶РµРЅРёРµРј *.").Replace("*", str)
     End Function
     Function notRowCount(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("В свойстве * нужно было указать строку из таблицы. А в таблице меньше чем ** строк.").Replace("**", str1).Replace("*", str2)
+        Return trans("Р’ СЃРІРѕР№СЃС‚РІРµ * РЅСѓР¶РЅРѕ Р±С‹Р»Рѕ СѓРєР°Р·Р°С‚СЊ СЃС‚СЂРѕРєСѓ РёР· С‚Р°Р±Р»РёС†С‹. Рђ РІ С‚Р°Р±Р»РёС†Рµ РјРµРЅСЊС€Рµ С‡РµРј ** СЃС‚СЂРѕРє.").Replace("**", str1).Replace("*", str2)
     End Function
     Function notColumnCount(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("В свойстве * нужно было указать столбец из таблицы. А в таблице меньше чем ** столбцов.").Replace("**", str1).Replace("*", str2)
+        Return trans("Р’ СЃРІРѕР№СЃС‚РІРµ * РЅСѓР¶РЅРѕ Р±С‹Р»Рѕ СѓРєР°Р·Р°С‚СЊ СЃС‚РѕР»Р±РµС† РёР· С‚Р°Р±Р»РёС†С‹. Рђ РІ С‚Р°Р±Р»РёС†Рµ РјРµРЅСЊС€Рµ С‡РµРј ** СЃС‚РѕР»Р±С†РѕРІ.").Replace("**", str1).Replace("*", str2)
     End Function
     Function notInt(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("** не является целым числом, либо слишком велико. А свойство * может принимать только целые числовые значения.").Replace("**", str1).Replace("*", str2)
+        Return trans("** РЅРµ СЏРІР»СЏРµС‚СЃСЏ С†РµР»С‹Рј С‡РёСЃР»РѕРј, Р»РёР±Рѕ СЃР»РёС€РєРѕРј РІРµР»РёРєРѕ. Рђ СЃРІРѕР№СЃС‚РІРѕ * РјРѕР¶РµС‚ РїСЂРёРЅРёРјР°С‚СЊ С‚РѕР»СЊРєРѕ С†РµР»С‹Рµ С‡РёСЃР»РѕРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ.").Replace("**", str1).Replace("*", str2)
     End Function
     Function notLength(ByVal str1 As String, ByVal str2 As String, ByVal str3 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         str2 = """" & str2 & """"
-        Return trans("В свойстве *** невозможно добраться до символа номер *, т.к. строка ** имеет длинну ****.").Replace("****", str2.Length - 2).Replace("***", str1).Replace("**", str2).Replace("*", str3)
+        Return trans("Р’ СЃРІРѕР№СЃС‚РІРµ *** РЅРµРІРѕР·РјРѕР¶РЅРѕ РґРѕР±СЂР°С‚СЊСЃСЏ РґРѕ СЃРёРјРІРѕР»Р° РЅРѕРјРµСЂ *, С‚.Рє. СЃС‚СЂРѕРєР° ** РёРјРµРµС‚ РґР»РёРЅРЅСѓ ****.").Replace("****", str2.Length - 2).Replace("***", str1).Replace("**", str2).Replace("*", str3)
     End Function
     Function notDouble(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("** не является числом, либо слишком велико. А функция * работает только с числами.").Replace("**", str1).Replace("*", str2)
+        Return trans("** РЅРµ СЏРІР»СЏРµС‚СЃСЏ С‡РёСЃР»РѕРј, Р»РёР±Рѕ СЃР»РёС€РєРѕРј РІРµР»РёРєРѕ. Рђ С„СѓРЅРєС†РёСЏ * СЂР°Р±РѕС‚Р°РµС‚ С‚РѕР»СЊРєРѕ СЃ С‡РёСЃР»Р°РјРё.").Replace("**", str1).Replace("*", str2)
     End Function
     Function notLessEqZero(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("** не является положительным числом. А свойство * может принимать только положительные числовые значения.").Replace("**", str1).Replace("*", str2)
+        Return trans("** РЅРµ СЏРІР»СЏРµС‚СЃСЏ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рј С‡РёСЃР»РѕРј. Рђ СЃРІРѕР№СЃС‚РІРѕ * РјРѕР¶РµС‚ РїСЂРёРЅРёРјР°С‚СЊ С‚РѕР»СЊРєРѕ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹Рµ С‡РёСЃР»РѕРІС‹Рµ Р·РЅР°С‡РµРЅРёСЏ.").Replace("**", str1).Replace("*", str2)
     End Function
     Function notDateLimit(ByVal str1 As String, ByVal str2 As String, ByVal str3 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
         If str3 <> "" Then str3 = """" & str3 & """"
-        Return trans("Дата *** должна быть в диапазоне от ** до *").Replace("***", str1).Replace("**", str2).Replace("*", str3)
+        Return trans("Р”Р°С‚Р° *** РґРѕР»Р¶РЅР° Р±С‹С‚СЊ РІ РґРёР°РїР°Р·РѕРЅРµ РѕС‚ ** РґРѕ *").Replace("***", str1).Replace("**", str2).Replace("*", str3)
     End Function
     Function notLessZero(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("** отрицательное число. А свойство * не может принимать отрицательные числа.").Replace("**", str1).Replace("*", str2)
+        Return trans("** РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ С‡РёСЃР»Рѕ. Рђ СЃРІРѕР№СЃС‚РІРѕ * РЅРµ РјРѕР¶РµС‚ РїСЂРёРЅРёРјР°С‚СЊ РѕС‚СЂРёС†Р°С‚РµР»СЊРЅС‹Рµ С‡РёСЃР»Р°.").Replace("**", str1).Replace("*", str2)
     End Function
     Function ExistUniqName(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("У вас два объекта с одинаковым именем ** и номером *. Чтобы запустить программу сначала сделайте имена объектов разными, либо измените их свойства Номер, либо удалите ненужный объект.").Replace("**", str1).Replace("*", str2)
+        Return trans("РЈ РІР°СЃ РґРІР° РѕР±СЉРµРєС‚Р° СЃ РѕРґРёРЅР°РєРѕРІС‹Рј РёРјРµРЅРµРј ** Рё РЅРѕРјРµСЂРѕРј *. Р§С‚РѕР±С‹ Р·Р°РїСѓСЃС‚РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ СЃРЅР°С‡Р°Р»Р° СЃРґРµР»Р°Р№С‚Рµ РёРјРµРЅР° РѕР±СЉРµРєС‚РѕРІ СЂР°Р·РЅС‹РјРё, Р»РёР±Рѕ РёР·РјРµРЅРёС‚Рµ РёС… СЃРІРѕР№СЃС‚РІР° РќРѕРјРµСЂ, Р»РёР±Рѕ СѓРґР°Р»РёС‚Рµ РЅРµРЅСѓР¶РЅС‹Р№ РѕР±СЉРµРєС‚.").Replace("**", str1).Replace("*", str2)
     End Function
     Function ParseIfError(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("Неожиданное действие **. Ожидалось действие следующего типа(ов): *. Другими словами, вы ошиблись в структуре условий. Исправьте их, чтобы запустить проект.").Replace("**", str1).Replace("*", str2)
+        Return trans("РќРµРѕР¶РёРґР°РЅРЅРѕРµ РґРµР№СЃС‚РІРёРµ **. РћР¶РёРґР°Р»РѕСЃСЊ РґРµР№СЃС‚РІРёРµ СЃР»РµРґСѓСЋС‰РµРіРѕ С‚РёРїР°(РѕРІ): *. Р”СЂСѓРіРёРјРё СЃР»РѕРІР°РјРё, РІС‹ РѕС€РёР±Р»РёСЃСЊ РІ СЃС‚СЂСѓРєС‚СѓСЂРµ СѓСЃР»РѕРІРёР№. РСЃРїСЂР°РІСЊС‚Рµ РёС…, С‡С‚РѕР±С‹ Р·Р°РїСѓСЃС‚РёС‚СЊ РїСЂРѕРµРєС‚.").Replace("**", str1).Replace("*", str2)
     End Function
     Function NotReturn(ByVal str As String) As String
         If str <> "" Then str = """" & str & """"
-        Return trans("Строка * не возвращает никакого значения.").Replace("*", str)
+        Return trans("РЎС‚СЂРѕРєР° * РЅРµ РІРѕР·РІСЂР°С‰Р°РµС‚ РЅРёРєР°РєРѕРіРѕ Р·РЅР°С‡РµРЅРёСЏ.").Replace("*", str)
     End Function
     Function notIcon(ByVal str As String) As String
         If str <> "" Then str = """" & str & """"
-        Return trans("Файл * не является иконкой.").Replace("*", str)
+        Return trans("Р¤Р°Р№Р» * РЅРµ СЏРІР»СЏРµС‚СЃСЏ РёРєРѕРЅРєРѕР№.").Replace("*", str)
     End Function
     Function FileNoAccess(ByVal str As String) As String
-        MsgBox(trans("Невозможно получить доступ к файлу, укажите другой файл. Произошла ошибка:") & vbCrLf & str, MsgBoxStyle.Exclamation)
+        MsgBox(trans("РќРµРІРѕР·РјРѕР¶РЅРѕ РїРѕР»СѓС‡РёС‚СЊ РґРѕСЃС‚СѓРї Рє С„Р°Р№Р»Сѓ, СѓРєР°Р¶РёС‚Рµ РґСЂСѓРіРѕР№ С„Р°Р№Р». РџСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°:") & vbCrLf & str, MsgBoxStyle.Exclamation)
     End Function
     Function FilePathNotExist(ByVal str As String) As String
         If str <> "" Then str = """" & str & """"
-        Return trans("Файл или папка * не существует, проверьте правильность пути").Replace("*", str)
+        Return trans("Р¤Р°Р№Р» РёР»Рё РїР°РїРєР° * РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, РїСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСѓС‚Рё").Replace("*", str)
     End Function
     Function FileNotExist(ByVal str As String) As String
         If str <> "" Then str = """" & str & """"
-        Return trans("Файл * не существует, проверьте правильность пути").Replace("*", str)
+        Return trans("Р¤Р°Р№Р» * РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, РїСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСѓС‚Рё").Replace("*", str)
     End Function
     Function PathNotExist(ByVal str As String) As String
         If str <> "" Then str = """" & str & """"
-        Return trans("Папка * не существует, проверьте правильность пути").Replace("*", str)
+        Return trans("РџР°РїРєР° * РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, РїСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РїСѓС‚Рё").Replace("*", str)
     End Function
     Function isReadOnly(ByVal str As String) As String
         If str <> "" Then str = """" & str & """"
-        Return trans("Нельзя изменять свойство *, оно доступно только для чтения.").Replace("*", str)
+        Return trans("РќРµР»СЊР·СЏ РёР·РјРµРЅСЏС‚СЊ СЃРІРѕР№СЃС‚РІРѕ *, РѕРЅРѕ РґРѕСЃС‚СѓРїРЅРѕ С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ.").Replace("*", str)
     End Function
     Function notDate(ByVal str As String) As String
         Dim val As String
         str = """" & str & """"
-        val = trans("Значение * не может перевестись в дату и время. Допустимы следующие варианты:").Replace("*", str)
+        val = trans("Р—РЅР°С‡РµРЅРёРµ * РЅРµ РјРѕР¶РµС‚ РїРµСЂРµРІРµСЃС‚РёСЃСЊ РІ РґР°С‚Сѓ Рё РІСЂРµРјСЏ. Р”РѕРїСѓСЃС‚РёРјС‹ СЃР»РµРґСѓСЋС‰РёРµ РІР°СЂРёР°РЅС‚С‹:").Replace("*", str)
         Dim i As Integer : val &= " "
         For i = 0 To Now.GetDateTimeFormats.Length - 1
             val &= """" & Now.GetDateTimeFormats()(i) & """"
@@ -170,110 +170,110 @@ Module Errors
     End Function
     Function notTime(ByVal str As String) As String
         str = """" & str & """"
-        Return trans("Значение * не может перевестись во временной интервал. Допустимый формат ЧЧ:ММ:СС.мм").Replace("*", str)
+        Return trans("Р—РЅР°С‡РµРЅРёРµ * РЅРµ РјРѕР¶РµС‚ РїРµСЂРµРІРµСЃС‚РёСЃСЊ РІРѕ РІСЂРµРјРµРЅРЅРѕР№ РёРЅС‚РµСЂРІР°Р». Р”РѕРїСѓСЃС‚РёРјС‹Р№ С„РѕСЂРјР°С‚ Р§Р§:РњРњ:РЎРЎ.РјРј").Replace("*", str)
     End Function
     Function CreateMassive(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """ " ' Если в str передали неправильное имя
-        Return transInfc("Объект с именем *уже существует, хотите создать массив объектов?").Replace("*", str)
+        If str <> "" Then str = """" & str & """ " ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return transInfc("РћР±СЉРµРєС‚ СЃ РёРјРµРЅРµРј *СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, С…РѕС‚РёС‚Рµ СЃРѕР·РґР°С‚СЊ РјР°СЃСЃРёРІ РѕР±СЉРµРєС‚РѕРІ?").Replace("*", str)
     End Function
     Function NameExist(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """ " ' Если в str передали неправильное имя
-        Return transInfc("Объект с именем *уже существует, задайте другое имя").Replace("*", str)
+        If str <> "" Then str = """" & str & """ " ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return transInfc("РћР±СЉРµРєС‚ СЃ РёРјРµРЅРµРј *СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, Р·Р°РґР°Р№С‚Рµ РґСЂСѓРіРѕРµ РёРјСЏ").Replace("*", str)
     End Function
     Function FontNotSupport(ByVal str As String) As String
         If str <> "" Then str = """" & str & """"
-        Return trans("Ошибка шрифта *. Возможно шрифт не сочетается с стилем (жирность, курсив, подчеркивание и т.д.), задайте другие параметры стиля и попробуйте еще раз выбрать данный шрифт:").Replace("*", str)
+        Return trans("РћС€РёР±РєР° С€СЂРёС„С‚Р° *. Р’РѕР·РјРѕР¶РЅРѕ С€СЂРёС„С‚ РЅРµ СЃРѕС‡РµС‚Р°РµС‚СЃСЏ СЃ СЃС‚РёР»РµРј (Р¶РёСЂРЅРѕСЃС‚СЊ, РєСѓСЂСЃРёРІ, РїРѕРґС‡РµСЂРєРёРІР°РЅРёРµ Рё С‚.Рґ.), Р·Р°РґР°Р№С‚Рµ РґСЂСѓРіРёРµ РїР°СЂР°РјРµС‚СЂС‹ СЃС‚РёР»СЏ Рё РїРѕРїСЂРѕР±СѓР№С‚Рµ РµС‰Рµ СЂР°Р· РІС‹Р±СЂР°С‚СЊ РґР°РЅРЅС‹Р№ С€СЂРёС„С‚:").Replace("*", str)
     End Function
     Function InvalidIndex(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """ " ' Если в str передали неправильный индекс
-        Return trans("Объект с индексом *уже существует, задайте другой индекс").Replace("*", str)
+        If str <> "" Then str = """" & str & """ " ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅС‹Р№ РёРЅРґРµРєСЃ
+        Return trans("РћР±СЉРµРєС‚ СЃ РёРЅРґРµРєСЃРѕРј *СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚, Р·Р°РґР°Р№С‚Рµ РґСЂСѓРіРѕР№ РёРЅРґРµРєСЃ").Replace("*", str)
     End Function
     Function AlreadyHaveElse() As String
-        Return trans("Раздел ""В остальных случаях"" уже присутствует в данном условии. В условии может быть только один такой раздел")
+        Return trans("Р Р°Р·РґРµР» ""Р’ РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС…"" СѓР¶Рµ РїСЂРёСЃСѓС‚СЃС‚РІСѓРµС‚ РІ РґР°РЅРЅРѕРј СѓСЃР»РѕРІРёРё. Р’ СѓСЃР»РѕРІРёРё РјРѕР¶РµС‚ Р±С‹С‚СЊ С‚РѕР»СЊРєРѕ РѕРґРёРЅ С‚Р°РєРѕР№ СЂР°Р·РґРµР»")
     End Function
     Function NameInvalid(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """ " ' Если в str передали неправильное имя
-        Return trans("Имя *задано неверно. Объект не может иметь такое имя.").Replace("*", str)
+        If str <> "" Then str = """" & str & """ " ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return trans("РРјСЏ *Р·Р°РґР°РЅРѕ РЅРµРІРµСЂРЅРѕ. РћР±СЉРµРєС‚ РЅРµ РјРѕР¶РµС‚ РёРјРµС‚СЊ С‚Р°РєРѕРµ РёРјСЏ.").Replace("*", str)
     End Function
     Function NameInvalidLength(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """ " ' Если в str передали неправильное имя
-        Return trans("Имя объекта не может отсутствовать").Replace("*", str)
+        If str <> "" Then str = """" & str & """ " ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return trans("РРјСЏ РѕР±СЉРµРєС‚Р° РЅРµ РјРѕР¶РµС‚ РѕС‚СЃСѓС‚СЃС‚РІРѕРІР°С‚СЊ").Replace("*", str)
     End Function
     Function NameInvalidSimvols(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """ " ' Если в str передали неправильное имя
-        Return transInfc("Имя *содержит недопустимые символы. В написании имени объектов можно использовать только буквы, цифры и пробелы").Replace("*", str)
+        If str <> "" Then str = """" & str & """ " ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return transInfc("РРјСЏ *СЃРѕРґРµСЂР¶РёС‚ РЅРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹. Р’ РЅР°РїРёСЃР°РЅРёРё РёРјРµРЅРё РѕР±СЉРµРєС‚РѕРІ РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С‚РѕР»СЊРєРѕ Р±СѓРєРІС‹, С†РёС„СЂС‹ Рё РїСЂРѕР±РµР»С‹").Replace("*", str)
     End Function
     Function NameInvalidProbels(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """ " ' Если в str передали неправильное имя
-        Return trans("Имя объекта не может начинаться с побела").Replace("*", str)
+        If str <> "" Then str = """" & str & """ " ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return trans("РРјСЏ РѕР±СЉРµРєС‚Р° РЅРµ РјРѕР¶РµС‚ РЅР°С‡РёРЅР°С‚СЊСЃСЏ СЃ РїРѕР±РµР»Р°").Replace("*", str)
     End Function
     Function NameInvalidDigit(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """ " ' Если в str передали неправильное имя
-        Return trans("Имя объекта не может начинаться с цифры").Replace("*", str)
+        If str <> "" Then str = """" & str & """ " ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return trans("РРјСЏ РѕР±СЉРµРєС‚Р° РЅРµ РјРѕР¶РµС‚ РЅР°С‡РёРЅР°С‚СЊСЃСЏ СЃ С†РёС„СЂС‹").Replace("*", str)
     End Function
     Function NameInvalidFuns(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильное имя
-        Return transInfc("В программе существует функция c именем *, задайте другое имя.").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return transInfc("Р’ РїСЂРѕРіСЂР°РјРјРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ С„СѓРЅРєС†РёСЏ c РёРјРµРЅРµРј *, Р·Р°РґР°Р№С‚Рµ РґСЂСѓРіРѕРµ РёРјСЏ.").Replace("*", str)
     End Function
     Function NameInvalidHW(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильное имя
-        Return transInfc("В программе существует вспомогательное слово *, задайте другое имя.").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return transInfc("Р’ РїСЂРѕРіСЂР°РјРјРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ СЃР»РѕРІРѕ *, Р·Р°РґР°Р№С‚Рµ РґСЂСѓРіРѕРµ РёРјСЏ.").Replace("*", str)
     End Function
     Function NotSupportIncludeObj() As String
-        Return transInfc("Данный объект можно разместить только на объектах такого же типа, как он сам.")
+        Return transInfc("Р”Р°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ РјРѕР¶РЅРѕ СЂР°Р·РјРµСЃС‚РёС‚СЊ С‚РѕР»СЊРєРѕ РЅР° РѕР±СЉРµРєС‚Р°С… С‚Р°РєРѕРіРѕ Р¶Рµ С‚РёРїР°, РєР°Рє РѕРЅ СЃР°Рј.")
     End Function
     Function InvalidPropObj() As String
-        Return trans("Не известно, что означает одинарная кавычка")
+        Return trans("РќРµ РёР·РІРµСЃС‚РЅРѕ, С‡С‚Рѕ РѕР·РЅР°С‡Р°РµС‚ РѕРґРёРЅР°СЂРЅР°СЏ РєР°РІС‹С‡РєР°")
     End Function
     Function InvalidKovich() As String
-        Return trans("Не верно задано свойство или метод объекта")
+        Return trans("РќРµ РІРµСЂРЅРѕ Р·Р°РґР°РЅРѕ СЃРІРѕР№СЃС‚РІРѕ РёР»Рё РјРµС‚РѕРґ РѕР±СЉРµРєС‚Р°")
     End Function
     Function ObjIsNothing() As String
-        Return trans("Такой объект не существует")
+        Return trans("РўР°РєРѕР№ РѕР±СЉРµРєС‚ РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚")
     End Function
     Function ObjIsNothing(ByVal name As String) As String
         If name <> "" Then name = """" & name & """"
-        Return trans("Объект * не существует").Replace("*", name)
+        Return trans("РћР±СЉРµРєС‚ * РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚").Replace("*", name)
     End Function
     Function MnogoRavno() As String
-        Return trans("Не известно, что означают несколько знаков равно( ""="" ). Используйте скобки, чтобы указать программе как интерпритировать эти знаки.")
+        Return trans("РќРµ РёР·РІРµСЃС‚РЅРѕ, С‡С‚Рѕ РѕР·РЅР°С‡Р°СЋС‚ РЅРµСЃРєРѕР»СЊРєРѕ Р·РЅР°РєРѕРІ СЂР°РІРЅРѕ( ""="" ). РСЃРїРѕР»СЊР·СѓР№С‚Рµ СЃРєРѕР±РєРё, С‡С‚РѕР±С‹ СѓРєР°Р·Р°С‚СЊ РїСЂРѕРіСЂР°РјРјРµ РєР°Рє РёРЅС‚РµСЂРїСЂРёС‚РёСЂРѕРІР°С‚СЊ СЌС‚Рё Р·РЅР°РєРё.")
     End Function
     Function NotEndIF(ByVal str As String) As String
         If str <> "" Then str = """" & str & """"
-        Return trans("Не найдено завершение условия *. Условия должны заканчиваться действием ""Конец условия"".").Replace("*", str)
+        Return trans("РќРµ РЅР°Р№РґРµРЅРѕ Р·Р°РІРµСЂС€РµРЅРёРµ СѓСЃР»РѕРІРёСЏ *. РЈСЃР»РѕРІРёСЏ РґРѕР»Р¶РЅС‹ Р·Р°РєР°РЅС‡РёРІР°С‚СЊСЃСЏ РґРµР№СЃС‚РІРёРµРј ""РљРѕРЅРµС† СѓСЃР»РѕРІРёСЏ"".").Replace("*", str)
     End Function
     Function notPropertyMethod(ByVal str As String) As String
-        If str <> "" Then str = """" & str & """" ' Если в str передали неправильное имя
-        Return trans("У данного объекта не существует свойства или метода *. Проверьте правильность его написания.").Replace("*", str)
+        If str <> "" Then str = """" & str & """" ' Р•СЃР»Рё РІ str РїРµСЂРµРґР°Р»Рё РЅРµРїСЂР°РІРёР»СЊРЅРѕРµ РёРјСЏ
+        Return trans("РЈ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚ СЃРІРѕР№СЃС‚РІР° РёР»Рё РјРµС‚РѕРґР° *. РџСЂРѕРІРµСЂСЊС‚Рµ РїСЂР°РІРёР»СЊРЅРѕСЃС‚СЊ РµРіРѕ РЅР°РїРёСЃР°РЅРёСЏ.").Replace("*", str)
     End Function
     Function notMainClass(ByVal str As String) As String
-        Return trans("Отсутствует обязательный класс MainClass, с которого начинает выполняться код. Ошибочный код:*").Replace("*", vbCrLf & str)
+        Return trans("РћС‚СЃСѓС‚СЃС‚РІСѓРµС‚ РѕР±СЏР·Р°С‚РµР»СЊРЅС‹Р№ РєР»Р°СЃСЃ MainClass, СЃ РєРѕС‚РѕСЂРѕРіРѕ РЅР°С‡РёРЅР°РµС‚ РІС‹РїРѕР»РЅСЏС‚СЊСЃСЏ РєРѕРґ. РћС€РёР±РѕС‡РЅС‹Р№ РєРѕРґ:*").Replace("*", vbCrLf & str)
     End Function
     Function notRunNode(ByVal str As String) As String
         str = """" & str & """"
-        Return trans("Невозможно выполнить строку *. Выполняться могут только Действия, Условия и Циклы.").Replace("*", str)
+        Return trans("РќРµРІРѕР·РјРѕР¶РЅРѕ РІС‹РїРѕР»РЅРёС‚СЊ СЃС‚СЂРѕРєСѓ *. Р’С‹РїРѕР»РЅСЏС‚СЊСЃСЏ РјРѕРіСѓС‚ С‚РѕР»СЊРєРѕ Р”РµР№СЃС‚РІРёСЏ, РЈСЃР»РѕРІРёСЏ Рё Р¦РёРєР»С‹.").Replace("*", str)
     End Function
     Function InvalidContextMenu(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("Контектсного меню с именем **, заданного для объекта * не существует").Replace("**", str1).Replace("*", str2)
+        Return trans("РљРѕРЅС‚РµРєС‚СЃРЅРѕРіРѕ РјРµРЅСЋ СЃ РёРјРµРЅРµРј **, Р·Р°РґР°РЅРЅРѕРіРѕ РґР»СЏ РѕР±СЉРµРєС‚Р° * РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚").Replace("**", str1).Replace("*", str2)
     End Function
     Function InvalidWebBrowser(ByVal str1 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
-        Return trans("Браузера с именем * не существует").Replace("*", str1)
+        Return trans("Р‘СЂР°СѓР·РµСЂР° СЃ РёРјРµРЅРµРј * РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚").Replace("*", str1)
     End Function
     Function MoreRecurs(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("Вызов функцией ** самой себя, повторился более * раз. Возможно рекурсия бесконечная. Дальнейшая работа может быть крайне нестабильна. Вы хотите продолжить выполнение данной рекурсии?").Replace("**", str1).Replace("*", str2)
+        Return trans("Р’С‹Р·РѕРІ С„СѓРЅРєС†РёРµР№ ** СЃР°РјРѕР№ СЃРµР±СЏ, РїРѕРІС‚РѕСЂРёР»СЃСЏ Р±РѕР»РµРµ * СЂР°Р·. Р’РѕР·РјРѕР¶РЅРѕ СЂРµРєСѓСЂСЃРёСЏ Р±РµСЃРєРѕРЅРµС‡РЅР°СЏ. Р”Р°Р»СЊРЅРµР№С€Р°СЏ СЂР°Р±РѕС‚Р° РјРѕР¶РµС‚ Р±С‹С‚СЊ РєСЂР°Р№РЅРµ РЅРµСЃС‚Р°Р±РёР»СЊРЅР°. Р’С‹ С…РѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ РґР°РЅРЅРѕР№ СЂРµРєСѓСЂСЃРёРё?").Replace("**", str1).Replace("*", str2)
     End Function
     Function MoreCycles(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("Цикл ** повторился более, повторился более * раз. Возможно цикл бесконечный. Вы хотите продолжить выполнение данного цикла?").Replace("**", str1).Replace("*", str2)
+        Return trans("Р¦РёРєР» ** РїРѕРІС‚РѕСЂРёР»СЃСЏ Р±РѕР»РµРµ, РїРѕРІС‚РѕСЂРёР»СЃСЏ Р±РѕР»РµРµ * СЂР°Р·. Р’РѕР·РјРѕР¶РЅРѕ С†РёРєР» Р±РµСЃРєРѕРЅРµС‡РЅС‹Р№. Р’С‹ С…РѕС‚РёС‚Рµ РїСЂРѕРґРѕР»Р¶РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ РґР°РЅРЅРѕРіРѕ С†РёРєР»Р°?").Replace("**", str1).Replace("*", str2)
     End Function
     Sub MessangeCritic(ByVal str As String)
-        MsgBox(trans("Произошла непредвиденная ошибка") & ": " & str, MsgBoxStyle.Critical)
+        MsgBox(trans("РџСЂРѕРёР·РѕС€Р»Р° РЅРµРїСЂРµРґРІРёРґРµРЅРЅР°СЏ РѕС€РёР±РєР°") & ": " & str, MsgBoxStyle.Critical)
     End Sub
     Sub MessangeInfo(ByVal str As String)
         MsgBox(str, MsgBoxStyle.Information)
@@ -284,10 +284,10 @@ Module Errors
     Function InvalidKeys(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
-        Return trans("Невозможно назначить комбинацию клавиш **, объекту *").Replace("**", str1).Replace("*", str2)
+        Return trans("РќРµРІРѕР·РјРѕР¶РЅРѕ РЅР°Р·РЅР°С‡РёС‚СЊ РєРѕРјР±РёРЅР°С†РёСЋ РєР»Р°РІРёС€ **, РѕР±СЉРµРєС‚Сѓ *").Replace("**", str1).Replace("*", str2)
     End Function
     Function InvalidUrl(ByVal str As String) As String
         str = """" & str & """"
-        Return trans("Невозможно перейти по ссылке *. Ссылка имеет не верный формат.").Replace("*", str)
+        Return trans("РќРµРІРѕР·РјРѕР¶РЅРѕ РїРµСЂРµР№С‚Рё РїРѕ СЃСЃС‹Р»РєРµ *. РЎСЃС‹Р»РєР° РёРјРµРµС‚ РЅРµ РІРµСЂРЅС‹Р№ С„РѕСЂРјР°С‚.").Replace("*", str)
     End Function
 End Module

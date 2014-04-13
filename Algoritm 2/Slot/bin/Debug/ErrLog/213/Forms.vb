@@ -1,41 +1,41 @@
-Public Class Forms
+п»їPublic Class Forms
     Inherits Objetus
-    ' Все свойства данного объекта
-    Public Propertys() As String = {trans("Текст"), trans("Имя"), trans("Номер"), _
-        trans("Цвет"), trans("Фоновой рисунок"), trans("Всплывающее меню"), _
-        trans("Стиль фона"), trans("Курсор"), trans("Работает"), trans("Прокрутка"), trans("Цвет шрифта"), _
-        trans("X"), trans("Y"), trans("Максимальная ширина"), trans("Максимальная вышина"), _
-        trans("Минимальная ширина"), trans("Минимальная вышина"), trans("Ширина"), trans("Вышина"), _
-        trans("ТабНомер"), trans("ТабСтоп"), trans("Вспомогательное поле"), _
-        trans("Видимый"), trans("Главная форма"), trans("Запретить закрытие"), _
-        trans("Оконные кнопки и меню"), trans("Стиль окна"), trans("Главное меню"), _
-        trans("Прозрачность"), trans("Показывать иконку"), trans("Отображать в панели задач"), _
-        trans("Стартовая позиция"), trans("Поверх всех окон"), trans("Статус окна"), _
-        trans("Прокрутка минимальная ширина"), trans("Прокрутка минимальная вышина"), _
-        trans("Прокручено по X"), trans("Прокручено по Y"), trans("Высота заголовка"), _
-        trans("Иконка"), trans("Прозрачный цвет"), trans("Тип"), trans("Подсказка"), trans("Отображать в трее"), _
-        trans("Добавить в автозагрузку"), trans("Разрешить запуск копий"), _
-        trans("Запретить минимизировать"), trans("Запретить разворачивать"), _
-        trans("Ассоциировать с расширениями"), trans("Ассоциированый принятый файл") _
+    ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Propertys() As String = {trans("РўРµРєСЃС‚"), trans("РРјСЏ"), trans("РќРѕРјРµСЂ"), _
+        trans("Р¦РІРµС‚"), trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"), trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"), _
+        trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂ"), trans("Р Р°Р±РѕС‚Р°РµС‚"), trans("РџСЂРѕРєСЂСѓС‚РєР°"), trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"), _
+        trans("X"), trans("Y"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), trans("РЁРёСЂРёРЅР°"), trans("Р’С‹С€РёРЅР°"), _
+        trans("РўР°Р±РќРѕРјРµСЂ"), trans("РўР°Р±РЎС‚РѕРї"), trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"), _
+        trans("Р’РёРґРёРјС‹Р№"), trans("Р“Р»Р°РІРЅР°СЏ С„РѕСЂРјР°"), trans("Р—Р°РїСЂРµС‚РёС‚СЊ Р·Р°РєСЂС‹С‚РёРµ"), _
+        trans("РћРєРѕРЅРЅС‹Рµ РєРЅРѕРїРєРё Рё РјРµРЅСЋ"), trans("РЎС‚РёР»СЊ РѕРєРЅР°"), trans("Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ"), _
+        trans("РџСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ"), trans("РџРѕРєР°Р·С‹РІР°С‚СЊ РёРєРѕРЅРєСѓ"), trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РІ РїР°РЅРµР»Рё Р·Р°РґР°С‡"), _
+        trans("РЎС‚Р°СЂС‚РѕРІР°СЏ РїРѕР·РёС†РёСЏ"), trans("РџРѕРІРµСЂС… РІСЃРµС… РѕРєРѕРЅ"), trans("РЎС‚Р°С‚СѓСЃ РѕРєРЅР°"), _
+        trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"), trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"), _
+        trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ X"), trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ Y"), trans("Р’С‹СЃРѕС‚Р° Р·Р°РіРѕР»РѕРІРєР°"), _
+        trans("РРєРѕРЅРєР°"), trans("РџСЂРѕР·СЂР°С‡РЅС‹Р№ С†РІРµС‚"), trans("РўРёРї"), trans("РџРѕРґСЃРєР°Р·РєР°"), trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РІ С‚СЂРµРµ"), _
+        trans("Р”РѕР±Р°РІРёС‚СЊ РІ Р°РІС‚РѕР·Р°РіСЂСѓР·РєСѓ"), trans("Р Р°Р·СЂРµС€РёС‚СЊ Р·Р°РїСѓСЃРє РєРѕРїРёР№"), _
+        trans("Р—Р°РїСЂРµС‚РёС‚СЊ РјРёРЅРёРјРёР·РёСЂРѕРІР°С‚СЊ"), trans("Р—Р°РїСЂРµС‚РёС‚СЊ СЂР°Р·РІРѕСЂР°С‡РёРІР°С‚СЊ"), _
+        trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°С‚СЊ СЃ СЂР°СЃС€РёСЂРµРЅРёСЏРјРё"), trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅС‹Р№ РїСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»") _
       }
 
-    'Запретить минимизировать~~ForbidMinimize
-    'Запретить разворачивать~~ForbidMaximize
-    'Ассоциировать с расширениями~~AssociateWithExtensions
-    'Ассоциированый принятый файл~~AssociationPassedFile
+    'Р—Р°РїСЂРµС‚РёС‚СЊ РјРёРЅРёРјРёР·РёСЂРѕРІР°С‚СЊ~~ForbidMinimize
+    'Р—Р°РїСЂРµС‚РёС‚СЊ СЂР°Р·РІРѕСЂР°С‡РёРІР°С‚СЊ~~ForbidMaximize
+    'РђСЃСЃРѕС†РёРёСЂРѕРІР°С‚СЊ СЃ СЂР°СЃС€РёСЂРµРЅРёСЏРјРё~~AssociateWithExtensions
+    'РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅС‹Р№ РїСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»~~AssociationPassedFile
 
-    ' Все методы данного объекта
-    Public Methods() As String = {trans("Обновить"), trans("Скрыть"), trans("Показать"), trans("Получить фокус"), _
-                                  trans("Закрыть"), trans("Свернуть в трей"), trans("Развернуть из трея")}
-    ' Все события данного объекта
-    Public Sobyts() As String = {trans("Клик"), trans("Нажатие кнопки мыши"), trans("Отжатие кнопки мыши"), _
-                                trans("Движение курсора"), trans("Наведение курсора"), trans("Отведение курсора"), _
-                                trans("Курсор на объекте"), trans("Двойной клик"), trans("Вращение колесика"), _
-                                trans("Нажатие клавиатуры"), trans("Нажатие вниз кнопки"), trans("Отжатие кнопки"), _
-                                trans("Создание"), trans("Изменение текста"), trans("Прорисовка"), _
-                                trans("Получение фокуса"), trans("Потеря фокуса"), trans("Изменились размеры"), _
-                                trans("Закрытие окна"), trans("Прокрутка"), trans("Сворачивание"), _
-                                trans("Изменилась видимость"), trans("Двойной клик по трею") _
+    ' Р’СЃРµ РјРµС‚РѕРґС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Methods() As String = {trans("РћР±РЅРѕРІРёС‚СЊ"), trans("РЎРєСЂС‹С‚СЊ"), trans("РџРѕРєР°Р·Р°С‚СЊ"), trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"), _
+                                  trans("Р—Р°РєСЂС‹С‚СЊ"), trans("РЎРІРµСЂРЅСѓС‚СЊ РІ С‚СЂРµР№"), trans("Р Р°Р·РІРµСЂРЅСѓС‚СЊ РёР· С‚СЂРµСЏ")}
+    ' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
+    Public Sobyts() As String = {trans("РљР»РёРє"), trans("РќР°Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё РјС‹С€Рё"), _
+                                trans("Р”РІРёР¶РµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РќР°РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), trans("РћС‚РІРµРґРµРЅРёРµ РєСѓСЂСЃРѕСЂР°"), _
+                                trans("РљСѓСЂСЃРѕСЂ РЅР° РѕР±СЉРµРєС‚Рµ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє"), trans("Р’СЂР°С‰РµРЅРёРµ РєРѕР»РµСЃРёРєР°"), _
+                                trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹"), trans("РќР°Р¶Р°С‚РёРµ РІРЅРёР· РєРЅРѕРїРєРё"), trans("РћС‚Р¶Р°С‚РёРµ РєРЅРѕРїРєРё"), _
+                                trans("РЎРѕР·РґР°РЅРёРµ"), trans("РР·РјРµРЅРµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџСЂРѕСЂРёСЃРѕРІРєР°"), _
+                                trans("РџРѕР»СѓС‡РµРЅРёРµ С„РѕРєСѓСЃР°"), trans("РџРѕС‚РµСЂСЏ С„РѕРєСѓСЃР°"), trans("РР·РјРµРЅРёР»РёСЃСЊ СЂР°Р·РјРµСЂС‹"), _
+                                trans("Р—Р°РєСЂС‹С‚РёРµ РѕРєРЅР°"), trans("РџСЂРѕРєСЂСѓС‚РєР°"), trans("РЎРІРѕСЂР°С‡РёРІР°РЅРёРµ"), _
+                                trans("РР·РјРµРЅРёР»Р°СЃСЊ РІРёРґРёРјРѕСЃС‚СЊ"), trans("Р”РІРѕР№РЅРѕР№ РєР»РёРє РїРѕ С‚СЂРµСЋ") _
                                 }
     Public PropertysUp(), SobytsUp(), MethodsUp() As String
     Public Picture As String = "window"
@@ -45,11 +45,11 @@ Public Class Forms
 
     Public tab As TabPage
     Public SplitCont As SplitContainer
-    Public ActiveObj() As Object ' Активные объекты формы
-    Public MyObjs() As Object ' Все объекты формы
+    Public ActiveObj() As Object ' РђРєС‚РёРІРЅС‹Рµ РѕР±СЉРµРєС‚С‹ С„РѕСЂРјС‹
+    Public MyObjs() As Object ' Р’СЃРµ РѕР±СЉРµРєС‚С‹ С„РѕСЂРјС‹
     Public ctrl As Boolean
 
-    ' <<<<<<<< ОБЩИЕ ФУНКЦИИ ФОРМЫ >>>>>>>>>
+    ' <<<<<<<< РћР‘Р©РР• Р¤РЈРќРљР¦РР Р¤РћР РњР« >>>>>>>>>
 #Region "COMMON"
     Private i
 
@@ -57,14 +57,14 @@ Public Class Forms
     Sub New(Optional ByVal holostoi As Boolean = False, Optional ByVal polezniy As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal fromEng As Boolean = False)
         ' If holostoi Then CreatePropertySobytsUp(Me) : CreateObject(New F, True) : Exit Sub
         If polezniy Then
-            Dim Props() As String = {trans("Имя"), trans("Текст"), trans("Номер")} ' Все свойства данного объекта
+            Dim Props() As String = {trans("РРјСЏ"), trans("РўРµРєСЃС‚"), trans("РќРѕРјРµСЂ")} ' Р’СЃРµ СЃРІРѕР№СЃС‚РІР° РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
             Propertys = Props : CreatePropertySobytsUp(Me)
             Dim poolezForm As New F : poolezForm.TypeObj = "Polezniy"
             MyObjs = PoleznieObjs : CreateObject(poolezForm)
-            obj.Props.name = MyZnak & trans("Полезные объекты")
+            obj.Props.name = MyZnak & trans("РџРѕР»РµР·РЅС‹Рµ РѕР±СЉРµРєС‚С‹")
             Exit Sub
         End If
-        ' Создание и настройка формы
+        ' РЎРѕР·РґР°РЅРёРµ Рё РЅР°СЃС‚СЂРѕР№РєР° С„РѕСЂРјС‹
         CreatePropertySobytsUp(Me)
         Sobytia = SobytsUp
         If isRun Then
@@ -73,7 +73,7 @@ Public Class Forms
             CreateObject(New F, holostoi, isRun, fromEng)
         End If
     End Sub
-    Function AddObject(ByVal MyObj As Object, Optional ByVal withSelect As Boolean = True) As Object  ' Добавить новый объект на форму
+    Function AddObject(ByVal MyObj As Object, Optional ByVal withSelect As Boolean = True) As Object  ' Р”РѕР±Р°РІРёС‚СЊ РЅРѕРІС‹Р№ РѕР±СЉРµРєС‚ РЅР° С„РѕСЂРјСѓ
         Dim NewInd As Integer
         If MyObj.obj.props.name = "#NotCreateDP" Then Exit Function
         If proj Is Nothing = False Then
@@ -84,11 +84,11 @@ Public Class Forms
         End If
 
         If MyObj.obj.Props.name = "" Then Return Nothing
-        If MyObjs Is Nothing Then NewInd = 0 Else NewInd = MyObjs.Length ' вычислить индекс нового объекта
+        If MyObjs Is Nothing Then NewInd = 0 Else NewInd = MyObjs.Length ' РІС‹С‡РёСЃР»РёС‚СЊ РёРЅРґРµРєСЃ РЅРѕРІРѕРіРѕ РѕР±СЉРµРєС‚Р°
         ReDim Preserve MyObjs(NewInd) : MyObjs(NewInd) = MyObj
 
         If MyObj.obj.TypeObj <> "IncludeObj" Then
-            ' Выделить новый объект
+            ' Р’С‹РґРµР»РёС‚СЊ РЅРѕРІС‹Р№ РѕР±СЉРµРєС‚
             If withSelect Then SetActiveObject(MyObj) : marker_vis(True)
         End If
 
@@ -106,13 +106,13 @@ Public Class Forms
         MainForm.TabControl1.SelectedTab = MainForm.TabControl1.TabPages(tab.Name)
     End Sub
 
-    ' ВЕРНУТЬ ОБЪЕКТЫ С ТАКИМ ИМЕНЕМ И ИНДЕКСОМ НА ДАННОЙ ФОРМЕ
+    ' Р’Р•Р РќРЈРўР¬ РћР‘РЄР•РљРўР« РЎ РўРђРљРРњ РРњР•РќР•Рњ Р РРќР”Р•РљРЎРћРњ РќРђ Р”РђРќРќРћР™ Р¤РћР РњР•
     Function GetMyObjsFromName(ByVal name As Object, Optional ByVal index As String = "") As Object()
-        ' Вернуть объекты с таким именем
+        ' Р’РµСЂРЅСѓС‚СЊ РѕР±СЉРµРєС‚С‹ СЃ С‚Р°РєРёРј РёРјРµРЅРµРј
         Dim ind = 0, i As Integer, Massive() As Object = Nothing
         If MyObjs Is Nothing Then Return Nothing
         For i = 0 To MyObjs.Length - 1
-            ' Если у объекта нужное имя, и не является сам собой
+            ' Р•СЃР»Рё Сѓ РѕР±СЉРµРєС‚Р° РЅСѓР¶РЅРѕРµ РёРјСЏ, Рё РЅРµ СЏРІР»СЏРµС‚СЃСЏ СЃР°Рј СЃРѕР±РѕР№
             If MyObjs(i).obj.Props.name = name And MyObjs(i).obj.Props.index.indexof(index) = 0 Then
                 ReDim Preserve Massive(ind) : Massive(ind) = MyObjs(i) : ind += 1
             End If
@@ -125,20 +125,20 @@ Public Class Forms
         If MyObjs Is Nothing Then Exit Sub
         If kuda Is Nothing Then kuda = ""
         kuda = kuda.ToLower
-        If kuda = "" Or kuda = "на передний план" Then
+        If kuda = "" Or kuda = "РЅР° РїРµСЂРµРґРЅРёР№ РїР»Р°РЅ" Then
             For i = MyObjs.Length - 1 To 0 Step -1
                 HistoryLevel.Remove(MyObjs(i)) : HistoryLevel.Add(MyObjs(i)) : MyObjs(i).obj.BringToFront()
             Next
-        ElseIf kuda = "на задний план" Then
+        ElseIf kuda = "РЅР° Р·Р°РґРЅРёР№ РїР»Р°РЅ" Then
             For i = MyObjs.Length - 1 To 0 Step -1
                 HistoryLevel.Remove(MyObjs(i)) : HistoryLevel.Insert(0, MyObjs(i)) : MyObjs(i).obj.SendToBack()
             Next
-            '  ElseIf kuda = "просто добавить" Then
+            '  ElseIf kuda = "РїСЂРѕСЃС‚Рѕ РґРѕР±Р°РІРёС‚СЊ" Then
             '     For i = MyObjs.Length - 1 To 0 Step -1
             ' HistoryLevel.Add(MyObjs(i))
             ' Next
         Else
-            ' Если в kuda содержится индекс места, куда надо бринг то фронтить
+            ' Р•СЃР»Рё РІ kuda СЃРѕРґРµСЂР¶РёС‚СЃСЏ РёРЅРґРµРєСЃ РјРµСЃС‚Р°, РєСѓРґР° РЅР°РґРѕ Р±СЂРёРЅРі С‚Рѕ С„СЂРѕРЅС‚РёС‚СЊ
             If kuda = -1 Then Exit Sub
             For i = MyObjs.Length - 1 To 0 Step -1
                 HistoryLevel.Remove(MyObjs(i))
@@ -156,48 +156,48 @@ Public Class Forms
 
 #End Region
 
-    ' <<<<<<<< ОПЕРАЦИИ С АКТИВНЫМИ ОБЪЕКТАМИ >>>>>>>>>
+    ' <<<<<<<< РћРџР•Р РђР¦РР РЎ РђРљРўРР’РќР«РњР РћР‘РЄР•РљРўРђРњР >>>>>>>>>
 #Region "VIDELENIYA"
-    Sub AddActiveObject(ByVal MyObj As Object, Optional ByVal noRefresh As Boolean = False) ' Выделить плюс еще один объект
+    Sub AddActiveObject(ByVal MyObj As Object, Optional ByVal noRefresh As Boolean = False) ' Р’С‹РґРµР»РёС‚СЊ РїР»СЋСЃ РµС‰Рµ РѕРґРёРЅ РѕР±СЉРµРєС‚
         Dim NewInd, i, j As Integer
-        If ActiveObj Is Nothing Then ' Если активных объектов небыло, то он будет первым
+        If ActiveObj Is Nothing Then ' Р•СЃР»Рё Р°РєС‚РёРІРЅС‹С… РѕР±СЉРµРєС‚РѕРІ РЅРµР±С‹Р»Рѕ, С‚Рѕ РѕРЅ Р±СѓРґРµС‚ РїРµСЂРІС‹Рј
             ReDim Preserve ActiveObj(0) : ActiveObj(0) = MyObj
         Else
             If Array.IndexOf(ActiveObj, MyObj) <> -1 Then
-                ' Раз объект уже содержится в вписке активных, то удалить его от туда
-                Dim temp() As Object = Nothing ' сюда записывается новый список объектов
+                ' Р Р°Р· РѕР±СЉРµРєС‚ СѓР¶Рµ СЃРѕРґРµСЂР¶РёС‚СЃСЏ РІ РІРїРёСЃРєРµ Р°РєС‚РёРІРЅС‹С…, С‚Рѕ СѓРґР°Р»РёС‚СЊ РµРіРѕ РѕС‚ С‚СѓРґР°
+                Dim temp() As Object = Nothing ' СЃСЋРґР° Р·Р°РїРёСЃС‹РІР°РµС‚СЃСЏ РЅРѕРІС‹Р№ СЃРїРёСЃРѕРє РѕР±СЉРµРєС‚РѕРІ
                 For i = 0 To ActiveObj.Length - 1
-                    If ActiveObj(i) Is MyObj = False Then ' исключить объект из списка
+                    If ActiveObj(i) Is MyObj = False Then ' РёСЃРєР»СЋС‡РёС‚СЊ РѕР±СЉРµРєС‚ РёР· СЃРїРёСЃРєР°
                         ReDim Preserve temp(j) : temp(j) = ActiveObj(i) : j += 1
                     End If
                 Next
-                If temp Is Nothing Then ' Если объект был единственным выделеным
+                If temp Is Nothing Then ' Р•СЃР»Рё РѕР±СЉРµРєС‚ Р±С‹Р» РµРґРёРЅСЃС‚РІРµРЅРЅС‹Рј РІС‹РґРµР»РµРЅС‹Рј
                     ClearActiveObject() : Exit Sub
                 Else
                     ReDim ActiveObj(temp.Length - 1) : ActiveObj = temp
                 End If
-            Else ' Если объект не был выделен то добавить его в список активных
+            Else ' Р•СЃР»Рё РѕР±СЉРµРєС‚ РЅРµ Р±С‹Р» РІС‹РґРµР»РµРЅ С‚Рѕ РґРѕР±Р°РІРёС‚СЊ РµРіРѕ РІ СЃРїРёСЃРѕРє Р°РєС‚РёРІРЅС‹С…
                 NewInd = ActiveObj.Length
                 ReDim Preserve ActiveObj(NewInd) : ActiveObj(NewInd) = MyObj
             End If
         End If
-        If noRefresh = False Then FillListView() ' Заполнить список свойств
+        If noRefresh = False Then FillListView() ' Р—Р°РїРѕР»РЅРёС‚СЊ СЃРїРёСЃРѕРє СЃРІРѕР№СЃС‚РІ
     End Sub
-    Sub ClearActiveObject() ' Убрать выделение со всех выделеных объектов (выделится форма)
+    Sub ClearActiveObject() ' РЈР±СЂР°С‚СЊ РІС‹РґРµР»РµРЅРёРµ СЃРѕ РІСЃРµС… РІС‹РґРµР»РµРЅС‹С… РѕР±СЉРµРєС‚РѕРІ (РІС‹РґРµР»РёС‚СЃСЏ С„РѕСЂРјР°)
         ActiveObj = Nothing : FillListView()
     End Sub
-    Sub SetActiveObject(ByVal MyObj As Object, Optional ByVal onlySelect As Boolean = False) ' Выделить какой-то один объект
+    Sub SetActiveObject(ByVal MyObj As Object, Optional ByVal onlySelect As Boolean = False) ' Р’С‹РґРµР»РёС‚СЊ РєР°РєРѕР№-С‚Рѕ РѕРґРёРЅ РѕР±СЉРµРєС‚
         If ProgressForm.Visible = True And ProgressForm.ProgressBarValue < 70 Then Exit Sub
         ReDim Preserve ActiveObj(0) : ActiveObj(0) = MyObj
         FillListView(onlySelect)
     End Sub
-    Function IsActiveObject(ByVal MyObj As Object) As Boolean ' Является ли объект активным
+    Function IsActiveObject(ByVal MyObj As Object) As Boolean ' РЇРІР»СЏРµС‚СЃСЏ Р»Рё РѕР±СЉРµРєС‚ Р°РєС‚РёРІРЅС‹Рј
         If ActiveObj Is Nothing Then Return False
         If Array.IndexOf(ActiveObj, MyObj) = -1 Then : Return False
         Else : Return True : End If
     End Function
     Function inRectangle(ByVal obj As Object, ByVal na4Point As Point, ByVal endPoint As Point) As Boolean
-        Dim x1, y1, x2, y2 As Integer ' Координаты левого верхнего и правого нижнего угла
+        Dim x1, y1, x2, y2 As Integer ' РљРѕРѕСЂРґРёРЅР°С‚С‹ Р»РµРІРѕРіРѕ РІРµСЂС…РЅРµРіРѕ Рё РїСЂР°РІРѕРіРѕ РЅРёР¶РЅРµРіРѕ СѓРіР»Р°
         If na4Point.X < endPoint.X Then
             x1 = na4Point.X : x2 = endPoint.X
         Else
@@ -216,11 +216,11 @@ Public Class Forms
     End Function
 #End Region
 
-    ' <<<<<<<< ОПЕРАЦИИ С МАРКЕРАМИ ФОРМЫ И ВИДИМОСТЬ МАРКЕРОВ >>>>>>>>>
+    ' <<<<<<<< РћРџР•Р РђР¦РР РЎ РњРђР РљР•Р РђРњР Р¤РћР РњР« Р Р’РР”РРњРћРЎРўР¬ РњРђР РљР•Р РћР’ >>>>>>>>>
 #Region "MARKERI"
     Function ContenerAbsXY(ByVal MyObj As Object) As Point
         Dim contLeft, contTop As Integer, oldCont As Object, cont As Object = MyObj.conteiner
-        contLeft = 0 : contTop = 0 ' х и у контейнера относительно таба
+        contLeft = 0 : contTop = 0 ' С… Рё Сѓ РєРѕРЅС‚РµР№РЅРµСЂР° РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ С‚Р°Р±Р°
         If MyObj Is Nothing Then Return New Point(contLeft, contTop)
         If MyObj.obj.TypeObj = "PoluObj" Then
             If cont.GetType.ToString = "System.Windows.Forms.SplitterPanel" Then
@@ -230,9 +230,9 @@ Public Class Forms
                 contLeft += cont.obj.Parent.Parent.Left - markerX
                 contTop += cont.obj.Parent.Parent.SplitterDistance + cont.obj.Parent.Parent.SplitterRectangle.Height - 1
             End If
-        Else ' Объет может быть внутри сразу нескольких вложеных контенеров
+        Else ' РћР±СЉРµС‚ РјРѕР¶РµС‚ Р±С‹С‚СЊ РІРЅСѓС‚СЂРё СЃСЂР°Р·Сѓ РЅРµСЃРєРѕР»СЊРєРёС… РІР»РѕР¶РµРЅС‹С… РєРѕРЅС‚РµРЅРµСЂРѕРІ
             oldCont = MyObj
-            Do Until cont Is Nothing ' Пока не пройдет форму складывать координаты контенеров
+            Do Until cont Is Nothing ' РџРѕРєР° РЅРµ РїСЂРѕР№РґРµС‚ С„РѕСЂРјСѓ СЃРєР»Р°РґС‹РІР°С‚СЊ РєРѕРѕСЂРґРёРЅР°С‚С‹ РєРѕРЅС‚РµРЅРµСЂРѕРІ
                 If cont.obj.TypeObj = "PoluObj" Then
                     Try
                         contLeft += cont.conteiner.Parent.Left - markerX
@@ -242,7 +242,7 @@ Public Class Forms
                     End Try
                     Exit Do
                 End If
-                ' У двойной панели надо учитывать в какой панели объект
+                ' РЈ РґРІРѕР№РЅРѕР№ РїР°РЅРµР»Рё РЅР°РґРѕ СѓС‡РёС‚С‹РІР°С‚СЊ РІ РєР°РєРѕР№ РїР°РЅРµР»Рё РѕР±СЉРµРєС‚
                 If cont.obj.GetType.ToString = ClassAplication & "DP" Then
                     contLeft += cont.obj.ParentPanelLeft(oldCont.obj)
                     contTop += cont.obj.ParentPanelTop(oldCont.obj)
@@ -261,12 +261,12 @@ Public Class Forms
     End Function
     Sub marker_vis(Optional ByVal vis As Boolean = True)
         Dim i, j As Integer
-        If ProgressForm.Visible = True Then fromIzmenenieBylo = False : Exit Sub ' если происходит вставка и т.п. что не требует показа маркеров
-        ' Убрать все маркеры
+        If ProgressForm.Visible = True Then fromIzmenenieBylo = False : Exit Sub ' РµСЃР»Рё РїСЂРѕРёСЃС…РѕРґРёС‚ РІСЃС‚Р°РІРєР° Рё С‚.Рї. С‡С‚Рѕ РЅРµ С‚СЂРµР±СѓРµС‚ РїРѕРєР°Р·Р° РјР°СЂРєРµСЂРѕРІ
+        ' РЈР±СЂР°С‚СЊ РІСЃРµ РјР°СЂРєРµСЂС‹
         If MyObjs Is Nothing = False Then
             For j = 0 To MyObjs.Length - 1
                 For i = 0 To MyObjs(j).markers.Length - 1
-                    ' У полуобъекта маркеров нет кроме 8-го
+                    ' РЈ РїРѕР»СѓРѕР±СЉРµРєС‚Р° РјР°СЂРєРµСЂРѕРІ РЅРµС‚ РєСЂРѕРјРµ 8-РіРѕ
                     If MyObjs(j).obj.TypeObj <> "PoluObj" Or i = 8 Or i = 9 Then
                         If MyObjs(j).markers(i) Is Nothing = False Then MyObjs(j).markers(i).Visible = False
                     End If
@@ -275,18 +275,18 @@ Public Class Forms
         End If
         If ActiveObj Is Nothing Then Exit Sub
         If ActiveObj(0) Is Nothing Then Exit Sub
-        ' Выделить маркерами активные объекты если надо (если vis=true)
+        ' Р’С‹РґРµР»РёС‚СЊ РјР°СЂРєРµСЂР°РјРё Р°РєС‚РёРІРЅС‹Рµ РѕР±СЉРµРєС‚С‹ РµСЃР»Рё РЅР°РґРѕ (РµСЃР»Рё vis=true)
         If vis Then
-            For j = 0 To ActiveObj.Length - 1 ' Выделить маркерами все объекты
+            For j = 0 To ActiveObj.Length - 1 ' Р’С‹РґРµР»РёС‚СЊ РјР°СЂРєРµСЂР°РјРё РІСЃРµ РѕР±СЉРµРєС‚С‹
                 Dim cont As Point = ContenerAbsXY(ActiveObj(j))
                 With ActiveObj(j)
                     Dim ddx As Integer = 0, ddy As Integer = 0
                     If .markers(0) Is Nothing Then Continue For
-                    ' Сделать объект пунктменю видимым
+                    ' РЎРґРµР»Р°С‚СЊ РѕР±СЉРµРєС‚ РїСѓРЅРєС‚РјРµРЅСЋ РІРёРґРёРјС‹Рј
                     If Iz.IsMMs(ActiveObj(j)) Then
                         Dim it As MMs = .obj.OwnerItem ', flag As Boolean = False
                         Dim its() As Object
-                        ' Раскрытие всех элементов меню
+                        ' Р Р°СЃРєСЂС‹С‚РёРµ РІСЃРµС… СЌР»РµРјРµРЅС‚РѕРІ РјРµРЅСЋ
                         If it Is Nothing = False Then
                             While it Is Nothing = False
                                 ReDimsO(its) : its(its.Length - 1) = it
@@ -343,11 +343,11 @@ Public Class Forms
                         .markers(9).Left = ddx + .obj.Width - markerX - 2
                         .markers(9).Top = ddy + .obj.Bounds.Y - markerY * 1.5
                     End If
-                    ' Сделать маркеры видимыми
+                    ' РЎРґРµР»Р°С‚СЊ РјР°СЂРєРµСЂС‹ РІРёРґРёРјС‹РјРё
                     If Iz.isNoSizeChange(.obj) = False Then
                         For i = 0 To .markers.Length - 1
-                            If i = 9 Then Continue For ' плюсик делается отдельно
-                            ' У формы есть только 4,6,7 маркеры
+                            If i = 9 Then Continue For ' РїР»СЋСЃРёРє РґРµР»Р°РµС‚СЃСЏ РѕС‚РґРµР»СЊРЅРѕ
+                            ' РЈ С„РѕСЂРјС‹ РµСЃС‚СЊ С‚РѕР»СЊРєРѕ 4,6,7 РјР°СЂРєРµСЂС‹
                             If .obj.GetType.ToString <> ClassAplication & "F" Or i = 4 Or i = 6 Or i = 7 Then
                                 .markers(i).Visible = True : .markers(i).BringToFront()
                             End If
@@ -358,7 +358,7 @@ Public Class Forms
                     End If
                     '.markers(8).height = 1000
                     '.markers(8).width = 1000
-                    ' Показывать плюсик только у особых объектов
+                    ' РџРѕРєР°Р·С‹РІР°С‚СЊ РїР»СЋСЃРёРє С‚РѕР»СЊРєРѕ Сѓ РѕСЃРѕР±С‹С… РѕР±СЉРµРєС‚РѕРІ
                     If Iz.isHavePlusik(.obj) Then
                         .markers(9).Visible = True : .markers(9).BringToFront()
                     End If
@@ -369,9 +369,9 @@ Public Class Forms
     End Sub
 #End Region
 
-    ' <<<<<<<< ОПЕРАЦИИ С МАССИВАМИ >>>>>>>>>
+    ' <<<<<<<< РћРџР•Р РђР¦РР РЎ РњРђРЎРЎРР’РђРњР >>>>>>>>>
 #Region "MASSIVES"
-    Function ExistIndex(ByVal obj As Object, ByVal name As String, ByVal ind As String) As Boolean ' СУЩЕСТВУЕТ ЛИ ТАКОЙ ИНДЕКС
+    Function ExistIndex(ByVal obj As Object, ByVal name As String, ByVal ind As String) As Boolean ' РЎРЈР©Р•РЎРўР’РЈР•Рў Р›Р РўРђРљРћР™ РРќР”Р•РљРЎ
         Dim i, j As Integer
         Dim myObj As Object
         If obj Is Nothing Then
@@ -387,21 +387,21 @@ Public Class Forms
         If Forms Is Nothing Then ReDim Forms(0) : Forms(0) = Me
         For i = 0 To Forms.Length - 1
             If Forms(i) Is Nothing = False Then
-                If Forms(i).obj Is obj = False Then ' Если это не сам объект obj
+                If Forms(i).obj Is obj = False Then ' Р•СЃР»Рё СЌС‚Рѕ РЅРµ СЃР°Рј РѕР±СЉРµРєС‚ obj
                     If Forms(i).obj.Props.Name = name And Forms(i).obj.Props.index = ind Then Return True
                 End If
                 If Forms(i).MyObjs Is Nothing = False Then
                     For j = 0 To Forms(i).MyObjs.Length - 1
-                        If Forms(i).MyObjs(j).obj Is obj = False Then ' Если это не сам объект obj
+                        If Forms(i).MyObjs(j).obj Is obj = False Then ' Р•СЃР»Рё СЌС‚Рѕ РЅРµ СЃР°Рј РѕР±СЉРµРєС‚ obj
                             If Forms(i).MyObjs(j).obj.Props.Name = name And Forms(i).MyObjs(j).obj.Props.index = ind Then Return True
                         End If
                     Next
                 End If
             End If
         Next
-        Return False ' Если совпадений имён и индексов не найдено
+        Return False ' Р•СЃР»Рё СЃРѕРІРїР°РґРµРЅРёР№ РёРјС‘РЅ Рё РёРЅРґРµРєСЃРѕРІ РЅРµ РЅР°Р№РґРµРЅРѕ
     End Function
-    Sub CreateMassive(ByVal name As String, ByVal ParamArray MyObjs() As Object) ' СОЗДАТЬ МАССИВ ИЗ ОБЪЕКТОВ o
+    Sub CreateMassive(ByVal name As String, ByVal ParamArray MyObjs() As Object) ' РЎРћР—Р”РђРўР¬ РњРђРЎРЎРР’ РР— РћР‘РЄР•РљРўРћР’ o
         If MyObjs Is Nothing Then Exit Sub
         Dim i As Integer
         If name = "" Then name = MyObjs(0).obj.Props.name
@@ -410,90 +410,90 @@ Public Class Forms
             recur = False
             If i > 0 Then proj.UndoRedo("#Union Undos(Redos)", "", "", "") Else proj.UndoRedo("#Reverses", "", "", "")
             Dim oldindex As String = MyObjs(i).obj.Props.index
-            MyObjs(i).GetMyForm.SetPropertys(trans("Номер"), GetIndex(name), MyObjs(i))
+            MyObjs(i).GetMyForm.SetPropertys(trans("РќРѕРјРµСЂ"), GetIndex(name), MyObjs(i))
             proj.UndoRedo("#Union Undos(Redos)", "", "", "")
             Dim oldname As String = MyObjs(i).obj.Props.name
-            MyObjs(i).GetMyForm.SetPropertys(trans("Имя"), name, MyObjs(i))
+            MyObjs(i).GetMyForm.SetPropertys(trans("РРјСЏ"), name, MyObjs(i))
             proj.UndoRedo("#Union Undos(Redos)", "", "", "")
             If Iz.IsFORM(MyObjs(i)) Then
-                proj.UndoRedo("Изменение свойства", oldname & "." & oldname & "[" & oldindex & "]" & "." & trans("Номер"), MyObjs(i).obj.Props.index, oldindex) ', True)
+                proj.UndoRedo("РР·РјРµРЅРµРЅРёРµ СЃРІРѕР№СЃС‚РІР°", oldname & "." & oldname & "[" & oldindex & "]" & "." & trans("РќРѕРјРµСЂ"), MyObjs(i).obj.Props.index, oldindex) ', True)
             Else
-                proj.UndoRedo("Изменение свойства", MyObjs(i).getmyform.obj.Props.name & "." & oldname & "[" & oldindex & "]" & "." & trans("Номер"), MyObjs(i).obj.Props.index, oldindex) ', True)
+                proj.UndoRedo("РР·РјРµРЅРµРЅРёРµ СЃРІРѕР№СЃС‚РІР°", MyObjs(i).getmyform.obj.Props.name & "." & oldname & "[" & oldindex & "]" & "." & trans("РќРѕРјРµСЂ"), MyObjs(i).obj.Props.index, oldindex) ', True)
             End If
             MyObjs(i).obj.refresh()
         Next
         FillListView()
         If CreateDs Is Nothing = False Then CreateDs.SetProperty(True)
     End Sub
-    Sub CreatePodMassive(ByVal obj As Object, ByVal ParamArray MyObj() As Object) ' СОЗДАТЬ МАССИВ ИЗ ОБЪЕКТОВ o
+    Sub CreatePodMassive(ByVal obj As Object, ByVal ParamArray MyObj() As Object) ' РЎРћР—Р”РђРўР¬ РњРђРЎРЎРР’ РР— РћР‘РЄР•РљРўРћР’ o
         If MyObjs Is Nothing Then Exit Sub
         Dim i, j, fl As Integer, name, ind, subInd As String
-        ' Найти имя массива, на основе которого создавать подмассив
+        ' РќР°Р№С‚Рё РёРјСЏ РјР°СЃСЃРёРІР°, РЅР° РѕСЃРЅРѕРІРµ РєРѕС‚РѕСЂРѕРіРѕ СЃРѕР·РґР°РІР°С‚СЊ РїРѕРґРјР°СЃСЃРёРІ
         Dim massiveobject = GetMassiveobjectFromObjs(obj, MyObj)
-        If massiveobject Is Nothing Then Exit Sub ' Если не нашли массивов
+        If massiveobject Is Nothing Then Exit Sub ' Р•СЃР»Рё РЅРµ РЅР°С€Р»Рё РјР°СЃСЃРёРІРѕРІ
         name = massiveobject.props.name : ind = massiveobject.props.index : subInd = 1
-        ' Получить массив по найденому имени
+        ' РџРѕР»СѓС‡РёС‚СЊ РјР°СЃСЃРёРІ РїРѕ РЅР°Р№РґРµРЅРѕРјСѓ РёРјРµРЅРё
         Dim Massive() As Object = proj.GetMyAllFromName(name)
         If Massive Is Nothing Then Exit Sub
         For i = 0 To Massive.Length - 1
             For j = 0 To MyObj.Length - 1
                 If MyObj(j).obj Is Massive(i).obj Then fl = 1 : Exit For
             Next
-            ' Заменить индексы у всех объектов массива, не входящих в MyObj
+            ' Р—Р°РјРµРЅРёС‚СЊ РёРЅРґРµРєСЃС‹ Сѓ РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ РјР°СЃСЃРёРІР°, РЅРµ РІС…РѕРґСЏС‰РёС… РІ MyObj
             If fl = 0 Then
                 proj.UndoRedo("#Revers Undo", "", "", "")
-                Massive(i).GetMyForm.SetPropertys(trans("Номер"), Massive(i).obj.Props.index & ",1", Massive(i))
+                Massive(i).GetMyForm.SetPropertys(trans("РќРѕРјРµСЂ"), Massive(i).obj.Props.index & ",1", Massive(i))
                 proj.UndoRedo("#Union Undos(Redos)", "", "", "")
                 Massive(i).obj.refresh()
             End If
             fl = 0
         Next
         For i = 0 To MyObj.Length - 1
-            ' Заменить индексы у всех объектов MyObj
-            MyObj(i).GetMyForm.SetPropertys(trans("Номер"), ind & "," & subInd, MyObj(i))
+            ' Р—Р°РјРµРЅРёС‚СЊ РёРЅРґРµРєСЃС‹ Сѓ РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ MyObj
+            MyObj(i).GetMyForm.SetPropertys(trans("РќРѕРјРµСЂ"), ind & "," & subInd, MyObj(i))
             proj.UndoRedo("#Union Undos(Redos)", "", "", "")
             subInd += 1
-            MyObj(i).GetMyForm.SetPropertys(trans("Имя"), name, MyObj(i))
+            MyObj(i).GetMyForm.SetPropertys(trans("РРјСЏ"), name, MyObj(i))
             If i < MyObj.Length - 1 Then proj.UndoRedo("#Union Undos(Redos)", "", "", "")
             MyObj(i).obj.refresh()
         Next : FillListView()
         If CreateDs Is Nothing = False Then CreateDs.SetProperty(True)
     End Sub
 
-    ' СОЗДАТЬ МАССИВ ИЗ ОБЪЕКТОВ MyObj
+    ' РЎРћР—Р”РђРўР¬ РњРђРЎРЎРР’ РР— РћР‘РЄР•РљРўРћР’ MyObj
     Sub UnitedPodMassive(ByVal obj As Object, ByVal ParamArray MyObj() As Object)
         If MyObjs Is Nothing Then Exit Sub
         Dim i As Integer, name, ind As String
-        ' Найти имя массива, на основе которого создавать подмассив
+        ' РќР°Р№С‚Рё РёРјСЏ РјР°СЃСЃРёРІР°, РЅР° РѕСЃРЅРѕРІРµ РєРѕС‚РѕСЂРѕРіРѕ СЃРѕР·РґР°РІР°С‚СЊ РїРѕРґРјР°СЃСЃРёРІ
         Dim massiveobject = GetMassiveobjectFromObjs(obj, MyObj)
-        If massiveobject Is Nothing Then Exit Sub ' Если не нашли массивов
-        If massiveobject.index.split(",").length <= 1 Then Exit Sub ' Только массивы второй степени и выше
+        If massiveobject Is Nothing Then Exit Sub ' Р•СЃР»Рё РЅРµ РЅР°С€Р»Рё РјР°СЃСЃРёРІРѕРІ
+        If massiveobject.index.split(",").length <= 1 Then Exit Sub ' РўРѕР»СЊРєРѕ РјР°СЃСЃРёРІС‹ РІС‚РѕСЂРѕР№ СЃС‚РµРїРµРЅРё Рё РІС‹С€Рµ
         name = massiveobject.name
         ind = massiveobject.index.Substring(0, massiveobject.index.Length - 1)
         For i = 0 To MyObj.Length - 1
-            ' Заменить индексы у всех объектов MyObj
+            ' Р—Р°РјРµРЅРёС‚СЊ РёРЅРґРµРєСЃС‹ Сѓ РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ MyObj
             If i > 0 Then proj.UndoRedo("#Union Undos(Redos)", "", "", "") Else proj.UndoRedo("#Revers Undo", "", "", "")
-            MyObj(i).GetMyForm.SetPropertys(trans("Номер"), GetIndex(name, MyObj(i).obj, ind & "1"), MyObj(i))
+            MyObj(i).GetMyForm.SetPropertys(trans("РќРѕРјРµСЂ"), GetIndex(name, MyObj(i).obj, ind & "1"), MyObj(i))
             proj.UndoRedo("#Union Undos(Redos)", "", "", "")
-            MyObj(i).GetMyForm.SetPropertys(trans("Имя"), name, MyObj(i))
+            MyObj(i).GetMyForm.SetPropertys(trans("РРјСЏ"), name, MyObj(i))
 
             MyObj(i).obj.refresh()
         Next : FillListView()
         If CreateDs Is Nothing = False Then CreateDs.SetProperty(True)
     End Sub
     Function GetMassiveobjectFromObjs(ByVal MainObj As Object, ByVal ParamArray MyObj() As Object) As Object
-        ' Возвращение из данных объектов того объекта, который в массиве
+        ' Р’РѕР·РІСЂР°С‰РµРЅРёРµ РёР· РґР°РЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ С‚РѕРіРѕ РѕР±СЉРµРєС‚Р°, РєРѕС‚РѕСЂС‹Р№ РІ РјР°СЃСЃРёРІРµ
         Dim massives() As String = GetAllMassives(), i As Integer
-        ' Если у главного объекта mainobj есть массив, то вернуть его
+        ' Р•СЃР»Рё Сѓ РіР»Р°РІРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° mainobj РµСЃС‚СЊ РјР°СЃСЃРёРІ, С‚Рѕ РІРµСЂРЅСѓС‚СЊ РµРіРѕ
         If Array.IndexOf(massives, MainObj.Props.name) <> -1 Then
             Return MainObj
-        Else ' Иначе брать первый попавшийся масив из MyObj
+        Else ' РРЅР°С‡Рµ Р±СЂР°С‚СЊ РїРµСЂРІС‹Р№ РїРѕРїР°РІС€РёР№СЃСЏ РјР°СЃРёРІ РёР· MyObj
             For i = 0 To MyObj.Length - 1
                 If Array.IndexOf(massives, MyObj(i).obj.Props.name) <> -1 Then
                     Return MyObj(i).obj
                 End If
             Next
-        End If : Return Nothing ' Если не нашли массивов
+        End If : Return Nothing ' Р•СЃР»Рё РЅРµ РЅР°С€Р»Рё РјР°СЃСЃРёРІРѕРІ
     End Function
     Function GetObjsFromMyObjs(ByVal ParamArray MyObjs() As Object) As Object
         Dim Objs() As Object = Nothing, ind As Integer = 0, i As Integer
@@ -501,14 +501,14 @@ Public Class Forms
             ReDim Preserve Objs(ind) : Objs(ind) = MyObjs(i).obj : ind += 1
         Next : Return Objs
     End Function
-    Sub MassiveSelect(ByVal obj As Object, Optional ByVal index As String = "") ' Выделить массив
+    Sub MassiveSelect(ByVal obj As Object, Optional ByVal index As String = "") ' Р’С‹РґРµР»РёС‚СЊ РјР°СЃСЃРёРІ
         If MyObjs Is Nothing Then Exit Sub
         Dim i As Integer
         For i = 0 To MyObjs.Length - 1
-            ' Если объект входит в массив, и не является сам собой
+            ' Р•СЃР»Рё РѕР±СЉРµРєС‚ РІС…РѕРґРёС‚ РІ РјР°СЃСЃРёРІ, Рё РЅРµ СЏРІР»СЏРµС‚СЃСЏ СЃР°Рј СЃРѕР±РѕР№
             If MyObjs(i).obj.Props.name = obj.Props.Name And MyObjs(i).obj Is obj = False Then
-                If MyObjs(i).obj.Props.index.indexof(index) = 0 Then ' Если нужный уровень подмассива
-                    ' Выделить, если небыл выделен
+                If MyObjs(i).obj.Props.index.indexof(index) = 0 Then ' Р•СЃР»Рё РЅСѓР¶РЅС‹Р№ СѓСЂРѕРІРµРЅСЊ РїРѕРґРјР°СЃСЃРёРІР°
+                    ' Р’С‹РґРµР»РёС‚СЊ, РµСЃР»Рё РЅРµР±С‹Р» РІС‹РґРµР»РµРЅ
                     If IsActiveObject(MyObjs(i)) = False Or ctrl = True Then
                         AddActiveObject(MyObjs(i), True)
                     End If
@@ -516,29 +516,29 @@ Public Class Forms
             End If
         Next : FillListView() : marker_vis(True)
     End Sub
-    Sub MassiveExecute(ByVal Myobj() As Object) ' Выделить массив
+    Sub MassiveExecute(ByVal Myobj() As Object) ' Р’С‹РґРµР»РёС‚СЊ РјР°СЃСЃРёРІ
         If Myobj Is Nothing Then Exit Sub
         Dim i As Integer, oldname As String
         Myobj = proj.GetSortMyObjsByFormsLast(Myobj)
         For i = 0 To Myobj.Length - 1
-            ' Если объект входит в какой либо массив, и не является сам собой
+            ' Р•СЃР»Рё РѕР±СЉРµРєС‚ РІС…РѕРґРёС‚ РІ РєР°РєРѕР№ Р»РёР±Рѕ РјР°СЃСЃРёРІ, Рё РЅРµ СЏРІР»СЏРµС‚СЃСЏ СЃР°Рј СЃРѕР±РѕР№
             If proj.ExistName(Myobj(i).obj.Props.name, Myobj(i).obj) Then
                 If i > 0 Then proj.UndoRedo("#Union Undos(Redos)", "", "", "") Else proj.UndoRedo("#Reverses", "", "", "")
                 oldname = GetUNameObj(Myobj(i))
                 If Iz.IsFORM(Myobj(i)) Then
-                    proj.UndoRedo("Изменение свойства", proj.GiveName(Myobj(i).obj.Props.name) & "." & proj.GiveName(Myobj(i).obj.Props.name) & "[" & Myobj(i).obj.Props.index & "]" & "." & trans("Номер"), "0", Myobj(i).obj.Props.index) ', True)
+                    proj.UndoRedo("РР·РјРµРЅРµРЅРёРµ СЃРІРѕР№СЃС‚РІР°", proj.GiveName(Myobj(i).obj.Props.name) & "." & proj.GiveName(Myobj(i).obj.Props.name) & "[" & Myobj(i).obj.Props.index & "]" & "." & trans("РќРѕРјРµСЂ"), "0", Myobj(i).obj.Props.index) ', True)
                 Else
-                    proj.UndoRedo("Изменение свойства", Myobj(i).getmyform.obj.Props.name & "." & proj.GiveName(Myobj(i).obj.Props.name) & "[" & Myobj(i).obj.Props.index & "]" & "." & trans("Номер"), "0", Myobj(i).obj.Props.index) ', True)
+                    proj.UndoRedo("РР·РјРµРЅРµРЅРёРµ СЃРІРѕР№СЃС‚РІР°", Myobj(i).getmyform.obj.Props.name & "." & proj.GiveName(Myobj(i).obj.Props.name) & "[" & Myobj(i).obj.Props.index & "]" & "." & trans("РќРѕРјРµСЂ"), "0", Myobj(i).obj.Props.index) ', True)
                 End If
                 proj.UndoRedo("#Union Undos(Redos)", "", "", "")
-                Myobj(i).GetMyForm.SetPropertys(trans("Имя"), proj.GiveName(Myobj(i).obj.Props.name), Myobj(i))
+                Myobj(i).GetMyForm.SetPropertys(trans("РРјСЏ"), proj.GiveName(Myobj(i).obj.Props.name), Myobj(i))
                 proj.UndoRedo("#Union Undos(Redos)", "", "", "")
-                Myobj(i).GetMyForm.SetPropertys(trans("Номер"), "0", oldname, Myobj(i))
+                Myobj(i).GetMyForm.SetPropertys(trans("РќРѕРјРµСЂ"), "0", oldname, Myobj(i))
 
                 Myobj(i).obj.refresh()
-            ElseIf Myobj(i).obj.Props.index <> 0 Then ' Если у объекта без массива не нулевой индекс
+            ElseIf Myobj(i).obj.Props.index <> 0 Then ' Р•СЃР»Рё Сѓ РѕР±СЉРµРєС‚Р° Р±РµР· РјР°СЃСЃРёРІР° РЅРµ РЅСѓР»РµРІРѕР№ РёРЅРґРµРєСЃ
                 If i > 0 Then proj.UndoRedo("#Union Undos(Redos)", "", "", "") Else proj.UndoRedo("#Revers Undo", "", "", "")
-                Myobj(i).GetMyForm.SetPropertys(trans("Номер"), 0, Myobj(i))
+                Myobj(i).GetMyForm.SetPropertys(trans("РќРѕРјРµСЂ"), 0, Myobj(i))
 
                 Myobj(i).obj.refresh()
             End If
@@ -546,17 +546,17 @@ Public Class Forms
         If CreateDs Is Nothing = False Then CreateDs.SetProperty(True)
     End Sub
     Function GetIndex(ByVal name As String, Optional ByVal obj As Object = Nothing, Optional ByVal ind As String = "1") As String
-        ' Получить массив по найденому имени
+        ' РџРѕР»СѓС‡РёС‚СЊ РјР°СЃСЃРёРІ РїРѕ РЅР°Р№РґРµРЅРѕРјСѓ РёРјРµРЅРё
         Dim i As Integer = 1, j As Integer
         '   If ExistIndex(obj, name, ind) = False Then Return ind
         Dim Massive() As Object = proj.GetMyAllFromName(name) : If Massive Is Nothing Then Return ind
-        ' Если размерность индекса не совпадает со степенью массива
+        ' Р•СЃР»Рё СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ РёРЅРґРµРєСЃР° РЅРµ СЃРѕРІРїР°РґР°РµС‚ СЃРѕ СЃС‚РµРїРµРЅСЊСЋ РјР°СЃСЃРёРІР°
         If ind.Split(",").Length < Massive(0).obj.Props.index.Split(",").Length Then : ind = ""
             For j = 0 To Massive(0).obj.Props.index.Split(",").Length - 2 : ind &= ",1" : Next
             While (ExistIndex(obj, name, i & ind)) : i += 1 : End While
             Return i & ind
         End If
-        ' найти индекс, которого еще небыло
+        ' РЅР°Р№С‚Рё РёРЅРґРµРєСЃ, РєРѕС‚РѕСЂРѕРіРѕ РµС‰Рµ РЅРµР±С‹Р»Рѕ
         If ind.Split(",").Length > 1 Then ind = ind.Substring(0, ind.LastIndexOf(",") + 1) Else ind = ""
         While (ExistIndex(obj, name, ind & i)) : i += 1 : End While
         Return ind & i
@@ -565,7 +565,7 @@ Public Class Forms
         Dim i, newInd As Integer, str(0) As String : str(0) = ""
         If MyObjs Is Nothing Then Return Nothing
         For i = 0 To MyObjs.Length - 1
-            ' Если имя объекта есть еще у когото и он еще не в списке массивов
+            ' Р•СЃР»Рё РёРјСЏ РѕР±СЉРµРєС‚Р° РµСЃС‚СЊ РµС‰Рµ Сѓ РєРѕРіРѕС‚Рѕ Рё РѕРЅ РµС‰Рµ РЅРµ РІ СЃРїРёСЃРєРµ РјР°СЃСЃРёРІРѕРІ
             If proj.ExistName(MyObjs(i).obj.Props.name, MyObjs(i).obj) And Array.IndexOf(str, MyObjs(i).obj.Props.name) = -1 Then
                 If str(0) = "" Then newInd = 0 Else newInd = str.Length
                 ReDim Preserve str(newInd) : str(newInd) = MyObjs(i).obj.Props.name
@@ -573,76 +573,76 @@ Public Class Forms
         Next
         If str(0) = "" Then Return Nothing Else Return str
     End Function
-    Function ExistName(ByVal name As String, Optional ByVal obj As Object = Nothing) As Boolean ' СУЩЕСТВУЕТ ЛИ ТАКОЕ ИМЯ
+    Function ExistName(ByVal name As String, Optional ByVal obj As Object = Nothing) As Boolean ' РЎРЈР©Р•РЎРўР’РЈР•Рў Р›Р РўРђРљРћР• РРњРЇ
         Dim i As Integer
         If MyObjs Is Nothing Then
             If obj Is Nothing Then Return False
             If obj.Props.name = name Then Return True
         End If
         For i = 0 To MyObjs.Length - 1
-            If MyObjs(i).obj Is obj = False Then ' Если это не сам объект obj
+            If MyObjs(i).obj Is obj = False Then ' Р•СЃР»Рё СЌС‚Рѕ РЅРµ СЃР°Рј РѕР±СЉРµРєС‚ obj
                 If MyObjs(i).obj.Props.name = name Then Return True
             End If
         Next
-        Return False ' Если совпадений имён с str не найдено
+        Return False ' Р•СЃР»Рё СЃРѕРІРїР°РґРµРЅРёР№ РёРјС‘РЅ СЃ str РЅРµ РЅР°Р№РґРµРЅРѕ
     End Function
 #End Region
 
-    ' <<<<<<<< ОПЕРАЦИИ СО СВОЙСТВАМИ >>>>>>>>>
+    ' <<<<<<<< РћРџР•Р РђР¦РР РЎРћ РЎР’РћР™РЎРўР’РђРњР >>>>>>>>>
 #Region "PROPERTYS"
-    ' Получение значения свойства сразу множества объектов
+    ' РџРѕР»СѓС‡РµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° СЃСЂР°Р·Сѓ РјРЅРѕР¶РµСЃС‚РІР° РѕР±СЉРµРєС‚РѕРІ
     Function GetPropertys(ByVal prop As String, ByVal ParamArray MyObjs() As Object) As ErrString
         If MyObjs Is Nothing Then Return New ErrString(Nothing)
 
         If MyObjs.Length = 1 Then Return GetProperty(MyObjs(0), prop)
 
         Dim i, StrInd As Integer, ret(MyObjs.Length - 1) As ErrString
-        ' Занести в ret значения свойства prop у каждого объекта objects
+        ' Р—Р°РЅРµСЃС‚Рё РІ ret Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° prop Сѓ РєР°Р¶РґРѕРіРѕ РѕР±СЉРµРєС‚Р° objects
         For i = 0 To MyObjs.Length - 1
             ret(i) = GetProperty(MyObjs(i), prop)
         Next
         StrInd = -1
         For i = 0 To ret.Length - 1
-            ' Вернуть "" если значение свойства не у всех объектов одинаково
+            ' Р’РµСЂРЅСѓС‚СЊ "" РµСЃР»Рё Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РЅРµ Сѓ РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ РѕРґРёРЅР°РєРѕРІРѕ
             If StrInd <> -1 Then
                 If ret(i).str <> Nothing Then
                     If ret(i).str <> ret(StrInd).str Then Return New ErrString(Nothing)
                 End If
                 If ret(i).err <> "" Then Return ret(i)
             End If
-            ' Сохранить в strInd индекс от ret у объекта, имеющего данное свойство
+            ' РЎРѕС…СЂР°РЅРёС‚СЊ РІ strInd РёРЅРґРµРєСЃ РѕС‚ ret Сѓ РѕР±СЉРµРєС‚Р°, РёРјРµСЋС‰РµРіРѕ РґР°РЅРЅРѕРµ СЃРІРѕР№СЃС‚РІРѕ
             If ret(i).str <> Nothing And StrInd = -1 Then StrInd = i
         Next
-        ' Если ни у одного объекта свойства нет, то вернуть ничто, иначе вернуть значение свойства
+        ' Р•СЃР»Рё РЅРё Сѓ РѕРґРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° СЃРІРѕР№СЃС‚РІР° РЅРµС‚, С‚Рѕ РІРµСЂРЅСѓС‚СЊ РЅРёС‡С‚Рѕ, РёРЅР°С‡Рµ РІРµСЂРЅСѓС‚СЊ Р·РЅР°С‡РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
         If StrInd = -1 Then Return ret(0) Else Return ret(StrInd)
     End Function
-    ' Присвоение значения свойства сразу множеству объектов
+    ' РџСЂРёСЃРІРѕРµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° СЃСЂР°Р·Сѓ РјРЅРѕР¶РµСЃС‚РІСѓ РѕР±СЉРµРєС‚РѕРІ
     Function SetPropertys(ByVal prop As String, ByVal value As String, ByVal ParamArray MyObjs() As Object) As Boolean
         Return SetPropertys(prop, value, "", MyObjs)
     End Function
-    ' Присвоение значения свойства сразу множеству объектов
+    ' РџСЂРёСЃРІРѕРµРЅРёРµ Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° СЃСЂР°Р·Сѓ РјРЅРѕР¶РµСЃС‚РІСѓ РѕР±СЉРµРєС‚РѕРІ
     Function SetPropertys(ByVal prop As String, ByVal value As String, ByVal oldname As String, ByVal ParamArray MyObjs() As Object) As Boolean
         Dim i As Integer, oldValue, objName As String, fl As Boolean
-        ' Нельзя менять свойства во время запущенного проекта
+        ' РќРµР»СЊР·СЏ РјРµРЅСЏС‚СЊ СЃРІРѕР№СЃС‚РІР° РІРѕ РІСЂРµРјСЏ Р·Р°РїСѓС‰РµРЅРЅРѕРіРѕ РїСЂРѕРµРєС‚Р°
         '' If RunProj Is Nothing = False Then Return True
-        ' Неприсваивать пустоту, если значения свойств объектов расходятся
+        ' РќРµРїСЂРёСЃРІР°РёРІР°С‚СЊ РїСѓСЃС‚РѕС‚Сѓ, РµСЃР»Рё Р·РЅР°С‡РµРЅРёСЏ СЃРІРѕР№СЃС‚РІ РѕР±СЉРµРєС‚РѕРІ СЂР°СЃС…РѕРґСЏС‚СЃСЏ
         If GetPropertys(prop, MyObjs).str = "" And value = "" Then Exit Function
         For i = 0 To MyObjs.Length - 1
             oldValue = GetProperty(MyObjs(i), prop).str
-            ' Система, благодаря которой не пишется одна и та же информация в ундоредо. Проблема в рекурсивном вызове данной процедуры
+            ' РЎРёСЃС‚РµРјР°, Р±Р»Р°РіРѕРґР°СЂСЏ РєРѕС‚РѕСЂРѕР№ РЅРµ РїРёС€РµС‚СЃСЏ РѕРґРЅР° Рё С‚Р° Р¶Рµ РёРЅС„РѕСЂРјР°С†РёСЏ РІ СѓРЅРґРѕСЂРµРґРѕ. РџСЂРѕР±Р»РµРјР° РІ СЂРµРєСѓСЂСЃРёРІРЅРѕРј РІС‹Р·РѕРІРµ РґР°РЅРЅРѕР№ РїСЂРѕС†РµРґСѓСЂС‹
             'If recur = True Then fl = True
             'recur = True
-            ' Собственно измен.свойства
+            ' РЎРѕР±СЃС‚РІРµРЅРЅРѕ РёР·РјРµРЅ.СЃРІРѕР№СЃС‚РІР°
             Dim gladko As MsgBoxResult = SetProperty(MyObjs(i), prop, value)
-            If gladko = MsgBoxResult.No Or gladko = MsgBoxResult.Cancel Then Return False ' Если при присвоении свойства произошла ошибка
+            If gladko = MsgBoxResult.No Or gladko = MsgBoxResult.Cancel Then Return False ' Р•СЃР»Рё РїСЂРё РїСЂРёСЃРІРѕРµРЅРёРё СЃРІРѕР№СЃС‚РІР° РїСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°
             'recur = False
-            ' Создание ундо редо
+            ' РЎРѕР·РґР°РЅРёРµ СѓРЅРґРѕ СЂРµРґРѕ
             If recur = False And isDevelop Then
                 If i > 0 Then proj.UndoRedo("#Union Undos(Redos)", "", "", "")
-                proj.UndoRedo("Изменение свойства", GetUNameObj(MyObjs(i)) & "." & trans(prop), value, oldValue)
+                proj.UndoRedo("РР·РјРµРЅРµРЅРёРµ СЃРІРѕР№СЃС‚РІР°", GetUNameObj(MyObjs(i)) & "." & trans(prop), value, oldValue)
                 If oldname <> "" Then
                     proj.UndoRedo("#Union Undos(Redos)", "", "", "")
-                    proj.UndoRedo("Изменение свойства", oldname & "." & trans(prop), value, oldValue, True)
+                    proj.UndoRedo("РР·РјРµРЅРµРЅРёРµ СЃРІРѕР№СЃС‚РІР°", oldname & "." & trans(prop), value, oldValue, True)
                 End If
             End If
         Next
@@ -655,7 +655,7 @@ Public Class Forms
         If MyObj.obj.props.index <> 0 Then str &= "[" & MyObj.obj.props.index & "]"
         Return str & " - " & "{" & MyObj.obj.props.type & "}"
     End Function
-    Sub FillListView(Optional ByVal onlySelect As Boolean = False) ' Заполнение списка свойств
+    Sub FillListView(Optional ByVal onlySelect As Boolean = False) ' Р—Р°РїРѕР»РЅРµРЅРёРµ СЃРїРёСЃРєР° СЃРІРѕР№СЃС‚РІ
         Dim MyObjs() As Object, props() As String = Nothing, i, j As Integer
         Try
             MainForm.ListView.Items.Clear()
@@ -666,7 +666,7 @@ Public Class Forms
         If proj Is Nothing = False And onlySelect = False Then proj.DeistvRefresh(ActiveObj)
         If MyObjs Is Nothing Then MainForm.lwEditPropertySet() : Exit Sub
         If MyObjs(0) Is Nothing Then MainForm.lwEditPropertySet() : Exit Sub
-        ' Выбор в списке объектов, который над разделом свойств
+        ' Р’С‹Р±РѕСЂ РІ СЃРїРёСЃРєРµ РѕР±СЉРµРєС‚РѕРІ, РєРѕС‚РѕСЂС‹Р№ РЅР°Рґ СЂР°Р·РґРµР»РѕРј СЃРІРѕР№СЃС‚РІ
         If proj IsNot Nothing Then
             Dim alls() As Object = proj.GetMyAllFromName("")
             If alls IsNot Nothing Then
@@ -688,11 +688,11 @@ Public Class Forms
             MainForm.ComboBox2.Text = ""
         End If
         MainForm.ComboBox2.Tag = ""
-        ' Занести в props все названия свойств выделенных объектов
+        ' Р—Р°РЅРµСЃС‚Рё РІ props РІСЃРµ РЅР°Р·РІР°РЅРёСЏ СЃРІРѕР№СЃС‚РІ РІС‹РґРµР»РµРЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ
         For i = 0 To MyObjs.Length - 1
-            If props Is Nothing Then ' Если props пуст, занести в него все свойства объекта
+            If props Is Nothing Then ' Р•СЃР»Рё props РїСѓСЃС‚, Р·Р°РЅРµСЃС‚Рё РІ РЅРµРіРѕ РІСЃРµ СЃРІРѕР№СЃС‚РІР° РѕР±СЉРµРєС‚Р°
                 props = MyObjs(i).Propertys
-            Else ' Если props не пуст, добавить те свойства, которых еще нет
+            Else ' Р•СЃР»Рё props РЅРµ РїСѓСЃС‚, РґРѕР±Р°РІРёС‚СЊ С‚Рµ СЃРІРѕР№СЃС‚РІР°, РєРѕС‚РѕСЂС‹С… РµС‰Рµ РЅРµС‚
                 For j = 0 To MyObjs(i).Propertys.Length - 1
                     If Array.IndexOf(props, MyObjs(i).Propertys(j)) = -1 Then
                         ReDim Preserve props(props.Length)
@@ -703,10 +703,10 @@ Public Class Forms
             MyObjs(i).NodeRefresh()
         Next
         If CreateDs Is Nothing = False Then CreateDs.SetProperty()
-        ' Заполнить список свойств свойствами из props
+        ' Р—Р°РїРѕР»РЅРёС‚СЊ СЃРїРёСЃРѕРє СЃРІРѕР№СЃС‚РІ СЃРІРѕР№СЃС‚РІР°РјРё РёР· props
         Dim its(props.Length - 1) As ListViewItem, num As Integer = 0
         For i = 0 To props.Length - 1
-            ' Если свойство не только для чтения
+            ' Р•СЃР»Рё СЃРІРѕР№СЃС‚РІРѕ РЅРµ С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ
             If Array.IndexOf(MayChangeProps, props(i).ToUpper) = -1 Then
                 Dim es As ErrString = GetPropertys(props(i), MyObjs)
                 If es.err = "" Then
@@ -719,9 +719,9 @@ Public Class Forms
         Next
         num -= 1 : ReDim Preserve its(num)
         Dim s = MainForm.ListView.Items
-        ' Собственно заполнение списка
+        ' РЎРѕР±СЃС‚РІРµРЅРЅРѕ Р·Р°РїРѕР»РЅРµРЅРёРµ СЃРїРёСЃРєР°
         MainForm.ListView.Items.AddRange(its)
-        ' Выделение свойства, которое было активным последний раз
+        ' Р’С‹РґРµР»РµРЅРёРµ СЃРІРѕР№СЃС‚РІР°, РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Рѕ Р°РєС‚РёРІРЅС‹Рј РїРѕСЃР»РµРґРЅРёР№ СЂР°Р·
         If oldLVselect <> "" Then
             If MainForm.ListView.Items(oldLVselect) Is Nothing = False Then
                 MainForm.ListView.Items(oldLVselect).Selected = True
@@ -730,7 +730,7 @@ Public Class Forms
                 MainForm.ListView.Items(oldLVselect).Focused = False
             End If
         End If
-        ' Настроить и вывести мой элемент
+        ' РќР°СЃС‚СЂРѕРёС‚СЊ Рё РІС‹РІРµСЃС‚Рё РјРѕР№ СЌР»РµРјРµРЅС‚
         If obj.GetType.ToString = ClassAplication & "F" Then MyObj.TabTextRefresh()
         MainForm.lwEditPropertySet()
     End Sub

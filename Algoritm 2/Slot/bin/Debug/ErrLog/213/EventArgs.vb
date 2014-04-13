@@ -1,4 +1,4 @@
-Public Class MyEventArgs
+﻿Public Class MyEventArgs
     Inherits System.EventArgs
 
     Private _data As String

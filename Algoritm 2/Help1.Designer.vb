@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Help1
     Inherits System.Windows.Forms.Form
 
@@ -46,7 +46,7 @@ Partial Class Help1
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(75, 23)
         Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Создать"
+        Me.Button1.Text = "РЎРѕР·РґР°С‚СЊ"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'Label1
@@ -56,7 +56,7 @@ Partial Class Help1
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(156, 13)
         Me.Label1.TabIndex = 2
-        Me.Label1.Text = "Путь к папке с XML файлами"
+        Me.Label1.Text = "РџСѓС‚СЊ Рє РїР°РїРєРµ СЃ XML С„Р°Р№Р»Р°РјРё"
         '
         'Label2
         '
@@ -65,7 +65,7 @@ Partial Class Help1
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(168, 13)
         Me.Label2.TabIndex = 4
-        Me.Label2.Text = "Путь к папке для HTML файлов"
+        Me.Label2.Text = "РџСѓС‚СЊ Рє РїР°РїРєРµ РґР»СЏ HTML С„Р°Р№Р»РѕРІ"
         '
         'TextBox2
         '
@@ -82,7 +82,7 @@ Partial Class Help1
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(97, 13)
         Me.Label3.TabIndex = 8
-        Me.Label3.Text = "Папка с языками"
+        Me.Label3.Text = "РџР°РїРєР° СЃ СЏР·С‹РєР°РјРё"
         '
         'TextBox3
         '
@@ -99,7 +99,7 @@ Partial Class Help1
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(109, 13)
         Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Папка XSL шаблона"
+        Me.Label4.Text = "РџР°РїРєР° XSL С€Р°Р±Р»РѕРЅР°"
         '
         'TextBox4
         '
@@ -116,7 +116,7 @@ Partial Class Help1
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(35, 13)
         Me.Label5.TabIndex = 10
-        Me.Label5.Text = "Язык"
+        Me.Label5.Text = "РЇР·С‹Рє"
         '
         'TextBox5
         '
@@ -143,7 +143,7 @@ Partial Class Help1
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Label2)
         Me.Name = "Help1"
-        Me.Text = "Создание справки"
+        Me.Text = "РЎРѕР·РґР°РЅРёРµ СЃРїСЂР°РІРєРё"
         Me.ResumeLayout(False)
         Me.PerformLayout()
 

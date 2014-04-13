@@ -1,4 +1,5 @@
 ﻿Imports System.IO
+Imports System.Net
 
 Public Class MainForm
     Dim otn As Double = 0.5 ' Отношение ширины первой колонки списка свойств к ширине списка
@@ -25,12 +26,6 @@ Public Class MainForm
     End Sub
     ' ЗАГРУЗКА АЛГОРИТМА
     Private Sub MainForm_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
-
-        For Each f As Object In New DirectoryInfo("...").GetFiles("*.cs", SearchOption.AllDirectories)
-            Dim s As String = File.ReadAllText(f.FullName)
-            File.WriteAllText (f.FullName, s, Encoding.UTF8);
-        Next
-
         Me.Hide()
         Me.Text = AppDomain.CurrentDomain.BaseDirectory & AppDomain.CurrentDomain.FriendlyName
         ' Ассоциировать с алджи файлы .alg
@@ -60,6 +55,9 @@ Public Class MainForm
         Else
             ' If PerfomanceProgress() = False Then Dim dm As New Demo : dm.TopMost = True : dm.Show()
         End If
+
+        ' Проверка обновлений
+        CheckNewVersion()
     End Sub
     ' ИНИЦИАЛИЗАЦИЯ, ТРЕБУЮЩАЯСЯ ДЛЯ СОЗДАНИЯ ПРОЕКТА
     Sub InitializeBeforeProject(Optional ByVal fromOptions As Boolean = False)
@@ -70,6 +68,7 @@ Public Class MainForm
             ' Заставка
             intr.ShowInTaskbar = False
             intr.Show()
+            intr.TopMost = False
             Application.DoEvents()
             intr.ProgressBarValue = 5
             ' загрузка всех настроек
@@ -122,7 +121,7 @@ Public Class MainForm
         AlphaNiz = SkinOptions("AlphaNiz")
 
         ' Реферал
-        referral = Trim(IO.File.ReadAllText(ObjectsPath & "Referral.txt", System.Text.Encoding.Default))
+        referral = Trim(IO.File.ReadAllText(ObjectsPath & "Referral.txt", System.Text.Encoding.UTF8))
     End Sub
     ' Создание папок в директории юзера
     Private Sub CreateUserFolders()
@@ -167,6 +166,34 @@ Public Class MainForm
             End If
         End If
     End Sub
+    ' Проверка обновлений
+    Private Sub CheckNewVersion()
+        Dim version As String = GetRequestResult(lastVersionUrl)
+            
+        If Not String.IsNullOrEmpty(version.Trim()) Then
+            ' TODO : Сообщение о скачке новой версии!
+        End If
+    End Sub
+    Private Function GetRequestResult(ByVal url As String) As String
+        Try
+            Dim request As WebRequest = WebRequest.Create(url)
+            Dim response As WebResponse = request.GetResponse()
+
+            Dim sr As StreamReader = New StreamReader(response.GetResponseStream(), Encoding.UTF8) ' Кодировка указывается в зависимости от кодировки ответа сервера
+            Dim read(256) As Char
+            Dim count As Integer = sr.Read(read, 0, 256)
+            Dim result As String = ""
+            While (count > 0)
+                Dim str As String = New String(read, 0, count)
+                result &= str
+                count = sr.Read(read, 0, 256)
+            End While
+
+            Return result
+        Catch ex As Exception
+            Return ""
+        End Try
+    End Function
     ' ПРОЧАЯ ИНИЦИАЛИЗАЦИЯ
     Sub InitializeAfterProject(Optional ByVal fromOptions As Boolean = False)
         Dim ts As ToolStripButton, i, j As Integer, str(0) As String
@@ -492,6 +519,7 @@ Public Class MainForm
         Dim txt As String = ""
         MainForm_SizeChanged(Nothing, Nothing)
         ' форма
+        txt &= "#SkippedVersion" & vbCrLf & SkippedVersion & vbCrLf & vbCrLf
         txt &= "#WindowState" & vbCrLf & Me.WindowState & vbCrLf & vbCrLf
         txt &= "#Left" & vbCrLf & MainX & vbCrLf & vbCrLf
         txt &= "#Top" & vbCrLf & MainY & vbCrLf & vbCrLf
@@ -533,6 +561,7 @@ Public Class MainForm
         Dim fl As IO.StreamReader = IO.File.OpenText(ParamFilePath)
         Dim txt As String = fl.ReadToEnd : fl.Close()
         ' форма
+        SkippedVersion = GetNuzhPunkt("#SkippedVersion", txt)
         Me.WindowState = GetNuzhPunkt("#WindowState", txt)
         MainX = GetNuzhPunkt("#Left", txt)
         MainY = GetNuzhPunkt("#Top", txt)
@@ -4216,8 +4245,8 @@ noAccess:
             'Dim razdel As Integer = cod.IndexOf("Module CodeAlg2" & vbCrLf & vbCrLf)
             'Dim cod2 As String = cod.Substring(razdel)
             'cod = cod.Substring(0, razdel)
-            IO.File.WriteAllText(CompilPath & "Code.vb", cod, Encoding.Default)
-            'IO.File.WriteAllText(DataPath & "Compil\Code2.vb", cod2, Encoding.Default)
+            IO.File.WriteAllText(CompilPath & "Code.vb", cod, Encoding.UTF8)
+            'IO.File.WriteAllText(DataPath & "Compil\Code2.vb", cod2, Encoding.UTF8)
 
             ' расположение компилятора vbc
             Dim vbcPath As String = IO.Path.GetDirectoryName(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\Microsoft.NET\Framework"
@@ -4270,20 +4299,24 @@ noAccess:
             processprop.FileName = vbc
             processprop.Arguments = args
             processprop.WindowStyle = System.Diagnostics.ProcessWindowStyle.Minimized
-            Dim process As New System.Diagnostics.Process()
-            process = System.Diagnostics.Process.Start(processprop)
+            processprop.UseShellExecute = False
+            processprop.RedirectStandardOutput = True
+
+            Dim process As Diagnostics.Process = Diagnostics.Process.Start(processprop)
+            Dim compilOutput = process.StandardOutput.ReadToEnd()
             ' Ожидаем окончания компиляции
-            While process.HasExited = False : End While
+            process.WaitForExit()
             ' Пишем батник
-            Dim bat As String = vbcPath & "vbc.exe" & args '& vbCrLf & "cmd"
-            IO.File.WriteAllText(CompilBatFilePath, bat, Encoding.UTF8)
+            'Dim bat As String = vbcPath & "vbc.exe" & args '& vbCrLf & "cmd"
+            'IO.File.WriteAllText(CompilBatFilePath, bat, Encoding.Default)
             ' Если произошла ошибка
             If process.ExitCode <> 0 Then
                 ProgressForm.Hide()
                 Dim Output As New OutputFrm
                 ' Запускаем процесс, чтобы получить результат ошибки
-                Dim prOth As New PropertysOther(Nothing)
-                Output.TextBox1.Text = prOth.RunWithResult(CompilBatFilePath, "", Encoding.UTF8.HeaderName)
+                'Dim prOth As New PropertysOther(Nothing)
+                'Dim s As String = prOth.RunWithResult(CompilBatFilePath, "", Encoding.GetEncoding(866).CodePage)
+                Output.TextBox1.Text = compilOutput
                 Output.Show()
                 If IsHttpCompil Then
                     IO.File.Copy(ProjFile, IO.Path.GetDirectoryName(ProjFile) & "\ErrLog\" & uid_in & ".alg")
@@ -4326,7 +4359,7 @@ noAccess:
         End If
 
     End Sub
-    Private Sub ExportVBMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExportVBMenu.Click
+    Public Sub ExportVBMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExportVBMenu.Click
         Dim i As Integer
 
         ' Компилирования файлов в ту папку, которую укажут
@@ -4352,8 +4385,8 @@ noAccess:
             'Dim razdel As Integer = cod.IndexOf("Module CodeAlg2" & vbCrLf & vbCrLf)
             'Dim cod2 As String = cod.Substring(razdel)
             'cod = cod.Substring(0, razdel)
-            IO.File.WriteAllText(CompilPath & "Code.vb", cod, Encoding.Default)
-            'IO.File.WriteAllText(DataPath & "Compil\Code2.vb", cod2, Encoding.Default)
+            IO.File.WriteAllText(CompilPath & "Code.vb", cod, Encoding.UTF8)
+            'IO.File.WriteAllText(DataPath & "Compil\Code2.vb", cod2, Encoding.UTF8)
 
             ' КОПИРОВАНИЕ ПРОЕКТА
             Try
@@ -4390,9 +4423,9 @@ noAccess:
                 IO.File.WriteAllText(vbprojFileName, vbprojCode, Encoding.UTF8)
                 ' Редактирование файла Main. Задание языка на котором делали алг проект.
                 Dim vbMainFileName As String = (newDir & "\Main.vb").Replace("\\", "\")
-                Dim vbMainCode As String = IO.File.ReadAllText(vbMainFileName, Encoding.Default)
+                Dim vbMainCode As String = IO.File.ReadAllText(vbMainFileName, Encoding.UTF8)
                 vbMainCode = vbMainCode.Replace("lang_name = ""Russian""", "lang_name = """ & lang_name & """")
-                IO.File.WriteAllText(vbMainFileName, vbMainCode, Encoding.Default)
+                IO.File.WriteAllText(vbMainFileName, vbMainCode, Encoding.UTF8)
             Catch ex As Exception
                 MessangeCritic(Errors.FileNotCreate(ex.Message)) : ProgressForm.Hide() : Exit Sub
             End Try
@@ -4425,7 +4458,10 @@ noAccess:
             Diagnostics.Process.Start(newDir)
         End If
     End Sub
-
+    Public Sub VisualStudioExpressMenuItem_Click(sender As Object, e As EventArgs) Handles VisualStudioExpressMenuItem.Click
+        Diagnostics.Process.Start("https://www.google.com/search?q=visual+studio+express+desktop+download")
+        Diagnostics.Process.Start("http://www.visualstudio.com/downloads/download-visual-studio-vs#d-express-windows-desktop")
+    End Sub
 
     ' СБОРКА ПРОЕКТА - копирование всех нужных файлов (рисунков, библиотек) в папку проекта
     Function Sborka(ByVal newDir As String, Optional ByVal copyAllDlls As Boolean = False) As Boolean
@@ -4844,9 +4880,6 @@ enabli: If Me.InvokeRequired Then
     End Sub
     Private Sub RegistrMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RegistrMenu.Click
         Dim dm As New Demo : dm.Show()
-    End Sub
-    Private Sub MecenatMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MecenatMenu.Click
-        Dim mc As New Mecenat : mc.Show()
     End Sub
     Private Sub AboutMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles AboutMenu.Click
         Dim ab As New About : ab.Show()

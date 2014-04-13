@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class CreateCycle
     Inherits System.Windows.Forms.UserControl
 
@@ -46,7 +46,7 @@ Partial Class CreateCycle
         Me.WhileLabel.Name = "WhileLabel"
         Me.WhileLabel.Size = New System.Drawing.Size(275, 13)
         Me.WhileLabel.TabIndex = 10
-        Me.WhileLabel.Text = "Повторяться пока выполняется условие:"
+        Me.WhileLabel.Text = "РџРѕРІС‚РѕСЂСЏС‚СЊСЃСЏ РїРѕРєР° РІС‹РїРѕР»РЅСЏРµС‚СЃСЏ СѓСЃР»РѕРІРёРµ:"
         Me.WhileLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'forEditPrWhile

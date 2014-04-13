@@ -1,4 +1,4 @@
-Public Structure MySplitStruct
+п»їPublic Structure MySplitStruct
     Public splity(), texty() As String
     Public indexy() As Integer
     Sub New(ByVal splits() As String, ByVal texts() As String)
@@ -73,7 +73,7 @@ Public Class CodeString
             If withFormating Then AutoKovichki()
         End Set
     End Property
-    ' АВТОМАТИЧЕСКИ ПОСТАВИТ ПО КРАЯМ КОВЫЧКИ, ТАМ, ГДЕ НАДО
+    ' РђР’РўРћРњРђРўРР§Р•РЎРљР РџРћРЎРўРђР’РРў РџРћ РљР РђРЇРњ РљРћР’Р«Р§РљР, РўРђРњ, Р“Р”Р• РќРђР”Рћ
     Public Sub AutoKovichki()
         Dim i As Integer, str As String = "", actStr As String, indStr As Integer
         Dim splt As MySplitStruct
@@ -83,7 +83,7 @@ Public Class CodeString
         'splt = Split(txt & txt)
         'End If
         For i = 0 To splt.texty.Length - 1
-            ' Если первый символ кавычка, то расставлять больше ничего не надо
+            ' Р•СЃР»Рё РїРµСЂРІС‹Р№ СЃРёРјРІРѕР» РєР°РІС‹С‡РєР°, С‚Рѕ СЂР°СЃСЃС‚Р°РІР»СЏС‚СЊ Р±РѕР»СЊС€Рµ РЅРёС‡РµРіРѕ РЅРµ РЅР°РґРѕ
             If splt.texty(i) <> "" Then
                 actStr = splt.texty(i) : indStr = 0
                 ' If splt.texty.Length > 1 Then
@@ -93,7 +93,7 @@ Public Class CodeString
                 '    indStr += m.Index
                 '    m = System.Text.RegularExpressions.Regex.Match(m.Value, ".*[^)]")
                 '    actStr = Trim(m.Value) : indStr += m.Index
-                '    ' записать, очищенную от пробелов активную строку (actStr)
+                '    ' Р·Р°РїРёСЃР°С‚СЊ, РѕС‡РёС‰РµРЅРЅСѓСЋ РѕС‚ РїСЂРѕР±РµР»РѕРІ Р°РєС‚РёРІРЅСѓСЋ СЃС‚СЂРѕРєСѓ (actStr)
                 '    splt.texty(i) = splt.texty(i).Substring(0, indStr) & actStr & splt.texty(i).Substring(indStr + 1 + m.Length - 1)
                 'End If
                 ' End If
@@ -103,7 +103,7 @@ Public Class CodeString
                         Dim temp As String = actStr.Trim(trimChrs)
                         If temp <> "" Then
                             If temp.Chars(0) <> """" Or temp.Chars(temp.Length - 1) <> """" Then
-                                ' записать, исправленную от нечетных кавычек активную строку (actStr)
+                                ' Р·Р°РїРёСЃР°С‚СЊ, РёСЃРїСЂР°РІР»РµРЅРЅСѓСЋ РѕС‚ РЅРµС‡РµС‚РЅС‹С… РєР°РІС‹С‡РµРє Р°РєС‚РёРІРЅСѓСЋ СЃС‚СЂРѕРєСѓ (actStr)
                                 splt.texty(i) = splt.texty(i).Replace(actStr, CreateKovich(actStr))
                                 actStr = CreateKovich(actStr)
                                 splt.texty(i) = splt.texty(i).Insert(indStr, """")
@@ -146,7 +146,7 @@ Public Class CodeString
         Dim ind As Integer = start
         If txt = "" Then Return -1
         While ind <= txt.Length - 1
-            ' Если желают искать только на первом уровне скобок, а встретился новый уровень, то пропустить все его внутренности
+            ' Р•СЃР»Рё Р¶РµР»Р°СЋС‚ РёСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РЅР° РїРµСЂРІРѕРј СѓСЂРѕРІРЅРµ СЃРєРѕР±РѕРє, Р° РІСЃС‚СЂРµС‚РёР»СЃСЏ РЅРѕРІС‹Р№ СѓСЂРѕРІРµРЅСЊ, С‚Рѕ РїСЂРѕРїСѓСЃС‚РёС‚СЊ РІСЃРµ РµРіРѕ РІРЅСѓС‚СЂРµРЅРЅРѕСЃС‚Рё
             If txt(ind) = "(" And naOdnomUrovne Then
                 ind = PropuskSkobok(ind, "(", ")")
             ElseIf txt(ind) = "[" And naOdnomUrovne Then
@@ -155,7 +155,7 @@ Public Class CodeString
                 Return -1
             End If
             If ind = -1 Then Return -1
-            ' Если встретилась кавычка то пропустить все ее внутренности
+            ' Р•СЃР»Рё РІСЃС‚СЂРµС‚РёР»Р°СЃСЊ РєР°РІС‹С‡РєР° С‚Рѕ РїСЂРѕРїСѓСЃС‚РёС‚СЊ РІСЃРµ РµРµ РІРЅСѓС‚СЂРµРЅРЅРѕСЃС‚Рё
             If txt(ind) = """" Then
                 ind = PropuskKovich(ind)
                 If ind = -1 Then Return -1
@@ -171,10 +171,10 @@ Public Class CodeString
     Public Function LastIndexOf(ByVal str As String, Optional ByVal start As Integer = 0, Optional ByVal naOdnomUrovne As Boolean = False) As Integer
         If start = 0 Then start = str.Length
         If txt = "" Then Return -1
-        ' ОЧЕНЬ СТРАННО! ПОЧЕМУ Я ВЫЧИТЮ ЗДЕСЬ? ОН ИЩЕТ НЕ С ТОГО ИНДЕКСА С КОТОРОГО НАДО!
+        ' РћР§Р•РќР¬ РЎРўР РђРќРќРћ! РџРћР§Р•РњРЈ РЇ Р’Р«Р§РРўР® Р—Р”Р•РЎР¬? РћРќ РР©Р•Рў РќР• РЎ РўРћР“Рћ РРќР”Р•РљРЎРђ РЎ РљРћРўРћР РћР“Рћ РќРђР”Рћ!
         Dim ind As Integer = txt.Length - start
         While ind > -1
-            ' Если желают искать только на первом уровне скобок, а встретился новый уровень, то пропустить все его внутренности
+            ' Р•СЃР»Рё Р¶РµР»Р°СЋС‚ РёСЃРєР°С‚СЊ С‚РѕР»СЊРєРѕ РЅР° РїРµСЂРІРѕРј СѓСЂРѕРІРЅРµ СЃРєРѕР±РѕРє, Р° РІСЃС‚СЂРµС‚РёР»СЃСЏ РЅРѕРІС‹Р№ СѓСЂРѕРІРµРЅСЊ, С‚Рѕ РїСЂРѕРїСѓСЃС‚РёС‚СЊ РІСЃРµ РµРіРѕ РІРЅСѓС‚СЂРµРЅРЅРѕСЃС‚Рё
             If txt(ind) = ")" And naOdnomUrovne Then
                 ind = PropuskSkobokLast(ind, ")", "(")
             ElseIf txt(ind) = "]" And naOdnomUrovne Then
@@ -183,7 +183,7 @@ Public Class CodeString
                 Return -1
             End If
             If ind = -1 Then Return -1
-            ' Если встретилась кавычка то пропустить все ее внутренности
+            ' Р•СЃР»Рё РІСЃС‚СЂРµС‚РёР»Р°СЃСЊ РєР°РІС‹С‡РєР° С‚Рѕ РїСЂРѕРїСѓСЃС‚РёС‚СЊ РІСЃРµ РµРµ РІРЅСѓС‚СЂРµРЅРЅРѕСЃС‚Рё
             If txt(ind) = """" Then
                 ind = PropuskKovichLast(ind)
                 If ind = -1 Then Return -1
@@ -230,13 +230,13 @@ Public Class CodeString
     End Function
     Function PropuskKovich(ByVal ind As Integer) As Integer
         Dim kovi4ka1, kovi4ka2 As Integer
-        ' Просматриваем все открывающиеся кавычки
+        ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІСЃРµ РѕС‚РєСЂС‹РІР°СЋС‰РёРµСЃСЏ РєР°РІС‹С‡РєРё
         kovi4ka1 = ind
-        ' Ищем закрывающуюся кавычку
+        ' РС‰РµРј Р·Р°РєСЂС‹РІР°СЋС‰СѓСЋСЃСЏ РєР°РІС‹С‡РєСѓ
         kovi4ka2 = txt.IndexOf("""", kovi4ka1 + 1)
-        ' Если эта кавычка не последний символ в строке
+        ' Р•СЃР»Рё СЌС‚Р° РєР°РІС‹С‡РєР° РЅРµ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР» РІ СЃС‚СЂРѕРєРµ
         If kovi4ka2 + 1 < txt.Length - 1 Then
-            ' Если это две подряд кавычки, то ищем одинарную
+            ' Р•СЃР»Рё СЌС‚Рѕ РґРІРµ РїРѕРґСЂСЏРґ РєР°РІС‹С‡РєРё, С‚Рѕ РёС‰РµРј РѕРґРёРЅР°СЂРЅСѓСЋ
             While txt.Chars(kovi4ka2 + 1) = """"
                 kovi4ka2 = txt.IndexOf("""", kovi4ka2 + 2)
                 If kovi4ka2 = -1 Then Return -1
@@ -248,13 +248,13 @@ Public Class CodeString
     End Function
     Function PropuskKovichLast(ByVal ind As Integer) As Integer
         Dim kovi4ka1, kovi4ka2 As Integer
-        ' Просматриваем все открывающиеся кавычки
+        ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІСЃРµ РѕС‚РєСЂС‹РІР°СЋС‰РёРµСЃСЏ РєР°РІС‹С‡РєРё
         kovi4ka1 = ind
-        ' Ищем закрывающуюся кавычку
+        ' РС‰РµРј Р·Р°РєСЂС‹РІР°СЋС‰СѓСЋСЃСЏ РєР°РІС‹С‡РєСѓ
         kovi4ka2 = txt.LastIndexOf("""", kovi4ka1 - 1)
-        ' Если эта кавычка не последний символ в строке
+        ' Р•СЃР»Рё СЌС‚Р° РєР°РІС‹С‡РєР° РЅРµ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР» РІ СЃС‚СЂРѕРєРµ
         If kovi4ka2 > 1 Then
-            ' Если это две подряд кавычки, то ищем одинарную
+            ' Р•СЃР»Рё СЌС‚Рѕ РґРІРµ РїРѕРґСЂСЏРґ РєР°РІС‹С‡РєРё, С‚Рѕ РёС‰РµРј РѕРґРёРЅР°СЂРЅСѓСЋ
             While txt.Chars(kovi4ka2 - 1) = """"
                 kovi4ka2 = txt.LastIndexOf("""", kovi4ka2 - 2)
                 If kovi4ka2 = -1 Then Return -1
@@ -277,16 +277,16 @@ Public Class CodeString
         If spl.Length = 0 Then spl = splits
         If spl Is Nothing Then spl = New String() {"~)!(@*#&$^%A:SLDK"}
         While ind <= txt.Length - 1
-            ' Если вначале кавычка
+            ' Р•СЃР»Рё РІРЅР°С‡Р°Р»Рµ РєР°РІС‹С‡РєР°
             If txt(ind) = """" Then
                 kovi4ka2 = PropuskKovich(ind)
                 If kovi4ka2 <> -1 Then ind = kovi4ka2 + 1
             End If
-            '"Imports System¶Imports System.Windows.Forms¶'Класс MainClass и функция Main должны обязательно присутствовать¶Public Class MainClass ¶    Public Function Main() As Object¶        Clipboard.SetText("" = "" &" & 1 & ")¶    End Function¶End Class")
+            '"Imports SystemВ¶Imports System.Windows.FormsВ¶'РљР»Р°СЃСЃ MainClass Рё С„СѓРЅРєС†РёСЏ Main РґРѕР»Р¶РЅС‹ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РїСЂРёСЃСѓС‚СЃС‚РІРѕРІР°С‚СЊВ¶Public Class MainClass В¶    Public Function Main() As ObjectВ¶        Clipboard.SetText("" = "" &" & 1 & ")В¶    End FunctionВ¶End Class")
             If ind > txt.Length - 1 Then Exit While
             If naUrovne = "naOdnomUrovne" Or (naUrovne = "naVtoromUrovne" And VtoroyLev) Then
                 If txt(ind) = "(" Or (txt(ind) = "," And spl(0) <> "." And spl(0) <> "," And spl(0) <> "~)!(@*#&$^%A:SLDK") Then
-                    ' Если это дополнительная функция типа "корень"
+                    ' Р•СЃР»Рё СЌС‚Рѕ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅР°СЏ С„СѓРЅРєС†РёСЏ С‚РёРїР° "РєРѕСЂРµРЅСЊ"
                     'If Array.IndexOf(DopFunsSimple, Trim(UCase(Left(txt, ind)))) <> -1 And bilInd <> ind Then
                     'newText = Trim(Left(txt, ind)) : newSplit = ""
                     'txt = " " & txt.Substring(ind - 1) : ind = 0 : lastInd = 0
@@ -316,7 +316,7 @@ Public Class CodeString
                     VtoroyLev = True
                     ind = 0 : Continue While
                 Else
-                    ' Если на втором уровне несколько скобок, и эта похоже не последняя
+                    ' Р•СЃР»Рё РЅР° РІС‚РѕСЂРѕРј СѓСЂРѕРІРЅРµ РЅРµСЃРєРѕР»СЊРєРѕ СЃРєРѕР±РѕРє, Рё СЌС‚Р° РїРѕС…РѕР¶Рµ РЅРµ РїРѕСЃР»РµРґРЅСЏСЏ
                     If lev2popravka = 0 Then ind += 1 : Continue While
                 End If
             End If
@@ -326,7 +326,7 @@ Public Class CodeString
             'End If
             If txt(ind) = """" Then
                 kovi4ka2 = PropuskKovich(ind)
-                ' Если вторая кавычка не найдена
+                ' Р•СЃР»Рё РІС‚РѕСЂР°СЏ РєР°РІС‹С‡РєР° РЅРµ РЅР°Р№РґРµРЅР°
                 'If kovi4ka2 = -1 Then
                 ' If texty Is Nothing Then
                 ' ReDim Preserve texty(0)
@@ -347,8 +347,8 @@ Public Class CodeString
                             If spl(i).Length < newSplit.Length Then Continue For
                         End If
 
-                        ' Если _И и _ИЛИ это не ключевое слово, а ЧАСТЬ ТЕКСТА
-                        If UCase(spl(i)) = UCase(MyZnak & trans("И")) Or UCase(spl(i)) = UCase(MyZnak & trans("ИЛИ")) _
+                        ' Р•СЃР»Рё _Р Рё _РР›Р СЌС‚Рѕ РЅРµ РєР»СЋС‡РµРІРѕРµ СЃР»РѕРІРѕ, Р° Р§РђРЎРўР¬ РўР•РљРЎРўРђ
+                        If UCase(spl(i)) = UCase(MyZnak & trans("Р")) Or UCase(spl(i)) = UCase(MyZnak & trans("РР›Р")) _
                         Or (UCase(spl(i)) = MyZnak & UCase("And") Or UCase(spl(i)) = MyZnak & UCase("Or")) _
                         Then
                             If txt.Length > ind + spl(i).Length And ind > 0 Then
@@ -359,14 +359,14 @@ Public Class CodeString
                             ElseIf txt.Length >= ind + spl(i).Length And ind > 0 Then
                                 If Char.IsLetterOrDigit(txt(ind - 1)) Or txt(ind - 1) = "_" Then Continue For
                             End If
-                            ' Есть особая ситуация (посткомпиляциионные расставления UCase),
-                            ' когда надо чтобы искались слова And и Or без MyZnak.
-                            ' Благо все слова типо "files and path" уже в кавычках
+                            ' Р•СЃС‚СЊ РѕСЃРѕР±Р°СЏ СЃРёС‚СѓР°С†РёСЏ (РїРѕСЃС‚РєРѕРјРїРёР»СЏС†РёРёРѕРЅРЅС‹Рµ СЂР°СЃСЃС‚Р°РІР»РµРЅРёСЏ UCase),
+                            ' РєРѕРіРґР° РЅР°РґРѕ С‡С‚РѕР±С‹ РёСЃРєР°Р»РёСЃСЊ СЃР»РѕРІР° And Рё Or Р±РµР· MyZnak.
+                            ' Р‘Р»Р°РіРѕ РІСЃРµ СЃР»РѕРІР° С‚РёРїРѕ "files and path" СѓР¶Рµ РІ РєР°РІС‹С‡РєР°С…
                         ElseIf (UCase(spl(i)) = UCase("And") Or UCase(spl(i)) = UCase("Or")) Then
                             If Razdeliteli <> "<=> and high" And Razdeliteli <> "AllWithAndOr" Then
                                 Continue For
                             Else
-                                ' Тут нужно аккуратно узнать часть слова ли And и Or или нет
+                                ' РўСѓС‚ РЅСѓР¶РЅРѕ Р°РєРєСѓСЂР°С‚РЅРѕ СѓР·РЅР°С‚СЊ С‡Р°СЃС‚СЊ СЃР»РѕРІР° Р»Рё And Рё Or РёР»Рё РЅРµС‚
                                 If txt.Length > ind + spl(i).Length And ind > 0 Then
                                     If (Char.IsLetterOrDigit(txt(ind + spl(i).Length)) Or txt(ind + spl(i).Length) = "_") _
                                     Or (Char.IsLetterOrDigit(txt(ind - 1)) Or txt(ind - 1) = "_") Then
@@ -375,9 +375,9 @@ Public Class CodeString
                                 ElseIf txt.Length >= ind + spl(i).Length And ind > 0 Then
                                     If Char.IsLetterOrDigit(txt(ind - 1)) Or txt(ind - 1) = "_" Then Continue For
                                 End If
-                                ' Если AND это часть Files and path
-                                Dim FndFls As Integer = txt.IndexOf(MyZnak & trans("Файлы и папки", True))
-                                If FndFls <> -1 And ind < FndFls + (MyZnak & trans("Файлы и папки", True)).Length Then
+                                ' Р•СЃР»Рё AND СЌС‚Рѕ С‡Р°СЃС‚СЊ Files and path
+                                Dim FndFls As Integer = txt.IndexOf(MyZnak & trans("Р¤Р°Р№Р»С‹ Рё РїР°РїРєРё", True))
+                                If FndFls <> -1 And ind < FndFls + (MyZnak & trans("Р¤Р°Р№Р»С‹ Рё РїР°РїРєРё", True)).Length Then
                                     Continue For
                                 End If
                             End If
@@ -390,7 +390,7 @@ Public Class CodeString
                         ElseIf (txt.Length - lev2popravka) - lastInd >= 0 Then
                             newText = txt.Substring(lastInd, (txt.Length - lev2popravka) - lastInd) : lev2popravka = 0
                         End If
-                        ' Если знак обозначает положительное или отрицательное это число, то не считать его за сплит
+                        ' Р•СЃР»Рё Р·РЅР°Рє РѕР±РѕР·РЅР°С‡Р°РµС‚ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ РёР»Рё РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ СЌС‚Рѕ С‡РёСЃР»Рѕ, С‚Рѕ РЅРµ СЃС‡РёС‚Р°С‚СЊ РµРіРѕ Р·Р° СЃРїР»РёС‚
                         If (newSplit = "-" Or newSplit = "+") And Trim(newText) = "" Then
                             If splity Is Nothing = False Then
                                 If Array.IndexOf(uslovs, splity(splity.Length - 1)) <> -1 Then
@@ -421,17 +421,17 @@ Public Class CodeString
     Sub temp()
         Dim kovi4ka1, kovi4ka2, ind, texty, lastInd
 
-        ' Просматриваем все открывающиеся кавычки
+        ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІСЃРµ РѕС‚РєСЂС‹РІР°СЋС‰РёРµСЃСЏ РєР°РІС‹С‡РєРё
         kovi4ka1 = ind
-        ' Ищем закрывающуюся кавычку
+        ' РС‰РµРј Р·Р°РєСЂС‹РІР°СЋС‰СѓСЋСЃСЏ РєР°РІС‹С‡РєСѓ
         kovi4ka2 = txt.IndexOf("""", kovi4ka1 + 1)
         If kovi4ka2 = -1 Then
             'txt = txt.Insert(kovi4ka1, """""")
             kovi4ka2 = kovi4ka1 '+ 2
         End If
-        ' Если эта кавычка не последний символ в строке
+        ' Р•СЃР»Рё СЌС‚Р° РєР°РІС‹С‡РєР° РЅРµ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР» РІ СЃС‚СЂРѕРєРµ
         If kovi4ka2 + 1 < txt.Length - 1 Then
-            ' Если это две подряд кавычки, то ищем одинарную
+            ' Р•СЃР»Рё СЌС‚Рѕ РґРІРµ РїРѕРґСЂСЏРґ РєР°РІС‹С‡РєРё, С‚Рѕ РёС‰РµРј РѕРґРёРЅР°СЂРЅСѓСЋ
             While txt.Chars(kovi4ka2 + 1) = """"
                 kovi4ka2 = txt.IndexOf("""", kovi4ka2 + 2)
                 If kovi4ka2 + 1 >= txt.Length - 1 Or kovi4ka2 = -1 Then Exit While
@@ -441,7 +441,7 @@ Public Class CodeString
             'txt = txt.Insert(kovi4ka1, """""")
             kovi4ka2 = kovi4ka1
         End If
-        ' Если вторая кавычка не найдена
+        ' Р•СЃР»Рё РІС‚РѕСЂР°СЏ РєР°РІС‹С‡РєР° РЅРµ РЅР°Р№РґРµРЅР°
         If kovi4ka2 < kovi4ka1 Then
             If texty Is Nothing Then
                 ReDim Preserve texty(0)

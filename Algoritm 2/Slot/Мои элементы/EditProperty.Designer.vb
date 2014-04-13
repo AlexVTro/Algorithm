@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+ï»¿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class EditProperty
     Inherits System.Windows.Forms.UserControl
 
@@ -74,7 +74,7 @@ Partial Class EditProperty
         Me.Button2.Name = "Button2"
         Me.Button2.Size = New System.Drawing.Size(22, 15)
         Me.Button2.TabIndex = 3
-        Me.Button2.Text = "•••"
+        Me.Button2.Text = "â€¢â€¢â€¢"
         Me.Button2.UseVisualStyleBackColor = False
         '
         'Button1
@@ -85,7 +85,7 @@ Partial Class EditProperty
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(22, 15)
         Me.Button1.TabIndex = 2
-        Me.Button1.Text = "•••"
+        Me.Button1.Text = "â€¢â€¢â€¢"
         Me.Button1.UseVisualStyleBackColor = False
         '
         'PictureBox1

@@ -1,4 +1,4 @@
-Public Class Argument
+п»їPublic Class Argument
     Dim WithEvents EditPr As New EditProperty
     Dim myObj As Object, prop As String
     Public Sub New()
@@ -14,7 +14,7 @@ Public Class Argument
     End Sub
     Public Sub ShowArg(ByVal arg As String, ByVal MyObj As Object, ByVal prop As String)
         If EditPr.MyObjs Is Nothing Then EditPr.MyObjs = New Object() {MyObj}
-        If UCase(arg) = UCase(transInfc("на следующее значение")) Then
+        If UCase(arg) = UCase(transInfc("РЅР° СЃР»РµРґСѓСЋС‰РµРµ Р·РЅР°С‡РµРЅРёРµ")) Then
             EditPr.ShowProp(CreateDs.ShowObj.GetProperty, CreateDs.ShowObj.GetMyObjs)
             ArgLabel.Text = arg
             ArgLabel.Font = New Font(ArgLabel.Font, FontStyle.Bold)
@@ -23,7 +23,7 @@ Public Class Argument
             ArgLabel.Text = arg
             ArgLabel.Font = New Font(ArgLabel.Font, FontStyle.Regular)
             ToolTip1.SetToolTip(ArgLabel, ArgLabel.Text)
-            ' переменные для infoPropsLabel
+            ' РїРµСЂРµРјРµРЅРЅС‹Рµ РґР»СЏ infoPropsLabel
             Me.myObj = MyObj : Me.prop = prop
         End If
         Palka1.RefreshPic(SkinPictures)
@@ -40,7 +40,7 @@ Public Class Argument
         End Set
     End Property
     Sub EditPr_Activate(ByVal sender As Object, ByVal e As System.EventArgs) Handles EditPr.Enter
-        If LCase(ArgLabel.Text) <> LCase(transInfc("на следующее значение")) Then
+        If LCase(ArgLabel.Text) <> LCase(transInfc("РЅР° СЃР»РµРґСѓСЋС‰РµРµ Р·РЅР°С‡РµРЅРёРµ")) Then
             Dim forma As Object = Me.TopLevelControl
             If forma Is Nothing = False Then forma.InfoArgsShow(ArgLabel.Text, myObj, prop)
         End If

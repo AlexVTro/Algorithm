@@ -1,14 +1,14 @@
-Public Class EditProperty
+п»їPublic Class EditProperty
     Public ActiveTextBox As RichTextBox
-    Public MyObjs() As Object ' Для хранения  объектов
-    Public MayChangeProperty As Boolean ' Показывает изменять ли реально свойства
+    Public MyObjs() As Object ' Р”Р»СЏ С…СЂР°РЅРµРЅРёСЏ  РѕР±СЉРµРєС‚РѕРІ
+    Public MayChangeProperty As Boolean ' РџРѕРєР°Р·С‹РІР°РµС‚ РёР·РјРµРЅСЏС‚СЊ Р»Рё СЂРµР°Р»СЊРЅРѕ СЃРІРѕР№СЃС‚РІР°
     Dim WithEvents tagBox As RichTextBox
     Public WithEvents List As ListBox
     Dim defH, defW, defX, defY, markers_perenos As Integer
     Dim Undo(), Redo(), sledush As String
     Dim isUndo, isRedo As Boolean
     Dim markers(4) As PictureBox, closeBut, defBut As Windows.Forms.Button
-    Public type, prop As String ' Для хранения свойства и типа свойства
+    Public type, prop As String ' Р”Р»СЏ С…СЂР°РЅРµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° Рё С‚РёРїР° СЃРІРѕР№СЃС‚РІР°
     Dim bezRazshirPole As Boolean
     Public bezPodsvetki As Boolean = False
     Public Event SelectedText(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
@@ -23,11 +23,11 @@ Public Class EditProperty
         Me.bezPodsvetki = bezPodsvetki
     End Sub
 
-    ' <<<<<< СОБЫТИЯ ОБЪЕКТОВ, НАХОДЯЩИХСЯ НА МОЕМ ЭЛЕМЕНТЕ  >>>>>>>>>
+    ' <<<<<< РЎРћР‘Р«РўРРЇ РћР‘РЄР•РљРўРћР’, РќРђРҐРћР”РЇР©РРҐРЎРЇ РќРђ РњРћР•Рњ Р­Р›Р•РњР•РќРўР•  >>>>>>>>>
 #Region "INPUT OBJS SOBYTS"
     Dim timer As New Windows.Forms.Timer()
 
-    ' СОЗДАНИЕ ЕДИТ ПРОПЕРТИ
+    ' РЎРћР—Р”РђРќРР• Р•Р”РРў РџР РћРџР•Р РўР
     Private Sub EditProperty_Load(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles MyBase.Load
         Dim i As Integer
         TextBox1.ContextMenuStrip = MainForm.EditPrMenu
@@ -42,7 +42,7 @@ Public Class EditProperty
 
         EditText.BringToFront()
         If bezRazshirPole = False Then
-            ' Создание расширенного поля (через таймер, т.к. его нужно добавлять на уже созданную форму)
+            ' РЎРѕР·РґР°РЅРёРµ СЂР°СЃС€РёСЂРµРЅРЅРѕРіРѕ РїРѕР»СЏ (С‡РµСЂРµР· С‚Р°Р№РјРµСЂ, С‚.Рє. РµРіРѕ РЅСѓР¶РЅРѕ РґРѕР±Р°РІР»СЏС‚СЊ РЅР° СѓР¶Рµ СЃРѕР·РґР°РЅРЅСѓСЋ С„РѕСЂРјСѓ)
             timer.Interval = 1 : AddHandler timer.Tick, AddressOf CreateRasshirPole : timer.Start()
             ShowHideBut.Visible = True : ShowHideBut.BringToFront()
         Else
@@ -52,21 +52,21 @@ Public Class EditProperty
         End If
     End Sub
 
-    ' КОГДА НАЖАЛИ НА НУЖНОЕ ВСПОМОГАТЕЛЬНОЕ СЛОВО
+    ' РљРћР“Р”Рђ РќРђР–РђР›Р РќРђ РќРЈР–РќРћР• Р’РЎРџРћРњРћР“РђРўР•Р›Р¬РќРћР• РЎР›РћР’Рћ
     Public Sub HW_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim rich As RichTextBox = MainForm.EditPrMenu.Tag
         rich.SelectedText = sender.text
-        TextBox_KeyUp(rich, New KeyEventArgs(Nothing)) ' подсветить синтаксис
+        TextBox_KeyUp(rich, New KeyEventArgs(Nothing)) ' РїРѕРґСЃРІРµС‚РёС‚СЊ СЃРёРЅС‚Р°РєСЃРёСЃ
     End Sub
 
-    ' СОЗДАНИЕ ТАГБОКСА СО ВСЕМИ ЕГО СПУТНИКАМИ
+    ' РЎРћР—Р”РђРќРР• РўРђР“Р‘РћРљРЎРђ РЎРћ Р’РЎР•РњР Р•Р“Рћ РЎРџРЈРўРќРРљРђРњР
     Sub CreateRasshirPole(ByVal sender As System.Object, ByVal e As System.EventArgs)
         timer.Stop()
-        ' Создать TagBox
+        ' РЎРѕР·РґР°С‚СЊ TagBox
         tagBox = New RichTextBox() : tagBox.Multiline = True : tagBox.Visible = False
         tagBox.ContextMenuStrip = MainForm.EditPrMenu
         tagBox.EnableAutoDragDrop = True
-        ' Создать и настроить маркеры
+        ' РЎРѕР·РґР°С‚СЊ Рё РЅР°СЃС‚СЂРѕРёС‚СЊ РјР°СЂРєРµСЂС‹
         Dim i As Integer
         For i = 0 To markers.Length - 1
             markers(i) = New PictureBox()
@@ -79,19 +79,19 @@ Public Class EditProperty
         markers(0).Cursor = Cursors.SizeWE : markers(2).Cursor = Cursors.SizeNESW
         markers(1).Cursor = Cursors.SizeWE : markers(3).Cursor = Cursors.SizeNS
         markers(4).Cursor = Cursors.SizeNWSE
-        ' Создать кнопку
+        ' РЎРѕР·РґР°С‚СЊ РєРЅРѕРїРєСѓ
         closeBut = New Windows.Forms.Button : closeBut.Text = "X"
         closeBut.UseVisualStyleBackColor = True
         closeBut.Width = markerX * 2.1 : closeBut.Height = markerY * 2.2
         closeBut.Font = New Font("Arial", 4) : closeBut.Visible = False
         AddHandler closeBut.Click, AddressOf CloseButt_Click
-        ' Создать кнопку
+        ' РЎРѕР·РґР°С‚СЊ РєРЅРѕРїРєСѓ
         defBut = New Windows.Forms.Button : defBut.Text = "O"
         defBut.UseVisualStyleBackColor = True
         defBut.Width = markerX * 2.1 : defBut.Height = markerY * 2.2
         defBut.Font = New Font("Arial", 4) : defBut.Visible = False
         AddHandler defBut.Click, AddressOf DefButt_Click
-        ' разместить все на форме
+        ' СЂР°Р·РјРµСЃС‚РёС‚СЊ РІСЃРµ РЅР° С„РѕСЂРјРµ
         If Me.TopLevelControl Is Nothing = False Then
             Me.TopLevelControl.Controls.Add(tagBox)
             Me.TopLevelControl.Controls.Add(closeBut)
@@ -101,9 +101,9 @@ Public Class EditProperty
         markers_perenos = -1
     End Sub
     Private Sub markers_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
-        markers_perenos = Array.IndexOf(markers, sender) ' Индекс нажатого маркера
+        markers_perenos = Array.IndexOf(markers, sender) ' РРЅРґРµРєСЃ РЅР°Р¶Р°С‚РѕРіРѕ РјР°СЂРєРµСЂР°
         If markers_perenos = -1 Then Exit Sub
-        tagBoxVisible(True, False, False) ' Скрыть все маркеры
+        tagBoxVisible(True, False, False) ' РЎРєСЂС‹С‚СЊ РІСЃРµ РјР°СЂРєРµСЂС‹
     End Sub
     Private Sub markers_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
         If markers_perenos <> -1 Then
@@ -113,12 +113,12 @@ Public Class EditProperty
             cx = markers(markers_perenos).Left
             cy = markers(markers_perenos).Top
             Select Case markers_perenos
-                Case 0 ' Левый средний маркер
+                Case 0 ' Р›РµРІС‹Р№ СЃСЂРµРґРЅРёР№ РјР°СЂРєРµСЂ
                     tagBox.Width = (tagBox.Left - cx) + tagBox.Width - markers(markers_perenos).Width
                     tagBox.Left = cx + markers(markers_perenos).Width
-                Case 1 ' Правый средний маркер
+                Case 1 ' РџСЂР°РІС‹Р№ СЃСЂРµРґРЅРёР№ РјР°СЂРєРµСЂ
                     tagBox.Width = cx - tagBox.Left
-                Case 2 ' Левый нижний маркер
+                Case 2 ' Р›РµРІС‹Р№ РЅРёР¶РЅРёР№ РјР°СЂРєРµСЂ
                     tagBox.Width = (tagBox.Left - cx) + tagBox.Width - markers(markers_perenos).Width
                     tagBox.Height = cy - tagBox.Top
                     tagBox.Left = cx + markers(markers_perenos).Width
@@ -131,7 +131,7 @@ Public Class EditProperty
         End If
     End Sub
     Private Sub markers_MouseUp(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs)
-        tagBoxVisible(True, True, True) ' сделать маркеры видимыми
+        tagBoxVisible(True, True, True) ' СЃРґРµР»Р°С‚СЊ РјР°СЂРєРµСЂС‹ РІРёРґРёРјС‹РјРё
         markers_perenos = -1
     End Sub
     Private Sub CloseButt_Click(ByVal sender As Object, ByVal e As System.EventArgs)
@@ -143,7 +143,7 @@ Public Class EditProperty
         tagBoxVisible(True, True, True) : tagBox.Focus()
     End Sub
 
-    ' ВЫСЧИТАТЬ РАЗМЕРЫ И ПОЛОЖЕНИЕ ТАГБОКСА
+    ' Р’Р«РЎР§РРўРђРўР¬ Р РђР—РњР•Р Р« Р РџРћР›РћР–Р•РќРР• РўРђР“Р‘РћРљРЎРђ
     Private Sub TextBox_Click(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.Click, TextBox2.Click, TextBox3.Click
         Dim charWidth As Double = 7.3
         If bezRazshirPole Then Exit Sub
@@ -153,7 +153,7 @@ Public Class EditProperty
         If frm Is Nothing Then frm = Me.TopLevelControl
         pogrX = frm.Width - frm.DisplayRectangle.Width
         pogrY = frm.Height - frm.DisplayRectangle.Height
-        ' C учетом самой длинной строки
+        ' C СѓС‡РµС‚РѕРј СЃР°РјРѕР№ РґР»РёРЅРЅРѕР№ СЃС‚СЂРѕРєРё
         Dim le As Integer = MaxLenLine(tagBox) * charWidth - sender.width
         If le < 0 Then le = 0
         x = sender.PointToScreen(New Point(0, 0)).x - frm.Left - pogrX - le
@@ -212,9 +212,9 @@ Public Class EditProperty
         MainForm.EditPrMenu.Tag = sender
         TextBox_Click(sender, e)
     End Sub
-    ' СКРЫВАЕТ И ПОКАЗЫВАЕТ ТАГБОКС И ЕГО СПУТНИКОВ
+    ' РЎРљР Р«Р’РђР•Рў Р РџРћРљРђР—Р«Р’РђР•Рў РўРђР“Р‘РћРљРЎ Р Р•Р“Рћ РЎРџРЈРўРќРРљРћР’
     Sub tagBoxVisible(ByVal visTagB As Boolean, ByVal visMar As Boolean, ByVal visButt As Boolean)
-        ' видимость маркеров
+        ' РІРёРґРёРјРѕСЃС‚СЊ РјР°СЂРєРµСЂРѕРІ
         If visMar = True Then
             markers(0).Left = tagBox.Left - markerX
             markers(0).Top = tagBox.Top + (tagBox.Height - markerY) / 2
@@ -229,7 +229,7 @@ Public Class EditProperty
         End If
         Dim i As Integer
         For i = 0 To markers.Length - 1 : markers(i).BringToFront() : markers(i).Visible = visMar : Next
-        ' видимость кнопок
+        ' РІРёРґРёРјРѕСЃС‚СЊ РєРЅРѕРїРѕРє
         If visButt = True Then
             closeBut.Left = tagBox.Left - closeBut.Width
             closeBut.Top = tagBox.Top
@@ -238,19 +238,19 @@ Public Class EditProperty
             closeBut.BringToFront() : defBut.BringToFront()
         End If
         closeBut.Visible = visButt : defBut.Visible = visButt
-        ' видимость тагбокса
+        ' РІРёРґРёРјРѕСЃС‚СЊ С‚Р°РіР±РѕРєСЃР°
         tagBox.Visible = visTagB : tagBox.BringToFront()
         If List Is Nothing = False Then List.Visible = False
     End Sub
 
     Dim idetKeyDown As Boolean = False
-    ' УПРАВЛЯЕТ ВИДИМОСТЬЮ ТАГБОКСА
+    ' РЈРџР РђР’Р›РЇР•Рў Р’РР”РРњРћРЎРўР¬Р® РўРђР“Р‘РћРљРЎРђ
     Private Sub TextBox_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyDown, TextBox2.KeyDown, TextBox3.KeyDown
         idetKeyDown = True
         If bezRazshirPole Then
             If e.KeyData = Keys.Enter Then
 
-                ' Если это текстовое поле на MainForm
+                ' Р•СЃР»Рё СЌС‚Рѕ С‚РµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ РЅР° MainForm
                 If Me.Tag Is Nothing = False Then
                     If Me.Name = "EditNodeText" Then
                         Me.Tag.Apply_Click(Nothing, Nothing) : e.Handled = True
@@ -263,7 +263,7 @@ Public Class EditProperty
             idetKeyDown = False
             Exit Sub
         End If
-        ' Перетащить все их текст бокса в тагбокс или на оборот
+        ' РџРµСЂРµС‚Р°С‰РёС‚СЊ РІСЃРµ РёС… С‚РµРєСЃС‚ Р±РѕРєСЃР° РІ С‚Р°РіР±РѕРєСЃ РёР»Рё РЅР° РѕР±РѕСЂРѕС‚
         If e.KeyCode <> Keys.ShiftKey And e.KeyCode <> Keys.ControlKey And e.KeyCode <> Keys.Menu And e.KeyCode <> Keys.Left And e.KeyCode <> Keys.Right And e.KeyCode <> Keys.Up And e.KeyCode <> Keys.Down Then
             Timer1.Start() '(Nothing, Nothing)
         End If
@@ -275,7 +275,7 @@ Public Class EditProperty
             tagBox.Focus()
             tagBox.Tag = ""
         ElseIf e.KeyData = Keys.Enter Then
-            If MayChangeProperty = True Then ' Если можно изменять свойства объектов прям отсюда
+            If MayChangeProperty = True Then ' Р•СЃР»Рё РјРѕР¶РЅРѕ РёР·РјРµРЅСЏС‚СЊ СЃРІРѕР№СЃС‚РІР° РѕР±СЉРµРєС‚РѕРІ РїСЂСЏРј РѕС‚СЃСЋРґР°
                 Dim gladko As Boolean = proj.ActiveForm.SetPropertys(prop, sender.text, MyObjs)
                 If gladko = True Then Me.Parent.Focus()
                 tagBoxVisible(False, False, False)
@@ -294,10 +294,10 @@ Public Class EditProperty
                 ' End If
             End If
         ElseIf e.KeyData = Keys.Escape Then
-            If MayChangeProperty = True Then ' Если можно изменять свойства объектов прям отсюда
-                MayChangeProperty = False ' Семафор, чтобы не сработало применение свойства в LostFocus'e
+            If MayChangeProperty = True Then ' Р•СЃР»Рё РјРѕР¶РЅРѕ РёР·РјРµРЅСЏС‚СЊ СЃРІРѕР№СЃС‚РІР° РѕР±СЉРµРєС‚РѕРІ РїСЂСЏРј РѕС‚СЃСЋРґР°
+                MayChangeProperty = False ' РЎРµРјР°С„РѕСЂ, С‡С‚РѕР±С‹ РЅРµ СЃСЂР°Р±РѕС‚Р°Р»Рѕ РїСЂРёРјРµРЅРµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РІ LostFocus'e
                 Me.Parent.Focus()
-                MayChangeProperty = True ' Вернуть обратно значение 
+                MayChangeProperty = True ' Р’РµСЂРЅСѓС‚СЊ РѕР±СЂР°С‚РЅРѕ Р·РЅР°С‡РµРЅРёРµ 
                 tagBoxVisible(False, False, False)
             ElseIf tagBox.Visible = True Then
                 tagBoxVisible(False, False, False)
@@ -318,7 +318,7 @@ Public Class EditProperty
         End If
         idetKeyDown = False
     End Sub
-    ' УПРАВЛЯЕТ ВИДИМОСТЬЮ ТАГБОКСА
+    ' РЈРџР РђР’Р›РЇР•Рў Р’РР”РРњРћРЎРўР¬Р® РўРђР“Р‘РћРљРЎРђ
     Private Sub TagBox_KeyDown(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles tagBox.KeyDown
         If bezRazshirPole Then Exit Sub
 
@@ -330,35 +330,35 @@ Public Class EditProperty
         End If
     End Sub
 
-    ' НЕ ПОЗВОЛЯЕТ ВВОДИТЬ БУКВЫ ЕСЛИ ТИП СВОЙСТВА ЧИСЛО
+    ' РќР• РџРћР—Р’РћР›РЇР•Рў Р’Р’РћР”РРўР¬ Р‘РЈРљР’Р« Р•РЎР›Р РўРРџ РЎР’РћР™РЎРўР’Рђ Р§РРЎР›Рћ
     Private Sub TextBox1_KeyPress(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyPressEventArgs) Handles TextBox1.KeyPress, TextBox2.KeyPress, TextBox3.KeyPress, tagBox.KeyPress
-        If UCase(prop) = UCase(trans("Номер")) Then
+        If UCase(prop) = UCase(trans("РќРѕРјРµСЂ")) Then
             If Iz.isDouble(e.KeyChar) = False And e.KeyChar <> "," Then e.Handled = True Else Exit Sub
         End If
-        If type = trans("Число") And MayChangeProperty = True Then
+        If type = trans("Р§РёСЃР»Рѕ") And MayChangeProperty = True Then
             If Iz.isDouble(e.KeyChar) = False And e.KeyChar <> "-" Then e.Handled = True
         End If
     End Sub
-    ' В ЗАВИСИМОСТИ ОТ ТИПА СВОЙСТВА НАСТРАИВАЕТ ЕДИТПРОПЕРТИ
+    ' Р’ Р—РђР’РРЎРРњРћРЎРўР РћРў РўРРџРђ РЎР’РћР™РЎРўР’Рђ РќРђРЎРўР РђРР’РђР•Рў Р•Р”РРўРџР РћРџР•Р РўР
     Private Sub TextBox_KeyUp(ByVal sender As Object, ByVal e As System.Windows.Forms.KeyEventArgs) Handles TextBox1.KeyUp, TextBox2.KeyUp, TextBox3.KeyUp, tagBox.KeyUp
         Dim type As String
         If MyObjs Is Nothing Then
-            type = trans("Текст") ' тип свойства
+            type = trans("РўРµРєСЃС‚") ' С‚РёРї СЃРІРѕР№СЃС‚РІР°
         Else
-            type = GetTypeProperty(prop) ' тип свойства
+            type = GetTypeProperty(prop) ' С‚РёРї СЃРІРѕР№СЃС‚РІР°
         End If
-        If type = trans("Цвет") Then
+        If type = trans("Р¦РІРµС‚") Then
             If FromMyColor(sender.Text) <> Nothing Then
                 PictureBox1.Image = Nothing : PictureBox1.BackColor = FromMyColor(sender.Text)
             End If
-        ElseIf type = trans("Рисунок") Then
+        ElseIf type = trans("Р РёСЃСѓРЅРѕРє") Then
             Dim file As String = UbratKovich(GetMaxPath(UbratKovich(sender.Text).str)).str
             Try : If IO.File.Exists(file) Then PictureBox1.Image = Image.FromFile(file)
             Catch ex As Exception : Errors.MessangeCritic(ex.Message) : End Try
         End If
-        ' Если была нажата реальная кнопка а ни шифт, то перевести и подсветить текстбокс через 300 мс
+        ' Р•СЃР»Рё Р±С‹Р»Р° РЅР°Р¶Р°С‚Р° СЂРµР°Р»СЊРЅР°СЏ РєРЅРѕРїРєР° Р° РЅРё С€РёС„С‚, С‚Рѕ РїРµСЂРµРІРµСЃС‚Рё Рё РїРѕРґСЃРІРµС‚РёС‚СЊ С‚РµРєСЃС‚Р±РѕРєСЃ С‡РµСЂРµР· 300 РјСЃ
         If e.Modifiers = 0 Then
-            ' кнопка дел не работает так как она думает что нажимают меню Правка -> Удалить
+            ' РєРЅРѕРїРєР° РґРµР» РЅРµ СЂР°Р±РѕС‚Р°РµС‚ С‚Р°Рє РєР°Рє РѕРЅР° РґСѓРјР°РµС‚ С‡С‚Рѕ РЅР°Р¶РёРјР°СЋС‚ РјРµРЅСЋ РџСЂР°РІРєР° -> РЈРґР°Р»РёС‚СЊ
             'If e.KeyData = Keys.Delete Then
             '    If Me.TopLevelControl Is MainForm Then
             '        If sender.SelectionLength = 0 And TextBox1.SelectionStart < TextBox1.TextLength Then
@@ -372,16 +372,16 @@ Public Class EditProperty
             If sender Is tagBox Then TextBox_Click(ActiveTextBox, e) : tagBoxVisible(True, True, True)
         End If
     End Sub
-    ' ПРИ ПОТЕРЕ ВСЕХ ФОКУСОФ СКРЫВАЕТ ТОГБОКС
+    ' РџР Р РџРћРўР•Р Р• Р’РЎР•РҐ Р¤РћРљРЈРЎРћР¤ РЎРљР Р«Р’РђР•Рў РўРћР“Р‘РћРљРЎ
     Private Sub TextBox_LostFocus(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.LostFocus, TextBox2.LostFocus, TextBox3.LostFocus, tagBox.LostFocus
         If bezRazshirPole Or tagBox Is Nothing Or ActiveTextBox Is Nothing Then Exit Sub
         If ActiveTextBox.Focused = False And tagBox.Focused = False And tagBox.Tag <> "obrabotka" _
         And closeBut.Focused = False And defBut.Focused = False And ShowHideBut.Focused = False Then
             tagBoxVisible(False, False, False)
         End If
-        ' Применение свойства при потере фокуса у поля ввода значения
+        ' РџСЂРёРјРµРЅРµРЅРёРµ СЃРІРѕР№СЃС‚РІР° РїСЂРё РїРѕС‚РµСЂРµ С„РѕРєСѓСЃР° Сѓ РїРѕР»СЏ РІРІРѕРґР° Р·РЅР°С‡РµРЅРёСЏ
         If MayChangeProperty And ShowHideBut.Focused = False And tagBox.Focused = False Then
-            ' Критическая секция, чтобы избежать зацикливани фокуса при ошибках msgbox
+            ' РљСЂРёС‚РёС‡РµСЃРєР°СЏ СЃРµРєС†РёСЏ, С‡С‚РѕР±С‹ РёР·Р±РµР¶Р°С‚СЊ Р·Р°С†РёРєР»РёРІР°РЅРё С„РѕРєСѓСЃР° РїСЂРё РѕС€РёР±РєР°С… msgbox
             If idetKeyDown = False Then
                 If MainForm.ListView.Items.Count > 0 And Array.IndexOf(ReadOnlyProps, UCase(prop)) = -1 Then
                     If sender Is tagBox = False Then
@@ -393,7 +393,7 @@ Public Class EditProperty
             End If
         End If
     End Sub
-    ' ПЕРЕВОДИТ ТЕКСТ В ТАГБОКС И ОБРАТНО, ПЕРЕД ЭТИМ ПОДСВЕТИВ ТЕКСТ, ЕСЛИ НУЖНО
+    ' РџР•Р Р•Р’РћР”РРў РўР•РљРЎРў Р’ РўРђР“Р‘РћРљРЎ Р РћР‘Р РђРўРќРћ, РџР•Р Р•Р” Р­РўРРњ РџРћР”РЎР’Р•РўРР’ РўР•РљРЎРў, Р•РЎР›Р РќРЈР–РќРћ
     Private Sub Timer1_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer1.Tick
         Timer1.Stop()
         If tagBox Is Nothing Then
@@ -414,14 +414,14 @@ Public Class EditProperty
         End If
     End Sub
 
-    ' ПОКАЗЫВАЕТ ОКНО ВЫБОРА ФАЙЛА
+    ' РџРћРљРђР—Р«Р’РђР•Рў РћРљРќРћ Р’Р«Р‘РћР Рђ Р¤РђР™Р›Рђ
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        OpenFileDialog1.Filter = trans("Все файлы") & "|*.*" & "|" & _
-            trans("Все рисунки") & " (jpg, jpeg, gif, bmp, ico, wmf, png)" & _
+        OpenFileDialog1.Filter = trans("Р’СЃРµ С„Р°Р№Р»С‹") & "|*.*" & "|" & _
+            trans("Р’СЃРµ СЂРёСЃСѓРЅРєРё") & " (jpg, jpeg, gif, bmp, ico, wmf, png)" & _
             "|*.jpg; *.jpeg; *.gif; *.bmp; *.ico; *.wmf; *.png" & "|" & _
-            trans("Все аудиофайлы") & " (mp3, mp4, ogg, wma, wav, mid)" & _
+            trans("Р’СЃРµ Р°СѓРґРёРѕС„Р°Р№Р»С‹") & " (mp3, mp4, ogg, wma, wav, mid)" & _
             "|*.mp3; *.mp4; *.ogg; *.wma; *.wav; *.mid" & "|" & _
-            trans("Все видеофайлы") & " (avi, wmv, mpg, mpeg, flv, mov, vob, mkv, divx)" & _
+            trans("Р’СЃРµ РІРёРґРµРѕС„Р°Р№Р»С‹") & " (avi, wmv, mpg, mpeg, flv, mov, vob, mkv, divx)" & _
             "|*.avi; *.wmv; *.mpg; *.mpeg; *.flv; *.mov; *.vob; *.mkv; *.divx"
 
         If IO.File.Exists(UbratKovich(TextBox2.Text).str) Then
@@ -438,7 +438,7 @@ Public Class EditProperty
             End If
         End If
     End Sub
-    ' ПОКАЗЫВАЕТ ОКНО ВЫБОРА ЦВЕТА
+    ' РџРћРљРђР—Р«Р’РђР•Рў РћРљРќРћ Р’Р«Р‘РћР Рђ Р¦Р’Р•РўРђ
     Private Sub Button2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button2.Click
         If ColorDialog1.ShowDialog() = DialogResult.OK Then
             TextBox2.Text = ToMyColor(ColorDialog1.Color)
@@ -446,7 +446,7 @@ Public Class EditProperty
             TextBox_KeyUp(TextBox2, New KeyEventArgs(Keys.Enter))
         End If
     End Sub
-    ' ПОКАЗЫВАЕТ СПИСОК ДаНет
+    ' РџРћРљРђР—Р«Р’РђР•Рў РЎРџРРЎРћРљ Р”Р°РќРµС‚
     Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
         If List.Parent Is Nothing Then Me.TopLevelControl.Controls.Add(List) : List.Visible = False
         If List.Visible = False Then
@@ -456,7 +456,7 @@ Public Class EditProperty
             List.Visible = False
         End If
     End Sub
-    ' ЗАНОСИТ В ТЕКСТБОКС ЗНАЧЕНИЕ, ВЫБРАННОЕ ИЗ СПИСКА
+    ' Р—РђРќРћРЎРРў Р’ РўР•РљРЎРўР‘РћРљРЎ Р—РќРђР§Р•РќРР•, Р’Р«Р‘Р РђРќРќРћР• РР— РЎРџРРЎРљРђ
     Private Sub List_DoubleClick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles List.DoubleClick
         TextBox3.Text = List.SelectedItem : TextBox3.Focus() : List.Visible = False
         If MayChangeProperty Then TextBox_KeyDown(sender, New KeyEventArgs(Keys.Enter))
@@ -481,7 +481,7 @@ Public Class EditProperty
     End Sub
 
     Private Sub List_SelectedIndexChanged(ByVal sender As Object, ByVal e As System.EventArgs) Handles List.SelectedIndexChanged
-        If UCase(type) = UCase(trans("Шрифт")) Then
+        If UCase(type) = UCase(trans("РЁСЂРёС„С‚")) Then
             Try
                 ActiveTextBox.Font = New Font(List.SelectedItem.ToString, ActiveTextBox.Font.Size, MyObjs(0).obj.Font.Style, ActiveTextBox.Font.Unit)
             Catch ex As Exception
@@ -491,30 +491,30 @@ Public Class EditProperty
     End Sub
 #End Region
 
-    ' <<<<<< ПРОЦЕДУРЫ ОБРАБОТКИ СВОЙСТВ >>>>>>>>>
+    ' <<<<<< РџР РћР¦Р•Р”РЈР Р« РћР‘Р РђР‘РћРўРљР РЎР’РћР™РЎРўР’ >>>>>>>>>
 #Region "EDIT PROPERTY"
     Public Sub ShowProp(ByVal pr As String, ByVal ParamArray MyObjects() As Object)
         MyObjs = MyObjects : prop = pr
         If MyObjs Is Nothing Then Exit Sub
-        ' Задание того, можно ли изменять свойства объектов из этого элемента
+        ' Р—Р°РґР°РЅРёРµ С‚РѕРіРѕ, РјРѕР¶РЅРѕ Р»Рё РёР·РјРµРЅСЏС‚СЊ СЃРІРѕР№СЃС‚РІР° РѕР±СЉРµРєС‚РѕРІ РёР· СЌС‚РѕРіРѕ СЌР»РµРјРµРЅС‚Р°
         If Me.Parent Is MainForm.ListView Then MayChangeProperty = True
-        ' тип свойства
+        ' С‚РёРї СЃРІРѕР№СЃС‚РІР°
         type = GetTypeProperty(prop)
         HideAllPanels()
-        ' СОБСТВЕНО ОТОБРАЖЕНИЕ СВОЙСТВА
+        ' РЎРћР‘РЎРўР’Р•РќРћ РћРўРћР‘Р РђР–Р•РќРР• РЎР’РћР™РЎРўР’Рђ
         Props.ShowPropInEditProperty(Me)
         Undo = Nothing : Redo = Nothing
     End Sub
     Public Sub ShowPropArgs(ByVal pr As String, ByVal def As String)
-        ' Сделать аргументТекстБокс не статичным полем а например выбором цвета 1) если уже есть свойство с таким же
-        ' названием как аграумент 2)если я указал в ArgTypes что этот агрумент нужно сделать определенного типа
+        ' РЎРґРµР»Р°С‚СЊ Р°СЂРіСѓРјРµРЅС‚РўРµРєСЃС‚Р‘РѕРєСЃ РЅРµ СЃС‚Р°С‚РёС‡РЅС‹Рј РїРѕР»РµРј Р° РЅР°РїСЂРёРјРµСЂ РІС‹Р±РѕСЂРѕРј С†РІРµС‚Р° 1) РµСЃР»Рё СѓР¶Рµ РµСЃС‚СЊ СЃРІРѕР№СЃС‚РІРѕ СЃ С‚Р°РєРёРј Р¶Рµ
+        ' РЅР°Р·РІР°РЅРёРµРј РєР°Рє Р°РіСЂР°СѓРјРµРЅС‚ 2)РµСЃР»Рё СЏ СѓРєР°Р·Р°Р» РІ ArgTypes С‡С‚Рѕ СЌС‚РѕС‚ Р°РіСЂСѓРјРµРЅС‚ РЅСѓР¶РЅРѕ СЃРґРµР»Р°С‚СЊ РѕРїСЂРµРґРµР»РµРЅРЅРѕРіРѕ С‚РёРїР°
         If proj.isPropertyMethod(LCase(pr)) <> "" Or proj.isPropertyMethod(MyZnak & LCase(pr)) <> "" _
         Or Array.IndexOf(ArgTypes, UCase(pr)) <> -1 Then
             prop = pr
-            ' тип свойства
+            ' С‚РёРї СЃРІРѕР№СЃС‚РІР°
             type = GetTypeProperty(prop)
             HideAllPanels()
-            ' СОБСТВЕНО ОТОБРАЖЕНИЕ СВОЙСТВА
+            ' РЎРћР‘РЎРўР’Р•РќРћ РћРўРћР‘Р РђР–Р•РќРР• РЎР’РћР™РЎРўР’Рђ
             Props.ShowPropInEditProperty(Me)
         End If
         Text = def
@@ -549,7 +549,7 @@ Public Class EditProperty
             If withPodsvet Then proj.Podsvetka(ActiveTextBox, bezPodsvetki)
         End Set
     End Property
-    Sub HideAllPanels() ' Скрыть все панели моего компонента
+    Sub HideAllPanels() ' РЎРєСЂС‹С‚СЊ РІСЃРµ РїР°РЅРµР»Рё РјРѕРµРіРѕ РєРѕРјРїРѕРЅРµРЅС‚Р°
         Dim i As Integer
         For i = 0 To Me.Controls.Count - 1
             If Me.Controls(i).Parent Is Me Then Me.Controls(i).Visible = False
@@ -557,7 +557,7 @@ Public Class EditProperty
     End Sub
 #End Region
 
-    ' <<<<<< ОБРАБОТКА СОБЫТИЙ КОНТЕКСТНОГО МЕНЮ >>>>>>>>>
+    ' <<<<<< РћР‘Р РђР‘РћРўРљРђ РЎРћР‘Р«РўРР™ РљРћРќРўР•РљРЎРўРќРћР“Рћ РњР•РќР® >>>>>>>>>
 #Region "EditPrMenu"
     Public Sub UndoMenu5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If Undo Is Nothing Then Exit Sub
@@ -565,7 +565,7 @@ Public Class EditProperty
         ind = Undo(Undo.Length - 1).IndexOf("|")
         selSt = Undo(Undo.Length - 1).Substring(0, ind)
         rtf = Undo(Undo.Length - 1).Substring(ind + 1)
-        ' Выбираем активное текс. поле и записываем туда значение из ундо
+        ' Р’С‹Р±РёСЂР°РµРј Р°РєС‚РёРІРЅРѕРµ С‚РµРєСЃ. РїРѕР»Рµ Рё Р·Р°РїРёСЃС‹РІР°РµРј С‚СѓРґР° Р·РЅР°С‡РµРЅРёРµ РёР· СѓРЅРґРѕ
         Dim Tbox As RichTextBox = GetTextBox()
         If tagBox Is Nothing = False Then If tagBox.Focused Then Tbox = tagBox
         If Tbox Is Nothing Then Exit Sub
@@ -573,9 +573,9 @@ Public Class EditProperty
         RedoRtf = Tbox.Rtf : RedoSel = Tbox.SelectionStart
         Tbox.Rtf = rtf : Tbox.SelectionStart = selSt
         sledush = selSt & "|" & rtf
-        Timer1_Tick(sender, e)        ' Перевод текста на др. текст поле (напр. ТагБокс)
+        Timer1_Tick(sender, e)        ' РџРµСЂРµРІРѕРґ С‚РµРєСЃС‚Р° РЅР° РґСЂ. С‚РµРєСЃС‚ РїРѕР»Рµ (РЅР°РїСЂ. РўР°РіР‘РѕРєСЃ)
         isUndo = False
-        ' Записываем в редо значение ундо, которое было только что использовано
+        ' Р—Р°РїРёСЃС‹РІР°РµРј РІ СЂРµРґРѕ Р·РЅР°С‡РµРЅРёРµ СѓРЅРґРѕ, РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Рѕ С‚РѕР»СЊРєРѕ С‡С‚Рѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРѕ
         If Redo Is Nothing = False Then
             ReDim Preserve Redo(Redo.Length)
         Else
@@ -587,7 +587,7 @@ Public Class EditProperty
         Else
             ReDim Preserve Redo(Redo.Length - 2)
         End If
-        ' Удаляем использованное значение ундо
+        ' РЈРґР°Р»СЏРµРј РёСЃРїРѕР»СЊР·РѕРІР°РЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СѓРЅРґРѕ
         If Undo.Length - 2 >= 0 Then
             ReDim Preserve Undo(Undo.Length - 2)
         Else
@@ -601,16 +601,16 @@ Public Class EditProperty
         ind = Redo(Redo.Length - 1).IndexOf("|")
         selSt = Redo(Redo.Length - 1).Substring(0, ind)
         rtf = Redo(Redo.Length - 1).Substring(ind + 1)
-        ' Выбираем активное текс. поле и записываем туда значение из редо
+        ' Р’С‹Р±РёСЂР°РµРј Р°РєС‚РёРІРЅРѕРµ С‚РµРєСЃ. РїРѕР»Рµ Рё Р·Р°РїРёСЃС‹РІР°РµРј С‚СѓРґР° Р·РЅР°С‡РµРЅРёРµ РёР· СЂРµРґРѕ
         Dim Tbox As RichTextBox = GetTextBox()
         If tagBox Is Nothing = False Then If tagBox.Focused Then Tbox = tagBox
         If Tbox Is Nothing Then Exit Sub
         isRedo = True
         Tbox.Rtf = rtf : Tbox.SelectionStart = selSt
-        Timer1.Start() ' Перевод текста на др. текст поле (напр. ТагБокс)
+        Timer1.Start() ' РџРµСЂРµРІРѕРґ С‚РµРєСЃС‚Р° РЅР° РґСЂ. С‚РµРєСЃС‚ РїРѕР»Рµ (РЅР°РїСЂ. РўР°РіР‘РѕРєСЃ)
         isRedo = False
         sledush = selSt & "|" & rtf
-        ' Записываем в ундо значение редо, которое было только что использовано
+        ' Р—Р°РїРёСЃС‹РІР°РµРј РІ СѓРЅРґРѕ Р·РЅР°С‡РµРЅРёРµ СЂРµРґРѕ, РєРѕС‚РѕСЂРѕРµ Р±С‹Р»Рѕ С‚РѕР»СЊРєРѕ С‡С‚Рѕ РёСЃРїРѕР»СЊР·РѕРІР°РЅРѕ
         If Undo(Undo.Length - 1) <> Redo(Redo.Length - 1) And Redo.Length - 1 > 0 Then
             If Undo Is Nothing = False Then
                 ReDim Preserve Undo(Undo.Length)
@@ -619,7 +619,7 @@ Public Class EditProperty
             End If
             Undo(Undo.Length - 1) = Redo(Redo.Length - 1)
         End If
-        ' Удаляем использованное значение редо
+        ' РЈРґР°Р»СЏРµРј РёСЃРїРѕР»СЊР·РѕРІР°РЅРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ СЂРµРґРѕ
         If Redo.Length - 2 >= 0 Then
             ReDim Preserve Redo(Redo.Length - 2)
         Else
@@ -633,18 +633,18 @@ Public Class EditProperty
         If tagBox Is Nothing = False Then If tagBox.Focused Then Tbox = tagBox
         If Tbox Is Nothing Then Exit Sub
         If sledush <> "" Then
-            ' Если меняется текст, а не разукрашивался
+            ' Р•СЃР»Рё РјРµРЅСЏРµС‚СЃСЏ С‚РµРєСЃС‚, Р° РЅРµ СЂР°Р·СѓРєСЂР°С€РёРІР°Р»СЃСЏ
             Dim ind As Integer = sledush.IndexOf("|")
             Dim t As New RichTextBox() : t.Rtf = sledush.Substring(ind + 1)
             If t.Text = Tbox.Text Then Exit Sub
-            ' Увеличить размерность унды и запомнить номер его предыдущего
+            ' РЈРІРµР»РёС‡РёС‚СЊ СЂР°Р·РјРµСЂРЅРѕСЃС‚СЊ СѓРЅРґС‹ Рё Р·Р°РїРѕРјРЅРёС‚СЊ РЅРѕРјРµСЂ РµРіРѕ РїСЂРµРґС‹РґСѓС‰РµРіРѕ
             Dim num As Integer
             If Undo Is Nothing = False Then
                 ReDim Preserve Undo(Undo.Length) : num = Undo.Length - 2
             Else
                 ReDim Undo(0) : num = 0
             End If
-            ' Записать в ундо предыдущее значение текста, если оно еще не записано
+            ' Р—Р°РїРёСЃР°С‚СЊ РІ СѓРЅРґРѕ РїСЂРµРґС‹РґСѓС‰РµРµ Р·РЅР°С‡РµРЅРёРµ С‚РµРєСЃС‚Р°, РµСЃР»Рё РѕРЅРѕ РµС‰Рµ РЅРµ Р·Р°РїРёСЃР°РЅРѕ
             If Undo(num) <> sledush Then
                 Undo(Undo.Length - 1) = sledush
             Else
@@ -652,7 +652,7 @@ Public Class EditProperty
             End If
             Redo = Nothing
         End If
-        ' Чтобы селектедСтарт не был равен нулю изза подсветки, присваиваем значение в таймере
+        ' Р§С‚РѕР±С‹ СЃРµР»РµРєС‚РµРґРЎС‚Р°СЂС‚ РЅРµ Р±С‹Р» СЂР°РІРµРЅ РЅСѓР»СЋ РёР·Р·Р° РїРѕРґСЃРІРµС‚РєРё, РїСЂРёСЃРІР°РёРІР°РµРј Р·РЅР°С‡РµРЅРёРµ РІ С‚Р°Р№РјРµСЂРµ
         Timer2.Start()
     End Sub
     Public Sub Timer2_Tick(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Timer2.Tick
@@ -683,7 +683,7 @@ Public Class EditProperty
         ' Else
         Tbox.SelectedText = Clipboard.GetText(TextDataFormat.Text)
         ' End If
-        Timer1.Start() ' Перевод текста на др. текст поле
+        Timer1.Start() ' РџРµСЂРµРІРѕРґ С‚РµРєСЃС‚Р° РЅР° РґСЂ. С‚РµРєСЃС‚ РїРѕР»Рµ
     End Sub
     Public Sub CutMenu5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         CopyMenu5_Click(sender, e)
@@ -695,7 +695,7 @@ Public Class EditProperty
         If Tbox Is Nothing Then Exit Sub
         If Tbox.SelectedText <> "" Then
             Tbox.SelectedText = ""
-            Timer1.Start() ' Перевод текста на др. текст поле
+            Timer1.Start() ' РџРµСЂРµРІРѕРґ С‚РµРєСЃС‚Р° РЅР° РґСЂ. С‚РµРєСЃС‚ РїРѕР»Рµ
         End If
     End Sub
     Public Sub SelectAllMenu5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
@@ -718,47 +718,47 @@ Public Class EditProperty
     End Function
 #End Region
 
-    ' <<<<<< МОЯ СИСТЕМА ВЫДЕЛЕНИЕ ТЕКСТА >>>>>>>>>
+    ' <<<<<< РњРћРЇ РЎРРЎРўР•РњРђ Р’Р«Р”Р•Р›Р•РќРР• РўР•РљРЎРўРђ >>>>>>>>>
 #Region "MYSELECT"
     Dim isClick As Boolean, selSt As Integer, bukvaLen As Integer = 6.1, nachalDaleko As Integer = 0
     Private Sub TextBox1_MouseDown(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles TextBox1.MouseDown, TextBox2.MouseDown, TextBox3.MouseDown, tagBox.MouseDown
         isClick = False
-        ' Моя система выделения запусткается, если не нажат ктрл
+        ' РњРѕСЏ СЃРёСЃС‚РµРјР° РІС‹РґРµР»РµРЅРёСЏ Р·Р°РїСѓСЃС‚РєР°РµС‚СЃСЏ, РµСЃР»Рё РЅРµ РЅР°Р¶Р°С‚ РєС‚СЂР»
         If sender.ModifierKeys = Keys.None Then
-            ' определение позиции символа по координатам
+            ' РѕРїСЂРµРґРµР»РµРЅРёРµ РїРѕР·РёС†РёРё СЃРёРјРІРѕР»Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
             selSt = sender.GetCharIndexFromPosition(e.Location)
             isClick = True
         ElseIf sender.ModifierKeys = Keys.Shift Then
-            ' Если нажат шифт, по селСтарт уже задан в маусАп
+            ' Р•СЃР»Рё РЅР°Р¶Р°С‚ С€РёС„С‚, РїРѕ СЃРµР»РЎС‚Р°СЂС‚ СѓР¶Рµ Р·Р°РґР°РЅ РІ РјР°СѓСЃРђРї
             isClick = True
             TextBox1_MouseMove(sender, e)
         End If
-        ' Если был двойной клик, либо ДрагДроп текста то отменить мой режим выделения
+        ' Р•СЃР»Рё Р±С‹Р» РґРІРѕР№РЅРѕР№ РєР»РёРє, Р»РёР±Рѕ Р”СЂР°РіР”СЂРѕРї С‚РµРєСЃС‚Р° С‚Рѕ РѕС‚РјРµРЅРёС‚СЊ РјРѕР№ СЂРµР¶РёРј РІС‹РґРµР»РµРЅРёСЏ
         If e.Clicks > 1 Or sender.SelectedText.length > 0 Then TextBox1_DoubleClick(sender, e)
     End Sub
     Private Sub TextBox1_MouseMove(ByVal sender As Object, ByVal e As System.Windows.Forms.MouseEventArgs) Handles TextBox1.MouseMove, TextBox2.MouseMove, TextBox3.MouseMove, tagBox.MouseMove
-        ' Если запущен мойрежим выделения
+        ' Р•СЃР»Рё Р·Р°РїСѓС‰РµРЅ РјРѕР№СЂРµР¶РёРј РІС‹РґРµР»РµРЅРёСЏ
         If isClick Then
-            ' Определение абсолютной позиции символа по координатам
+            ' РћРїСЂРµРґРµР»РµРЅРёРµ Р°Р±СЃРѕР»СЋС‚РЅРѕР№ РїРѕР·РёС†РёРё СЃРёРјРІРѕР»Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
             Dim nowPos As Integer = sender.GetCharIndexFromPosition(e.Location)
-            ' Определение позиции первой буквы в строке по координатам
+            ' РћРїСЂРµРґРµР»РµРЅРёРµ РїРѕР·РёС†РёРё РїРµСЂРІРѕР№ Р±СѓРєРІС‹ РІ СЃС‚СЂРѕРєРµ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј
             Dim InLineFirstPos As Integer = sender.GetFirstCharIndexFromLine(sender.GetLineFromCharIndex(nowPos))
 
-            ' Поправка, чтобы захватывать последний символ (глюк vb)
+            ' РџРѕРїСЂР°РІРєР°, С‡С‚РѕР±С‹ Р·Р°С…РІР°С‚С‹РІР°С‚СЊ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР» (РіР»СЋРє vb)
             If e.X / (nowPos - InLineFirstPos + 1) > bukvaLen And sender.ModifierKeys = Keys.None And nowPos <> 0 Then
                 nachalDaleko = 1
             End If
 
-            ' Если выделяют слева направо
+            ' Р•СЃР»Рё РІС‹РґРµР»СЏСЋС‚ СЃР»РµРІР° РЅР°РїСЂР°РІРѕ
             If nowPos - selSt > 0 Then
                 Dim plus As Byte = 0
-                ' Поправка, чтобы захватывать последний символ (глюк vb)
+                ' РџРѕРїСЂР°РІРєР°, С‡С‚РѕР±С‹ Р·Р°С…РІР°С‚С‹РІР°С‚СЊ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР» (РіР»СЋРє vb)
                 If e.X / (nowPos - InLineFirstPos + 1) > bukvaLen Then plus = 1
-                ' Выделение текста
+                ' Р’С‹РґРµР»РµРЅРёРµ С‚РµРєСЃС‚Р°
                 sender.SelectionStart = selSt
                 sender.SelectionLength = nowPos - selSt + plus
                 nachalDaleko = 0
-            ElseIf nowPos - selSt < 0 Then ' Если выделяют права нелево
+            ElseIf nowPos - selSt < 0 Then ' Р•СЃР»Рё РІС‹РґРµР»СЏСЋС‚ РїСЂР°РІР° РЅРµР»РµРІРѕ
                 'Dim minus As Byte = 1
                 'If e.X < 1 Or Math.Abs(nowPos - selSt) <= 1 Then minus = 0
                 sender.SelectionStart = nowPos '+ minus
@@ -770,13 +770,13 @@ Public Class EditProperty
         If sender Is tagBox = False Then
             If sender.SelectedText <> "" Then RaiseEvent SelectedText(sender, e)
         End If
-        ' Отменить МойРежим выделения
+        ' РћС‚РјРµРЅРёС‚СЊ РњРѕР№Р РµР¶РёРј РІС‹РґРµР»РµРЅРёСЏ
         isClick = False : nachalDaleko = 0
-        ' Записать позицию окончания выделения, чтобы потом использовать ее, если выделять будут шифт'ом
+        ' Р—Р°РїРёСЃР°С‚СЊ РїРѕР·РёС†РёСЋ РѕРєРѕРЅС‡Р°РЅРёСЏ РІС‹РґРµР»РµРЅРёСЏ, С‡С‚РѕР±С‹ РїРѕС‚РѕРј РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ РµРµ, РµСЃР»Рё РІС‹РґРµР»СЏС‚СЊ Р±СѓРґСѓС‚ С€РёС„С‚'РѕРј
         If sender.SelectedText = "" Then selSt = sender.GetCharIndexFromPosition(e.Location)
     End Sub
     Private Sub TextBox1_DoubleClick(ByVal sender As Object, ByVal e As System.EventArgs) Handles TextBox1.DoubleClick, TextBox2.DoubleClick, TextBox3.DoubleClick, tagBox.DoubleClick
-        ' Отменить МойРежим выделения
+        ' РћС‚РјРµРЅРёС‚СЊ РњРѕР№Р РµР¶РёРј РІС‹РґРµР»РµРЅРёСЏ
         isClick = False : nachalDaleko = 0
     End Sub
 #End Region

@@ -1,4 +1,4 @@
-Public Module Perevodi
+п»їPublic Module Perevodi
 
     Public Function ToStrFromObj(ByVal MyObj As Object, Optional ByVal withParentTree As Boolean = False, Optional ByVal toEng As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal withProgres As Boolean = True, Optional ByRef ObjsTres As ObjsTreesText = Nothing) As String
         Dim myobjs() As Object : ReDims(myobjs) : myobjs(0) = MyObj
@@ -6,20 +6,20 @@ Public Module Perevodi
     End Function
     Public Function ToStrFromObj(ByVal MyObj() As Object, Optional ByVal withParentTree As Boolean = False, Optional ByVal toEng As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal withProgres As Boolean = True, Optional ByRef ObjsTres As ObjsTreesText = Nothing) As String
         Dim str As String = "", allstr As String = "", i, j As Integer, MyObjs() As Object
-        ' Записать все объекты которые надо скопировать в один массив MyObjs
+        ' Р—Р°РїРёСЃР°С‚СЊ РІСЃРµ РѕР±СЉРµРєС‚С‹ РєРѕС‚РѕСЂС‹Рµ РЅР°РґРѕ СЃРєРѕРїРёСЂРѕРІР°С‚СЊ РІ РѕРґРёРЅ РјР°СЃСЃРёРІ MyObjs
         MyObjs = proj.GetDo4ernieMyObjs(MyObj)
         If MyObj Is Nothing Then Return Nothing
-        ' если это форма и ее пытаются сохранить в файле, то с ней надо сохранять все её объекты, включая полуобъекты
+        ' РµСЃР»Рё СЌС‚Рѕ С„РѕСЂРјР° Рё РµРµ РїС‹С‚Р°СЋС‚СЃСЏ СЃРѕС…СЂР°РЅРёС‚СЊ РІ С„Р°Р№Р»Рµ, С‚Рѕ СЃ РЅРµР№ РЅР°РґРѕ СЃРѕС…СЂР°РЅСЏС‚СЊ РІСЃРµ РµС‘ РѕР±СЉРµРєС‚С‹, РІРєР»СЋС‡Р°СЏ РїРѕР»СѓРѕР±СЉРµРєС‚С‹
         If toEng Or isRun And MyObj.Length = 1 Then
             If Iz.IsFORM(MyObj(0)) Then MyObjs = MyObj(0).MyObjs
         End If
         MyObjs = proj.GetSortMyObjsByLevelConteiner(MyObjs)
-        ' Теперь перевести каждый объект в текст
+        ' РўРµРїРµСЂСЊ РїРµСЂРµРІРµСЃС‚Рё РєР°Р¶РґС‹Р№ РѕР±СЉРµРєС‚ РІ С‚РµРєСЃС‚
         For i = 0 To MyObjs.Length - 1
-            ' Прогресс-форма
+            ' РџСЂРѕРіСЂРµСЃСЃ-С„РѕСЂРјР°
             If withProgres Then ProgressForm.ProgressBarValue = (100 / (MyObjs.Length)) * i
 
-            ' Если редактируют код
+            ' Р•СЃР»Рё СЂРµРґР°РєС‚РёСЂСѓСЋС‚ РєРѕРґ
             If ObjsTres IsNot Nothing Then
                 Dim fnd As Integer = Array.IndexOf(ObjsTres.Objs, MyObjs(i))
                 If fnd <> -1 Then
@@ -27,20 +27,20 @@ Public Module Perevodi
                 End If
             End If
 
-            ' Задание типа объекта
+            ' Р—Р°РґР°РЅРёРµ С‚РёРїР° РѕР±СЉРµРєС‚Р°
             Dim tip As String = MyObjs(i).obj.GetType.ToString.Substring(ClassAplication.Length)
             str = tip & vbCrLf
-            ' Сохранение всех свойств
+            ' РЎРѕС…СЂР°РЅРµРЅРёРµ РІСЃРµС… СЃРІРѕР№СЃС‚РІ
             IzmenenieBylo2(MyObjs(i))
             Dim prop As ErrString
             For j = 0 To MyObjs(i).Propertys.Length - 1
                 If Array.IndexOf(ReadOnlyProps, MyObjs(i).PropertysUp(j)) <> -1 Then Continue For
                 prop = GetProperty(MyObjs(i), MyObjs(i).Propertys(j))
-                ' если это не свойство по умолчанию и свойство без ошибки
+                ' РµСЃР»Рё СЌС‚Рѕ РЅРµ СЃРІРѕР№СЃС‚РІРѕ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ Рё СЃРІРѕР№СЃС‚РІРѕ Р±РµР· РѕС€РёР±РєРё
                 'If ((isRun = False Or prop.str <> GetProperty(Pustishki(tip), MyObjs(i).Propertys(j)).str _
                 'Or Iz.IsFORM(MyObjs(i))) And prop.err = "" And Array.IndexOf(NoSaveProps, UCase(MyObjs(i).Propertys(j))) = -1) _
-                'Or MyObjs(i).Propertys(j).toUpper = trans("Имя").ToUpper _
-                'Or MyObjs(i).Propertys(j).toUpper = trans("Текст").ToUpper Then
+                'Or MyObjs(i).Propertys(j).toUpper = trans("РРјСЏ").ToUpper _
+                'Or MyObjs(i).Propertys(j).toUpper = trans("РўРµРєСЃС‚").ToUpper Then
 
                 If prop.err = "" And Array.IndexOf(NoSaveProps, UCase(MyObjs(i).Propertys(j))) = -1 Then
                     str &= MyObjs(i).Propertys(j) & vbCrLf
@@ -48,7 +48,7 @@ Public Module Perevodi
                     str &= prop.str & vbCrLf
                 End If
             Next
-            ' Сохранение контенера (для некоторых случаев)
+            ' РЎРѕС…СЂР°РЅРµРЅРёРµ РєРѕРЅС‚РµРЅРµСЂР° (РґР»СЏ РЅРµРєРѕС‚РѕСЂС‹С… СЃР»СѓС‡Р°РµРІ)
             str &= "#Conteiner" & vbCrLf
             If MyObjs(i).conteiner Is Nothing = False Then
                 If MyObjs(i).obj.typeObj <> "PoluObj" Then
@@ -58,12 +58,12 @@ Public Module Perevodi
                 End If
             End If
             str &= vbCrLf
-            ' Сохранение хистори левела, если надо
+            ' РЎРѕС…СЂР°РЅРµРЅРёРµ С…РёСЃС‚РѕСЂРё Р»РµРІРµР»Р°, РµСЃР»Рё РЅР°РґРѕ
             'If  fromEng = False Then
             Dim ind As Integer = MyObjs(i).GetMyForm.HistoryLevel.IndexOf(MyObjs(i))
             If ind <> -1 Then str &= "#HistoryLevel" & vbCrLf & ind & vbCrLf
             'End If
-            ' Сохранение узла
+            ' РЎРѕС…СЂР°РЅРµРЅРёРµ СѓР·Р»Р°
             Dim nodes(0) As TreeNode
             nodes(0) = MyObjs(i).GetNode(, True)
             '  If Iz.IsFORM(MyObjs(i)) Then
@@ -80,10 +80,10 @@ Public Module Perevodi
             ' node.Nodes.Add(proj.CloneTreeNode(MyObjs(i).GetNode(, True)))
             ' str &= ToStrFromTree(node) & vbCrLf
 
-            ' Конец объекта
+            ' РљРѕРЅРµС† РѕР±СЉРµРєС‚Р°
             str &= "#End" & vbCrLf & vbCrLf
             allstr &= str
-            ' Если редактируют код
+            ' Р•СЃР»Рё СЂРµРґР°РєС‚РёСЂСѓСЋС‚ РєРѕРґ
             If ObjsTres IsNot Nothing Then
                 Dim fnd As Integer = Array.IndexOf(ObjsTres.Objs, MyObjs(i))
                 If fnd <> -1 Then ObjsTres.Lengs(fnd) = ObjsTres.popravka + allstr.Length - ObjsTres.Starts(fnd)
@@ -100,17 +100,17 @@ Public Module Perevodi
         If str = "" Then Return Nothing
         txt.Text = str : lines = txt.Lines
         While i < lines.Length - 1
-            ' Прогресс-форма
-            ' если идет разработка проекта а не запуск готовой программы
+            ' РџСЂРѕРіСЂРµСЃСЃ-С„РѕСЂРјР°
+            ' РµСЃР»Рё РёРґРµС‚ СЂР°Р·СЂР°Р±РѕС‚РєР° РїСЂРѕРµРєС‚Р° Р° РЅРµ Р·Р°РїСѓСЃРє РіРѕС‚РѕРІРѕР№ РїСЂРѕРіСЂР°РјРјС‹
             If ProgressForm.InvokeRequired Then
-                ' Если это поток то надо через потоконезависимую Invoke выполнять
+                ' Р•СЃР»Рё СЌС‚Рѕ РїРѕС‚РѕРє С‚Рѕ РЅР°РґРѕ С‡РµСЂРµР· РїРѕС‚РѕРєРѕРЅРµР·Р°РІРёСЃРёРјСѓСЋ Invoke РІС‹РїРѕР»РЅСЏС‚СЊ
                 ProgressForm.Invoke(delegatProgress, New Object() {Int((100 / (lines.Length)) * i)})
             Else
                 ProgressForm.ProgressBarValue = (100 / (lines.Length)) * i
             End If
             ' End If
             If lines(i) = "" Or lines(i).IndexOf("#") = 0 Then i += 1 : Continue While
-            ' определение типа объекта
+            ' РѕРїСЂРµРґРµР»РµРЅРёРµ С‚РёРїР° РѕР±СЉРµРєС‚Р°
             ReDims(MyObjs)
             CreateNewMyObjs(lines(i), MyObjs, isRun, fromEng)
             'If MyObjs(MyObjs.Length - 1) Is Nothing Then DelDims(MyObjs, MyObjs.Length - 1) : Exit While
@@ -119,7 +119,7 @@ Public Module Perevodi
                 MyObjs(MyObjs.Length - 1).proj = RunProj
                 MyObjs(MyObjs.Length - 1).tree = RunProj.tree
             End If
-            ' Воссановление всех сохраненных свойств
+            ' Р’РѕСЃСЃР°РЅРѕРІР»РµРЅРёРµ РІСЃРµС… СЃРѕС…СЂР°РЅРµРЅРЅС‹С… СЃРІРѕР№СЃС‚РІ
             i += 1
             Dim res As MsgBoxResult
             Dim estVis As Boolean = False, vis As String = ""
@@ -139,116 +139,116 @@ Public Module Perevodi
             While lines(i).IndexOf("#") <> 0
                 If i + 1 >= lines.Length - 1 Then Exit While
                 If lines(i) = "" Then i += 1 : Continue While
-                ' присвоение свойства
-                ' Видимость и т.д. присваиваем в самом конце
-                If UCase(lines(i)) = UCase(trans("Видимый")) Then estVis = True : vis = lines(i + 1) : i += 2 : Continue While
-                If UCase(lines(i)) = UCase(trans("Вышина")) Then estMxH = True : mxh = lines(i + 1) : i += 2 : Continue While
-                If UCase(lines(i)) = UCase(trans("Ширина")) Then estMxW = True : mxw = lines(i + 1) : i += 2 : Continue While
-                If UCase(lines(i)) = UCase(trans("Выделенная запись")) Then estSel = True : sel = lines(i + 1) : i += 2 : Continue While
-                If UCase(lines(i)) = UCase(trans("RTF код документа")) Then estRtf = True : rtf = lines(i + 1) : i += 2 : Continue While
-                If UCase(lines(i)) = UCase(trans("Значение")) Then estVal = True : val = lines(i + 1) : i += 2 : Continue While
-                If UCase(lines(i)) = UCase(trans("Расстояние разделителя")) Then estSpD = True : spd = lines(i + 1) : i += 2 : Continue While
-                If UCase(lines(i)) = UCase(trans("Ширина столбцов")) Then estWC = True : wco = lines(i + 1) : i += 2 : Continue While
-                If UCase(lines(i)) = UCase(trans("Вышина строк")) Then estHR = True : hro = lines(i + 1) : i += 2 : Continue While
-                If UCase(lines(i)) = UCase(trans("Статус окна")) Then
+                ' РїСЂРёСЃРІРѕРµРЅРёРµ СЃРІРѕР№СЃС‚РІР°
+                ' Р’РёРґРёРјРѕСЃС‚СЊ Рё С‚.Рґ. РїСЂРёСЃРІР°РёРІР°РµРј РІ СЃР°РјРѕРј РєРѕРЅС†Рµ
+                If UCase(lines(i)) = UCase(trans("Р’РёРґРёРјС‹Р№")) Then estVis = True : vis = lines(i + 1) : i += 2 : Continue While
+                If UCase(lines(i)) = UCase(trans("Р’С‹С€РёРЅР°")) Then estMxH = True : mxh = lines(i + 1) : i += 2 : Continue While
+                If UCase(lines(i)) = UCase(trans("РЁРёСЂРёРЅР°")) Then estMxW = True : mxw = lines(i + 1) : i += 2 : Continue While
+                If UCase(lines(i)) = UCase(trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ")) Then estSel = True : sel = lines(i + 1) : i += 2 : Continue While
+                If UCase(lines(i)) = UCase(trans("RTF РєРѕРґ РґРѕРєСѓРјРµРЅС‚Р°")) Then estRtf = True : rtf = lines(i + 1) : i += 2 : Continue While
+                If UCase(lines(i)) = UCase(trans("Р—РЅР°С‡РµРЅРёРµ")) Then estVal = True : val = lines(i + 1) : i += 2 : Continue While
+                If UCase(lines(i)) = UCase(trans("Р Р°СЃСЃС‚РѕСЏРЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ")) Then estSpD = True : spd = lines(i + 1) : i += 2 : Continue While
+                If UCase(lines(i)) = UCase(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†РѕРІ")) Then estWC = True : wco = lines(i + 1) : i += 2 : Continue While
+                If UCase(lines(i)) = UCase(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРє")) Then estHR = True : hro = lines(i + 1) : i += 2 : Continue While
+                If UCase(lines(i)) = UCase(trans("РЎС‚Р°С‚СѓСЃ РѕРєРЅР°")) Then
                     If isRun Then MyObjs(MyObjs.Length - 1).obj.StatusTemp = lines(i + 1) : i += 2 : Continue While
                 End If
-                If UCase(lines(i)) = UCase(trans("Ассоциировать с расширениями")) Then estAsE = True : ase = lines(i + 1) : i += 2 : Continue While
-                ' перевести все ключевые слова которые надо автоматом переводить в значения
+                If UCase(lines(i)) = UCase(trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°С‚СЊ СЃ СЂР°СЃС€РёСЂРµРЅРёСЏРјРё")) Then estAsE = True : ase = lines(i + 1) : i += 2 : Continue While
+                ' РїРµСЂРµРІРµСЃС‚Рё РІСЃРµ РєР»СЋС‡РµРІС‹Рµ СЃР»РѕРІР° РєРѕС‚РѕСЂС‹Рµ РЅР°РґРѕ Р°РІС‚РѕРјР°С‚РѕРј РїРµСЂРµРІРѕРґРёС‚СЊ РІ Р·РЅР°С‡РµРЅРёСЏ
                 If isRun Then
                     If SrazuPerevoditHW(lines(i + 1)) <> Nothing Then lines(i + 1) = UbratKovich(SrazuPerevoditHW(lines(i + 1))).str
                 End If
-                ' имя свойства переводится с английского на местный язык
+                ' РёРјСЏ СЃРІРѕР№СЃС‚РІР° РїРµСЂРµРІРѕРґРёС‚СЃСЏ СЃ Р°РЅРіР»РёР№СЃРєРѕРіРѕ РЅР° РјРµСЃС‚РЅС‹Р№ СЏР·С‹Рє
                 res = SetProperty(MyObjs(MyObjs.Length - 1), trans(lines(i), , True), lines(i + 1), fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
                 i += 2
             End While
 
-            ' Видимость и т.д. присваиваем самым последним свойством
+            ' Р’РёРґРёРјРѕСЃС‚СЊ Рё С‚.Рґ. РїСЂРёСЃРІР°РёРІР°РµРј СЃР°РјС‹Рј РїРѕСЃР»РµРґРЅРёРј СЃРІРѕР№СЃС‚РІРѕРј
             If estRtf Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("RTF код документа"), , True), rtf, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("RTF РєРѕРґ РґРѕРєСѓРјРµРЅС‚Р°"), , True), rtf, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
             If estMxH Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Вышина"), , True), mxh, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Р’С‹С€РёРЅР°"), , True), mxh, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
             If estMxW Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Ширина"), , True), mxw, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("РЁРёСЂРёРЅР°"), , True), mxw, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
             If estVis Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Видимый"), , True), vis, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Р’РёРґРёРјС‹Р№"), , True), vis, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
             If estMxH Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Вышина"), , True), mxh, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Р’С‹С€РёРЅР°"), , True), mxh, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
             If estMxW Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Ширина"), , True), mxw, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("РЁРёСЂРёРЅР°"), , True), mxw, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
             If estSpD Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Расстояние разделителя"), , True), spd, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Р Р°СЃСЃС‚РѕСЏРЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ"), , True), spd, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
 
             If estSel Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Выделенная запись"), , True), sel, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ"), , True), sel, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
             If estVal Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Значение"), , True), val, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Р—РЅР°С‡РµРЅРёРµ"), , True), val, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
             If estWC Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Ширина столбцов"), , True), wco, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†РѕРІ"), , True), wco, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
             If estHR Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Вышина строк"), , True), hro, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРє"), , True), hro, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
             If estAsE Then
-                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("Ассоциировать с расширениями"), , True), ase, fromEng)
+                res = SetProperty(MyObjs(MyObjs.Length - 1), trans(trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°С‚СЊ СЃ СЂР°СЃС€РёСЂРµРЅРёСЏРјРё"), , True), ase, fromEng)
                 If res = MsgBoxResult.Cancel Then Return Nothing
             End If
 
-            ' Чтобы "Номера выделенных строк" действительно выделились в таблице
+            ' Р§С‚РѕР±С‹ "РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє" РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ РІС‹РґРµР»РёР»РёСЃСЊ РІ С‚Р°Р±Р»РёС†Рµ
             If Iz.IsTl(MyObjs(MyObjs.Length - 1)) Then
                 MyObjs(MyObjs.Length - 1).obj.Props.SelectedColumns = MyObjs(MyObjs.Length - 1).obj.Props.selCol
             End If
 
 
-            ' У инклудобъектов имя должно отражать имя своего контенера
+            ' РЈ РёРЅРєР»СѓРґРѕР±СЉРµРєС‚РѕРІ РёРјСЏ РґРѕР»Р¶РЅРѕ РѕС‚СЂР°Р¶Р°С‚СЊ РёРјСЏ СЃРІРѕРµРіРѕ РєРѕРЅС‚РµРЅРµСЂР°
             'If MyObjs(MyObjs.Length - 1).obj.TypeObj = "IncludeObj" Then
             ' MyObjs(MyObjs.Length - 1).obj.defaultName = MyObjs(MyObjs.Length - 1).obj.name
             ' End If
-            ' Определение контейнера
+            ' РћРїСЂРµРґРµР»РµРЅРёРµ РєРѕРЅС‚РµР№РЅРµСЂР°
             If lines(i) = "#Conteiner" Then
                 ReDims(conts) : conts(conts.Length - 1) = lines(i + 1) : i += 2
                 MyObjs(MyObjs.Length - 1).OldFormTemp = conts(conts.Length - 1).Split(".")(0)
                 If isOpening Then MyObjs(MyObjs.Length - 1).conteiner = Nothing
-                ' полуобъекты уже кинуты на свою сплитерпанель
+                ' РїРѕР»СѓРѕР±СЉРµРєС‚С‹ СѓР¶Рµ РєРёРЅСѓС‚С‹ РЅР° СЃРІРѕСЋ СЃРїР»РёС‚РµСЂРїР°РЅРµР»СЊ
                 ' If MyObjs(MyObjs.Length - 1).obj.typeObj = "PoluObj" And isRun = False Then conts(conts.Length - 1) = ""
             End If
-            ' Определение хистори левела
+            ' РћРїСЂРµРґРµР»РµРЅРёРµ С…РёСЃС‚РѕСЂРё Р»РµРІРµР»Р°
             If lines(i) = "#HistoryLevel" Then
                 i += 1
                 MyObjs(MyObjs.Length - 1).HistoryTemp = lines(i)
                 i += 1
             End If
-            ' Загрузка узла
+            ' Р—Р°РіСЂСѓР·РєР° СѓР·Р»Р°
             txtNode = ""
             If lines(i) = "#TreeNode" Then
                 i += 1
@@ -271,13 +271,13 @@ Public Module Perevodi
                 End While
                 i += 1
             End If
-            ' Указать что объект куда-то вствляется
+            ' РЈРєР°Р·Р°С‚СЊ С‡С‚Рѕ РѕР±СЉРµРєС‚ РєСѓРґР°-С‚Рѕ РІСЃС‚РІР»СЏРµС‚СЃСЏ
             'MyObjs(MyObjs.Length - 1).VstavkaOrCreate = True
 
 
         End While
-        ' Если среди объектов есть те на которых надо разместить другие копируемые объекты
-        MyObjs = GetSortTPsByPosition(MyObjs) ' сортировка чтобы вкладки были в строгой последовательности
+        ' Р•СЃР»Рё СЃСЂРµРґРё РѕР±СЉРµРєС‚РѕРІ РµСЃС‚СЊ С‚Рµ РЅР° РєРѕС‚РѕСЂС‹С… РЅР°РґРѕ СЂР°Р·РјРµСЃС‚РёС‚СЊ РґСЂСѓРіРёРµ РєРѕРїРёСЂСѓРµРјС‹Рµ РѕР±СЉРµРєС‚С‹
+        MyObjs = GetSortTPsByPosition(MyObjs) ' СЃРѕСЂС‚РёСЂРѕРІРєР° С‡С‚РѕР±С‹ РІРєР»Р°РґРєРё Р±С‹Р»Рё РІ СЃС‚СЂРѕРіРѕР№ РїРѕСЃР»РµРґРѕРІР°С‚РµР»СЊРЅРѕСЃС‚Рё
         '       If proj.ActiveForm Is Nothing Then
         '       If Iz.IsFORM(MyObjs(0)) Then proj.ActiveForm = MyObjs(0) Else Exit Function
         '       End If
@@ -286,34 +286,34 @@ Public Module Perevodi
             For j = 0 To MyObjs.Length - 1
 
 
-                ' Если среди объектов есть контенер-панель, причем совпадает даже имена родительских форм (происходит при копировании в одной форме и вставке в другой)
+                ' Р•СЃР»Рё СЃСЂРµРґРё РѕР±СЉРµРєС‚РѕРІ РµСЃС‚СЊ РєРѕРЅС‚РµРЅРµСЂ-РїР°РЅРµР»СЊ, РїСЂРёС‡РµРј СЃРѕРІРїР°РґР°РµС‚ РґР°Р¶Рµ РёРјРµРЅР° СЂРѕРґРёС‚РµР»СЊСЃРєРёС… С„РѕСЂРј (РїСЂРѕРёСЃС…РѕРґРёС‚ РїСЂРё РєРѕРїРёСЂРѕРІР°РЅРёРё РІ РѕРґРЅРѕР№ С„РѕСЂРјРµ Рё РІСЃС‚Р°РІРєРµ РІ РґСЂСѓРіРѕР№)
                 If Iz.isPanel(MyObjs(j).obj) And GetUNameObj(MyObjs(j)) = GetCorrectUName(conts(i)) Then
 
                     If MyObjs(j).obj.GetType.ToString = ClassAplication & "DP" Then
                         If conts(i).IndexOf("(") <> -1 Then
                             If conts(i).Split("(")(1).Split(")")(0) = "Panel1" Then
-                                MyObjs(j).obj.Panel1.controls.add(MyObjs(i).obj) ' Добавить объект
-                                If fromEng Then MyObjs(j).obj.Panel1.controls.add(MyObjs(i).HideMarker) ' Добавить скрытыймаркер
+                                MyObjs(j).obj.Panel1.controls.add(MyObjs(i).obj) ' Р”РѕР±Р°РІРёС‚СЊ РѕР±СЉРµРєС‚
+                                If fromEng Then MyObjs(j).obj.Panel1.controls.add(MyObjs(i).HideMarker) ' Р”РѕР±Р°РІРёС‚СЊ СЃРєСЂС‹С‚С‹Р№РјР°СЂРєРµСЂ
                             Else
-                                MyObjs(j).obj.Panel2.controls.add(MyObjs(i).obj) ' Добавить объект
-                                If fromEng Then MyObjs(j).obj.Panel2.controls.add(MyObjs(i).HideMarker) ' Добавить скрытыймаркер
+                                MyObjs(j).obj.Panel2.controls.add(MyObjs(i).obj) ' Р”РѕР±Р°РІРёС‚СЊ РѕР±СЉРµРєС‚
+                                If fromEng Then MyObjs(j).obj.Panel2.controls.add(MyObjs(i).HideMarker) ' Р”РѕР±Р°РІРёС‚СЊ СЃРєСЂС‹С‚С‹Р№РјР°СЂРєРµСЂ
                             End If
                         End If
                     ElseIf Iz.isPoluObj(MyObjs(i).obj) = False Then
-                        ' Добавить объект
+                        ' Р”РѕР±Р°РІРёС‚СЊ РѕР±СЉРµРєС‚
                         Try
                             MyObjs(j).obj.controls.add(MyObjs(i).obj)
                         Catch ex As Exception
                             Errors.MessangeCritic(ex.Message) : Continue For
                         End Try
-                        If fromEng Then MyObjs(j).obj.controls.add(MyObjs(i).HideMarker) ' Добавить скрытыймаркер
+                        If fromEng Then MyObjs(j).obj.controls.add(MyObjs(i).HideMarker) ' Р”РѕР±Р°РІРёС‚СЊ СЃРєСЂС‹С‚С‹Р№РјР°СЂРєРµСЂ
                     End If
                     If MyObjs(i).conteiner Is Nothing Then MyObjs(i).conteiner = MyObjs(j)
                     If fromEng Then MyObjs(i).HideMarker.SendToBack()
                     Exit For
 
 
-                    ' Если среди объектов есть контенер-составнойобъект, причем совпадает даже имена родительских форм (происходит при копировании в одной форме и вставке в другой)
+                    ' Р•СЃР»Рё СЃСЂРµРґРё РѕР±СЉРµРєС‚РѕРІ РµСЃС‚СЊ РєРѕРЅС‚РµРЅРµСЂ-СЃРѕСЃС‚Р°РІРЅРѕР№РѕР±СЉРµРєС‚, РїСЂРёС‡РµРј СЃРѕРІРїР°РґР°РµС‚ РґР°Р¶Рµ РёРјРµРЅР° СЂРѕРґРёС‚РµР»СЊСЃРєРёС… С„РѕСЂРј (РїСЂРѕРёСЃС…РѕРґРёС‚ РїСЂРё РєРѕРїРёСЂРѕРІР°РЅРёРё РІ РѕРґРЅРѕР№ С„РѕСЂРјРµ Рё РІСЃС‚Р°РІРєРµ РІ РґСЂСѓРіРѕР№)
                 ElseIf Iz.isSostObj(MyObjs(j).obj) And GetUNameObj(MyObjs(j)) = GetCorrectUName(conts(i)) Then
 
                     If MyObjs(j).obj.GetType.ToString = ClassAplication & "TP" Then
@@ -330,11 +330,11 @@ Public Module Perevodi
                     Exit For
 
 
-                    ' Если среди объектов есть контенер и совпадают только имена объектов (происходит при копировании и вставке в одной форме)
+                    ' Р•СЃР»Рё СЃСЂРµРґРё РѕР±СЉРµРєС‚РѕРІ РµСЃС‚СЊ РєРѕРЅС‚РµРЅРµСЂ Рё СЃРѕРІРїР°РґР°СЋС‚ С‚РѕР»СЊРєРѕ РёРјРµРЅР° РѕР±СЉРµРєС‚РѕРІ (РїСЂРѕРёСЃС…РѕРґРёС‚ РїСЂРё РєРѕРїРёСЂРѕРІР°РЅРёРё Рё РІСЃС‚Р°РІРєРµ РІ РѕРґРЅРѕР№ С„РѕСЂРјРµ)
                 ElseIf MyObjs(j).obj.Props.name = GetObjNameFromUName(conts(i)) And MyObjs(j).obj.Props.index = GetIndexFromUName(conts(i)) And (GetUNameObj(MyObjs(j)) = GetCorrectUName(conts(i)) Or isRun = False) Then 'And proj.isSostObj(MyObjs(j).obj) Then
 
-                    ' Чтобы при открытии (в отличии от вставки), нельзя было вставлять элементы в объект, только
-                    ' проверив его имя, не считаясь с окном, в котором он расположен!
+                    ' Р§С‚РѕР±С‹ РїСЂРё РѕС‚РєСЂС‹С‚РёРё (РІ РѕС‚Р»РёС‡РёРё РѕС‚ РІСЃС‚Р°РІРєРё), РЅРµР»СЊР·СЏ Р±С‹Р»Рѕ РІСЃС‚Р°РІР»СЏС‚СЊ СЌР»РµРјРµРЅС‚С‹ РІ РѕР±СЉРµРєС‚, С‚РѕР»СЊРєРѕ
+                    ' РїСЂРѕРІРµСЂРёРІ РµРіРѕ РёРјСЏ, РЅРµ СЃС‡РёС‚Р°СЏСЃСЊ СЃ РѕРєРЅРѕРј, РІ РєРѕС‚РѕСЂРѕРј РѕРЅ СЂР°СЃРїРѕР»РѕР¶РµРЅ!
                     Dim FormiRavni As Boolean = True
                     If MyObjs(j).getmyform IsNot Nothing Then
                         If MyObjs(j).getmyform.obj.name <> conts(i).Split(".")(0) Then FormiRavni = False
@@ -360,15 +360,15 @@ Public Module Perevodi
                         Then
                             If conts(i).Split("(")(1).Split(")")(0) = "Panel1" Then
                                 MyObjs(j).obj.Panel1.controls.add(MyObjs(i).obj)
-                                If fromEng Then MyObjs(j).obj.Panel1.controls.add(MyObjs(i).HideMarker) ' Добавить скрытыймаркер
+                                If fromEng Then MyObjs(j).obj.Panel1.controls.add(MyObjs(i).HideMarker) ' Р”РѕР±Р°РІРёС‚СЊ СЃРєСЂС‹С‚С‹Р№РјР°СЂРєРµСЂ
                             Else
                                 MyObjs(j).obj.Panel2.controls.add(MyObjs(i).obj)
-                                If fromEng Then MyObjs(j).obj.Panel2.controls.add(MyObjs(i).HideMarker) ' Добавить скрытыймаркер
+                                If fromEng Then MyObjs(j).obj.Panel2.controls.add(MyObjs(i).HideMarker) ' Р”РѕР±Р°РІРёС‚СЊ СЃРєСЂС‹С‚С‹Р№РјР°СЂРєРµСЂ
                             End If
                         ElseIf Iz.isPoluObj(MyObjs(i).obj) = False Then
                             If Iz.isPanel(MyObjs(j).obj) = False Or isOpening Then Continue For
                             MyObjs(j).obj.controls.add(MyObjs(i).obj)
-                            If fromEng Then MyObjs(j).obj.controls.add(MyObjs(i).HideMarker) ' Добавить скрытыймаркер
+                            If fromEng Then MyObjs(j).obj.controls.add(MyObjs(i).HideMarker) ' Р”РѕР±Р°РІРёС‚СЊ СЃРєСЂС‹С‚С‹Р№РјР°СЂРєРµСЂ
                         End If
 
                         MyObjs(i).conteiner = MyObjs(j) : If fromEng Then MyObjs(i).HideMarker.SendToBack()
@@ -387,7 +387,7 @@ Public Module Perevodi
         For i = 0 To node.Nodes.Count - 1
             For j = 0 To node.Level - 1 : otst = " " & otst : Next
 
-            ' Если редактируют код
+            ' Р•СЃР»Рё СЂРµРґР°РєС‚РёСЂСѓСЋС‚ РєРѕРґ
             'If ObjsTres IsNot Nothing Then
             '    For k = 0 To ObjsTres.Objs.Length - 1
             '        If ObjsTres.Objs(k).name = node.Nodes(i).Name Then
@@ -396,7 +396,7 @@ Public Module Perevodi
             '    Next
             'End If
 
-            ' Если сохраняют проект, то перевести все на англ
+            ' Р•СЃР»Рё СЃРѕС…СЂР°РЅСЏСЋС‚ РїСЂРѕРµРєС‚, С‚Рѕ РїРµСЂРµРІРµСЃС‚Рё РІСЃРµ РЅР° Р°РЅРіР»
             'If toEng Then str = otst & transNode(node.Nodes(i)) Else 
             str = otst & node.Nodes(i).Text
             str &= vbCrLf & otst & node.Nodes(i).Name & vbCrLf & otst & node.Nodes(i).ImageKey & _
@@ -408,7 +408,7 @@ Public Module Perevodi
 
             If node.Nodes(i).Nodes.Count > 0 Then txt &= ToStrFromTree(node.Nodes(i), toEng, ObjsTres)
 
-            ' Если редактируют код
+            ' Р•СЃР»Рё СЂРµРґР°РєС‚РёСЂСѓСЋС‚ РєРѕРґ
             'If ObjsTres IsNot Nothing Then
             '    For k = 0 To ObjsTres.Objs.Length - 1
             '        If ObjsTres.Objs(k).name = node.Nodes(i).Name Then
@@ -423,7 +423,7 @@ Public Module Perevodi
     Public Function ToStrFromTreeOneNode(ByVal node As TreeNode, Optional ByVal toEng As Boolean = False) As String
         Dim str = "", otst = "", txt As String = ""
         If node Is Nothing Then Return Nothing
-        ' Если сохраняют проект, то перевести все на англ
+        ' Р•СЃР»Рё СЃРѕС…СЂР°РЅСЏСЋС‚ РїСЂРѕРµРєС‚, С‚Рѕ РїРµСЂРµРІРµСЃС‚Рё РІСЃРµ РЅР° Р°РЅРіР»
         'If toEng Then str = otst & transNode(node) Else 
         str = otst & node.Text
         str &= vbCrLf & otst & node.Name & vbCrLf & otst & node.ImageKey & _
@@ -439,11 +439,11 @@ Public Module Perevodi
         Dim TreeNodes As New TreeNode, node As TreeNode
         Dim strs() As String = Nothing
         If txt = Nothing Then Return Nothing
-        ' Создание массива строк
+        ' РЎРѕР·РґР°РЅРёРµ РјР°СЃСЃРёРІР° СЃС‚СЂРѕРє
         Dim rtb As New RichTextBox : rtb.Text = txt : strs = rtb.Lines
-        ' Проход по каждой строке
+        ' РџСЂРѕС…РѕРґ РїРѕ РєР°Р¶РґРѕР№ СЃС‚СЂРѕРєРµ
         For i = 0 To strs.Length - 2
-            ' найти куда добавлять узел
+            ' РЅР°Р№С‚Рё РєСѓРґР° РґРѕР±Р°РІР»СЏС‚СЊ СѓР·РµР»
             If strs(i) = "" Or strs(i).IndexOf("#") = 0 Then i += 1 : Continue For
             node = TreeNodes
             While strs(i)(lev) = " "
@@ -451,10 +451,10 @@ Public Module Perevodi
                 If node.Nodes.Count > 0 Then node = node.Nodes(node.Nodes.Count - 1)
                 If lev >= strs(i).Length Then Exit While
             End While
-            ' добавить узел
+            ' РґРѕР±Р°РІРёС‚СЊ СѓР·РµР»
             node.Nodes.Add(Trim(strs(i + 1)), Trim(strs(i)), Trim(strs(i + 2)), Trim(strs(i + 2)))
             node.Nodes(node.Nodes.Count - 1).Tag = Trim(strs(i + 4))
-            ' Если загружают из файла, то перевести с английского, на котором все сохраняется
+            ' Р•СЃР»Рё Р·Р°РіСЂСѓР¶Р°СЋС‚ РёР· С„Р°Р№Р»Р°, С‚Рѕ РїРµСЂРµРІРµСЃС‚Рё СЃ Р°РЅРіР»РёР№СЃРєРѕРіРѕ, РЅР° РєРѕС‚РѕСЂРѕРј РІСЃРµ СЃРѕС…СЂР°РЅСЏРµС‚СЃСЏ
             ' If fromEng Then node.Nodes(node.Nodes.Count - 1).Text = transNodeFromEng(node.Nodes(node.Nodes.Count - 1))
             i += 4 : lev = 0
         Next
@@ -465,17 +465,17 @@ Public Module Perevodi
         Dim i As Integer, fromRecur As Boolean = False
         For i = ind To s.Length - 1
             Dim addT As New TreeNode(s(i)) : addT.Name = GetUIN()
-            If UCase(Trim(s(i))).IndexOf(UCase(trans("ЕСЛИ"))) = 0 Then 'And UCase(Trim(s(i))).LastIndexOf(UCase(trans("ТОГДА"))) = s(i).Length - trans("ТОГДА").Length Then
+            If UCase(Trim(s(i))).IndexOf(UCase(trans("Р•РЎР›Р"))) = 0 Then 'And UCase(Trim(s(i))).LastIndexOf(UCase(trans("РўРћР“Р”Рђ"))) = s(i).Length - trans("РўРћР“Р”Рђ").Length Then
                 addT.Tag = "If"
-            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("ИЛИЕСЛИ"))) = 0 Then
+            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("РР›РР•РЎР›Р"))) = 0 Then
                 addT.Tag = "ElseIf" : If fromRecur = False Then Return i - 1
-            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("В остальных случаях"))) = 0 Then
+            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("Р’ РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС…"))) = 0 Then
                 addT.Tag = "Else" : If fromRecur = False Then Return i - 1
-            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("Конец условия"))) = 0 Then
+            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("РљРѕРЅРµС† СѓСЃР»РѕРІРёСЏ"))) = 0 Then
                 addT.Tag = "EndIf" : If fromRecur = False Then Return i - 1
-            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("ПОВТОРЯТЬСЯ ПОКА"))) = 0 Then
+            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("РџРћР’РўРћР РЇРўР¬РЎРЇ РџРћРљРђ"))) = 0 Then
                 addT.Tag = "While"
-            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("Конец цикла"))) = 0 Then
+            ElseIf UCase(Trim(s(i))).IndexOf(UCase(trans("РљРѕРЅРµС† С†РёРєР»Р°"))) = 0 Then
                 addT.Tag = "EndWhile" : If fromRecur = False Then Return i - 1
             ElseIf Trim(s(i)).IndexOf("#") = 0 Or Trim(s(i)) = "" Then
                 Continue For
@@ -488,16 +488,16 @@ Public Module Perevodi
         Next
         Return ind
     End Function
-    ' ГЕНЕРАЦИЯ VB КОДА ИЗ ОБЪЕКТОВ
+    ' Р“Р•РќР•Р РђР¦РРЇ VB РљРћР”Рђ РР— РћР‘РЄР•РљРўРћР’
     Public rp As RunProject
     Public Function ToStrCodeFromObj(ByVal MyObj() As Object, Optional ByVal withParentTree As Boolean = False, Optional ByVal toEng As Boolean = False, Optional ByVal isRun As Boolean = False, Optional ByVal withProgres As Boolean = True) As String
         Dim declar, initial, added, histors, fill, loads, creates, nadoevents, events, str, prevFrm As String
         Dim i, j As Integer, MyObjs() As Object
-        ' создаем новый ран проект
+        ' СЃРѕР·РґР°РµРј РЅРѕРІС‹Р№ СЂР°РЅ РїСЂРѕРµРєС‚
         rp = New RunProject("")
         rp.Param = New PropertysSobyt(Nothing, Nothing, Nothing, MyZnak & "All")
 
-        ' Записать все объекты которые надо скопировать в один массив MyObjs
+        ' Р—Р°РїРёСЃР°С‚СЊ РІСЃРµ РѕР±СЉРµРєС‚С‹ РєРѕС‚РѕСЂС‹Рµ РЅР°РґРѕ СЃРєРѕРїРёСЂРѕРІР°С‚СЊ РІ РѕРґРёРЅ РјР°СЃСЃРёРІ MyObjs
         Dim lst As New ArrayList()
         If MyObj Is Nothing Then Return Nothing
         For i = 0 To MyObj.Length - 1
@@ -507,7 +507,7 @@ Public Module Perevodi
         Next
         MyObjs = lst.ToArray
 
-        ' если это форма и ее пытаются сохранить в файле, то с ней надо сохранять все её объекты, включая полуобъекты
+        ' РµСЃР»Рё СЌС‚Рѕ С„РѕСЂРјР° Рё РµРµ РїС‹С‚Р°СЋС‚СЃСЏ СЃРѕС…СЂР°РЅРёС‚СЊ РІ С„Р°Р№Р»Рµ, С‚Рѕ СЃ РЅРµР№ РЅР°РґРѕ СЃРѕС…СЂР°РЅСЏС‚СЊ РІСЃРµ РµС‘ РѕР±СЉРµРєС‚С‹, РІРєР»СЋС‡Р°СЏ РїРѕР»СѓРѕР±СЉРµРєС‚С‹
         'If toEng Or isRun And MyObj.Length = 1 Then
         '    If Iz.IsFORM(MyObj(0)) Then MyObjs = MyObj(0).MyObjs
         'End If
@@ -515,9 +515,9 @@ Public Module Perevodi
         'For i = 0 To PoleznieObjs.Length - 1
         '    ReDims(MyObjs) : MyObjs(MyObjs.Length - 1) = PoleznieObjs(i)
         'Next
-        ' Теперь перевести каждый объект в текст
+        ' РўРµРїРµСЂСЊ РїРµСЂРµРІРµСЃС‚Рё РєР°Р¶РґС‹Р№ РѕР±СЉРµРєС‚ РІ С‚РµРєСЃС‚
         For i = 0 To MyObjs.Length - 1
-            ' Прогресс-форма
+            ' РџСЂРѕРіСЂРµСЃСЃ-С„РѕСЂРјР°
             If withProgres Then ProgressForm.ProgressBarValue = (100 / (MyObjs.Length)) * i
             If proj.pProgressForm = "yes" Then
                 If (i Mod 5) = 0 Then
@@ -528,7 +528,7 @@ Public Module Perevodi
                 fill &= "ProgressForm.ProgressBar1.Value = " & 45 + Round((55 / (MyObjs.Length)) * i) & vbCrLf
             End If
 
-            ' ДЕКЛАРАЦИЯ И ИНИЦИАЛИЗАЦИЯ
+            ' Р”Р•РљР›РђР РђР¦РРЇ Р РРќРР¦РРђР›РР—РђР¦РРЇ
             Dim Name As String = GetCompilName(MyObjs(i))
             Dim frmName As String = GetCompilName(MyObjs(i).getMyForm)
             Dim tip As String = MyObjs(i).obj.GetType.ToString.Substring(ClassAplication.Length)
@@ -558,29 +558,29 @@ Public Module Perevodi
             initial &= "ReDimsO(" & Name & ".MyObj.MyForm.MyObjs) : " & Name & ".MyObj.MyForm.MyObjs(" _
                     & Name & ".MyObj.MyForm.MyObjs.Length - 1) = " & Name & ".MyObj" & vbCrLf & vbCrLf
 
-            ' СОХРАНЕНИЕ ВСЕХ СВОЙСТВ
-            Dim otlozhProps() As String = {UCase(trans("Вышина")), UCase(trans("Ширина")), UCase(trans("Видимый")), _
-                UCase(trans("Вышина")), UCase(trans("Ширина")), UCase(trans("Значение")), UCase(trans("Выделенная запись")), _
-                UCase(trans("RTF код документа")), UCase(trans("Расстояние разделителя")), UCase(trans("Ссылка"))}
+            ' РЎРћРҐР РђРќР•РќРР• Р’РЎР•РҐ РЎР’РћР™РЎРўР’
+            Dim otlozhProps() As String = {UCase(trans("Р’С‹С€РёРЅР°")), UCase(trans("РЁРёСЂРёРЅР°")), UCase(trans("Р’РёРґРёРјС‹Р№")), _
+                UCase(trans("Р’С‹С€РёРЅР°")), UCase(trans("РЁРёСЂРёРЅР°")), UCase(trans("Р—РЅР°С‡РµРЅРёРµ")), UCase(trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ")), _
+                UCase(trans("RTF РєРѕРґ РґРѕРєСѓРјРµРЅС‚Р°")), UCase(trans("Р Р°СЃСЃС‚РѕСЏРЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ")), UCase(trans("РЎСЃС‹Р»РєР°"))}
             If MyObjs(i).Propertys IsNot Nothing And Iz.isPoleznie(MyObjs(i).obj) = False Then
                 IzmenenieBylo2(MyObjs(i))
                 Dim prop As ErrString
                 For j = 0 To MyObjs(i).Propertys.Length - 1
                     If Array.IndexOf(ReadOnlyProps, MyObjs(i).PropertysUp(j)) <> -1 Then Continue For
                     prop = GetProperty(MyObjs(i), MyObjs(i).Propertys(j))
-                    ' если это не свойство по умолчанию и свойство без ошибки
+                    ' РµСЃР»Рё СЌС‚Рѕ РЅРµ СЃРІРѕР№СЃС‚РІРѕ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ Рё СЃРІРѕР№СЃС‚РІРѕ Р±РµР· РѕС€РёР±РєРё
                     If (isRun = False Or prop.str <> GetProperty(Pustishki(tip), MyObjs(i).Propertys(j)).str _
                     Or Iz.IsFORM(MyObjs(i))) And prop.err = "" And Array.IndexOf(NoSaveProps, UCase(MyObjs(i).Propertys(j))) = -1 _
                     And Array.IndexOf(otlozhProps, MyObjs(i).PropertysUp(j)) = -1 Then
 
                         Dim adds As String = ""
                         prop.str = CreateKovich(perevesti(prop.str, False))
-                        If UCase(MyObjs(i).Propertys(j)) = UCase(trans("Статус окна")) Then
+                        If UCase(MyObjs(i).Propertys(j)) = UCase(trans("РЎС‚Р°С‚СѓСЃ РѕРєРЅР°")) Then
                             fill &= Name & ".StatusTemp = """ & MyObjs(i).obj.props.WindowState & """" & vbCrLf
                             Continue For
-                        ElseIf UCase(MyObjs(i).Propertys(j)) = UCase(trans("Вложенное всплывающее меню")) _
-                        Or UCase(MyObjs(i).Propertys(j)) = UCase(trans("Главное меню")) _
-                        Or UCase(MyObjs(i).Propertys(j)) = UCase(trans("Всплывающее меню")) Then
+                        ElseIf UCase(MyObjs(i).Propertys(j)) = UCase(trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РІСЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ")) _
+                        Or UCase(MyObjs(i).Propertys(j)) = UCase(trans("Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ")) _
+                        Or UCase(MyObjs(i).Propertys(j)) = UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ")) Then
                             adds = "(True)"
                         End If
                         fill &= Name & ".Props." & trans(MyObjs(i).Propertys(j), True).Replace(" ", "") & adds & _
@@ -588,7 +588,7 @@ Public Module Perevodi
 
                     End If
                 Next
-                ' Присвоить отложенные свойства, которые надо присваивать последними
+                ' РџСЂРёСЃРІРѕРёС‚СЊ РѕС‚Р»РѕР¶РµРЅРЅС‹Рµ СЃРІРѕР№СЃС‚РІР°, РєРѕС‚РѕСЂС‹Рµ РЅР°РґРѕ РїСЂРёСЃРІР°РёРІР°С‚СЊ РїРѕСЃР»РµРґРЅРёРјРё
                 For j = 0 To otlozhProps.Length - 1
                     If Array.IndexOf(MyObjs(i).PropertysUp, otlozhProps(j)) <> -1 Then
                         prop.str = CreateKovich(perevesti(GetProperty(MyObjs(i), otlozhProps(j)).str, False))
@@ -602,7 +602,7 @@ Public Module Perevodi
                 fill &= Name & ".Props.Name = """ & MyObjs(i).obj.Props.name & """" & vbCrLf & vbCrLf
             End If
 
-            ' СОХРАНЕНИЕ КОНТЕНЕРА
+            ' РЎРћРҐР РђРќР•РќРР• РљРћРќРўР•РќР•Р Рђ
             If MyObjs(i).conteiner Is Nothing = False Then
                 If MyObjs(i).obj.typeObj <> "PoluObj" Then
                     If Iz.IsMMs(MyObjs(i)) Then
@@ -620,7 +620,7 @@ Public Module Perevodi
                 End If
             End If
 
-            ' СОХРАНЕНИЕ ХИСТОРИ ЛЕВЕЛА
+            ' РЎРћРҐР РђРќР•РќРР• РҐРРЎРўРћР Р Р›Р•Р’Р•Р›Рђ
             If Iz.IsFORM(MyObjs(i)) And Iz.isPoleznie(MyObjs(i).obj) = False Then
                 For j = 0 To MyObjs(i).HistoryLevel.count - 1
                     If MyObjs(i).HistoryLevel(j).conteiner IsNot Nothing Then
@@ -629,14 +629,14 @@ Public Module Perevodi
                 Next
             End If
 
-            ' СОЗДАНИЕ НУЖНЫХ СОБЫТИЙ
+            ' РЎРћР—Р”РђРќРР• РќРЈР–РќР«РҐ РЎРћР‘Р«РўРР™
             If Iz.IsFORM(MyObjs(i)) Then
                 nadoevents &= "Public Sub " & Name & "_DisposedEnd(ByVal sender As Object, ByVal e As System.EventArgs) Handles " & Name & ".Disposed" & vbCrLf & _
                           "    If DaOrNet(" & Name & ".Props.MainForm) Then proj.isCLOSING = True : Application.Exit()" & vbCrLf & _
                           "End Sub" & vbCrLf & vbCrLf
                 nadoevents &= "Public Sub " & Name & "_FormClosingNado(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles " & Name & ".FormClosing" & vbCrLf & _
                           "    If DaOrNet(" & Name & ".Props.ForbidClose) Then e.Cancel = True : Exit Sub" & vbCrLf & _
-                          "    If UCase(" & Name & ".Props.MainForm) = UCase(trans(""Да"")) Or proj.isCLOSING Then" & vbCrLf & _
+                          "    If UCase(" & Name & ".Props.MainForm) = UCase(trans(""Р”Р°"")) Or proj.isCLOSING Then" & vbCrLf & _
                           "        " & Name & ".Hide() : Application.Exit()" & vbCrLf & _
                           "    Else" & vbCrLf & _
                           "        e.Cancel = True : " & Name & ".Hide()" & vbCrLf & _
@@ -674,15 +674,15 @@ Public Module Perevodi
                               "End Sub" & vbCrLf & vbCrLf
             End If
 
-            ' СОХРАНЕНИЕ УЗЛА
+            ' РЎРћРҐР РђРќР•РќРР• РЈР—Р›Рђ
             Dim node As TreeNode = MyObjs(i).GetNode(, True)
             If node IsNot Nothing Then
                 isCompilBest = True
                 For j = 0 To node.Nodes.Count - 1
                     events &= getCompilEvent(MyObjs(i), node.Nodes(j), Name) & vbCrLf & vbCrLf
 
-                    ' ОЧЕРЕДНОСТЬ СОБЫТИЙ. Например, Tick и NadoTick чтобы очередность выполнения была правильной!
-                    If node.Nodes(j).Text.ToUpper = trans("Тикнул").ToUpper Then
+                    ' РћР§Р•Р Р•Р”РќРћРЎРўР¬ РЎРћР‘Р«РўРР™. РќР°РїСЂРёРјРµСЂ, Tick Рё NadoTick С‡С‚РѕР±С‹ РѕС‡РµСЂРµРґРЅРѕСЃС‚СЊ РІС‹РїРѕР»РЅРµРЅРёСЏ Р±С‹Р»Р° РїСЂР°РІРёР»СЊРЅРѕР№!
+                    If node.Nodes(j).Text.ToUpper = trans("РўРёРєРЅСѓР»").ToUpper Then
                         creates &= "RemoveHandler " & Name & ".Tick, AddressOf " & Name & "_Tick" & vbCrLf
                         creates &= "AddHandler " & Name & ".Tick, AddressOf " & Name & "_Tick" & vbCrLf & vbCrLf
                     End If
@@ -691,7 +691,7 @@ Public Module Perevodi
                 isCompilBest = False
             End If
 
-            ' ОКОНЧАТЕЛЬНАЯ ЗАГРУЗКА
+            ' РћРљРћРќР§РђРўР•Р›Р¬РќРђРЇ Р—РђР“Р РЈР—РљРђ
             If Iz.isPoleznie(MyObjs(i).obj) = False Then
                 loads &= Name & ".load()" & vbCrLf
                 If Iz.IsFORM(MyObjs(i)) Then
@@ -706,42 +706,42 @@ Public Module Perevodi
         creates &= prevFrm & ".RaiseCreate()" & vbCrLf
 
 
-        ' СОЕДИНЕНИЕ ВСЕГО В VB КОД
+        ' РЎРћР•Р”РРќР•РќРР• Р’РЎР•Р“Рћ Р’ VB РљРћР”
         str = "Module CodeAlg" & vbCrLf & vbCrLf
         ' str &= "Public LLLangNam As String = """ & lang_name & """" & vbCrLf & vbCrLf
         str &= declar & vbCrLf & vbCrLf
         str &= "    Sub Initial()" & vbCrLf & "RunProj.isINITIALIZATED = True" & vbCrLf & vbCrLf
-        str &= "' Задание переменных" & vbCrLf
+        str &= "' Р—Р°РґР°РЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С…" & vbCrLf
         str &= "RunProj.iPathShort = " & """" & proj.iPathShort & """" & vbCrLf
         str &= "RunProj.iPath = RunProj.pPath & RunProj.iPathShort" & vbCrLf & vbCrLf
         If proj.pProgressForm = "yes" Then
-            str &= "' Отображение полосы загрузки" & vbCrLf
-            str &= "ProgressForm.Label1.Text = """ & transInfc("Загрузка") & "...""" & vbCrLf
+            str &= "' РћС‚РѕР±СЂР°Р¶РµРЅРёРµ РїРѕР»РѕСЃС‹ Р·Р°РіСЂСѓР·РєРё" & vbCrLf
+            str &= "ProgressForm.Label1.Text = """ & transInfc("Р—Р°РіСЂСѓР·РєР°") & "...""" & vbCrLf
             str &= "ProgressForm.Show()" & vbCrLf
             str &= "Application.DoEvents()" & vbCrLf
             str &= "ProgressForm.ProgressBarValue = 1" & vbCrLf & vbCrLf
         End If
-        str &= "' Создание всех объектов" & vbCrLf
+        str &= "' РЎРѕР·РґР°РЅРёРµ РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ" & vbCrLf
         str &= initial & vbCrLf & vbCrLf
-        str &= "' Размещение объектов на окнах" & vbCrLf
+        str &= "' Р Р°Р·РјРµС‰РµРЅРёРµ РѕР±СЉРµРєС‚РѕРІ РЅР° РѕРєРЅР°С…" & vbCrLf
         str &= added & vbCrLf & vbCrLf
-        str &= "' Уровнять по уровням объекты" & vbCrLf
+        str &= "' РЈСЂРѕРІРЅСЏС‚СЊ РїРѕ СѓСЂРѕРІРЅСЏРј РѕР±СЉРµРєС‚С‹" & vbCrLf
         str &= histors & vbCrLf & vbCrLf
-        str &= "' Настройка свойств объектов" & vbCrLf
+        str &= "' РќР°СЃС‚СЂРѕР№РєР° СЃРІРѕР№СЃС‚РІ РѕР±СЉРµРєС‚РѕРІ" & vbCrLf
         str &= fill & vbCrLf
         'str &= "initial2()" & vbCrLf & vbCrLf
-        str &= "' Окончательная загрузка" & vbCrLf
+        str &= "' РћРєРѕРЅС‡Р°С‚РµР»СЊРЅР°СЏ Р·Р°РіСЂСѓР·РєР°" & vbCrLf
         str &= loads & vbCrLf & "RunProj.GetAllObjects()" & vbCrLf & "RunProj.isINITIALIZATED = False" & vbCrLf & vbCrLf & creates & vbCrLf
         If proj.pProgressForm = "yes" Then str &= "ProgressForm.Hide()" & vbCrLf
         str &= "    End Sub" & vbCrLf & vbCrLf
-        str &= "' Обязательные события" & vbCrLf
+        str &= "' РћР±СЏР·Р°С‚РµР»СЊРЅС‹Рµ СЃРѕР±С‹С‚РёСЏ" & vbCrLf
         str &= nadoevents & vbCrLf & vbCrLf
-        str &= "' Все события" & vbCrLf
+        str &= "' Р’СЃРµ СЃРѕР±С‹С‚РёСЏ" & vbCrLf
         str &= events & vbCrLf
         str &= "End Module" & vbCrLf & vbCrLf & vbCrLf & vbCrLf
 
         'str &= "Module CodeAlg2" & vbCrLf & vbCrLf
-        'str &= "    ' Настройка свойств объектов" & vbCrLf
+        'str &= "    ' РќР°СЃС‚СЂРѕР№РєР° СЃРІРѕР№СЃС‚РІ РѕР±СЉРµРєС‚РѕРІ" & vbCrLf
         'str &= "    Sub Initial2()" & vbCrLf & vbCrLf
         'str &= fill & vbCrLf & vbCrLf
         'str &= "    End Sub" & vbCrLf & vbCrLf
@@ -749,40 +749,40 @@ Public Module Perevodi
 
         Return str
     End Function
-    ' ПРЕОБРАЗОВАНИЕ ВЕТКИ СОБЫТИЯ ДЕРЕВА В ПРОЦЕДУРУ VB
+    ' РџР Р•РћР‘Р РђР—РћР’РђРќРР• Р’Р•РўРљР РЎРћР‘Р«РўРРЇ Р”Р•Р Р•Р’Рђ Р’ РџР РћР¦Р•Р”РЈР РЈ VB
     Function getCompilEvent(ByVal myObj As Object, ByVal node As TreeNode, ByVal name As String) As String
         Dim tip As String = trans(node.Text, True).Replace(" ", "")
         Dim ps As New PropertysSobyt(Nothing, Nothing, Nothing, node.Text)
         Dim str = "", intro = "", handls As String = name
         If node.Tag <> "Sobyt" Then Return ""
 
-        ' Настройка под отдельные события
-        If UCase(node.Text) = UCase(trans("Добавли строку")) Or UCase(node.Text) = UCase(trans("Удалили строку")) Then
+        ' РќР°СЃС‚СЂРѕР№РєР° РїРѕРґ РѕС‚РґРµР»СЊРЅС‹Рµ СЃРѕР±С‹С‚РёСЏ
+        If UCase(node.Text) = UCase(trans("Р”РѕР±Р°РІР»Рё СЃС‚СЂРѕРєСѓ")) Or UCase(node.Text) = UCase(trans("РЈРґР°Р»РёР»Рё СЃС‚СЂРѕРєСѓ")) Then
             intro = "If " & name & ".Props.isSelecExecute Then Exit Sub" & vbCrLf
-        ElseIf Iz.IsTbx(myObj) And UCase(node.Text) = UCase(trans("Нажатие клавиатуры")) Then
+        ElseIf Iz.IsTbx(myObj) And UCase(node.Text) = UCase(trans("РќР°Р¶Р°С‚РёРµ РєР»Р°РІРёР°С‚СѓСЂС‹")) Then
             intro = "e.Handled = TextBoxAllow(sender, e)" & vbCrLf
             intro &= "If e.Handled Then Exit Sub" & vbCrLf
-        ElseIf UCase(node.Text) = UCase(trans("Клик по выделенной ячейке")) Then
+        ElseIf UCase(node.Text) = UCase(trans("РљР»РёРє РїРѕ РІС‹РґРµР»РµРЅРЅРѕР№ СЏС‡РµР№РєРµ")) Then
             tip = "CellMouseDown"
             intro = "If e.RowIndex > -1 And e.ColumnIndex > -1 Then" & vbCrLf _
                   & "   If " & name & ".Rows(e.RowIndex).Cells(e.ColumnIndex).Selected = False Then Exit Sub" & vbCrLf _
                   & "End If" & vbCrLf
-        ElseIf UCase(node.Text) = UCase(trans("Движение бегунка")) Then
+        ElseIf UCase(node.Text) = UCase(trans("Р”РІРёР¶РµРЅРёРµ Р±РµРіСѓРЅРєР°")) Then
             tip = "Scroll"
         ElseIf Iz.IsCM(myObj) Then
             handls &= "CnMn"
         End If
 
-        ' Строка заголовка события
+        ' РЎС‚СЂРѕРєР° Р·Р°РіРѕР»РѕРІРєР° СЃРѕР±С‹С‚РёСЏ
         str = "Public Sub " & name & "_" & tip & "(ByVal sender As Object, ByVal e As "
         str &= ps.eType & ") Handles " & handls & "." & tip & vbCrLf
-        ' Блокировка события, если еще идет инициализация
+        ' Р‘Р»РѕРєРёСЂРѕРІРєР° СЃРѕР±С‹С‚РёСЏ, РµСЃР»Рё РµС‰Рµ РёРґРµС‚ РёРЅРёС†РёР°Р»РёР·Р°С†РёСЏ
         str &= "If RunProj.isINITIALIZATED Then Exit Sub" & vbCrLf
-        ' Переменная события, со всей информацией о данном событии и доступом
+        ' РџРµСЂРµРјРµРЅРЅР°СЏ СЃРѕР±С‹С‚РёСЏ, СЃРѕ РІСЃРµР№ РёРЅС„РѕСЂРјР°С†РёРµР№ Рѕ РґР°РЅРЅРѕРј СЃРѕР±С‹С‚РёРё Рё РґРѕСЃС‚СѓРїРѕРј
         str &= "Dim CurrentEvent as New PropertysSobyt(" & name & ".MyObj, e, nothing,""" & node.Text & """)" & vbCrLf
         str &= intro & vbCrLf
 
-        ' Все действия события
+        ' Р’СЃРµ РґРµР№СЃС‚РІРёСЏ СЃРѕР±С‹С‚РёСЏ
         Dim i As Integer
         For i = 0 To node.Nodes.Count - 1
             If node.Nodes(i).Tag = "Comm" Or node.Nodes(i).Text.IndexOf("'") = 0 _
@@ -794,30 +794,30 @@ Public Module Perevodi
         str &= "CurrentEvent.Zavershit()" & vbCrLf & "End Sub" & vbCrLf
         Return str
     End Function
-    ' ПРЕОБРАЗОВАНИЕ УЗЛА ДЕРЕВА В СТРОКУ КОДА VB
+    ' РџР Р•РћР‘Р РђР—РћР’РђРќРР• РЈР—Р›Рђ Р”Р•Р Р•Р’Рђ Р’ РЎРўР РћРљРЈ РљРћР”Рђ VB
     Function getCompilNode(ByVal node As TreeNode) As String
         Dim i As Integer, str As String, bylEndIfWhile As Boolean = False
-        If UCase(node.Text) = UCase(trans("Добавьте сюда действия")) Then Return str
+        If UCase(node.Text) = UCase(trans("Р”РѕР±Р°РІСЊС‚Рµ СЃСЋРґР° РґРµР№СЃС‚РІРёСЏ")) Then Return str
         str = rp.RunString(node.Text, node.Tag, rp.Param).str & vbCrLf
         For i = 0 To node.Nodes.Count - 1
             str &= getCompilNode(node.Nodes(i))
         Next
         Return str
     End Function
-    ' СТРОКА БАЗИКА ОГРАНИЧЕНЕ 65555 СИМВОЛАМИ. РАЗБИВАЕМ СТРОКУ НА БЛОКИ ПО razbivkaCount СИМВОЛОВ
+    ' РЎРўР РћРљРђ Р‘РђР—РРљРђ РћР“Р РђРќРР§Р•РќР• 65555 РЎРРњР’РћР›РђРњР. Р РђР—Р‘РР’РђР•Рњ РЎРўР РћРљРЈ РќРђ Р‘Р›РћРљР РџРћ razbivkaCount РЎРРњР’РћР›РћР’
     Function getCompilLineLength(ByVal str As String) As String
         Dim i As Integer = 0, razbivkaCount As Integer = 9998, ret As String = ""
         While str.Length - i > razbivkaCount
             Dim kovich As Char = """"
             Dim popravka As Integer = 0
             Dim count As Integer = 0
-            ' считаем количество кавычек до места разбива, чтобы не влезть в ""
+            ' СЃС‡РёС‚Р°РµРј РєРѕР»РёС‡РµСЃС‚РІРѕ РєР°РІС‹С‡РµРє РґРѕ РјРµСЃС‚Р° СЂР°Р·Р±РёРІР°, С‡С‚РѕР±С‹ РЅРµ РІР»РµР·С‚СЊ РІ ""
             While str.Substring(razbivkaCount + i - count, 1) = """"
                 count += 1
             End While
-            ' если вслезли в "", то сделать поправку
+            ' РµСЃР»Рё РІСЃР»РµР·Р»Рё РІ "", С‚Рѕ СЃРґРµР»Р°С‚СЊ РїРѕРїСЂР°РІРєСѓ
             If count > 0 And count Mod 2 = 0 Then popravka = 1
-            ' если предыдущий символ кавычка, то текст и так закончен, кавычки ставить не надо
+            ' РµСЃР»Рё РїСЂРµРґС‹РґСѓС‰РёР№ СЃРёРјРІРѕР» РєР°РІС‹С‡РєР°, С‚Рѕ С‚РµРєСЃС‚ Рё С‚Р°Рє Р·Р°РєРѕРЅС‡РµРЅ, РєР°РІС‹С‡РєРё СЃС‚Р°РІРёС‚СЊ РЅРµ РЅР°РґРѕ
             If count = 0 AndAlso str.Chars(razbivkaCount + i - 1) = """" Then
                 Dim j As Integer = razbivkaCount + i - 1
                 While j >= 0
@@ -832,7 +832,7 @@ Public Module Perevodi
         End While
         Return str
     End Function
-    ' ПОЛУЧЕНИЕ ИМЕНИ ОБЪЕКТА, КОТОРОЕ БУДЕ У НЕГО В VB
+    ' РџРћР›РЈР§Р•РќРР• РРњР•РќР РћР‘РЄР•РљРўРђ, РљРћРўРћР РћР• Р‘РЈР”Р• РЈ РќР•Р“Рћ Р’ VB
     Function GetCompilName(ByVal myObj As Object) As String
         Return myObj.GetMyForm.obj.Props.name.Replace(" ", "_") & myObj.GetMyForm.obj.Props.Index.Replace(",", "_") & _
                 myObj.obj.Props.name.Replace(" ", "_") & myObj.obj.Props.Index.Replace(",", "_")

@@ -1,4 +1,4 @@
-Public Interface IWinsock
+﻿Public Interface IWinsock
 
 #Region " Events "
 

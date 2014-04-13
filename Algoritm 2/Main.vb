@@ -1,6 +1,6 @@
-Public Module MainClass
+п»їPublic Module MainClass
     Public Sub main()
-        ' ЧТЕНИЕ ВЛОЖЕННЫХ ДАННЫХ ИЗ ЕХЕ ФАЙЛА
+        ' Р§РўР•РќРР• Р’Р›РћР–Р•РќРќР«РҐ Р”РђРќРќР«РҐ РР— Р•РҐР• Р¤РђР™Р›Рђ
         Dim fname As String = System.Environment.GetCommandLineArgs()(0)
         Dim code_bytes(), start_bytes(5) As Byte
         Dim code_chars(), start_chars(5) As Char
@@ -11,14 +11,14 @@ Public Module MainClass
         Catch ex As Exception
             Errors.FileNoAccess(ex.Message) : Exit Sub
         End Try
-        ' Определение позиции, с которой идет код пользователя
+        ' РћРїСЂРµРґРµР»РµРЅРёРµ РїРѕР·РёС†РёРё, СЃ РєРѕС‚РѕСЂРѕР№ РёРґРµС‚ РєРѕРґ РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ
         fs.Position = fs.Length - 6
         fs.Read(start_bytes, 0, start_bytes.Length)
         start_chars = System.Text.Encoding.UTF8.GetChars(start_bytes)
         start = String.Concat(start_chars)
-        ' Если передали языки вложенными в файл (УСЛОВИЕ ВЕРНО КОГДА ЭКСПОРТИРОВАЛИ В ГОТОВУЮ ПРОГАММУ А НЕ В VB.NET)
+        ' Р•СЃР»Рё РїРµСЂРµРґР°Р»Рё СЏР·С‹РєРё РІР»РѕР¶РµРЅРЅС‹РјРё РІ С„Р°Р№Р» (РЈРЎР›РћР’РР• Р’Р•Р РќРћ РљРћР“Р”Рђ Р­РљРЎРџРћР РўРР РћР’РђР›Р Р’ Р“РћРўРћР’РЈР® РџР РћР“РђРњРњРЈ Рђ РќР• Р’ VB.NET)
         If IsNumeric(start) Then
-            ' Получение вложенных в файл данных
+            ' РџРѕР»СѓС‡РµРЅРёРµ РІР»РѕР¶РµРЅРЅС‹С… РІ С„Р°Р№Р» РґР°РЅРЅС‹С…
             fs.Position = start
             ReDim code_bytes(fs.Length - fs.Position - 6 - 1)
             fs.Read(code_bytes, 0, code_bytes.Length)
@@ -26,13 +26,13 @@ Public Module MainClass
             code = String.Concat(code_chars)
             fs.Close()
 
-            ' ЗАДАНИЕ ЯЗЫКОВ
-            ' Сначала извлечь название языка
+            ' Р—РђР”РђРќРР• РЇР—Р«РљРћР’
+            ' РЎРЅР°С‡Р°Р»Р° РёР·РІР»РµС‡СЊ РЅР°Р·РІР°РЅРёРµ СЏР·С‹РєР°
             Dim langNam As String = code.Substring(0, code.IndexOf("~~~"))
             code = code.Substring(code.IndexOf("~~~") + 3)
             lang_name = langNam : lang_interface = lang_name : lang_name_old = lang_name
 
-            ' Сначала извлечь язык
+            ' РЎРЅР°С‡Р°Р»Р° РёР·РІР»РµС‡СЊ СЏР·С‹Рє
             Dim langStr As String = code.Substring(0, code.IndexOf("~~~"))
             code = code.Substring(code.IndexOf("~~~") + 3)
             lang = Get2ListFromString(langStr, "~~")
@@ -40,19 +40,19 @@ Public Module MainClass
             langINFC = lang : langLwINFC = langLw
             langOld = lang : langLwOld = langLw
 
-            ' Извлечь английский
+            ' РР·РІР»РµС‡СЊ Р°РЅРіР»РёР№СЃРєРёР№
             Dim langEngStr As String = code.Substring(0, code.IndexOf("~~~"))
             code = code.Substring(code.IndexOf("~~~") + 3)
             langENG = Get2ListFromString(langEngStr, "~~")
             langLwENG = Get2ListFromString(langEngStr, "~~", , True)
         Else
-            ' ПАПКА РАСПОЛОЖЕНИЯ ФАЙЛОВ ЯЗЫКОВ (*.lng)
+            ' РџРђРџРљРђ Р РђРЎРџРћР›РћР–Р•РќРРЇ Р¤РђР™Р›РћР’ РЇР—Р«РљРћР’ (*.lng)
             lang_name = "Russian"
             LanguagePath = System.IO.Path.GetDirectoryName(fname) & "\Languages\"
             setLangs(True, False)
         End If
 
-        ' ЗАГРУЗКА ПРОЕКТА
+        ' Р—РђР“Р РЈР—РљРђ РџР РћР•РљРўРђ
         RunProj = New RunProject("")
         Pers(fname)
         CreateArrays() : CreateConstants() : CreateHelpWords()

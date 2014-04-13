@@ -13,276 +13,276 @@ Partial Class MainForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.components = New System.ComponentModel.Container
-        Dim ListViewItem5 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", ""}, -1)
+        Me.components = New System.ComponentModel.Container()
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", ""}, -1)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip
-        Me.ExitMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.NewMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.OpenMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.SaveMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.SaveAsMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator
-        Me.BuildMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ExportVBMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripSeparator
-        Me.RecentProjects = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem14 = New System.Windows.Forms.ToolStripSeparator
-        Me.ExitMenu2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.UndoMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.RedoMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripSeparator
-        Me.CopyMenu4 = New System.Windows.Forms.ToolStripMenuItem
-        Me.CutMenu4 = New System.Windows.Forms.ToolStripMenuItem
-        Me.PasteMenu4 = New System.Windows.Forms.ToolStripMenuItem
-        Me.DelMenu4 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripSeparator
-        Me.SelectAllMenu4 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ProjectMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.RunMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.PauseMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.StopMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripSeparator
-        Me.StepIntoMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.StepOverMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.StepOutMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.Tools = New System.Windows.Forms.ToolStripMenuItem
-        Me.TraslateProjMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem12 = New System.Windows.Forms.ToolStripSeparator
-        Me.OptionsMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ПомощьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
-        Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.UpdateMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.RegistrMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.MecenatMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem15 = New System.Windows.Forms.ToolStripSeparator
-        Me.LessonMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.LessonsFirstMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem16 = New System.Windows.Forms.ToolStripSeparator
-        Me.LessonsOthersMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.SamplesMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.SamplesBaseMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem17 = New System.Windows.Forms.ToolStripSeparator
-        Me.SamplesOthersMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem13 = New System.Windows.Forms.ToolStripSeparator
-        Me.AboutMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer
-        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip
-        Me.StatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel
-        Me.SplitMain = New System.Windows.Forms.SplitContainer
-        Me.SplitForms = New System.Windows.Forms.SplitContainer
-        Me.TabControl1 = New System.Windows.Forms.TabControl
-        Me.SplitOutputRun = New System.Windows.Forms.SplitContainer
-        Me.SplitApply = New System.Windows.Forms.SplitContainer
-        Me.SplitTreeView = New System.Windows.Forms.SplitContainer
-        Me.NodeBreakpoint = New MyButton.MyButton
-        Me.NodeEdit = New MyButton.MyButton
-        Me.NodeDel = New MyButton.MyButton
-        Me.NodeDown = New MyButton.MyButton
-        Me.NodeUp = New MyButton.MyButton
-        Me.help6 = New System.Windows.Forms.PictureBox
-        Me.FindCombo = New System.Windows.Forms.ComboBox
-        Me.FindButton = New System.Windows.Forms.Button
-        Me.FindCheck = New System.Windows.Forms.CheckBox
-        Me.forFindText = New System.Windows.Forms.Panel
-        Me.TreeView = New System.Windows.Forms.TreeView
+        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.ExitMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NewMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.OpenMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveAsMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BuildMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExportVBMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VisualStudioExpressMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.RecentProjects = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem14 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ExitMenu2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UndoMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedoMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CopyMenu4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CutMenu4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteMenu4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DelMenu4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem9 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SelectAllMenu4 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProjectMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PauseMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StopMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem11 = New System.Windows.Forms.ToolStripSeparator()
+        Me.StepIntoMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StepOverMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StepOutMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.Tools = New System.Windows.Forms.ToolStripMenuItem()
+        Me.TraslateProjMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem12 = New System.Windows.Forms.ToolStripSeparator()
+        Me.OptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ПомощьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UpdateMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RegistrMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem15 = New System.Windows.Forms.ToolStripSeparator()
+        Me.LessonMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.LessonsFirstMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem16 = New System.Windows.Forms.ToolStripSeparator()
+        Me.LessonsOthersMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SamplesMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SamplesBaseMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem17 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SamplesOthersMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem13 = New System.Windows.Forms.ToolStripSeparator()
+        Me.AboutMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripContainer1 = New System.Windows.Forms.ToolStripContainer()
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.StatusLabel1 = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.SplitMain = New System.Windows.Forms.SplitContainer()
+        Me.SplitForms = New System.Windows.Forms.SplitContainer()
+        Me.TabControl1 = New System.Windows.Forms.TabControl()
+        Me.SplitOutputRun = New System.Windows.Forms.SplitContainer()
+        Me.SplitApply = New System.Windows.Forms.SplitContainer()
+        Me.SplitTreeView = New System.Windows.Forms.SplitContainer()
+        Me.NodeBreakpoint = New MyButton.MyButton()
+        Me.NodeEdit = New MyButton.MyButton()
+        Me.NodeDel = New MyButton.MyButton()
+        Me.NodeDown = New MyButton.MyButton()
+        Me.NodeUp = New MyButton.MyButton()
+        Me.help6 = New System.Windows.Forms.PictureBox()
+        Me.FindCombo = New System.Windows.Forms.ComboBox()
+        Me.FindButton = New System.Windows.Forms.Button()
+        Me.FindCheck = New System.Windows.Forms.CheckBox()
+        Me.forFindText = New System.Windows.Forms.Panel()
+        Me.TreeView = New System.Windows.Forms.TreeView()
         Me.TreeMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.RunDeistMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.NotRunDeistMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.RunDeistMenuSplit = New System.Windows.Forms.ToolStripSeparator
-        Me.EditNodeMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.SelectMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.SelectOneMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.SelectAllMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.UnSelectMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator
-        Me.CommMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.UnCommMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.CommSplit = New System.Windows.Forms.ToolStripSeparator
-        Me.ShowAllMenu2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.HideAllMenu2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator
-        Me.ShowAllMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.HideAllMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripSeparator
-        Me.BreakpointMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem20 = New System.Windows.Forms.ToolStripSeparator
-        Me.CodeViewMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator
-        Me.CutMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.CopyMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.PasteMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.DelMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator
-        Me.UpMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.DownMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.FindLabel = New System.Windows.Forms.Label
-        Me.Apply = New System.Windows.Forms.Button
-        Me.forEditNodeText = New System.Windows.Forms.Panel
-        Me.Output = New System.Windows.Forms.RichTextBox
+        Me.RunDeistMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.NotRunDeistMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunDeistMenuSplit = New System.Windows.Forms.ToolStripSeparator()
+        Me.EditNodeMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectOneMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectAllMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnSelectMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CommMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UnCommMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CommSplit = New System.Windows.Forms.ToolStripSeparator()
+        Me.ShowAllMenu2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HideAllMenu2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ShowAllMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.HideAllMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem10 = New System.Windows.Forms.ToolStripSeparator()
+        Me.BreakpointMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem20 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CodeViewMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CutMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DelMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.UpMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DownMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.FindLabel = New System.Windows.Forms.Label()
+        Me.Apply = New System.Windows.Forms.Button()
+        Me.forEditNodeText = New System.Windows.Forms.Panel()
+        Me.Output = New System.Windows.Forms.RichTextBox()
         Me.EditMiniMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.UndoMenu6 = New System.Windows.Forms.ToolStripMenuItem
-        Me.RedoMenu6 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator
-        Me.CutMenu6 = New System.Windows.Forms.ToolStripMenuItem
-        Me.CopyMenu6 = New System.Windows.Forms.ToolStripMenuItem
-        Me.PasteMenu6 = New System.Windows.Forms.ToolStripMenuItem
-        Me.DelMenu6 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator
-        Me.SelectAllMenu6 = New System.Windows.Forms.ToolStripMenuItem
-        Me.SplitRight = New System.Windows.Forms.SplitContainer
-        Me.SplitListView = New System.Windows.Forms.SplitContainer
-        Me.ComboBox2 = New System.Windows.Forms.ComboBox
-        Me.Button1 = New System.Windows.Forms.Button
-        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox
-        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox
-        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox
-        Me.ListView = New System.Windows.Forms.ListView
-        Me.InfoPropsLabel = New System.Windows.Forms.LinkLabel
-        Me.SplitCreate = New System.Windows.Forms.SplitContainer
-        Me.TabControl2 = New System.Windows.Forms.TabControl
-        Me.sobyts = New System.Windows.Forms.TabPage
-        Me.help1 = New System.Windows.Forms.PictureBox
-        Me.ComboBox1 = New System.Windows.Forms.ComboBox
-        Me.Label1 = New System.Windows.Forms.Label
-        Me.deistviya = New System.Windows.Forms.TabPage
-        Me.help2 = New System.Windows.Forms.PictureBox
-        Me.DeistPanel = New System.Windows.Forms.Panel
-        Me.DeistLabel = New System.Windows.Forms.Label
-        Me.ifs = New System.Windows.Forms.TabPage
-        Me.help3 = New System.Windows.Forms.PictureBox
-        Me.ifPanel = New System.Windows.Forms.Panel
-        Me.IfLabel = New System.Windows.Forms.Label
-        Me.cycles = New System.Windows.Forms.TabPage
-        Me.help4 = New System.Windows.Forms.PictureBox
-        Me.CyclePanel = New System.Windows.Forms.Panel
-        Me.CycleLabel = New System.Windows.Forms.Label
-        Me.comm = New System.Windows.Forms.TabPage
-        Me.help5 = New System.Windows.Forms.PictureBox
-        Me.forEditPrComm = New System.Windows.Forms.Panel
-        Me.Label2 = New System.Windows.Forms.Label
-        Me.Create1 = New System.Windows.Forms.Button
-        Me.Cancel1 = New System.Windows.Forms.Button
-        Me.Peremeschatel = New System.Windows.Forms.TextBox
+        Me.UndoMenu6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedoMenu6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator10 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CutMenu6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyMenu6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteMenu6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DelMenu6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator11 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SelectAllMenu6 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SplitRight = New System.Windows.Forms.SplitContainer()
+        Me.SplitListView = New System.Windows.Forms.SplitContainer()
+        Me.ComboBox2 = New System.Windows.Forms.ComboBox()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.RichTextBox3 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox1 = New System.Windows.Forms.RichTextBox()
+        Me.RichTextBox2 = New System.Windows.Forms.RichTextBox()
+        Me.ListView = New System.Windows.Forms.ListView()
+        Me.InfoPropsLabel = New System.Windows.Forms.LinkLabel()
+        Me.SplitCreate = New System.Windows.Forms.SplitContainer()
+        Me.TabControl2 = New System.Windows.Forms.TabControl()
+        Me.sobyts = New System.Windows.Forms.TabPage()
+        Me.help1 = New System.Windows.Forms.PictureBox()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.deistviya = New System.Windows.Forms.TabPage()
+        Me.help2 = New System.Windows.Forms.PictureBox()
+        Me.DeistPanel = New System.Windows.Forms.Panel()
+        Me.DeistLabel = New System.Windows.Forms.Label()
+        Me.ifs = New System.Windows.Forms.TabPage()
+        Me.help3 = New System.Windows.Forms.PictureBox()
+        Me.ifPanel = New System.Windows.Forms.Panel()
+        Me.IfLabel = New System.Windows.Forms.Label()
+        Me.cycles = New System.Windows.Forms.TabPage()
+        Me.help4 = New System.Windows.Forms.PictureBox()
+        Me.CyclePanel = New System.Windows.Forms.Panel()
+        Me.CycleLabel = New System.Windows.Forms.Label()
+        Me.comm = New System.Windows.Forms.TabPage()
+        Me.help5 = New System.Windows.Forms.PictureBox()
+        Me.forEditPrComm = New System.Windows.Forms.Panel()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.Create1 = New System.Windows.Forms.Button()
+        Me.Cancel1 = New System.Windows.Forms.Button()
+        Me.Peremeschatel = New System.Windows.Forms.TextBox()
         Me.ObjsMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.AddMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.AddUp = New System.Windows.Forms.ToolStripSeparator
-        Me.CreateArrayMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.CreateSubArrayMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ArrayWorkMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.UniteInSubArrayMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.SelectArrayMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.SelectSubArrayMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.AddToArrayMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ExcludeFromArrayMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.MassiveUp = New System.Windows.Forms.ToolStripSeparator
-        Me.CodeViewMenu2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem18 = New System.Windows.Forms.ToolStripSeparator
-        Me.PlanMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.BringToFrontMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.BringToFrontMenuOne = New System.Windows.Forms.ToolStripMenuItem
-        Me.SendToBackMenuOne = New System.Windows.Forms.ToolStripMenuItem
-        Me.SendToBackMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.MoveMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.EditUp = New System.Windows.Forms.ToolStripSeparator
-        Me.CutMenu2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.CopyMenu2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.PasteMenu2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.DelMenu2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripSeparator
-        Me.SelectAllMenu2 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ObjectPanel = New System.Windows.Forms.ToolStrip
-        Me.Button = New System.Windows.Forms.ToolStripButton
-        Me.Panel = New System.Windows.Forms.ToolStripButton
-        Me.DPanel = New System.Windows.Forms.ToolStripButton
-        Me.Window = New System.Windows.Forms.ToolStripButton
-        Me.TPage = New System.Windows.Forms.ToolStripButton
-        Me.Memory = New System.Windows.Forms.ToolStripButton
-        Me.mmenu = New System.Windows.Forms.ToolStripButton
-        Me.cmenu = New System.Windows.Forms.ToolStripButton
-        Me.Media = New System.Windows.Forms.ToolStripButton
-        Me.Audio = New System.Windows.Forms.ToolStripButton
-        Me.TextBoks = New System.Windows.Forms.ToolStripButton
-        Me.CheckBoks = New System.Windows.Forms.ToolStripButton
-        Me.RadioBut = New System.Windows.Forms.ToolStripButton
-        Me.TPanel = New System.Windows.Forms.ToolStripButton
-        Me.WBrowser = New System.Windows.Forms.ToolStripButton
-        Me.Table = New System.Windows.Forms.ToolStripButton
-        Me.ComboBoks = New System.Windows.Forms.ToolStripButton
-        Me.ListBoks = New System.Windows.Forms.ToolStripButton
-        Me.CheckedList = New System.Windows.Forms.ToolStripButton
-        Me.Label = New System.Windows.Forms.ToolStripButton
-        Me.LinkLabel = New System.Windows.Forms.ToolStripButton
-        Me.RichText = New System.Windows.Forms.ToolStripButton
-        Me.ColorDialog = New System.Windows.Forms.ToolStripButton
-        Me.PathDialog = New System.Windows.Forms.ToolStripButton
-        Me.FontDialog = New System.Windows.Forms.ToolStripButton
-        Me.SaveDialog = New System.Windows.Forms.ToolStripButton
-        Me.OpenDialog = New System.Windows.Forms.ToolStripButton
-        Me.PrintDialog = New System.Windows.Forms.ToolStripButton
-        Me.Timer = New System.Windows.Forms.ToolStripButton
-        Me.PictureBoks = New System.Windows.Forms.ToolStripButton
-        Me.TrackBar = New System.Windows.Forms.ToolStripButton
-        Me.Trial = New System.Windows.Forms.ToolStripButton
-        Me.Calendar = New System.Windows.Forms.ToolStripButton
-        Me.Internet = New System.Windows.Forms.ToolStripMenuItem
-        Me.ProgressBar = New System.Windows.Forms.ToolStripMenuItem
-        Me.ClientServer = New System.Windows.Forms.ToolStripMenuItem
-        Me.StandartPanel = New System.Windows.Forms.ToolStrip
-        Me.NewPanel = New System.Windows.Forms.ToolStripButton
-        Me.OpenPanel = New System.Windows.Forms.ToolStripButton
-        Me.SavePanel = New System.Windows.Forms.ToolStripButton
-        Me.BuildPanel = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator
-        Me.CutPanel = New System.Windows.Forms.ToolStripButton
-        Me.CopyPanel = New System.Windows.Forms.ToolStripButton
-        Me.PastePanel = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator
-        Me.UndoPanel = New System.Windows.Forms.ToolStripButton
-        Me.RedoPanel = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator
-        Me.RunPanel = New System.Windows.Forms.ToolStripSplitButton
-        Me.RunDropPanel = New System.Windows.Forms.ToolStripMenuItem
-        Me.RunSaveDropPanel = New System.Windows.Forms.ToolStripMenuItem
-        Me.RunFormDropPanel = New System.Windows.Forms.ToolStripMenuItem
-        Me.PausePanel = New System.Windows.Forms.ToolStripButton
-        Me.StopPanel = New System.Windows.Forms.ToolStripButton
-        Me.StepIntoPanel = New System.Windows.Forms.ToolStripButton
-        Me.StepOverPanel = New System.Windows.Forms.ToolStripButton
-        Me.StepOutPanel = New System.Windows.Forms.ToolStripButton
-        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator
-        Me.HelpPanel = New System.Windows.Forms.ToolStripButton
+        Me.AddMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddUp = New System.Windows.Forms.ToolStripSeparator()
+        Me.CreateArrayMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CreateSubArrayMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ArrayWorkMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.UniteInSubArrayMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectArrayMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SelectSubArrayMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AddToArrayMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ExcludeFromArrayMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MassiveUp = New System.Windows.Forms.ToolStripSeparator()
+        Me.CodeViewMenu2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem18 = New System.Windows.Forms.ToolStripSeparator()
+        Me.PlanMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BringToFrontMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.BringToFrontMenuOne = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SendToBackMenuOne = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SendToBackMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoveMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.EditUp = New System.Windows.Forms.ToolStripSeparator()
+        Me.CutMenu2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyMenu2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteMenu2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DelMenu2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem8 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SelectAllMenu2 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ObjectPanel = New System.Windows.Forms.ToolStrip()
+        Me.Button = New System.Windows.Forms.ToolStripButton()
+        Me.Panel = New System.Windows.Forms.ToolStripButton()
+        Me.DPanel = New System.Windows.Forms.ToolStripButton()
+        Me.Window = New System.Windows.Forms.ToolStripButton()
+        Me.TPage = New System.Windows.Forms.ToolStripButton()
+        Me.Memory = New System.Windows.Forms.ToolStripButton()
+        Me.mmenu = New System.Windows.Forms.ToolStripButton()
+        Me.cmenu = New System.Windows.Forms.ToolStripButton()
+        Me.Media = New System.Windows.Forms.ToolStripButton()
+        Me.Audio = New System.Windows.Forms.ToolStripButton()
+        Me.TextBoks = New System.Windows.Forms.ToolStripButton()
+        Me.CheckBoks = New System.Windows.Forms.ToolStripButton()
+        Me.RadioBut = New System.Windows.Forms.ToolStripButton()
+        Me.TPanel = New System.Windows.Forms.ToolStripButton()
+        Me.WBrowser = New System.Windows.Forms.ToolStripButton()
+        Me.Table = New System.Windows.Forms.ToolStripButton()
+        Me.ComboBoks = New System.Windows.Forms.ToolStripButton()
+        Me.ListBoks = New System.Windows.Forms.ToolStripButton()
+        Me.CheckedList = New System.Windows.Forms.ToolStripButton()
+        Me.Label = New System.Windows.Forms.ToolStripButton()
+        Me.LinkLabel = New System.Windows.Forms.ToolStripButton()
+        Me.RichText = New System.Windows.Forms.ToolStripButton()
+        Me.ColorDialog = New System.Windows.Forms.ToolStripButton()
+        Me.PathDialog = New System.Windows.Forms.ToolStripButton()
+        Me.FontDialog = New System.Windows.Forms.ToolStripButton()
+        Me.SaveDialog = New System.Windows.Forms.ToolStripButton()
+        Me.OpenDialog = New System.Windows.Forms.ToolStripButton()
+        Me.PrintDialog = New System.Windows.Forms.ToolStripButton()
+        Me.Timer = New System.Windows.Forms.ToolStripButton()
+        Me.PictureBoks = New System.Windows.Forms.ToolStripButton()
+        Me.TrackBar = New System.Windows.Forms.ToolStripButton()
+        Me.Trial = New System.Windows.Forms.ToolStripButton()
+        Me.Calendar = New System.Windows.Forms.ToolStripButton()
+        Me.Internet = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ProgressBar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ClientServer = New System.Windows.Forms.ToolStripMenuItem()
+        Me.StandartPanel = New System.Windows.Forms.ToolStrip()
+        Me.NewPanel = New System.Windows.Forms.ToolStripButton()
+        Me.OpenPanel = New System.Windows.Forms.ToolStripButton()
+        Me.SavePanel = New System.Windows.Forms.ToolStripButton()
+        Me.BuildPanel = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator3 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CutPanel = New System.Windows.Forms.ToolStripButton()
+        Me.CopyPanel = New System.Windows.Forms.ToolStripButton()
+        Me.PastePanel = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.UndoPanel = New System.Windows.Forms.ToolStripButton()
+        Me.RedoPanel = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.RunPanel = New System.Windows.Forms.ToolStripSplitButton()
+        Me.RunDropPanel = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunSaveDropPanel = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RunFormDropPanel = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PausePanel = New System.Windows.Forms.ToolStripButton()
+        Me.StopPanel = New System.Windows.Forms.ToolStripButton()
+        Me.StepIntoPanel = New System.Windows.Forms.ToolStripButton()
+        Me.StepOverPanel = New System.Windows.Forms.ToolStripButton()
+        Me.StepOutPanel = New System.Windows.Forms.ToolStripButton()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.HelpPanel = New System.Windows.Forms.ToolStripButton()
         Me.EditPrMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.HelpWords = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator
-        Me.UndoMenu5 = New System.Windows.Forms.ToolStripMenuItem
-        Me.RedoMenu5 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator
-        Me.CutMenu5 = New System.Windows.Forms.ToolStripMenuItem
-        Me.CopyMenu5 = New System.Windows.Forms.ToolStripMenuItem
-        Me.PasteMenu5 = New System.Windows.Forms.ToolStripMenuItem
-        Me.DelMenu5 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator
-        Me.SelectAllMenu5 = New System.Windows.Forms.ToolStripMenuItem
+        Me.HelpWords = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
+        Me.UndoMenu5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.RedoMenu5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator6 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CutMenu5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.CopyMenu5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.PasteMenu5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.DelMenu5 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator7 = New System.Windows.Forms.ToolStripSeparator()
+        Me.SelectAllMenu5 = New System.Windows.Forms.ToolStripMenuItem()
         Me.Timer1 = New System.Windows.Forms.Timer(Me.components)
         Me.HelpTimer = New System.Windows.Forms.Timer(Me.components)
         Me.Timer2 = New System.Windows.Forms.Timer(Me.components)
         Me.TreeMiniMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.CopyMenu3 = New System.Windows.Forms.ToolStripMenuItem
-        Me.MoveMenu3 = New System.Windows.Forms.ToolStripMenuItem
-        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripSeparator
-        Me.CancelMenu3 = New System.Windows.Forms.ToolStripMenuItem
-        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
-        Me.SaveFileDialog2 = New System.Windows.Forms.SaveFileDialog
-        Me.PasteMenu3 = New System.Windows.Forms.ToolStripMenuItem
+        Me.CopyMenu3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MoveMenu3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem4 = New System.Windows.Forms.ToolStripSeparator()
+        Me.CancelMenu3 = New System.Windows.Forms.ToolStripMenuItem()
+        Me.SaveFileDialog1 = New System.Windows.Forms.SaveFileDialog()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.SaveFileDialog2 = New System.Windows.Forms.SaveFileDialog()
+        Me.PasteMenu3 = New System.Windows.Forms.ToolStripMenuItem()
         Me.SplitPanelMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
-        Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog
-        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog
-        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument
-        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog
-        Me.SaveFileDialog3 = New System.Windows.Forms.SaveFileDialog
+        Me.PageSetupDialog1 = New System.Windows.Forms.PageSetupDialog()
+        Me.PrintDialog1 = New System.Windows.Forms.PrintDialog()
+        Me.PrintDocument1 = New System.Drawing.Printing.PrintDocument()
+        Me.PrintPreviewDialog1 = New System.Windows.Forms.PrintPreviewDialog()
+        Me.SaveFileDialog3 = New System.Windows.Forms.SaveFileDialog()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
         Me.MenuStrip1.SuspendLayout()
@@ -346,7 +346,7 @@ Partial Class MainForm
         Me.MenuStrip1.Location = New System.Drawing.Point(3, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(341, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(433, 24)
         Me.MenuStrip1.Stretch = False
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
@@ -356,7 +356,7 @@ Partial Class MainForm
         Me.ExitMenu.Checked = True
         Me.ExitMenu.CheckOnClick = True
         Me.ExitMenu.CheckState = System.Windows.Forms.CheckState.Checked
-        Me.ExitMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewMenu, Me.OpenMenu, Me.SaveMenu, Me.SaveAsMenu, Me.ToolStripMenuItem5, Me.BuildMenu, Me.ExportVBMenu, Me.ToolStripMenuItem6, Me.RecentProjects, Me.ToolStripMenuItem14, Me.ExitMenu2})
+        Me.ExitMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewMenu, Me.OpenMenu, Me.SaveMenu, Me.SaveAsMenu, Me.ToolStripMenuItem5, Me.BuildMenu, Me.ExportVBMenu, Me.VisualStudioExpressMenuItem, Me.ToolStripMenuItem6, Me.RecentProjects, Me.ToolStripMenuItem14, Me.ExitMenu2})
         Me.ExitMenu.ForeColor = System.Drawing.Color.Black
         Me.ExitMenu.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None
         Me.ExitMenu.Name = "ExitMenu"
@@ -390,7 +390,7 @@ Partial Class MainForm
         '
         Me.SaveAsMenu.Name = "SaveAsMenu"
         Me.SaveAsMenu.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-                    Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
+            Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.SaveAsMenu.Size = New System.Drawing.Size(286, 22)
         Me.SaveAsMenu.Text = "Сохранить как..."
         '
@@ -410,9 +410,15 @@ Partial Class MainForm
         '
         Me.ExportVBMenu.Name = "ExportVBMenu"
         Me.ExportVBMenu.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-                    Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
+            Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
         Me.ExportVBMenu.Size = New System.Drawing.Size(286, 22)
         Me.ExportVBMenu.Text = "Экспорт в VB.NET-проект"
+        '
+        'VisualStudioExpressMenuItem
+        '
+        Me.VisualStudioExpressMenuItem.Name = "VisualStudioExpressMenuItem"
+        Me.VisualStudioExpressMenuItem.Size = New System.Drawing.Size(286, 22)
+        Me.VisualStudioExpressMenuItem.Text = "Скачать Visual Studio Express"
         '
         'ToolStripMenuItem6
         '
@@ -590,13 +596,13 @@ Partial Class MainForm
         '
         Me.OptionsMenu.Name = "OptionsMenu"
         Me.OptionsMenu.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-                    Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+            Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
         Me.OptionsMenu.Size = New System.Drawing.Size(209, 22)
         Me.OptionsMenu.Text = "Настройки"
         '
         'ПомощьToolStripMenuItem
         '
-        Me.ПомощьToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpMenu, Me.UpdateMenu, Me.RegistrMenu, Me.MecenatMenu, Me.ToolStripMenuItem15, Me.LessonMenu, Me.SamplesMenu, Me.ToolStripMenuItem13, Me.AboutMenu})
+        Me.ПомощьToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpMenu, Me.UpdateMenu, Me.RegistrMenu, Me.ToolStripMenuItem15, Me.LessonMenu, Me.SamplesMenu, Me.ToolStripMenuItem13, Me.AboutMenu})
         Me.ПомощьToolStripMenuItem.Name = "ПомощьToolStripMenuItem"
         Me.ПомощьToolStripMenuItem.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded
         Me.ПомощьToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
@@ -620,12 +626,6 @@ Partial Class MainForm
         Me.RegistrMenu.Name = "RegistrMenu"
         Me.RegistrMenu.Size = New System.Drawing.Size(182, 22)
         Me.RegistrMenu.Text = "Регистрация"
-        '
-        'MecenatMenu
-        '
-        Me.MecenatMenu.Name = "MecenatMenu"
-        Me.MecenatMenu.Size = New System.Drawing.Size(182, 22)
-        Me.MecenatMenu.Text = "Благотворители"
         '
         'ToolStripMenuItem15
         '
@@ -793,8 +793,8 @@ Partial Class MainForm
         'TabControl1
         '
         Me.TabControl1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl1.Location = New System.Drawing.Point(0, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -985,7 +985,7 @@ Partial Class MainForm
         'forFindText
         '
         Me.forFindText.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.forFindText.BackColor = System.Drawing.Color.Transparent
         Me.forFindText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forFindText.Location = New System.Drawing.Point(43, 6)
@@ -996,8 +996,8 @@ Partial Class MainForm
         'TreeView
         '
         Me.TreeView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TreeView.BackColor = System.Drawing.Color.Snow
         Me.TreeView.BorderStyle = System.Windows.Forms.BorderStyle.None
         Me.TreeView.ContextMenuStrip = Me.TreeMenu
@@ -1024,7 +1024,7 @@ Partial Class MainForm
         Me.RunDeistMenu.Size = New System.Drawing.Size(250, 22)
         Me.RunDeistMenu.Text = "Выполнить действие"
         Me.RunDeistMenu.ToolTipText = "Выбранное действие принудительно выполнится, когда вы запустите проект из режима " & _
-            "паузы"
+    "паузы"
         '
         'NotRunDeistMenu
         '
@@ -1032,7 +1032,7 @@ Partial Class MainForm
         Me.NotRunDeistMenu.Size = New System.Drawing.Size(250, 22)
         Me.NotRunDeistMenu.Text = "Не выполнять действие"
         Me.NotRunDeistMenu.ToolTipText = "Выбранное действие принудительно не выполнится, когда вы запустите проект из режи" & _
-            "ма паузы"
+    "ма паузы"
         '
         'RunDeistMenuSplit
         '
@@ -1101,7 +1101,7 @@ Partial Class MainForm
         '
         Me.ShowAllMenu2.Name = "ShowAllMenu2"
         Me.ShowAllMenu2.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-                    Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
+            Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.ShowAllMenu2.Size = New System.Drawing.Size(250, 22)
         Me.ShowAllMenu2.Text = "Развернуть внутри"
         '
@@ -1109,7 +1109,7 @@ Partial Class MainForm
         '
         Me.HideAllMenu2.Name = "HideAllMenu2"
         Me.HideAllMenu2.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-                    Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
+            Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
         Me.HideAllMenu2.Size = New System.Drawing.Size(250, 22)
         Me.HideAllMenu2.Text = "Свернуть внутри"
         '
@@ -1223,7 +1223,7 @@ Partial Class MainForm
         '
         Me.Apply.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Apply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Apply.Location = New System.Drawing.Point(362, 6)
+        Me.Apply.Location = New System.Drawing.Point(362, 2)
         Me.Apply.Name = "Apply"
         Me.Apply.Size = New System.Drawing.Size(72, 23)
         Me.Apply.TabIndex = 2
@@ -1233,13 +1233,13 @@ Partial Class MainForm
         'forEditNodeText
         '
         Me.forEditNodeText.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.forEditNodeText.BackColor = System.Drawing.Color.Transparent
         Me.forEditNodeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forEditNodeText.Location = New System.Drawing.Point(6, 5)
         Me.forEditNodeText.Name = "forEditNodeText"
-        Me.forEditNodeText.Size = New System.Drawing.Size(355, 21)
+        Me.forEditNodeText.Size = New System.Drawing.Size(355, 17)
         Me.forEditNodeText.TabIndex = 5
         '
         'Output
@@ -1414,12 +1414,12 @@ Partial Class MainForm
         Me.ListView.Activation = System.Windows.Forms.ItemActivation.OneClick
         Me.ListView.AllowColumnReorder = True
         Me.ListView.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ListView.FullRowSelect = True
         Me.ListView.GridLines = True
         Me.ListView.HideSelection = False
-        Me.ListView.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem5})
+        Me.ListView.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
         Me.ListView.LabelEdit = True
         Me.ListView.Location = New System.Drawing.Point(-2, 20)
         Me.ListView.Margin = New System.Windows.Forms.Padding(10)
@@ -1471,8 +1471,8 @@ Partial Class MainForm
         'TabControl2
         '
         Me.TabControl2.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TabControl2.Controls.Add(Me.sobyts)
         Me.TabControl2.Controls.Add(Me.deistviya)
         Me.TabControl2.Controls.Add(Me.ifs)
@@ -1484,7 +1484,7 @@ Partial Class MainForm
         Me.TabControl2.Padding = New System.Drawing.Point(3, 3)
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.ShowToolTips = True
-        Me.TabControl2.Size = New System.Drawing.Size(246, 298)
+        Me.TabControl2.Size = New System.Drawing.Size(246, 302)
         Me.TabControl2.TabIndex = 0
         Me.TabControl2.Tag = "Environment/EventPart"
         '
@@ -1498,14 +1498,14 @@ Partial Class MainForm
         Me.sobyts.Margin = New System.Windows.Forms.Padding(0, 0, 3, 3)
         Me.sobyts.Name = "sobyts"
         Me.sobyts.Padding = New System.Windows.Forms.Padding(3)
-        Me.sobyts.Size = New System.Drawing.Size(238, 272)
+        Me.sobyts.Size = New System.Drawing.Size(238, 276)
         Me.sobyts.TabIndex = 0
         Me.sobyts.Text = "TabPage2"
         '
         'help1
         '
         Me.help1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.help1.Location = New System.Drawing.Point(168, 110)
+        Me.help1.Location = New System.Drawing.Point(168, 112)
         Me.help1.Name = "help1"
         Me.help1.Size = New System.Drawing.Size(16, 16)
         Me.help1.TabIndex = 2
@@ -1517,7 +1517,7 @@ Partial Class MainForm
         Me.ComboBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 129)
+        Me.ComboBox1.Location = New System.Drawing.Point(13, 131)
         Me.ComboBox1.MaxDropDownItems = 16
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(213, 21)
@@ -1529,7 +1529,7 @@ Partial Class MainForm
         Me.Label1.AutoEllipsis = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 111)
+        Me.Label1.Location = New System.Drawing.Point(0, 113)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 16)
         Me.Label1.TabIndex = 0
@@ -1545,7 +1545,7 @@ Partial Class MainForm
         Me.deistviya.Location = New System.Drawing.Point(4, 22)
         Me.deistviya.Name = "deistviya"
         Me.deistviya.Padding = New System.Windows.Forms.Padding(3)
-        Me.deistviya.Size = New System.Drawing.Size(238, 272)
+        Me.deistviya.Size = New System.Drawing.Size(238, 276)
         Me.deistviya.TabIndex = 1
         Me.deistviya.Text = "TabPage3"
         Me.deistviya.UseVisualStyleBackColor = True
@@ -1563,8 +1563,8 @@ Partial Class MainForm
         'DeistPanel
         '
         Me.DeistPanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DeistPanel.AutoScroll = True
         Me.DeistPanel.BackColor = System.Drawing.Color.Transparent
         Me.DeistPanel.Location = New System.Drawing.Point(0, 22)
@@ -1575,7 +1575,7 @@ Partial Class MainForm
         'DeistLabel
         '
         Me.DeistLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.DeistLabel.AutoEllipsis = True
         Me.DeistLabel.BackColor = System.Drawing.Color.Transparent
         Me.DeistLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
@@ -1596,7 +1596,7 @@ Partial Class MainForm
         Me.ifs.Location = New System.Drawing.Point(4, 22)
         Me.ifs.Name = "ifs"
         Me.ifs.Padding = New System.Windows.Forms.Padding(3)
-        Me.ifs.Size = New System.Drawing.Size(238, 272)
+        Me.ifs.Size = New System.Drawing.Size(238, 276)
         Me.ifs.TabIndex = 2
         Me.ifs.Text = "TabPage4"
         Me.ifs.UseVisualStyleBackColor = True
@@ -1614,8 +1614,8 @@ Partial Class MainForm
         'ifPanel
         '
         Me.ifPanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ifPanel.AutoScroll = True
         Me.ifPanel.BackColor = System.Drawing.Color.Transparent
         Me.ifPanel.Location = New System.Drawing.Point(0, 22)
@@ -1626,7 +1626,7 @@ Partial Class MainForm
         'IfLabel
         '
         Me.IfLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.IfLabel.AutoEllipsis = True
         Me.IfLabel.BackColor = System.Drawing.Color.Transparent
         Me.IfLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
@@ -1646,7 +1646,7 @@ Partial Class MainForm
         Me.cycles.Location = New System.Drawing.Point(4, 22)
         Me.cycles.Name = "cycles"
         Me.cycles.Padding = New System.Windows.Forms.Padding(3)
-        Me.cycles.Size = New System.Drawing.Size(238, 272)
+        Me.cycles.Size = New System.Drawing.Size(238, 276)
         Me.cycles.TabIndex = 3
         Me.cycles.Text = "TabPage5"
         Me.cycles.UseVisualStyleBackColor = True
@@ -1664,8 +1664,8 @@ Partial Class MainForm
         'CyclePanel
         '
         Me.CyclePanel.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CyclePanel.AutoScroll = True
         Me.CyclePanel.BackColor = System.Drawing.Color.Transparent
         Me.CyclePanel.Location = New System.Drawing.Point(0, 22)
@@ -1676,7 +1676,7 @@ Partial Class MainForm
         'CycleLabel
         '
         Me.CycleLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.CycleLabel.AutoEllipsis = True
         Me.CycleLabel.BackColor = System.Drawing.Color.Transparent
         Me.CycleLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
@@ -1697,7 +1697,7 @@ Partial Class MainForm
         Me.comm.Location = New System.Drawing.Point(4, 22)
         Me.comm.Name = "comm"
         Me.comm.Padding = New System.Windows.Forms.Padding(3)
-        Me.comm.Size = New System.Drawing.Size(238, 272)
+        Me.comm.Size = New System.Drawing.Size(238, 276)
         Me.comm.TabIndex = 4
         Me.comm.Text = "TabPage1"
         Me.comm.UseVisualStyleBackColor = True
@@ -1740,7 +1740,7 @@ Partial Class MainForm
         '
         Me.Create1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Create1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Create1.Location = New System.Drawing.Point(3, 4)
+        Me.Create1.Location = New System.Drawing.Point(3, 2)
         Me.Create1.Name = "Create1"
         Me.Create1.Size = New System.Drawing.Size(75, 23)
         Me.Create1.TabIndex = 0
@@ -1750,7 +1750,7 @@ Partial Class MainForm
         'Cancel1
         '
         Me.Cancel1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Cancel1.Location = New System.Drawing.Point(160, 4)
+        Me.Cancel1.Location = New System.Drawing.Point(160, 2)
         Me.Cancel1.Name = "Cancel1"
         Me.Cancel1.Size = New System.Drawing.Size(75, 23)
         Me.Cancel1.TabIndex = 1
@@ -3081,5 +3081,5 @@ Partial Class MainForm
     Friend WithEvents CommSplit As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents CommMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UnCommMenu As System.Windows.Forms.ToolStripMenuItem
-    Friend WithEvents MecenatMenu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents VisualStudioExpressMenuItem As System.Windows.Forms.ToolStripMenuItem
 End Class

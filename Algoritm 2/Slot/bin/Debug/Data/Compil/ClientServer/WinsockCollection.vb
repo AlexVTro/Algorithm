@@ -1,4 +1,4 @@
-Imports System.ComponentModel
+﻿Imports System.ComponentModel
 
 ''' <summary>
 ''' A collection of Winsock objects.

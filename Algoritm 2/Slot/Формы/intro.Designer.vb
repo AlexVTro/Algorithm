@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class intro
     Inherits System.Windows.Forms.Form
 
@@ -20,9 +20,9 @@ Partial Class intro
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(intro))
-        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar
-        Me.Panel1 = New System.Windows.Forms.Panel
-        Me.Label2 = New System.Windows.Forms.Label
+        Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
+        Me.Panel1 = New System.Windows.Forms.Panel()
+        Me.VerLabel = New System.Windows.Forms.Label()
         Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -40,24 +40,24 @@ Partial Class intro
         '
         Me.Panel1.BackgroundImage = CType(resources.GetObject("Panel1.BackgroundImage"), System.Drawing.Image)
         Me.Panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.Panel1.Controls.Add(Me.Label2)
+        Me.Panel1.Controls.Add(Me.VerLabel)
         Me.Panel1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(400, 300)
         Me.Panel1.TabIndex = 1
         '
-        'Label2
+        'VerLabel
         '
-        Me.Label2.BackColor = System.Drawing.Color.Transparent
-        Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label2.ForeColor = System.Drawing.Color.CornflowerBlue
-        Me.Label2.Location = New System.Drawing.Point(291, 280)
-        Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(105, 13)
-        Me.Label2.TabIndex = 2
-        Me.Label2.Text = "Algorithm 2.5.6"
-        Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        Me.VerLabel.BackColor = System.Drawing.Color.Transparent
+        Me.VerLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.VerLabel.ForeColor = System.Drawing.Color.CornflowerBlue
+        Me.VerLabel.Location = New System.Drawing.Point(291, 280)
+        Me.VerLabel.Name = "VerLabel"
+        Me.VerLabel.Size = New System.Drawing.Size(105, 13)
+        Me.VerLabel.TabIndex = 2
+        Me.VerLabel.Text = "Algorithm 2.5.6"
+        Me.VerLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'intro
         '
@@ -78,5 +78,5 @@ Partial Class intro
     End Sub
     Friend WithEvents ProgressBar1 As System.Windows.Forms.ProgressBar
     Friend WithEvents Panel1 As System.Windows.Forms.Panel
-    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents VerLabel As System.Windows.Forms.Label
 End Class

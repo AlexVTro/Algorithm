@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Ôªø<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class ShowObject
     Inherits System.Windows.Forms.UserControl
 
@@ -47,7 +47,7 @@ Partial Class ShowObject
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(175, 13)
         Me.Label2.TabIndex = 6
-        Me.Label2.Text = "Œ·˙ÂÍÚ"
+        Me.Label2.Text = "–û–±—ä–µ–∫—Ç"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
@@ -58,7 +58,7 @@ Partial Class ShowObject
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(174, 13)
         Me.Label3.TabIndex = 7
-        Me.Label3.Text = "ÕÓÏÂ"
+        Me.Label3.Text = "–ù–æ–º–µ—Ä"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label4
@@ -69,7 +69,7 @@ Partial Class ShowObject
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(178, 18)
         Me.Label4.TabIndex = 5
-        Me.Label4.Text = "—‚ÓÈÒÚ‚Ó"
+        Me.Label4.Text = "–°–≤–æ–π—Å—Ç–≤–æ"
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'propertys
@@ -90,7 +90,7 @@ Partial Class ShowObject
                     Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.indexs.DropDownWidth = 300
         Me.indexs.FormattingEnabled = True
-        Me.indexs.Items.AddRange(New Object() {"‰Î", "˘Á", "¸·"})
+        Me.indexs.Items.AddRange(New Object() {"–¥–ª", "—â–∑", "—å–±"})
         Me.indexs.Location = New System.Drawing.Point(4, 87)
         Me.indexs.Name = "indexs"
         Me.indexs.Size = New System.Drawing.Size(155, 21)
@@ -128,7 +128,7 @@ Partial Class ShowObject
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(178, 13)
         Me.Label1.TabIndex = 3
-        Me.Label1.Text = "ŒÍÌÓ"
+        Me.Label1.Text = "–û–∫–Ω–æ"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'forArgs

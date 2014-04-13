@@ -1,5 +1,5 @@
-Public Class ShowObject
-    Public MyObj, MyForm, MySobyt As Object, Sobyt As String ' Для хранения свойства и объектов
+п»їPublic Class ShowObject
+    Public MyObj, MyForm, MySobyt As Object, Sobyt As String ' Р”Р»СЏ С…СЂР°РЅРµРЅРёСЏ СЃРІРѕР№СЃС‚РІР° Рё РѕР±СЉРµРєС‚РѕРІ
     Dim oldForm, oldObj, oldProp, oldInd As String
     Public Event PropertyChange(ByVal nowProp As String, ByVal propOld As String, ByVal MyObj As Object)
     Public Event ObjectChange(ByVal nowObj As String)
@@ -22,7 +22,7 @@ Public Class ShowObject
                 If forms.Items.IndexOf(proj.f(i).obj.Props.name) = -1 Then forms.Items.Add(proj.f(i).obj.Props.name)
             End If
         Next
-        forms.Items.Add(MyZnak & trans("Окно события"))
+        forms.Items.Add(MyZnak & trans("РћРєРЅРѕ СЃРѕР±С‹С‚РёСЏ"))
 
 
         forms.BackColor = SkinColors("MainText")
@@ -42,7 +42,7 @@ Public Class ShowObject
         nelzyaP = True : nelzyaO = True
         Dim ind, i As Integer, index As CodeString = Nothing, arguments() As String = Nothing
         Dim cs As New CodeString(Trim(str), , Formattingovat)
-        ' Если присутствуют символы вычислений (+, - и т.д.), то сообщить о неудаче
+        ' Р•СЃР»Рё РїСЂРёСЃСѓС‚СЃС‚РІСѓСЋС‚ СЃРёРјРІРѕР»С‹ РІС‹С‡РёСЃР»РµРЅРёР№ (+, - Рё С‚.Рґ.), С‚Рѕ СЃРѕРѕР±С‰РёС‚СЊ Рѕ РЅРµСѓРґР°С‡Рµ
         If cs.Split("naOdnomUrovne").texty.Length > 1 Then nelzyaP = False : nelzyaO = False : Return False
         Dim mass() As String = cs.Split("naOdnomUrovne", ".").texty
         If mass.Length < 3 Then nelzyaP = False : nelzyaO = False : Return False
@@ -114,7 +114,7 @@ Public Class ShowObject
                         If Pattern.Show = "Methods" Then
                             If MyForm(i).MyObjs(j).Methods = Nothing Then Continue For
                         End If
-                        ' Не показывать при различном IncludeReadOnly некоторые полезные объекты, т.к. у некоторых только свойства для чтения, а у некоторых только методы
+                        ' РќРµ РїРѕРєР°Р·С‹РІР°С‚СЊ РїСЂРё СЂР°Р·Р»РёС‡РЅРѕРј IncludeReadOnly РЅРµРєРѕС‚РѕСЂС‹Рµ РїРѕР»РµР·РЅС‹Рµ РѕР±СЉРµРєС‚С‹, С‚.Рє. Сѓ РЅРµРєРѕС‚РѕСЂС‹С… С‚РѕР»СЊРєРѕ СЃРІРѕР№СЃС‚РІР° РґР»СЏ С‡С‚РµРЅРёСЏ, Р° Сѓ РЅРµРєРѕС‚РѕСЂС‹С… С‚РѕР»СЊРєРѕ РјРµС‚РѕРґС‹
                         If Pattern.IncludeReadOnly = False Then
                             'If Iz.IsTextPolezniy(MyForm(i).MyObjs(j)) Then Continue For
                         Else
@@ -122,19 +122,19 @@ Public Class ShowObject
                         End If
                         objects.Items.Add(MyForm(i).MyObjs(j).obj.Props.name)
                         If Iz.IsCM(MyForm(i).MyObjs(j)) Then
-                            objects.Items.Add(MyZnak & trans("Хозяин") & " " & MyForm(i).MyObjs(j).obj.Props.name)
+                            objects.Items.Add(MyZnak & trans("РҐРѕР·СЏРёРЅ") & " " & MyForm(i).MyObjs(j).obj.Props.name)
                         End If
                     End If
                 Next
             Next
-            objects.Items.Add(MyZnak & trans("Объект события"))
-            objects.Items.Add(MyZnak & trans("Окно события"))
+            objects.Items.Add(MyZnak & trans("РћР±СЉРµРєС‚ СЃРѕР±С‹С‚РёСЏ"))
+            objects.Items.Add(MyZnak & trans("РћРєРЅРѕ СЃРѕР±С‹С‚РёСЏ"))
         End If
         objects.Sorted = True
         proj.lastForm = forms.SelectedItem
-        ' Создания значка быстрой справки
+        ' РЎРѕР·РґР°РЅРёСЏ Р·РЅР°С‡РєР° Р±С‹СЃС‚СЂРѕР№ СЃРїСЂР°РІРєРё
         help1.Tag = MainForm.GetHelpLink(forms.Text)
-        ' вызвать искуственно разрешенно смену объекта в списке объектов
+        ' РІС‹Р·РІР°С‚СЊ РёСЃРєСѓСЃС‚РІРµРЅРЅРѕ СЂР°Р·СЂРµС€РµРЅРЅРѕ СЃРјРµРЅСѓ РѕР±СЉРµРєС‚Р° РІ СЃРїРёСЃРєРµ РѕР±СЉРµРєС‚РѕРІ
         SelectedItem(objects)
     End Sub
     Public Sub objects_SelectedIndexChanged(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles objects.SelectedIndexChanged
@@ -146,34 +146,34 @@ Public Class ShowObject
             Exit Sub
         Else
             MyObjs = proj.GetMyAllFromName(MyObj(0).obj.Props.name, , forms.SelectedItem, Pattern.IncludeReadOnly)
-            ' У полезного объекта Вызвать событие надо загрузить в методы все события
+            ' РЈ РїРѕР»РµР·РЅРѕРіРѕ РѕР±СЉРµРєС‚Р° Р’С‹Р·РІР°С‚СЊ СЃРѕР±С‹С‚РёРµ РЅР°РґРѕ Р·Р°РіСЂСѓР·РёС‚СЊ РІ РјРµС‚РѕРґС‹ РІСЃРµ СЃРѕР±С‹С‚РёСЏ
             If MyObjs Is Nothing = False Then
                 If Iz.IsSobytCalls(MyObjs(0)) Then MyObjs(0).CreateSobytCalls()
             End If
             If Pattern.Show = "Propertys" Or Pattern.Show = "All" Then
-                ' Занести в props все названия свойств выделенных объектов
+                ' Р—Р°РЅРµСЃС‚Рё РІ props РІСЃРµ РЅР°Р·РІР°РЅРёСЏ СЃРІРѕР№СЃС‚РІ РІС‹РґРµР»РµРЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ
                 Dim props() As String = proj.GetPropertyNames(Pattern.IncludeReadOnly, MyObjs)
                 If props Is Nothing = False Then
                     propertys.Items.AddRange(props)
                 End If
             End If
             If Pattern.Show = "Methods" Or Pattern.Show = "All" Then
-                ' Занести в meths все названия методов, выделенных объектов
+                ' Р—Р°РЅРµСЃС‚Рё РІ meths РІСЃРµ РЅР°Р·РІР°РЅРёСЏ РјРµС‚РѕРґРѕРІ, РІС‹РґРµР»РµРЅРЅС‹С… РѕР±СЉРµРєС‚РѕРІ
                 Dim meths() As String = proj.GetMethodNames(MyObjs)
                 If meths Is Nothing = False Then propertys.Items.AddRange(meths)
             End If
-            ' Если у СОБЫТИЯ есть свойства, которые надо отобразить, то добавить их список свойств
+            ' Р•СЃР»Рё Сѓ РЎРћР‘Р«РўРРЇ РµСЃС‚СЊ СЃРІРѕР№СЃС‚РІР°, РєРѕС‚РѕСЂС‹Рµ РЅР°РґРѕ РѕС‚РѕР±СЂР°Р·РёС‚СЊ, С‚Рѕ РґРѕР±Р°РІРёС‚СЊ РёС… СЃРїРёСЃРѕРє СЃРІРѕР№СЃС‚РІ
             If MySobyt Is Nothing = False Then
                 If MySobyt.Propertys Is Nothing = False And objects.SelectedItem = proj.GetSobytObjObject(0).obj.Props.name Then
                     For i = 0 To MySobyt.Propertys.Length - 1
                         If Array.IndexOf(SobytsNotReadOnly, MySobyt.PropertysUp(i)) = -1 And Pattern.IncludeReadOnly = False Then
-                            adds = "  -  [" & trans("есть в мастере сложных действий") & "]" : Else : adds = ""
+                            adds = "  -  [" & trans("РµСЃС‚СЊ РІ РјР°СЃС‚РµСЂРµ СЃР»РѕР¶РЅС‹С… РґРµР№СЃС‚РІРёР№") & "]" : Else : adds = ""
                         End If
                         propertys.Items.Add(MySobyt.Propertys(i) & adds)
                     Next
                 End If
             End If
-            ' Происходит когда вызов приходит из главной формы, чтобы добавить свойства событОбъекта
+            ' РџСЂРѕРёСЃС…РѕРґРёС‚ РєРѕРіРґР° РІС‹Р·РѕРІ РїСЂРёС…РѕРґРёС‚ РёР· РіР»Р°РІРЅРѕР№ С„РѕСЂРјС‹, С‡С‚РѕР±С‹ РґРѕР±Р°РІРёС‚СЊ СЃРІРѕР№СЃС‚РІР° СЃРѕР±С‹С‚РћР±СЉРµРєС‚Р°
             If sender Is MainForm Then
                 nelzyaP = True
                 propertys.Sorted = True
@@ -189,22 +189,22 @@ Public Class ShowObject
             End If
         End If
 
-        ' СОРТИРОВКА СВОЙСТВ
+        ' РЎРћР РўРР РћР’РљРђ РЎР’РћР™РЎРўР’
         propertys.Sorted = True
         propertys.Sorted = False
         'Dim prps() As String = proj.GetPropertyNames(Pattern.IncludeReadOnly, MyObjs)
         'If prps Is Nothing = False Then
-        '    For i = 0 To Array.IndexOf(prps, trans("Имя")) - 1
+        '    For i = 0 To Array.IndexOf(prps, trans("РРјСЏ")) - 1
         '        propertys.Items.Remove(prps(i))
         '        propertys.Items.Insert(i, prps(i))
         '    Next
         'End If
 
         If MyObjs.Length > 1 _
-        And objects.SelectedItem <> MyZnak & trans("Объект события") _
-        And objects.SelectedItem <> MyZnak & trans("Окно события") Then
+        And objects.SelectedItem <> MyZnak & trans("РћР±СЉРµРєС‚ СЃРѕР±С‹С‚РёСЏ") _
+        And objects.SelectedItem <> MyZnak & trans("РћРєРЅРѕ СЃРѕР±С‹С‚РёСЏ") Then
             For i = 0 To MyObjs.Length - 1 : indexs.Items.Add("""" & MyObjs(i).obj.Props.index & """") : Next
-            ' indexs.Items.Add(trans("Все"))
+            ' indexs.Items.Add(trans("Р’СЃРµ"))
             indexs.Visible = True : Palka1.Visible = True : Label3.Visible = True : help3.Visible = True
             Label4.Top = indexs.Top + indexs.Height
             help4.Top = indexs.Top + indexs.Height
@@ -215,7 +215,7 @@ Public Class ShowObject
             help4.Top = Label3.Top
             propertys.Top = indexs.Top
         End If
-        ' запись этот объект в форму, как последнее выбранное для него свойство
+        ' Р·Р°РїРёСЃСЊ СЌС‚РѕС‚ РѕР±СЉРµРєС‚ РІ С„РѕСЂРјСѓ, РєР°Рє РїРѕСЃР»РµРґРЅРµРµ РІС‹Р±СЂР°РЅРЅРѕРµ РґР»СЏ РЅРµРіРѕ СЃРІРѕР№СЃС‚РІРѕ
         If MyForm Is Nothing = False Then
             For i = 0 To MyForm.length - 1
                 MyForm(i).obj.lastObj = objects.Text
@@ -226,7 +226,7 @@ Public Class ShowObject
         RaiseEvent ObjectChange(objects.SelectedItem)
         oldObj = objects.SelectedItem
 
-        ' Создания значка быстрой справки
+        ' РЎРѕР·РґР°РЅРёСЏ Р·РЅР°С‡РєР° Р±С‹СЃС‚СЂРѕР№ СЃРїСЂР°РІРєРё
         help2.Tag = MainForm.GetHelpLink(objects.Text)
         help3.Tag = MainForm.GetHelpLink(forms.Text & "." & objects.Text & "." & propertys.Text)
 
@@ -244,13 +244,13 @@ Public Class ShowObject
             End If
         End If
         If combo Is objects Then
-            ' В разделе действий формы, будет в списке свойств сначала то свойство, что было у ПРЕДЫДУЩЕГО объекта
-            ' а если такого нет, то то что было последним у ЭТОГО объекта.
+            ' Р’ СЂР°Р·РґРµР»Рµ РґРµР№СЃС‚РІРёР№ С„РѕСЂРјС‹, Р±СѓРґРµС‚ РІ СЃРїРёСЃРєРµ СЃРІРѕР№СЃС‚РІ СЃРЅР°С‡Р°Р»Р° С‚Рѕ СЃРІРѕР№СЃС‚РІРѕ, С‡С‚Рѕ Р±С‹Р»Рѕ Сѓ РџР Р•Р”Р«Р”РЈР©Р•Р“Рћ РѕР±СЉРµРєС‚Р°
+            ' Р° РµСЃР»Рё С‚Р°РєРѕРіРѕ РЅРµС‚, С‚Рѕ С‚Рѕ С‡С‚Рѕ Р±С‹Р»Рѕ РїРѕСЃР»РµРґРЅРёРј Сѓ Р­РўРћР“Рћ РѕР±СЉРµРєС‚Р°.
             If Me.TopLevelControl Is MainForm Then
                 old = oldObj
-                If old = Nothing Then old = trans("Окно") & "1"
+                If old = Nothing Then old = trans("РћРєРЅРѕ") & "1"
                 If old = "" Or combo.Items.IndexOf(old) = -1 Then old = MyForm(0).obj.lastObj
-                ' В мастере сначала выбирается свойство которое в последний раз выбиралось для ЭТОГО объекта
+                ' Р’ РјР°СЃС‚РµСЂРµ СЃРЅР°С‡Р°Р»Р° РІС‹Р±РёСЂР°РµС‚СЃСЏ СЃРІРѕР№СЃС‚РІРѕ РєРѕС‚РѕСЂРѕРµ РІ РїРѕСЃР»РµРґРЅРёР№ СЂР°Р· РІС‹Р±РёСЂР°Р»РѕСЃСЊ РґР»СЏ Р­РўРћР“Рћ РѕР±СЉРµРєС‚Р°
             Else
                 If MyForm IsNot Nothing Then
                     old = MyForm(0).obj.lastObj
@@ -261,13 +261,13 @@ Public Class ShowObject
         End If
         If combo Is indexs Then old = oldInd
         If combo Is propertys Then
-            ' В разделе действий формы, будет в списке свойств сначала то свойство, что было у ПРЕДЫДУЩЕГО объекта
-            ' а если такого нет, то то что было последним у ЭТОГО объекта.
+            ' Р’ СЂР°Р·РґРµР»Рµ РґРµР№СЃС‚РІРёР№ С„РѕСЂРјС‹, Р±СѓРґРµС‚ РІ СЃРїРёСЃРєРµ СЃРІРѕР№СЃС‚РІ СЃРЅР°С‡Р°Р»Р° С‚Рѕ СЃРІРѕР№СЃС‚РІРѕ, С‡С‚Рѕ Р±С‹Р»Рѕ Сѓ РџР Р•Р”Р«Р”РЈР©Р•Р“Рћ РѕР±СЉРµРєС‚Р°
+            ' Р° РµСЃР»Рё С‚Р°РєРѕРіРѕ РЅРµС‚, С‚Рѕ С‚Рѕ С‡С‚Рѕ Р±С‹Р»Рѕ РїРѕСЃР»РµРґРЅРёРј Сѓ Р­РўРћР“Рћ РѕР±СЉРµРєС‚Р°.
             '   If Me.TopLevelControl Is MainForm Then
             old = oldProp
             If old = Nothing Then old = ""
             If old = "" Or combo.Items.IndexOf(old) = -1 Then old = MyObj(0).obj.lastProp : odinak = False
-            ' В мастере сначала выбирается свойство которое в последний раз выбиралось для ЭТОГО объекта
+            ' Р’ РјР°СЃС‚РµСЂРµ СЃРЅР°С‡Р°Р»Р° РІС‹Р±РёСЂР°РµС‚СЃСЏ СЃРІРѕР№СЃС‚РІРѕ РєРѕС‚РѕСЂРѕРµ РІ РїРѕСЃР»РµРґРЅРёР№ СЂР°Р· РІС‹Р±РёСЂР°Р»РѕСЃСЊ РґР»СЏ Р­РўРћР“Рћ РѕР±СЉРµРєС‚Р°
             'Else
             '    old = MyObj(0).obj.lastProp
             '    If old = Nothing Then old = ""
@@ -311,17 +311,17 @@ Public Class ShowObject
             propertys.SelectedItem = oldProp
             nelzyaP = False : Exit Sub
         End If
-        ' запись этого свойства в объект, как последнее выбранное для него свойство
+        ' Р·Р°РїРёСЃСЊ СЌС‚РѕРіРѕ СЃРІРѕР№СЃС‚РІР° РІ РѕР±СЉРµРєС‚, РєР°Рє РїРѕСЃР»РµРґРЅРµРµ РІС‹Р±СЂР°РЅРЅРѕРµ РґР»СЏ РЅРµРіРѕ СЃРІРѕР№СЃС‚РІРѕ
         Dim i As Integer
         If MyObj Is Nothing = False Then
             For i = 0 To MyObj.length - 1
                 MyObj(i).obj.lastProp = propertys.Text
             Next
         End If
-        ' Чтобы текстовое поле со значением свойства не менялось, если тип свойства и т.п. осталось прежним
+        ' Р§С‚РѕР±С‹ С‚РµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ СЃРѕ Р·РЅР°С‡РµРЅРёРµРј СЃРІРѕР№СЃС‚РІР° РЅРµ РјРµРЅСЏР»РѕСЃСЊ, РµСЃР»Рё С‚РёРї СЃРІРѕР№СЃС‚РІР° Рё С‚.Рї. РѕСЃС‚Р°Р»РѕСЃСЊ РїСЂРµР¶РЅРёРј
         If propertys.SelectedItem <> "" Then
             If oldProp <> propertys.SelectedItem Or _
-            ((oldForm <> forms.SelectedItem Or oldObj <> objects.SelectedItem) And UCase(MainForm.Create1.Text) <> UCase(trans("Изменить"))) Then
+            ((oldForm <> forms.SelectedItem Or oldObj <> objects.SelectedItem) And UCase(MainForm.Create1.Text) <> UCase(trans("РР·РјРµРЅРёС‚СЊ"))) Then
                 If proj.isProperty(propertys.SelectedItem) <> "" Then
                     Dim temp() As String = GetArguments(propertys.SelectedItem, MyObj)
                     If temp Is Nothing = False Then
@@ -339,7 +339,7 @@ Public Class ShowObject
         RaiseEvent SizeChanged(Me, Nothing) : Me.Refresh()
         oldProp = propertys.SelectedItem
 
-        ' Создания значка быстрой справки
+        ' РЎРѕР·РґР°РЅРёСЏ Р·РЅР°С‡РєР° Р±С‹СЃС‚СЂРѕР№ СЃРїСЂР°РІРєРё
         help4.Tag = MainForm.GetHelpLink(forms.Text & "." & objects.Text & "." & propertys.Text)
 
         Dim forma As Object = Me.TopLevelControl

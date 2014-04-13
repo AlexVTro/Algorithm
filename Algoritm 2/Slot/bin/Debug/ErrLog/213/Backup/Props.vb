@@ -1,9 +1,9 @@
-Module Props
+п»їModule Props
     Public Function GetProperty(ByVal MyObj As Object, ByVal prop As String, Optional ByVal word As String = "") As ErrString
         prop = UCase(prop)
         If MyObj Is Nothing Then Return New ErrString(Nothing)
         If MyObj.PropertysUp Is Nothing Then Return New ErrString(Nothing)
-        If Array.IndexOf(MyObj.PropertysUp, prop) = -1 Then Return New ErrString(Nothing) ' Если нет такого свойства то выйти из функции
+        If Array.IndexOf(MyObj.PropertysUp, prop) = -1 Then Return New ErrString(Nothing) ' Р•СЃР»Рё РЅРµС‚ С‚Р°РєРѕРіРѕ СЃРІРѕР№СЃС‚РІР° С‚Рѕ РІС‹Р№С‚Рё РёР· С„СѓРЅРєС†РёРё
         Return GetPropertyMethod(MyObj, prop, word, Nothing)
     End Function
     Function GetPropertyMethod(ByVal MyObj As Object, ByVal prop As String, ByVal word As String, ByVal args() As String) As ErrString
@@ -12,14 +12,14 @@ Module Props
         Dim obj As Object = MyObj.obj
         Dim es As ErrString, i As Integer
         prop = UCase(prop)
-        ' Если свойство в дополнительных параметрах (напр. _Кнопка мыши)
+        ' Р•СЃР»Рё СЃРІРѕР№СЃС‚РІРѕ РІ РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… РїР°СЂР°РјРµС‚СЂР°С… (РЅР°РїСЂ. _РљРЅРѕРїРєР° РјС‹С€Рё)
         If MyObj.isRun Then
             If RunProj Is Nothing Then Exit Function
             If RunProj.Param.Paramy Is Nothing = False Then
                 If RunProj.Param.ParamyUp.IndexOfKey(UCase(prop)) <> -1 Then vParamah = True
             End If
         End If
-        ' Если нет такого свойства то выйти из функции
+        ' Р•СЃР»Рё РЅРµС‚ С‚Р°РєРѕРіРѕ СЃРІРѕР№СЃС‚РІР° С‚Рѕ РІС‹Р№С‚Рё РёР· С„СѓРЅРєС†РёРё
         If MyObj.PropertysUp Is Nothing And MyObj.MethodsUp Is Nothing Then Return New ErrString("", Errors.notPropertyMethod(oldprop))
         If MyObj.PropertysUp Is Nothing = False Then
             If Array.IndexOf(MyObj.PropertysUp, prop) = -1 And Array.IndexOf(MyObj.MethodsUp, prop) = -1 And vParamah = False Then
@@ -31,7 +31,7 @@ Module Props
             End If
         End If
         If isObjSobitiya(MyObj.obj) Then Return New ErrString("")
-        ' заменить в аргументах мой знак на интеры
+        ' Р·Р°РјРµРЅРёС‚СЊ РІ Р°СЂРіСѓРјРµРЅС‚Р°С… РјРѕР№ Р·РЅР°Рє РЅР° РёРЅС‚РµСЂС‹
         If args Is Nothing = False Then
             For i = 0 To args.Length - 1
                 args(i) = perevesti(args(i), True)
@@ -42,380 +42,380 @@ Module Props
         Select Case prop
 
             ' OBJECTS
-            Case UCase(trans("Имя")) : Return New ErrString(obj.Props.Name)
-            Case UCase(trans("Фоновой рисунок")) : Return New ErrString(obj.Props.BackgroundImage)
-            Case UCase(trans("Фоновой рисунок1")) : Return New ErrString(obj.Props.BackgroundImage1)
-            Case UCase(trans("Фоновой рисунок2")) : Return New ErrString(obj.Props.BackgroundImage2)
-            Case UCase(trans("Цвет")) : Return New ErrString(obj.Props.BackColor)
-            Case UCase(trans("Цвет1")) : Return New ErrString(obj.Props.BackColor1)
-            Case UCase(trans("Цвет2")) : Return New ErrString(obj.Props.BackColor2)
-            Case UCase(trans("Номер")) : Return New ErrString(obj.Props.index)
-            Case UCase(trans("Позиция")) : Return New ErrString(obj.Props.position)
-            Case UCase(trans("Главная форма")) : Return New ErrString(obj.Props.mainform)
-            Case UCase(trans("Всплывающее меню")) : Return New ErrString(obj.Props.ContextMenu)
-            Case UCase(trans("Всплывающее меню1")) : Return New ErrString(obj.Props.ContextMenu1)
-            Case UCase(trans("Всплывающее меню2")) : Return New ErrString(obj.Props.ContextMenu2)
-            Case UCase(trans("Запретить закрытие")) : Return New ErrString(obj.Props.ForbidClose)
-            Case UCase(trans("Привязка")) : Return New ErrString(obj.Props.Anchor)
-            Case UCase(trans("АвтоТроеточие")) : Return New ErrString(obj.Props.AutoEllipsis)
-            Case UCase(trans("Стиль фона")) : Return New ErrString(obj.Props.BackgroundImageLayout)
-            Case UCase(trans("Стиль фона1")) : Return New ErrString(obj.Props.BackgroundImageLayout1)
-            Case UCase(trans("Стиль фона2")) : Return New ErrString(obj.Props.BackgroundImageLayout2)
-            Case UCase(trans("Стиль рисунка")) : Return New ErrString(obj.Props.SizeMode)
-            Case UCase(trans("Курсор")) : Return New ErrString(obj.Props.Cursor)
-            Case UCase(trans("Курсор1")) : Return New ErrString(obj.Props.Cursor1)
-            Case UCase(trans("Курсор2")) : Return New ErrString(obj.Props.Cursor2)
-            Case UCase(trans("Растяжка")) : Return New ErrString(obj.Props.Dock)
-            Case UCase(trans("Работает")) : Return New ErrString(obj.Props.Enabled)
-            Case UCase(trans("Стиль кнопки")) : Return New ErrString(obj.Props.FlatStyle)
-            Case UCase(trans("Стиль рамки")) : Return New ErrString(obj.Props.BorderStyle)
-            Case UCase(trans("Шрифт")) : Return New ErrString(obj.Props.FontFamily)
-            Case UCase(trans("Шрифт жирный")) : Return New ErrString(obj.Props.FontBold)
-            Case UCase(trans("Шрифт курсив")) : Return New ErrString(obj.Props.FontItalic)
-            Case UCase(trans("Шрифт подчеркнутый")) : Return New ErrString(obj.Props.FontUnderline)
-            Case UCase(trans("Шрифт зачеркнутый")) : Return New ErrString(obj.Props.FontStrikeout)
-            Case UCase(trans("Шрифт размер")) : Return New ErrString(obj.Props.FontSize)
-            Case UCase(trans("Цвет шрифта")) : Return New ErrString(obj.Props.ForeColor)
-            Case UCase(trans("Рисунок")) : Return New ErrString(obj.Props.Image)
-            Case UCase(trans("Положение рисунка")) : Return New ErrString(obj.Props.ImageAlign)
+            Case UCase(trans("РРјСЏ")) : Return New ErrString(obj.Props.Name)
+            Case UCase(trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє")) : Return New ErrString(obj.Props.BackgroundImage)
+            Case UCase(trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє1")) : Return New ErrString(obj.Props.BackgroundImage1)
+            Case UCase(trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє2")) : Return New ErrString(obj.Props.BackgroundImage2)
+            Case UCase(trans("Р¦РІРµС‚")) : Return New ErrString(obj.Props.BackColor)
+            Case UCase(trans("Р¦РІРµС‚1")) : Return New ErrString(obj.Props.BackColor1)
+            Case UCase(trans("Р¦РІРµС‚2")) : Return New ErrString(obj.Props.BackColor2)
+            Case UCase(trans("РќРѕРјРµСЂ")) : Return New ErrString(obj.Props.index)
+            Case UCase(trans("РџРѕР·РёС†РёСЏ")) : Return New ErrString(obj.Props.position)
+            Case UCase(trans("Р“Р»Р°РІРЅР°СЏ С„РѕСЂРјР°")) : Return New ErrString(obj.Props.mainform)
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ")) : Return New ErrString(obj.Props.ContextMenu)
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ1")) : Return New ErrString(obj.Props.ContextMenu1)
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ2")) : Return New ErrString(obj.Props.ContextMenu2)
+            Case UCase(trans("Р—Р°РїСЂРµС‚РёС‚СЊ Р·Р°РєСЂС‹С‚РёРµ")) : Return New ErrString(obj.Props.ForbidClose)
+            Case UCase(trans("РџСЂРёРІСЏР·РєР°")) : Return New ErrString(obj.Props.Anchor)
+            Case UCase(trans("РђРІС‚РѕРўСЂРѕРµС‚РѕС‡РёРµ")) : Return New ErrString(obj.Props.AutoEllipsis)
+            Case UCase(trans("РЎС‚РёР»СЊ С„РѕРЅР°")) : Return New ErrString(obj.Props.BackgroundImageLayout)
+            Case UCase(trans("РЎС‚РёР»СЊ С„РѕРЅР°1")) : Return New ErrString(obj.Props.BackgroundImageLayout1)
+            Case UCase(trans("РЎС‚РёР»СЊ С„РѕРЅР°2")) : Return New ErrString(obj.Props.BackgroundImageLayout2)
+            Case UCase(trans("РЎС‚РёР»СЊ СЂРёСЃСѓРЅРєР°")) : Return New ErrString(obj.Props.SizeMode)
+            Case UCase(trans("РљСѓСЂСЃРѕСЂ")) : Return New ErrString(obj.Props.Cursor)
+            Case UCase(trans("РљСѓСЂСЃРѕСЂ1")) : Return New ErrString(obj.Props.Cursor1)
+            Case UCase(trans("РљСѓСЂСЃРѕСЂ2")) : Return New ErrString(obj.Props.Cursor2)
+            Case UCase(trans("Р Р°СЃС‚СЏР¶РєР°")) : Return New ErrString(obj.Props.Dock)
+            Case UCase(trans("Р Р°Р±РѕС‚Р°РµС‚")) : Return New ErrString(obj.Props.Enabled)
+            Case UCase(trans("РЎС‚РёР»СЊ РєРЅРѕРїРєРё")) : Return New ErrString(obj.Props.FlatStyle)
+            Case UCase(trans("РЎС‚РёР»СЊ СЂР°РјРєРё")) : Return New ErrString(obj.Props.BorderStyle)
+            Case UCase(trans("РЁСЂРёС„С‚")) : Return New ErrString(obj.Props.FontFamily)
+            Case UCase(trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№")) : Return New ErrString(obj.Props.FontBold)
+            Case UCase(trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ")) : Return New ErrString(obj.Props.FontItalic)
+            Case UCase(trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№")) : Return New ErrString(obj.Props.FontUnderline)
+            Case UCase(trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№")) : Return New ErrString(obj.Props.FontStrikeout)
+            Case UCase(trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ")) : Return New ErrString(obj.Props.FontSize)
+            Case UCase(trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°")) : Return New ErrString(obj.Props.ForeColor)
+            Case UCase(trans("Р РёСЃСѓРЅРѕРє")) : Return New ErrString(obj.Props.Image)
+            Case UCase(trans("РџРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР°")) : Return New ErrString(obj.Props.ImageAlign)
             Case UCase(trans("X")) : Return New ErrString(obj.Props.X)
             Case UCase(trans("Y")) : Return New ErrString(obj.Props.Y)
-            Case UCase(trans("Максимальная ширина")) : Return New ErrString(obj.Props.MaximumWidth)
-            Case UCase(trans("Максимальная вышина")) : Return New ErrString(obj.Props.MaximumHeight)
-            Case UCase(trans("Минимальная ширина")) : Return New ErrString(obj.Props.MinimumWidth)
-            Case UCase(trans("Минимальная вышина")) : Return New ErrString(obj.Props.MinimumHeight)
-            Case UCase(trans("Поле слева")) : Return New ErrString(obj.Props.PaddingLeft)
-            Case UCase(trans("Поле сверху")) : Return New ErrString(obj.Props.PaddingTop)
-            Case UCase(trans("Поле справа")) : Return New ErrString(obj.Props.PaddingRight)
-            Case UCase(trans("Поле снизу")) : Return New ErrString(obj.Props.PaddingBottom)
-            Case UCase(trans("Ширина")) : Return New ErrString(obj.Props.Width)
-            Case UCase(trans("Вышина")) : Return New ErrString(obj.Props.Height)
-            Case UCase(trans("ТабНомер")) : Return New ErrString(obj.Props.TabIndex)
-            Case UCase(trans("ТабСтоп")) : Return New ErrString(obj.Props.TabStop)
-            Case UCase(trans("Вспомогательное поле")) : Return New ErrString(obj.Props.Tag)
-            Case UCase(trans("Текст")) : Return New ErrString(obj.Props.Text)
-            Case UCase(trans("Положение текста")) : Return New ErrString(obj.Props.TextAlign)
-            Case UCase(trans("Расположение текста")) : Return New ErrString(obj.Props.TextPosition)
-            Case UCase(trans("Текст и рисунок")) : Return New ErrString(obj.Props.TextImageRelation)
-            Case UCase(trans("Видимый")) : Return New ErrString(obj.Props.Visible)
-            Case UCase(trans("Прокрутка")) : Return New ErrString(obj.Props.Scroll)
-            Case UCase(trans("Прокрутка1")) : Return New ErrString(obj.Props.Scroll1)
-            Case UCase(trans("Прокрутка2")) : Return New ErrString(obj.Props.Scroll2)
-            Case UCase(trans("Фиксированная часть")) : Return New ErrString(obj.Props.FixedPanel)
-            Case UCase(trans("Фиксированный разделитель")) : Return New ErrString(obj.Props.FixedSplitter)
-            Case UCase(trans("Ориентация")) : Return New ErrString(obj.Props.Orientation)
-            Case UCase(trans("Панель1 скрыта")) : Return New ErrString(obj.Props.Panel1Collapsed)
-            Case UCase(trans("Панель2 скрыта")) : Return New ErrString(obj.Props.Panel2Collapsed)
-            Case UCase(trans("Ширина разделителя")) : Return New ErrString(obj.Props.SplitterWidth)
-            Case UCase(trans("Расстояние разделителя")) : Return New ErrString(obj.Props.SplitterDistance)
-            Case UCase(trans("Инкремент разделителя")) : Return New ErrString(obj.Props.SplitterIncrement)
-            Case UCase(trans("Панель1 минимум")) : Return New ErrString(obj.Props.Panel1MinSize)
-            Case UCase(trans("Панель2 минимум")) : Return New ErrString(obj.Props.Panel2MinSize)
-            Case UCase(trans("В фокусе")) : Return New ErrString(obj.Props.Focused)
-            Case UCase(trans("Тип")) : Return New ErrString(obj.Props.Type)
-            Case UCase(trans("Файл проигрывания")) : Return New ErrString(obj.Props.FileNamePlayed)
-            Case UCase(trans("Проигрывается")) : Return New ErrString(obj.Props.Played)
-            Case UCase(trans("Громкость")) : Return New ErrString(obj.Props.Volume)
-            Case UCase(trans("Баланс")) : Return New ErrString(obj.Props.Balance)
-            Case UCase(trans("Звук отключен")) : Return New ErrString(obj.Props.Mute)
-            Case UCase(trans("Скорость")) : Return New ErrString(obj.Props.Speed)
-            Case UCase(trans("Длительность общая")) : Return New ErrString(obj.Props.TotalPosition)
-            Case UCase(trans("Позиция проигрывания")) : Return New ErrString(obj.Props.PlayPosition)
-            Case UCase(trans("Проигралось времени")) : Return New ErrString(obj.Props.PlayTime)
-            Case UCase(trans("Длительность время")) : Return New ErrString(obj.Props.TotalTime)
-            Case UCase(trans("Оригинальная вышина")) : Return New ErrString(obj.Props.OriginalHeight)
-            Case UCase(trans("Оригинальная ширина")) : Return New ErrString(obj.Props.OriginalWidth)
-            Case UCase(trans("Скрывать выделение")) : Return New ErrString(obj.Props.HideSelection)
-            Case UCase(trans("Максимальная длинна")) : Return New ErrString(obj.Props.MaximumLength)
-            Case UCase(trans("Многострочность")) : Return New ErrString(obj.Props.Multiline)
-            Case UCase(trans("Символ пароля")) : Return New ErrString(obj.Props.PasswordChar)
-            Case UCase(trans("Только для чтения")) : Return New ErrString(obj.Props.ReadOnly)
-            Case UCase(trans("Полосы прокрутки")) : Return New ErrString(obj.Props.ScrollBars)
-            Case UCase(trans("Перенос по словам")) : Return New ErrString(obj.Props.WordWrap)
-            Case UCase(trans("Выделенный текст")) : Return New ErrString(obj.Props.SelectedText)
-            Case UCase(trans("Начало выделения")) : Return New ErrString(obj.Props.SelectionStart)
-            Case UCase(trans("Длинна выделения")) : Return New ErrString(obj.Props.SelectionLength)
-            Case UCase(trans("Отмечено")) : Return New ErrString(obj.Props.Checked)
-            Case UCase(trans("Ориентация инструментов")) : Return New ErrString(obj.Props.OrientationTools)
-            Case UCase(trans("Расположен слева")) : Return New ErrString(obj.Props.Alignment)
-            Case UCase(trans("Показывать подсказку")) : Return New ErrString(obj.Props.AutoToolTip)
-            Case UCase(trans("Отметка по клику")) : Return New ErrString(obj.Props.CheckOnClick)
-            Case UCase(trans("Стиль отображения")) : Return New ErrString(obj.Props.DisplayStyle)
-            Case UCase(trans("Родительское меню")) : Return New ErrString(obj.Props.OwnerMenu)
-            Case UCase(trans("Родительский пункт")) : Return New ErrString(obj.Props.OwnerItem)
-            Case UCase(trans("Хозяин объект")) : Return New ErrString(obj.Props.OwnerObject)
-            Case UCase(trans("Вложенное всплывающее меню")) : Return New ErrString(obj.Props.DropDown)
-            Case UCase(trans("Рисунок растянут")) : Return New ErrString(obj.Props.ImageScaling)
-            Case UCase(trans("Прозрачный цвет рисунка")) : Return New ErrString(obj.Props.ImageTransparentColor)
-            Case UCase(trans("Горячая клавиша")) : Return New ErrString(obj.Props.ShortcutKeys)
-            Case UCase(trans("Отображать горячие клавиши")) : Return New ErrString(obj.Props.ShowShortcutKeys)
-            Case UCase(trans("Направление текста")) : Return New ErrString(obj.Props.TextDirection)
-            Case UCase(trans("Всплывающая подсказка")) : Return New ErrString(obj.Props.ToolTipText)
-            Case UCase(trans("Оконные кнопки и меню")) : Return New ErrString(obj.Props.ControlBox)
-            Case UCase(trans("Стиль окна")) : Return New ErrString(obj.Props.FormBorderStyle)
-            Case UCase(trans("Главное меню")) : Return New ErrString(obj.Props.MainMenuStrip)
-            Case UCase(trans("Прозрачность")) : Return New ErrString(obj.Props.Opacity)
-            Case UCase(trans("Показывать иконку")) : Return New ErrString(obj.Props.ShowIcon)
-            Case UCase(trans("Отображать в панели задач")) : Return New ErrString(obj.Props.ShowInTaskbar)
-            Case UCase(trans("Стартовая позиция")) : Return New ErrString(obj.Props.StartPosition)
-            Case UCase(trans("Поверх всех окон")) : Return New ErrString(obj.Props.TopMost)
-            Case UCase(trans("Статус окна")) : Return New ErrString(obj.Props.WindowState)
-            Case UCase(trans("Прокрутка минимальная ширина")) : Return New ErrString(obj.Props.AutoScrollMinSizeWidth)
-            Case UCase(trans("Прокрутка минимальная вышина")) : Return New ErrString(obj.Props.AutoScrollMinSizeHeight)
-            Case UCase(trans("Прокручено по X")) : Return New ErrString(obj.Props.AutoScrollPositionX)
-            Case UCase(trans("Прокручено по Y")) : Return New ErrString(obj.Props.AutoScrollPositionY)
-            Case UCase(trans("Высота заголовка")) : Return New ErrString(obj.Props.CaptionHeight)
-            Case UCase(trans("Иконка")) : Return New ErrString(obj.Props.Icon)
-            Case UCase(trans("Прозрачный цвет")) : Return New ErrString(obj.Props.TransparentcyKey)
-            Case UCase(trans("Положение закладок")) : Return New ErrString(obj.Props.TabAlignment)
-            Case UCase(trans("Номер выделенной закладки")) : Return New ErrString(obj.Props.SelectedTabIndex)
-            Case UCase(trans("Позиция выделенной закладки")) : Return New ErrString(obj.Props.SelectedTabPosition)
-            Case UCase(trans("Поле по горизонтали")) : Return New ErrString(obj.Props.PaddingX)
-            Case UCase(trans("Поле по вертикали")) : Return New ErrString(obj.Props.PaddingY)
-            Case UCase(trans("Значение")) : Return New ErrString(obj.Props.Value)
-            Case UCase(trans("Высота раскрывающегося списка")) : Return New ErrString(obj.Props.DropDownHeight)
-            Case UCase(trans("Ширина раскрывающегося списка")) : Return New ErrString(obj.Props.DropDownWidth)
-            Case UCase(trans("Список упрощенный")) : Return New ErrString(obj.Props.DropDownStyle)
-            Case UCase(trans("Высота записей списка")) : Return New ErrString(obj.Props.ItemHeight)
-            Case UCase(trans("Записи списка")) : Return New ErrString(obj.Props.Items)
-            Case UCase(trans("Количество раскрывающихся записей")) : Return New ErrString(obj.Props.MaxDropDownItems)
-            Case UCase(trans("Сортирован список")) : Return New ErrString(obj.Props.Sorted)
-            Case UCase(trans("Список раскрыт")) : Return New ErrString(obj.Props.DroppedDown)
-            Case UCase(trans("Номер выделенной записи")) : Return New ErrString(obj.Props.SelectedIndex)
-            Case UCase(trans("Выделенная запись")) : Return New ErrString(obj.Props.SelectedItem)
-            Case UCase(trans("Запись по номеру"))
+            Case UCase(trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) : Return New ErrString(obj.Props.MaximumWidth)
+            Case UCase(trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) : Return New ErrString(obj.Props.MaximumHeight)
+            Case UCase(trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) : Return New ErrString(obj.Props.MinimumWidth)
+            Case UCase(trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) : Return New ErrString(obj.Props.MinimumHeight)
+            Case UCase(trans("РџРѕР»Рµ СЃР»РµРІР°")) : Return New ErrString(obj.Props.PaddingLeft)
+            Case UCase(trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ")) : Return New ErrString(obj.Props.PaddingTop)
+            Case UCase(trans("РџРѕР»Рµ СЃРїСЂР°РІР°")) : Return New ErrString(obj.Props.PaddingRight)
+            Case UCase(trans("РџРѕР»Рµ СЃРЅРёР·Сѓ")) : Return New ErrString(obj.Props.PaddingBottom)
+            Case UCase(trans("РЁРёСЂРёРЅР°")) : Return New ErrString(obj.Props.Width)
+            Case UCase(trans("Р’С‹С€РёРЅР°")) : Return New ErrString(obj.Props.Height)
+            Case UCase(trans("РўР°Р±РќРѕРјРµСЂ")) : Return New ErrString(obj.Props.TabIndex)
+            Case UCase(trans("РўР°Р±РЎС‚РѕРї")) : Return New ErrString(obj.Props.TabStop)
+            Case UCase(trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ")) : Return New ErrString(obj.Props.Tag)
+            Case UCase(trans("РўРµРєСЃС‚")) : Return New ErrString(obj.Props.Text)
+            Case UCase(trans("РџРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°")) : Return New ErrString(obj.Props.TextAlign)
+            Case UCase(trans("Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°")) : Return New ErrString(obj.Props.TextPosition)
+            Case UCase(trans("РўРµРєСЃС‚ Рё СЂРёСЃСѓРЅРѕРє")) : Return New ErrString(obj.Props.TextImageRelation)
+            Case UCase(trans("Р’РёРґРёРјС‹Р№")) : Return New ErrString(obj.Props.Visible)
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР°")) : Return New ErrString(obj.Props.Scroll)
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР°1")) : Return New ErrString(obj.Props.Scroll1)
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР°2")) : Return New ErrString(obj.Props.Scroll2)
+            Case UCase(trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ С‡Р°СЃС‚СЊ")) : Return New ErrString(obj.Props.FixedPanel)
+            Case UCase(trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ СЂР°Р·РґРµР»РёС‚РµР»СЊ")) : Return New ErrString(obj.Props.FixedSplitter)
+            Case UCase(trans("РћСЂРёРµРЅС‚Р°С†РёСЏ")) : Return New ErrString(obj.Props.Orientation)
+            Case UCase(trans("РџР°РЅРµР»СЊ1 СЃРєСЂС‹С‚Р°")) : Return New ErrString(obj.Props.Panel1Collapsed)
+            Case UCase(trans("РџР°РЅРµР»СЊ2 СЃРєСЂС‹С‚Р°")) : Return New ErrString(obj.Props.Panel2Collapsed)
+            Case UCase(trans("РЁРёСЂРёРЅР° СЂР°Р·РґРµР»РёС‚РµР»СЏ")) : Return New ErrString(obj.Props.SplitterWidth)
+            Case UCase(trans("Р Р°СЃСЃС‚РѕСЏРЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ")) : Return New ErrString(obj.Props.SplitterDistance)
+            Case UCase(trans("РРЅРєСЂРµРјРµРЅС‚ СЂР°Р·РґРµР»РёС‚РµР»СЏ")) : Return New ErrString(obj.Props.SplitterIncrement)
+            Case UCase(trans("РџР°РЅРµР»СЊ1 РјРёРЅРёРјСѓРј")) : Return New ErrString(obj.Props.Panel1MinSize)
+            Case UCase(trans("РџР°РЅРµР»СЊ2 РјРёРЅРёРјСѓРј")) : Return New ErrString(obj.Props.Panel2MinSize)
+            Case UCase(trans("Р’ С„РѕРєСѓСЃРµ")) : Return New ErrString(obj.Props.Focused)
+            Case UCase(trans("РўРёРї")) : Return New ErrString(obj.Props.Type)
+            Case UCase(trans("Р¤Р°Р№Р» РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ")) : Return New ErrString(obj.Props.FileNamePlayed)
+            Case UCase(trans("РџСЂРѕРёРіСЂС‹РІР°РµС‚СЃСЏ")) : Return New ErrString(obj.Props.Played)
+            Case UCase(trans("Р“СЂРѕРјРєРѕСЃС‚СЊ")) : Return New ErrString(obj.Props.Volume)
+            Case UCase(trans("Р‘Р°Р»Р°РЅСЃ")) : Return New ErrString(obj.Props.Balance)
+            Case UCase(trans("Р—РІСѓРє РѕС‚РєР»СЋС‡РµРЅ")) : Return New ErrString(obj.Props.Mute)
+            Case UCase(trans("РЎРєРѕСЂРѕСЃС‚СЊ")) : Return New ErrString(obj.Props.Speed)
+            Case UCase(trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕР±С‰Р°СЏ")) : Return New ErrString(obj.Props.TotalPosition)
+            Case UCase(trans("РџРѕР·РёС†РёСЏ РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ")) : Return New ErrString(obj.Props.PlayPosition)
+            Case UCase(trans("РџСЂРѕРёРіСЂР°Р»РѕСЃСЊ РІСЂРµРјРµРЅРё")) : Return New ErrString(obj.Props.PlayTime)
+            Case UCase(trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РІСЂРµРјСЏ")) : Return New ErrString(obj.Props.TotalTime)
+            Case UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) : Return New ErrString(obj.Props.OriginalHeight)
+            Case UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) : Return New ErrString(obj.Props.OriginalWidth)
+            Case UCase(trans("РЎРєСЂС‹РІР°С‚СЊ РІС‹РґРµР»РµРЅРёРµ")) : Return New ErrString(obj.Props.HideSelection)
+            Case UCase(trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅРЅР°")) : Return New ErrString(obj.Props.MaximumLength)
+            Case UCase(trans("РњРЅРѕРіРѕСЃС‚СЂРѕС‡РЅРѕСЃС‚СЊ")) : Return New ErrString(obj.Props.Multiline)
+            Case UCase(trans("РЎРёРјРІРѕР» РїР°СЂРѕР»СЏ")) : Return New ErrString(obj.Props.PasswordChar)
+            Case UCase(trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) : Return New ErrString(obj.Props.ReadOnly)
+            Case UCase(trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё")) : Return New ErrString(obj.Props.ScrollBars)
+            Case UCase(trans("РџРµСЂРµРЅРѕСЃ РїРѕ СЃР»РѕРІР°Рј")) : Return New ErrString(obj.Props.WordWrap)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚")) : Return New ErrString(obj.Props.SelectedText)
+            Case UCase(trans("РќР°С‡Р°Р»Рѕ РІС‹РґРµР»РµРЅРёСЏ")) : Return New ErrString(obj.Props.SelectionStart)
+            Case UCase(trans("Р”Р»РёРЅРЅР° РІС‹РґРµР»РµРЅРёСЏ")) : Return New ErrString(obj.Props.SelectionLength)
+            Case UCase(trans("РћС‚РјРµС‡РµРЅРѕ")) : Return New ErrString(obj.Props.Checked)
+            Case UCase(trans("РћСЂРёРµРЅС‚Р°С†РёСЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ")) : Return New ErrString(obj.Props.OrientationTools)
+            Case UCase(trans("Р Р°СЃРїРѕР»РѕР¶РµРЅ СЃР»РµРІР°")) : Return New ErrString(obj.Props.Alignment)
+            Case UCase(trans("РџРѕРєР°Р·С‹РІР°С‚СЊ РїРѕРґСЃРєР°Р·РєСѓ")) : Return New ErrString(obj.Props.AutoToolTip)
+            Case UCase(trans("РћС‚РјРµС‚РєР° РїРѕ РєР»РёРєСѓ")) : Return New ErrString(obj.Props.CheckOnClick)
+            Case UCase(trans("РЎС‚РёР»СЊ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ")) : Return New ErrString(obj.Props.DisplayStyle)
+            Case UCase(trans("Р РѕРґРёС‚РµР»СЊСЃРєРѕРµ РјРµРЅСЋ")) : Return New ErrString(obj.Props.OwnerMenu)
+            Case UCase(trans("Р РѕРґРёС‚РµР»СЊСЃРєРёР№ РїСѓРЅРєС‚")) : Return New ErrString(obj.Props.OwnerItem)
+            Case UCase(trans("РҐРѕР·СЏРёРЅ РѕР±СЉРµРєС‚")) : Return New ErrString(obj.Props.OwnerObject)
+            Case UCase(trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РІСЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ")) : Return New ErrString(obj.Props.DropDown)
+            Case UCase(trans("Р РёСЃСѓРЅРѕРє СЂР°СЃС‚СЏРЅСѓС‚")) : Return New ErrString(obj.Props.ImageScaling)
+            Case UCase(trans("РџСЂРѕР·СЂР°С‡РЅС‹Р№ С†РІРµС‚ СЂРёСЃСѓРЅРєР°")) : Return New ErrString(obj.Props.ImageTransparentColor)
+            Case UCase(trans("Р“РѕСЂСЏС‡Р°СЏ РєР»Р°РІРёС€Р°")) : Return New ErrString(obj.Props.ShortcutKeys)
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РіРѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё")) : Return New ErrString(obj.Props.ShowShortcutKeys)
+            Case UCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ С‚РµРєСЃС‚Р°")) : Return New ErrString(obj.Props.TextDirection)
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰Р°СЏ РїРѕРґСЃРєР°Р·РєР°")) : Return New ErrString(obj.Props.ToolTipText)
+            Case UCase(trans("РћРєРѕРЅРЅС‹Рµ РєРЅРѕРїРєРё Рё РјРµРЅСЋ")) : Return New ErrString(obj.Props.ControlBox)
+            Case UCase(trans("РЎС‚РёР»СЊ РѕРєРЅР°")) : Return New ErrString(obj.Props.FormBorderStyle)
+            Case UCase(trans("Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ")) : Return New ErrString(obj.Props.MainMenuStrip)
+            Case UCase(trans("РџСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ")) : Return New ErrString(obj.Props.Opacity)
+            Case UCase(trans("РџРѕРєР°Р·С‹РІР°С‚СЊ РёРєРѕРЅРєСѓ")) : Return New ErrString(obj.Props.ShowIcon)
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РІ РїР°РЅРµР»Рё Р·Р°РґР°С‡")) : Return New ErrString(obj.Props.ShowInTaskbar)
+            Case UCase(trans("РЎС‚Р°СЂС‚РѕРІР°СЏ РїРѕР·РёС†РёСЏ")) : Return New ErrString(obj.Props.StartPosition)
+            Case UCase(trans("РџРѕРІРµСЂС… РІСЃРµС… РѕРєРѕРЅ")) : Return New ErrString(obj.Props.TopMost)
+            Case UCase(trans("РЎС‚Р°С‚СѓСЃ РѕРєРЅР°")) : Return New ErrString(obj.Props.WindowState)
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) : Return New ErrString(obj.Props.AutoScrollMinSizeWidth)
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) : Return New ErrString(obj.Props.AutoScrollMinSizeHeight)
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ X")) : Return New ErrString(obj.Props.AutoScrollPositionX)
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ Y")) : Return New ErrString(obj.Props.AutoScrollPositionY)
+            Case UCase(trans("Р’С‹СЃРѕС‚Р° Р·Р°РіРѕР»РѕРІРєР°")) : Return New ErrString(obj.Props.CaptionHeight)
+            Case UCase(trans("РРєРѕРЅРєР°")) : Return New ErrString(obj.Props.Icon)
+            Case UCase(trans("РџСЂРѕР·СЂР°С‡РЅС‹Р№ С†РІРµС‚")) : Return New ErrString(obj.Props.TransparentcyKey)
+            Case UCase(trans("РџРѕР»РѕР¶РµРЅРёРµ Р·Р°РєР»Р°РґРѕРє")) : Return New ErrString(obj.Props.TabAlignment)
+            Case UCase(trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё")) : Return New ErrString(obj.Props.SelectedTabIndex)
+            Case UCase(trans("РџРѕР·РёС†РёСЏ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё")) : Return New ErrString(obj.Props.SelectedTabPosition)
+            Case UCase(trans("РџРѕР»Рµ РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё")) : Return New ErrString(obj.Props.PaddingX)
+            Case UCase(trans("РџРѕР»Рµ РїРѕ РІРµСЂС‚РёРєР°Р»Рё")) : Return New ErrString(obj.Props.PaddingY)
+            Case UCase(trans("Р—РЅР°С‡РµРЅРёРµ")) : Return New ErrString(obj.Props.Value)
+            Case UCase(trans("Р’С‹СЃРѕС‚Р° СЂР°СЃРєСЂС‹РІР°СЋС‰РµРіРѕСЃСЏ СЃРїРёСЃРєР°")) : Return New ErrString(obj.Props.DropDownHeight)
+            Case UCase(trans("РЁРёСЂРёРЅР° СЂР°СЃРєСЂС‹РІР°СЋС‰РµРіРѕСЃСЏ СЃРїРёСЃРєР°")) : Return New ErrString(obj.Props.DropDownWidth)
+            Case UCase(trans("РЎРїРёСЃРѕРє СѓРїСЂРѕС‰РµРЅРЅС‹Р№")) : Return New ErrString(obj.Props.DropDownStyle)
+            Case UCase(trans("Р’С‹СЃРѕС‚Р° Р·Р°РїРёСЃРµР№ СЃРїРёСЃРєР°")) : Return New ErrString(obj.Props.ItemHeight)
+            Case UCase(trans("Р—Р°РїРёСЃРё СЃРїРёСЃРєР°")) : Return New ErrString(obj.Props.Items)
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЂР°СЃРєСЂС‹РІР°СЋС‰РёС…СЃСЏ Р·Р°РїРёСЃРµР№")) : Return New ErrString(obj.Props.MaxDropDownItems)
+            Case UCase(trans("РЎРѕСЂС‚РёСЂРѕРІР°РЅ СЃРїРёСЃРѕРє")) : Return New ErrString(obj.Props.Sorted)
+            Case UCase(trans("РЎРїРёСЃРѕРє СЂР°СЃРєСЂС‹С‚")) : Return New ErrString(obj.Props.DroppedDown)
+            Case UCase(trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РїРёСЃРё")) : Return New ErrString(obj.Props.SelectedIndex)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ")) : Return New ErrString(obj.Props.SelectedItem)
+            Case UCase(trans("Р—Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If obj.items.count <= args(0) Then es.err = Errors.noItems(prop, args(0)) : Return es
                 Return New ErrString(obj.Props.ItemsItem(args))
-            Case UCase(trans("Найти номер записи"))
+            Case UCase(trans("РќР°Р№С‚Рё РЅРѕРјРµСЂ Р·Р°РїРёСЃРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.ItemsIndexOf(args))
-            Case UCase(trans("Количество записей")) : Return New ErrString(obj.Props.ItemsCount)
-            Case UCase(trans("Ширина колонок списка")) : Return New ErrString(obj.Props.ColumnWidth)
-            Case UCase(trans("Горизонтальная прокрутка")) : Return New ErrString(obj.Props.HorizontalScrollBar)
-            Case UCase(trans("Многоколонность")) : Return New ErrString(obj.Props.MultiColumn)
-            Case UCase(trans("Позволить выбирать записи")) : Return New ErrString(obj.Props.SelectionModeList)
-            Case UCase(trans("Номера отмеченых записей")) : Return New ErrString(obj.Props.CheckedIndices)
-            Case UCase(trans("Отмеченные записи")) : Return New ErrString(obj.Props.CheckedItems)
-            Case UCase(trans("Номера выделенных записей")) : Return New ErrString(obj.Props.SelectedIndices)
-            Case UCase(trans("Выделенные записи")) : Return New ErrString(obj.Props.SelectedItems)
-            Case UCase(trans("Цвет активной ссылки")) : Return New ErrString(obj.Props.ActiveLinkColor)
-            Case UCase(trans("Цвет нерабочей ссылки")) : Return New ErrString(obj.Props.DisabledLinkColor)
-            Case UCase(trans("Цвет ссылки")) : Return New ErrString(obj.Props.LinkColor)
-            Case UCase(trans("Цвет посещенной ссылки")) : Return New ErrString(obj.Props.VisitedLinkColor)
-            Case UCase(trans("Начало ссылки")) : Return New ErrString(obj.Props.LinkStart)
-            Case UCase(trans("Длинна ссылки")) : Return New ErrString(obj.Props.LinkLength)
-            Case UCase(trans("Стиль подчеркивания")) : Return New ErrString(obj.Props.LinkBehavior)
-            Case UCase(trans("Ссылка посещена")) : Return New ErrString(obj.Props.LinkVisited)
-            Case UCase(trans("Ссылка рабочая")) : Return New ErrString(obj.Props.LinkEnabled)
-            Case UCase(trans("Переходить в интернет по ссылке")) : Return New ErrString(obj.Props.InternetLink)
-            Case UCase(trans("Ссылка надписи")) : Return New ErrString(obj.Props.LinkName)
-            Case UCase(trans("Подсвечивать ссылки")) : Return New ErrString(obj.Props.DetectUrls)
-            Case UCase(trans("Позволить перенос выделенного")) : Return New ErrString(obj.Props.EnableAutoDragDrop)
-            Case UCase(trans("Масштаб")) : Return New ErrString(obj.Props.ZoomFactor)
-            Case UCase(trans("RTF код документа")) : Return New ErrString(obj.Props.Rtf)
-            Case UCase(trans("Выделенный RTF")) : Return New ErrString(obj.Props.SelectedRtf)
-            Case UCase(trans("Выделенное положение текста")) : Return New ErrString(obj.Props.SelectionAlignment)
-            Case UCase(trans("Выделенный задний фон")) : Return New ErrString(obj.Props.SelectionBackColor)
-            Case UCase(trans("Выделенный цвет текста")) : Return New ErrString(obj.Props.SelectionColor)
-            Case UCase(trans("Выделенный размер красной строки")) : Return New ErrString(obj.Props.SelectionHangingIndent)
-            Case UCase(trans("Выделенный отступ слева")) : Return New ErrString(obj.Props.SelectionIndent)
-            Case UCase(trans("Выделенный отступ справа")) : Return New ErrString(obj.Props.SelectionRightIndent)
-            Case UCase(trans("Выделенный имеет маркер")) : Return New ErrString(obj.Props.SelectionBullet)
-            Case UCase(trans("Выделенное вертикальное смещение")) : Return New ErrString(obj.Props.SelectionCharOffset)
-            Case UCase(trans("Выделенный шрифт")) : Return New ErrString(obj.Props.SelectionFontFamily)
-            Case UCase(trans("Выделенный шрифт жирный")) : Return New ErrString(obj.Props.SelectionFontBold)
-            Case UCase(trans("Выделенный шрифт курсив")) : Return New ErrString(obj.Props.SelectionFontItalic)
-            Case UCase(trans("Выделенный шрифт подчеркнутый")) : Return New ErrString(obj.Props.SelectionFontUnderline)
-            Case UCase(trans("Выделенный шрифт зачеркнутый")) : Return New ErrString(obj.Props.SelectionFontStrikeout)
-            Case UCase(trans("Выделенный шрифт размер")) : Return New ErrString(obj.Props.SelectionFontSize)
-            Case UCase(trans("Выделенный текст заблокирован")) : Return New ErrString(obj.Props.SelectionProtected)
-            Case UCase(trans("Выбранный цвет")) : Return New ErrString(obj.Props.DialogColor)
-            Case UCase(trans("Была нажата отмена")) : Return New ErrString(obj.Props.WasCancel)
-            Case UCase(trans("Позволить выбирать цвет")) : Return New ErrString(obj.Props.ShowColor)
-            Case UCase(trans("Позволить выбирать подчеркивания")) : Return New ErrString(obj.Props.ShowEffects)
-            Case UCase(trans("Надпись в окне")) : Return New ErrString(obj.Props.Description)
-            Case UCase(trans("Выбранная папка")) : Return New ErrString(obj.Props.SelectedPath)
-            Case UCase(trans("Добавлять расширение файлу")) : Return New ErrString(obj.Props.DefaultExt)
-            Case UCase(trans("Проверять наличие файла")) : Return New ErrString(obj.Props.CheckFileExists)
-            Case UCase(trans("Проверять наличие папки")) : Return New ErrString(obj.Props.CheckPathExists)
-            Case UCase(trans("Имя файла")) : Return New ErrString(obj.Props.FileName)
-            Case UCase(trans("Фильтр файлов")) : Return New ErrString(obj.Props.Filter)
-            Case UCase(trans("Номер фильтра")) : Return New ErrString(obj.Props.FilterIndex)
-            Case UCase(trans("Начальная папка")) : Return New ErrString(obj.Props.InitialDirectory)
-            Case UCase(trans("Заголовок")) : Return New ErrString(obj.Props.Title)
-            Case UCase(trans("Выбор нескольких файлов")) : Return New ErrString(obj.Props.MultiSelectFiles)
-            Case UCase(trans("Текст на печать")) : Return New ErrString(obj.Props.PrintText)
-            Case UCase(trans("Документ на печать")) : Return New ErrString(obj.Props.PrintDocument)
-            Case UCase(trans("Таблица на печать")) : Return New ErrString(obj.Props.PrintTable)
-            Case UCase(trans("Объект на печать")) : Return New ErrString(obj.Props.PrintObject)
-            Case UCase(trans("Рисунок на печать")) : Return New ErrString(obj.Props.PrintPicture)
-            Case UCase(trans("Таблица в центре")) : Return New ErrString(obj.Props.TableOnCenter)
-            Case UCase(trans("Интервал отсчета")) : Return New ErrString(obj.Props.Interval)
-            Case UCase(trans("Прошло интервалов")) : Return New ErrString(obj.Props.IntervalCount)
-            Case UCase(trans("Формат даты")) : Return New ErrString(obj.Props.CalendarDateFormat)
-            Case UCase(trans("Формат даты по выбору")) : Return New ErrString(obj.Props.CustomDateFormat)
-            Case UCase(trans("Кнопки вверх вниз")) : Return New ErrString(obj.Props.ShowUpDown)
-            Case UCase(trans("Выбранная дата")) : Return New ErrString(obj.Props.SelectedDate)
-            Case UCase(trans("Сдвиг большой")) : Return New ErrString(obj.Props.LargeChange)
-            Case UCase(trans("Сдвиг малый")) : Return New ErrString(obj.Props.SmallChange)
-            Case UCase(trans("Максимум")) : Return New ErrString(obj.Props.Maximum)
-            Case UCase(trans("Минимум")) : Return New ErrString(obj.Props.Minimum)
-            Case UCase(trans("Стиль бегунка")) : Return New ErrString(obj.Props.TickStyle)
-            Case UCase(trans("Частота отметок")) : Return New ErrString(obj.Props.TickFrequency)
-            Case UCase(trans("Отображать в трее")) : Return New ErrString(obj.Props.ShowInTray)
-            Case UCase(trans("Подсказка")) : Return New ErrString(obj.Props.ToolTip)
-            Case UCase(trans("Добавить в автозагрузку")) : Return New ErrString(obj.Props.AutoRun)
-            Case UCase(trans("Разрешить запуск копий")) : Return New ErrString(obj.Props.AllowRunCopies)
-            Case UCase(trans("Разрешить вводить")) : Return New ErrString(obj.Props.AllowInput)
-            Case UCase(trans("Стиль загрузки")) : Return New ErrString(obj.Props.StyleProgress)
-            Case UCase(trans("Скорость анимации")) : Return New ErrString(obj.Props.MarqueeAnimationSpeed)
-            Case UCase(trans("Шаг загрузки")) : Return New ErrString(obj.Props.StepProgress)
-            Case UCase(trans("Справа налево")) : Return New ErrString(obj.Props.RightToLeftLayout)
-            Case UCase(trans("Запретить минимизировать")) : Return New ErrString(obj.Props.ForbidMinimize)
-            Case UCase(trans("Запретить разворачивать")) : Return New ErrString(obj.Props.ForbidMaximize)
-            Case UCase(trans("Ассоциировать с расширениями")) : Return New ErrString(obj.Props.AssociateWithExtensions)
-            Case UCase(trans("Ассоциированый принятый файл")) : Return New ErrString(obj.Props.AssociationPassedFile)
-            Case UCase(trans("Страница начала печати")) : Return New ErrString(obj.Props.FromPage)
-            Case UCase(trans("Страница конца печати")) : Return New ErrString(obj.Props.ToPage)
-            Case UCase(trans("Число копий")) : Return New ErrString(obj.Props.Copies)
-            Case UCase(trans("Ширина столбцов")) : Return New ErrString(obj.Props.WidthOfColumns)
-            Case UCase(trans("Вышина строк")) : Return New ErrString(obj.Props.HeightOfRows)
-            Case UCase(trans("На весь экран")) : Return New ErrString(obj.Props.OnFullScreen)
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№")) : Return New ErrString(obj.Props.ItemsCount)
+            Case UCase(trans("РЁРёСЂРёРЅР° РєРѕР»РѕРЅРѕРє СЃРїРёСЃРєР°")) : Return New ErrString(obj.Props.ColumnWidth)
+            Case UCase(trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°")) : Return New ErrString(obj.Props.HorizontalScrollBar)
+            Case UCase(trans("РњРЅРѕРіРѕРєРѕР»РѕРЅРЅРѕСЃС‚СЊ")) : Return New ErrString(obj.Props.MultiColumn)
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ Р·Р°РїРёСЃРё")) : Return New ErrString(obj.Props.SelectionModeList)
+            Case UCase(trans("РќРѕРјРµСЂР° РѕС‚РјРµС‡РµРЅС‹С… Р·Р°РїРёСЃРµР№")) : Return New ErrString(obj.Props.CheckedIndices)
+            Case UCase(trans("РћС‚РјРµС‡РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё")) : Return New ErrString(obj.Props.CheckedItems)
+            Case UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… Р·Р°РїРёСЃРµР№")) : Return New ErrString(obj.Props.SelectedIndices)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё")) : Return New ErrString(obj.Props.SelectedItems)
+            Case UCase(trans("Р¦РІРµС‚ Р°РєС‚РёРІРЅРѕР№ СЃСЃС‹Р»РєРё")) : Return New ErrString(obj.Props.ActiveLinkColor)
+            Case UCase(trans("Р¦РІРµС‚ РЅРµСЂР°Р±РѕС‡РµР№ СЃСЃС‹Р»РєРё")) : Return New ErrString(obj.Props.DisabledLinkColor)
+            Case UCase(trans("Р¦РІРµС‚ СЃСЃС‹Р»РєРё")) : Return New ErrString(obj.Props.LinkColor)
+            Case UCase(trans("Р¦РІРµС‚ РїРѕСЃРµС‰РµРЅРЅРѕР№ СЃСЃС‹Р»РєРё")) : Return New ErrString(obj.Props.VisitedLinkColor)
+            Case UCase(trans("РќР°С‡Р°Р»Рѕ СЃСЃС‹Р»РєРё")) : Return New ErrString(obj.Props.LinkStart)
+            Case UCase(trans("Р”Р»РёРЅРЅР° СЃСЃС‹Р»РєРё")) : Return New ErrString(obj.Props.LinkLength)
+            Case UCase(trans("РЎС‚РёР»СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ")) : Return New ErrString(obj.Props.LinkBehavior)
+            Case UCase(trans("РЎСЃС‹Р»РєР° РїРѕСЃРµС‰РµРЅР°")) : Return New ErrString(obj.Props.LinkVisited)
+            Case UCase(trans("РЎСЃС‹Р»РєР° СЂР°Р±РѕС‡Р°СЏ")) : Return New ErrString(obj.Props.LinkEnabled)
+            Case UCase(trans("РџРµСЂРµС…РѕРґРёС‚СЊ РІ РёРЅС‚РµСЂРЅРµС‚ РїРѕ СЃСЃС‹Р»РєРµ")) : Return New ErrString(obj.Props.InternetLink)
+            Case UCase(trans("РЎСЃС‹Р»РєР° РЅР°РґРїРёСЃРё")) : Return New ErrString(obj.Props.LinkName)
+            Case UCase(trans("РџРѕРґСЃРІРµС‡РёРІР°С‚СЊ СЃСЃС‹Р»РєРё")) : Return New ErrString(obj.Props.DetectUrls)
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РїРµСЂРµРЅРѕСЃ РІС‹РґРµР»РµРЅРЅРѕРіРѕ")) : Return New ErrString(obj.Props.EnableAutoDragDrop)
+            Case UCase(trans("РњР°СЃС€С‚Р°Р±")) : Return New ErrString(obj.Props.ZoomFactor)
+            Case UCase(trans("RTF РєРѕРґ РґРѕРєСѓРјРµРЅС‚Р°")) : Return New ErrString(obj.Props.Rtf)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ RTF")) : Return New ErrString(obj.Props.SelectedRtf)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°")) : Return New ErrString(obj.Props.SelectionAlignment)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ Р·Р°РґРЅРёР№ С„РѕРЅ")) : Return New ErrString(obj.Props.SelectionBackColor)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С†РІРµС‚ С‚РµРєСЃС‚Р°")) : Return New ErrString(obj.Props.SelectionColor)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РєСЂР°СЃРЅРѕР№ СЃС‚СЂРѕРєРё")) : Return New ErrString(obj.Props.SelectionHangingIndent)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃР»РµРІР°")) : Return New ErrString(obj.Props.SelectionIndent)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃРїСЂР°РІР°")) : Return New ErrString(obj.Props.SelectionRightIndent)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РёРјРµРµС‚ РјР°СЂРєРµСЂ")) : Return New ErrString(obj.Props.SelectionBullet)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РІРµСЂС‚РёРєР°Р»СЊРЅРѕРµ СЃРјРµС‰РµРЅРёРµ")) : Return New ErrString(obj.Props.SelectionCharOffset)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚")) : Return New ErrString(obj.Props.SelectionFontFamily)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ Р¶РёСЂРЅС‹Р№")) : Return New ErrString(obj.Props.SelectionFontBold)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ РєСѓСЂСЃРёРІ")) : Return New ErrString(obj.Props.SelectionFontItalic)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№")) : Return New ErrString(obj.Props.SelectionFontUnderline)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№")) : Return New ErrString(obj.Props.SelectionFontStrikeout)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ СЂР°Р·РјРµСЂ")) : Return New ErrString(obj.Props.SelectionFontSize)
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ")) : Return New ErrString(obj.Props.SelectionProtected)
+            Case UCase(trans("Р’С‹Р±СЂР°РЅРЅС‹Р№ С†РІРµС‚")) : Return New ErrString(obj.Props.DialogColor)
+            Case UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РѕС‚РјРµРЅР°")) : Return New ErrString(obj.Props.WasCancel)
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ С†РІРµС‚")) : Return New ErrString(obj.Props.ShowColor)
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ")) : Return New ErrString(obj.Props.ShowEffects)
+            Case UCase(trans("РќР°РґРїРёСЃСЊ РІ РѕРєРЅРµ")) : Return New ErrString(obj.Props.Description)
+            Case UCase(trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РїР°РїРєР°")) : Return New ErrString(obj.Props.SelectedPath)
+            Case UCase(trans("Р”РѕР±Р°РІР»СЏС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ С„Р°Р№Р»Сѓ")) : Return New ErrString(obj.Props.DefaultExt)
+            Case UCase(trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°")) : Return New ErrString(obj.Props.CheckFileExists)
+            Case UCase(trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ РїР°РїРєРё")) : Return New ErrString(obj.Props.CheckPathExists)
+            Case UCase(trans("РРјСЏ С„Р°Р№Р»Р°")) : Return New ErrString(obj.Props.FileName)
+            Case UCase(trans("Р¤РёР»СЊС‚СЂ С„Р°Р№Р»РѕРІ")) : Return New ErrString(obj.Props.Filter)
+            Case UCase(trans("РќРѕРјРµСЂ С„РёР»СЊС‚СЂР°")) : Return New ErrString(obj.Props.FilterIndex)
+            Case UCase(trans("РќР°С‡Р°Р»СЊРЅР°СЏ РїР°РїРєР°")) : Return New ErrString(obj.Props.InitialDirectory)
+            Case UCase(trans("Р—Р°РіРѕР»РѕРІРѕРє")) : Return New ErrString(obj.Props.Title)
+            Case UCase(trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… С„Р°Р№Р»РѕРІ")) : Return New ErrString(obj.Props.MultiSelectFiles)
+            Case UCase(trans("РўРµРєСЃС‚ РЅР° РїРµС‡Р°С‚СЊ")) : Return New ErrString(obj.Props.PrintText)
+            Case UCase(trans("Р”РѕРєСѓРјРµРЅС‚ РЅР° РїРµС‡Р°С‚СЊ")) : Return New ErrString(obj.Props.PrintDocument)
+            Case UCase(trans("РўР°Р±Р»РёС†Р° РЅР° РїРµС‡Р°С‚СЊ")) : Return New ErrString(obj.Props.PrintTable)
+            Case UCase(trans("РћР±СЉРµРєС‚ РЅР° РїРµС‡Р°С‚СЊ")) : Return New ErrString(obj.Props.PrintObject)
+            Case UCase(trans("Р РёСЃСѓРЅРѕРє РЅР° РїРµС‡Р°С‚СЊ")) : Return New ErrString(obj.Props.PrintPicture)
+            Case UCase(trans("РўР°Р±Р»РёС†Р° РІ С†РµРЅС‚СЂРµ")) : Return New ErrString(obj.Props.TableOnCenter)
+            Case UCase(trans("РРЅС‚РµСЂРІР°Р» РѕС‚СЃС‡РµС‚Р°")) : Return New ErrString(obj.Props.Interval)
+            Case UCase(trans("РџСЂРѕС€Р»Рѕ РёРЅС‚РµСЂРІР°Р»РѕРІ")) : Return New ErrString(obj.Props.IntervalCount)
+            Case UCase(trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹")) : Return New ErrString(obj.Props.CalendarDateFormat)
+            Case UCase(trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ")) : Return New ErrString(obj.Props.CustomDateFormat)
+            Case UCase(trans("РљРЅРѕРїРєРё РІРІРµСЂС… РІРЅРёР·")) : Return New ErrString(obj.Props.ShowUpDown)
+            Case UCase(trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РґР°С‚Р°")) : Return New ErrString(obj.Props.SelectedDate)
+            Case UCase(trans("РЎРґРІРёРі Р±РѕР»СЊС€РѕР№")) : Return New ErrString(obj.Props.LargeChange)
+            Case UCase(trans("РЎРґРІРёРі РјР°Р»С‹Р№")) : Return New ErrString(obj.Props.SmallChange)
+            Case UCase(trans("РњР°РєСЃРёРјСѓРј")) : Return New ErrString(obj.Props.Maximum)
+            Case UCase(trans("РњРёРЅРёРјСѓРј")) : Return New ErrString(obj.Props.Minimum)
+            Case UCase(trans("РЎС‚РёР»СЊ Р±РµРіСѓРЅРєР°")) : Return New ErrString(obj.Props.TickStyle)
+            Case UCase(trans("Р§Р°СЃС‚РѕС‚Р° РѕС‚РјРµС‚РѕРє")) : Return New ErrString(obj.Props.TickFrequency)
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РІ С‚СЂРµРµ")) : Return New ErrString(obj.Props.ShowInTray)
+            Case UCase(trans("РџРѕРґСЃРєР°Р·РєР°")) : Return New ErrString(obj.Props.ToolTip)
+            Case UCase(trans("Р”РѕР±Р°РІРёС‚СЊ РІ Р°РІС‚РѕР·Р°РіСЂСѓР·РєСѓ")) : Return New ErrString(obj.Props.AutoRun)
+            Case UCase(trans("Р Р°Р·СЂРµС€РёС‚СЊ Р·Р°РїСѓСЃРє РєРѕРїРёР№")) : Return New ErrString(obj.Props.AllowRunCopies)
+            Case UCase(trans("Р Р°Р·СЂРµС€РёС‚СЊ РІРІРѕРґРёС‚СЊ")) : Return New ErrString(obj.Props.AllowInput)
+            Case UCase(trans("РЎС‚РёР»СЊ Р·Р°РіСЂСѓР·РєРё")) : Return New ErrString(obj.Props.StyleProgress)
+            Case UCase(trans("РЎРєРѕСЂРѕСЃС‚СЊ Р°РЅРёРјР°С†РёРё")) : Return New ErrString(obj.Props.MarqueeAnimationSpeed)
+            Case UCase(trans("РЁР°Рі Р·Р°РіСЂСѓР·РєРё")) : Return New ErrString(obj.Props.StepProgress)
+            Case UCase(trans("РЎРїСЂР°РІР° РЅР°Р»РµРІРѕ")) : Return New ErrString(obj.Props.RightToLeftLayout)
+            Case UCase(trans("Р—Р°РїСЂРµС‚РёС‚СЊ РјРёРЅРёРјРёР·РёСЂРѕРІР°С‚СЊ")) : Return New ErrString(obj.Props.ForbidMinimize)
+            Case UCase(trans("Р—Р°РїСЂРµС‚РёС‚СЊ СЂР°Р·РІРѕСЂР°С‡РёРІР°С‚СЊ")) : Return New ErrString(obj.Props.ForbidMaximize)
+            Case UCase(trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°С‚СЊ СЃ СЂР°СЃС€РёСЂРµРЅРёСЏРјРё")) : Return New ErrString(obj.Props.AssociateWithExtensions)
+            Case UCase(trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅС‹Р№ РїСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»")) : Return New ErrString(obj.Props.AssociationPassedFile)
+            Case UCase(trans("РЎС‚СЂР°РЅРёС†Р° РЅР°С‡Р°Р»Р° РїРµС‡Р°С‚Рё")) : Return New ErrString(obj.Props.FromPage)
+            Case UCase(trans("РЎС‚СЂР°РЅРёС†Р° РєРѕРЅС†Р° РїРµС‡Р°С‚Рё")) : Return New ErrString(obj.Props.ToPage)
+            Case UCase(trans("Р§РёСЃР»Рѕ РєРѕРїРёР№")) : Return New ErrString(obj.Props.Copies)
+            Case UCase(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†РѕРІ")) : Return New ErrString(obj.Props.WidthOfColumns)
+            Case UCase(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРє")) : Return New ErrString(obj.Props.HeightOfRows)
+            Case UCase(trans("РќР° РІРµСЃСЊ СЌРєСЂР°РЅ")) : Return New ErrString(obj.Props.OnFullScreen)
 
 
                 ' webbrowser
-            Case UCase(trans("Переходить по сссылкам")) : Return New ErrString(obj.Props.AllowNavigation)
-            Case UCase(trans("Разрешить перетаскивания")) : Return New ErrString(obj.Props.AllowWebBrowserDrop)
-            Case UCase(trans("Назад возможно")) : Return New ErrString(obj.Props.CanGoBack)
-            Case UCase(trans("Вперед возможно")) : Return New ErrString(obj.Props.CanGoForward)
-            Case UCase(trans("Текст страницы")) : Return New ErrString(obj.Props.DocumentText)
-            Case UCase(trans("Заголовок страницы")) : Return New ErrString(obj.Props.DocumentTitle)
-            Case UCase(trans("Тип страницы")) : Return New ErrString(obj.Props.DocumentType)
-            Case UCase(trans("Браузер занят")) : Return New ErrString(obj.Props.isBusy)
-            Case UCase(trans("Браузер offline")) : Return New ErrString(obj.Props.isOffline)
-            Case UCase(trans("Всплывающее меню браузера")) : Return New ErrString(obj.Props.isWebBrowserContextMunuEnabled)
-            Case UCase(trans("Статус готовности")) : Return New ErrString(obj.Props.ReadyState)
-            Case UCase(trans("Статусная строка")) : Return New ErrString(obj.Props.StatusText)
-            Case UCase(trans("Отображать ошибки сценариев")) : Return New ErrString(obj.Props.ScriptErrorsSuppressed)
-            Case UCase(trans("Полосы прокрутки активны")) : Return New ErrString(obj.Props.ScrollBarsEnabled)
-            Case UCase(trans("Ссылка")) : Return New ErrString(obj.Props.Url)
-            Case UCase(trans("Горячие клавиши работают")) : Return New ErrString(obj.Props.WebBrowserShortcutsEnabled)
-            Case UCase(trans("Кодировка")) : Return New ErrString(obj.Props.DocumentEncoding)
-            Case UCase(trans("Кодировка по умолчанию")) : Return New ErrString(obj.Props.EncodingDefault)
-            Case UCase(trans("Куки")) : Return New ErrString(obj.Props.Cookie)
-            Case UCase(trans("Открытие ссылок нового окна")) : Return New ErrString(obj.Props.OpenNewWindowLink)
+            Case UCase(trans("РџРµСЂРµС…РѕРґРёС‚СЊ РїРѕ СЃСЃСЃС‹Р»РєР°Рј")) : Return New ErrString(obj.Props.AllowNavigation)
+            Case UCase(trans("Р Р°Р·СЂРµС€РёС‚СЊ РїРµСЂРµС‚Р°СЃРєРёРІР°РЅРёСЏ")) : Return New ErrString(obj.Props.AllowWebBrowserDrop)
+            Case UCase(trans("РќР°Р·Р°Рґ РІРѕР·РјРѕР¶РЅРѕ")) : Return New ErrString(obj.Props.CanGoBack)
+            Case UCase(trans("Р’РїРµСЂРµРґ РІРѕР·РјРѕР¶РЅРѕ")) : Return New ErrString(obj.Props.CanGoForward)
+            Case UCase(trans("РўРµРєСЃС‚ СЃС‚СЂР°РЅРёС†С‹")) : Return New ErrString(obj.Props.DocumentText)
+            Case UCase(trans("Р—Р°РіРѕР»РѕРІРѕРє СЃС‚СЂР°РЅРёС†С‹")) : Return New ErrString(obj.Props.DocumentTitle)
+            Case UCase(trans("РўРёРї СЃС‚СЂР°РЅРёС†С‹")) : Return New ErrString(obj.Props.DocumentType)
+            Case UCase(trans("Р‘СЂР°СѓР·РµСЂ Р·Р°РЅСЏС‚")) : Return New ErrString(obj.Props.isBusy)
+            Case UCase(trans("Р‘СЂР°СѓР·РµСЂ offline")) : Return New ErrString(obj.Props.isOffline)
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ Р±СЂР°СѓР·РµСЂР°")) : Return New ErrString(obj.Props.isWebBrowserContextMunuEnabled)
+            Case UCase(trans("РЎС‚Р°С‚СѓСЃ РіРѕС‚РѕРІРЅРѕСЃС‚Рё")) : Return New ErrString(obj.Props.ReadyState)
+            Case UCase(trans("РЎС‚Р°С‚СѓСЃРЅР°СЏ СЃС‚СЂРѕРєР°")) : Return New ErrString(obj.Props.StatusText)
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РѕС€РёР±РєРё СЃС†РµРЅР°СЂРёРµРІ")) : Return New ErrString(obj.Props.ScriptErrorsSuppressed)
+            Case UCase(trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё Р°РєС‚РёРІРЅС‹")) : Return New ErrString(obj.Props.ScrollBarsEnabled)
+            Case UCase(trans("РЎСЃС‹Р»РєР°")) : Return New ErrString(obj.Props.Url)
+            Case UCase(trans("Р“РѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё СЂР°Р±РѕС‚Р°СЋС‚")) : Return New ErrString(obj.Props.WebBrowserShortcutsEnabled)
+            Case UCase(trans("РљРѕРґРёСЂРѕРІРєР°")) : Return New ErrString(obj.Props.DocumentEncoding)
+            Case UCase(trans("РљРѕРґРёСЂРѕРІРєР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")) : Return New ErrString(obj.Props.EncodingDefault)
+            Case UCase(trans("РљСѓРєРё")) : Return New ErrString(obj.Props.Cookie)
+            Case UCase(trans("РћС‚РєСЂС‹С‚РёРµ СЃСЃС‹Р»РѕРє РЅРѕРІРѕРіРѕ РѕРєРЅР°")) : Return New ErrString(obj.Props.OpenNewWindowLink)
 
-                ' Триал
-            Case UCase(trans("Текст кнопки")) : Return New ErrString(obj.Props.TextButton)
-            Case UCase(trans("Текст поля")) : Return New ErrString(obj.Props.TextField)
-            Case UCase(trans("Сообщение успешной активации")) : Return New ErrString(obj.Props.MessageValid)
-            Case UCase(trans("Сообщение неудачной активации")) : Return New ErrString(obj.Props.MessageInValid)
-            Case UCase(trans("ID пользователя")) : Return New ErrString(obj.Props.IdUser)
-            Case UCase(trans("ID программы")) : Return New ErrString(obj.Props.IdProgram)
-            Case UCase(trans("ID в реестре")) : Return New ErrString(obj.Props.IdRegistryProgram)
-            Case UCase(trans("Ключ шифрования")) : Return New ErrString(obj.Props.KeyEncryption)
-            Case UCase(trans("Дней триала всего")) : Return New ErrString(obj.Props.DaysAll)
-            Case UCase(trans("Дней триала осталось")) : Return New ErrString(obj.Props.DaysLeft)
-            Case UCase(trans("Активирована")) : Return New ErrString(obj.Props.Activation)
-            Case UCase(trans("Примечание")) : Return New ErrString(obj.Props.Remark)
-            Case UCase(trans("Триальный период запущен")) : Return New ErrString(obj.Props.TrialStarted)
-            Case UCase(trans("Ключ активации выдать"))
+                ' РўСЂРёР°Р»
+            Case UCase(trans("РўРµРєСЃС‚ РєРЅРѕРїРєРё")) : Return New ErrString(obj.Props.TextButton)
+            Case UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ")) : Return New ErrString(obj.Props.TextField)
+            Case UCase(trans("РЎРѕРѕР±С‰РµРЅРёРµ СѓСЃРїРµС€РЅРѕР№ Р°РєС‚РёРІР°С†РёРё")) : Return New ErrString(obj.Props.MessageValid)
+            Case UCase(trans("РЎРѕРѕР±С‰РµРЅРёРµ РЅРµСѓРґР°С‡РЅРѕР№ Р°РєС‚РёРІР°С†РёРё")) : Return New ErrString(obj.Props.MessageInValid)
+            Case UCase(trans("ID РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ")) : Return New ErrString(obj.Props.IdUser)
+            Case UCase(trans("ID РїСЂРѕРіСЂР°РјРјС‹")) : Return New ErrString(obj.Props.IdProgram)
+            Case UCase(trans("ID РІ СЂРµРµСЃС‚СЂРµ")) : Return New ErrString(obj.Props.IdRegistryProgram)
+            Case UCase(trans("РљР»СЋС‡ С€РёС„СЂРѕРІР°РЅРёСЏ")) : Return New ErrString(obj.Props.KeyEncryption)
+            Case UCase(trans("Р”РЅРµР№ С‚СЂРёР°Р»Р° РІСЃРµРіРѕ")) : Return New ErrString(obj.Props.DaysAll)
+            Case UCase(trans("Р”РЅРµР№ С‚СЂРёР°Р»Р° РѕСЃС‚Р°Р»РѕСЃСЊ")) : Return New ErrString(obj.Props.DaysLeft)
+            Case UCase(trans("РђРєС‚РёРІРёСЂРѕРІР°РЅР°")) : Return New ErrString(obj.Props.Activation)
+            Case UCase(trans("РџСЂРёРјРµС‡Р°РЅРёРµ")) : Return New ErrString(obj.Props.Remark)
+            Case UCase(trans("РўСЂРёР°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ Р·Р°РїСѓС‰РµРЅ")) : Return New ErrString(obj.Props.TrialStarted)
+            Case UCase(trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РІС‹РґР°С‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.KeyIssue(args))
-            Case UCase(trans("Ключ активации проверить"))
+            Case UCase(trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РїСЂРѕРІРµСЂРёС‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.KeyValidation(args))
 
                 ' ClientServer
-            Case UCase(trans("Файл отправляется")) : Return New ErrString(obj.Props.FileIsSent)
-            Case UCase(trans("Скрыть отправку файлов")) : Return New ErrString(obj.Props.HideSendingFiles)
-            Case UCase(trans("Скрыть отправку текста")) : Return New ErrString(obj.Props.HideSendingText)
-            Case UCase(trans("Скрыть список")) : Return New ErrString(obj.Props.HideComboBox)
-            Case UCase(trans("Обозначение команд")) : Return New ErrString(obj.Props.CommandSymbol)
-            Case UCase(trans("Принятая команда")) : Return New ErrString(obj.Props.ReceivedCommand)
-            Case UCase(trans("Принятый текст")) : Return New ErrString(obj.Props.ReceivedText)
-            Case UCase(trans("Принятый файл")) : Return New ErrString(obj.Props.ReceivedFile)
-            Case UCase(trans("Отправленная команда")) : Return New ErrString(obj.Props.SentCommand)
-            Case UCase(trans("Отправленый текст")) : Return New ErrString(obj.Props.SentText)
-            Case UCase(trans("Отправленый файл")) : Return New ErrString(obj.Props.SentFile)
-            Case UCase(trans("Имя в сети")) : Return New ErrString(obj.Props.NameInNetwork)
-            Case UCase(trans("IP для соединения")) : Return New ErrString(obj.Props.RemoteHost)
-            Case UCase(trans("Порт для соединения")) : Return New ErrString(obj.Props.RemotePort)
-            Case UCase(trans("Папка для загрузок")) : Return New ErrString(obj.Props.PathForDownloads)
-            Case UCase(trans("Тип клиент сервера")) : Return New ErrString(obj.Props.ClientServerType)
-            Case UCase(trans("Имена клиентов")) : Return New ErrString(obj.Props.ClientsNames)
-            Case UCase(trans("Текст поля ввода")) : Return New ErrString(obj.Props.TextBoxString)
-            Case UCase(trans("Текст поля лога")) : Return New ErrString(obj.Props.TextBoxLog)
-            Case UCase(trans("Ip клиентов")) : Return New ErrString(obj.Props.ClientsIPs)
-            Case UCase(trans("Ip клиента"))
+            Case UCase(trans("Р¤Р°Р№Р» РѕС‚РїСЂР°РІР»СЏРµС‚СЃСЏ")) : Return New ErrString(obj.Props.FileIsSent)
+            Case UCase(trans("РЎРєСЂС‹С‚СЊ РѕС‚РїСЂР°РІРєСѓ С„Р°Р№Р»РѕРІ")) : Return New ErrString(obj.Props.HideSendingFiles)
+            Case UCase(trans("РЎРєСЂС‹С‚СЊ РѕС‚РїСЂР°РІРєСѓ С‚РµРєСЃС‚Р°")) : Return New ErrString(obj.Props.HideSendingText)
+            Case UCase(trans("РЎРєСЂС‹С‚СЊ СЃРїРёСЃРѕРє")) : Return New ErrString(obj.Props.HideComboBox)
+            Case UCase(trans("РћР±РѕР·РЅР°С‡РµРЅРёРµ РєРѕРјР°РЅРґ")) : Return New ErrString(obj.Props.CommandSymbol)
+            Case UCase(trans("РџСЂРёРЅСЏС‚Р°СЏ РєРѕРјР°РЅРґР°")) : Return New ErrString(obj.Props.ReceivedCommand)
+            Case UCase(trans("РџСЂРёРЅСЏС‚С‹Р№ С‚РµРєСЃС‚")) : Return New ErrString(obj.Props.ReceivedText)
+            Case UCase(trans("РџСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»")) : Return New ErrString(obj.Props.ReceivedFile)
+            Case UCase(trans("РћС‚РїСЂР°РІР»РµРЅРЅР°СЏ РєРѕРјР°РЅРґР°")) : Return New ErrString(obj.Props.SentCommand)
+            Case UCase(trans("РћС‚РїСЂР°РІР»РµРЅС‹Р№ С‚РµРєСЃС‚")) : Return New ErrString(obj.Props.SentText)
+            Case UCase(trans("РћС‚РїСЂР°РІР»РµРЅС‹Р№ С„Р°Р№Р»")) : Return New ErrString(obj.Props.SentFile)
+            Case UCase(trans("РРјСЏ РІ СЃРµС‚Рё")) : Return New ErrString(obj.Props.NameInNetwork)
+            Case UCase(trans("IP РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ")) : Return New ErrString(obj.Props.RemoteHost)
+            Case UCase(trans("РџРѕСЂС‚ РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ")) : Return New ErrString(obj.Props.RemotePort)
+            Case UCase(trans("РџР°РїРєР° РґР»СЏ Р·Р°РіСЂСѓР·РѕРє")) : Return New ErrString(obj.Props.PathForDownloads)
+            Case UCase(trans("РўРёРї РєР»РёРµРЅС‚ СЃРµСЂРІРµСЂР°")) : Return New ErrString(obj.Props.ClientServerType)
+            Case UCase(trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ")) : Return New ErrString(obj.Props.ClientsNames)
+            Case UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ РІРІРѕРґР°")) : Return New ErrString(obj.Props.TextBoxString)
+            Case UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ Р»РѕРіР°")) : Return New ErrString(obj.Props.TextBoxLog)
+            Case UCase(trans("Ip РєР»РёРµРЅС‚РѕРІ")) : Return New ErrString(obj.Props.ClientsIPs)
+            Case UCase(trans("Ip РєР»РёРµРЅС‚Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.GetClientIp(args))
 
                 ' internet
-            Case UCase(trans("Удерживать соединение")) : Return New ErrString(obj.Props.KeepAlive)
-            Case UCase(trans("Автоматически перенаправляться")) : Return New ErrString(obj.Props.AllowAutoRedirect)
-            Case UCase(trans("Ссылка запроса")) : Return New ErrString(obj.Props.UrlToGo)
-            Case UCase(trans("Ссылка откуда пришли")) : Return New ErrString(obj.Props.UrlReferer)
-            Case UCase(trans("Ссылка перенаправления")) : Return New ErrString(obj.Props.UrlRedirect)
-            Case UCase(trans("Тип браузера")) : Return New ErrString(obj.Props.UserAgent)
-            Case UCase(trans("Принимать")) : Return New ErrString(obj.Props.Accept)
-            Case UCase(trans("Прокси IP")) : Return New ErrString(obj.Props.ProxyIp)
-            Case UCase(trans("Прокси порт")) : Return New ErrString(obj.Props.ProxyPort)
-            Case UCase(trans("Кодировка страницы")) : Return New ErrString(obj.Props.EncodingPage)
-            Case UCase(trans("Язык страницы")) : Return New ErrString(obj.Props.LanguagePage)
-            Case UCase(trans("Содержимое запроса")) : Return New ErrString(obj.Props.ContentQuery)
-            Case UCase(trans("Тип содержимого")) : Return New ErrString(obj.Props.ContentType)
-            Case UCase(trans("Длинна содержимого")) : Return New ErrString(obj.Props.ContentLength)
-            Case UCase(trans("Метод запроса")) : Return New ErrString(obj.Props.HttpMethod)
-            Case UCase(trans("Код результата")) : Return New ErrString(obj.Props.ResultCode)
-            Case UCase(trans("Таймаут")) : Return New ErrString(obj.Props.TimeOut)
-            Case UCase(trans("Время задержки")) : Return New ErrString(obj.Props.TimeDelay)
-            Case UCase(trans("Заголовки запроса")) : Return New ErrString(obj.Props.Headers)
-            Case UCase(trans("Куки запросов")) : Return New ErrString(obj.Props.CookiesQueries)
-            Case UCase(trans("Результат запроса")) : Return New ErrString(obj.Props.ResultQuery)
-            Case UCase(trans("Размер буфера")) : Return New ErrString(obj.Props.BufferSize)
-            Case UCase(trans("Скачивается файл")) : Return New ErrString(obj.Props.FileDownloading)
-            Case UCase(trans("Скачка пауза")) : Return New ErrString(obj.Props.DownloadPause)
-            Case UCase(trans("Наличие соединения")) : Return New ErrString(obj.Props.CheckConnect)
+            Case UCase(trans("РЈРґРµСЂР¶РёРІР°С‚СЊ СЃРѕРµРґРёРЅРµРЅРёРµ")) : Return New ErrString(obj.Props.KeepAlive)
+            Case UCase(trans("РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРµСЂРµРЅР°РїСЂР°РІР»СЏС‚СЊСЃСЏ")) : Return New ErrString(obj.Props.AllowAutoRedirect)
+            Case UCase(trans("РЎСЃС‹Р»РєР° Р·Р°РїСЂРѕСЃР°")) : Return New ErrString(obj.Props.UrlToGo)
+            Case UCase(trans("РЎСЃС‹Р»РєР° РѕС‚РєСѓРґР° РїСЂРёС€Р»Рё")) : Return New ErrString(obj.Props.UrlReferer)
+            Case UCase(trans("РЎСЃС‹Р»РєР° РїРµСЂРµРЅР°РїСЂР°РІР»РµРЅРёСЏ")) : Return New ErrString(obj.Props.UrlRedirect)
+            Case UCase(trans("РўРёРї Р±СЂР°СѓР·РµСЂР°")) : Return New ErrString(obj.Props.UserAgent)
+            Case UCase(trans("РџСЂРёРЅРёРјР°С‚СЊ")) : Return New ErrString(obj.Props.Accept)
+            Case UCase(trans("РџСЂРѕРєСЃРё IP")) : Return New ErrString(obj.Props.ProxyIp)
+            Case UCase(trans("РџСЂРѕРєСЃРё РїРѕСЂС‚")) : Return New ErrString(obj.Props.ProxyPort)
+            Case UCase(trans("РљРѕРґРёСЂРѕРІРєР° СЃС‚СЂР°РЅРёС†С‹")) : Return New ErrString(obj.Props.EncodingPage)
+            Case UCase(trans("РЇР·С‹Рє СЃС‚СЂР°РЅРёС†С‹")) : Return New ErrString(obj.Props.LanguagePage)
+            Case UCase(trans("РЎРѕРґРµСЂР¶РёРјРѕРµ Р·Р°РїСЂРѕСЃР°")) : Return New ErrString(obj.Props.ContentQuery)
+            Case UCase(trans("РўРёРї СЃРѕРґРµСЂР¶РёРјРѕРіРѕ")) : Return New ErrString(obj.Props.ContentType)
+            Case UCase(trans("Р”Р»РёРЅРЅР° СЃРѕРґРµСЂР¶РёРјРѕРіРѕ")) : Return New ErrString(obj.Props.ContentLength)
+            Case UCase(trans("РњРµС‚РѕРґ Р·Р°РїСЂРѕСЃР°")) : Return New ErrString(obj.Props.HttpMethod)
+            Case UCase(trans("РљРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°")) : Return New ErrString(obj.Props.ResultCode)
+            Case UCase(trans("РўР°Р№РјР°СѓС‚")) : Return New ErrString(obj.Props.TimeOut)
+            Case UCase(trans("Р’СЂРµРјСЏ Р·Р°РґРµСЂР¶РєРё")) : Return New ErrString(obj.Props.TimeDelay)
+            Case UCase(trans("Р—Р°РіРѕР»РѕРІРєРё Р·Р°РїСЂРѕСЃР°")) : Return New ErrString(obj.Props.Headers)
+            Case UCase(trans("РљСѓРєРё Р·Р°РїСЂРѕСЃРѕРІ")) : Return New ErrString(obj.Props.CookiesQueries)
+            Case UCase(trans("Р РµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°")) : Return New ErrString(obj.Props.ResultQuery)
+            Case UCase(trans("Р Р°Р·РјРµСЂ Р±СѓС„РµСЂР°")) : Return New ErrString(obj.Props.BufferSize)
+            Case UCase(trans("РЎРєР°С‡РёРІР°РµС‚СЃСЏ С„Р°Р№Р»")) : Return New ErrString(obj.Props.FileDownloading)
+            Case UCase(trans("РЎРєР°С‡РєР° РїР°СѓР·Р°")) : Return New ErrString(obj.Props.DownloadPause)
+            Case UCase(trans("РќР°Р»РёС‡РёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ")) : Return New ErrString(obj.Props.CheckConnect)
 
 
 
                 ' table
-            Case UCase(trans("Позволить добавлять строки")) : Return New ErrString(obj.Props.AllowUserToAddRows)
-            Case UCase(trans("Позволить удалять строки")) : Return New ErrString(obj.Props.AllowUserToDeleteRows)
-            Case UCase(trans("Позволить переставлять столбцы")) : Return New ErrString(obj.Props.AllowUserToOrderColumns)
-            Case UCase(trans("Позволить растягивать столбцы")) : Return New ErrString(obj.Props.AllowUserToResizeColumns)
-            Case UCase(trans("Позволить растягивать строки")) : Return New ErrString(obj.Props.AllowUserToResizeRows)
-            Case UCase(trans("Стиль рамки ячейки")) : Return New ErrString(obj.Props.CellBorderStyle)
-            Case UCase(trans("Отображать заголовки столбцов")) : Return New ErrString(obj.Props.ColumnHeadersVisible)
-            Case UCase(trans("Отображать специальный столбец")) : Return New ErrString(obj.Props.RowHeadersVisible)
-            Case UCase(trans("Вышина заголовков столбцов")) : Return New ErrString(obj.Props.ColumnHeadersHeight)
-            Case UCase(trans("Столбцы")) : Return New ErrString(obj.Props.Columns)
-            Case UCase(trans("Строки")) : Return New ErrString(obj.Props.Rows)
-            Case UCase(trans("Цвет фона ячеек")) : Return New ErrString(obj.Props.DefaultCellStyleBackColor)
-            Case UCase(trans("Цвет фона выделенных ячеек")) : Return New ErrString(obj.Props.DefaultCellStyleSelectionBackColor)
-            Case UCase(trans("Цвет шрифта ячеек")) : Return New ErrString(obj.Props.DefaultCellStyleForeColor)
-            Case UCase(trans("Цвет шрифта выделенных ячеек")) : Return New ErrString(obj.Props.DefaultCellStyleSelectionForeColor)
-            Case UCase(trans("Режим редактирования")) : Return New ErrString(obj.Props.EditMode)
-            Case UCase(trans("Цвет сетки")) : Return New ErrString(obj.Props.GridColor)
-            Case UCase(trans("Выбор нескольких ячеек")) : Return New ErrString(obj.Props.MultiSelect)
-            Case UCase(trans("Выбор нескольких записей")) : Return New ErrString(obj.Props.MultiSelectItems)
-            Case UCase(trans("Только для чтения таблица")) : Return New ErrString(obj.Props.ReadOnlyTable)
-            Case UCase(trans("Режим выделения")) : Return New ErrString(obj.Props.SelectionMode)
-            Case UCase(trans("Номера выделенных строк")) : Return New ErrString(obj.Props.SelectedRows)
-            Case UCase(trans("Номера выделенных столбцов")) : Return New ErrString(obj.Props.SelectedColumns)
-            Case UCase(trans("Количество строк таблицы")) : Return New ErrString(obj.Props.RowsCount)
-            Case UCase(trans("Количество столбцов")) : Return New ErrString(obj.Props.ColumnsCount)
-            Case UCase(trans("Количество выделенных строк")) : Return New ErrString(obj.Props.SelectedRowsCount)
-            Case UCase(trans("Количество выделенных столбцов")) : Return New ErrString(obj.Props.SelectedColumnsCount)
-            Case UCase(trans("Значение ячейки"))
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РґРѕР±Р°РІР»СЏС‚СЊ СЃС‚СЂРѕРєРё")) : Return New ErrString(obj.Props.AllowUserToAddRows)
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ СѓРґР°Р»СЏС‚СЊ СЃС‚СЂРѕРєРё")) : Return New ErrString(obj.Props.AllowUserToDeleteRows)
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РїРµСЂРµСЃС‚Р°РІР»СЏС‚СЊ СЃС‚РѕР»Р±С†С‹")) : Return New ErrString(obj.Props.AllowUserToOrderColumns)
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ СЂР°СЃС‚СЏРіРёРІР°С‚СЊ СЃС‚РѕР»Р±С†С‹")) : Return New ErrString(obj.Props.AllowUserToResizeColumns)
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ СЂР°СЃС‚СЏРіРёРІР°С‚СЊ СЃС‚СЂРѕРєРё")) : Return New ErrString(obj.Props.AllowUserToResizeRows)
+            Case UCase(trans("РЎС‚РёР»СЊ СЂР°РјРєРё СЏС‡РµР№РєРё")) : Return New ErrString(obj.Props.CellBorderStyle)
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ Р·Р°РіРѕР»РѕРІРєРё СЃС‚РѕР»Р±С†РѕРІ")) : Return New ErrString(obj.Props.ColumnHeadersVisible)
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ СЃРїРµС†РёР°Р»СЊРЅС‹Р№ СЃС‚РѕР»Р±РµС†")) : Return New ErrString(obj.Props.RowHeadersVisible)
+            Case UCase(trans("Р’С‹С€РёРЅР° Р·Р°РіРѕР»РѕРІРєРѕРІ СЃС‚РѕР»Р±С†РѕРІ")) : Return New ErrString(obj.Props.ColumnHeadersHeight)
+            Case UCase(trans("РЎС‚РѕР»Р±С†С‹")) : Return New ErrString(obj.Props.Columns)
+            Case UCase(trans("РЎС‚СЂРѕРєРё")) : Return New ErrString(obj.Props.Rows)
+            Case UCase(trans("Р¦РІРµС‚ С„РѕРЅР° СЏС‡РµРµРє")) : Return New ErrString(obj.Props.DefaultCellStyleBackColor)
+            Case UCase(trans("Р¦РІРµС‚ С„РѕРЅР° РІС‹РґРµР»РµРЅРЅС‹С… СЏС‡РµРµРє")) : Return New ErrString(obj.Props.DefaultCellStyleSelectionBackColor)
+            Case UCase(trans("Р¦РІРµС‚ С€СЂРёС„С‚Р° СЏС‡РµРµРє")) : Return New ErrString(obj.Props.DefaultCellStyleForeColor)
+            Case UCase(trans("Р¦РІРµС‚ С€СЂРёС„С‚Р° РІС‹РґРµР»РµРЅРЅС‹С… СЏС‡РµРµРє")) : Return New ErrString(obj.Props.DefaultCellStyleSelectionForeColor)
+            Case UCase(trans("Р РµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ")) : Return New ErrString(obj.Props.EditMode)
+            Case UCase(trans("Р¦РІРµС‚ СЃРµС‚РєРё")) : Return New ErrString(obj.Props.GridColor)
+            Case UCase(trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… СЏС‡РµРµРє")) : Return New ErrString(obj.Props.MultiSelect)
+            Case UCase(trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… Р·Р°РїРёСЃРµР№")) : Return New ErrString(obj.Props.MultiSelectItems)
+            Case UCase(trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ С‚Р°Р±Р»РёС†Р°")) : Return New ErrString(obj.Props.ReadOnlyTable)
+            Case UCase(trans("Р РµР¶РёРј РІС‹РґРµР»РµРЅРёСЏ")) : Return New ErrString(obj.Props.SelectionMode)
+            Case UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє")) : Return New ErrString(obj.Props.SelectedRows)
+            Case UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ")) : Return New ErrString(obj.Props.SelectedColumns)
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє С‚Р°Р±Р»РёС†С‹")) : Return New ErrString(obj.Props.RowsCount)
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ")) : Return New ErrString(obj.Props.ColumnsCount)
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє")) : Return New ErrString(obj.Props.SelectedRowsCount)
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ")) : Return New ErrString(obj.Props.SelectedColumnsCount)
+            Case UCase(trans("Р—РЅР°С‡РµРЅРёРµ СЏС‡РµР№РєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(GetArguments(prop, MyObj)(0), prop) : Return es
@@ -423,7 +423,7 @@ Module Props
                 'If obj.Rows.Count <= args(0) Then es.err = Errors.noRows(GetArguments(prop, MyObj)(0), args(0)) : Return es
                 'If obj.Columns.Count <= args(1) Then es.err = Errors.noColumns(GetArguments(prop, MyObj)(1), args(1)) : Return es
                 Return New ErrString(obj.Props.ItemValue(args))
-            Case UCase(trans("Ячейка выделена"))
+            Case UCase(trans("РЇС‡РµР№РєР° РІС‹РґРµР»РµРЅР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
@@ -431,19 +431,19 @@ Module Props
                 'If obj.Rows.Count <= args(0) Then es.err = Errors.noRows(prop, args(0)) : Return es
                 'If obj.Columns.Count <= args(1) Then es.err = Errors.noColumns(prop, args(1)) : Return es
                 Return New ErrString(obj.Props.ItemSelected(args))
-            Case UCase(trans("Строка только для чтения"))
+            Case UCase(trans("РЎС‚СЂРѕРєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 'If obj.Rows.Count <= args(0) Then es.err = Errors.noRows(prop, args(0)) : Return es
                 Return New ErrString(obj.Props.RowsReadOnly(args))
-            Case UCase(trans("Столбец только для чтения"))
+            Case UCase(trans("РЎС‚РѕР»Р±РµС† С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 'If obj.Columns.Count <= args(0) Then es.err = Errors.noColumns(prop, args(0)) : Return es
                 Return New ErrString(obj.Props.ColumnReadOnly(args))
-            Case UCase(trans("Ячейка только для чтения"))
+            Case UCase(trans("РЇС‡РµР№РєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
@@ -451,33 +451,33 @@ Module Props
                 'If obj.Rows.Count <= args(0) Then es.err = Errors.noRows(prop, args(0)) : Return es
                 'If obj.Columns.Count <= args(1) Then es.err = Errors.noColumns(prop, args(1)) : Return es
                 Return New ErrString(obj.Props.ItemReadOnly(args))
-            Case UCase(trans("Ширина столбца"))
+            Case UCase(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 'If obj.Columns.Count <= args(0) Then es.err = Errors.noColumns(prop, args(0)) : Return es
                 Return New ErrString(obj.Props.ColumnsWidth(args))
-            Case UCase(trans("Вышина строки"))
+            Case UCase(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 'If obj.Columns.Count <= args(0) Then es.err = Errors.noColumns(prop, args(0)) : Return es
                 Return New ErrString(obj.Props.RowsHeight(args))
-            Case UCase(trans("Номер первой строки"))
+            Case UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 args(0) = NikakoiEsli(args(0))
                 Dim ind As Integer = Filters.IndexOfKey(LCase(args(0)))
                 If ind = -1 Then es.err = Errors.notCollection(prop, args(0), HWFilters) : Return es
                 Return New ErrString(obj.Props.GetFirstRow(args))
-            Case UCase(trans("Номер последней строки"))
+            Case UCase(trans("РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ СЃС‚СЂРѕРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 args(0) = NikakoiEsli(args(0))
                 Dim ind As Integer = Filters.IndexOfKey(LCase(args(0)))
                 If ind = -1 Then es.err = Errors.notCollection(prop, args(0), HWFilters) : Return es
                 Return New ErrString(obj.Props.GetLastRow(args))
-            Case UCase(trans("Номер следующей строки"))
+            Case UCase(trans("РќРѕРјРµСЂ СЃР»РµРґСѓСЋС‰РµР№ СЃС‚СЂРѕРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
@@ -485,7 +485,7 @@ Module Props
                 Dim ind As Integer = Filters.IndexOfKey(LCase(args(1)))
                 If ind = -1 Then es.err = Errors.notCollection(prop, args(1), HWFilters) : Return es
                 Return New ErrString(obj.Props.GetNextRow(args))
-            Case UCase(trans("Номер предыдущей строки"))
+            Case UCase(trans("РќРѕРјРµСЂ РїСЂРµРґС‹РґСѓС‰РµР№ СЃС‚СЂРѕРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
@@ -493,181 +493,181 @@ Module Props
                 Dim ind As Integer = Filters.IndexOfKey(LCase(args(1)))
                 If ind = -1 Then es.err = Errors.notCollection(prop, args(1), HWFilters) : Return es
                 Return New ErrString(obj.Props.GetPreviousRow(args))
-            Case UCase(trans("Значение по координатам"))
+            Case UCase(trans("Р—РЅР°С‡РµРЅРёРµ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.HitTest(args))
-            Case UCase(trans("Номер строки по координатам"))
+            Case UCase(trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.HitTestRow(args))
-            Case UCase(trans("Номер столбца по координатам"))
+            Case UCase(trans("РќРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.HitTestColumn(args))
-            Case UCase(trans("Значение выделеных ячеек"))
+            Case UCase(trans("Р—РЅР°С‡РµРЅРёРµ РІС‹РґРµР»РµРЅС‹С… СЏС‡РµРµРє"))
                 Return New ErrString(obj.Props.SelectedItemsValue())
-            Case UCase(trans("Поиск в таблице"))
+            Case UCase(trans("РџРѕРёСЃРє РІ С‚Р°Р±Р»РёС†Рµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 5 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(3)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 'If Iz.isInteger(args(4)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.SearchInTable(args))
-            Case UCase(trans("Поиск в выделеных ячейках"))
+            Case UCase(trans("РџРѕРёСЃРє РІ РІС‹РґРµР»РµРЅС‹С… СЏС‡РµР№РєР°С…"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.SearchInSelectedCells(args))
 
 
                 ' PATH and FILES
-            Case UCase(MyZnak & trans("Скрытый"))
+            Case UCase(MyZnak & trans("РЎРєСЂС‹С‚С‹Р№"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.Hider(args))
-            Case UCase(MyZnak & trans("Только для чтения"))
+            Case UCase(MyZnak & trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.FileReadOnly(args))
-            Case UCase(MyZnak & trans("Архивный"))
+            Case UCase(MyZnak & trans("РђСЂС…РёРІРЅС‹Р№"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.Archive(args))
-            Case UCase(MyZnak & trans("Папка"))
+            Case UCase(MyZnak & trans("РџР°РїРєР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.Papka(args))
-            Case UCase(MyZnak & trans("Зашифрованный"))
+            Case UCase(MyZnak & trans("Р—Р°С€РёС„СЂРѕРІР°РЅРЅС‹Р№"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.Encrypted(args))
-            Case UCase(MyZnak & trans("Не индексируется"))
+            Case UCase(MyZnak & trans("РќРµ РёРЅРґРµРєСЃРёСЂСѓРµС‚СЃСЏ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.NotIndexer(args))
-            Case UCase(MyZnak & trans("Системный"))
+            Case UCase(MyZnak & trans("РЎРёСЃС‚РµРјРЅС‹Р№"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.Systemiy(args))
-            Case UCase(MyZnak & trans("Временный"))
+            Case UCase(MyZnak & trans("Р’СЂРµРјРµРЅРЅС‹Р№"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.Temp(args))
-            Case UCase(MyZnak & trans("Время создания"))
+            Case UCase(MyZnak & trans("Р’СЂРµРјСЏ СЃРѕР·РґР°РЅРёСЏ"))
                 If args Is Nothing Then Return New ErrString(ToMyDate(Now))
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.CreateTime(args))
-            Case UCase(MyZnak & trans("Время доступа"))
+            Case UCase(MyZnak & trans("Р’СЂРµРјСЏ РґРѕСЃС‚СѓРїР°"))
                 If args Is Nothing Then Return New ErrString(ToMyDate(Now))
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.AccessTime(args))
-            Case UCase(MyZnak & trans("Время изменения"))
+            Case UCase(MyZnak & trans("Р’СЂРµРјСЏ РёР·РјРµРЅРµРЅРёСЏ"))
                 If args Is Nothing Then Return New ErrString(ToMyDate(Now))
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.EditTime(args))
-            Case UCase(MyZnak & trans("Существует файл"))
+            Case UCase(MyZnak & trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ С„Р°Р№Р»"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
-                If es.err <> "" Then Return New ErrString(trans("Нет"))
+                If es.err <> "" Then Return New ErrString(trans("РќРµС‚"))
                 Return New ErrString(obj.Props.ExistFile(args))
-            Case UCase(MyZnak & trans("Существует папка"))
+            Case UCase(MyZnak & trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ РїР°РїРєР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
-                If es.err <> "" Then Return New ErrString(trans("Нет"))
+                If es.err <> "" Then Return New ErrString(trans("РќРµС‚"))
                 Return New ErrString(obj.Props.ExistPath(args))
-            Case UCase(MyZnak & trans("Получить файлы"))
+            Case UCase(MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ С„Р°Р№Р»С‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.GetFiles(args))
-            Case UCase(MyZnak & trans("Получить папки"))
+            Case UCase(MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ РїР°РїРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
-                If obj.Props.ExistPath(args) = trans("Нет") Then es.err = Errors.PathNotExist(args(0)) : Return es
+                If obj.Props.ExistPath(args) = trans("РќРµС‚") Then es.err = Errors.PathNotExist(args(0)) : Return es
                 Return New ErrString(obj.Props.GetPaths(args))
-            Case UCase(MyZnak & trans("Получить диски"))
+            Case UCase(MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ РґРёСЃРєРё"))
                 Return New ErrString(obj.Props.GetDrives)
-            Case UCase(MyZnak & trans("Определить корневую"))
+            Case UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РєРѕСЂРЅРµРІСѓСЋ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.GetRoot(args))
-            Case UCase(MyZnak & trans("Определить родительскую"))
+            Case UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂРѕРґРёС‚РµР»СЊСЃРєСѓСЋ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 Return New ErrString(obj.Props.GetParent(args))
-            Case UCase(MyZnak & trans("Определить имя папки"))
+            Case UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РёРјСЏ РїР°РїРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 Return New ErrString(obj.Props.GetPathName(args))
-            Case UCase(MyZnak & trans("Определить имя файла"))
+            Case UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РёРјСЏ С„Р°Р№Р»Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 Return New ErrString(obj.Props.GetFileName(args))
-            Case UCase(MyZnak & trans("Определить расширение"))
+            Case UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 Return New ErrString(obj.Props.GetExtension(args))
-            Case UCase(MyZnak & trans("Определить без расширения"))
+            Case UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ Р±РµР· СЂР°СЃС€РёСЂРµРЅРёСЏ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 Return New ErrString(obj.Props.GetFileNameWithoutExtension(args))
-            Case UCase(MyZnak & trans("Определить размер файла"))
+            Case UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 Return New ErrString(obj.Props.GetFileSize(args))
-            Case UCase(MyZnak & trans("Поиск файлов"))
+            Case UCase(MyZnak & trans("РџРѕРёСЃРє С„Р°Р№Р»РѕРІ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
-                If NikakoiEsli(args(1)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(1)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(1)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(1)) : Return es
                 End If
                 Return New ErrString(obj.Props.FindFile(args))
-            Case MyZnak & UCase(trans("Открыть файл"))
+            Case MyZnak & UCase(trans("РћС‚РєСЂС‹С‚СЊ С„Р°Р№Р»"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
@@ -675,44 +675,44 @@ Module Props
                 If es.err <> "" Then Return es
                 args(1) = NikakoiEsli(args(1))
                 Return New ErrString(obj.props.OpenFile(args))
-            Case UCase(MyZnak & trans("Количество файлов"))
+            Case UCase(MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С„Р°Р№Р»РѕРІ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 Return New ErrString(obj.Props.FilesCount(args))
-            Case UCase(MyZnak & trans("Количество папок"))
+            Case UCase(MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°РїРѕРє"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 Return New ErrString(obj.Props.DirectoriesCount(args))
 
                 ' PRERIVANIYA
-            Case UCase(MyZnak & trans("Завершить программу")) : Return obj.Props.BreakApplication
-            Case UCase(MyZnak & trans("Завершить событие")) : Return obj.Props.BreakEvent
-            Case UCase(MyZnak & trans("Завершить цикл")) : Return obj.Props.BreakLoop
-            Case UCase(MyZnak & trans("Завершить условие")) : Return obj.Props.StopIf
-            Case UCase(MyZnak & trans("Пропускать ошибки")) : Return obj.Props.IgnoreErrors
+            Case UCase(MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ")) : Return obj.Props.BreakApplication
+            Case UCase(MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ СЃРѕР±С‹С‚РёРµ")) : Return obj.Props.BreakEvent
+            Case UCase(MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ С†РёРєР»")) : Return obj.Props.BreakLoop
+            Case UCase(MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ СѓСЃР»РѕРІРёРµ")) : Return obj.Props.StopIf
+            Case UCase(MyZnak & trans("РџСЂРѕРїСѓСЃРєР°С‚СЊ РѕС€РёР±РєРё")) : Return obj.Props.IgnoreErrors
 
                 ' EKRAN
-            Case UCase(MyZnak & trans("Рисунок рабочего стола")) : Return New ErrString(obj.Props.WallPaper)
-            Case UCase(MyZnak & trans("Стиль рабочего стола")) : Return New ErrString(obj.Props.DesktopStyle)
-            Case UCase(MyZnak & trans("Разрешение экрана")) : Return New ErrString(obj.Props.DesktopResolution)
-            Case UCase(MyZnak & trans("Частота экрана")) : Return New ErrString(obj.Props.DesktopFrequency)
-            Case UCase(MyZnak & trans("Качество цветопередачи")) : Return New ErrString(obj.Props.DesktopBits)
-            Case UCase(MyZnak & trans("Заставка")) : Return New ErrString(obj.Props.ScreenSaver)
-            Case UCase(MyZnak & trans("Скриншот"))
+            Case UCase(MyZnak & trans("Р РёСЃСѓРЅРѕРє СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°")) : Return New ErrString(obj.Props.WallPaper)
+            Case UCase(MyZnak & trans("РЎС‚РёР»СЊ СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°")) : Return New ErrString(obj.Props.DesktopStyle)
+            Case UCase(MyZnak & trans("Р Р°Р·СЂРµС€РµРЅРёРµ СЌРєСЂР°РЅР°")) : Return New ErrString(obj.Props.DesktopResolution)
+            Case UCase(MyZnak & trans("Р§Р°СЃС‚РѕС‚Р° СЌРєСЂР°РЅР°")) : Return New ErrString(obj.Props.DesktopFrequency)
+            Case UCase(MyZnak & trans("РљР°С‡РµСЃС‚РІРѕ С†РІРµС‚РѕРїРµСЂРµРґР°С‡Рё")) : Return New ErrString(obj.Props.DesktopBits)
+            Case UCase(MyZnak & trans("Р—Р°СЃС‚Р°РІРєР°")) : Return New ErrString(obj.Props.ScreenSaver)
+            Case UCase(MyZnak & trans("РЎРєСЂРёРЅС€РѕС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NetTakNet(args(0)) = trans("Никакой") Then es.err = Errors.notDaOrNet(args(0)) : Return es
+                If NetTakNet(args(0)) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(args(0)) : Return es
                 args(0) = NetTakNet(args(0))
                 Return New ErrString(obj.Props.ScreenShot(args))
-            Case UCase(MyZnak & trans("Скриншот объекта"))
+            Case UCase(MyZnak & trans("РЎРєСЂРёРЅС€РѕС‚ РѕР±СЉРµРєС‚Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.ScreenshotOfObject(args))
@@ -720,159 +720,159 @@ Module Props
 
 
                 ' SYSTEM
-            Case UCase(MyZnak & trans("Мышь X")) : Return New ErrString(obj.Props.MouseX)
-            Case UCase(MyZnak & trans("Мышь Y")) : Return New ErrString(obj.Props.MouseY)
-            Case UCase(MyZnak & trans("Клавиша клавиатуры")) : Return New ErrString(obj.Props.KeyboardKey)
-            Case UCase(MyZnak & trans("Нажат альт")) : Return New ErrString(obj.Props.KeyboardAlt)
-            Case UCase(MyZnak & trans("Нажат шифт")) : Return New ErrString(obj.Props.KeyboardShift)
-            Case UCase(MyZnak & trans("Нажат контрол")) : Return New ErrString(obj.Props.KeyboardControl)
-            Case UCase(MyZnak & trans("Нажата мыши левая")) : Return New ErrString(obj.Props.MouseLeft)
-            Case UCase(MyZnak & trans("Нажата мыши правая")) : Return New ErrString(obj.Props.MouseRight)
-            Case UCase(MyZnak & trans("Рисунок буфера обмена")) : Return New ErrString(obj.Props.ClipboardPicture)
-            Case UCase(MyZnak & trans("Текст буфера обмена")) : Return New ErrString(obj.Props.ClipboardText)
-            Case UCase(MyZnak & trans("Выполнить с результатом"))
+            Case UCase(MyZnak & trans("РњС‹С€СЊ X")) : Return New ErrString(obj.Props.MouseX)
+            Case UCase(MyZnak & trans("РњС‹С€СЊ Y")) : Return New ErrString(obj.Props.MouseY)
+            Case UCase(MyZnak & trans("РљР»Р°РІРёС€Р° РєР»Р°РІРёР°С‚СѓСЂС‹")) : Return New ErrString(obj.Props.KeyboardKey)
+            Case UCase(MyZnak & trans("РќР°Р¶Р°С‚ Р°Р»СЊС‚")) : Return New ErrString(obj.Props.KeyboardAlt)
+            Case UCase(MyZnak & trans("РќР°Р¶Р°С‚ С€РёС„С‚")) : Return New ErrString(obj.Props.KeyboardShift)
+            Case UCase(MyZnak & trans("РќР°Р¶Р°С‚ РєРѕРЅС‚СЂРѕР»")) : Return New ErrString(obj.Props.KeyboardControl)
+            Case UCase(MyZnak & trans("РќР°Р¶Р°С‚Р° РјС‹С€Рё Р»РµРІР°СЏ")) : Return New ErrString(obj.Props.MouseLeft)
+            Case UCase(MyZnak & trans("РќР°Р¶Р°С‚Р° РјС‹С€Рё РїСЂР°РІР°СЏ")) : Return New ErrString(obj.Props.MouseRight)
+            Case UCase(MyZnak & trans("Р РёСЃСѓРЅРѕРє Р±СѓС„РµСЂР° РѕР±РјРµРЅР°")) : Return New ErrString(obj.Props.ClipboardPicture)
+            Case UCase(MyZnak & trans("РўРµРєСЃС‚ Р±СѓС„РµСЂР° РѕР±РјРµРЅР°")) : Return New ErrString(obj.Props.ClipboardText)
+            Case UCase(MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ СЃ СЂРµР·СѓР»СЊС‚Р°С‚РѕРј"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.RunWithResult(args))
-            Case UCase(MyZnak & trans("Процессы системы")) : Return New ErrString(obj.Props.ProcessesList)
-            Case UCase(MyZnak & trans("Окна системы")) : Return New ErrString(obj.Props.WindowsList)
-            Case UCase(MyZnak & trans("Окно в фокусе")) : Return New ErrString(obj.Props.WindowInFocus)
+            Case UCase(MyZnak & trans("РџСЂРѕС†РµСЃСЃС‹ СЃРёСЃС‚РµРјС‹")) : Return New ErrString(obj.Props.ProcessesList)
+            Case UCase(MyZnak & trans("РћРєРЅР° СЃРёСЃС‚РµРјС‹")) : Return New ErrString(obj.Props.WindowsList)
+            Case UCase(MyZnak & trans("РћРєРЅРѕ РІ С„РѕРєСѓСЃРµ")) : Return New ErrString(obj.Props.WindowInFocus)
 
 
 
                 ' REGISTRY
-            Case UCase(MyZnak & trans("Значение реестра"))
+            Case UCase(MyZnak & trans("Р—РЅР°С‡РµРЅРёРµ СЂРµРµСЃС‚СЂР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If GetRegistryKey(args(0), "") Is Nothing Then es.err = Errors.notRegistry(args(0)) : Return es
                 Return New ErrString(obj.Props.Key(args))
-            Case UCase(MyZnak & trans("Ключ существует"))
+            Case UCase(MyZnak & trans("РљР»СЋС‡ СЃСѓС‰РµСЃС‚РІСѓРµС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.ExistKey(args))
-            Case UCase(MyZnak & trans("Папка существует"))
+            Case UCase(MyZnak & trans("РџР°РїРєР° СЃСѓС‰РµСЃС‚РІСѓРµС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.ExistSubKey(args))
-            Case UCase(MyZnak & trans("Тип ключа"))
+            Case UCase(MyZnak & trans("РўРёРї РєР»СЋС‡Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.TypeKey(args))
 
                 ' TEXT BOKS
-            Case UCase(trans("Номер символа по координатам"))
+            Case UCase(trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.GetCharIndexFromPosition(args))
-            Case UCase(trans("Номер первого символа строки"))
+            Case UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° СЃС‚СЂРѕРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Int(args(0)) <= 0 Then es.err = Errors.notLessEqZero(args(0), prop) : Return es
                 Return New ErrString(obj.Props.GetFirstCharIndexFromLine(args))
-            Case UCase(trans("Номер первого символа текущей строки")) : Return New ErrString(obj.Props.GetFirstCharIndexOfCurrentLine)
-            Case UCase(trans("Номер строки по номеру символа"))
+            Case UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРё")) : Return New ErrString(obj.Props.GetFirstCharIndexOfCurrentLine)
+            Case UCase(trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Int(args(0)) <= 0 Then es.err = Errors.notLessEqZero(args(0), prop) : Return es
                 Return New ErrString(obj.Props.GetLineFromCharIndex(args))
-            Case UCase(trans("X по номеру символа"))
+            Case UCase(trans("X РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Int(args(0)) <= 0 Then es.err = Errors.notLessEqZero(args(0), prop) : Return es
                 Return New ErrString(obj.Props.GetXFromCharIndex(args))
-            Case UCase(trans("Y по номеру символа"))
+            Case UCase(trans("Y РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Int(args(0)) <= 0 Then es.err = Errors.notLessEqZero(args(0), prop) : Return es
                 Return New ErrString(obj.Props.GetYFromCharIndex(args))
-            Case UCase(trans("Строка"))
+            Case UCase(trans("РЎС‚СЂРѕРєР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Int(args(0)) <= 0 Then es.err = Errors.notLessEqZero(args(0), prop) : Return es
                 Return New ErrString(obj.Props.Line(args))
-            Case UCase(trans("Количество строк")) : Return New ErrString(obj.Props.LinesCount)
-            Case UCase(trans("Символ"))
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє")) : Return New ErrString(obj.Props.LinesCount)
+            Case UCase(trans("РЎРёРјРІРѕР»"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If Int(args(0)) <= 0 Then es.err = Errors.notLessEqZero(args(0), prop) : Return es
                 Return New ErrString(obj.Props.Chars(args))
-            Case UCase(trans("Количество символов")) : Return New ErrString(obj.Props.CharsLength)
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ")) : Return New ErrString(obj.Props.CharsLength)
 
                 ' TEXTS POLEZNIE
-            Case MyZnak & UCase(trans("Символ по номеру"))
+            Case MyZnak & UCase(trans("РЎРёРјРІРѕР» РїРѕ РЅРѕРјРµСЂСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 If args(1) > args(0).Length + 1 Then es.err = Errors.notLength(prop, args(0), args(1)) : Return es
                 If Int(args(1)) <= 0 Then es.err = Errors.notLessEqZero(args(1), prop) : Return es
                 Return New ErrString(obj.Props.Chars(args))
-            Case MyZnak & UCase(trans("Сравнить тексты"))
+            Case MyZnak & UCase(trans("РЎСЂР°РІРЅРёС‚СЊ С‚РµРєСЃС‚С‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Compare(args))
-            Case MyZnak & UCase(trans("Текст состоит из"))
+            Case MyZnak & UCase(trans("РўРµРєСЃС‚ СЃРѕСЃС‚РѕРёС‚ РёР·"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.ConsistAll(args))
-            Case MyZnak & UCase(trans("Текст есть число"))
+            Case MyZnak & UCase(trans("РўРµРєСЃС‚ РµСЃС‚СЊ С‡РёСЃР»Рѕ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.isNumberText(args))
-            Case MyZnak & UCase(trans("Текст есть цифры"))
+            Case MyZnak & UCase(trans("РўРµРєСЃС‚ РµСЃС‚СЊ С†РёС„СЂС‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.isNumericText(args))
-            Case MyZnak & UCase(trans("Поиск номера строки"))
+            Case MyZnak & UCase(trans("РџРѕРёСЃРє РЅРѕРјРµСЂР° СЃС‚СЂРѕРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(2)) = False Then es.err = Errors.notInt(args(2), prop) : Return es
                 If args(2) > args(0).Length + 1 Then es.err = Errors.notLength(prop, args(0), args(2)) : Return es
                 If Int(args(2)) <= 0 Then es.err = Errors.notLessEqZero(args(2), prop) : Return es
                 Return New ErrString(obj.Props.IndexOfLine(args))
-            Case MyZnak & UCase(trans("Поиск в тексте"))
+            Case MyZnak & UCase(trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(2)) = False Then es.err = Errors.notInt(args(2), prop) : Return es
                 If args(2) > args(0).Length + 1 Then es.err = Errors.notLength(prop, args(0), args(2)) : Return es
                 If Int(args(2)) <= 0 Then es.err = Errors.notLessEqZero(args(2), prop) : Return es
                 Return New ErrString(obj.Props.IndexOfIgnoreCase(args))
-            Case MyZnak & UCase(trans("Поиск с учетом регистра"))
+            Case MyZnak & UCase(trans("РџРѕРёСЃРє СЃ СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(2)) = False Then es.err = Errors.notInt(args(2), prop) : Return es
                 If args(2) > args(0).Length + 1 Then es.err = Errors.notLength(prop, args(0), args(2)) : Return es
                 If Int(args(2)) <= 0 Then es.err = Errors.notLessEqZero(args(2), prop) : Return es
                 Return New ErrString(obj.Props.IndexOf(args))
-            Case MyZnak & UCase(trans("Поиск в тексте с конца"))
+            Case MyZnak & UCase(trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ СЃ РєРѕРЅС†Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(2)) = False Then es.err = Errors.notInt(args(2), prop) : Return es
                 'If args(2) > args(0).Length + 1 Then es.err = Errors.notLength(prop, args(0), args(2)) : Return es
                 If Int(args(2)) <= 0 Then es.err = Errors.notLessEqZero(args(2), prop) : Return es
                 Return New ErrString(obj.Props.LastIndexOfIgnoreCase(args))
-            Case MyZnak & UCase(trans("Поиск с регулярными выражениями"))
+            Case MyZnak & UCase(trans("РџРѕРёСЃРє СЃ СЂРµРіСѓР»СЏСЂРЅС‹РјРё РІС‹СЂР°Р¶РµРЅРёСЏРјРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.IndexOfRegular(args))
-            Case MyZnak & UCase(trans("Количество символов"))
+            Case MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.CharsLength(args))
-            Case MyZnak & UCase(trans("Разбить на части"))
+            Case MyZnak & UCase(trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(2)) = False Then es.err = Errors.notInt(args(2), prop) : Return es
                 If Int(args(2)) <= 0 Then es.err = Errors.notLessEqZero(args(2), prop) : Return es
                 Return New ErrString(obj.Props.Split(args))
-            Case MyZnak & UCase(trans("Взять кусок текста"))
+            Case MyZnak & UCase(trans("Р’Р·СЏС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
@@ -881,70 +881,70 @@ Module Props
                 If Iz.isInteger(args(2)) = False Then es.err = Errors.notInt(args(2), prop) : Return es
                 ' If args(1) - 1 + args(2) > args(0).Length + 1 Then es.err = Errors.notLength(prop, args(0), args(1) - 1 + args(2)) : Return es
                 Return New ErrString(obj.Props.Substring(args))
-            Case MyZnak & UCase(trans("Количество частей текста"))
+            Case MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ С‚РµРєСЃС‚Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.SplitCount(args))
-            Case MyZnak & UCase(trans("Кавычки убрать"))
+            Case MyZnak & UCase(trans("РљР°РІС‹С‡РєРё СѓР±СЂР°С‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DeleteQuotes(args))
-            Case MyZnak & UCase(trans("Кавычками обособить"))
+            Case MyZnak & UCase(trans("РљР°РІС‹С‡РєР°РјРё РѕР±РѕСЃРѕР±РёС‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.PutInQuotes(args))
-            Case MyZnak & UCase(trans("Поиск без кавычек"))
+            Case MyZnak & UCase(trans("РџРѕРёСЃРє Р±РµР· РєР°РІС‹С‡РµРє"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(2)) = False Then es.err = Errors.notInt(args(2), prop) : Return es
                 If args(2) > args(0).Length + 1 Then es.err = Errors.notLength(prop, args(0), args(2)) : Return es
                 If Int(args(2)) <= 0 Then es.err = Errors.notLessEqZero(args(2), prop) : Return es
                 Return New ErrString(obj.Props.IndexOfWithoutQuotes(args))
-            Case MyZnak & UCase(trans("Разбить на части без кавычек"))
+            Case MyZnak & UCase(trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё Р±РµР· РєР°РІС‹С‡РµРє"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(2)) = False Then es.err = Errors.notInt(args(2), prop) : Return es
                 If Int(args(2)) <= 0 Then es.err = Errors.notLessEqZero(args(2), prop) : Return es
                 Return New ErrString(obj.Props.SplitWithoutQuotes(args))
-            Case MyZnak & UCase(trans("Количество частей без кавычек"))
+            Case MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ Р±РµР· РєР°РІС‹С‡РµРє"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.SplitWithoutQuotesCount(args))
-            Case MyZnak & UCase(trans("Текст содержит"))
+            Case MyZnak & UCase(trans("РўРµРєСЃС‚ СЃРѕРґРµСЂР¶РёС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Consist(args))
-            Case MyZnak & UCase(trans("Текст не содержит"))
+            Case MyZnak & UCase(trans("РўРµРєСЃС‚ РЅРµ СЃРѕРґРµСЂР¶РёС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.ConsistNo(args))
-            Case MyZnak & UCase(trans("Строка по номеру"))
+            Case MyZnak & UCase(trans("РЎС‚СЂРѕРєР° РїРѕ РЅРѕРјРµСЂСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 If Int(args(1)) <= 0 Then es.err = Errors.notLessEqZero(args(1), prop) : Return es
                 Return New ErrString(obj.Props.Line(args))
-            Case MyZnak & UCase(trans("Количество строк"))
+            Case MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.LinesCount(args))
-            Case MyZnak & UCase(trans("Зашифровать текст"))
+            Case MyZnak & UCase(trans("Р—Р°С€РёС„СЂРѕРІР°С‚СЊ С‚РµРєСЃС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.EncryptText(args))
-            Case MyZnak & UCase(trans("Расшифровать текст"))
+            Case MyZnak & UCase(trans("Р Р°СЃС€РёС„СЂРѕРІР°С‚СЊ С‚РµРєСЃС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DecryptText(args))
 
-            Case MyZnak & UCase(trans("Вставить символы в текст"))
+            Case MyZnak & UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ СЃРёРјРІРѕР»С‹ РІ С‚РµРєСЃС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 If Int(args(1)) <= 0 Then es.err = Errors.notLessEqZero(args(1), prop) : Return es
                 If args(1) > args(0).Length + 1 Then es.err = Errors.notLength(prop, args(0), args(1)) : Return es
                 Return New ErrString(obj.Props.Insert(args))
-            Case MyZnak & UCase(trans("Удалить кусок текста"))
+            Case MyZnak & UCase(trans("РЈРґР°Р»РёС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
@@ -953,95 +953,95 @@ Module Props
                 If Iz.isInteger(args(2)) = False Then es.err = Errors.notInt(args(2), prop) : Return es
                 'If args(1) - 1 + args(2) > args(0).Length + 1 Then es.err = Errors.notLength(prop, args(0), args(1) - 1 + args(2)) : Return es
                 Return New ErrString(obj.Props.Remove(args))
-            Case MyZnak & UCase(trans("Заменить"))
+            Case MyZnak & UCase(trans("Р—Р°РјРµРЅРёС‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.ReplaceOne(args))
-            Case MyZnak & UCase(trans("Заменить все"))
+            Case MyZnak & UCase(trans("Р—Р°РјРµРЅРёС‚СЊ РІСЃРµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.ReplaceAll(args))
-            Case MyZnak & UCase(trans("Сделать буквы прописными"))
+            Case MyZnak & UCase(trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ РїСЂРѕРїРёСЃРЅС‹РјРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.toLower(args))
-            Case MyZnak & UCase(trans("Сделать буквы заглавными"))
+            Case MyZnak & UCase(trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ Р·Р°РіР»Р°РІРЅС‹РјРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.toUpper(args))
-            Case MyZnak & UCase(trans("Убрать пробелы"))
+            Case MyZnak & UCase(trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.TrimAll(args))
-            Case MyZnak & UCase(trans("Убрать пробелы в начале"))
+            Case MyZnak & UCase(trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РЅР°С‡Р°Р»Рµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.TrimStart(args))
-            Case MyZnak & UCase(trans("Убрать пробелы в конце"))
+            Case MyZnak & UCase(trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РєРѕРЅС†Рµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.TrimEnd(args))
 
-                ' СООБЩЕНИЕ
-            Case MyZnak & UCase(trans("Была нажата Отмена")) : Return New ErrString(obj.Props.WasCancel)
-            Case MyZnak & UCase(trans("Была нажата Ок")) : Return New ErrString(obj.Props.WasOk)
-            Case MyZnak & UCase(trans("Была нажата Повторить")) : Return New ErrString(obj.Props.WasRetry)
-            Case MyZnak & UCase(trans("Была нажата Да")) : Return New ErrString(obj.Props.WasYes)
-            Case MyZnak & UCase(trans("Была нажата Нет")) : Return New ErrString(obj.Props.WasNo)
-            Case MyZnak & UCase(trans("Была нажата Прервать")) : Return New ErrString(obj.Props.WasAbort)
-            Case MyZnak & UCase(trans("Была нажата Пропустить")) : Return New ErrString(obj.Props.WasIgnore)
-            Case MyZnak & UCase(trans("Была нажата Справка")) : Return New ErrString(obj.Props.WasHelp)
+                ' РЎРћРћР‘Р©Р•РќРР•
+            Case MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РћС‚РјРµРЅР°")) : Return New ErrString(obj.Props.WasCancel)
+            Case MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РћРє")) : Return New ErrString(obj.Props.WasOk)
+            Case MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџРѕРІС‚РѕСЂРёС‚СЊ")) : Return New ErrString(obj.Props.WasRetry)
+            Case MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° Р”Р°")) : Return New ErrString(obj.Props.WasYes)
+            Case MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РќРµС‚")) : Return New ErrString(obj.Props.WasNo)
+            Case MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџСЂРµСЂРІР°С‚СЊ")) : Return New ErrString(obj.Props.WasAbort)
+            Case MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџСЂРѕРїСѓСЃС‚РёС‚СЊ")) : Return New ErrString(obj.Props.WasIgnore)
+            Case MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РЎРїСЂР°РІРєР°")) : Return New ErrString(obj.Props.WasHelp)
 
                 ' DATE
-            Case MyZnak & UCase(trans("День месяца"))
+            Case MyZnak & UCase(trans("Р”РµРЅСЊ РјРµСЃСЏС†Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DayOfMonth(args))
-            Case MyZnak & UCase(trans("День года"))
+            Case MyZnak & UCase(trans("Р”РµРЅСЊ РіРѕРґР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DayOfYear(args))
-            Case MyZnak & UCase(trans("День в неделе"))
+            Case MyZnak & UCase(trans("Р”РµРЅСЊ РІ РЅРµРґРµР»Рµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DayOfWeek(args))
-            Case MyZnak & UCase(trans("Час"))
+            Case MyZnak & UCase(trans("Р§Р°СЃ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Hour(args))
-            Case MyZnak & UCase(trans("Минута"))
+            Case MyZnak & UCase(trans("РњРёРЅСѓС‚Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Minute(args))
-            Case MyZnak & UCase(trans("Секунда"))
+            Case MyZnak & UCase(trans("РЎРµРєСѓРЅРґР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Second(args))
-            Case MyZnak & UCase(trans("Квартал"))
+            Case MyZnak & UCase(trans("РљРІР°СЂС‚Р°Р»"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Quarter(args))
-            Case MyZnak & UCase(trans("Неделя в году"))
+            Case MyZnak & UCase(trans("РќРµРґРµР»СЏ РІ РіРѕРґСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.WeekOfYear(args))
-            Case MyZnak & UCase(trans("Год"))
+            Case MyZnak & UCase(trans("Р“РѕРґ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Year(args))
-            Case MyZnak & UCase(trans("Месяц"))
+            Case MyZnak & UCase(trans("РњРµСЃСЏС†"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Month(args))
-            Case MyZnak & UCase(trans("Время"))
+            Case MyZnak & UCase(trans("Р’СЂРµРјСЏ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Time(args))
-            Case MyZnak & UCase(trans("Секунд всего в дате"))
+            Case MyZnak & UCase(trans("РЎРµРєСѓРЅРґ РІСЃРµРіРѕ РІ РґР°С‚Рµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.Ticks(args))
-            Case MyZnak & UCase(trans("Дней в месяце"))
+            Case MyZnak & UCase(trans("Р”РЅРµР№ РІ РјРµСЃСЏС†Рµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
@@ -1051,89 +1051,89 @@ Module Props
                 If Int(args(1)) <= 0 Then es.err = Errors.notLessEqZero(args(1), prop) : Return es
                 If Int(args(1)) > 12 Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.DaysInMonth(args))
-            Case MyZnak & UCase(trans("Сейчас")) : Return New ErrString(obj.Props.Now)
-            Case MyZnak & UCase(trans("Сегодня")) : Return New ErrString(obj.Props.Today)
-            Case MyZnak & UCase(trans("Прибавить дни"))
+            Case MyZnak & UCase(trans("РЎРµР№С‡Р°СЃ")) : Return New ErrString(obj.Props.Now)
+            Case MyZnak & UCase(trans("РЎРµРіРѕРґРЅСЏ")) : Return New ErrString(obj.Props.Today)
+            Case MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РґРЅРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.DateAddDay(args))
-            Case MyZnak & UCase(trans("Прибавить часы"))
+            Case MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ С‡Р°СЃС‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.DateAddHour(args))
-            Case MyZnak & UCase(trans("Прибавить минуты"))
+            Case MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РјРёРЅСѓС‚С‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.DateAddMinute(args))
-            Case MyZnak & UCase(trans("Прибавить секунды"))
+            Case MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ СЃРµРєСѓРЅРґС‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.DateAddSecond(args))
-            Case MyZnak & UCase(trans("Прибавить кварталы"))
+            Case MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РєРІР°СЂС‚Р°Р»С‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.DateAddQuarter(args))
-            Case MyZnak & UCase(trans("Прибавить недели"))
+            Case MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РЅРµРґРµР»Рё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.DateAddWeek(args))
-            Case MyZnak & UCase(trans("Прибавить годы"))
+            Case MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РіРѕРґС‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.DateAddYear(args))
-            Case MyZnak & UCase(trans("Прибавить месяцы"))
+            Case MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РјРµСЃСЏС†С‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 Return New ErrString(obj.Props.DateAddMonth(args))
-            Case MyZnak & UCase(trans("Разница в днях"))
+            Case MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РґРЅСЏС…"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DateDiffDay(args))
-            Case MyZnak & UCase(trans("Разница в часах"))
+            Case MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ С‡Р°СЃР°С…"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DateDiffHour(args))
-            Case MyZnak & UCase(trans("Разница в минутах"))
+            Case MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РјРёРЅСѓС‚Р°С…"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DateDiffMinute(args))
-            Case MyZnak & UCase(trans("Разница в секундах"))
+            Case MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ СЃРµРєСѓРЅРґР°С…"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DateDiffSecond(args))
-            Case MyZnak & UCase(trans("Разница в кварталах"))
+            Case MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РєРІР°СЂС‚Р°Р»Р°С…"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DateDiffQuarter(args))
-            Case MyZnak & UCase(trans("Разница в неделях"))
+            Case MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РЅРµРґРµР»СЏС…"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DateDiffWeek(args))
-            Case MyZnak & UCase(trans("Разница в годах"))
+            Case MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РіРѕРґР°С…"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DateDiffYear(args))
-            Case MyZnak & UCase(trans("Разница в месяцах"))
+            Case MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РјРµСЃСЏС†Р°С…"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.DateDiffMonth(args))
-            Case MyZnak & UCase(trans("День недели"))
+            Case MyZnak & UCase(trans("Р”РµРЅСЊ РЅРµРґРµР»Рё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.WeekdayName(args))
-            Case MyZnak & UCase(trans("Название месяца"))
+            Case MyZnak & UCase(trans("РќР°Р·РІР°РЅРёРµ РјРµСЃСЏС†Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Return New ErrString(obj.Props.MonthName(args))
-            Case MyZnak & UCase(trans("Дата в определенном формате"))
+            Case MyZnak & UCase(trans("Р”Р°С‚Р° РІ РѕРїСЂРµРґРµР»РµРЅРЅРѕРј С„РѕСЂРјР°С‚Рµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
@@ -1143,14 +1143,14 @@ Module Props
 
                 ' SOBYTS PROPERTY
             Case Else
-                ' Может это свойство события
+                ' РњРѕР¶РµС‚ СЌС‚Рѕ СЃРІРѕР№СЃС‚РІРѕ СЃРѕР±С‹С‚РёСЏ
 PropVParam:     If vParamah Then
-                    ' Когда проект запущен, то гораздо не тормознее использовать уже созданный объект Param
+                    ' РљРѕРіРґР° РїСЂРѕРµРєС‚ Р·Р°РїСѓС‰РµРЅ, С‚Рѕ РіРѕСЂР°Р·РґРѕ РЅРµ С‚РѕСЂРјРѕР·РЅРµРµ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ СѓР¶Рµ СЃРѕР·РґР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ Param
                     If RunProj.Param.ParamyUp.IndexOfKey(UCase(prop)) <> -1 And MyObj.isrun Then
                         Return New ErrString(RunProj.Param.Paramy.GetByIndex(RunProj.Param.ParamyUp.IndexOfKey(UCase(prop))))
                     End If
                 Else
-                    ' очень редко выпадает
+                    ' РѕС‡РµРЅСЊ СЂРµРґРєРѕ РІС‹РїР°РґР°РµС‚
                     Dim SobytObjs As New Sobitiya(MyZnak & "All")
                     If SobytObjs.EstProperty(prop) And MyObj.isrun Then
                         Return New ErrString(RunProj.Param.Paramy.GetByIndex(RunProj.Param.ParamyUp.IndexOfKey(UCase(prop))))
@@ -1167,7 +1167,7 @@ PropVParam:     If vParamah Then
     Public Function SetProperty(ByVal MyObj As Object, ByVal prop As String, ByVal value As String, Optional ByVal fromEng As Boolean = False) As MsgBoxResult
         prop = UCase(prop)
         If MyObj Is Nothing Then Exit Function
-        If Array.IndexOf(MyObj.PropertysUp, prop) = -1 Then Return MsgBoxResult.Yes ' Если нет такого свойства то выйти из функции
+        If Array.IndexOf(MyObj.PropertysUp, prop) = -1 Then Return MsgBoxResult.Yes ' Р•СЃР»Рё РЅРµС‚ С‚Р°РєРѕРіРѕ СЃРІРѕР№СЃС‚РІР° С‚Рѕ РІС‹Р№С‚Рё РёР· С„СѓРЅРєС†РёРё
         Dim es As ErrString = SetPropertyMethod(MyObj, prop, value, Nothing, fromEng)
         If es.err <> "" Then
             If es.str = "Cancel" Then Return MsgBoxResult.Cancel
@@ -1180,13 +1180,13 @@ PropVParam:     If vParamah Then
         Dim obj As Object = MyObj.obj, j As Integer
         prop = UCase(prop) : Dim refresh As Boolean, es As ErrString
 
-        ' ТОЛЬКО ДЛЯ ЧТЕНИЯ
+        ' РўРћР›Р¬РљРћ Р”Р›РЇ Р§РўР•РќРРЇ
         If Array.IndexOf(ReadOnlyProps, prop) <> -1 Then es.err = Errors.isReadOnly(prop) : Return es
 
-        ' Заменить символ |Р на интеры
+        ' Р—Р°РјРµРЅРёС‚СЊ СЃРёРјРІРѕР» |Р  РЅР° РёРЅС‚РµСЂС‹
         value = perevesti(value, True)
-        ' заменить в аргументах мой знак на интеры
-        If prop <> MyZnak & UCase(trans("Выполнить код Алгоритма2")) Then
+        ' Р·Р°РјРµРЅРёС‚СЊ РІ Р°СЂРіСѓРјРµРЅС‚Р°С… РјРѕР№ Р·РЅР°Рє РЅР° РёРЅС‚РµСЂС‹
+        If prop <> MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ РђР»РіРѕСЂРёС‚РјР°2")) Then
             If args Is Nothing = False Then
                 For j = 0 To args.Length - 1
                     args(j) = perevesti(args(j), True)
@@ -1195,32 +1195,32 @@ PropVParam:     If vParamah Then
         End If
 
         Select Case prop
-            Case UCase(trans("Имя"))
+            Case UCase(trans("РРјСЏ"))
                 If ValidName(value) = False Then es.err = Errors.NameInvalid(value) : es.str = "MsgBox ne nado" : Return es
                 If MyObj.isRun = False And fromEng = False And isConsole = False Then
-                    If proj.ExistName(value, obj) Then ' Если имя уже существует
+                    If proj.ExistName(value, obj) Then ' Р•СЃР»Рё РёРјСЏ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓРµС‚
                         If obj.Props.index = 0 Then
-                            Dim result As MsgBoxResult ' Предложить создать массив
+                            Dim result As MsgBoxResult ' РџСЂРµРґР»РѕР¶РёС‚СЊ СЃРѕР·РґР°С‚СЊ РјР°СЃСЃРёРІ
                             If obj.parent Is Nothing = False Then
                                 result = MsgBox(Errors.CreateMassive(value), MsgBoxStyle.Question + MsgBoxStyle.YesNoCancel)
                             Else
-                                ' Если идет вставка, то выводить сообщения не надо
+                                ' Р•СЃР»Рё РёРґРµС‚ РІСЃС‚Р°РІРєР°, С‚Рѕ РІС‹РІРѕРґРёС‚СЊ СЃРѕРѕР±С‰РµРЅРёСЏ РЅРµ РЅР°РґРѕ
                                 result = MsgBoxResult.Retry
                             End If
                             If result = MsgBoxResult.Yes Then
-                                proj.ActiveForm.CreateMassive(value, MyObj) ' создать массив
+                                proj.ActiveForm.CreateMassive(value, MyObj) ' СЃРѕР·РґР°С‚СЊ РјР°СЃСЃРёРІ
                                 proj.ActiveForm.recur = True
                                 'proj.UndoRedo("#Union Undos(Redos)", "", "", "")
                             ElseIf result = MsgBoxResult.No Then
                                 MsgBox(Errors.NameExist(value), MsgBoxStyle.Exclamation)
-                                es.err = "!" : es.str = "MsgBox ne nado" : Return es ' Чтобы сетпропер вернул MsgBoxResult.No, но без мсгбокса
+                                es.err = "!" : es.str = "MsgBox ne nado" : Return es ' Р§С‚РѕР±С‹ СЃРµС‚РїСЂРѕРїРµСЂ РІРµСЂРЅСѓР» MsgBoxResult.No, РЅРѕ Р±РµР· РјСЃРіР±РѕРєСЃР°
                             ElseIf result = MsgBoxResult.Cancel Then
-                                es.err = "!" : es.str = "Cancel" : Return es ' Чтобы сетпропер вернул MsgBoxResult.No, но без мсгбокса
+                                es.err = "!" : es.str = "Cancel" : Return es ' Р§С‚РѕР±С‹ СЃРµС‚РїСЂРѕРїРµСЂ РІРµСЂРЅСѓР» MsgBoxResult.No, РЅРѕ Р±РµР· РјСЃРіР±РѕРєСЃР°
                             Else
                             End If
-                        Else ' Если такой массив уже есть, то дать ему индекс, которого еще нет
+                        Else ' Р•СЃР»Рё С‚Р°РєРѕР№ РјР°СЃСЃРёРІ СѓР¶Рµ РµСЃС‚СЊ, С‚Рѕ РґР°С‚СЊ РµРјСѓ РёРЅРґРµРєСЃ, РєРѕС‚РѕСЂРѕРіРѕ РµС‰Рµ РЅРµС‚
                             obj.Props.index = MyObj.GetMyForm.GetIndex(value, obj, obj.Props.index) : refresh = True
-                        End If : obj.refresh() ' Чтоб пропечатать индексы
+                        End If : obj.refresh() ' Р§С‚РѕР± РїСЂРѕРїРµС‡Р°С‚Р°С‚СЊ РёРЅРґРµРєСЃС‹
                     End If
                 End If
 
@@ -1233,49 +1233,49 @@ PropVParam:     If vParamah Then
                     If CreateDs Is Nothing = False Then CreateDs.SetProperty(True)
                 End If
                 If Iz.IsFORM(MyObj) Then MyObj.TabTextRefresh()
-            Case UCase(trans("Фоновой рисунок"))
+            Case UCase(trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє"))
                 value = GetMaxPath(value)
                 If IsHttpCompil = False Then
-                    If IO.File.Exists(value) = False And value <> trans("Никакой") Then
+                    If IO.File.Exists(value) = False And value <> trans("РќРёРєР°РєРѕР№") Then
                         es.err = Errors.notFile(value) : Return es
                     End If
                     If MyObj.isRun = False Then value = copyImage(value)
                 End If
                 obj.Props.BackgroundImage = value
-            Case UCase(trans("Фоновой рисунок1"))
+            Case UCase(trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє1"))
                 value = GetMaxPath(value)
                 If IsHttpCompil = False Then
-                    If IO.File.Exists(value) = False And value <> trans("Никакой") Then
+                    If IO.File.Exists(value) = False And value <> trans("РќРёРєР°РєРѕР№") Then
                         es.err = Errors.notFile(value) : Return es
                     End If
                     If MyObj.isRun = False Then value = copyImage(value)
                 End If
                 obj.Props.BackgroundImage1 = value
-            Case UCase(trans("Фоновой рисунок2"))
+            Case UCase(trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє2"))
                 value = GetMaxPath(value)
                 If IsHttpCompil = False Then
-                    If IO.File.Exists(value) = False And value <> trans("Никакой") Then
+                    If IO.File.Exists(value) = False And value <> trans("РќРёРєР°РєРѕР№") Then
                         es.err = Errors.notFile(value) : Return es
                     End If
                     If MyObj.isRun = False Then value = copyImage(value)
                 End If
                 obj.Props.BackgroundImage2 = value
-            Case UCase(trans("Цвет"))
+            Case UCase(trans("Р¦РІРµС‚"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.BackColor = col
-            Case UCase(trans("Цвет1"))
+            Case UCase(trans("Р¦РІРµС‚1"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.BackColor1 = col
-            Case UCase(trans("Цвет2"))
+            Case UCase(trans("Р¦РІРµС‚2"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.BackColor2 = col
-            Case UCase(trans("Номер"))
+            Case UCase(trans("РќРѕРјРµСЂ"))
                 If MyObj.getmyform Is Nothing = False Then
                     If MyObj.getmyform.ExistIndex(MyObj.obj, MyObj.obj.Props.name, value) Then
                         es.err = "!" : es.str = "MsgBox ne nado"
@@ -1289,131 +1289,131 @@ PropVParam:     If vParamah Then
                 If MyObj.isRun Then Return es
                 obj.refresh()
                 If Iz.IsFORM(MyObj) Then MyObj.TabTextRefresh()
-            Case UCase(trans("Позиция"))
+            Case UCase(trans("РџРѕР·РёС†РёСЏ"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.position = value
-            Case UCase(trans("Главная форма"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р“Р»Р°РІРЅР°СЏ С„РѕСЂРјР°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.mainform = value
-            Case UCase(trans("Всплывающее меню"))
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"))
                 obj.Props.contextmenu = value
-            Case UCase(trans("Всплывающее меню1"))
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ1"))
                 obj.Props.contextmenu1 = value
-            Case UCase(trans("Всплывающее меню2"))
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ2"))
                 obj.Props.contextmenu2 = value
-            Case UCase(trans("Запретить закрытие"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р—Р°РїСЂРµС‚РёС‚СЊ Р·Р°РєСЂС‹С‚РёРµ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ForbidClose = value
-            Case UCase(trans("Привязка"))
+            Case UCase(trans("РџСЂРёРІСЏР·РєР°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Anchors.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWAnchors) : Return es
                 obj.Props.Anchor = value
-            Case UCase(trans("АвтоТроеточие"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РђРІС‚РѕРўСЂРѕРµС‚РѕС‡РёРµ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AutoEllipsis = value
-            Case UCase(trans("Стиль фона"))
+            Case UCase(trans("РЎС‚РёР»СЊ С„РѕРЅР°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = bkImStyles.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWbkImStyles) : Return es
                 obj.Props.BackgroundImageLayout = value
-            Case UCase(trans("Стиль фона1"))
+            Case UCase(trans("РЎС‚РёР»СЊ С„РѕРЅР°1"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = bkImStyles.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWbkImStyles) : Return es
                 obj.Props.BackgroundImageLayout1 = value
-            Case UCase(trans("Стиль фона2"))
+            Case UCase(trans("РЎС‚РёР»СЊ С„РѕРЅР°2"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = bkImStyles.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWbkImStyles) : Return es
                 obj.Props.BackgroundImageLayout2 = value
-            Case UCase(trans("Стиль рисунка"))
+            Case UCase(trans("РЎС‚РёР»СЊ СЂРёСЃСѓРЅРєР°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = SizeModes.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWSizeModes) : Return es
                 obj.Props.SizeMode = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("Курсор"))
+            Case UCase(trans("РљСѓСЂСЃРѕСЂ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Cursori.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWCursori) : Return es
                 obj.Props.Cursor = value
-            Case UCase(trans("Курсор1"))
+            Case UCase(trans("РљСѓСЂСЃРѕСЂ1"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Cursori.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWCursori) : Return es
                 obj.Props.Cursor1 = value
-            Case UCase(trans("Курсор2"))
+            Case UCase(trans("РљСѓСЂСЃРѕСЂ2"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Cursori.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWCursori) : Return es
                 obj.Props.Cursor2 = value
-            Case UCase(trans("Растяжка"))
+            Case UCase(trans("Р Р°СЃС‚СЏР¶РєР°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Docks.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWDocks) : Return es
                 obj.Props.Dock = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("Работает"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р Р°Р±РѕС‚Р°РµС‚"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Enabled = value
-            Case UCase(trans("Стиль кнопки"))
+            Case UCase(trans("РЎС‚РёР»СЊ РєРЅРѕРїРєРё"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = FlatStyles.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWFlatStyles) : Return es
                 obj.Props.FlatStyle = value
-            Case UCase(trans("Стиль рамки"))
+            Case UCase(trans("РЎС‚РёР»СЊ СЂР°РјРєРё"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = BorderStyles.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWBorderStyles) : Return es
                 obj.Props.BorderStyle = value
-            Case UCase(trans("Шрифт"))
+            Case UCase(trans("РЁСЂРёС„С‚"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Fonts.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWFonts) : Return es
                 obj.Props.FontFamily = value
-            Case UCase(trans("Шрифт жирный"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.FontBold = value
-            Case UCase(trans("Шрифт курсив"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.FontItalic = value
-            Case UCase(trans("Шрифт подчеркнутый"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.FontUnderline = value
-            Case UCase(trans("Шрифт зачеркнутый"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.FontStrikeOut = value
-            Case UCase(trans("Шрифт размер"))
+            Case UCase(trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) <= 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.FontSize = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("Цвет шрифта"))
+            Case UCase(trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.ForeColor = col
-            Case UCase(trans("Рисунок"))
+            Case UCase(trans("Р РёСЃСѓРЅРѕРє"))
                 value = GetMaxPath(value)
                 If IsHttpCompil = False Then
-                    If IO.File.Exists(value) = False And value <> trans("Никакой") Then
+                    If IO.File.Exists(value) = False And value <> trans("РќРёРєР°РєРѕР№") Then
                         es.err = Errors.notFile(value) : Return es
                     End If
                     If MyObj.isRun = False Then value = copyImage(value)
                 End If
                 obj.Props.Image = value
-            Case UCase(trans("Положение рисунка"))
+            Case UCase(trans("РџРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Aligns.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWAligns) : Return es
@@ -1432,358 +1432,358 @@ PropVParam:     If vParamah Then
                 Else : value = Int(value) : End If
                 obj.Props.Y = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("Максимальная ширина"))
+            Case UCase(trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.MaximumWidth = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("Максимальная вышина"))
+            Case UCase(trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.MaximumHeight = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("Минимальная ширина"))
+            Case UCase(trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.MinimumWidth = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("Минимальная вышина"))
+            Case UCase(trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.MinimumHeight = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("Поле слева"))
+            Case UCase(trans("РџРѕР»Рµ СЃР»РµРІР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.PaddingLeft = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False And proj.ActiveForm Is Nothing = False Then proj.ActiveForm.marker_vis()
-            Case UCase(trans("Поле сверху"))
+            Case UCase(trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.PaddingTop = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False And proj.ActiveForm Is Nothing = False Then proj.ActiveForm.marker_vis()
-            Case UCase(trans("Поле справа"))
+            Case UCase(trans("РџРѕР»Рµ СЃРїСЂР°РІР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.PaddingRight = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False And proj.ActiveForm Is Nothing = False Then proj.ActiveForm.marker_vis()
-            Case UCase(trans("Поле снизу"))
+            Case UCase(trans("РџРѕР»Рµ СЃРЅРёР·Сѓ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.PaddingBottom = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False And proj.ActiveForm Is Nothing = False Then proj.ActiveForm.marker_vis()
-            Case UCase(trans("Вышина"))
+            Case UCase(trans("Р’С‹С€РёРЅР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.Height = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("Ширина"))
+            Case UCase(trans("РЁРёСЂРёРЅР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.Width = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False Then IzmenenieBylo(False)
-            Case UCase(trans("ТабНомер"))
+            Case UCase(trans("РўР°Р±РќРѕРјРµСЂ"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.TabIndex = value
-            Case UCase(trans("ТабСтоп"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РўР°Р±РЎС‚РѕРї"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.TabStop = value
-            Case UCase(trans("Вспомогательное поле"))
+            Case UCase(trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ"))
                 obj.Props.Tag = value
-            Case UCase(trans("Текст"))
+            Case UCase(trans("РўРµРєСЃС‚"))
                 obj.Props.Text = value
-            Case UCase(trans("Положение текста"))
+            Case UCase(trans("РџРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Aligns.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWAligns) : Return es
                 obj.Props.TextAlign = value
-            Case UCase(trans("Расположение текста"))
+            Case UCase(trans("Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = TextPositions.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWTextPositions) : Return es
                 obj.Props.TextPosition = value
-            Case UCase(trans("Текст и рисунок"))
+            Case UCase(trans("РўРµРєСЃС‚ Рё СЂРёСЃСѓРЅРѕРє"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = TextImages.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWTextImages) : Return es
                 obj.Props.TextImageRelation = value
-            Case UCase(trans("Видимый"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’РёРґРёРјС‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Visible = value
-            Case UCase(trans("Прокрутка"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Scroll = value
-            Case UCase(trans("Прокрутка1"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР°1"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Scroll1 = value
-            Case UCase(trans("Прокрутка2"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР°2"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Scroll2 = value
-            Case UCase(trans("Фиксированная часть"))
+            Case UCase(trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ С‡Р°СЃС‚СЊ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = FixedPanels.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWFixedPanels) : Return es
                 obj.Props.FixedPanel = value
-            Case UCase(trans("Фиксированный разделитель"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ СЂР°Р·РґРµР»РёС‚РµР»СЊ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.FixedSplitter = value
-            Case UCase(trans("Панель1 скрыта"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџР°РЅРµР»СЊ1 СЃРєСЂС‹С‚Р°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Panel1Collapsed = value
-            Case UCase(trans("Панель2 скрыта"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџР°РЅРµР»СЊ2 СЃРєСЂС‹С‚Р°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Panel2Collapsed = value
-            Case UCase(trans("Ориентация"))
+            Case UCase(trans("РћСЂРёРµРЅС‚Р°С†РёСЏ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Orientations.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWOrientations) : Return es
                 obj.Props.Orientation = value
-            Case UCase(trans("Ширина разделителя"))
+            Case UCase(trans("РЁРёСЂРёРЅР° СЂР°Р·РґРµР»РёС‚РµР»СЏ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) <= 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.SplitterWidth = value
-            Case UCase(trans("Расстояние разделителя"))
+            Case UCase(trans("Р Р°СЃСЃС‚РѕСЏРЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.SplitterDistance = value
-            Case UCase(trans("Инкремент разделителя"))
+            Case UCase(trans("РРЅРєСЂРµРјРµРЅС‚ СЂР°Р·РґРµР»РёС‚РµР»СЏ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.SplitterIncrement = value
-            Case UCase(trans("Панель1 минимум"))
+            Case UCase(trans("РџР°РЅРµР»СЊ1 РјРёРЅРёРјСѓРј"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.Panel1MinSize = value
-            Case UCase(trans("Панель2 минимум"))
+            Case UCase(trans("РџР°РЅРµР»СЊ2 РјРёРЅРёРјСѓРј"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.Panel2MinSize = value
-            Case MyZnak & UCase(trans("Отменить перемещение"))
-                If RunProj.Param.ParamyUp.ContainsKey(MyZnak & UCase(trans("Отменить перемещение"))) Then
-                    RunProj.Param.ParamyUp(MyZnak & UCase(trans("Отменить перемещение"))) = value
+            Case MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РїРµСЂРµРјРµС‰РµРЅРёРµ"))
+                If RunProj.Param.ParamyUp.ContainsKey(MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РїРµСЂРµРјРµС‰РµРЅРёРµ"))) Then
+                    RunProj.Param.ParamyUp(MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РїРµСЂРµРјРµС‰РµРЅРёРµ"))) = value
                 Else
                     es.err = "!"
                 End If
-            Case MyZnak & UCase(trans("Отменить ввод"))
-                If RunProj.Param.ParamyUp.ContainsKey(MyZnak & UCase(trans("Отменить ввод"))) Then
-                    RunProj.Param.ParamyUp(MyZnak & UCase(trans("Отменить ввод"))) = value
+            Case MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РІРІРѕРґ"))
+                If RunProj.Param.ParamyUp.ContainsKey(MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РІРІРѕРґ"))) Then
+                    RunProj.Param.ParamyUp(MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РІРІРѕРґ"))) = value
                 Else
                     es.err = "!"
                 End If
-            Case MyZnak & UCase(trans("Отменить событие"))
-                If RunProj.Param.ParamyUp.ContainsKey(MyZnak & UCase(trans("Отменить событие"))) Then
-                    RunProj.Param.ParamyUp(MyZnak & UCase(trans("Отменить событие"))) = value
+            Case MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))
+                If RunProj.Param.ParamyUp.ContainsKey(MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))) Then
+                    RunProj.Param.ParamyUp(MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))) = value
                 Else
                     es.err = "!"
                 End If
-            Case MyZnak & UCase(trans("Отменить в новом окне"))
-                If RunProj.Param.ParamyUp.ContainsKey(MyZnak & UCase(trans("Отменить в новом окне"))) Then
-                    RunProj.Param.ParamyUp(MyZnak & UCase(trans("Отменить в новом окне"))) = value
+            Case MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ"))
+                If RunProj.Param.ParamyUp.ContainsKey(MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ"))) Then
+                    RunProj.Param.ParamyUp(MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ"))) = value
                 Else
                     es.err = "!"
                 End If
-            Case UCase(trans("Скрывать выделение"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎРєСЂС‹РІР°С‚СЊ РІС‹РґРµР»РµРЅРёРµ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.HideSelection = value
-            Case UCase(trans("Максимальная длинна"))
+            Case UCase(trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅРЅР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.MaximumLength = value
-            Case UCase(trans("Многострочность"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РњРЅРѕРіРѕСЃС‚СЂРѕС‡РЅРѕСЃС‚СЊ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Multiline = value
-            Case UCase(trans("Символ пароля"))
-                If NikakoiEsli(value) = trans("Никакой") Then value = ""
+            Case UCase(trans("РЎРёРјРІРѕР» РїР°СЂРѕР»СЏ"))
+                If NikakoiEsli(value) = trans("РќРёРєР°РєРѕР№") Then value = ""
                 If value.Length > 1 Then es.err = Errors.notChar(value) : Return es
                 obj.Props.PasswordChar = value
-            Case UCase(trans("Только для чтения"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ReadOnly = value
-            Case UCase(trans("Полосы прокрутки"))
+            Case UCase(trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = ScrollBarz.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWScrollBarz) : Return es
                 obj.Props.ScrollBars = value
-            Case UCase(trans("Перенос по словам"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРµСЂРµРЅРѕСЃ РїРѕ СЃР»РѕРІР°Рј"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.WordWrap = value
-            Case UCase(trans("Выделенный текст"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚"))
                 obj.Props.SelectedText = value
-            Case UCase(trans("Начало выделения"))
+            Case UCase(trans("РќР°С‡Р°Р»Рѕ РІС‹РґРµР»РµРЅРёСЏ"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.SelectionStart = value
-            Case UCase(trans("Длинна выделения"))
+            Case UCase(trans("Р”Р»РёРЅРЅР° РІС‹РґРµР»РµРЅРёСЏ"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.SelectionLength = value
-            Case UCase(trans("Отмечено"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РћС‚РјРµС‡РµРЅРѕ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Checked = value
-            Case UCase(trans("Ориентация инструментов"))
+            Case UCase(trans("РћСЂРёРµРЅС‚Р°С†РёСЏ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Orientations.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWOrientations) : Return es
                 obj.Props.OrientationTools = value
-            Case UCase(trans("Расположен слева"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р Р°СЃРїРѕР»РѕР¶РµРЅ СЃР»РµРІР°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Alignment = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False And proj.ActiveForm Is Nothing = False Then proj.ActiveForm.marker_vis()
-            Case UCase(trans("Показывать подсказку"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕРєР°Р·С‹РІР°С‚СЊ РїРѕРґСЃРєР°Р·РєСѓ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AutoToolTip = value
-            Case UCase(trans("Отметка по клику"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РћС‚РјРµС‚РєР° РїРѕ РєР»РёРєСѓ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.CheckOnClick = value
-            Case UCase(trans("Стиль отображения"))
+            Case UCase(trans("РЎС‚РёР»СЊ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = DisplayStyles.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWDisplayStyles) : Return es
                 obj.Props.DisplayStyle = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False And proj.ActiveForm Is Nothing = False Then proj.ActiveForm.marker_vis()
-            Case UCase(trans("Вложенное всплывающее меню"))
+            Case UCase(trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РІСЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"))
                 obj.Props.DropDown = value
-            Case UCase(trans("Рисунок растянут"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р РёСЃСѓРЅРѕРє СЂР°СЃС‚СЏРЅСѓС‚"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ImageScaling = value
                 If MyObj.isRun = False And proj.UndoRedoNoWrite = False And proj.ActiveForm Is Nothing = False Then proj.ActiveForm.marker_vis()
-            Case UCase(trans("Прозрачный цвет рисунка"))
+            Case UCase(trans("РџСЂРѕР·СЂР°С‡РЅС‹Р№ С†РІРµС‚ СЂРёСЃСѓРЅРєР°"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.ImageTransparentColor = col
-            Case UCase(trans("Горячая клавиша"))
+            Case UCase(trans("Р“РѕСЂСЏС‡Р°СЏ РєР»Р°РІРёС€Р°"))
                 es = UbratKovich(value)
                 If es.err <> "" Then Return es
                 obj.Props.ShortcutKeys = es.str
-            Case UCase(trans("Отображать горячие клавиши"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РіРѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ShowShortcutKeys = value
-            Case UCase(trans("Направление текста"))
+            Case UCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ С‚РµРєСЃС‚Р°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = TextDirections.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWTextDirections) : Return es
                 obj.Props.TextDirection = value
-            Case UCase(trans("Всплывающая подсказка"))
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰Р°СЏ РїРѕРґСЃРєР°Р·РєР°"))
                 obj.Props.ToolTipText = value
-            Case UCase(trans("Переходить по сссылкам"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРµСЂРµС…РѕРґРёС‚СЊ РїРѕ СЃСЃСЃС‹Р»РєР°Рј"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AllowNavigation = value
-            Case UCase(trans("Разрешить перетаскивания"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р Р°Р·СЂРµС€РёС‚СЊ РїРµСЂРµС‚Р°СЃРєРёРІР°РЅРёСЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AllowWebBrowserDrop = value
-            Case UCase(trans("Текст страницы"))
+            Case UCase(trans("РўРµРєСЃС‚ СЃС‚СЂР°РЅРёС†С‹"))
                 obj.Props.DocumentText = value
-            Case UCase(trans("Всплывающее меню браузера"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ Р±СЂР°СѓР·РµСЂР°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.isWebBrowserContextMunuEnabled = value
-            Case UCase(trans("Отображать ошибки сценариев"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РѕС€РёР±РєРё СЃС†РµРЅР°СЂРёРµРІ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ScriptErrorsSuppressed = value
-            Case UCase(trans("Полосы прокрутки активны"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё Р°РєС‚РёРІРЅС‹"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ScrollBarsEnabled = value
-            Case UCase(trans("Ссылка"))
+            Case UCase(trans("РЎСЃС‹Р»РєР°"))
                 obj.Props.Url = value
-            Case UCase(trans("Ссылка надписи"))
+            Case UCase(trans("РЎСЃС‹Р»РєР° РЅР°РґРїРёСЃРё"))
                 obj.Props.LinkName = value
-            Case UCase(trans("Горячие клавиши работают"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р“РѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё СЂР°Р±РѕС‚Р°СЋС‚"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.WebBrowserShortcutsEnabled = value
-            Case UCase(trans("Кодировка"))
+            Case UCase(trans("РљРѕРґРёСЂРѕРІРєР°"))
                 value = NikakoiEsli(value)
                 ' Dim ind As Integer = DocumentEncodings.IndexOfKey(LCase(value))
                 'If ind = -1 Then es.err = Errors.notCollection(prop, value, HWDocumentEncodings) : Return es
                 obj.Props.DocumentEncoding = value
-            Case UCase(trans("Куки"))
+            Case UCase(trans("РљСѓРєРё"))
                 obj.Props.Cookie = value
-            Case UCase(trans("Открытие ссылок нового окна"))
+            Case UCase(trans("РћС‚РєСЂС‹С‚РёРµ СЃСЃС‹Р»РѕРє РЅРѕРІРѕРіРѕ РѕРєРЅР°"))
                 obj.Props.OpenNewWindowLink = value
-            Case UCase(trans("Открыть в новом окне"))
+            Case UCase(trans("РћС‚РєСЂС‹С‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ"))
                 obj.props.NavigateNewPage()
-            Case MyZnak & UCase(trans("Открыть в фрейме"))
+            Case MyZnak & UCase(trans("РћС‚РєСЂС‹С‚СЊ РІ С„СЂРµР№РјРµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.props.NavigateInFrame(args)
-            Case UCase(trans("Обновить страницу"))
+            Case UCase(trans("РћР±РЅРѕРІРёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 Dim ind As Integer = Refreshs.IndexOfKey(LCase(args(0)))
                 If ind = -1 Then es.err = Errors.notCollection(prop, args(0), HWRefreshs) : Return es
                 obj.Props.RefreshPage(args)
-            Case UCase(trans("Оконные кнопки и меню"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РћРєРѕРЅРЅС‹Рµ РєРЅРѕРїРєРё Рё РјРµРЅСЋ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ControlBox = value
-            Case UCase(trans("Стиль окна"))
+            Case UCase(trans("РЎС‚РёР»СЊ РѕРєРЅР°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = FormBorderStyles.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWFormBorderStyles) : Return es
                 obj.Props.FormBorderStyle = value
-            Case UCase(trans("Главное меню"))
+            Case UCase(trans("Р“Р»Р°РІРЅРѕРµ РјРµРЅСЋ"))
                 obj.Props.MainMenuStrip = value
-            Case UCase(trans("Прозрачность"))
+            Case UCase(trans("РџСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
@@ -1791,242 +1791,242 @@ PropVParam:     If vParamah Then
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 If Int(value) > 100 Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.Opacity = value
-            Case UCase(trans("Показывать иконку"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕРєР°Р·С‹РІР°С‚СЊ РёРєРѕРЅРєСѓ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ShowIcon = value
-            Case UCase(trans("Отображать в панели задач"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РІ РїР°РЅРµР»Рё Р·Р°РґР°С‡"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ShowInTaskbar = value
-            Case UCase(trans("Стартовая позиция"))
+            Case UCase(trans("РЎС‚Р°СЂС‚РѕРІР°СЏ РїРѕР·РёС†РёСЏ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = StartPositions.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWStartPositions) : Return es
                 obj.Props.StartPosition = value
-            Case UCase(trans("Поверх всех окон"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕРІРµСЂС… РІСЃРµС… РѕРєРѕРЅ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.TopMost = value
-            Case UCase(trans("Статус окна"))
+            Case UCase(trans("РЎС‚Р°С‚СѓСЃ РѕРєРЅР°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = WindowStates.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWWindowStates) : Return es
                 obj.Props.WindowState = value
-            Case UCase(trans("Прокрутка минимальная ширина"))
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.AutoScrollMinSizeWidth = value
-            Case UCase(trans("Прокрутка минимальная вышина"))
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.AutoScrollMinSizeHeight = value
-            Case UCase(trans("Прокручено по X"))
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ X"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.AutoScrollPositionX = value
-            Case UCase(trans("Прокручено по Y"))
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ Y"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.AutoScrollPositionY = value
-            Case UCase(trans("Иконка"))
+            Case UCase(trans("РРєРѕРЅРєР°"))
                 value = GetMaxPath(value)
                 If IsHttpCompil = False Then
-                    If IO.File.Exists(value) = False And value <> trans("Никакой") Then
+                    If IO.File.Exists(value) = False And value <> trans("РќРёРєР°РєРѕР№") Then
                         es.err = Errors.notFile(value) : Return es
                     End If
                     If MyObj.isRun = False Then value = copyImage(value)
                 End If
                 obj.Props.Icon = value
-            Case UCase(trans("Прозрачный цвет"))
+            Case UCase(trans("РџСЂРѕР·СЂР°С‡РЅС‹Р№ С†РІРµС‚"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.TransparentcyKey = col
-            Case UCase(trans("Положение закладок"))
+            Case UCase(trans("РџРѕР»РѕР¶РµРЅРёРµ Р·Р°РєР»Р°РґРѕРє"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = Alignments.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWAlignments) : Return es
                 obj.Props.TabAlignment = value
-            Case UCase(trans("Позиция выделенной закладки"))
+            Case UCase(trans("РџРѕР·РёС†РёСЏ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 'If Int(value) > obj.TabCount - 1 Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.SelectedTabPosition = value
-            Case UCase(trans("Поле по горизонтали"))
+            Case UCase(trans("РџРѕР»Рµ РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.PaddingX = value
-            Case UCase(trans("Поле по вертикали"))
+            Case UCase(trans("РџРѕР»Рµ РїРѕ РІРµСЂС‚РёРєР°Р»Рё"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.PaddingX = value
-            Case UCase(trans("Значение"))
+            Case UCase(trans("Р—РЅР°С‡РµРЅРёРµ"))
                 obj.Props.Value = value
-            Case UCase(trans("Подсказка"))
+            Case UCase(trans("РџРѕРґСЃРєР°Р·РєР°"))
                 obj.Props.ToolTip = value
-            Case UCase(trans("Добавить в автозагрузку"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р”РѕР±Р°РІРёС‚СЊ РІ Р°РІС‚РѕР·Р°РіСЂСѓР·РєСѓ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AutoRun = value
-            Case UCase(trans("Разрешить запуск копий"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р Р°Р·СЂРµС€РёС‚СЊ Р·Р°РїСѓСЃРє РєРѕРїРёР№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AllowRunCopies = value
-            Case UCase(trans("Разрешить вводить"))
+            Case UCase(trans("Р Р°Р·СЂРµС€РёС‚СЊ РІРІРѕРґРёС‚СЊ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = InputTypes.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWInputTypes) : Return es
                 obj.Props.AllowInput = value
-            Case UCase(trans("Страница начала печати"))
+            Case UCase(trans("РЎС‚СЂР°РЅРёС†Р° РЅР°С‡Р°Р»Р° РїРµС‡Р°С‚Рё"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.FromPage = value
-            Case UCase(trans("Страница конца печати"))
+            Case UCase(trans("РЎС‚СЂР°РЅРёС†Р° РєРѕРЅС†Р° РїРµС‡Р°С‚Рё"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.ToPage = value
-            Case UCase(trans("Число копий"))
+            Case UCase(trans("Р§РёСЃР»Рѕ РєРѕРїРёР№"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.Copies = value
-            Case UCase(trans("Ширина столбцов"))
+            Case UCase(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†РѕРІ"))
                 obj.Props.WidthOfColumns = value
-            Case UCase(trans("Вышина строк"))
+            Case UCase(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРє"))
                 obj.Props.HeightOfRows = value
 
 
-                ' Таблица
-            Case UCase(trans("Позволить добавлять строки"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+                ' РўР°Р±Р»РёС†Р°
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РґРѕР±Р°РІР»СЏС‚СЊ СЃС‚СЂРѕРєРё"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AllowUserToAddRows = value
-            Case UCase(trans("Позволить удалять строки"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ СѓРґР°Р»СЏС‚СЊ СЃС‚СЂРѕРєРё"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AllowUserToDeleteRows = value
-            Case UCase(trans("Позволить переставлять столбцы"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РїРµСЂРµСЃС‚Р°РІР»СЏС‚СЊ СЃС‚РѕР»Р±С†С‹"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AllowUserToOrderColumns = value
-            Case UCase(trans("Позволить растягивать столбцы"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ СЂР°СЃС‚СЏРіРёРІР°С‚СЊ СЃС‚РѕР»Р±С†С‹"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AllowUserToResizeColumns = value
-            Case UCase(trans("Позволить растягивать строки"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ СЂР°СЃС‚СЏРіРёРІР°С‚СЊ СЃС‚СЂРѕРєРё"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AllowUserToResizeRows = value
-            Case UCase(trans("Количество строк таблицы"))
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє С‚Р°Р±Р»РёС†С‹"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.RowsCount = value
-            Case UCase(trans("Количество столбцов"))
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.ColumnsCount = value
-            Case UCase(trans("Стиль рамки ячейки"))
+            Case UCase(trans("РЎС‚РёР»СЊ СЂР°РјРєРё СЏС‡РµР№РєРё"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = CellBorderStyles.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWCellBorderStyles) : Return es
                 obj.Props.CellBorderStyle = value
-            Case UCase(trans("Отображать заголовки столбцов"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ Р·Р°РіРѕР»РѕРІРєРё СЃС‚РѕР»Р±С†РѕРІ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ColumnHeadersVisible = value
-            Case UCase(trans("Отображать специальный столбец"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ СЃРїРµС†РёР°Р»СЊРЅС‹Р№ СЃС‚РѕР»Р±РµС†"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.RowHeadersVisible = value
-            Case UCase(trans("Вышина заголовков столбцов"))
+            Case UCase(trans("Р’С‹С€РёРЅР° Р·Р°РіРѕР»РѕРІРєРѕРІ СЃС‚РѕР»Р±С†РѕРІ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.ColumnHeadersHeight = value
-            Case UCase(trans("Столбцы"))
+            Case UCase(trans("РЎС‚РѕР»Р±С†С‹"))
                 obj.Props.Columns = value
-            Case UCase(trans("Строки"))
+            Case UCase(trans("РЎС‚СЂРѕРєРё"))
                 obj.Props.Rows = value
-            Case UCase(trans("Цвет фона ячеек"))
+            Case UCase(trans("Р¦РІРµС‚ С„РѕРЅР° СЏС‡РµРµРє"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.DefaultCellStyleBackColor = col
-            Case UCase(trans("Цвет фона выделенных ячеек"))
+            Case UCase(trans("Р¦РІРµС‚ С„РѕРЅР° РІС‹РґРµР»РµРЅРЅС‹С… СЏС‡РµРµРє"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.DefaultCellStyleSelectionBackColor = col
-            Case UCase(trans("Цвет шрифта ячеек"))
+            Case UCase(trans("Р¦РІРµС‚ С€СЂРёС„С‚Р° СЏС‡РµРµРє"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.DefaultCellStyleForeColor = col
-            Case UCase(trans("Цвет шрифта выделенных ячеек"))
+            Case UCase(trans("Р¦РІРµС‚ С€СЂРёС„С‚Р° РІС‹РґРµР»РµРЅРЅС‹С… СЏС‡РµРµРє"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.DefaultCellStyleSelectionForeColor = col
-            Case UCase(trans("Режим редактирования"))
+            Case UCase(trans("Р РµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = EditModes.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWEditModes) : Return es
                 obj.Props.EditMode = value
-            Case UCase(trans("Цвет сетки"))
+            Case UCase(trans("Р¦РІРµС‚ СЃРµС‚РєРё"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.GridColor = col
-            Case UCase(trans("Выбор нескольких ячеек"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… СЏС‡РµРµРє"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.MultiSelect = value
-            Case UCase(trans("Выбор нескольких записей"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… Р·Р°РїРёСЃРµР№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.MultiSelectItems = value
-            Case UCase(trans("Только для чтения таблица"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ С‚Р°Р±Р»РёС†Р°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ReadOnlyTable = value
-            Case UCase(trans("Режим выделения"))
+            Case UCase(trans("Р РµР¶РёРј РІС‹РґРµР»РµРЅРёСЏ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = SelectionModes.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWSelectionModes) : Return es
                 obj.Props.SelectionMode = value
-            Case UCase(trans("Номера выделенных строк"))
+            Case UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє"))
                 Dim str() As String = value.Split(","), i As Integer
                 For i = 0 To str.Length - 1
                     If str(i) <> "" Then
@@ -2035,7 +2035,7 @@ PropVParam:     If vParamah Then
                     End If
                 Next
                 obj.Props.SelectedRows = value
-            Case UCase(trans("Номера выделенных столбцов"))
+            Case UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ"))
                 Dim str() As String = value.Split(","), i As Integer
                 For i = 0 To str.Length - 1
                     If str(i) <> "" Then
@@ -2044,12 +2044,12 @@ PropVParam:     If vParamah Then
                     End If
                 Next
                 obj.Props.SelectedColumns = value
-            Case UCase(trans("Значение ячейки"))
+            Case UCase(trans("Р—РЅР°С‡РµРЅРёРµ СЏС‡РµР№РєРё"))
                 If isRUN() = False Then es.str = "MsgBox ne nado"
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.ItemValue(args) = value
-            Case UCase(trans("Ячейка выделена"))
+            Case UCase(trans("РЇС‡РµР№РєР° РІС‹РґРµР»РµРЅР°"))
                 If isRUN() = False Then es.str = "MsgBox ne nado"
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
@@ -2057,28 +2057,28 @@ PropVParam:     If vParamah Then
                 'If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 'If obj.Rows.Count <= args(0) Then es.err = Errors.noRows(prop, args(0)) : Return es
                 'If obj.Columns.Count <= args(1) Then es.err = Errors.noColumns(prop, args(1)) : Return es
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ItemSelected(args) = value
-            Case UCase(trans("Строка только для чтения"))
+            Case UCase(trans("РЎС‚СЂРѕРєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"))
                 If isRUN() = False Then es.str = "MsgBox ne nado"
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 'If obj.Rows.Count <= args(0) Then es.err = Errors.noRows(prop, args(0)) : Return es
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.RowsReadOnly(args) = value
-            Case UCase(trans("Столбец только для чтения"))
+            Case UCase(trans("РЎС‚РѕР»Р±РµС† С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"))
                 If isRUN() = False Then es.str = "MsgBox ne nado"
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 'If obj.Columns.Count <= args(0) Then es.err = Errors.noColumns(prop, args(0)) : Return es
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ColumnReadOnly(args) = value
-            Case UCase(trans("Ячейка только для чтения"))
+            Case UCase(trans("РЇС‡РµР№РєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"))
                 If isRUN() = False Then es.str = "MsgBox ne nado"
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
@@ -2086,10 +2086,10 @@ PropVParam:     If vParamah Then
                 'If Iz.isInteger(args(1)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 'If obj.Rows.Count <= args(0) Then es.err = Errors.noRows(prop, args(0)) : Return es
                 'If obj.Columns.Count <= args(1) Then es.err = Errors.noColumns(prop, args(1)) : Return es
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ItemReadOnly(args) = value
-            Case UCase(trans("Ширина столбца"))
+            Case UCase(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†Р°"))
                 value = NullTakNull(value)
                 If isRUN() = False Then es.str = "MsgBox ne nado"
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
@@ -2100,7 +2100,7 @@ PropVParam:     If vParamah Then
                 'Else : value = Int(value) : End If
                 'If obj.Columns.Count <= args(0) Then es.err = Errors.noColumns(prop, args(0)) : Return es
                 obj.Props.ColumnsWidth(args) = value
-            Case UCase(trans("Вышина строки"))
+            Case UCase(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРєРё"))
                 value = NullTakNull(value)
                 If isRUN() = False Then es.str = "MsgBox ne nado"
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
@@ -2111,7 +2111,7 @@ PropVParam:     If vParamah Then
                 'Else : value = Int(value) : End If
                 'If obj.Columns.Count <= args(0) Then es.err = Errors.noColumns(prop, args(0)) : Return es
                 obj.Props.RowsHeight(args) = value
-            Case UCase(trans("Добавить копию строк"))
+            Case UCase(trans("Р”РѕР±Р°РІРёС‚СЊ РєРѕРїРёСЋ СЃС‚СЂРѕРє"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 args(0) = Trim(args(0).Split(",")(0))
@@ -2120,14 +2120,14 @@ PropVParam:     If vParamah Then
                 If args(0) >= obj.rows.count Then es.err = Errors.notRowCount(args(0), prop) : Return es
                 If Int(args(0)) + args(1) > obj.rows.count Then es.err = Errors.notRowCount(Int(args(0)) + args(1), prop) : Return es
                 obj.Props.RowsAddCopies(args)
-            Case UCase(trans("Вставить строку"))
+            Case UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ СЃС‚СЂРѕРєСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 args(0) = Trim(args(0).Split(",")(0))
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If args(0) > obj.rows.count Then es.err = Errors.notRowCount(args(0), prop) : Return es
                 obj.Props.RowsInsert(args)
-            Case UCase(trans("Вставить копию строк"))
+            Case UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ РєРѕРїРёСЋ СЃС‚СЂРѕРє"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 args(0) = Trim(args(0).Split(",")(0))
@@ -2139,725 +2139,725 @@ PropVParam:     If vParamah Then
                 If args(1) >= obj.rows.count Then es.err = Errors.notRowCount(args(1), prop) : Return es
                 If Int(args(1)) + args(2) > obj.rows.count Then es.err = Errors.notRowCount(Int(args(1)) + args(2), prop) : Return es
                 obj.Props.RowsInsertCopies(args)
-            Case UCase(trans("Удалить строку"))
+            Case UCase(trans("РЈРґР°Р»РёС‚СЊ СЃС‚СЂРѕРєСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.RowsRemove(args)
-            Case UCase(trans("Сохранить таблицу"))
+            Case UCase(trans("РЎРѕС…СЂР°РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 obj.props.SaveTable(args)
-            Case UCase(trans("Открыть таблицу"))
+            Case UCase(trans("РћС‚РєСЂС‹С‚СЊ С‚Р°Р±Р»РёС†Сѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 obj.props.OpenTable(args)
-            Case UCase(trans("Сортировать"))
+            Case UCase(trans("РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If args(0) >= obj.columns.count Then es.err = Errors.notRowCount(args(0), prop) : Return es
                 obj.Props.SortTable(args)
-            Case UCase(trans("Открыть Access"))
+            Case UCase(trans("РћС‚РєСЂС‹С‚СЊ Access"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
-                If NikakoiEsli(args(1)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(1)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 obj.props.OpenAccess(args)
-            Case UCase(trans("Открыть Excel"))
+            Case UCase(trans("РћС‚РєСЂС‹С‚СЊ Excel"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
-                If NikakoiEsli(args(1)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(1)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 obj.props.OpenExcel(args)
-            Case UCase(trans("Сохранить Access"))
+            Case UCase(trans("РЎРѕС…СЂР°РЅРёС‚СЊ Access"))
                 obj.props.SaveAccess()
-            Case UCase(trans("Вставить столбец"))
+            Case UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ СЃС‚РѕР»Р±РµС†"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 args(0) = Trim(args(0).Split(",")(0))
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If args(0) > obj.columns.count Then es.err = Errors.notColumnCount(args(0), prop) : Return es
                 obj.Props.ColumnsInsert(args)
-            Case UCase(trans("Удалить столбец"))
+            Case UCase(trans("РЈРґР°Р»РёС‚СЊ СЃС‚РѕР»Р±РµС†"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.ColumnsRemove(args)
-            Case UCase(trans("Добавить строку"))
+            Case UCase(trans("Р”РѕР±Р°РІРёС‚СЊ СЃС‚СЂРѕРєСѓ"))
                 obj.Props.RowsAdd(args)
-            Case UCase(trans("Добавить столбец"))
+            Case UCase(trans("Р”РѕР±Р°РІРёС‚СЊ СЃС‚РѕР»Р±РµС†"))
                 obj.Props.ColumnsAdd(args)
-            Case UCase(trans("SQL запрос выборки"))
+            Case UCase(trans("SQL Р·Р°РїСЂРѕСЃ РІС‹Р±РѕСЂРєРё"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 args(0) = NikakoiEsli(args(0))
                 Dim ind As Integer = BdTypes.IndexOfKey(LCase(args(0)))
                 If ind = -1 Then es.err = Errors.notCollection(prop, args(0), HWBdTypes) : Return es
                 obj.Props.SQLquerySelect(args)
-            Case UCase(trans("SQL запрос изменения"))
+            Case UCase(trans("SQL Р·Р°РїСЂРѕСЃ РёР·РјРµРЅРµРЅРёСЏ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
                 args(0) = NikakoiEsli(args(0))
                 Dim ind As Integer = BdTypes.IndexOfKey(LCase(args(0)))
                 If ind = -1 Then es.err = Errors.notCollection(prop, args(0), HWBdTypes) : Return es
                 obj.Props.SQLqueryInto(args)
-            Case UCase(trans("Поиск с выделением"))
+            Case UCase(trans("РџРѕРёСЃРє СЃ РІС‹РґРµР»РµРЅРёРµРј"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 5 Then es.err = Errors.noArguments(prop) : Return es
                 'If Iz.isInteger(args(3)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 'If Iz.isInteger(args(4)) = False Then es.err = Errors.notInt(args(1), prop) : Return es
                 obj.Props.SearchWithSelect(args)
-            Case UCase(trans("Значение выделеных ячеек"))
+            Case UCase(trans("Р—РЅР°С‡РµРЅРёРµ РІС‹РґРµР»РµРЅС‹С… СЏС‡РµРµРє"))
                 obj.Props.SelectedItemsValue() = value
 
 
 
-                ' Списки
-            Case UCase(trans("Высота раскрывающегося списка"))
+                ' РЎРїРёСЃРєРё
+            Case UCase(trans("Р’С‹СЃРѕС‚Р° СЂР°СЃРєСЂС‹РІР°СЋС‰РµРіРѕСЃСЏ СЃРїРёСЃРєР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) <= 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.DropDownHeight = value
-            Case UCase(trans("Ширина раскрывающегося списка"))
+            Case UCase(trans("РЁРёСЂРёРЅР° СЂР°СЃРєСЂС‹РІР°СЋС‰РµРіРѕСЃСЏ СЃРїРёСЃРєР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) <= 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.DropDownWidth = value
-            Case UCase(trans("Список упрощенный"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎРїРёСЃРѕРє СѓРїСЂРѕС‰РµРЅРЅС‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.DropDownStyle = value
-            Case UCase(trans("Записи списка"))
+            Case UCase(trans("Р—Р°РїРёСЃРё СЃРїРёСЃРєР°"))
                 obj.Props.Items = value
-            Case UCase(trans("Количество раскрывающихся записей"))
+            Case UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЂР°СЃРєСЂС‹РІР°СЋС‰РёС…СЃСЏ Р·Р°РїРёСЃРµР№"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) <= 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.MaxDropDownItems = value
-            Case UCase(trans("Сортирован список"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎРѕСЂС‚РёСЂРѕРІР°РЅ СЃРїРёСЃРѕРє"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Sorted = value
-            Case UCase(trans("Список раскрыт"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎРїРёСЃРѕРє СЂР°СЃРєСЂС‹С‚"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.DroppedDown = value
-            Case UCase(trans("Номер выделенной записи"))
+            Case UCase(trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РїРёСЃРё"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) < 0 Then Return es
                 If obj.items.count <= value Then es.err = Errors.noItems(prop, value) : Return es
                 obj.Props.SelectedIndex = value
-            Case UCase(trans("Выделенная запись"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ"))
                 obj.Props.SelectedItem = value
-            Case UCase(trans("Запись по номеру"))
+            Case UCase(trans("Р—Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ"))
                 If isRUN() = False Then es.str = "MsgBox ne nado"
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If obj.items.count <= args(0) Then es.err = Errors.noItems(prop, args(0)) : Return es
                 obj.Props.ItemsItem(args) = value
-            Case UCase(trans("Найти номер записи"))
+            Case UCase(trans("РќР°Р№С‚Рё РЅРѕРјРµСЂ Р·Р°РїРёСЃРё"))
                 If isRUN() = False Then es.str = "MsgBox ne nado"
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.ItemsIndexOf(args) = value
-            Case UCase(trans("Добавить запись"))
+            Case UCase(trans("Р”РѕР±Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.ItemsAdd(args)
-            Case UCase(trans("Вставить запись"))
+            Case UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If obj.items.count < args(0) Then es.err = Errors.noItems(prop, args(0)) : Return es
                 obj.Props.ItemsInsert(args)
-            Case UCase(trans("Удалить запись"))
+            Case UCase(trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.ItemsRemove(args)
-            Case UCase(trans("Удалить запись по номеру"))
+            Case UCase(trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 If obj.items.count <= args(0) Then es.err = Errors.noItems(prop, args(0)) : Return es
                 obj.Props.ItemsRemoveAt(args)
-            Case UCase(trans("Ширина колонок списка"))
+            Case UCase(trans("РЁРёСЂРёРЅР° РєРѕР»РѕРЅРѕРє СЃРїРёСЃРєР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.ColumnWidth = value
-            Case UCase(trans("Горизонтальная прокрутка"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.HorizontalScrollBar = value
-            Case UCase(trans("Многоколонность"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РњРЅРѕРіРѕРєРѕР»РѕРЅРЅРѕСЃС‚СЊ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.MultiColumn = value
-            Case UCase(trans("Позволить выбирать записи"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ Р·Р°РїРёСЃРё"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.SelectionModeList = value
-            Case UCase(trans("Номера отмеченых записей"))
+            Case UCase(trans("РќРѕРјРµСЂР° РѕС‚РјРµС‡РµРЅС‹С… Р·Р°РїРёСЃРµР№"))
                 obj.Props.CheckedIndices = value
-            Case UCase(trans("Отмеченные записи"))
+            Case UCase(trans("РћС‚РјРµС‡РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё"))
                 obj.Props.CheckedItems = value
-            Case UCase(trans("Номера выделенных записей"))
+            Case UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… Р·Р°РїРёСЃРµР№"))
                 obj.Props.SelectedIndices = value
-            Case UCase(trans("Выделенные записи"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё"))
                 obj.Props.SelectedItems = value
 
-                ' Ссылка
-            Case UCase(trans("Цвет активной ссылки"))
+                ' РЎСЃС‹Р»РєР°
+            Case UCase(trans("Р¦РІРµС‚ Р°РєС‚РёРІРЅРѕР№ СЃСЃС‹Р»РєРё"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.ActiveLinkColor = col
-            Case UCase(trans("Цвет нерабочей ссылки"))
+            Case UCase(trans("Р¦РІРµС‚ РЅРµСЂР°Р±РѕС‡РµР№ СЃСЃС‹Р»РєРё"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.DisabledLinkColor = col
-            Case UCase(trans("Цвет ссылки"))
+            Case UCase(trans("Р¦РІРµС‚ СЃСЃС‹Р»РєРё"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.LinkColor = col
-            Case UCase(trans("Цвет посещенной ссылки"))
+            Case UCase(trans("Р¦РІРµС‚ РїРѕСЃРµС‰РµРЅРЅРѕР№ СЃСЃС‹Р»РєРё"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.VisitedLinkColor = col
-            Case UCase(trans("Начало ссылки"))
+            Case UCase(trans("РќР°С‡Р°Р»Рѕ СЃСЃС‹Р»РєРё"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) < 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.LinkStart = value
-            Case UCase(trans("Длинна ссылки"))
+            Case UCase(trans("Р”Р»РёРЅРЅР° СЃСЃС‹Р»РєРё"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) <= 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.LinkLength = value
-            Case UCase(trans("Стиль подчеркивания"))
+            Case UCase(trans("РЎС‚РёР»СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = LinkBehaviors.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWLinkBehaviors) : Return es
                 obj.Props.LinkBehavior = value
-            Case UCase(trans("Ссылка посещена"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎСЃС‹Р»РєР° РїРѕСЃРµС‰РµРЅР°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.LinkVisited = value
-            Case UCase(trans("Ссылка рабочая"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎСЃС‹Р»РєР° СЂР°Р±РѕС‡Р°СЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.LinkEnabled = value
-            Case UCase(trans("Переходить в интернет по ссылке"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРµСЂРµС…РѕРґРёС‚СЊ РІ РёРЅС‚РµСЂРЅРµС‚ РїРѕ СЃСЃС‹Р»РєРµ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.InternetLink = value
 
-                ' текстовый документ
-            Case UCase(trans("Подсвечивать ссылки"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+                ' С‚РµРєСЃС‚РѕРІС‹Р№ РґРѕРєСѓРјРµРЅС‚
+            Case UCase(trans("РџРѕРґСЃРІРµС‡РёРІР°С‚СЊ СЃСЃС‹Р»РєРё"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.DetectUrls = value
-            Case UCase(trans("Позволить перенос выделенного"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РїРµСЂРµРЅРѕСЃ РІС‹РґРµР»РµРЅРЅРѕРіРѕ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.EnableAutoDragDrop = value
-            Case UCase(trans("Масштаб"))
+            Case UCase(trans("РњР°СЃС€С‚Р°Р±"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) <= 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.ZoomFactor = value
-            Case UCase(trans("RTF код документа"))
+            Case UCase(trans("RTF РєРѕРґ РґРѕРєСѓРјРµРЅС‚Р°"))
                 obj.Props.Rtf = value
-            Case UCase(trans("Выделенный RTF"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ RTF"))
                 obj.Props.SelectedRtf = value
-            Case UCase(trans("Выделенный задний фон"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ Р·Р°РґРЅРёР№ С„РѕРЅ"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.SelectionBackColor = col
-            Case UCase(trans("Выделенный цвет текста"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С†РІРµС‚ С‚РµРєСЃС‚Р°"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.SelectionColor = col
-            Case UCase(trans("Выделенное положение текста"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = TextPositions.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWTextPositions) : Return es
                 obj.Props.SelectionAlignment = value
-            Case UCase(trans("Выделенный размер красной строки"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РєСЂР°СЃРЅРѕР№ СЃС‚СЂРѕРєРё"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.SelectionHangingIndent = value
-            Case UCase(trans("Выделенный отступ слева"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃР»РµРІР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.SelectionIndent = value
-            Case UCase(trans("Выделенный отступ справа"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃРїСЂР°РІР°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.SelectionRightIndent = value
-            Case UCase(trans("Выделенный имеет маркер"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РёРјРµРµС‚ РјР°СЂРєРµСЂ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.SelectionBullet = value
-            Case UCase(trans("Выделенное вертикальное смещение"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РІРµСЂС‚РёРєР°Р»СЊРЅРѕРµ СЃРјРµС‰РµРЅРёРµ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.SelectionCharOffset = value
-            Case UCase(trans("Выделенный Шрифт"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РЁСЂРёС„С‚"))
                 value = NikakoiEsli(value)
-                If value = trans("Никакой") Then Return es
+                If value = trans("РќРёРєР°РєРѕР№") Then Return es
                 Dim ind As Integer = Fonts.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWFonts) : Return es
                 obj.Props.SelectionFontFamily = value
-            Case UCase(trans("Выделенный Шрифт жирный"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.SelectionFontBold = value
-            Case UCase(trans("Выделенный Шрифт курсив"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.SelectionFontItalic = value
-            Case UCase(trans("Выделенный Шрифт подчеркнутый"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.SelectionFontUnderline = value
-            Case UCase(trans("Выделенный Шрифт зачеркнутый"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.SelectionFontStrikeOut = value
-            Case UCase(trans("Выделенный Шрифт размер"))
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 If Int(value) <= 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.SelectionFontSize = value
-            Case UCase(trans("Выделенный текст заблокирован"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.SelectionProtected = value
-            Case UCase(trans("Сохранить документ"))
+            Case UCase(trans("РЎРѕС…СЂР°РЅРёС‚СЊ РґРѕРєСѓРјРµРЅС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 obj.props.SaveFile(args)
-            Case UCase(trans("Открыть документ"))
+            Case UCase(trans("РћС‚РєСЂС‹С‚СЊ РґРѕРєСѓРјРµРЅС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 obj.props.OpenFile(args)
 
-                ' диалоги
-            Case UCase(trans("Выбранный цвет"))
+                ' РґРёР°Р»РѕРіРё
+            Case UCase(trans("Р’С‹Р±СЂР°РЅРЅС‹Р№ С†РІРµС‚"))
                 value = NikakoiEsli(value)
                 Dim col = ToMyColor(FromMyColor(value, True))
                 If col Is Nothing Then es.err = Errors.notCollectionCols(prop, value, HWCols) : Return es
                 obj.Props.DialogColor = col
-            Case UCase(trans("Позволить выбирать цвет"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ С†РІРµС‚"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ShowColor = value
-            Case UCase(trans("Позволить выбирать подчеркивания"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ShowEffects = value
-            Case UCase(trans("Надпись в окне"))
+            Case UCase(trans("РќР°РґРїРёСЃСЊ РІ РѕРєРЅРµ"))
                 obj.props.Description = value
-            Case UCase(trans("Выбранная папка"))
+            Case UCase(trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РїР°РїРєР°"))
                 If value.Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(value) : Return es
                 End If
                 obj.props.SelectedPath = value
-            Case UCase(trans("Добавлять расширение файлу"))
+            Case UCase(trans("Р”РѕР±Р°РІР»СЏС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ С„Р°Р№Р»Сѓ"))
                 obj.props.DefaultExt = value
-            Case UCase(trans("Проверять наличие файла"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.CheckFileExists = value
-            Case UCase(trans("Проверять наличие папки"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ РїР°РїРєРё"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.CheckPathExists = value
-            Case UCase(trans("Имя файла"))
+            Case UCase(trans("РРјСЏ С„Р°Р№Р»Р°"))
                 If value.Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(value) : Return es
                 End If
                 obj.props.FileName = value
-            Case UCase(trans("Фильтр файлов"))
+            Case UCase(trans("Р¤РёР»СЊС‚СЂ С„Р°Р№Р»РѕРІ"))
                 obj.props.Filter = value
-            Case UCase(trans("Номер фильтра"))
+            Case UCase(trans("РќРѕРјРµСЂ С„РёР»СЊС‚СЂР°"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.FilterIndex = value
-            Case UCase(trans("Начальная папка"))
+            Case UCase(trans("РќР°С‡Р°Р»СЊРЅР°СЏ РїР°РїРєР°"))
                 If value.Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(value) : Return es
                 End If
                 obj.props.InitialDirectory = value
-            Case UCase(trans("Заголовок"))
+            Case UCase(trans("Р—Р°РіРѕР»РѕРІРѕРє"))
                 obj.props.Title = value
-            Case UCase(trans("Выбор нескольких файлов"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… С„Р°Р№Р»РѕРІ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.MultiSelectFiles = value
-            Case UCase(trans("Текст на печать"))
+            Case UCase(trans("РўРµРєСЃС‚ РЅР° РїРµС‡Р°С‚СЊ"))
                 obj.props.PrintText = value
-            Case UCase(trans("Объект на печать"))
+            Case UCase(trans("РћР±СЉРµРєС‚ РЅР° РїРµС‡Р°С‚СЊ"))
                 obj.props.PrintObject = value
-            Case UCase(trans("Документ на печать"))
+            Case UCase(trans("Р”РѕРєСѓРјРµРЅС‚ РЅР° РїРµС‡Р°С‚СЊ"))
                 obj.props.PrintDocument = value
-            Case UCase(trans("Таблица на печать"))
+            Case UCase(trans("РўР°Р±Р»РёС†Р° РЅР° РїРµС‡Р°С‚СЊ"))
                 obj.props.PrintTable = value
-            Case UCase(trans("Таблица в центре"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РўР°Р±Р»РёС†Р° РІ С†РµРЅС‚СЂРµ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.TableOnCenter = value
-            Case UCase(trans("Рисунок на печать"))
+            Case UCase(trans("Р РёСЃСѓРЅРѕРє РЅР° РїРµС‡Р°С‚СЊ"))
                 value = GetMaxPath(value)
                 If IsHttpCompil = False Then
-                    If IO.File.Exists(value) = False And value <> trans("Никакой") Then
+                    If IO.File.Exists(value) = False And value <> trans("РќРёРєР°РєРѕР№") Then
                         es.err = Errors.notFile(value) : Return es
                     End If
                     If MyObj.isRun = False Then value = copyImage(value)
                 End If
                 obj.Props.PrintPicture = value
-            Case UCase(trans("Интервал отсчета"))
+            Case UCase(trans("РРЅС‚РµСЂРІР°Р» РѕС‚СЃС‡РµС‚Р°"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) <= 0 Then es.err = Errors.notLessEqZero(value, prop) : Return es
                 obj.Props.Interval = value
-            Case UCase(trans("Прошло интервалов"))
+            Case UCase(trans("РџСЂРѕС€Р»Рѕ РёРЅС‚РµСЂРІР°Р»РѕРІ"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.IntervalCount = value
-            Case UCase(trans("Хозяин объект"))
+            Case UCase(trans("РҐРѕР·СЏРёРЅ РѕР±СЉРµРєС‚"))
                 obj.Props.OwnerObject = value
-            Case UCase(trans("Отображать в трее"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РІ С‚СЂРµРµ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ShowInTray = value
 
-                ' МЕТОДЫ
-            Case UCase(trans("Обновить"))
+                ' РњР•РўРћР”Р«
+            Case UCase(trans("РћР±РЅРѕРІРёС‚СЊ"))
                 obj.Props.refresh()
-            Case UCase(trans("Получить фокус"))
+            Case UCase(trans("РџРѕР»СѓС‡РёС‚СЊ С„РѕРєСѓСЃ"))
                 obj.Props.Focus()
-            Case UCase(trans("Перенести наперед"))
+            Case UCase(trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°РїРµСЂРµРґ"))
                 obj.Props.BringToFront()
-            Case UCase(trans("Перенести назад"))
+            Case UCase(trans("РџРµСЂРµРЅРµСЃС‚Рё РЅР°Р·Р°Рґ"))
                 obj.Props.SendToBack()
-            Case UCase(trans("Очистить"))
+            Case UCase(trans("РћС‡РёСЃС‚РёС‚СЊ"))
                 obj.Props.clear()
-            Case UCase(trans("Вырезать"))
+            Case UCase(trans("Р’С‹СЂРµР·Р°С‚СЊ"))
                 obj.Props.Cut()
-            Case UCase(trans("Копировать"))
+            Case UCase(trans("РљРѕРїРёСЂРѕРІР°С‚СЊ"))
                 obj.Props.Copy()
-            Case UCase(trans("Вставить"))
+            Case UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ"))
                 obj.Props.Paste()
-            Case UCase(trans("Выделить все"))
+            Case UCase(trans("Р’С‹РґРµР»РёС‚СЊ РІСЃРµ"))
                 obj.Props.SelectAll()
-            Case UCase(trans("Отменить"))
+            Case UCase(trans("РћС‚РјРµРЅРёС‚СЊ"))
                 obj.Props.Undo()
-            Case UCase(trans("Повторить"))
+            Case UCase(trans("РџРѕРІС‚РѕСЂРёС‚СЊ"))
                 obj.Props.Redo()
-            Case UCase(trans("Назад"))
+            Case UCase(trans("РќР°Р·Р°Рґ"))
                 obj.Props.GoBack()
-            Case UCase(trans("Вперед"))
+            Case UCase(trans("Р’РїРµСЂРµРґ"))
                 obj.Props.GoForward()
-            Case UCase(trans("Домой"))
+            Case UCase(trans("Р”РѕРјРѕР№"))
                 obj.Props.GoHome()
-            Case UCase(trans("Страница поиска"))
+            Case UCase(trans("РЎС‚СЂР°РЅРёС†Р° РїРѕРёСЃРєР°"))
                 obj.Props.GoSearch()
-            Case UCase(trans("Печать"))
+            Case UCase(trans("РџРµС‡Р°С‚СЊ"))
                 obj.Props.Printing()
-            Case UCase(trans("Окно параметров страницы"))
+            Case UCase(trans("РћРєРЅРѕ РїР°СЂР°РјРµС‚СЂРѕРІ СЃС‚СЂР°РЅРёС†С‹"))
                 obj.Props.ShowPageSetupDialog()
-            Case UCase(trans("Окно печати"))
+            Case UCase(trans("РћРєРЅРѕ РїРµС‡Р°С‚Рё"))
                 obj.Props.ShowPrintDialog()
-            Case UCase(trans("Окно предварительного просмотра"))
+            Case UCase(trans("РћРєРЅРѕ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅРѕРіРѕ РїСЂРѕСЃРјРѕС‚СЂР°"))
                 obj.Props.ShowPrintPreviewDialog()
-            Case UCase(trans("Окно свойств"))
+            Case UCase(trans("РћРєРЅРѕ СЃРІРѕР№СЃС‚РІ"))
                 obj.Props.ShowPropertiesDialog()
-            Case UCase(trans("Окно сохранить"))
+            Case UCase(trans("РћРєРЅРѕ СЃРѕС…СЂР°РЅРёС‚СЊ"))
                 obj.Props.ShowSaveAsDialog()
-            Case UCase(trans("Остановить"))
+            Case UCase(trans("РћСЃС‚Р°РЅРѕРІРёС‚СЊ"))
                 obj.Props.Stop()
-            Case UCase(trans("Скрыть"))
+            Case UCase(trans("РЎРєСЂС‹С‚СЊ"))
                 obj.Props.Hide()
-            Case UCase(trans("Закрыть"))
+            Case UCase(trans("Р—Р°РєСЂС‹С‚СЊ"))
                 obj.Props.Close()
-            Case UCase(trans("Показать"))
+            Case UCase(trans("РџРѕРєР°Р·Р°С‚СЊ"))
                 obj.Props.Show()
-            Case UCase(trans("Очистить таблицу"))
+            Case UCase(trans("РћС‡РёСЃС‚РёС‚СЊ С‚Р°Р±Р»РёС†Сѓ"))
                 obj.Props.ClearTable()
-            Case UCase(trans("Перейти в интернет по ссылке"))
+            Case UCase(trans("РџРµСЂРµР№С‚Рё РІ РёРЅС‚РµСЂРЅРµС‚ РїРѕ СЃСЃС‹Р»РєРµ"))
                 obj.Props.GoInternetLink()
-            Case UCase(trans("Прокрутить до курсора"))
+            Case UCase(trans("РџСЂРѕРєСЂСѓС‚РёС‚СЊ РґРѕ РєСѓСЂСЃРѕСЂР°"))
                 obj.Props.ScrollToCaret()
-            Case UCase(trans("Запустить окно"))
+            Case UCase(trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ"))
                 obj.Props.ShowDialog()
-            Case UCase(trans("Запустить предварительный просмотр"))
+            Case UCase(trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РїСЂРµРґРІР°СЂРёС‚РµР»СЊРЅС‹Р№ РїСЂРѕСЃРјРѕС‚СЂ"))
                 obj.Props.ShowPrevDialog()
-            Case UCase(trans("Запустить настройки страницы"))
+            Case UCase(trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РЅР°СЃС‚СЂРѕР№РєРё СЃС‚СЂР°РЅРёС†С‹"))
                 obj.Props.ShowPageDialog()
-            Case UCase(trans("Запустить окно печати"))
+            Case UCase(trans("Р—Р°РїСѓСЃС‚РёС‚СЊ РѕРєРЅРѕ РїРµС‡Р°С‚Рё"))
                 obj.Props.ShowPrinDialog()
-            Case UCase(trans("Напечатать"))
+            Case UCase(trans("РќР°РїРµС‡Р°С‚Р°С‚СЊ"))
                 obj.Props.Print()
-            Case UCase(trans("Старт"))
+            Case UCase(trans("РЎС‚Р°СЂС‚"))
                 obj.Props.Start()
-            Case UCase(trans("Стоп"))
+            Case UCase(trans("РЎС‚РѕРї"))
                 obj.Props.Stop()
-            Case UCase(trans("Свернуть в трей"))
+            Case UCase(trans("РЎРІРµСЂРЅСѓС‚СЊ РІ С‚СЂРµР№"))
                 obj.Props.MinimizeToTray()
-            Case UCase(trans("Развернуть из трея"))
+            Case UCase(trans("Р Р°Р·РІРµСЂРЅСѓС‚СЊ РёР· С‚СЂРµСЏ"))
                 obj.Props.MaximizeFromTray()
 
                 ' PATH and FILES
-            Case MyZnak & UCase(trans("Скрытый"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РЎРєСЂС‹С‚С‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.Props.Hider(args) = value
-            Case MyZnak & UCase(trans("Только для чтения"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.Props.FileReadOnly(args) = value
-            Case MyZnak & UCase(trans("Архивный"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РђСЂС…РёРІРЅС‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.Props.archive(args) = value
-            Case MyZnak & UCase(trans("Папка"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РџР°РїРєР°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.Props.Papka(args) = value
-            Case MyZnak & UCase(trans("Зашифрованный"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("Р—Р°С€РёС„СЂРѕРІР°РЅРЅС‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.Props.Encrypted(args) = value
-            Case MyZnak & UCase(trans("Не индексируется"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РќРµ РёРЅРґРµРєСЃРёСЂСѓРµС‚СЃСЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.Props.NotIndexer(args) = value
-            Case MyZnak & UCase(trans("Системный"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РЎРёСЃС‚РµРјРЅС‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.Props.Sys(args) = value
-            Case MyZnak & UCase(trans("Временный"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("Р’СЂРµРјРµРЅРЅС‹Р№"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.Props.Temp(args) = value
-            Case MyZnak & UCase(trans("Время создания"))
+            Case MyZnak & UCase(trans("Р’СЂРµРјСЏ СЃРѕР·РґР°РЅРёСЏ"))
                 Dim dat As Date = FromMyDate(value)
                 If dat = Nothing Then es.err = Errors.notDate(value) : Return es
                 obj.Props.CreateTime(args) = dat
-            Case MyZnak & UCase(trans("Время доступа"))
+            Case MyZnak & UCase(trans("Р’СЂРµРјСЏ РґРѕСЃС‚СѓРїР°"))
                 Dim dat As Date = FromMyDate(value)
                 If dat = Nothing Then es.err = Errors.notDate(value) : Return es
                 obj.Props.AccessTime(args) = dat
-            Case MyZnak & UCase(trans("Время изменения"))
+            Case MyZnak & UCase(trans("Р’СЂРµРјСЏ РёР·РјРµРЅРµРЅРёСЏ"))
                 Dim dat As Date = FromMyDate(value)
                 If dat = Nothing Then es.err = Errors.notDate(value) : Return es
                 obj.Props.EditTime(args) = dat
-            Case MyZnak & UCase(trans("Сохранить в файле"))
+            Case MyZnak & UCase(trans("РЎРѕС…СЂР°РЅРёС‚СЊ РІ С„Р°Р№Р»Рµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 args(2) = NikakoiEsli(args(2))
                 obj.props.SaveInFile(args)
-            Case MyZnak & UCase(trans("Добавить текст"))
+            Case MyZnak & UCase(trans("Р”РѕР±Р°РІРёС‚СЊ С‚РµРєСЃС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 3 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 args(2) = NikakoiEsli(args(2))
                 obj.props.AppendText(args)
-            Case MyZnak & UCase(trans("Сохранить рисунок"))
+            Case MyZnak & UCase(trans("РЎРѕС…СЂР°РЅРёС‚СЊ СЂРёСЃСѓРЅРѕРє"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Or NikakoiEsli(args(1)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Or NikakoiEsli(args(1)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 es = FileExistInArgs(args, 1, es)
                 If es.err <> "" Then Return es
                 obj.props.SavePicture(args)
-            Case MyZnak & UCase(trans("Копировать"))
+            Case MyZnak & UCase(trans("РљРѕРїРёСЂРѕРІР°С‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Or NikakoiEsli(args(1)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Or NikakoiEsli(args(1)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 If (args(1)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(1)) : Return es
                 End If
                 obj.props.Copy(args)
-            Case MyZnak & UCase(trans("Переименовать"))
+            Case MyZnak & UCase(trans("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Or NikakoiEsli(args(1)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Or NikakoiEsli(args(1)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 If (args(1)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(1)) : Return es
                 End If
                 obj.props.Rename(args)
-            Case MyZnak & UCase(trans("Переместить"))
+            Case MyZnak & UCase(trans("РџРµСЂРµРјРµСЃС‚РёС‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Or NikakoiEsli(args(1)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Or NikakoiEsli(args(1)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 If (args(1)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(1)) : Return es
                 End If
                 obj.props.Move(args)
-            Case MyZnak & UCase(trans("Зашифровать"))
+            Case MyZnak & UCase(trans("Р—Р°С€РёС„СЂРѕРІР°С‚СЊ"))
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.props.Encrypt(args)
-            Case MyZnak & UCase(trans("Расшифровать"))
+            Case MyZnak & UCase(trans("Р Р°СЃС€РёС„СЂРѕРІР°С‚СЊ"))
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.props.Decrypt(args)
-            Case MyZnak & UCase(trans("Удалить"))
+            Case MyZnak & UCase(trans("РЈРґР°Р»РёС‚СЊ"))
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.props.Delete(args)
-            Case MyZnak & UCase(trans("Создать папку"))
+            Case MyZnak & UCase(trans("РЎРѕР·РґР°С‚СЊ РїР°РїРєСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NikakoiEsli(args(0)) = trans("Никакой") Then Return es
+                If NikakoiEsli(args(0)) = trans("РќРёРєР°РєРѕР№") Then Return es
                 If (args(0)).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(args(0)) : Return es
                 End If
                 obj.props.CreateDirectory(args)
 
                 ' EKRAN
-            Case MyZnak & UCase(trans("Рисунок рабочего стола"))
+            Case MyZnak & UCase(trans("Р РёСЃСѓРЅРѕРє СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°"))
                 value = GetMaxPath(value)
                 If IsHttpCompil = False Then
-                    If IO.File.Exists(value) = False And value <> trans("Никакой") Then
+                    If IO.File.Exists(value) = False And value <> trans("РќРёРєР°РєРѕР№") Then
                         es.err = Errors.notFile(value) : Return es
                     End If
                 End If
                 obj.props.WallPaper = value
-            Case MyZnak & UCase(trans("Стиль рабочего стола"))
+            Case MyZnak & UCase(trans("РЎС‚РёР»СЊ СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°"))
                 obj.props.DesktopStyle = value
-            Case MyZnak & UCase(trans("Разрешение экрана"))
+            Case MyZnak & UCase(trans("Р Р°Р·СЂРµС€РµРЅРёРµ СЌРєСЂР°РЅР°"))
                 If value.IndexOf("x") < 0 Then
-                    es.err = Errors.notCollection(trans("Разрешение экрана"), value, HWDeskResolution) : Return es
+                    es.err = Errors.notCollection(trans("Р Р°Р·СЂРµС€РµРЅРёРµ СЌРєСЂР°РЅР°"), value, HWDeskResolution) : Return es
                 End If
                 If isInteger(value.Split("x")(0)) = False Or isInteger(value.Split("x")(1)) = False Or value.Split("x")(0) = "" Or value.Split("x")(1) = "" Then
-                    es.err = Errors.notCollection(trans("Разрешение экрана"), value, HWDeskResolution) : Return es
+                    es.err = Errors.notCollection(trans("Р Р°Р·СЂРµС€РµРЅРёРµ СЌРєСЂР°РЅР°"), value, HWDeskResolution) : Return es
                 End If
                 obj.props.DesktopResolution = value
-            Case MyZnak & UCase(trans("Качество цветопередачи"))
+            Case MyZnak & UCase(trans("РљР°С‡РµСЃС‚РІРѕ С†РІРµС‚РѕРїРµСЂРµРґР°С‡Рё"))
                 If value = "" Or isInteger(value) = False Then
                     Dim strs() As String = {"8", "16", "32"}
-                    es.err = Errors.notCollection(trans("Качество цветопередачи"), value, strs) : Return es
+                    es.err = Errors.notCollection(trans("РљР°С‡РµСЃС‚РІРѕ С†РІРµС‚РѕРїРµСЂРµРґР°С‡Рё"), value, strs) : Return es
                 End If
                 obj.props.DesktopBits = value
-            Case MyZnak & UCase(trans("Частота экрана"))
+            Case MyZnak & UCase(trans("Р§Р°СЃС‚РѕС‚Р° СЌРєСЂР°РЅР°"))
                 If value = "" Or isInteger(value) = False Then
-                    es.err = Errors.notInt(value, trans("Частота экрана")) : Return es
+                    es.err = Errors.notInt(value, trans("Р§Р°СЃС‚РѕС‚Р° СЌРєСЂР°РЅР°")) : Return es
                 End If
                 obj.props.DesktopFrequency = value
-            Case MyZnak & UCase(trans("Заставка"))
-                If NikakoiEsli(value) = trans("Никакой") Then value = trans("Никакой")
+            Case MyZnak & UCase(trans("Р—Р°СЃС‚Р°РІРєР°"))
+                If NikakoiEsli(value) = trans("РќРёРєР°РєРѕР№") Then value = trans("РќРёРєР°РєРѕР№")
                 If (value).Split(IO.Path.GetInvalidPathChars).Length > 1 Then
                     es.err = Errors.InvalidPathChars(value) : Return es
                 End If
                 obj.props.ScreenSaver = value
-            Case MyZnak & UCase(trans("Сделать скриншот"))
+            Case MyZnak & UCase(trans("РЎРґРµР»Р°С‚СЊ СЃРєСЂРёРЅС€РѕС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
-                If NetTakNet(args(0)) = trans("Никакой") Then es.err = Errors.notDaOrNet(args(0)) : Return es
+                If NetTakNet(args(0)) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(args(0)) : Return es
                 args(0) = NetTakNet(args(0))
                 obj.Props.ScreenshotToClipboard(args)
-            Case MyZnak & UCase(trans("Сделать скриншот объекта"))
+            Case MyZnak & UCase(trans("РЎРґРµР»Р°С‚СЊ СЃРєСЂРёРЅС€РѕС‚ РѕР±СЉРµРєС‚Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.ScreenshotOfObjectToClipboard(args)
 
 
                 ' MEDIA
-            Case UCase(trans("Файл проигрывания"))
+            Case UCase(trans("Р¤Р°Р№Р» РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ"))
                 value = GetMaxPath(value)
                 If IsHttpCompil = False Then
-                    If IO.File.Exists(value) = False And value <> trans("Никакой") Then
+                    If IO.File.Exists(value) = False And value <> trans("РќРёРєР°РєРѕР№") Then
                         es.err = Errors.notFile(value) : Return es
                     End If
                     If MyObj.isRun = False Then value = copyImage(value)
                 End If
                 obj.Props.FileNamePlayed = value
-            Case UCase(trans("Проигрывается"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РџСЂРѕРёРіСЂС‹РІР°РµС‚СЃСЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Played = value
-            Case UCase(trans("Громкость"))
+            Case UCase(trans("Р“СЂРѕРјРєРѕСЃС‚СЊ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
@@ -2865,7 +2865,7 @@ PropVParam:     If vParamah Then
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 If Int(value) > 2000 Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.Volume = value
-            Case UCase(trans("Баланс"))
+            Case UCase(trans("Р‘Р°Р»Р°РЅСЃ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
@@ -2873,11 +2873,11 @@ PropVParam:     If vParamah Then
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 If Int(value) > 2000 Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.Balance = value
-            Case UCase(trans("Звук отключен"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р—РІСѓРє РѕС‚РєР»СЋС‡РµРЅ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Mute = value
-            Case UCase(trans("Скорость"))
+            Case UCase(trans("РЎРєРѕСЂРѕСЃС‚СЊ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
@@ -2885,134 +2885,134 @@ PropVParam:     If vParamah Then
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 If Int(value) > 2000 Then es.err = Errors.notInt(value, prop) : Return es
                 obj.Props.Speed = value
-            Case UCase(trans("Позиция проигрывания"))
+            Case UCase(trans("РџРѕР·РёС†РёСЏ РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.PlayPosition = value
-            Case UCase(trans("Проигралось времени"))
+            Case UCase(trans("РџСЂРѕРёРіСЂР°Р»РѕСЃСЊ РІСЂРµРјРµРЅРё"))
                 Dim ts As TimeSpan = FromMyTimeSpan(value)
                 If ts = TimeSpan.MaxValue Then es.err = Errors.notTime(value) : Return es
                 obj.Props.PlayTime = value
-            Case UCase(trans("Плей"))
+            Case UCase(trans("РџР»РµР№"))
                 obj.Props.PlayMovie()
-            Case UCase(trans("Открыть медиафайл"))
+            Case UCase(trans("РћС‚РєСЂС‹С‚СЊ РјРµРґРёР°С„Р°Р№Р»"))
                 es = FileExistInArgs(args, 0, es)
                 If es.err <> "" Then Return es
                 obj.Props.OpenMovie(args)
-            Case UCase(trans("Закрыть файл"))
+            Case UCase(trans("Р—Р°РєСЂС‹С‚СЊ С„Р°Р№Р»"))
                 obj.Props.CloseMovie()
-            Case UCase(trans("Стоп медиа"))
+            Case UCase(trans("РЎС‚РѕРї РјРµРґРёР°"))
                 obj.Props.StopMovie()
-            Case UCase(trans("Пауза"))
+            Case UCase(trans("РџР°СѓР·Р°"))
                 obj.Props.PauseMovie()
 
                 ' SYSTEM
-            Case MyZnak & UCase(trans("Мышь X"))
+            Case MyZnak & UCase(trans("РњС‹С€СЊ X"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.MouseX = value
-            Case MyZnak & UCase(trans("Мышь Y"))
+            Case MyZnak & UCase(trans("РњС‹С€СЊ Y"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 obj.Props.MouseY = value
-            Case MyZnak & UCase(trans("Клавиша клавиатуры"))
+            Case MyZnak & UCase(trans("РљР»Р°РІРёС€Р° РєР»Р°РІРёР°С‚СѓСЂС‹"))
                 es = UbratKovich(value)
                 If es.err <> "" Then Return es
                 obj.Props.KeyBoardKey = es.str
-            Case MyZnak & UCase(trans("Нажат альт"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РќР°Р¶Р°С‚ Р°Р»СЊС‚"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.KeyboardAlt = value
-            Case MyZnak & UCase(trans("Нажат шифт"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РќР°Р¶Р°С‚ С€РёС„С‚"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.KeyboardShift = value
-            Case MyZnak & UCase(trans("Нажат контрол"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РќР°Р¶Р°С‚ РєРѕРЅС‚СЂРѕР»"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.KeyboardControl = value
-            Case MyZnak & UCase(trans("Нажата мыши левая"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РќР°Р¶Р°С‚Р° РјС‹С€Рё Р»РµРІР°СЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.MouseLeft = value
-            Case MyZnak & UCase(trans("Нажата мыши правая"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("РќР°Р¶Р°С‚Р° РјС‹С€Рё РїСЂР°РІР°СЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.MouseRight = value
-            Case MyZnak & UCase(trans("Вращается колесико"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case MyZnak & UCase(trans("Р’СЂР°С‰Р°РµС‚СЃСЏ РєРѕР»РµСЃРёРєРѕ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.MouseWheel = value
-            Case MyZnak & UCase(trans("Рисунок буфера обмена"))
+            Case MyZnak & UCase(trans("Р РёСЃСѓРЅРѕРє Р±СѓС„РµСЂР° РѕР±РјРµРЅР°"))
                 es = FileExistInArgs(value, es)
                 If es.err <> "" Then Return es
                 obj.Props.ClipboardPicture = value
-            Case MyZnak & UCase(trans("Текст буфера обмена"))
+            Case MyZnak & UCase(trans("РўРµРєСЃС‚ Р±СѓС„РµСЂР° РѕР±РјРµРЅР°"))
                 obj.Props.ClipboardText = value
-            Case MyZnak & UCase(trans("Выполнить"))
+            Case MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.Run(args)
-            Case MyZnak & UCase(trans("Очистить буфер обмена"))
+            Case MyZnak & UCase(trans("РћС‡РёСЃС‚РёС‚СЊ Р±СѓС„РµСЂ РѕР±РјРµРЅР°"))
                 obj.Props.ClipboardClear()
-            Case MyZnak & UCase(trans("Вращать колесико"))
+            Case MyZnak & UCase(trans("Р’СЂР°С‰Р°С‚СЊ РєРѕР»РµСЃРёРєРѕ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If Iz.isInteger(args(0)) = False Then es.err = Errors.notInt(args(0), prop) : Return es
                 obj.Props.WheelRun(args)
-            Case MyZnak & UCase(trans("Выключить компьютер"))
+            Case MyZnak & UCase(trans("Р’С‹РєР»СЋС‡РёС‚СЊ РєРѕРјРїСЊСЋС‚РµСЂ"))
                 obj.Props.ShutDown()
-            Case MyZnak & UCase(trans("Перезагрузить компьютер"))
+            Case MyZnak & UCase(trans("РџРµСЂРµР·Р°РіСЂСѓР·РёС‚СЊ РєРѕРјРїСЊСЋС‚РµСЂ"))
                 obj.Props.Restart()
-            Case MyZnak & UCase(trans("Набрать текст"))
+            Case MyZnak & UCase(trans("РќР°Р±СЂР°С‚СЊ С‚РµРєСЃС‚"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.TypeText(args)
-            Case MyZnak & UCase(trans("Процесс убить"))
+            Case MyZnak & UCase(trans("РџСЂРѕС†РµСЃСЃ СѓР±РёС‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.KillProcess(args)
-            Case MyZnak & UCase(trans("Окно в фокусе"))
+            Case MyZnak & UCase(trans("РћРєРЅРѕ РІ С„РѕРєСѓСЃРµ"))
                 obj.Props.WindowInFocus = value
 
 
 
                 ' REGYSTRI
-            Case UCase(MyZnak & trans("Значение реестра"))
+            Case UCase(MyZnak & trans("Р—РЅР°С‡РµРЅРёРµ СЂРµРµСЃС‚СЂР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If GetRegistryKey(args(0), "") Is Nothing Then es.err = Errors.notRegistry(args(0)) : Return es
                 obj.Props.Key(args) = value
-            Case UCase(MyZnak & trans("Удалить значение"))
+            Case UCase(MyZnak & trans("РЈРґР°Р»РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If GetRegistryKey(args(0), "") Is Nothing Then es.err = Errors.notRegistry(args(0)) : Return es
                 obj.Props.DeleteKey(args)
-            Case UCase(MyZnak & trans("Удалить папку"))
+            Case UCase(MyZnak & trans("РЈРґР°Р»РёС‚СЊ РїР°РїРєСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If GetRegistryKey(args(0), "") Is Nothing Then es.err = Errors.notRegistry(args(0)) : Return es
                 obj.Props.DeleteSubKey(args)
-            Case UCase(MyZnak & trans("Создать подпапку"))
+            Case UCase(MyZnak & trans("РЎРѕР·РґР°С‚СЊ РїРѕРґРїР°РїРєСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 If GetRegistryKey(args(0), "") Is Nothing Then es.err = Errors.notRegistry(args(0)) : Return es
                 obj.Props.CreateSubKey(args)
-            Case UCase(MyZnak & trans("Создать ключ"))
+            Case UCase(MyZnak & trans("РЎРѕР·РґР°С‚СЊ РєР»СЋС‡"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 If GetRegistryKey(args(0), "") Is Nothing Then es.err = Errors.notRegistry(args(0)) : Return es
                 obj.Props.CreateKey(args)
 
                 ' SOOBSHENIE
-            Case MyZnak & UCase(trans("Запустить сообщение"))
+            Case MyZnak & UCase(trans("Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 4 Then es.err = Errors.noArguments(prop) : Return es
                 args(1) = NikakoiEsli(args(1))
@@ -3024,86 +3024,86 @@ PropVParam:     If vParamah Then
                 obj.Props.ShowMessage(args)
 
                 ' DATE
-            Case MyZnak & UCase(trans("Изменить время компьютера"))
+            Case MyZnak & UCase(trans("РР·РјРµРЅРёС‚СЊ РІСЂРµРјСЏ РєРѕРјРїСЊСЋС‚РµСЂР°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.SetSystemData(args)
 
                 ' RASSHIR
-            Case MyZnak & UCase(trans("Выполнить код VBScript"))
+            Case MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ VBScript"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.runVBScript(args)
-            Case MyZnak & UCase(trans("Выполнить код Алгоритма2"))
+            Case MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ РђР»РіРѕСЂРёС‚РјР°2"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.runAlgoritm2(args)
-            Case MyZnak & UCase(trans("Выполнить код VBNet"))
+            Case MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ VBNet"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.runVBNet(args)
-            Case MyZnak & UCase(trans("Выполнить код CSharp"))
+            Case MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ CSharp"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.runCSharp(args)
 
                 ' PRERIVANIYA
-            Case UCase(MyZnak & trans("Завершить программу")) : Return obj.Props.BreakApplication
-            Case UCase(MyZnak & trans("Завершить событие")) : Return obj.Props.BreakEvent
-            Case UCase(MyZnak & trans("Завершить цикл")) : Return obj.Props.BreakLoop
-            Case UCase(MyZnak & trans("Завершить условие")) : Return obj.Props.StopIf
-            Case UCase(MyZnak & trans("Пропускать ошибки")) : Return obj.Props.IgnoreErrors
+            Case UCase(MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ")) : Return obj.Props.BreakApplication
+            Case UCase(MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ СЃРѕР±С‹С‚РёРµ")) : Return obj.Props.BreakEvent
+            Case UCase(MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ С†РёРєР»")) : Return obj.Props.BreakLoop
+            Case UCase(MyZnak & trans("Р—Р°РІРµСЂС€РёС‚СЊ СѓСЃР»РѕРІРёРµ")) : Return obj.Props.StopIf
+            Case UCase(MyZnak & trans("РџСЂРѕРїСѓСЃРєР°С‚СЊ РѕС€РёР±РєРё")) : Return obj.Props.IgnoreErrors
 
-                ' КАЛЕНДАРЬ
-            Case UCase(trans("Формат даты"))
+                ' РљРђР›Р•РќР”РђР Р¬
+            Case UCase(trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = DateFormats.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWDateFormats) : Return es
                 obj.Props.CalendarDateFormat = value
-            Case UCase(trans("Формат даты по выбору"))
+            Case UCase(trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ"))
                 obj.Props.CustomDateFormat = value
-            Case UCase(trans("Кнопки вверх вниз"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РљРЅРѕРїРєРё РІРІРµСЂС… РІРЅРёР·"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ShowUpDown = value
-            Case UCase(trans("Выбранная дата"))
+            Case UCase(trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РґР°С‚Р°"))
                 obj.Props.SelectedDate = value
 
-                ' БЕГУНОК
-            Case UCase(trans("Сдвиг большой"))
+                ' Р‘Р•Р“РЈРќРћРљ
+            Case UCase(trans("РЎРґРІРёРі Р±РѕР»СЊС€РѕР№"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.LargeChange = value
-            Case UCase(trans("Сдвиг малый"))
+            Case UCase(trans("РЎРґРІРёРі РјР°Р»С‹Р№"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.SmallChange = value
-            Case UCase(trans("Максимум"))
+            Case UCase(trans("РњР°РєСЃРёРјСѓРј"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.Maximum = value
-            Case UCase(trans("Минимум"))
+            Case UCase(trans("РњРёРЅРёРјСѓРј"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.Minimum = value
-            Case UCase(trans("Стиль бегунка"))
+            Case UCase(trans("РЎС‚РёР»СЊ Р±РµРіСѓРЅРєР°"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = TickStyles.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWTickStyles) : Return es
                 obj.Props.TickStyle = value
-            Case UCase(trans("Частота отметок"))
+            Case UCase(trans("Р§Р°СЃС‚РѕС‚Р° РѕС‚РјРµС‚РѕРє"))
                 value = NullTakNull(value)
                 If Iz.isDouble(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
@@ -3113,235 +3113,235 @@ PropVParam:     If vParamah Then
 
 
 
-                ' ТРИАЛ
-            Case UCase(trans("Текст кнопки"))
+                ' РўР РРђР›
+            Case UCase(trans("РўРµРєСЃС‚ РєРЅРѕРїРєРё"))
                 obj.Props.TextButton = value
-            Case UCase(trans("Текст поля"))
+            Case UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ"))
                 obj.Props.TextField = value
-            Case UCase(trans("Сообщение успешной активации"))
+            Case UCase(trans("РЎРѕРѕР±С‰РµРЅРёРµ СѓСЃРїРµС€РЅРѕР№ Р°РєС‚РёРІР°С†РёРё"))
                 obj.Props.MessageValid = value
-            Case UCase(trans("Сообщение неудачной активации"))
+            Case UCase(trans("РЎРѕРѕР±С‰РµРЅРёРµ РЅРµСѓРґР°С‡РЅРѕР№ Р°РєС‚РёРІР°С†РёРё"))
                 obj.Props.MessageInValid = value
-            Case UCase(trans("ID пользователя"))
+            Case UCase(trans("ID РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ"))
                 obj.Props.IdUser = value
-            Case UCase(trans("ID программы"))
+            Case UCase(trans("ID РїСЂРѕРіСЂР°РјРјС‹"))
                 obj.Props.IdProgram = value
-            Case UCase(trans("ID в реестре"))
+            Case UCase(trans("ID РІ СЂРµРµСЃС‚СЂРµ"))
                 obj.Props.IdRegistryProgram = value
-            Case UCase(trans("Ключ шифрования"))
+            Case UCase(trans("РљР»СЋС‡ С€РёС„СЂРѕРІР°РЅРёСЏ"))
                 obj.Props.KeyEncryption = value
-            Case UCase(trans("Дней триала всего"))
+            Case UCase(trans("Р”РЅРµР№ С‚СЂРёР°Р»Р° РІСЃРµРіРѕ"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.DaysAll = value
-            Case UCase(trans("Активирована"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РђРєС‚РёРІРёСЂРѕРІР°РЅР°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.Activation() = value
-            Case UCase(trans("Триальный период запущен"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РўСЂРёР°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ Р·Р°РїСѓС‰РµРЅ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.TrialStarted() = value
-            Case UCase(trans("Ключ активации выдать"))
+            Case UCase(trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РІС‹РґР°С‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.KeyIssue(args)
-            Case UCase(trans("Ключ активации проверить"))
+            Case UCase(trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РїСЂРѕРІРµСЂРёС‚СЊ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.KeyValidation(args)
-            Case UCase(trans("Триальный период запустить"))
+            Case UCase(trans("РўСЂРёР°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ Р·Р°РїСѓСЃС‚РёС‚СЊ"))
                 obj.Props.TrialStart()
-            Case UCase(trans("Активацию отменить"))
+            Case UCase(trans("РђРєС‚РёРІР°С†РёСЋ РѕС‚РјРµРЅРёС‚СЊ"))
                 obj.Props.ActivationCancel()
 
 
                 ' ClientServer
-            Case UCase(trans("Файл отправляется")) : obj.Props.FileIsSent() = value
-            Case UCase(trans("Скрыть отправку файлов")) : obj.Props.HideSendingFiles() = value
-            Case UCase(trans("Скрыть отправку текста")) : obj.Props.HideSendingText() = value
-            Case UCase(trans("Скрыть список")) : obj.Props.HideComboBox() = value
-            Case UCase(trans("Обозначение команд")) : obj.Props.CommandSymbol() = value
-            Case UCase(trans("Принятая команда")) : obj.Props.ReceivedCommand() = value
-            Case UCase(trans("Принятый текст")) : obj.Props.ReceivedText() = value
-            Case UCase(trans("Принятый файл")) : obj.Props.ReceivedFile() = value
-            Case UCase(trans("Отправленная команда")) : obj.Props.SentCommand() = value
-            Case UCase(trans("Отправленый текст")) : obj.Props.SentText() = value
-            Case UCase(trans("Отправленый файл")) : obj.Props.SentFile() = value
-            Case UCase(trans("Имя в сети"))
+            Case UCase(trans("Р¤Р°Р№Р» РѕС‚РїСЂР°РІР»СЏРµС‚СЃСЏ")) : obj.Props.FileIsSent() = value
+            Case UCase(trans("РЎРєСЂС‹С‚СЊ РѕС‚РїСЂР°РІРєСѓ С„Р°Р№Р»РѕРІ")) : obj.Props.HideSendingFiles() = value
+            Case UCase(trans("РЎРєСЂС‹С‚СЊ РѕС‚РїСЂР°РІРєСѓ С‚РµРєСЃС‚Р°")) : obj.Props.HideSendingText() = value
+            Case UCase(trans("РЎРєСЂС‹С‚СЊ СЃРїРёСЃРѕРє")) : obj.Props.HideComboBox() = value
+            Case UCase(trans("РћР±РѕР·РЅР°С‡РµРЅРёРµ РєРѕРјР°РЅРґ")) : obj.Props.CommandSymbol() = value
+            Case UCase(trans("РџСЂРёРЅСЏС‚Р°СЏ РєРѕРјР°РЅРґР°")) : obj.Props.ReceivedCommand() = value
+            Case UCase(trans("РџСЂРёРЅСЏС‚С‹Р№ С‚РµРєСЃС‚")) : obj.Props.ReceivedText() = value
+            Case UCase(trans("РџСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»")) : obj.Props.ReceivedFile() = value
+            Case UCase(trans("РћС‚РїСЂР°РІР»РµРЅРЅР°СЏ РєРѕРјР°РЅРґР°")) : obj.Props.SentCommand() = value
+            Case UCase(trans("РћС‚РїСЂР°РІР»РµРЅС‹Р№ С‚РµРєСЃС‚")) : obj.Props.SentText() = value
+            Case UCase(trans("РћС‚РїСЂР°РІР»РµРЅС‹Р№ С„Р°Р№Р»")) : obj.Props.SentFile() = value
+            Case UCase(trans("РРјСЏ РІ СЃРµС‚Рё"))
                 Try
                     obj.Props.NameInNetwork() = value
                 Catch ex As Exception
                     es.err = ex.Message : Return es
                 End Try
-            Case UCase(trans("IP для соединения")) : obj.Props.RemoteHost() = value
-            Case UCase(trans("Порт для соединения")) : obj.Props.RemotePort() = value
-            Case UCase(trans("Папка для загрузок")) : obj.Props.PathForDownloads() = value
-            Case UCase(trans("Тип клиент сервера")) : obj.Props.ClientServerType() = value
-            Case UCase(trans("Имена клиентов")) : obj.Props.ClientsNames() = value
-            Case UCase(trans("Текст поля ввода")) : obj.Props.TextBoxString() = value
-            Case UCase(trans("Текст поля лога")) : obj.Props.TextBoxLog() = value
-            Case UCase(trans("Ip клиентов")) : obj.Props.ClientsIPs() = value
-            Case UCase(trans("Ip клиента"))
+            Case UCase(trans("IP РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ")) : obj.Props.RemoteHost() = value
+            Case UCase(trans("РџРѕСЂС‚ РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ")) : obj.Props.RemotePort() = value
+            Case UCase(trans("РџР°РїРєР° РґР»СЏ Р·Р°РіСЂСѓР·РѕРє")) : obj.Props.PathForDownloads() = value
+            Case UCase(trans("РўРёРї РєР»РёРµРЅС‚ СЃРµСЂРІРµСЂР°")) : obj.Props.ClientServerType() = value
+            Case UCase(trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ")) : obj.Props.ClientsNames() = value
+            Case UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ РІРІРѕРґР°")) : obj.Props.TextBoxString() = value
+            Case UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ Р»РѕРіР°")) : obj.Props.TextBoxLog() = value
+            Case UCase(trans("Ip РєР»РёРµРЅС‚РѕРІ")) : obj.Props.ClientsIPs() = value
+            Case UCase(trans("Ip РєР»РёРµРЅС‚Р°"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.GetClientIp(args)
-                ' методы ClientServer
-            Case UCase(trans("Отправить серверу"))
+                ' РјРµС‚РѕРґС‹ ClientServer
+            Case UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ СЃРµСЂРІРµСЂСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.SendToServer(args)
-            Case UCase(trans("Отправить файл серверу"))
+            Case UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» СЃРµСЂРІРµСЂСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.SendFileToServer(args)
-            Case UCase(trans("Отправить клиентам"))
+            Case UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ РєР»РёРµРЅС‚Р°Рј"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.SendToClients(args)
-            Case UCase(trans("Отправить клиентам кроме"))
+            Case UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ РєР»РёРµРЅС‚Р°Рј РєСЂРѕРјРµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.SendToClientsBut(args)
-            Case UCase(trans("Отправить клиенту"))
+            Case UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ РєР»РёРµРЅС‚Сѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.SendToClient(args)
-            Case UCase(trans("Отправить файл клиентам"))
+            Case UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Р°Рј"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.SendFileToClients(args)
-            Case UCase(trans("Отправить файл клиентам кроме"))
+            Case UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Р°Рј РєСЂРѕРјРµ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.SendFileToClientsBut(args)
-            Case UCase(trans("Отправить файл клиенту"))
+            Case UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Сѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.SendFileToClient(args)
-            Case UCase(trans("Добавить в лог"))
+            Case UCase(trans("Р”РѕР±Р°РІРёС‚СЊ РІ Р»РѕРі"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.Log(args)
-            Case UCase(trans("Выполнить команду"))
+            Case UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРјР°РЅРґСѓ"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.RunCommand(args)
-            Case UCase(trans("Соединиться с сервером")) : obj.Props.ConnectToServer()
-            Case UCase(trans("Создать сервер")) : obj.Props.CreateServer()
-            Case UCase(trans("Начать прослушку")) : obj.Props.BeginListen()
-            Case UCase(trans("Отключить сервер")) : obj.Props.CloseServer()
-            Case UCase(trans("Отключить прослушку")) : obj.Props.CloseListener()
-            Case UCase(trans("Отключиться")) : obj.Props.CloseClient()
+            Case UCase(trans("РЎРѕРµРґРёРЅРёС‚СЊСЃСЏ СЃ СЃРµСЂРІРµСЂРѕРј")) : obj.Props.ConnectToServer()
+            Case UCase(trans("РЎРѕР·РґР°С‚СЊ СЃРµСЂРІРµСЂ")) : obj.Props.CreateServer()
+            Case UCase(trans("РќР°С‡Р°С‚СЊ РїСЂРѕСЃР»СѓС€РєСѓ")) : obj.Props.BeginListen()
+            Case UCase(trans("РћС‚РєР»СЋС‡РёС‚СЊ СЃРµСЂРІРµСЂ")) : obj.Props.CloseServer()
+            Case UCase(trans("РћС‚РєР»СЋС‡РёС‚СЊ РїСЂРѕСЃР»СѓС€РєСѓ")) : obj.Props.CloseListener()
+            Case UCase(trans("РћС‚РєР»СЋС‡РёС‚СЊСЃСЏ")) : obj.Props.CloseClient()
 
                 ' Internet
-            Case UCase(trans("Удерживать соединение"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЈРґРµСЂР¶РёРІР°С‚СЊ СЃРѕРµРґРёРЅРµРЅРёРµ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.KeepAlive = value
-            Case UCase(trans("Автоматически перенаправляться"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРµСЂРµРЅР°РїСЂР°РІР»СЏС‚СЊСЃСЏ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.AllowAutoRedirect = value
-            Case UCase(trans("Скачивается файл"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎРєР°С‡РёРІР°РµС‚СЃСЏ С„Р°Р№Р»"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.FileDownloading = value
-            Case UCase(trans("Скачка пауза"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎРєР°С‡РєР° РїР°СѓР·Р°"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.DownloadPause = value
-            Case UCase(trans("Ссылка запроса")) : obj.Props.UrlToGo = value
-            Case UCase(trans("Ссылка откуда пришли")) : obj.Props.UrlReferer = value
-            Case UCase(trans("Ссылка перенаправления")) : obj.Props.UrlRedirect = value
-            Case UCase(trans("Тип браузера")) : obj.Props.UserAgent = value
-            Case UCase(trans("Принимать")) : obj.Props.Accept = value
-            Case UCase(trans("Прокси IP")) : obj.Props.ProxyIp = value
-            Case UCase(trans("Прокси порт"))
+            Case UCase(trans("РЎСЃС‹Р»РєР° Р·Р°РїСЂРѕСЃР°")) : obj.Props.UrlToGo = value
+            Case UCase(trans("РЎСЃС‹Р»РєР° РѕС‚РєСѓРґР° РїСЂРёС€Р»Рё")) : obj.Props.UrlReferer = value
+            Case UCase(trans("РЎСЃС‹Р»РєР° РїРµСЂРµРЅР°РїСЂР°РІР»РµРЅРёСЏ")) : obj.Props.UrlRedirect = value
+            Case UCase(trans("РўРёРї Р±СЂР°СѓР·РµСЂР°")) : obj.Props.UserAgent = value
+            Case UCase(trans("РџСЂРёРЅРёРјР°С‚СЊ")) : obj.Props.Accept = value
+            Case UCase(trans("РџСЂРѕРєСЃРё IP")) : obj.Props.ProxyIp = value
+            Case UCase(trans("РџСЂРѕРєСЃРё РїРѕСЂС‚"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.ProxyPort = value
-            Case UCase(trans("Кодировка страницы")) : obj.Props.EncodingPage = value
-            Case UCase(trans("Язык страницы")) : obj.Props.LanguagePage = value
-            Case UCase(trans("Содержимое запроса")) : obj.Props.ContentQuery = value
-            Case UCase(trans("Тип содержимого")) : obj.Props.ContentType = value
-            Case UCase(trans("Метод запроса")) : obj.Props.HttpMethod = value
-            Case UCase(trans("Таймаут"))
+            Case UCase(trans("РљРѕРґРёСЂРѕРІРєР° СЃС‚СЂР°РЅРёС†С‹")) : obj.Props.EncodingPage = value
+            Case UCase(trans("РЇР·С‹Рє СЃС‚СЂР°РЅРёС†С‹")) : obj.Props.LanguagePage = value
+            Case UCase(trans("РЎРѕРґРµСЂР¶РёРјРѕРµ Р·Р°РїСЂРѕСЃР°")) : obj.Props.ContentQuery = value
+            Case UCase(trans("РўРёРї СЃРѕРґРµСЂР¶РёРјРѕРіРѕ")) : obj.Props.ContentType = value
+            Case UCase(trans("РњРµС‚РѕРґ Р·Р°РїСЂРѕСЃР°")) : obj.Props.HttpMethod = value
+            Case UCase(trans("РўР°Р№РјР°СѓС‚"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.TimeOut = value
-            Case UCase(trans("Время задержки"))
+            Case UCase(trans("Р’СЂРµРјСЏ Р·Р°РґРµСЂР¶РєРё"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.TimeDelay = value
-            Case UCase(trans("Размер буфера"))
+            Case UCase(trans("Р Р°Р·РјРµСЂ Р±СѓС„РµСЂР°"))
                 value = NullTakNull(value)
                 If Iz.isInteger(value) = False Then
                     es.err = Errors.notInt(value, prop) : Return es
                 Else : value = Int(value) : End If
                 If Int(value) < 0 Then es.err = Errors.notLessZero(value, prop) : Return es
                 obj.Props.BufferSize = value
-            Case UCase(trans("Куки запросов")) : obj.Props.CookiesQueries = value
-            Case UCase(trans("Результат запроса")) : obj.Props.ResultQuery = value
-                ' методы интернета 
-            Case UCase(trans("Получить код страницы"))
+            Case UCase(trans("РљСѓРєРё Р·Р°РїСЂРѕСЃРѕРІ")) : obj.Props.CookiesQueries = value
+            Case UCase(trans("Р РµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°")) : obj.Props.ResultQuery = value
+                ' РјРµС‚РѕРґС‹ РёРЅС‚РµСЂРЅРµС‚Р° 
+            Case UCase(trans("РџРѕР»СѓС‡РёС‚СЊ РєРѕРґ СЃС‚СЂР°РЅРёС†С‹"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 1 Then es.err = Errors.noArguments(prop) : Return es
                 obj.Props.GetSourceCodePage(args)
-            Case UCase(trans("Скачать файл"))
+            Case UCase(trans("РЎРєР°С‡Р°С‚СЊ С„Р°Р№Р»"))
                 If args Is Nothing Then es.err = Errors.noArguments(prop) : Return es
                 If args.Length < 2 Then es.err = Errors.noArguments(prop) : Return es
-                If NetTakNet(args(1)) = trans("Никакой") Then es.err = Errors.notDaOrNet(args(1)) : Return es
+                If NetTakNet(args(1)) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(args(1)) : Return es
                 args(1) = NetTakNet(args(1))
                 obj.Props.DownloadFile(args)
-            Case UCase(trans("Выполнить запрос")) : obj.Props.ExecuteQuery()
-            Case UCase(trans("Очистить куки")) : obj.Props.ClearCookie()
-            Case UCase(trans("Скачка отменить")) : obj.Props.DownloadCancel()
-            Case UCase(trans("Скачка возобновить")) : obj.Props.DownloadResume()
+            Case UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ Р·Р°РїСЂРѕСЃ")) : obj.Props.ExecuteQuery()
+            Case UCase(trans("РћС‡РёСЃС‚РёС‚СЊ РєСѓРєРё")) : obj.Props.ClearCookie()
+            Case UCase(trans("РЎРєР°С‡РєР° РѕС‚РјРµРЅРёС‚СЊ")) : obj.Props.DownloadCancel()
+            Case UCase(trans("РЎРєР°С‡РєР° РІРѕР·РѕР±РЅРѕРІРёС‚СЊ")) : obj.Props.DownloadResume()
 
-            Case UCase(trans("Стиль загрузки"))
+            Case UCase(trans("РЎС‚РёР»СЊ Р·Р°РіСЂСѓР·РєРё"))
                 value = NikakoiEsli(value)
                 Dim ind As Integer = StylesProgress.IndexOfKey(LCase(value))
                 If ind = -1 Then es.err = Errors.notCollection(prop, value, HWStylesProgress) : Return es
                 obj.Props.StyleProgress = value
-            Case UCase(trans("Скорость анимации")) : obj.Props.MarqueeAnimationSpeed = value
-            Case UCase(trans("Шаг загрузки")) : obj.Props.StepProgress = value
-            Case UCase(trans("Справа налево"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎРєРѕСЂРѕСЃС‚СЊ Р°РЅРёРјР°С†РёРё")) : obj.Props.MarqueeAnimationSpeed = value
+            Case UCase(trans("РЁР°Рі Р·Р°РіСЂСѓР·РєРё")) : obj.Props.StepProgress = value
+            Case UCase(trans("РЎРїСЂР°РІР° РЅР°Р»РµРІРѕ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.RightToLeftLayout = value
-            Case MyZnak & UCase(trans("Открыть папку"))
+            Case MyZnak & UCase(trans("РћС‚РєСЂС‹С‚СЊ РїР°РїРєСѓ"))
                 obj.Props.OpenDirectory(args)
-            Case UCase(trans("Справа налево"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РЎРїСЂР°РІР° РЅР°Р»РµРІРѕ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.RightToLeftLayout = value
-            Case UCase(trans("Запретить минимизировать"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р—Р°РїСЂРµС‚РёС‚СЊ РјРёРЅРёРјРёР·РёСЂРѕРІР°С‚СЊ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ForbidMinimize = value
-            Case UCase(trans("Запретить разворачивать"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("Р—Р°РїСЂРµС‚РёС‚СЊ СЂР°Р·РІРѕСЂР°С‡РёРІР°С‚СЊ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.ForbidMaximize = value
-            Case UCase(trans("Ассоциировать с расширениями"))
+            Case UCase(trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°С‚СЊ СЃ СЂР°СЃС€РёСЂРµРЅРёСЏРјРё"))
                 obj.Props.AssociateWithExtensions = value
-            Case UCase(trans("Ассоциированый принятый файл"))
+            Case UCase(trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅС‹Р№ РїСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»"))
                 obj.Props.AssociationPassedFile = value
-            Case UCase(trans("На весь экран"))
-                If NetTakNet(value) = trans("Никакой") Then es.err = Errors.notDaOrNet(value) : Return es
+            Case UCase(trans("РќР° РІРµСЃСЊ СЌРєСЂР°РЅ"))
+                If NetTakNet(value) = trans("РќРёРєР°РєРѕР№") Then es.err = Errors.notDaOrNet(value) : Return es
                 value = NetTakNet(value)
                 obj.Props.OnFullScreen = value
 
@@ -3350,7 +3350,7 @@ PropVParam:     If vParamah Then
 
             Case Else
 
-                ' Может это метод полезного объекта "Вызвать событие"
+                ' РњРѕР¶РµС‚ СЌС‚Рѕ РјРµС‚РѕРґ РїРѕР»РµР·РЅРѕРіРѕ РѕР±СЉРµРєС‚Р° "Р’С‹Р·РІР°С‚СЊ СЃРѕР±С‹С‚РёРµ"
                 If Iz.IsSobytCalls(MyObj) And prop.Split("_").Length = 3 Then
                     MyObj.CreateSobytCalls()
                     Dim frm As String = prop.Split("_")(0)
@@ -3363,880 +3363,880 @@ PropVParam:     If vParamah Then
                     Return es
                 End If
 
-                ' В ОСТАВШИХСЯ СЛУЧАЯХ
+                ' Р’ РћРЎРўРђР’РЁРРҐРЎРЇ РЎР›РЈР§РђРЇРҐ
                 es.err = "!"
         End Select
         Return es
     End Function
 
-    ' ТОЛЬКО ДЛЯ ЧТЕНИЯ
+    ' РўРћР›Р¬РљРћ Р”Р›РЇ Р§РўР•РќРРЇ
     Sub SetReadOnlys()
-        ' Создание списка свойств ТОЛЬКО ДЛЯ ЧТЕНИЯ
-        Dim TempRO() As String = {UCase(trans("В фокусе")), UCase(trans("Тип")), _
-            UCase(MyZnak & trans("Существует файл")), UCase(MyZnak & trans("Существует папка")), _
-            UCase(MyZnak & trans("Получить файлы")), UCase(MyZnak & trans("Получить папки")), _
-            UCase(MyZnak & trans("Определить корневую")), UCase(MyZnak & trans("Поиск файлов")), _
-            UCase(MyZnak & trans("Определить родительскую")), UCase(MyZnak & trans("Получить диски")), _
-            UCase(MyZnak & trans("Определить имя папки")), UCase(MyZnak & trans("Определить имя файла")), _
-            UCase(MyZnak & trans("Определить расширение")), UCase(MyZnak & trans("Определить без расширения")), _
-            UCase(trans("Длительность общая")), UCase(trans("Длительность время")), _
-            UCase(trans("Оригинальная вышина")), UCase(trans("Оригинальная ширина")), _
-            UCase(MyZnak & trans("Вращается колесико")), _
-            UCase(MyZnak & trans("Ключ существует")), UCase(MyZnak & trans("Папка существует")), _
-            UCase(MyZnak & trans("Тип ключа")) _
-            , UCase(trans("Номер символа по координатам")), UCase(trans("Номер первого символа строки")) _
-            , UCase(trans("Номер первого символа текущей строки")), UCase(trans("Номер строки по номеру символа")) _
-            , UCase(trans("X по номеру символа")), UCase(trans("Y по номеру символа")) _
-            , UCase(trans("Строка")), UCase(trans("Количество строк")), UCase(trans("Браузер offline")) _
-            , UCase(trans("Символ")), UCase(trans("Количество символов")), UCase(trans("Родительское меню")) _
-            , UCase(trans("Назад возможно")), UCase(trans("Вперед возможно")), UCase(trans("Родительский пункт")) _
-            , UCase(trans("Заголовок страницы")), UCase(trans("Тип страницы")), UCase(trans("Браузер занят")) _
-            , UCase(trans("Статус готовности")), UCase(trans("Статусная строка")), UCase(trans("Кодировка по умолчанию")) _
-            , UCase(trans("Высота заголовка")), UCase(trans("Номер выделенной закладки")) _
-            , UCase(trans("Номер первой строки")), UCase(trans("Номер последней строки")) _
-            , UCase(trans("Номер следующей строки")), UCase(trans("Номер предыдущей строки")) _
-            , UCase(trans("Значение по координатам")), UCase(trans("Номер строки по координатам")) _
-            , UCase(trans("Номер столбца по координатам")) _
-            , UCase(trans("Высота записей списка")), UCase(trans("Количество записей")) _
-            , UCase(trans("Номера отмеченых записей")), UCase(trans("Отмеченные записи")) _
-            , UCase(trans("Была нажата отмена")) _
-            , UCase(trans("Количество выделенных строк")), UCase(trans("Количество выделенных столбцов")) _
-            , UCase(trans("Дней триала осталось")), UCase(trans("ID пользователя")) _
-            , UCase(trans("Примечание")) _
-            , UCase(MyZnak & trans("Символ по номеру")), UCase(MyZnak & trans("Сравнить тексты")) _
-            , UCase(MyZnak & trans("Поиск в тексте")) _
-            , UCase(MyZnak & trans("Поиск номера строки")), UCase(MyZnak & trans("Поиск с учетом регистра")) _
-            , UCase(MyZnak & trans("Поиск в тексте с конца")), UCase(MyZnak & trans("Поиск с регулярными выражениями")) _
-            , UCase(MyZnak & trans("Количество символов")), UCase(MyZnak & trans("Разбить на части")) _
-            , UCase(MyZnak & trans("Взять кусок текста")), UCase(MyZnak & trans("Количество частей текста")) _
-            , UCase(MyZnak & trans("Кавычки убрать")), UCase(MyZnak & trans("Кавычками обособить")) _
-            , UCase(MyZnak & trans("Поиск без кавычек")), UCase(MyZnak & trans("Разбить на части без кавычек")) _
-            , UCase(MyZnak & trans("Текст содержит")), UCase(MyZnak & trans("Текст не содержит")) _
-            , UCase(MyZnak & trans("Строка по номеру")), UCase(MyZnak & trans("Количество строк")) _
-            , UCase(MyZnak & trans("Вставить символы в текст")), UCase(MyZnak & trans("Удалить кусок текста")) _
-            , UCase(MyZnak & trans("Заменить")), UCase(MyZnak & trans("Заменить все")) _
-            , UCase(MyZnak & trans("Сделать буквы прописными")), UCase(MyZnak & trans("Сделать буквы заглавными")) _
-            , UCase(MyZnak & trans("Убрать пробелы")), UCase(MyZnak & trans("Убрать пробелы в начале")) _
-            , UCase(MyZnak & trans("Убрать пробелы в конце")) _
-            , UCase(MyZnak & trans("Количество частей без кавычек")) _
-            , UCase(MyZnak & trans("Была нажата Отмена")), UCase(MyZnak & trans("Была нажата Ок")) _
-            , UCase(MyZnak & trans("Была нажата Повторить")), UCase(MyZnak & trans("Была нажата Да")) _
-            , UCase(MyZnak & trans("Была нажата Нет")), UCase(MyZnak & trans("Была нажата Прервать")) _
-            , UCase(MyZnak & trans("Была нажата Пропустить")), UCase(MyZnak & trans("Была нажата Справка")) _
-            , UCase(MyZnak & trans("День месяца")), UCase(MyZnak & trans("День года")) _
-            , UCase(MyZnak & trans("День в неделе")), UCase(MyZnak & trans("Час")) _
-            , UCase(MyZnak & trans("Минута")), UCase(MyZnak & trans("Секунда")) _
-            , UCase(MyZnak & trans("Квартал")), UCase(MyZnak & trans("Неделя в году")) _
-            , UCase(MyZnak & trans("Год")), UCase(MyZnak & trans("Месяц")) _
-            , UCase(MyZnak & trans("Секунд всего в дате")), UCase(MyZnak & trans("Дней в месяце")) _
-            , UCase(MyZnak & trans("Сейчас")), UCase(MyZnak & trans("Сегодня")) _
-            , UCase(MyZnak & trans("Прибавить дни")), UCase(MyZnak & trans("Прибавить часы")) _
-            , UCase(MyZnak & trans("Прибавить минуты")), UCase(MyZnak & trans("Прибавить секунды")) _
-            , UCase(MyZnak & trans("Прибавить кварталы")), UCase(MyZnak & trans("Прибавить недели")) _
-            , UCase(MyZnak & trans("Прибавить годы")), UCase(MyZnak & trans("Прибавить месяцы")) _
-            , UCase(MyZnak & trans("Разница в днях")), UCase(MyZnak & trans("Разница в часах")) _
-            , UCase(MyZnak & trans("Разница в минутах")), UCase(MyZnak & trans("Разница в секундах")) _
-            , UCase(MyZnak & trans("Разница в кварталах")), UCase(MyZnak & trans("Разница в неделях")) _
-            , UCase(MyZnak & trans("Разница в годах")), UCase(MyZnak & trans("Разница в месяцах")) _
-            , UCase(MyZnak & trans("День недели")), UCase(MyZnak & trans("Название месяца")) _
-            , UCase(MyZnak & trans("Дата в определенном формате")), UCase(trans("Найти номер записи")) _
-            , UCase(MyZnak & trans("Текст состоит из")), UCase(MyZnak & trans("Текст есть число")) _
-            , UCase(MyZnak & trans("Текст есть цифры")), UCase(MyZnak & trans("Определить размер файла")) _
-            , UCase(MyZnak & trans("Открыть файл")), UCase(MyZnak & trans("Выполнить с результатом")) _
-            , UCase(MyZnak & trans("Зашифровать текст")), UCase(MyZnak & trans("Расшифровать текст")) _
-            , UCase(MyZnak & trans("Количество файлов")), UCase(MyZnak & trans("Количество папок")) _
-            , UCase(MyZnak & trans("Выполнить с результатом")) _
-            , UCase(MyZnak & trans("Процессы системы")), UCase(MyZnak & trans("Окна системы")) _
-            , UCase(MyZnak & trans("Скриншот")), UCase(MyZnak & trans("Скриншот объекта")) _
-            , UCase(trans("Наличие соединения")) _
-            , UCase(trans("Имена клиентов")), UCase(trans("Ip клиентов")), UCase(trans("Ip клиента")) _
-            , UCase(trans("Длинна содержимого")), UCase(trans("Код результата")), UCase(trans("Заголовки запроса")) _
-            , UCase(trans("Ассоциированый принятый файл")) _
-            , UCase(trans("Поиск в таблице")), UCase(trans("Поиск в выделеных ячейках")) _
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° СЃРІРѕР№СЃС‚РІ РўРћР›Р¬РљРћ Р”Р›РЇ Р§РўР•РќРРЇ
+        Dim TempRO() As String = {UCase(trans("Р’ С„РѕРєСѓСЃРµ")), UCase(trans("РўРёРї")), _
+            UCase(MyZnak & trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ С„Р°Р№Р»")), UCase(MyZnak & trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ РїР°РїРєР°")), _
+            UCase(MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ С„Р°Р№Р»С‹")), UCase(MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ РїР°РїРєРё")), _
+            UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РєРѕСЂРЅРµРІСѓСЋ")), UCase(MyZnak & trans("РџРѕРёСЃРє С„Р°Р№Р»РѕРІ")), _
+            UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂРѕРґРёС‚РµР»СЊСЃРєСѓСЋ")), UCase(MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ РґРёСЃРєРё")), _
+            UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РёРјСЏ РїР°РїРєРё")), UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РёРјСЏ С„Р°Р№Р»Р°")), _
+            UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ")), UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ Р±РµР· СЂР°СЃС€РёСЂРµРЅРёСЏ")), _
+            UCase(trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕР±С‰Р°СЏ")), UCase(trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РІСЂРµРјСЏ")), _
+            UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")), UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")), _
+            UCase(MyZnak & trans("Р’СЂР°С‰Р°РµС‚СЃСЏ РєРѕР»РµСЃРёРєРѕ")), _
+            UCase(MyZnak & trans("РљР»СЋС‡ СЃСѓС‰РµСЃС‚РІСѓРµС‚")), UCase(MyZnak & trans("РџР°РїРєР° СЃСѓС‰РµСЃС‚РІСѓРµС‚")), _
+            UCase(MyZnak & trans("РўРёРї РєР»СЋС‡Р°")) _
+            , UCase(trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")), UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° СЃС‚СЂРѕРєРё")) _
+            , UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРё")), UCase(trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°")) _
+            , UCase(trans("X РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°")), UCase(trans("Y РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°")) _
+            , UCase(trans("РЎС‚СЂРѕРєР°")), UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє")), UCase(trans("Р‘СЂР°СѓР·РµСЂ offline")) _
+            , UCase(trans("РЎРёРјРІРѕР»")), UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ")), UCase(trans("Р РѕРґРёС‚РµР»СЊСЃРєРѕРµ РјРµРЅСЋ")) _
+            , UCase(trans("РќР°Р·Р°Рґ РІРѕР·РјРѕР¶РЅРѕ")), UCase(trans("Р’РїРµСЂРµРґ РІРѕР·РјРѕР¶РЅРѕ")), UCase(trans("Р РѕРґРёС‚РµР»СЊСЃРєРёР№ РїСѓРЅРєС‚")) _
+            , UCase(trans("Р—Р°РіРѕР»РѕРІРѕРє СЃС‚СЂР°РЅРёС†С‹")), UCase(trans("РўРёРї СЃС‚СЂР°РЅРёС†С‹")), UCase(trans("Р‘СЂР°СѓР·РµСЂ Р·Р°РЅСЏС‚")) _
+            , UCase(trans("РЎС‚Р°С‚СѓСЃ РіРѕС‚РѕРІРЅРѕСЃС‚Рё")), UCase(trans("РЎС‚Р°С‚СѓСЃРЅР°СЏ СЃС‚СЂРѕРєР°")), UCase(trans("РљРѕРґРёСЂРѕРІРєР° РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")) _
+            , UCase(trans("Р’С‹СЃРѕС‚Р° Р·Р°РіРѕР»РѕРІРєР°")), UCase(trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё")) _
+            , UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРё")), UCase(trans("РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ СЃС‚СЂРѕРєРё")) _
+            , UCase(trans("РќРѕРјРµСЂ СЃР»РµРґСѓСЋС‰РµР№ СЃС‚СЂРѕРєРё")), UCase(trans("РќРѕРјРµСЂ РїСЂРµРґС‹РґСѓС‰РµР№ СЃС‚СЂРѕРєРё")) _
+            , UCase(trans("Р—РЅР°С‡РµРЅРёРµ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")), UCase(trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) _
+            , UCase(trans("РќРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) _
+            , UCase(trans("Р’С‹СЃРѕС‚Р° Р·Р°РїРёСЃРµР№ СЃРїРёСЃРєР°")), UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№")) _
+            , UCase(trans("РќРѕРјРµСЂР° РѕС‚РјРµС‡РµРЅС‹С… Р·Р°РїРёСЃРµР№")), UCase(trans("РћС‚РјРµС‡РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё")) _
+            , UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РѕС‚РјРµРЅР°")) _
+            , UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє")), UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ")) _
+            , UCase(trans("Р”РЅРµР№ С‚СЂРёР°Р»Р° РѕСЃС‚Р°Р»РѕСЃСЊ")), UCase(trans("ID РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ")) _
+            , UCase(trans("РџСЂРёРјРµС‡Р°РЅРёРµ")) _
+            , UCase(MyZnak & trans("РЎРёРјРІРѕР» РїРѕ РЅРѕРјРµСЂСѓ")), UCase(MyZnak & trans("РЎСЂР°РІРЅРёС‚СЊ С‚РµРєСЃС‚С‹")) _
+            , UCase(MyZnak & trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ")) _
+            , UCase(MyZnak & trans("РџРѕРёСЃРє РЅРѕРјРµСЂР° СЃС‚СЂРѕРєРё")), UCase(MyZnak & trans("РџРѕРёСЃРє СЃ СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°")) _
+            , UCase(MyZnak & trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ СЃ РєРѕРЅС†Р°")), UCase(MyZnak & trans("РџРѕРёСЃРє СЃ СЂРµРіСѓР»СЏСЂРЅС‹РјРё РІС‹СЂР°Р¶РµРЅРёСЏРјРё")) _
+            , UCase(MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ")), UCase(MyZnak & trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё")) _
+            , UCase(MyZnak & trans("Р’Р·СЏС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°")), UCase(MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ С‚РµРєСЃС‚Р°")) _
+            , UCase(MyZnak & trans("РљР°РІС‹С‡РєРё СѓР±СЂР°С‚СЊ")), UCase(MyZnak & trans("РљР°РІС‹С‡РєР°РјРё РѕР±РѕСЃРѕР±РёС‚СЊ")) _
+            , UCase(MyZnak & trans("РџРѕРёСЃРє Р±РµР· РєР°РІС‹С‡РµРє")), UCase(MyZnak & trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё Р±РµР· РєР°РІС‹С‡РµРє")) _
+            , UCase(MyZnak & trans("РўРµРєСЃС‚ СЃРѕРґРµСЂР¶РёС‚")), UCase(MyZnak & trans("РўРµРєСЃС‚ РЅРµ СЃРѕРґРµСЂР¶РёС‚")) _
+            , UCase(MyZnak & trans("РЎС‚СЂРѕРєР° РїРѕ РЅРѕРјРµСЂСѓ")), UCase(MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє")) _
+            , UCase(MyZnak & trans("Р’СЃС‚Р°РІРёС‚СЊ СЃРёРјРІРѕР»С‹ РІ С‚РµРєСЃС‚")), UCase(MyZnak & trans("РЈРґР°Р»РёС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°")) _
+            , UCase(MyZnak & trans("Р—Р°РјРµРЅРёС‚СЊ")), UCase(MyZnak & trans("Р—Р°РјРµРЅРёС‚СЊ РІСЃРµ")) _
+            , UCase(MyZnak & trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ РїСЂРѕРїРёСЃРЅС‹РјРё")), UCase(MyZnak & trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ Р·Р°РіР»Р°РІРЅС‹РјРё")) _
+            , UCase(MyZnak & trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹")), UCase(MyZnak & trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РЅР°С‡Р°Р»Рµ")) _
+            , UCase(MyZnak & trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РєРѕРЅС†Рµ")) _
+            , UCase(MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ Р±РµР· РєР°РІС‹С‡РµРє")) _
+            , UCase(MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РћС‚РјРµРЅР°")), UCase(MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РћРє")) _
+            , UCase(MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџРѕРІС‚РѕСЂРёС‚СЊ")), UCase(MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° Р”Р°")) _
+            , UCase(MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РќРµС‚")), UCase(MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџСЂРµСЂРІР°С‚СЊ")) _
+            , UCase(MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџСЂРѕРїСѓСЃС‚РёС‚СЊ")), UCase(MyZnak & trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РЎРїСЂР°РІРєР°")) _
+            , UCase(MyZnak & trans("Р”РµРЅСЊ РјРµСЃСЏС†Р°")), UCase(MyZnak & trans("Р”РµРЅСЊ РіРѕРґР°")) _
+            , UCase(MyZnak & trans("Р”РµРЅСЊ РІ РЅРµРґРµР»Рµ")), UCase(MyZnak & trans("Р§Р°СЃ")) _
+            , UCase(MyZnak & trans("РњРёРЅСѓС‚Р°")), UCase(MyZnak & trans("РЎРµРєСѓРЅРґР°")) _
+            , UCase(MyZnak & trans("РљРІР°СЂС‚Р°Р»")), UCase(MyZnak & trans("РќРµРґРµР»СЏ РІ РіРѕРґСѓ")) _
+            , UCase(MyZnak & trans("Р“РѕРґ")), UCase(MyZnak & trans("РњРµСЃСЏС†")) _
+            , UCase(MyZnak & trans("РЎРµРєСѓРЅРґ РІСЃРµРіРѕ РІ РґР°С‚Рµ")), UCase(MyZnak & trans("Р”РЅРµР№ РІ РјРµСЃСЏС†Рµ")) _
+            , UCase(MyZnak & trans("РЎРµР№С‡Р°СЃ")), UCase(MyZnak & trans("РЎРµРіРѕРґРЅСЏ")) _
+            , UCase(MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РґРЅРё")), UCase(MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ С‡Р°СЃС‹")) _
+            , UCase(MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РјРёРЅСѓС‚С‹")), UCase(MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ СЃРµРєСѓРЅРґС‹")) _
+            , UCase(MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РєРІР°СЂС‚Р°Р»С‹")), UCase(MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РЅРµРґРµР»Рё")) _
+            , UCase(MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РіРѕРґС‹")), UCase(MyZnak & trans("РџСЂРёР±Р°РІРёС‚СЊ РјРµСЃСЏС†С‹")) _
+            , UCase(MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РґРЅСЏС…")), UCase(MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ С‡Р°СЃР°С…")) _
+            , UCase(MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РјРёРЅСѓС‚Р°С…")), UCase(MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ СЃРµРєСѓРЅРґР°С…")) _
+            , UCase(MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РєРІР°СЂС‚Р°Р»Р°С…")), UCase(MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РЅРµРґРµР»СЏС…")) _
+            , UCase(MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РіРѕРґР°С…")), UCase(MyZnak & trans("Р Р°Р·РЅРёС†Р° РІ РјРµСЃСЏС†Р°С…")) _
+            , UCase(MyZnak & trans("Р”РµРЅСЊ РЅРµРґРµР»Рё")), UCase(MyZnak & trans("РќР°Р·РІР°РЅРёРµ РјРµСЃСЏС†Р°")) _
+            , UCase(MyZnak & trans("Р”Р°С‚Р° РІ РѕРїСЂРµРґРµР»РµРЅРЅРѕРј С„РѕСЂРјР°С‚Рµ")), UCase(trans("РќР°Р№С‚Рё РЅРѕРјРµСЂ Р·Р°РїРёСЃРё")) _
+            , UCase(MyZnak & trans("РўРµРєСЃС‚ СЃРѕСЃС‚РѕРёС‚ РёР·")), UCase(MyZnak & trans("РўРµРєСЃС‚ РµСЃС‚СЊ С‡РёСЃР»Рѕ")) _
+            , UCase(MyZnak & trans("РўРµРєСЃС‚ РµСЃС‚СЊ С†РёС„СЂС‹")), UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р°")) _
+            , UCase(MyZnak & trans("РћС‚РєСЂС‹С‚СЊ С„Р°Р№Р»")), UCase(MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ СЃ СЂРµР·СѓР»СЊС‚Р°С‚РѕРј")) _
+            , UCase(MyZnak & trans("Р—Р°С€РёС„СЂРѕРІР°С‚СЊ С‚РµРєСЃС‚")), UCase(MyZnak & trans("Р Р°СЃС€РёС„СЂРѕРІР°С‚СЊ С‚РµРєСЃС‚")) _
+            , UCase(MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С„Р°Р№Р»РѕРІ")), UCase(MyZnak & trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°РїРѕРє")) _
+            , UCase(MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ СЃ СЂРµР·СѓР»СЊС‚Р°С‚РѕРј")) _
+            , UCase(MyZnak & trans("РџСЂРѕС†РµСЃСЃС‹ СЃРёСЃС‚РµРјС‹")), UCase(MyZnak & trans("РћРєРЅР° СЃРёСЃС‚РµРјС‹")) _
+            , UCase(MyZnak & trans("РЎРєСЂРёРЅС€РѕС‚")), UCase(MyZnak & trans("РЎРєСЂРёРЅС€РѕС‚ РѕР±СЉРµРєС‚Р°")) _
+            , UCase(trans("РќР°Р»РёС‡РёРµ СЃРѕРµРґРёРЅРµРЅРёСЏ")) _
+            , UCase(trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ")), UCase(trans("Ip РєР»РёРµРЅС‚РѕРІ")), UCase(trans("Ip РєР»РёРµРЅС‚Р°")) _
+            , UCase(trans("Р”Р»РёРЅРЅР° СЃРѕРґРµСЂР¶РёРјРѕРіРѕ")), UCase(trans("РљРѕРґ СЂРµР·СѓР»СЊС‚Р°С‚Р°")), UCase(trans("Р—Р°РіРѕР»РѕРІРєРё Р·Р°РїСЂРѕСЃР°")) _
+            , UCase(trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅС‹Р№ РїСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»")) _
+            , UCase(trans("РџРѕРёСЃРє РІ С‚Р°Р±Р»РёС†Рµ")), UCase(trans("РџРѕРёСЃРє РІ РІС‹РґРµР»РµРЅС‹С… СЏС‡РµР№РєР°С…")) _
         }
         ReadOnlyProps = TempRO
 
-        ' Создание списка свойств ТОЛЬКО ДЛЯ ЧТЕНИЯ,которым обязательны аргументы(можно использовать тока в запущеном проекте)
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° СЃРІРѕР№СЃС‚РІ РўРћР›Р¬РљРћ Р”Р›РЇ Р§РўР•РќРРЇ,РєРѕС‚РѕСЂС‹Рј РѕР±СЏР·Р°С‚РµР»СЊРЅС‹ Р°СЂРіСѓРјРµРЅС‚С‹(РјРѕР¶РЅРѕ РёСЃРїРѕР»СЊР·РѕРІР°С‚СЊ С‚РѕРєР° РІ Р·Р°РїСѓС‰РµРЅРѕРј РїСЂРѕРµРєС‚Рµ)
         Dim TempMCP() As String = { _
-            trans("Номер символа по координатам").ToUpper, trans("Номер первого символа строки").ToUpper _
-            , trans("Номер первого символа текущей строки").ToUpper, trans("Номер строки по номеру символа").ToUpper _
-            , trans("X по номеру символа").ToUpper, trans("Y по номеру символа").ToUpper _
-            , trans("Строка").ToUpper, trans("Символ").ToUpper _
-            , trans("Запись по номеру").ToUpper, trans("Найти номер записи").ToUpper _
-            , trans("Ключ активации выдать").ToUpper, trans("Ключ активации проверить").ToUpper _
-            , trans("Ip клиента").ToUpper _
-            , trans("Поиск в таблице").ToUpper, trans("Поиск в выделеных ячейках").ToUpper _
+            trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј").ToUpper, trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° СЃС‚СЂРѕРєРё").ToUpper _
+            , trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРё").ToUpper, trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°").ToUpper _
+            , trans("X РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°").ToUpper, trans("Y РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°").ToUpper _
+            , trans("РЎС‚СЂРѕРєР°").ToUpper, trans("РЎРёРјРІРѕР»").ToUpper _
+            , trans("Р—Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ").ToUpper, trans("РќР°Р№С‚Рё РЅРѕРјРµСЂ Р·Р°РїРёСЃРё").ToUpper _
+            , trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РІС‹РґР°С‚СЊ").ToUpper, trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РїСЂРѕРІРµСЂРёС‚СЊ").ToUpper _
+            , trans("Ip РєР»РёРµРЅС‚Р°").ToUpper _
+            , trans("РџРѕРёСЃРє РІ С‚Р°Р±Р»РёС†Рµ").ToUpper, trans("РџРѕРёСЃРє РІ РІС‹РґРµР»РµРЅС‹С… СЏС‡РµР№РєР°С…").ToUpper _
         }
         MayChangeProps = TempMCP
 
-        ' Аргументы, у которых есть Тип, отличный от Текст
-        Dim tempArgTypes() As String = {UCase(trans("Сортировать по возрастанию")), _
-            UCase(trans("Область выборки")), UCase(trans("Кнопки сообщения")), UCase(trans("Тип сообщения")), _
-            UCase(trans("Тип базы данных")), UCase(trans("Место для записи в списке")), _
-            UCase(trans("Кодировка текста")), UCase(trans("Показать в окне")), _
-            UCase(trans("Номера строк через запятую")), UCase(trans("Номера столбцов через запятую")), _
-            UCase(trans("Тип файла")), UCase(trans("Ждать пока скачается")), _
-            UCase(trans("C учетом регистра")), UCase(trans("Слово целиком")), _
-            UCase(trans("Объект съемки")), UCase(trans("Только активное окно")) _
+        ' РђСЂРіСѓРјРµРЅС‚С‹, Сѓ РєРѕС‚РѕСЂС‹С… РµСЃС‚СЊ РўРёРї, РѕС‚Р»РёС‡РЅС‹Р№ РѕС‚ РўРµРєСЃС‚
+        Dim tempArgTypes() As String = {UCase(trans("РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ")), _
+            UCase(trans("РћР±Р»Р°СЃС‚СЊ РІС‹Р±РѕСЂРєРё")), UCase(trans("РљРЅРѕРїРєРё СЃРѕРѕР±С‰РµРЅРёСЏ")), UCase(trans("РўРёРї СЃРѕРѕР±С‰РµРЅРёСЏ")), _
+            UCase(trans("РўРёРї Р±Р°Р·С‹ РґР°РЅРЅС‹С…")), UCase(trans("РњРµСЃС‚Рѕ РґР»СЏ Р·Р°РїРёСЃРё РІ СЃРїРёСЃРєРµ")), _
+            UCase(trans("РљРѕРґРёСЂРѕРІРєР° С‚РµРєСЃС‚Р°")), UCase(trans("РџРѕРєР°Р·Р°С‚СЊ РІ РѕРєРЅРµ")), _
+            UCase(trans("РќРѕРјРµСЂР° СЃС‚СЂРѕРє С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ")), UCase(trans("РќРѕРјРµСЂР° СЃС‚РѕР»Р±С†РѕРІ С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ")), _
+            UCase(trans("РўРёРї С„Р°Р№Р»Р°")), UCase(trans("Р–РґР°С‚СЊ РїРѕРєР° СЃРєР°С‡Р°РµС‚СЃСЏ")), _
+            UCase(trans("C СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°")), UCase(trans("РЎР»РѕРІРѕ С†РµР»РёРєРѕРј")), _
+            UCase(trans("РћР±СЉРµРєС‚ СЃСЉРµРјРєРё")), UCase(trans("РўРѕР»СЊРєРѕ Р°РєС‚РёРІРЅРѕРµ РѕРєРЅРѕ")) _
         }
         ArgTypes = tempArgTypes
 
-        ' Создание списка свойств СОБЫТИЙ, которые НЕ ДЛЯ ЧТЕНИЯ
-        Dim TempSnRO() As String = {UCase(MyZnak & trans("Отменить перемещение")), UCase(MyZnak & trans("Отменить ввод")) _
-            , UCase(MyZnak & trans("Отменить в новом окне")), UCase(MyZnak & trans("Отменить событие"))}
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° СЃРІРѕР№СЃС‚РІ РЎРћР‘Р«РўРР™, РєРѕС‚РѕСЂС‹Рµ РќР• Р”Р›РЇ Р§РўР•РќРРЇ
+        Dim TempSnRO() As String = {UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ РїРµСЂРµРјРµС‰РµРЅРёРµ")), UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ РІРІРѕРґ")) _
+            , UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ")), UCase(MyZnak & trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ"))}
         SobytsNotReadOnly = TempSnRO
 
-        ' Создание списка свойств, которые не надо считать за свойства и не надо сохранять их при сохранении проекта
-        Dim TempNoSaveProps() As String = {UCase(trans("Выделенный RTF")), UCase(trans("Выделенное положение текста")) _
-            , UCase(trans("Выделенный задний фон")), UCase(trans("Выделенный цвет текста")) _
-            , UCase(trans("Выделенный размер красной строки")), UCase(trans("Выделенный отступ слева")) _
-            , UCase(trans("Выделенный отступ справа")), UCase(trans("Выделенный имеет маркер")) _
-            , UCase(trans("Выделенное вертикальное смещение")), UCase(trans("Выделенный шрифт размер")) _
-            , UCase(trans("Выделенный шрифт")), UCase(trans("Выделенный шрифт жирный")), UCase(trans("Выделенный шрифт курсив")) _
-            , UCase(trans("Выделенный шрифт подчеркнутый")), UCase(trans("Выделенный шрифт зачеркнутый")) _
-            , UCase(trans("Выделенный текст заблокирован")) _
-            , UCase(trans("Триальный период запущен")), UCase(trans("Активирована")) _
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° СЃРІРѕР№СЃС‚РІ, РєРѕС‚РѕСЂС‹Рµ РЅРµ РЅР°РґРѕ СЃС‡РёС‚Р°С‚СЊ Р·Р° СЃРІРѕР№СЃС‚РІР° Рё РЅРµ РЅР°РґРѕ СЃРѕС…СЂР°РЅСЏС‚СЊ РёС… РїСЂРё СЃРѕС…СЂР°РЅРµРЅРёРё РїСЂРѕРµРєС‚Р°
+        Dim TempNoSaveProps() As String = {UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ RTF")), UCase(trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°")) _
+            , UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ Р·Р°РґРЅРёР№ С„РѕРЅ")), UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С†РІРµС‚ С‚РµРєСЃС‚Р°")) _
+            , UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РєСЂР°СЃРЅРѕР№ СЃС‚СЂРѕРєРё")), UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃР»РµРІР°")) _
+            , UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃРїСЂР°РІР°")), UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РёРјРµРµС‚ РјР°СЂРєРµСЂ")) _
+            , UCase(trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РІРµСЂС‚РёРєР°Р»СЊРЅРѕРµ СЃРјРµС‰РµРЅРёРµ")), UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ СЂР°Р·РјРµСЂ")) _
+            , UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚")), UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ Р¶РёСЂРЅС‹Р№")), UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ РєСѓСЂСЃРёРІ")) _
+            , UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№")), UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№")) _
+            , UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ")) _
+            , UCase(trans("РўСЂРёР°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ Р·Р°РїСѓС‰РµРЅ")), UCase(trans("РђРєС‚РёРІРёСЂРѕРІР°РЅР°")) _
        }
         NoSaveProps = TempNoSaveProps
 
     End Sub
 
-    ' ВОЗВРАЩАЕТ ТИП ТОГО, ИЛИ ИНОГО СВОЙСТВА
+    ' Р’РћР—Р’Р РђР©РђР•Рў РўРРџ РўРћР“Рћ, РР›Р РРќРћР“Рћ РЎР’РћР™РЎРўР’Рђ
     Public Function GetTypeProperty(ByVal prop As String) As String
         prop = UCase(prop)
 
-        If prop = UCase(trans("Текст")) Or prop = UCase(trans("Имя")) Or prop = UCase(trans("Вспомогательное поле")) _
-        Or prop = MyZnak & UCase(trans("Время создания")) Or prop = MyZnak & UCase(trans("Время доступа")) _
-        Or prop = MyZnak & UCase(trans("Время изменения")) _
-        Or prop = UCase(trans("Длительность время")) Or prop = UCase(trans("Проигралось времени")) _
-        Or prop = UCase(trans("Строка")) Or prop = UCase(trans("Символ")) _
-        Or prop = UCase(trans("Выделенный текст")) Or prop = UCase(trans("Символ пароля")) _
-        Or prop = MyZnak & UCase(trans("Значение реестра")) Or prop = UCase(trans("Всплывающая подсказка")) _
-        Or prop = UCase(trans("Текст страницы")) Or prop = UCase(trans("Заголовок страницы")) _
-        Or prop = UCase(trans("Тип страницы")) Or prop = UCase(trans("Куки")) _
-        Or prop = UCase(trans("Статусная строка")) Or prop = UCase(trans("Ссылка")) Or prop = UCase(trans("Значение")) _
-        Or prop = UCase(trans("Столбцы")) Or prop = UCase(trans("Строки")) _
-        Or prop = UCase(trans("Номера выделенных строк")) Or prop = UCase(trans("Номера выделенных столбцов")) _
-        Or prop = UCase(trans("Значение ячейки")) Or prop = UCase(trans("Значение по координатам")) _
-        Or prop = UCase(trans("Записи списка")) Or prop = UCase(trans("Выделенная запись")) _
-        Or prop = UCase(trans("Запись по номеру")) Or prop = UCase(trans("Ссылка надписи")) _
-        Or prop = UCase(trans("Номера отмеченых записей")) Or prop = UCase(trans("Отмеченные записи")) _
-        Or prop = UCase(trans("Номера выделенных записей")) Or prop = UCase(trans("Выделенные записи")) _
-        Or prop = UCase(trans("RTF код документа")) Or prop = UCase(trans("Выделенный RTF")) _
-        Or prop = UCase(trans("Надпись в окне")) Or prop = UCase(trans("Выбранная папка")) _
-        Or prop = UCase(trans("Добавлять расширение файлу")) Or prop = UCase(trans("Имя файла")) _
-        Or prop = UCase(trans("Фильтр файлов")) Or prop = UCase(trans("Выделенный RTF")) _
-        Or prop = UCase(trans("Начальная папка")) Or prop = UCase(trans("Заголовок")) _
-        Or prop = UCase(trans("Текст на печать")) _
-        Or prop = UCase(trans("Родительское меню")) Or prop = UCase(trans("Родительский пункт")) _
-        Or prop = MyZnak & UCase(trans("Символ по номеру")) Or prop = MyZnak & UCase(trans("Разбить на части")) _
-        Or prop = MyZnak & UCase(trans("Взять кусок текста")) Or prop = MyZnak & UCase(trans("Кавычки убрать")) _
-        Or prop = MyZnak & UCase(trans("Кавычками обособить")) Or prop = MyZnak & UCase(trans("Разбить на части без кавычек")) _
-        Or prop = MyZnak & UCase(trans("Строка по номеру")) Or prop = MyZnak & UCase(trans("Вставить символы в текст")) _
-        Or prop = MyZnak & UCase(trans("Удалить кусок текста")) Or prop = MyZnak & UCase(trans("Заменить")) _
-        Or prop = MyZnak & UCase(trans("Заменить все")) Or prop = MyZnak & UCase(trans("Сделать буквы прописными")) _
-        Or prop = MyZnak & UCase(trans("Сделать буквы заглавными")) Or prop = MyZnak & UCase(trans("Убрать пробелы")) _
-        Or prop = MyZnak & UCase(trans("Убрать пробелы в начале")) Or prop = MyZnak & UCase(trans("Убрать пробелы в конце")) _
-        Or prop = MyZnak & UCase(trans("Процессы системы")) Or prop = MyZnak & UCase(trans("Окна системы")) _
-        Or prop = MyZnak & UCase(trans("Окно в фокусе")) _
-        Or prop = UCase(trans("Тип")) Or prop = UCase(trans("Подсказка")) _
-        Or prop = UCase(trans("Выбранная дата")) Or prop = UCase(trans("Формат даты по выбору")) _
-        Or prop = MyZnak & UCase(trans("Время")) _
-        Or prop = UCase(trans("Текст кнопки")) Or prop = UCase(trans("Сообщение успешной активации")) _
-        Or prop = UCase(trans("Сообщение неудачной активации")) Or prop = UCase(trans("ID пользователя")) _
-        Or prop = UCase(trans("ID программы")) Or prop = UCase(trans("ID в реестре")) _
-        Or prop = UCase(trans("Ключ шифрования")) Or prop = UCase(trans("KeyEncryption")) _
-        Or prop = UCase(trans("Примечание")) Or prop = UCase(trans("Текст поля")) _
-        Or prop = UCase(trans("Обозначение команд")) Or prop = UCase(trans("Принятая команда")) _
-        Or prop = UCase(trans("Принятый текст")) Or prop = UCase(trans("IP для соединения")) _
-        Or prop = UCase(trans("Имя в сети")) Or prop = UCase(trans("Принятый файл")) _
-        Or prop = UCase(trans("Порт для соединения")) Or prop = UCase(trans("Папка для загрузок")) _
-        Or prop = UCase(trans("Имена клиентов")) Or prop = UCase(trans("Текст поля ввода")) _
-        Or prop = UCase(trans("Текст поля лога")) Or prop = UCase(trans("Ip клиентов")) _
-        Or prop = UCase(trans("Ip клиента")) _
-        Or prop = UCase(trans("Отправленная команда")) Or prop = UCase(trans("Отправленый файл")) _
-        Or prop = UCase(trans("Отправленый текст")) _
-        Or prop = UCase(trans("Ссылка запроса")) Or prop = UCase(trans("Ссылка откуда пришли")) _
-        Or prop = UCase(trans("Ссылка перенаправления")) Or prop = UCase(trans("Тип браузера")) _
-        Or prop = UCase(trans("Принимать")) Or prop = UCase(trans("Прокси IP")) _
-        Or prop = UCase(trans("Прокси порт")) Or prop = UCase(trans("Кодировка страницы")) _
-        Or prop = UCase(trans("Язык страницы")) Or prop = UCase(trans("Содержимое запроса")) _
-        Or prop = UCase(trans("Куки запросов")) Or prop = UCase(trans("Результат запроса")) _
-        Or prop = UCase(trans("Ассоциированый принятый файл")) _
-        Or prop = UCase(trans("Значение выделеных ячеек")) Or prop = UCase(trans("Поиск в таблице")) _
-        Or prop = UCase(trans("Поиск в выделеных")) Or prop = UCase(trans("Ширина столбцов")) _
-         Or prop = UCase(trans("Вышина строк")) _
+        If prop = UCase(trans("РўРµРєСЃС‚")) Or prop = UCase(trans("РРјСЏ")) Or prop = UCase(trans("Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅРѕРµ РїРѕР»Рµ")) _
+        Or prop = MyZnak & UCase(trans("Р’СЂРµРјСЏ СЃРѕР·РґР°РЅРёСЏ")) Or prop = MyZnak & UCase(trans("Р’СЂРµРјСЏ РґРѕСЃС‚СѓРїР°")) _
+        Or prop = MyZnak & UCase(trans("Р’СЂРµРјСЏ РёР·РјРµРЅРµРЅРёСЏ")) _
+        Or prop = UCase(trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РІСЂРµРјСЏ")) Or prop = UCase(trans("РџСЂРѕРёРіСЂР°Р»РѕСЃСЊ РІСЂРµРјРµРЅРё")) _
+        Or prop = UCase(trans("РЎС‚СЂРѕРєР°")) Or prop = UCase(trans("РЎРёРјРІРѕР»")) _
+        Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚")) Or prop = UCase(trans("РЎРёРјРІРѕР» РїР°СЂРѕР»СЏ")) _
+        Or prop = MyZnak & UCase(trans("Р—РЅР°С‡РµРЅРёРµ СЂРµРµСЃС‚СЂР°")) Or prop = UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰Р°СЏ РїРѕРґСЃРєР°Р·РєР°")) _
+        Or prop = UCase(trans("РўРµРєСЃС‚ СЃС‚СЂР°РЅРёС†С‹")) Or prop = UCase(trans("Р—Р°РіРѕР»РѕРІРѕРє СЃС‚СЂР°РЅРёС†С‹")) _
+        Or prop = UCase(trans("РўРёРї СЃС‚СЂР°РЅРёС†С‹")) Or prop = UCase(trans("РљСѓРєРё")) _
+        Or prop = UCase(trans("РЎС‚Р°С‚СѓСЃРЅР°СЏ СЃС‚СЂРѕРєР°")) Or prop = UCase(trans("РЎСЃС‹Р»РєР°")) Or prop = UCase(trans("Р—РЅР°С‡РµРЅРёРµ")) _
+        Or prop = UCase(trans("РЎС‚РѕР»Р±С†С‹")) Or prop = UCase(trans("РЎС‚СЂРѕРєРё")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє")) Or prop = UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ")) _
+        Or prop = UCase(trans("Р—РЅР°С‡РµРЅРёРµ СЏС‡РµР№РєРё")) Or prop = UCase(trans("Р—РЅР°С‡РµРЅРёРµ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) _
+        Or prop = UCase(trans("Р—Р°РїРёСЃРё СЃРїРёСЃРєР°")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ")) _
+        Or prop = UCase(trans("Р—Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ")) Or prop = UCase(trans("РЎСЃС‹Р»РєР° РЅР°РґРїРёСЃРё")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂР° РѕС‚РјРµС‡РµРЅС‹С… Р·Р°РїРёСЃРµР№")) Or prop = UCase(trans("РћС‚РјРµС‡РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… Р·Р°РїРёСЃРµР№")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё")) _
+        Or prop = UCase(trans("RTF РєРѕРґ РґРѕРєСѓРјРµРЅС‚Р°")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ RTF")) _
+        Or prop = UCase(trans("РќР°РґРїРёСЃСЊ РІ РѕРєРЅРµ")) Or prop = UCase(trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РїР°РїРєР°")) _
+        Or prop = UCase(trans("Р”РѕР±Р°РІР»СЏС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ С„Р°Р№Р»Сѓ")) Or prop = UCase(trans("РРјСЏ С„Р°Р№Р»Р°")) _
+        Or prop = UCase(trans("Р¤РёР»СЊС‚СЂ С„Р°Р№Р»РѕРІ")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ RTF")) _
+        Or prop = UCase(trans("РќР°С‡Р°Р»СЊРЅР°СЏ РїР°РїРєР°")) Or prop = UCase(trans("Р—Р°РіРѕР»РѕРІРѕРє")) _
+        Or prop = UCase(trans("РўРµРєСЃС‚ РЅР° РїРµС‡Р°С‚СЊ")) _
+        Or prop = UCase(trans("Р РѕРґРёС‚РµР»СЊСЃРєРѕРµ РјРµРЅСЋ")) Or prop = UCase(trans("Р РѕРґРёС‚РµР»СЊСЃРєРёР№ РїСѓРЅРєС‚")) _
+        Or prop = MyZnak & UCase(trans("РЎРёРјРІРѕР» РїРѕ РЅРѕРјРµСЂСѓ")) Or prop = MyZnak & UCase(trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё")) _
+        Or prop = MyZnak & UCase(trans("Р’Р·СЏС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°")) Or prop = MyZnak & UCase(trans("РљР°РІС‹С‡РєРё СѓР±СЂР°С‚СЊ")) _
+        Or prop = MyZnak & UCase(trans("РљР°РІС‹С‡РєР°РјРё РѕР±РѕСЃРѕР±РёС‚СЊ")) Or prop = MyZnak & UCase(trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё Р±РµР· РєР°РІС‹С‡РµРє")) _
+        Or prop = MyZnak & UCase(trans("РЎС‚СЂРѕРєР° РїРѕ РЅРѕРјРµСЂСѓ")) Or prop = MyZnak & UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ СЃРёРјРІРѕР»С‹ РІ С‚РµРєСЃС‚")) _
+        Or prop = MyZnak & UCase(trans("РЈРґР°Р»РёС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°")) Or prop = MyZnak & UCase(trans("Р—Р°РјРµРЅРёС‚СЊ")) _
+        Or prop = MyZnak & UCase(trans("Р—Р°РјРµРЅРёС‚СЊ РІСЃРµ")) Or prop = MyZnak & UCase(trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ РїСЂРѕРїРёСЃРЅС‹РјРё")) _
+        Or prop = MyZnak & UCase(trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ Р·Р°РіР»Р°РІРЅС‹РјРё")) Or prop = MyZnak & UCase(trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹")) _
+        Or prop = MyZnak & UCase(trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РЅР°С‡Р°Р»Рµ")) Or prop = MyZnak & UCase(trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РєРѕРЅС†Рµ")) _
+        Or prop = MyZnak & UCase(trans("РџСЂРѕС†РµСЃСЃС‹ СЃРёСЃС‚РµРјС‹")) Or prop = MyZnak & UCase(trans("РћРєРЅР° СЃРёСЃС‚РµРјС‹")) _
+        Or prop = MyZnak & UCase(trans("РћРєРЅРѕ РІ С„РѕРєСѓСЃРµ")) _
+        Or prop = UCase(trans("РўРёРї")) Or prop = UCase(trans("РџРѕРґСЃРєР°Р·РєР°")) _
+        Or prop = UCase(trans("Р’С‹Р±СЂР°РЅРЅР°СЏ РґР°С‚Р°")) Or prop = UCase(trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹ РїРѕ РІС‹Р±РѕСЂСѓ")) _
+        Or prop = MyZnak & UCase(trans("Р’СЂРµРјСЏ")) _
+        Or prop = UCase(trans("РўРµРєСЃС‚ РєРЅРѕРїРєРё")) Or prop = UCase(trans("РЎРѕРѕР±С‰РµРЅРёРµ СѓСЃРїРµС€РЅРѕР№ Р°РєС‚РёРІР°С†РёРё")) _
+        Or prop = UCase(trans("РЎРѕРѕР±С‰РµРЅРёРµ РЅРµСѓРґР°С‡РЅРѕР№ Р°РєС‚РёРІР°С†РёРё")) Or prop = UCase(trans("ID РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ")) _
+        Or prop = UCase(trans("ID РїСЂРѕРіСЂР°РјРјС‹")) Or prop = UCase(trans("ID РІ СЂРµРµСЃС‚СЂРµ")) _
+        Or prop = UCase(trans("РљР»СЋС‡ С€РёС„СЂРѕРІР°РЅРёСЏ")) Or prop = UCase(trans("KeyEncryption")) _
+        Or prop = UCase(trans("РџСЂРёРјРµС‡Р°РЅРёРµ")) Or prop = UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ")) _
+        Or prop = UCase(trans("РћР±РѕР·РЅР°С‡РµРЅРёРµ РєРѕРјР°РЅРґ")) Or prop = UCase(trans("РџСЂРёРЅСЏС‚Р°СЏ РєРѕРјР°РЅРґР°")) _
+        Or prop = UCase(trans("РџСЂРёРЅСЏС‚С‹Р№ С‚РµРєСЃС‚")) Or prop = UCase(trans("IP РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ")) _
+        Or prop = UCase(trans("РРјСЏ РІ СЃРµС‚Рё")) Or prop = UCase(trans("РџСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»")) _
+        Or prop = UCase(trans("РџРѕСЂС‚ РґР»СЏ СЃРѕРµРґРёРЅРµРЅРёСЏ")) Or prop = UCase(trans("РџР°РїРєР° РґР»СЏ Р·Р°РіСЂСѓР·РѕРє")) _
+        Or prop = UCase(trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ")) Or prop = UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ РІРІРѕРґР°")) _
+        Or prop = UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ Р»РѕРіР°")) Or prop = UCase(trans("Ip РєР»РёРµРЅС‚РѕРІ")) _
+        Or prop = UCase(trans("Ip РєР»РёРµРЅС‚Р°")) _
+        Or prop = UCase(trans("РћС‚РїСЂР°РІР»РµРЅРЅР°СЏ РєРѕРјР°РЅРґР°")) Or prop = UCase(trans("РћС‚РїСЂР°РІР»РµРЅС‹Р№ С„Р°Р№Р»")) _
+        Or prop = UCase(trans("РћС‚РїСЂР°РІР»РµРЅС‹Р№ С‚РµРєСЃС‚")) _
+        Or prop = UCase(trans("РЎСЃС‹Р»РєР° Р·Р°РїСЂРѕСЃР°")) Or prop = UCase(trans("РЎСЃС‹Р»РєР° РѕС‚РєСѓРґР° РїСЂРёС€Р»Рё")) _
+        Or prop = UCase(trans("РЎСЃС‹Р»РєР° РїРµСЂРµРЅР°РїСЂР°РІР»РµРЅРёСЏ")) Or prop = UCase(trans("РўРёРї Р±СЂР°СѓР·РµСЂР°")) _
+        Or prop = UCase(trans("РџСЂРёРЅРёРјР°С‚СЊ")) Or prop = UCase(trans("РџСЂРѕРєСЃРё IP")) _
+        Or prop = UCase(trans("РџСЂРѕРєСЃРё РїРѕСЂС‚")) Or prop = UCase(trans("РљРѕРґРёСЂРѕРІРєР° СЃС‚СЂР°РЅРёС†С‹")) _
+        Or prop = UCase(trans("РЇР·С‹Рє СЃС‚СЂР°РЅРёС†С‹")) Or prop = UCase(trans("РЎРѕРґРµСЂР¶РёРјРѕРµ Р·Р°РїСЂРѕСЃР°")) _
+        Or prop = UCase(trans("РљСѓРєРё Р·Р°РїСЂРѕСЃРѕРІ")) Or prop = UCase(trans("Р РµР·СѓР»СЊС‚Р°С‚ Р·Р°РїСЂРѕСЃР°")) _
+        Or prop = UCase(trans("РђСЃСЃРѕС†РёРёСЂРѕРІР°РЅС‹Р№ РїСЂРёРЅСЏС‚С‹Р№ С„Р°Р№Р»")) _
+        Or prop = UCase(trans("Р—РЅР°С‡РµРЅРёРµ РІС‹РґРµР»РµРЅС‹С… СЏС‡РµРµРє")) Or prop = UCase(trans("РџРѕРёСЃРє РІ С‚Р°Р±Р»РёС†Рµ")) _
+        Or prop = UCase(trans("РџРѕРёСЃРє РІ РІС‹РґРµР»РµРЅС‹С…")) Or prop = UCase(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†РѕРІ")) _
+         Or prop = UCase(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРє")) _
       Then
-            Return trans("Текст")
+            Return trans("РўРµРєСЃС‚")
 
 
 
-        ElseIf prop = UCase(trans("Главная форма")) Or prop = UCase(trans("Запретить закрытие")) _
-        Or prop = UCase(trans("АвтоТроеточие")) Or prop = UCase(trans("Работает")) Or prop = UCase(trans("Видимый")) _
-       Or prop = UCase(trans("Шрифт жирный")) Or prop = UCase(trans("Шрифт курсив")) _
-       Or prop = UCase(trans("Шрифт зачеркнутый")) Or prop = UCase(trans("Шрифт подчеркнутый")) _
-       Or prop = UCase(trans("Прокрутка1")) Or prop = UCase(trans("Прокрутка")) Or prop = UCase(trans("Прокрутка2")) _
-       Or prop = UCase(trans("Фиксированный разделитель")) Or prop = UCase(trans("Панель1 скрыта")) _
-       Or prop = UCase(trans("Панель2 скрыта")) Or prop = UCase(trans("В фокусе")) Or prop = UCase(trans("ТабСтоп")) _
-       Or prop = UCase(trans("Скрывать выделение")) Or prop = UCase(trans("Многострочность")) _
-       Or prop = UCase(trans("Только для чтения")) Or prop = UCase(trans("Перенос по словам")) _
-       Or prop = MyZnak & UCase(trans("Отменить перемещение")) Or prop = MyZnak & UCase(trans("Отменить в новом окне")) _
-       Or prop = MyZnak & UCase(trans("Отменить событие")) Or prop = MyZnak & UCase(trans("Отменить ввод")) _
-       Or prop = MyZnak & UCase(trans("Только для чтения")) Or prop = MyZnak & UCase(trans("Скрытый")) _
-       Or prop = MyZnak & UCase(trans("Архивный")) Or prop = MyZnak & UCase(trans("Папка")) _
-       Or prop = MyZnak & UCase(trans("Зашифрованный")) Or prop = MyZnak & UCase(trans("Не индексируется")) _
-       Or prop = MyZnak & UCase(trans("Системный")) Or prop = MyZnak & UCase(trans("Временный")) _
-       Or prop = MyZnak & UCase(trans("Существует файл")) Or prop = UCase(trans("Проигрывается")) _
-       Or prop = UCase(trans("Звук отключен")) Or prop = UCase(trans("Отмечено")) _
-       Or prop = MyZnak & UCase(trans("Нажат альт")) Or prop = MyZnak & UCase(trans("Нажат шифт")) _
-       Or prop = MyZnak & UCase(trans("Нажат контрол")) Or prop = MyZnak & UCase(trans("Нажата мыши левая")) _
-       Or prop = MyZnak & UCase(trans("Нажата мыши правая")) Or prop = UCase(trans("Вращается колесико")) _
-       Or prop = MyZnak & UCase(trans("Ключ существует")) Or prop = UCase(trans("Папка существует")) _
-       Or prop = UCase(trans("Расположен слева")) Or prop = UCase(trans("Показывать подсказку")) _
-       Or prop = UCase(trans("Отметка по клику")) Or prop = UCase(trans("Рисунок растянут")) _
-       Or prop = UCase(trans("Отображать горячие клавиши")) _
-       Or prop = UCase(trans("Переходить по сссылкам")) Or prop = UCase(trans("Разрешить перетаскивания")) _
-       Or prop = UCase(trans("Назад возможно")) Or prop = UCase(trans("Вперед возможно")) _
-       Or prop = UCase(trans("Браузер занят")) Or prop = UCase(trans("Браузер offline")) _
-       Or prop = UCase(trans("Всплывающее меню браузера")) Or prop = UCase(trans("Отображать ошибки сценариев")) _
-       Or prop = UCase(trans("Полосы прокрутки активны")) Or prop = UCase(trans("Горячие клавиши работают")) _
-       Or prop = UCase(trans("Оконные кнопки и меню")) Or prop = UCase(trans("Показывать иконку")) _
-       Or prop = UCase(trans("Отображать в панели задач")) Or prop = UCase(trans("Поверх всех окон")) _
-       Or prop = UCase(trans("Позволить добавлять строки")) Or prop = UCase(trans("Позволить удалять строки")) _
-       Or prop = UCase(trans("Позволить переставлять столбцы")) Or prop = UCase(trans("Позволить растягивать столбцы")) _
-       Or prop = UCase(trans("Позволить растягивать строки")) Or prop = UCase(trans("Отображать заголовки столбцов")) _
-       Or prop = UCase(trans("Выбор нескольких ячеек")) Or prop = UCase(trans("Только для чтения таблица")) _
-       Or prop = UCase(trans("Ячейка выделена")) Or prop = UCase(trans("Строка только для чтения")) _
-       Or prop = UCase(trans("Столбец только для чтения")) Or prop = UCase(trans("Ячейка только для чтения")) _
-       Or prop = UCase(trans("Сортировать по возрастанию")) _
-       Or prop = UCase(trans("Выбор нескольких записей")) _
-       Or prop = UCase(trans("Список упрощенный")) Or prop = UCase(trans("Сортирован список")) _
-       Or prop = UCase(trans("Список раскрыт")) Or prop = UCase(trans("Позволить выбирать записи")) _
-       Or prop = UCase(trans("Горизонтальная прокрутка")) Or prop = UCase(trans("Многоколонность")) _
-       Or prop = UCase(trans("Ссылка посещена")) Or prop = UCase(trans("Ссылка рабочая")) _
-       Or prop = UCase(trans("Переходить в интернет по ссылке")) _
-       Or prop = UCase(trans("Подсвечивать ссылки")) Or prop = UCase(trans("Позволить перенос выделенного")) _
-       Or prop = UCase(trans("Выделенный имеет маркер")) Or prop = UCase(trans("Выделенный шрифт жирный")) _
-       Or prop = UCase(trans("Выделенный шрифт курсив")) Or prop = UCase(trans("Выделенный шрифт подчеркнутый")) _
-       Or prop = UCase(trans("Выделенный шрифт зачеркнутый")) Or prop = UCase(trans("Выделенный текст заблокирован")) _
-       Or prop = UCase(trans("Была нажата отмена")) _
-       Or prop = UCase(trans("Позволить выбирать цвет")) Or prop = UCase(trans("Позволить выбирать подчеркивания")) _
-       Or prop = UCase(trans("Проверять наличие файла")) Or prop = UCase(trans("Проверять наличие папки")) _
-       Or prop = UCase(trans("Выбор нескольких файлов")) Or prop = UCase(trans("Таблица в центре")) _
-       Or prop = UCase(trans("Отображать специальный столбец")) Or prop = UCase(trans("Кнопки вверх вниз")) _
-       Or prop = MyZnak & UCase(trans("Сравнить тексты")) Or prop = MyZnak & UCase(trans("Текст содержит")) _
-       Or prop = MyZnak & UCase(trans("Текст не содержит")) _
-       Or prop = MyZnak & UCase(trans("Была нажата Отмена")) Or prop = MyZnak & UCase(trans("Была нажата Ок")) _
-       Or prop = MyZnak & UCase(trans("Была нажата Повторить")) Or prop = MyZnak & UCase(trans("Была нажата Да")) _
-       Or prop = MyZnak & UCase(trans("Была нажата Нет")) Or prop = MyZnak & UCase(trans("Была нажата Прервать")) _
-       Or prop = MyZnak & UCase(trans("Была нажата Пропустить")) Or prop = MyZnak & UCase(trans("Была нажата Справка")) _
-       Or prop = MyZnak & UCase(trans("Текст состоит из")) Or prop = MyZnak & UCase(trans("Текст есть число")) _
-       Or prop = MyZnak & UCase(trans("Текст есть цифры")) Or prop = UCase(trans("Активирована")) _
-       Or prop = UCase(trans("Показать в окне")) Or prop = UCase(trans("Триальный период запущен")) _
-       Or prop = UCase(trans("Отображать в трее")) _
-       Or prop = UCase(trans("Добавить в автозагрузку")) Or prop = UCase(trans("Разрешить запуск копий")) _
-       Or prop = UCase(trans("Файл отправляется")) _
-       Or prop = UCase(trans("Скрыть отправку файлов")) Or prop = UCase(trans("Скрыть отправку текста")) _
-       Or prop = UCase(trans("Скрыть список")) Or prop = UCase(trans("Скрыть отправку текста")) _
-       Or prop = UCase(trans("Удерживать соединение")) Or prop = UCase(trans("Автоматически перенаправляться")) _
-       Or prop = UCase(trans("Скачивается файл")) Or prop = UCase(trans("Скачка пауза")) _
-       Or prop = UCase(trans("Ждать пока скачается")) Or prop = UCase(trans("Справа налево")) _
-       Or prop = UCase(trans("Запретить минимизировать")) Or prop = UCase(trans("Запретить разворачивать")) _
-       Or prop = UCase(trans("C учетом регистра")) Or prop = UCase(trans("Слово целиком")) _
-        Or prop = UCase(trans("Только активное окно")) Or prop = UCase(trans("На весь экран")) _
+        ElseIf prop = UCase(trans("Р“Р»Р°РІРЅР°СЏ С„РѕСЂРјР°")) Or prop = UCase(trans("Р—Р°РїСЂРµС‚РёС‚СЊ Р·Р°РєСЂС‹С‚РёРµ")) _
+        Or prop = UCase(trans("РђРІС‚РѕРўСЂРѕРµС‚РѕС‡РёРµ")) Or prop = UCase(trans("Р Р°Р±РѕС‚Р°РµС‚")) Or prop = UCase(trans("Р’РёРґРёРјС‹Р№")) _
+       Or prop = UCase(trans("РЁСЂРёС„С‚ Р¶РёСЂРЅС‹Р№")) Or prop = UCase(trans("РЁСЂРёС„С‚ РєСѓСЂСЃРёРІ")) _
+       Or prop = UCase(trans("РЁСЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№")) Or prop = UCase(trans("РЁСЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№")) _
+       Or prop = UCase(trans("РџСЂРѕРєСЂСѓС‚РєР°1")) Or prop = UCase(trans("РџСЂРѕРєСЂСѓС‚РєР°")) Or prop = UCase(trans("РџСЂРѕРєСЂСѓС‚РєР°2")) _
+       Or prop = UCase(trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅС‹Р№ СЂР°Р·РґРµР»РёС‚РµР»СЊ")) Or prop = UCase(trans("РџР°РЅРµР»СЊ1 СЃРєСЂС‹С‚Р°")) _
+       Or prop = UCase(trans("РџР°РЅРµР»СЊ2 СЃРєСЂС‹С‚Р°")) Or prop = UCase(trans("Р’ С„РѕРєСѓСЃРµ")) Or prop = UCase(trans("РўР°Р±РЎС‚РѕРї")) _
+       Or prop = UCase(trans("РЎРєСЂС‹РІР°С‚СЊ РІС‹РґРµР»РµРЅРёРµ")) Or prop = UCase(trans("РњРЅРѕРіРѕСЃС‚СЂРѕС‡РЅРѕСЃС‚СЊ")) _
+       Or prop = UCase(trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) Or prop = UCase(trans("РџРµСЂРµРЅРѕСЃ РїРѕ СЃР»РѕРІР°Рј")) _
+       Or prop = MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РїРµСЂРµРјРµС‰РµРЅРёРµ")) Or prop = MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РІ РЅРѕРІРѕРј РѕРєРЅРµ")) _
+       Or prop = MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ СЃРѕР±С‹С‚РёРµ")) Or prop = MyZnak & UCase(trans("РћС‚РјРµРЅРёС‚СЊ РІРІРѕРґ")) _
+       Or prop = MyZnak & UCase(trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) Or prop = MyZnak & UCase(trans("РЎРєСЂС‹С‚С‹Р№")) _
+       Or prop = MyZnak & UCase(trans("РђСЂС…РёРІРЅС‹Р№")) Or prop = MyZnak & UCase(trans("РџР°РїРєР°")) _
+       Or prop = MyZnak & UCase(trans("Р—Р°С€РёС„СЂРѕРІР°РЅРЅС‹Р№")) Or prop = MyZnak & UCase(trans("РќРµ РёРЅРґРµРєСЃРёСЂСѓРµС‚СЃСЏ")) _
+       Or prop = MyZnak & UCase(trans("РЎРёСЃС‚РµРјРЅС‹Р№")) Or prop = MyZnak & UCase(trans("Р’СЂРµРјРµРЅРЅС‹Р№")) _
+       Or prop = MyZnak & UCase(trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ С„Р°Р№Р»")) Or prop = UCase(trans("РџСЂРѕРёРіСЂС‹РІР°РµС‚СЃСЏ")) _
+       Or prop = UCase(trans("Р—РІСѓРє РѕС‚РєР»СЋС‡РµРЅ")) Or prop = UCase(trans("РћС‚РјРµС‡РµРЅРѕ")) _
+       Or prop = MyZnak & UCase(trans("РќР°Р¶Р°С‚ Р°Р»СЊС‚")) Or prop = MyZnak & UCase(trans("РќР°Р¶Р°С‚ С€РёС„С‚")) _
+       Or prop = MyZnak & UCase(trans("РќР°Р¶Р°С‚ РєРѕРЅС‚СЂРѕР»")) Or prop = MyZnak & UCase(trans("РќР°Р¶Р°С‚Р° РјС‹С€Рё Р»РµРІР°СЏ")) _
+       Or prop = MyZnak & UCase(trans("РќР°Р¶Р°С‚Р° РјС‹С€Рё РїСЂР°РІР°СЏ")) Or prop = UCase(trans("Р’СЂР°С‰Р°РµС‚СЃСЏ РєРѕР»РµСЃРёРєРѕ")) _
+       Or prop = MyZnak & UCase(trans("РљР»СЋС‡ СЃСѓС‰РµСЃС‚РІСѓРµС‚")) Or prop = UCase(trans("РџР°РїРєР° СЃСѓС‰РµСЃС‚РІСѓРµС‚")) _
+       Or prop = UCase(trans("Р Р°СЃРїРѕР»РѕР¶РµРЅ СЃР»РµРІР°")) Or prop = UCase(trans("РџРѕРєР°Р·С‹РІР°С‚СЊ РїРѕРґСЃРєР°Р·РєСѓ")) _
+       Or prop = UCase(trans("РћС‚РјРµС‚РєР° РїРѕ РєР»РёРєСѓ")) Or prop = UCase(trans("Р РёСЃСѓРЅРѕРє СЂР°СЃС‚СЏРЅСѓС‚")) _
+       Or prop = UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РіРѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё")) _
+       Or prop = UCase(trans("РџРµСЂРµС…РѕРґРёС‚СЊ РїРѕ СЃСЃСЃС‹Р»РєР°Рј")) Or prop = UCase(trans("Р Р°Р·СЂРµС€РёС‚СЊ РїРµСЂРµС‚Р°СЃРєРёРІР°РЅРёСЏ")) _
+       Or prop = UCase(trans("РќР°Р·Р°Рґ РІРѕР·РјРѕР¶РЅРѕ")) Or prop = UCase(trans("Р’РїРµСЂРµРґ РІРѕР·РјРѕР¶РЅРѕ")) _
+       Or prop = UCase(trans("Р‘СЂР°СѓР·РµСЂ Р·Р°РЅСЏС‚")) Or prop = UCase(trans("Р‘СЂР°СѓР·РµСЂ offline")) _
+       Or prop = UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ Р±СЂР°СѓР·РµСЂР°")) Or prop = UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РѕС€РёР±РєРё СЃС†РµРЅР°СЂРёРµРІ")) _
+       Or prop = UCase(trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё Р°РєС‚РёРІРЅС‹")) Or prop = UCase(trans("Р“РѕСЂСЏС‡РёРµ РєР»Р°РІРёС€Рё СЂР°Р±РѕС‚Р°СЋС‚")) _
+       Or prop = UCase(trans("РћРєРѕРЅРЅС‹Рµ РєРЅРѕРїРєРё Рё РјРµРЅСЋ")) Or prop = UCase(trans("РџРѕРєР°Р·С‹РІР°С‚СЊ РёРєРѕРЅРєСѓ")) _
+       Or prop = UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РІ РїР°РЅРµР»Рё Р·Р°РґР°С‡")) Or prop = UCase(trans("РџРѕРІРµСЂС… РІСЃРµС… РѕРєРѕРЅ")) _
+       Or prop = UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РґРѕР±Р°РІР»СЏС‚СЊ СЃС‚СЂРѕРєРё")) Or prop = UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ СѓРґР°Р»СЏС‚СЊ СЃС‚СЂРѕРєРё")) _
+       Or prop = UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РїРµСЂРµСЃС‚Р°РІР»СЏС‚СЊ СЃС‚РѕР»Р±С†С‹")) Or prop = UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ СЂР°СЃС‚СЏРіРёРІР°С‚СЊ СЃС‚РѕР»Р±С†С‹")) _
+       Or prop = UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ СЂР°СЃС‚СЏРіРёРІР°С‚СЊ СЃС‚СЂРѕРєРё")) Or prop = UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ Р·Р°РіРѕР»РѕРІРєРё СЃС‚РѕР»Р±С†РѕРІ")) _
+       Or prop = UCase(trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… СЏС‡РµРµРє")) Or prop = UCase(trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ С‚Р°Р±Р»РёС†Р°")) _
+       Or prop = UCase(trans("РЇС‡РµР№РєР° РІС‹РґРµР»РµРЅР°")) Or prop = UCase(trans("РЎС‚СЂРѕРєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) _
+       Or prop = UCase(trans("РЎС‚РѕР»Р±РµС† С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) Or prop = UCase(trans("РЇС‡РµР№РєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) _
+       Or prop = UCase(trans("РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ")) _
+       Or prop = UCase(trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… Р·Р°РїРёСЃРµР№")) _
+       Or prop = UCase(trans("РЎРїРёСЃРѕРє СѓРїСЂРѕС‰РµРЅРЅС‹Р№")) Or prop = UCase(trans("РЎРѕСЂС‚РёСЂРѕРІР°РЅ СЃРїРёСЃРѕРє")) _
+       Or prop = UCase(trans("РЎРїРёСЃРѕРє СЂР°СЃРєСЂС‹С‚")) Or prop = UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ Р·Р°РїРёСЃРё")) _
+       Or prop = UCase(trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ РїСЂРѕРєСЂСѓС‚РєР°")) Or prop = UCase(trans("РњРЅРѕРіРѕРєРѕР»РѕРЅРЅРѕСЃС‚СЊ")) _
+       Or prop = UCase(trans("РЎСЃС‹Р»РєР° РїРѕСЃРµС‰РµРЅР°")) Or prop = UCase(trans("РЎСЃС‹Р»РєР° СЂР°Р±РѕС‡Р°СЏ")) _
+       Or prop = UCase(trans("РџРµСЂРµС…РѕРґРёС‚СЊ РІ РёРЅС‚РµСЂРЅРµС‚ РїРѕ СЃСЃС‹Р»РєРµ")) _
+       Or prop = UCase(trans("РџРѕРґСЃРІРµС‡РёРІР°С‚СЊ СЃСЃС‹Р»РєРё")) Or prop = UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РїРµСЂРµРЅРѕСЃ РІС‹РґРµР»РµРЅРЅРѕРіРѕ")) _
+       Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РёРјРµРµС‚ РјР°СЂРєРµСЂ")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ Р¶РёСЂРЅС‹Р№")) _
+       Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ РєСѓСЂСЃРёРІ")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ РїРѕРґС‡РµСЂРєРЅСѓС‚С‹Р№")) _
+       Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С€СЂРёС„С‚ Р·Р°С‡РµСЂРєРЅСѓС‚С‹Р№")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С‚РµРєСЃС‚ Р·Р°Р±Р»РѕРєРёСЂРѕРІР°РЅ")) _
+       Or prop = UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РѕС‚РјРµРЅР°")) _
+       Or prop = UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ С†РІРµС‚")) Or prop = UCase(trans("РџРѕР·РІРѕР»РёС‚СЊ РІС‹Р±РёСЂР°С‚СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ")) _
+       Or prop = UCase(trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ С„Р°Р№Р»Р°")) Or prop = UCase(trans("РџСЂРѕРІРµСЂСЏС‚СЊ РЅР°Р»РёС‡РёРµ РїР°РїРєРё")) _
+       Or prop = UCase(trans("Р’С‹Р±РѕСЂ РЅРµСЃРєРѕР»СЊРєРёС… С„Р°Р№Р»РѕРІ")) Or prop = UCase(trans("РўР°Р±Р»РёС†Р° РІ С†РµРЅС‚СЂРµ")) _
+       Or prop = UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ СЃРїРµС†РёР°Р»СЊРЅС‹Р№ СЃС‚РѕР»Р±РµС†")) Or prop = UCase(trans("РљРЅРѕРїРєРё РІРІРµСЂС… РІРЅРёР·")) _
+       Or prop = MyZnak & UCase(trans("РЎСЂР°РІРЅРёС‚СЊ С‚РµРєСЃС‚С‹")) Or prop = MyZnak & UCase(trans("РўРµРєСЃС‚ СЃРѕРґРµСЂР¶РёС‚")) _
+       Or prop = MyZnak & UCase(trans("РўРµРєСЃС‚ РЅРµ СЃРѕРґРµСЂР¶РёС‚")) _
+       Or prop = MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РћС‚РјРµРЅР°")) Or prop = MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РћРє")) _
+       Or prop = MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџРѕРІС‚РѕСЂРёС‚СЊ")) Or prop = MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° Р”Р°")) _
+       Or prop = MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РќРµС‚")) Or prop = MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџСЂРµСЂРІР°С‚СЊ")) _
+       Or prop = MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РџСЂРѕРїСѓСЃС‚РёС‚СЊ")) Or prop = MyZnak & UCase(trans("Р‘С‹Р»Р° РЅР°Р¶Р°С‚Р° РЎРїСЂР°РІРєР°")) _
+       Or prop = MyZnak & UCase(trans("РўРµРєСЃС‚ СЃРѕСЃС‚РѕРёС‚ РёР·")) Or prop = MyZnak & UCase(trans("РўРµРєСЃС‚ РµСЃС‚СЊ С‡РёСЃР»Рѕ")) _
+       Or prop = MyZnak & UCase(trans("РўРµРєСЃС‚ РµСЃС‚СЊ С†РёС„СЂС‹")) Or prop = UCase(trans("РђРєС‚РёРІРёСЂРѕРІР°РЅР°")) _
+       Or prop = UCase(trans("РџРѕРєР°Р·Р°С‚СЊ РІ РѕРєРЅРµ")) Or prop = UCase(trans("РўСЂРёР°Р»СЊРЅС‹Р№ РїРµСЂРёРѕРґ Р·Р°РїСѓС‰РµРЅ")) _
+       Or prop = UCase(trans("РћС‚РѕР±СЂР°Р¶Р°С‚СЊ РІ С‚СЂРµРµ")) _
+       Or prop = UCase(trans("Р”РѕР±Р°РІРёС‚СЊ РІ Р°РІС‚РѕР·Р°РіСЂСѓР·РєСѓ")) Or prop = UCase(trans("Р Р°Р·СЂРµС€РёС‚СЊ Р·Р°РїСѓСЃРє РєРѕРїРёР№")) _
+       Or prop = UCase(trans("Р¤Р°Р№Р» РѕС‚РїСЂР°РІР»СЏРµС‚СЃСЏ")) _
+       Or prop = UCase(trans("РЎРєСЂС‹С‚СЊ РѕС‚РїСЂР°РІРєСѓ С„Р°Р№Р»РѕРІ")) Or prop = UCase(trans("РЎРєСЂС‹С‚СЊ РѕС‚РїСЂР°РІРєСѓ С‚РµРєСЃС‚Р°")) _
+       Or prop = UCase(trans("РЎРєСЂС‹С‚СЊ СЃРїРёСЃРѕРє")) Or prop = UCase(trans("РЎРєСЂС‹С‚СЊ РѕС‚РїСЂР°РІРєСѓ С‚РµРєСЃС‚Р°")) _
+       Or prop = UCase(trans("РЈРґРµСЂР¶РёРІР°С‚СЊ СЃРѕРµРґРёРЅРµРЅРёРµ")) Or prop = UCase(trans("РђРІС‚РѕРјР°С‚РёС‡РµСЃРєРё РїРµСЂРµРЅР°РїСЂР°РІР»СЏС‚СЊСЃСЏ")) _
+       Or prop = UCase(trans("РЎРєР°С‡РёРІР°РµС‚СЃСЏ С„Р°Р№Р»")) Or prop = UCase(trans("РЎРєР°С‡РєР° РїР°СѓР·Р°")) _
+       Or prop = UCase(trans("Р–РґР°С‚СЊ РїРѕРєР° СЃРєР°С‡Р°РµС‚СЃСЏ")) Or prop = UCase(trans("РЎРїСЂР°РІР° РЅР°Р»РµРІРѕ")) _
+       Or prop = UCase(trans("Р—Р°РїСЂРµС‚РёС‚СЊ РјРёРЅРёРјРёР·РёСЂРѕРІР°С‚СЊ")) Or prop = UCase(trans("Р—Р°РїСЂРµС‚РёС‚СЊ СЂР°Р·РІРѕСЂР°С‡РёРІР°С‚СЊ")) _
+       Or prop = UCase(trans("C СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°")) Or prop = UCase(trans("РЎР»РѕРІРѕ С†РµР»РёРєРѕРј")) _
+        Or prop = UCase(trans("РўРѕР»СЊРєРѕ Р°РєС‚РёРІРЅРѕРµ РѕРєРЅРѕ")) Or prop = UCase(trans("РќР° РІРµСЃСЊ СЌРєСЂР°РЅ")) _
       Then
-            Return trans("ДаНет")
+            Return trans("Р”Р°РќРµС‚")
 
-        ElseIf prop = UCase(trans("Фоновой рисунок")) Or prop = UCase(trans("Фоновой рисунок1")) _
-                              Or prop = UCase(trans("Фоновой рисунок2")) Or prop = UCase(trans("Рисунок")) _
-                              Or prop = MyZnak & UCase(trans("Рисунок рабочего стола")) _
-                              Or prop = MyZnak & UCase(trans("Рисунок буфера обмена")) Or prop = UCase(trans("Иконка")) _
-                              Or prop = UCase(trans("Рисунок на печать")) _
+        ElseIf prop = UCase(trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє")) Or prop = UCase(trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє1")) _
+                              Or prop = UCase(trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє2")) Or prop = UCase(trans("Р РёСЃСѓРЅРѕРє")) _
+                              Or prop = MyZnak & UCase(trans("Р РёСЃСѓРЅРѕРє СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°")) _
+                              Or prop = MyZnak & UCase(trans("Р РёСЃСѓРЅРѕРє Р±СѓС„РµСЂР° РѕР±РјРµРЅР°")) Or prop = UCase(trans("РРєРѕРЅРєР°")) _
+                              Or prop = UCase(trans("Р РёСЃСѓРЅРѕРє РЅР° РїРµС‡Р°С‚СЊ")) _
                               Then
-            Return trans("Рисунок")
+            Return trans("Р РёСЃСѓРЅРѕРє")
 
-        ElseIf prop = UCase(trans("Файл проигрывания")) Or prop = MyZnak & UCase(trans("Заставка")) _
+        ElseIf prop = UCase(trans("Р¤Р°Р№Р» РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ")) Or prop = MyZnak & UCase(trans("Р—Р°СЃС‚Р°РІРєР°")) _
                Then
-            Return trans("Файл")
+            Return trans("Р¤Р°Р№Р»")
 
-        ElseIf prop = UCase(trans("Цвет")) Or prop = UCase(trans("Цвет1")) Or prop = UCase(trans("Цвет2")) _
-        Or prop = UCase(trans("Цвет шрифта")) Or prop = UCase(trans("Прозрачный цвет рисунка")) _
-        Or prop = UCase(trans("Прозрачный цвет")) Or prop = UCase(trans("Цвет сетки")) _
-        Or prop = UCase(trans("Цвет фона ячеек")) Or prop = UCase(trans("Цвет фона выделенных ячеек")) _
-        Or prop = UCase(trans("Цвет шрифта ячеек")) Or prop = UCase(trans("Цвет шрифта выделенных ячеек")) _
-        Or prop = UCase(trans("Цвет активной ссылки")) Or prop = UCase(trans("Цвет нерабочей ссылки")) _
-        Or prop = UCase(trans("Цвет ссылки")) Or prop = UCase(trans("Цвет посещенной ссылки")) _
-        Or prop = UCase(trans("Выделенный задний фон")) Or prop = UCase(trans("Выделенный цвет текста")) _
-        Or prop = UCase(trans("Выбранный цвет")) _
+        ElseIf prop = UCase(trans("Р¦РІРµС‚")) Or prop = UCase(trans("Р¦РІРµС‚1")) Or prop = UCase(trans("Р¦РІРµС‚2")) _
+        Or prop = UCase(trans("Р¦РІРµС‚ С€СЂРёС„С‚Р°")) Or prop = UCase(trans("РџСЂРѕР·СЂР°С‡РЅС‹Р№ С†РІРµС‚ СЂРёСЃСѓРЅРєР°")) _
+        Or prop = UCase(trans("РџСЂРѕР·СЂР°С‡РЅС‹Р№ С†РІРµС‚")) Or prop = UCase(trans("Р¦РІРµС‚ СЃРµС‚РєРё")) _
+        Or prop = UCase(trans("Р¦РІРµС‚ С„РѕРЅР° СЏС‡РµРµРє")) Or prop = UCase(trans("Р¦РІРµС‚ С„РѕРЅР° РІС‹РґРµР»РµРЅРЅС‹С… СЏС‡РµРµРє")) _
+        Or prop = UCase(trans("Р¦РІРµС‚ С€СЂРёС„С‚Р° СЏС‡РµРµРє")) Or prop = UCase(trans("Р¦РІРµС‚ С€СЂРёС„С‚Р° РІС‹РґРµР»РµРЅРЅС‹С… СЏС‡РµРµРє")) _
+        Or prop = UCase(trans("Р¦РІРµС‚ Р°РєС‚РёРІРЅРѕР№ СЃСЃС‹Р»РєРё")) Or prop = UCase(trans("Р¦РІРµС‚ РЅРµСЂР°Р±РѕС‡РµР№ СЃСЃС‹Р»РєРё")) _
+        Or prop = UCase(trans("Р¦РІРµС‚ СЃСЃС‹Р»РєРё")) Or prop = UCase(trans("Р¦РІРµС‚ РїРѕСЃРµС‰РµРЅРЅРѕР№ СЃСЃС‹Р»РєРё")) _
+        Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ Р·Р°РґРЅРёР№ С„РѕРЅ")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ С†РІРµС‚ С‚РµРєСЃС‚Р°")) _
+        Or prop = UCase(trans("Р’С‹Р±СЂР°РЅРЅС‹Р№ С†РІРµС‚")) _
         Then
-            Return trans("Цвет")
+            Return trans("Р¦РІРµС‚")
 
-        ElseIf prop = UCase(trans("X")) Or prop = UCase(trans("Y")) Or prop = UCase(trans("Номер")) _
-        Or prop = UCase(trans("Максимальная ширина")) Or prop = UCase(trans("Максимальная вышина")) _
-        Or prop = UCase(trans("Минимальная ширина")) Or prop = UCase(trans("Минимальная вышина")) _
-        Or prop = UCase(trans("Поле слева")) Or prop = UCase(trans("Поле сверху")) _
-        Or prop = UCase(trans("Поле справа")) Or prop = UCase(trans("Поле снизу")) _
-        Or prop = UCase(trans("Ширина разделителя")) Or prop = UCase(trans("Расстояние разделителя")) _
-        Or prop = UCase(trans("Инкремент разделителя")) Or prop = UCase(trans("Панель1 минимум")) _
-        Or prop = UCase(trans("Панель2 минимум")) _
-        Or prop = UCase(trans("Ширина")) Or prop = UCase(trans("Вышина")) Or prop = UCase(trans("ТабНомер")) _
-        Or prop = MyZnak & UCase(trans("Частота экрана")) Or prop = MyZnak & UCase(trans("Качество цветопередачи")) _
-        Or prop = UCase(trans("Громкость")) Or prop = UCase(trans("Баланс")) Or prop = UCase(trans("Скорость")) _
-        Or prop = UCase(trans("Длительность общая")) Or prop = UCase(trans("Позиция проигрывания")) _
-        Or prop = UCase(trans("Оригинальная вышина")) Or prop = UCase(trans("Оригинальная ширина")) _
-        Or prop = UCase(trans("Максимальная длинна")) Or prop = UCase(trans("Начало выделения")) _
-        Or prop = UCase(trans("Номер символа по координатам")) Or prop = UCase(trans("Номер первого символа строки")) _
-        Or prop = UCase(trans("Номер первого символа текущей строки")) _
-        Or prop = UCase(trans("Номер строки по номеру символа")) Or prop = UCase(trans("Длинна выделения")) _
-        Or prop = UCase(trans("X по номеру символа")) Or prop = UCase(trans("Y по номеру символа")) _
-        Or prop = UCase(trans("Количество строк")) Or prop = UCase(trans("Количество символов")) _
-        Or prop = UCase(trans("Оригинальная вышина")) Or prop = UCase(trans("Оригинальная ширина")) _
-        Or prop = UCase(trans("Оригинальная вышина")) Or prop = UCase(trans("Оригинальная ширина")) _
-        Or prop = MyZnak & UCase(trans("Мышь X")) Or prop = MyZnak & UCase(trans("Мышь Y")) _
-        Or prop = UCase(trans("Прокрутка минимальная ширина")) Or prop = UCase(trans("Прокрутка минимальная вышина")) _
-        Or prop = UCase(trans("Прокручено по X")) Or prop = UCase(trans("Прокручено по Y")) _
-        Or prop = UCase(trans("Высота заголовка")) Or prop = UCase(trans("Прозрачность")) _
-        Or prop = UCase(trans("Номер выделенной закладки")) Or prop = UCase(trans("Позиция выделенной закладки")) _
-        Or prop = UCase(trans("Поле по горизонтали")) Or prop = UCase(trans("Поле по вертикали")) _
-        Or prop = UCase(trans("Вышина заголовков столбцов")) Or prop = UCase(trans("Ширина столбца")) _
-        Or prop = UCase(trans("Номер первой строки")) Or prop = UCase(trans("Номер последней строки")) _
-        Or prop = UCase(trans("Номер следующей строки")) Or prop = UCase(trans("Номер предыдущей строки")) _
-        Or prop = UCase(trans("Номер строки по координатам")) Or prop = UCase(trans("Номер столбца по координатам")) _
-        Or prop = UCase(trans("Количество строк таблицы")) Or prop = UCase(trans("Количество столбцов")) _
-        Or prop = UCase(trans("Высота раскрывающегося списка")) Or prop = UCase(trans("Ширина раскрывающегося списка")) _
-        Or prop = UCase(trans("Высота записей списка")) Or prop = UCase(trans("Количество раскрывающихся записей")) _
-        Or prop = UCase(trans("Номер выделенной записи")) Or prop = UCase(trans("Найти номер записи")) _
-        Or prop = UCase(trans("Количество записей")) Or prop = UCase(trans("Ширина колонок списка")) _
-        Or prop = UCase(trans("Начало ссылки")) Or prop = UCase(trans("Длинна ссылки")) _
-        Or prop = UCase(trans("Масштаб")) Or prop = UCase(trans("Выделенный размер красной строки")) _
-        Or prop = UCase(trans("Выделенный отступ слева")) Or prop = UCase(trans("Выделенный отступ справа")) _
-        Or prop = UCase(trans("Выделенное вертикальное смещение")) Or prop = UCase(trans("Номер фильтра")) _
-        Or prop = UCase(trans("Шрифт размер")) Or prop = UCase(trans("Выделенный Шрифт размер")) _
-        Or prop = UCase(trans("Интервал отсчета")) Or prop = UCase(trans("Прошло интервалов")) _
-        Or prop = MyZnak & UCase(trans("Поиск в тексте")) Or prop = MyZnak & UCase(trans("Поиск с учетом регистра")) _
-        Or prop = MyZnak & UCase(trans("Поиск в тексте с конца")) Or prop = MyZnak & UCase(trans("Поиск с регулярными выражениями")) _
-        Or prop = MyZnak & UCase(trans("Количество символов")) Or prop = MyZnak & UCase(trans("Количество частей текста")) _
-        Or prop = MyZnak & UCase(trans("Поиск без кавычек")) Or prop = MyZnak & UCase(trans("Количество строк")) _
-        Or prop = MyZnak & UCase(trans("Количество частей без кавычек")) _
-        Or prop = UCase(trans("Сдвиг большой")) Or prop = UCase(trans("Сдвиг малый")) _
-        Or prop = UCase(trans("Максимум")) Or prop = UCase(trans("Минимум")) Or prop = UCase(trans("Частота отметок")) _
-        Or prop = UCase(trans("Количество выделенных строк")) Or prop = UCase(trans("Количество выделенных столбцов")) _
-        Or prop = UCase(trans("Дней триала всего")) Or prop = UCase(trans("Дней триала осталось")) _
-        Or prop = UCase(trans("Таймаут")) Or prop = UCase(trans("Время задержки")) _
-        Or prop = UCase(trans("Размер буфера")) _
-        Or prop = UCase(trans("Скорость анимации")) Or prop = UCase(trans("Шаг загрузки")) _
-        Or prop = UCase(trans("Страница начала печати")) Or prop = UCase(trans("Страница конца печати")) _
-        Or prop = UCase(trans("Число копий")) _
-               Or prop = UCase(trans("Вышина строки")) _
+        ElseIf prop = UCase(trans("X")) Or prop = UCase(trans("Y")) Or prop = UCase(trans("РќРѕРјРµСЂ")) _
+        Or prop = UCase(trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) Or prop = UCase(trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) _
+        Or prop = UCase(trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) Or prop = UCase(trans("РњРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) _
+        Or prop = UCase(trans("РџРѕР»Рµ СЃР»РµРІР°")) Or prop = UCase(trans("РџРѕР»Рµ СЃРІРµСЂС…Сѓ")) _
+        Or prop = UCase(trans("РџРѕР»Рµ СЃРїСЂР°РІР°")) Or prop = UCase(trans("РџРѕР»Рµ СЃРЅРёР·Сѓ")) _
+        Or prop = UCase(trans("РЁРёСЂРёРЅР° СЂР°Р·РґРµР»РёС‚РµР»СЏ")) Or prop = UCase(trans("Р Р°СЃСЃС‚РѕСЏРЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ")) _
+        Or prop = UCase(trans("РРЅРєСЂРµРјРµРЅС‚ СЂР°Р·РґРµР»РёС‚РµР»СЏ")) Or prop = UCase(trans("РџР°РЅРµР»СЊ1 РјРёРЅРёРјСѓРј")) _
+        Or prop = UCase(trans("РџР°РЅРµР»СЊ2 РјРёРЅРёРјСѓРј")) _
+        Or prop = UCase(trans("РЁРёСЂРёРЅР°")) Or prop = UCase(trans("Р’С‹С€РёРЅР°")) Or prop = UCase(trans("РўР°Р±РќРѕРјРµСЂ")) _
+        Or prop = MyZnak & UCase(trans("Р§Р°СЃС‚РѕС‚Р° СЌРєСЂР°РЅР°")) Or prop = MyZnak & UCase(trans("РљР°С‡РµСЃС‚РІРѕ С†РІРµС‚РѕРїРµСЂРµРґР°С‡Рё")) _
+        Or prop = UCase(trans("Р“СЂРѕРјРєРѕСЃС‚СЊ")) Or prop = UCase(trans("Р‘Р°Р»Р°РЅСЃ")) Or prop = UCase(trans("РЎРєРѕСЂРѕСЃС‚СЊ")) _
+        Or prop = UCase(trans("Р”Р»РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕР±С‰Р°СЏ")) Or prop = UCase(trans("РџРѕР·РёС†РёСЏ РїСЂРѕРёРіСЂС‹РІР°РЅРёСЏ")) _
+        Or prop = UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) Or prop = UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) _
+        Or prop = UCase(trans("РњР°РєСЃРёРјР°Р»СЊРЅР°СЏ РґР»РёРЅРЅР°")) Or prop = UCase(trans("РќР°С‡Р°Р»Рѕ РІС‹РґРµР»РµРЅРёСЏ")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) Or prop = UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° СЃС‚СЂРѕРєРё")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° С‚РµРєСѓС‰РµР№ СЃС‚СЂРѕРєРё")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°")) Or prop = UCase(trans("Р”Р»РёРЅРЅР° РІС‹РґРµР»РµРЅРёСЏ")) _
+        Or prop = UCase(trans("X РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°")) Or prop = UCase(trans("Y РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°")) _
+        Or prop = UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє")) Or prop = UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ")) _
+        Or prop = UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) Or prop = UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) _
+        Or prop = UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) Or prop = UCase(trans("РћСЂРёРіРёРЅР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) _
+        Or prop = MyZnak & UCase(trans("РњС‹С€СЊ X")) Or prop = MyZnak & UCase(trans("РњС‹С€СЊ Y")) _
+        Or prop = UCase(trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ С€РёСЂРёРЅР°")) Or prop = UCase(trans("РџСЂРѕРєСЂСѓС‚РєР° РјРёРЅРёРјР°Р»СЊРЅР°СЏ РІС‹С€РёРЅР°")) _
+        Or prop = UCase(trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ X")) Or prop = UCase(trans("РџСЂРѕРєСЂСѓС‡РµРЅРѕ РїРѕ Y")) _
+        Or prop = UCase(trans("Р’С‹СЃРѕС‚Р° Р·Р°РіРѕР»РѕРІРєР°")) Or prop = UCase(trans("РџСЂРѕР·СЂР°С‡РЅРѕСЃС‚СЊ")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё")) Or prop = UCase(trans("РџРѕР·РёС†РёСЏ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё")) _
+        Or prop = UCase(trans("РџРѕР»Рµ РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё")) Or prop = UCase(trans("РџРѕР»Рµ РїРѕ РІРµСЂС‚РёРєР°Р»Рё")) _
+        Or prop = UCase(trans("Р’С‹С€РёРЅР° Р·Р°РіРѕР»РѕРІРєРѕРІ СЃС‚РѕР»Р±С†РѕРІ")) Or prop = UCase(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†Р°")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРё")) Or prop = UCase(trans("РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ СЃС‚СЂРѕРєРё")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂ СЃР»РµРґСѓСЋС‰РµР№ СЃС‚СЂРѕРєРё")) Or prop = UCase(trans("РќРѕРјРµСЂ РїСЂРµРґС‹РґСѓС‰РµР№ СЃС‚СЂРѕРєРё")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) Or prop = UCase(trans("РќРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) _
+        Or prop = UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє С‚Р°Р±Р»РёС†С‹")) Or prop = UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ")) _
+        Or prop = UCase(trans("Р’С‹СЃРѕС‚Р° СЂР°СЃРєСЂС‹РІР°СЋС‰РµРіРѕСЃСЏ СЃРїРёСЃРєР°")) Or prop = UCase(trans("РЁРёСЂРёРЅР° СЂР°СЃРєСЂС‹РІР°СЋС‰РµРіРѕСЃСЏ СЃРїРёСЃРєР°")) _
+        Or prop = UCase(trans("Р’С‹СЃРѕС‚Р° Р·Р°РїРёСЃРµР№ СЃРїРёСЃРєР°")) Or prop = UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЂР°СЃРєСЂС‹РІР°СЋС‰РёС…СЃСЏ Р·Р°РїРёСЃРµР№")) _
+        Or prop = UCase(trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РїРёСЃРё")) Or prop = UCase(trans("РќР°Р№С‚Рё РЅРѕРјРµСЂ Р·Р°РїРёСЃРё")) _
+        Or prop = UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ Р·Р°РїРёСЃРµР№")) Or prop = UCase(trans("РЁРёСЂРёРЅР° РєРѕР»РѕРЅРѕРє СЃРїРёСЃРєР°")) _
+        Or prop = UCase(trans("РќР°С‡Р°Р»Рѕ СЃСЃС‹Р»РєРё")) Or prop = UCase(trans("Р”Р»РёРЅРЅР° СЃСЃС‹Р»РєРё")) _
+        Or prop = UCase(trans("РњР°СЃС€С‚Р°Р±")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ СЂР°Р·РјРµСЂ РєСЂР°СЃРЅРѕР№ СЃС‚СЂРѕРєРё")) _
+        Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃР»РµРІР°")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РѕС‚СЃС‚СѓРї СЃРїСЂР°РІР°")) _
+        Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РІРµСЂС‚РёРєР°Р»СЊРЅРѕРµ СЃРјРµС‰РµРЅРёРµ")) Or prop = UCase(trans("РќРѕРјРµСЂ С„РёР»СЊС‚СЂР°")) _
+        Or prop = UCase(trans("РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Р№ РЁСЂРёС„С‚ СЂР°Р·РјРµСЂ")) _
+        Or prop = UCase(trans("РРЅС‚РµСЂРІР°Р» РѕС‚СЃС‡РµС‚Р°")) Or prop = UCase(trans("РџСЂРѕС€Р»Рѕ РёРЅС‚РµСЂРІР°Р»РѕРІ")) _
+        Or prop = MyZnak & UCase(trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ")) Or prop = MyZnak & UCase(trans("РџРѕРёСЃРє СЃ СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°")) _
+        Or prop = MyZnak & UCase(trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ СЃ РєРѕРЅС†Р°")) Or prop = MyZnak & UCase(trans("РџРѕРёСЃРє СЃ СЂРµРіСѓР»СЏСЂРЅС‹РјРё РІС‹СЂР°Р¶РµРЅРёСЏРјРё")) _
+        Or prop = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ")) Or prop = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ С‚РµРєСЃС‚Р°")) _
+        Or prop = MyZnak & UCase(trans("РџРѕРёСЃРє Р±РµР· РєР°РІС‹С‡РµРє")) Or prop = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє")) _
+        Or prop = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ Р±РµР· РєР°РІС‹С‡РµРє")) _
+        Or prop = UCase(trans("РЎРґРІРёРі Р±РѕР»СЊС€РѕР№")) Or prop = UCase(trans("РЎРґРІРёРі РјР°Р»С‹Р№")) _
+        Or prop = UCase(trans("РњР°РєСЃРёРјСѓРј")) Or prop = UCase(trans("РњРёРЅРёРјСѓРј")) Or prop = UCase(trans("Р§Р°СЃС‚РѕС‚Р° РѕС‚РјРµС‚РѕРє")) _
+        Or prop = UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє")) Or prop = UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ")) _
+        Or prop = UCase(trans("Р”РЅРµР№ С‚СЂРёР°Р»Р° РІСЃРµРіРѕ")) Or prop = UCase(trans("Р”РЅРµР№ С‚СЂРёР°Р»Р° РѕСЃС‚Р°Р»РѕСЃСЊ")) _
+        Or prop = UCase(trans("РўР°Р№РјР°СѓС‚")) Or prop = UCase(trans("Р’СЂРµРјСЏ Р·Р°РґРµСЂР¶РєРё")) _
+        Or prop = UCase(trans("Р Р°Р·РјРµСЂ Р±СѓС„РµСЂР°")) _
+        Or prop = UCase(trans("РЎРєРѕСЂРѕСЃС‚СЊ Р°РЅРёРјР°С†РёРё")) Or prop = UCase(trans("РЁР°Рі Р·Р°РіСЂСѓР·РєРё")) _
+        Or prop = UCase(trans("РЎС‚СЂР°РЅРёС†Р° РЅР°С‡Р°Р»Р° РїРµС‡Р°С‚Рё")) Or prop = UCase(trans("РЎС‚СЂР°РЅРёС†Р° РєРѕРЅС†Р° РїРµС‡Р°С‚Рё")) _
+        Or prop = UCase(trans("Р§РёСЃР»Рѕ РєРѕРїРёР№")) _
+               Or prop = UCase(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРєРё")) _
   Then
-            Return trans("Число")
+            Return trans("Р§РёСЃР»Рѕ")
 
-        ElseIf prop = UCase(trans("Положение текста")) Or prop = UCase(trans("Положение рисунка")) Then
-            Return trans("Положение")
+        ElseIf prop = UCase(trans("РџРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°")) Or prop = UCase(trans("РџРѕР»РѕР¶РµРЅРёРµ СЂРёСЃСѓРЅРєР°")) Then
+            Return trans("РџРѕР»РѕР¶РµРЅРёРµ")
 
-        ElseIf prop = UCase(trans("Всплывающее меню")) Or prop = UCase(trans("Всплывающее меню1")) _
-        Or prop = UCase(trans("Всплывающее меню2")) Or prop = UCase(trans("Вложенное всплывающее меню")) Then
-            Return trans("Всплывающее меню")
+        ElseIf prop = UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ")) Or prop = UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ1")) _
+        Or prop = UCase(trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ2")) Or prop = UCase(trans("Р’Р»РѕР¶РµРЅРЅРѕРµ РІСЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ")) Then
+            Return trans("Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ")
 
-        ElseIf prop = MyZnak & UCase(trans("Тип ключа")) Then
-            Return trans("Тип ключа")
+        ElseIf prop = MyZnak & UCase(trans("РўРёРї РєР»СЋС‡Р°")) Then
+            Return trans("РўРёРї РєР»СЋС‡Р°")
 
-        ElseIf prop = UCase(trans("Расположение текста")) Or prop = UCase(trans("Выделенное положение текста")) Then
-            Return trans("Расположение текста")
+        ElseIf prop = UCase(trans("Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°")) Or prop = UCase(trans("Р’С‹РґРµР»РµРЅРЅРѕРµ РїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°")) Then
+            Return trans("Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°")
 
         Else
             Return prop
         End If
     End Function
 
-    ' ОТОБРАЖЕНИЕ СВОЙСТВА В ЕДИТПРОПЕРТИ
+    ' РћРўРћР‘Р РђР–Р•РќРР• РЎР’РћР™РЎРўР’Рђ Р’ Р•Р”РРўРџР РћРџР•Р РўР
     Public Sub ShowPropInEditProperty(ByVal EditPr As Object)
         peremens2.ShowPropInEditProperty(EditPr)
     End Sub
 
-    ' ПОЛУЧИТЬ СПИСОК АРГУМЕНТОВ СВОЙСТВА ИЛИ МЕТОДА
+    ' РџРћР›РЈР§РРўР¬ РЎРџРРЎРћРљ РђР Р“РЈРњР•РќРўРћР’ РЎР’РћР™РЎРўР’Рђ РР›Р РњР•РўРћР”Рђ
     Public Function GetArguments(ByVal meth As String, ByVal MyObj As Object) As String()
         meth = UCase(meth)
 
-        If meth = UCase(MyZnak & trans("Сохранить в файле")) Or meth = UCase(MyZnak & trans("Добавить текст")) Then
-            Dim temp() As String = {trans("Путь к файлу"), trans("Что сохранять"), trans("Кодировка текста")}
+        If meth = UCase(MyZnak & trans("РЎРѕС…СЂР°РЅРёС‚СЊ РІ С„Р°Р№Р»Рµ")) Or meth = UCase(MyZnak & trans("Р”РѕР±Р°РІРёС‚СЊ С‚РµРєСЃС‚")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ"), trans("Р§С‚Рѕ СЃРѕС…СЂР°РЅСЏС‚СЊ"), trans("РљРѕРґРёСЂРѕРІРєР° С‚РµРєСЃС‚Р°")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Открыть файл")) Then
-            Dim temp() As String = {trans("Путь к файлу"), trans("Кодировка текста"), "неважно"}
+        ElseIf meth = UCase(MyZnak & trans("РћС‚РєСЂС‹С‚СЊ С„Р°Р№Р»")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ"), trans("РљРѕРґРёСЂРѕРІРєР° С‚РµРєСЃС‚Р°"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Сохранить рисунок")) Then
-            Dim temp() As String = {trans("Путь к файлу"), trans("Рисунок для сохранения")}
+        ElseIf meth = UCase(MyZnak & trans("РЎРѕС…СЂР°РЅРёС‚СЊ СЂРёСЃСѓРЅРѕРє")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ"), trans("Р РёСЃСѓРЅРѕРє РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Выполнить")) Then
-            Dim temp() As String = {trans("Команда Windows или имя файла"), trans("Аргументы")}
+        ElseIf meth = UCase(MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ")) Then
+            Dim temp() As String = {trans("РљРѕРјР°РЅРґР° Windows РёР»Рё РёРјСЏ С„Р°Р№Р»Р°"), trans("РђСЂРіСѓРјРµРЅС‚С‹")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Выполнить с результатом")) Then
-            Dim temp() As String = {trans("Команда Windows или имя файла"), trans("Аргументы"), _
-                                    trans("Кодировка текста"), "неважно"}
+        ElseIf meth = UCase(MyZnak & trans("Р’С‹РїРѕР»РЅРёС‚СЊ СЃ СЂРµР·СѓР»СЊС‚Р°С‚РѕРј")) Then
+            Dim temp() As String = {trans("РљРѕРјР°РЅРґР° Windows РёР»Рё РёРјСЏ С„Р°Р№Р»Р°"), trans("РђСЂРіСѓРјРµРЅС‚С‹"), _
+                                    trans("РљРѕРґРёСЂРѕРІРєР° С‚РµРєСЃС‚Р°"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Набрать текст")) Then
-            Dim temp() As String = {trans("Симулировать набор следующего текста")}
+        ElseIf meth = UCase(MyZnak & trans("РќР°Р±СЂР°С‚СЊ С‚РµРєСЃС‚")) Then
+            Dim temp() As String = {trans("РЎРёРјСѓР»РёСЂРѕРІР°С‚СЊ РЅР°Р±РѕСЂ СЃР»РµРґСѓСЋС‰РµРіРѕ С‚РµРєСЃС‚Р°")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Вращать колесико")) Then
-            Dim temp() As String = {trans("Размер вращения")}
+        ElseIf meth = UCase(MyZnak & trans("Р’СЂР°С‰Р°С‚СЊ РєРѕР»РµСЃРёРєРѕ")) Then
+            Dim temp() As String = {trans("Р Р°Р·РјРµСЂ РІСЂР°С‰РµРЅРёСЏ")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Поиск файлов")) Then
-            Dim temp() As String = {trans("Путь к папке"), trans("Что искать"), "неважно"}
+        ElseIf meth = UCase(MyZnak & trans("РџРѕРёСЃРє С„Р°Р№Р»РѕРІ")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє РїР°РїРєРµ"), trans("Р§С‚Рѕ РёСЃРєР°С‚СЊ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Сделать скриншот")) Then
-            Dim temp() As String = {trans("Только активное окно")}
+        ElseIf meth = UCase(MyZnak & trans("РЎРґРµР»Р°С‚СЊ СЃРєСЂРёРЅС€РѕС‚")) Then
+            Dim temp() As String = {trans("РўРѕР»СЊРєРѕ Р°РєС‚РёРІРЅРѕРµ РѕРєРЅРѕ")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Скриншот")) Then
-            Dim temp() As String = {trans("Только активное окно"), "неважно"}
+        ElseIf meth = UCase(MyZnak & trans("РЎРєСЂРёРЅС€РѕС‚")) Then
+            Dim temp() As String = {trans("РўРѕР»СЊРєРѕ Р°РєС‚РёРІРЅРѕРµ РѕРєРЅРѕ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Сделать скриншот объекта")) Then
-            Dim temp() As String = {trans("Объект съемки")}
+        ElseIf meth = UCase(MyZnak & trans("РЎРґРµР»Р°С‚СЊ СЃРєСЂРёРЅС€РѕС‚ РѕР±СЉРµРєС‚Р°")) Then
+            Dim temp() As String = {trans("РћР±СЉРµРєС‚ СЃСЉРµРјРєРё")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Скриншот объекта")) Then
-            Dim temp() As String = {trans("Объект съемки"), "неважно"}
+        ElseIf meth = UCase(MyZnak & trans("РЎРєСЂРёРЅС€РѕС‚ РѕР±СЉРµРєС‚Р°")) Then
+            Dim temp() As String = {trans("РћР±СЉРµРєС‚ СЃСЉРµРјРєРё"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
 
 
-        ElseIf meth = UCase(MyZnak & trans("Зашифровать")) Or meth = UCase(MyZnak & trans("Расшифровать")) _
-        Or meth = UCase(MyZnak & trans("Удалить")) Or meth = UCase(MyZnak & trans("Создать папку")) _
-        Or meth = UCase(trans("Открыть медиафайл")) _
-        Or meth = UCase(trans("Сохранить таблицу")) Or meth = UCase(trans("Открыть таблицу")) _
-        Or meth = UCase(trans("Сохранить документ")) Or meth = UCase(trans("Открыть документ")) _
-        Or meth = UCase(trans("Отправить файл клиентам")) Or meth = UCase(trans("Отправить файл серверу")) _
+        ElseIf meth = UCase(MyZnak & trans("Р—Р°С€РёС„СЂРѕРІР°С‚СЊ")) Or meth = UCase(MyZnak & trans("Р Р°СЃС€РёС„СЂРѕРІР°С‚СЊ")) _
+        Or meth = UCase(MyZnak & trans("РЈРґР°Р»РёС‚СЊ")) Or meth = UCase(MyZnak & trans("РЎРѕР·РґР°С‚СЊ РїР°РїРєСѓ")) _
+        Or meth = UCase(trans("РћС‚РєСЂС‹С‚СЊ РјРµРґРёР°С„Р°Р№Р»")) _
+        Or meth = UCase(trans("РЎРѕС…СЂР°РЅРёС‚СЊ С‚Р°Р±Р»РёС†Сѓ")) Or meth = UCase(trans("РћС‚РєСЂС‹С‚СЊ С‚Р°Р±Р»РёС†Сѓ")) _
+        Or meth = UCase(trans("РЎРѕС…СЂР°РЅРёС‚СЊ РґРѕРєСѓРјРµРЅС‚")) Or meth = UCase(trans("РћС‚РєСЂС‹С‚СЊ РґРѕРєСѓРјРµРЅС‚")) _
+        Or meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Р°Рј")) Or meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» СЃРµСЂРІРµСЂСѓ")) _
         Then
-            Dim temp() As String = {trans("Путь к файлу")}
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Копировать")) Or meth = UCase(MyZnak & trans("Переместить")) Then
-            Dim temp() As String = {trans("Путь к файлу"), trans("Новый путь к файлу")}
+        ElseIf meth = UCase(MyZnak & trans("РљРѕРїРёСЂРѕРІР°С‚СЊ")) Or meth = UCase(MyZnak & trans("РџРµСЂРµРјРµСЃС‚РёС‚СЊ")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ"), trans("РќРѕРІС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ")}
             Return temp
 
 
-        ElseIf meth = UCase(MyZnak & trans("Скрытый")) Or meth = UCase(MyZnak & trans("Только для чтения")) _
-        Or meth = UCase(MyZnak & trans("Архивный")) Or meth = UCase(MyZnak & trans("Папка")) _
-        Or meth = UCase(MyZnak & trans("Зашифрованный")) Or meth = UCase(MyZnak & trans("Не индексируется")) _
-        Or meth = UCase(MyZnak & trans("Системный")) Or meth = UCase(MyZnak & trans("Временный")) _
+        ElseIf meth = UCase(MyZnak & trans("РЎРєСЂС‹С‚С‹Р№")) Or meth = UCase(MyZnak & trans("РўРѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) _
+        Or meth = UCase(MyZnak & trans("РђСЂС…РёРІРЅС‹Р№")) Or meth = UCase(MyZnak & trans("РџР°РїРєР°")) _
+        Or meth = UCase(MyZnak & trans("Р—Р°С€РёС„СЂРѕРІР°РЅРЅС‹Р№")) Or meth = UCase(MyZnak & trans("РќРµ РёРЅРґРµРєСЃРёСЂСѓРµС‚СЃСЏ")) _
+        Or meth = UCase(MyZnak & trans("РЎРёСЃС‚РµРјРЅС‹Р№")) Or meth = UCase(MyZnak & trans("Р’СЂРµРјРµРЅРЅС‹Р№")) _
         Then
-            Dim temp() As String = {trans("Путь к файлу или папке"), trans("Значение атрибута")}
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РїР°РїРєРµ"), trans("Р—РЅР°С‡РµРЅРёРµ Р°С‚СЂРёР±СѓС‚Р°")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Существует файл")) Or meth = UCase(MyZnak & trans("Существует папка")) _
-        Or meth = UCase(MyZnak & trans("Получить файлы")) Or meth = UCase(MyZnak & trans("Получить папки")) _
-        Or meth = UCase(MyZnak & trans("Определить корневую")) Or meth = UCase(MyZnak & trans("Определить родительскую")) _
-        Or meth = UCase(MyZnak & trans("Определить имя папки")) _
-        Or meth = UCase(MyZnak & trans("Определить имя файла")) Or meth = UCase(MyZnak & trans("Определить расширение")) _
-        Or meth = UCase(MyZnak & trans("Определить без расширения")) Or meth = UCase(MyZnak & trans("Определить размер файла")) _
+        ElseIf meth = UCase(MyZnak & trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ С„Р°Р№Р»")) Or meth = UCase(MyZnak & trans("РЎСѓС‰РµСЃС‚РІСѓРµС‚ РїР°РїРєР°")) _
+        Or meth = UCase(MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ С„Р°Р№Р»С‹")) Or meth = UCase(MyZnak & trans("РџРѕР»СѓС‡РёС‚СЊ РїР°РїРєРё")) _
+        Or meth = UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РєРѕСЂРЅРµРІСѓСЋ")) Or meth = UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂРѕРґРёС‚РµР»СЊСЃРєСѓСЋ")) _
+        Or meth = UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РёРјСЏ РїР°РїРєРё")) _
+        Or meth = UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ РёРјСЏ С„Р°Р№Р»Р°")) Or meth = UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂР°СЃС€РёСЂРµРЅРёРµ")) _
+        Or meth = UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ Р±РµР· СЂР°СЃС€РёСЂРµРЅРёСЏ")) Or meth = UCase(MyZnak & trans("РћРїСЂРµРґРµР»РёС‚СЊ СЂР°Р·РјРµСЂ С„Р°Р№Р»Р°")) _
         Then
-            Dim temp() As String = {trans("Путь к файлу или папке"), "неважно"}
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РїР°РїРєРµ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Время создания")) Or meth = UCase(MyZnak & trans("Время доступа")) _
-        Or meth = UCase(MyZnak & trans("Время изменения")) Then
-            Dim temp() As String = {trans("Путь к файлу или папке"), trans("Время")}
+        ElseIf meth = UCase(MyZnak & trans("Р’СЂРµРјСЏ СЃРѕР·РґР°РЅРёСЏ")) Or meth = UCase(MyZnak & trans("Р’СЂРµРјСЏ РґРѕСЃС‚СѓРїР°")) _
+        Or meth = UCase(MyZnak & trans("Р’СЂРµРјСЏ РёР·РјРµРЅРµРЅРёСЏ")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РїР°РїРєРµ"), trans("Р’СЂРµРјСЏ")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Сделать скриншот")) Then
-            Dim temp() As String = {trans("Куда сохранить")}
+        ElseIf meth = UCase(MyZnak & trans("РЎРґРµР»Р°С‚СЊ СЃРєСЂРёРЅС€РѕС‚")) Then
+            Dim temp() As String = {trans("РљСѓРґР° СЃРѕС…СЂР°РЅРёС‚СЊ")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Удалить значение")) _
-        Or meth = UCase(MyZnak & trans("Удалить папку")) Or meth = UCase(MyZnak & trans("Создать подпапку")) _
+        ElseIf meth = UCase(MyZnak & trans("РЈРґР°Р»РёС‚СЊ Р·РЅР°С‡РµРЅРёРµ")) _
+        Or meth = UCase(MyZnak & trans("РЈРґР°Р»РёС‚СЊ РїР°РїРєСѓ")) Or meth = UCase(MyZnak & trans("РЎРѕР·РґР°С‚СЊ РїРѕРґРїР°РїРєСѓ")) _
         Then
-            Dim temp() As String = {trans("Путь реестра")}
+            Dim temp() As String = {trans("РџСѓС‚СЊ СЂРµРµСЃС‚СЂР°")}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Значение реестра")) Or meth = UCase(MyZnak & trans("Ключ существует")) _
-        Or meth = UCase(MyZnak & trans("Папка существует")) Or meth = UCase(MyZnak & trans("Тип ключа")) _
+        ElseIf meth = UCase(MyZnak & trans("Р—РЅР°С‡РµРЅРёРµ СЂРµРµСЃС‚СЂР°")) Or meth = UCase(MyZnak & trans("РљР»СЋС‡ СЃСѓС‰РµСЃС‚РІСѓРµС‚")) _
+        Or meth = UCase(MyZnak & trans("РџР°РїРєР° СЃСѓС‰РµСЃС‚РІСѓРµС‚")) Or meth = UCase(MyZnak & trans("РўРёРї РєР»СЋС‡Р°")) _
         Then
-            Dim temp() As String = {trans("Путь реестра"), "неважно"}
+            Dim temp() As String = {trans("РџСѓС‚СЊ СЂРµРµСЃС‚СЂР°"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(MyZnak & trans("Создать ключ")) Then
-            Dim temp() As String = {trans("Путь реестра"), trans("Значение ключа"), trans("Тип ключа")}
+        ElseIf meth = UCase(MyZnak & trans("РЎРѕР·РґР°С‚СЊ РєР»СЋС‡")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ СЂРµРµСЃС‚СЂР°"), trans("Р—РЅР°С‡РµРЅРёРµ РєР»СЋС‡Р°"), trans("РўРёРї РєР»СЋС‡Р°")}
             Return temp
 
-        ElseIf meth = UCase(trans("Номер символа по координатам")) Or meth = UCase(trans("Значение по координатам")) _
-        Or meth = UCase(trans("Номер строки по координатам")) Or meth = UCase(trans("Номер столбца по координатам")) _
+        ElseIf meth = UCase(trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) Or meth = UCase(trans("Р—РЅР°С‡РµРЅРёРµ РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) _
+        Or meth = UCase(trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) Or meth = UCase(trans("РќРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° РїРѕ РєРѕРѕСЂРґРёРЅР°С‚Р°Рј")) _
         Then
-            Dim temp() As String = {trans("X"), trans("Y"), "неважно"}
+            Dim temp() As String = {trans("X"), trans("Y"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Номер первого символа строки")) Or meth = UCase(trans("Строка")) Then
-            Dim temp() As String = {trans("Порядковый номер строки"), "неважно"}
+        ElseIf meth = UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕРіРѕ СЃРёРјРІРѕР»Р° СЃС‚СЂРѕРєРё")) Or meth = UCase(trans("РЎС‚СЂРѕРєР°")) Then
+            Dim temp() As String = {trans("РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Номер строки по номеру символа")) Or meth = UCase(trans("Символ")) _
-        Or meth = UCase(trans("X по номеру символа")) Or meth = UCase(trans("Y по номеру символа")) _
+        ElseIf meth = UCase(trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°")) Or meth = UCase(trans("РЎРёРјРІРѕР»")) _
+        Or meth = UCase(trans("X РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°")) Or meth = UCase(trans("Y РїРѕ РЅРѕРјРµСЂСѓ СЃРёРјРІРѕР»Р°")) _
         Then
-            Dim temp() As String = {trans("Порядковый номер символа"), "неважно"}
+            Dim temp() As String = {trans("РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ СЃРёРјРІРѕР»Р°"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Обновить страницу")) Then
-            Dim temp() As String = {trans("Обновить страницу")}
+        ElseIf meth = UCase(trans("РћР±РЅРѕРІРёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ")) Then
+            Dim temp() As String = {trans("РћР±РЅРѕРІРёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ")}
             Return temp
 
 
-            ' ТАБЛИЦА
+            ' РўРђР‘Р›РР¦Рђ
 
-        ElseIf meth = UCase(trans("Тип базы данных")) Then
-            Dim temp() As String = {trans("Тип базы данных")}
+        ElseIf meth = UCase(trans("РўРёРї Р±Р°Р·С‹ РґР°РЅРЅС‹С…")) Then
+            Dim temp() As String = {trans("РўРёРї Р±Р°Р·С‹ РґР°РЅРЅС‹С…")}
             Return temp
 
-        ElseIf meth = UCase(trans("Значение ячейки")) Or meth = UCase(trans("Ячейка выделена")) _
-        Or meth = UCase(trans("Ячейка только для чтения")) Then
-            Dim temp() As String = {trans("Номера строк через запятую"), trans("Номера столбцов через запятую"), "неважно"}
+        ElseIf meth = UCase(trans("Р—РЅР°С‡РµРЅРёРµ СЏС‡РµР№РєРё")) Or meth = UCase(trans("РЇС‡РµР№РєР° РІС‹РґРµР»РµРЅР°")) _
+        Or meth = UCase(trans("РЇС‡РµР№РєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂР° СЃС‚СЂРѕРє С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ"), trans("РќРѕРјРµСЂР° СЃС‚РѕР»Р±С†РѕРІ С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Строка только для чтения")) Then
-            Dim temp() As String = {trans("Номера строк через запятую"), "неважно"}
+        ElseIf meth = UCase(trans("РЎС‚СЂРѕРєР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂР° СЃС‚СЂРѕРє С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Столбец только для чтения")) Or meth = UCase(trans("Ширина столбца")) Then
-            Dim temp() As String = {trans("Номера столбцов через запятую"), "неважно"}
+        ElseIf meth = UCase(trans("РЎС‚РѕР»Р±РµС† С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ")) Or meth = UCase(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†Р°")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂР° СЃС‚РѕР»Р±С†РѕРІ С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Вышина строки")) Then
-            Dim temp() As String = {trans("Номера строк через запятую"), "неважно"}
+        ElseIf meth = UCase(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРєРё")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂР° СЃС‚СЂРѕРє С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Добавить строку")) Then
+        ElseIf meth = UCase(trans("Р”РѕР±Р°РІРёС‚СЊ СЃС‚СЂРѕРєСѓ")) Then
             If MyObj Is Nothing Then Return Nothing
             Dim i As Integer, temp(MyObj(0).obj.columns.count - 1) As String
             For i = 0 To MyObj(0).obj.columns.count - 1
-                temp(i) = trans("Содержимое для столбца") & " """ & MyObj(0).obj.columns(i).HeaderText & """ (" & i & ")"
+                temp(i) = trans("РЎРѕРґРµСЂР¶РёРјРѕРµ РґР»СЏ СЃС‚РѕР»Р±С†Р°") & " """ & MyObj(0).obj.columns(i).HeaderText & """ (" & i & ")"
             Next
             Return temp
 
-        ElseIf meth = UCase(trans("Добавить копию строк")) Then
-            Dim temp() As String = {trans("Начальная строка копирования"), trans("Количество строк для копирования")}
+        ElseIf meth = UCase(trans("Р”РѕР±Р°РІРёС‚СЊ РєРѕРїРёСЋ СЃС‚СЂРѕРє")) Then
+            Dim temp() As String = {trans("РќР°С‡Р°Р»СЊРЅР°СЏ СЃС‚СЂРѕРєР° РєРѕРїРёСЂРѕРІР°РЅРёСЏ"), trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РґР»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Номер первой строки")) Or meth = UCase(trans("Номер последней строки")) Then
-            Dim temp() As String = {trans("Область выборки"), "неважно"}
+        ElseIf meth = UCase(trans("РќРѕРјРµСЂ РїРµСЂРІРѕР№ СЃС‚СЂРѕРєРё")) Or meth = UCase(trans("РќРѕРјРµСЂ РїРѕСЃР»РµРґРЅРµР№ СЃС‚СЂРѕРєРё")) Then
+            Dim temp() As String = {trans("РћР±Р»Р°СЃС‚СЊ РІС‹Р±РѕСЂРєРё"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Номер следующей строки")) Or meth = UCase(trans("Номер предыдущей строки")) Then
-            Dim temp() As String = {trans("Номер начальной строки"), trans("Область выборки"), "неважно"}
+        ElseIf meth = UCase(trans("РќРѕРјРµСЂ СЃР»РµРґСѓСЋС‰РµР№ СЃС‚СЂРѕРєРё")) Or meth = UCase(trans("РќРѕРјРµСЂ РїСЂРµРґС‹РґСѓС‰РµР№ СЃС‚СЂРѕРєРё")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂ РЅР°С‡Р°Р»СЊРЅРѕР№ СЃС‚СЂРѕРєРё"), trans("РћР±Р»Р°СЃС‚СЊ РІС‹Р±РѕСЂРєРё"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Вставить строку")) Then
+        ElseIf meth = UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ СЃС‚СЂРѕРєСѓ")) Then
             If MyObj Is Nothing Then Return Nothing
             Dim i As Integer, temp(MyObj(0).obj.columns.count - 1 + 1) As String
-            temp(0) = trans("Номер строки куда вставлять")
+            temp(0) = trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РєСѓРґР° РІСЃС‚Р°РІР»СЏС‚СЊ")
             For i = 0 To MyObj(0).obj.columns.count - 1
-                temp(i + 1) = trans("Содержимое для столбца") & i & " """ & MyObj(0).obj.columns(i).HeaderText & """"
+                temp(i + 1) = trans("РЎРѕРґРµСЂР¶РёРјРѕРµ РґР»СЏ СЃС‚РѕР»Р±С†Р°") & i & " """ & MyObj(0).obj.columns(i).HeaderText & """"
             Next
             Return temp
 
-        ElseIf meth = UCase(trans("Вставить копию строк")) Then
-            Dim temp() As String = {trans("Номер строки куда вставлять"), trans("Начальная строка копирования"), _
-                                    trans("Количество строк для копирования")} : Return temp
+        ElseIf meth = UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ РєРѕРїРёСЋ СЃС‚СЂРѕРє")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂ СЃС‚СЂРѕРєРё РєСѓРґР° РІСЃС‚Р°РІР»СЏС‚СЊ"), trans("РќР°С‡Р°Р»СЊРЅР°СЏ СЃС‚СЂРѕРєР° РєРѕРїРёСЂРѕРІР°РЅРёСЏ"), _
+                                    trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РґР»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ")} : Return temp
 
-        ElseIf meth = UCase(trans("Удалить строку")) Then
-            Dim temp() As String = {trans("Номера строк через запятую")}
+        ElseIf meth = UCase(trans("РЈРґР°Р»РёС‚СЊ СЃС‚СЂРѕРєСѓ")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂР° СЃС‚СЂРѕРє С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Удалить столбец")) Then
-            Dim temp() As String = {trans("Номера столбцов через запятую")}
+        ElseIf meth = UCase(trans("РЈРґР°Р»РёС‚СЊ СЃС‚РѕР»Р±РµС†")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂР° СЃС‚РѕР»Р±С†РѕРІ С‡РµСЂРµР· Р·Р°РїСЏС‚СѓСЋ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Вставить столбец")) Then
-            Dim temp() As String = {trans("Номер столбца куда вставлять"), trans("Текст заголовка столбца")}
+        ElseIf meth = UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ СЃС‚РѕР»Р±РµС†")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂ СЃС‚РѕР»Р±С†Р° РєСѓРґР° РІСЃС‚Р°РІР»СЏС‚СЊ"), trans("РўРµРєСЃС‚ Р·Р°РіРѕР»РѕРІРєР° СЃС‚РѕР»Р±С†Р°")}
             Return temp
 
-        ElseIf meth = UCase(trans("Добавить столбец")) Then
-            Dim temp() As String = {trans("Текст заголовка столбца")}
+        ElseIf meth = UCase(trans("Р”РѕР±Р°РІРёС‚СЊ СЃС‚РѕР»Р±РµС†")) Then
+            Dim temp() As String = {trans("РўРµРєСЃС‚ Р·Р°РіРѕР»РѕРІРєР° СЃС‚РѕР»Р±С†Р°")}
             Return temp
 
-        ElseIf meth = UCase(trans("Открыть Access")) Or meth = UCase(trans("Открыть Excel")) Then
-            Dim temp() As String = {trans("Путь к файлу"), trans("Название таблицы")}
+        ElseIf meth = UCase(trans("РћС‚РєСЂС‹С‚СЊ Access")) Or meth = UCase(trans("РћС‚РєСЂС‹С‚СЊ Excel")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ"), trans("РќР°Р·РІР°РЅРёРµ С‚Р°Р±Р»РёС†С‹")}
             Return temp
 
-        ElseIf meth = UCase(trans("SQL запрос выборки")) Then
-            Dim temp() As String = {trans("Тип базы данных"), trans("Путь к файлу"), _
-                                    trans("SQL запрос выборки из базы данных")}
+        ElseIf meth = UCase(trans("SQL Р·Р°РїСЂРѕСЃ РІС‹Р±РѕСЂРєРё")) Then
+            Dim temp() As String = {trans("РўРёРї Р±Р°Р·С‹ РґР°РЅРЅС‹С…"), trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ"), _
+                                    trans("SQL Р·Р°РїСЂРѕСЃ РІС‹Р±РѕСЂРєРё РёР· Р±Р°Р·С‹ РґР°РЅРЅС‹С…")}
             Return temp
 
-        ElseIf meth = UCase(trans("SQL запрос изменения")) Then
-            Dim temp() As String = {trans("Тип базы данных"), trans("Путь к файлу"), _
-                                    trans("SQL запрос изменения базы данных")}
+        ElseIf meth = UCase(trans("SQL Р·Р°РїСЂРѕСЃ РёР·РјРµРЅРµРЅРёСЏ")) Then
+            Dim temp() As String = {trans("РўРёРї Р±Р°Р·С‹ РґР°РЅРЅС‹С…"), trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ"), _
+                                    trans("SQL Р·Р°РїСЂРѕСЃ РёР·РјРµРЅРµРЅРёСЏ Р±Р°Р·С‹ РґР°РЅРЅС‹С…")}
             Return temp
 
-        ElseIf meth = UCase(trans("Сортировать")) Then
-            Dim temp() As String = {trans("Номер столбца"), trans("Сортировать по возрастанию")}
+        ElseIf meth = UCase(trans("РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂ СЃС‚РѕР»Р±С†Р°"), trans("РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Запись по номеру")) Then
-            Dim temp() As String = {trans("Номер записи в списке"), "неважно"}
+        ElseIf meth = UCase(trans("Р—Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂ Р·Р°РїРёСЃРё РІ СЃРїРёСЃРєРµ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Найти номер записи")) Then
-            Dim temp() As String = {trans("Запись из списка"), "неважно"}
+        ElseIf meth = UCase(trans("РќР°Р№С‚Рё РЅРѕРјРµСЂ Р·Р°РїРёСЃРё")) Then
+            Dim temp() As String = {trans("Р—Р°РїРёСЃСЊ РёР· СЃРїРёСЃРєР°"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = UCase(trans("Добавить запись")) Or meth = UCase(trans("Удалить запись")) Then
-            Dim temp() As String = {trans("Текст записи")}
+        ElseIf meth = UCase(trans("Р”РѕР±Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ")) Or meth = UCase(trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ")) Then
+            Dim temp() As String = {trans("РўРµРєСЃС‚ Р·Р°РїРёСЃРё")}
             Return temp
 
-        ElseIf meth = UCase(trans("Вставить запись")) Then
-            Dim temp() As String = {trans("Место для записи в списке"), trans("Текст записи")}
+        ElseIf meth = UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ Р·Р°РїРёСЃСЊ")) Then
+            Dim temp() As String = {trans("РњРµСЃС‚Рѕ РґР»СЏ Р·Р°РїРёСЃРё РІ СЃРїРёСЃРєРµ"), trans("РўРµРєСЃС‚ Р·Р°РїРёСЃРё")}
             Return temp
 
-        ElseIf meth = UCase(trans("Удалить запись по номеру")) Then
-            Dim temp() As String = {trans("Номер записи в списке")}
+        ElseIf meth = UCase(trans("РЈРґР°Р»РёС‚СЊ Р·Р°РїРёСЃСЊ РїРѕ РЅРѕРјРµСЂСѓ")) Then
+            Dim temp() As String = {trans("РќРѕРјРµСЂ Р·Р°РїРёСЃРё РІ СЃРїРёСЃРєРµ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Поиск в таблице")) Then
-            Dim temp() As String = {trans("Что искать в таблице"), trans("C учетом регистра"), trans("Слово целиком"), _
-                                    trans("Строка откуда начинать поиск"), trans("Столбец откуда начинать поиск"), ""}
+        ElseIf meth = UCase(trans("РџРѕРёСЃРє РІ С‚Р°Р±Р»РёС†Рµ")) Then
+            Dim temp() As String = {trans("Р§С‚Рѕ РёСЃРєР°С‚СЊ РІ С‚Р°Р±Р»РёС†Рµ"), trans("C СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°"), trans("РЎР»РѕРІРѕ С†РµР»РёРєРѕРј"), _
+                                    trans("РЎС‚СЂРѕРєР° РѕС‚РєСѓРґР° РЅР°С‡РёРЅР°С‚СЊ РїРѕРёСЃРє"), trans("РЎС‚РѕР»Р±РµС† РѕС‚РєСѓРґР° РЅР°С‡РёРЅР°С‚СЊ РїРѕРёСЃРє"), ""}
             Return temp
 
-        ElseIf meth = UCase(trans("Поиск с выделением")) Then
-            Dim temp() As String = {trans("Что искать в таблице"), trans("C учетом регистра"), trans("Слово целиком"), _
-                                    trans("Строка откуда начинать поиск"), trans("Столбец откуда начинать поиск")}
+        ElseIf meth = UCase(trans("РџРѕРёСЃРє СЃ РІС‹РґРµР»РµРЅРёРµРј")) Then
+            Dim temp() As String = {trans("Р§С‚Рѕ РёСЃРєР°С‚СЊ РІ С‚Р°Р±Р»РёС†Рµ"), trans("C СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°"), trans("РЎР»РѕРІРѕ С†РµР»РёРєРѕРј"), _
+                                    trans("РЎС‚СЂРѕРєР° РѕС‚РєСѓРґР° РЅР°С‡РёРЅР°С‚СЊ РїРѕРёСЃРє"), trans("РЎС‚РѕР»Р±РµС† РѕС‚РєСѓРґР° РЅР°С‡РёРЅР°С‚СЊ РїРѕРёСЃРє")}
             Return temp
 
-        ElseIf meth = UCase(trans("Поиск в выделеных ячейках")) Then
-            Dim temp() As String = {trans("Что искать в таблице"), trans("C учетом регистра"), trans("Слово целиком"), ""}
+        ElseIf meth = UCase(trans("РџРѕРёСЃРє РІ РІС‹РґРµР»РµРЅС‹С… СЏС‡РµР№РєР°С…")) Then
+            Dim temp() As String = {trans("Р§С‚Рѕ РёСЃРєР°С‚СЊ РІ С‚Р°Р±Р»РёС†Рµ"), trans("C СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°"), trans("РЎР»РѕРІРѕ С†РµР»РёРєРѕРј"), ""}
             Return temp
 
 
 
 
-            ' ТЕКСТ ПОЛЕЗНЫЙ ОБЪЕКТ
+            ' РўР•РљРЎРў РџРћР›Р•Р—РќР«Р™ РћР‘РЄР•РљРў
 
-        ElseIf meth = MyZnak & UCase(trans("Символ по номеру")) Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Порядковый номер символа в тексте"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("РЎРёРјРІРѕР» РїРѕ РЅРѕРјРµСЂСѓ")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ СЃРёРјРІРѕР»Р° РІ С‚РµРєСЃС‚Рµ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Сравнить тексты")) Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Текст с которым сравнивать"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("РЎСЂР°РІРЅРёС‚СЊ С‚РµРєСЃС‚С‹")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("РўРµРєСЃС‚ СЃ РєРѕС‚РѕСЂС‹Рј СЃСЂР°РІРЅРёРІР°С‚СЊ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Поиск в тексте")) Or meth = MyZnak & UCase(trans("Поиск номера строки")) _
-        Or meth = MyZnak & UCase(trans("Поиск с учетом регистра")) _
-        Or meth = MyZnak & UCase(trans("Поиск в тексте с конца")) _
-        Or meth = MyZnak & UCase(trans("Поиск без кавычек")) _
+        ElseIf meth = MyZnak & UCase(trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ")) Or meth = MyZnak & UCase(trans("РџРѕРёСЃРє РЅРѕРјРµСЂР° СЃС‚СЂРѕРєРё")) _
+        Or meth = MyZnak & UCase(trans("РџРѕРёСЃРє СЃ СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°")) _
+        Or meth = MyZnak & UCase(trans("РџРѕРёСЃРє РІ С‚РµРєСЃС‚Рµ СЃ РєРѕРЅС†Р°")) _
+        Or meth = MyZnak & UCase(trans("РџРѕРёСЃРє Р±РµР· РєР°РІС‹С‡РµРє")) _
         Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Что искать в тексте"), _
-                                    trans("Номер символа откуда начинать поиск"), "неважно"}
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("Р§С‚Рѕ РёСЃРєР°С‚СЊ РІ С‚РµРєСЃС‚Рµ"), _
+                                    trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РѕС‚РєСѓРґР° РЅР°С‡РёРЅР°С‚СЊ РїРѕРёСЃРє"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Поиск с регулярными выражениями")) Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Шаблон регулярного выражения"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("РџРѕРёСЃРє СЃ СЂРµРіСѓР»СЏСЂРЅС‹РјРё РІС‹СЂР°Р¶РµРЅРёСЏРјРё")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("РЁР°Р±Р»РѕРЅ СЂРµРіСѓР»СЏСЂРЅРѕРіРѕ РІС‹СЂР°Р¶РµРЅРёСЏ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Количество символов")) _
-        Or meth = MyZnak & UCase(trans("Кавычки убрать")) Or meth = MyZnak & UCase(trans("Кавычками обособить")) _
-        Or meth = MyZnak & UCase(trans("Количество строк")) _
-        Or meth = MyZnak & UCase(trans("Сделать буквы прописными")) _
-        Or meth = MyZnak & UCase(trans("Сделать буквы заглавными")) _
-        Or meth = MyZnak & UCase(trans("Убрать пробелы")) _
-        Or meth = MyZnak & UCase(trans("Убрать пробелы в начале")) _
-        Or meth = MyZnak & UCase(trans("Убрать пробелы в конце")) _
-        Or meth = MyZnak & UCase(trans("Текст есть число")) _
-        Or meth = MyZnak & UCase(trans("Текст есть цифры")) _
+        ElseIf meth = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃРёРјРІРѕР»РѕРІ")) _
+        Or meth = MyZnak & UCase(trans("РљР°РІС‹С‡РєРё СѓР±СЂР°С‚СЊ")) Or meth = MyZnak & UCase(trans("РљР°РІС‹С‡РєР°РјРё РѕР±РѕСЃРѕР±РёС‚СЊ")) _
+        Or meth = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє")) _
+        Or meth = MyZnak & UCase(trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ РїСЂРѕРїРёСЃРЅС‹РјРё")) _
+        Or meth = MyZnak & UCase(trans("РЎРґРµР»Р°С‚СЊ Р±СѓРєРІС‹ Р·Р°РіР»Р°РІРЅС‹РјРё")) _
+        Or meth = MyZnak & UCase(trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹")) _
+        Or meth = MyZnak & UCase(trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РЅР°С‡Р°Р»Рµ")) _
+        Or meth = MyZnak & UCase(trans("РЈР±СЂР°С‚СЊ РїСЂРѕР±РµР»С‹ РІ РєРѕРЅС†Рµ")) _
+        Or meth = MyZnak & UCase(trans("РўРµРєСЃС‚ РµСЃС‚СЊ С‡РёСЃР»Рѕ")) _
+        Or meth = MyZnak & UCase(trans("РўРµРєСЃС‚ РµСЃС‚СЊ С†РёС„СЂС‹")) _
         Then
-            Dim temp() As String = {trans("Исходный текст"), "неважно"}
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Разбить на части")) _
-        Or meth = MyZnak & UCase(trans("Разбить на части без кавычек")) _
+        ElseIf meth = MyZnak & UCase(trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё")) _
+        Or meth = MyZnak & UCase(trans("Р Р°Р·Р±РёС‚СЊ РЅР° С‡Р°СЃС‚Рё Р±РµР· РєР°РІС‹С‡РµРє")) _
         Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Символ разделения частей"), _
-                                    trans("Номер нужной части"), "неважно"}
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("РЎРёРјРІРѕР» СЂР°Р·РґРµР»РµРЅРёСЏ С‡Р°СЃС‚РµР№"), _
+                                    trans("РќРѕРјРµСЂ РЅСѓР¶РЅРѕР№ С‡Р°СЃС‚Рё"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Взять кусок текста")) _
-        Or meth = MyZnak & UCase(trans("Удалить кусок текста")) Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Номер символа начала куска"), _
-                                    trans("Длинна куска"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("Р’Р·СЏС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°")) _
+        Or meth = MyZnak & UCase(trans("РЈРґР°Р»РёС‚СЊ РєСѓСЃРѕРє С‚РµРєСЃС‚Р°")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РЅР°С‡Р°Р»Р° РєСѓСЃРєР°"), _
+                                    trans("Р”Р»РёРЅРЅР° РєСѓСЃРєР°"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Количество частей текста")) _
-        Or meth = MyZnak & UCase(trans("Количество частей без кавычек")) _
+        ElseIf meth = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ С‚РµРєСЃС‚Р°")) _
+        Or meth = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С‡Р°СЃС‚РµР№ Р±РµР· РєР°РІС‹С‡РµРє")) _
         Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Символ разделения частей"), "неважно"}
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("РЎРёРјРІРѕР» СЂР°Р·РґРµР»РµРЅРёСЏ С‡Р°СЃС‚РµР№"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Текст содержит")) Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Подряд символы которые должен содержать текст"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("РўРµРєСЃС‚ СЃРѕРґРµСЂР¶РёС‚")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("РџРѕРґСЂСЏРґ СЃРёРјРІРѕР»С‹ РєРѕС‚РѕСЂС‹Рµ РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ С‚РµРєСЃС‚"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Текст не содержит")) Then
-            Dim temp() As String = {trans("Исходный текст"), _
-                                    trans("Подряд символы которые не должен содержать текст"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("РўРµРєСЃС‚ РЅРµ СЃРѕРґРµСЂР¶РёС‚")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), _
+                                    trans("РџРѕРґСЂСЏРґ СЃРёРјРІРѕР»С‹ РєРѕС‚РѕСЂС‹Рµ РЅРµ РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ С‚РµРєСЃС‚"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Текст состоит из")) Then
-            Dim temp() As String = {trans("Исходный текст"), _
-                                    trans("Подряд символы из которых должен состоять текст"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("РўРµРєСЃС‚ СЃРѕСЃС‚РѕРёС‚ РёР·")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), _
+                                    trans("РџРѕРґСЂСЏРґ СЃРёРјРІРѕР»С‹ РёР· РєРѕС‚РѕСЂС‹С… РґРѕР»Р¶РµРЅ СЃРѕСЃС‚РѕСЏС‚СЊ С‚РµРєСЃС‚"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Строка по номеру")) Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Порядковый номер строки в тексте"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("РЎС‚СЂРѕРєР° РїРѕ РЅРѕРјРµСЂСѓ")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё РІ С‚РµРєСЃС‚Рµ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Вставить символы в текст")) Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Номер символа куда вставлять"), _
-                                    trans("Текст который надо вставить"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("Р’СЃС‚Р°РІРёС‚СЊ СЃРёРјРІРѕР»С‹ РІ С‚РµРєСЃС‚")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РєСѓРґР° РІСЃС‚Р°РІР»СЏС‚СЊ"), _
+                                    trans("РўРµРєСЃС‚ РєРѕС‚РѕСЂС‹Р№ РЅР°РґРѕ РІСЃС‚Р°РІРёС‚СЊ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Заменить")) Or meth = MyZnak & UCase(trans("Заменить все")) Then
-            Dim temp() As String = {trans("Исходный текст"), trans("Что заменять"), trans("На что заменять"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("Р—Р°РјРµРЅРёС‚СЊ")) Or meth = MyZnak & UCase(trans("Р—Р°РјРµРЅРёС‚СЊ РІСЃРµ")) Then
+            Dim temp() As String = {trans("РСЃС…РѕРґРЅС‹Р№ С‚РµРєСЃС‚"), trans("Р§С‚Рѕ Р·Р°РјРµРЅСЏС‚СЊ"), trans("РќР° С‡С‚Рѕ Р·Р°РјРµРЅСЏС‚СЊ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-            ' Сообщение 
+            ' РЎРѕРѕР±С‰РµРЅРёРµ 
 
-        ElseIf meth = MyZnak & UCase(trans("Запустить сообщение")) Then
-            Dim temp() As String = {trans("Текст сообщения"), trans("Кнопки сообщения"), trans("Тип сообщения"), _
-                                    trans("Заголовок")}
+        ElseIf meth = MyZnak & UCase(trans("Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ")) Then
+            Dim temp() As String = {trans("РўРµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ"), trans("РљРЅРѕРїРєРё СЃРѕРѕР±С‰РµРЅРёСЏ"), trans("РўРёРї СЃРѕРѕР±С‰РµРЅРёСЏ"), _
+                                    trans("Р—Р°РіРѕР»РѕРІРѕРє")}
             Return temp
 
-            ' ДАТА
+            ' Р”РђРўРђ
 
-        ElseIf meth = MyZnak & UCase(trans("День месяца")) Or meth = MyZnak & UCase(trans("День года")) _
-        Or meth = MyZnak & UCase(trans("День в неделе")) Or meth = MyZnak & UCase(trans("Час")) _
-        Or meth = MyZnak & UCase(trans("Минута")) Or meth = MyZnak & UCase(trans("Секунда")) _
-        Or meth = MyZnak & UCase(trans("Квартал")) Or meth = MyZnak & UCase(trans("Неделя в году")) _
-        Or meth = MyZnak & UCase(trans("Год")) Or meth = MyZnak & UCase(trans("Месяц")) _
-        Or meth = MyZnak & UCase(trans("Секунд всего в дате")) Or meth = MyZnak & UCase(trans("День недели")) _
-        Or meth = MyZnak & UCase(trans("Название месяца")) Or meth = MyZnak & UCase(trans("Время")) _
+        ElseIf meth = MyZnak & UCase(trans("Р”РµРЅСЊ РјРµСЃСЏС†Р°")) Or meth = MyZnak & UCase(trans("Р”РµРЅСЊ РіРѕРґР°")) _
+        Or meth = MyZnak & UCase(trans("Р”РµРЅСЊ РІ РЅРµРґРµР»Рµ")) Or meth = MyZnak & UCase(trans("Р§Р°СЃ")) _
+        Or meth = MyZnak & UCase(trans("РњРёРЅСѓС‚Р°")) Or meth = MyZnak & UCase(trans("РЎРµРєСѓРЅРґР°")) _
+        Or meth = MyZnak & UCase(trans("РљРІР°СЂС‚Р°Р»")) Or meth = MyZnak & UCase(trans("РќРµРґРµР»СЏ РІ РіРѕРґСѓ")) _
+        Or meth = MyZnak & UCase(trans("Р“РѕРґ")) Or meth = MyZnak & UCase(trans("РњРµСЃСЏС†")) _
+        Or meth = MyZnak & UCase(trans("РЎРµРєСѓРЅРґ РІСЃРµРіРѕ РІ РґР°С‚Рµ")) Or meth = MyZnak & UCase(trans("Р”РµРЅСЊ РЅРµРґРµР»Рё")) _
+        Or meth = MyZnak & UCase(trans("РќР°Р·РІР°РЅРёРµ РјРµСЃСЏС†Р°")) Or meth = MyZnak & UCase(trans("Р’СЂРµРјСЏ")) _
         Then
-            Dim temp() As String = {trans("Дата из которой брать"), "неважно"}
+            Dim temp() As String = {trans("Р”Р°С‚Р° РёР· РєРѕС‚РѕСЂРѕР№ Р±СЂР°С‚СЊ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Прибавить дни")) Or meth = MyZnak & UCase(trans("Прибавить часы")) _
-        Or meth = MyZnak & UCase(trans("Прибавить минуты")) Or meth = MyZnak & UCase(trans("Прибавить секунды")) _
-        Or meth = MyZnak & UCase(trans("Прибавить кварталы")) Or meth = MyZnak & UCase(trans("Прибавить недели")) _
-        Or meth = MyZnak & UCase(trans("Прибавить годы")) Or meth = MyZnak & UCase(trans("Прибавить месяцы")) _
+        ElseIf meth = MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РґРЅРё")) Or meth = MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ С‡Р°СЃС‹")) _
+        Or meth = MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РјРёРЅСѓС‚С‹")) Or meth = MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ СЃРµРєСѓРЅРґС‹")) _
+        Or meth = MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РєРІР°СЂС‚Р°Р»С‹")) Or meth = MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РЅРµРґРµР»Рё")) _
+        Or meth = MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РіРѕРґС‹")) Or meth = MyZnak & UCase(trans("РџСЂРёР±Р°РІРёС‚СЊ РјРµСЃСЏС†С‹")) _
         Then
-            Dim temp() As String = {trans("Дата к которой прибавлять"), trans("Сколько прибавить"), "неважно"}
+            Dim temp() As String = {trans("Р”Р°С‚Р° Рє РєРѕС‚РѕСЂРѕР№ РїСЂРёР±Р°РІР»СЏС‚СЊ"), trans("РЎРєРѕР»СЊРєРѕ РїСЂРёР±Р°РІРёС‚СЊ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Разница в днях")) Or meth = MyZnak & UCase(trans("Разница в часах")) _
-        Or meth = MyZnak & UCase(trans("Разница в минутах")) Or meth = MyZnak & UCase(trans("Разница в секундах")) _
-        Or meth = MyZnak & UCase(trans("Разница в кварталах")) Or meth = MyZnak & UCase(trans("Разница в неделях")) _
-        Or meth = MyZnak & UCase(trans("Разница в годах")) Or meth = MyZnak & UCase(trans("Разница в месяцах")) _
+        ElseIf meth = MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РґРЅСЏС…")) Or meth = MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ С‡Р°СЃР°С…")) _
+        Or meth = MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РјРёРЅСѓС‚Р°С…")) Or meth = MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ СЃРµРєСѓРЅРґР°С…")) _
+        Or meth = MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РєРІР°СЂС‚Р°Р»Р°С…")) Or meth = MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РЅРµРґРµР»СЏС…")) _
+        Or meth = MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РіРѕРґР°С…")) Or meth = MyZnak & UCase(trans("Р Р°Р·РЅРёС†Р° РІ РјРµСЃСЏС†Р°С…")) _
         Then
-            Dim temp() As String = {trans("Дата1 которую вычитать"), trans("Дата2 из которой вычитать"), "неважно"}
+            Dim temp() As String = {trans("Р”Р°С‚Р°1 РєРѕС‚РѕСЂСѓСЋ РІС‹С‡РёС‚Р°С‚СЊ"), trans("Р”Р°С‚Р°2 РёР· РєРѕС‚РѕСЂРѕР№ РІС‹С‡РёС‚Р°С‚СЊ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Дней в месяце")) Then
-            Dim temp() As String = {trans("Год"), trans("Месяц"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("Р”РЅРµР№ РІ РјРµСЃСЏС†Рµ")) Then
+            Dim temp() As String = {trans("Р“РѕРґ"), trans("РњРµСЃСЏС†"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Дата в определенном формате")) Then
-            Dim temp() As String = {trans("Дата"), trans("Номер формата вывода (от 1 до 52)"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("Р”Р°С‚Р° РІ РѕРїСЂРµРґРµР»РµРЅРЅРѕРј С„РѕСЂРјР°С‚Рµ")) Then
+            Dim temp() As String = {trans("Р”Р°С‚Р°"), trans("РќРѕРјРµСЂ С„РѕСЂРјР°С‚Р° РІС‹РІРѕРґР° (РѕС‚ 1 РґРѕ 52)"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Изменить время компьютера")) Then
-            Dim temp() As String = {trans("Новая дата и время")}
+        ElseIf meth = MyZnak & UCase(trans("РР·РјРµРЅРёС‚СЊ РІСЂРµРјСЏ РєРѕРјРїСЊСЋС‚РµСЂР°")) Then
+            Dim temp() As String = {trans("РќРѕРІР°СЏ РґР°С‚Р° Рё РІСЂРµРјСЏ")}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Выполнить код VBScript")) Then
-            Dim temp() As String = {trans("Код VBScript")}
+        ElseIf meth = MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ VBScript")) Then
+            Dim temp() As String = {trans("РљРѕРґ VBScript")}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Выполнить код Алгоритма2")) Then
-            Dim temp() As String = {trans("Код Алгоритма 2")}
+        ElseIf meth = MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ РђР»РіРѕСЂРёС‚РјР°2")) Then
+            Dim temp() As String = {trans("РљРѕРґ РђР»РіРѕСЂРёС‚РјР° 2")}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Выполнить код VBNet")) Then
-            Dim temp() As String = {trans("Код VBNet")}
+        ElseIf meth = MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ VBNet")) Then
+            Dim temp() As String = {trans("РљРѕРґ VBNet")}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Выполнить код CSharp")) Then
-            Dim temp() As String = {trans("Код CSharp")}
+        ElseIf meth = MyZnak & UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРґ CSharp")) Then
+            Dim temp() As String = {trans("РљРѕРґ CSharp")}
             Return temp
 
-        ElseIf meth = UCase(trans("Ключ активации выдать")) Then
-            Dim temp() As String = {trans("ID пользователя"), trans("Показать в окне"), ""}
+        ElseIf meth = UCase(trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РІС‹РґР°С‚СЊ")) Then
+            Dim temp() As String = {trans("ID РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ"), trans("РџРѕРєР°Р·Р°С‚СЊ РІ РѕРєРЅРµ"), ""}
             Return temp
 
-        ElseIf meth = UCase(trans("Ключ активации проверить")) Then
-            Dim temp() As String = {trans("Ключ активации"), trans("Показать в окне"), ""}
+        ElseIf meth = UCase(trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё РїСЂРѕРІРµСЂРёС‚СЊ")) Then
+            Dim temp() As String = {trans("РљР»СЋС‡ Р°РєС‚РёРІР°С†РёРё"), trans("РџРѕРєР°Р·Р°С‚СЊ РІ РѕРєРЅРµ"), ""}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Переименовать")) Then
-            Dim temp() As String = {trans("Путь к файлу или папке"), trans("Новое имя"), ""}
+        ElseIf meth = MyZnak & UCase(trans("РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РїР°РїРєРµ"), trans("РќРѕРІРѕРµ РёРјСЏ"), ""}
             Return temp
 
-            ' КЛИЕНТ - СЕРВЕР
-        ElseIf meth = UCase(trans("Ip клиента")) Then
-            Dim temp() As String = {trans("Имя клиента"), ""}
+            ' РљР›РР•РќРў - РЎР•Р Р’Р•Р 
+        ElseIf meth = UCase(trans("Ip РєР»РёРµРЅС‚Р°")) Then
+            Dim temp() As String = {trans("РРјСЏ РєР»РёРµРЅС‚Р°"), ""}
             Return temp
 
-        ElseIf meth = UCase(trans("Отправить серверу")) Or meth = UCase(trans("Отправить клиентам")) Then
-            Dim temp() As String = {trans("Содержимое сообщения")}
+        ElseIf meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ СЃРµСЂРІРµСЂСѓ")) Or meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ РєР»РёРµРЅС‚Р°Рј")) Then
+            Dim temp() As String = {trans("РЎРѕРґРµСЂР¶РёРјРѕРµ СЃРѕРѕР±С‰РµРЅРёСЏ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Отправить файл серверу")) Or meth = UCase(trans("Отправить файл клиентам")) _
-        Or meth = UCase(MyZnak & trans("Открыть папку")) _
+        ElseIf meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» СЃРµСЂРІРµСЂСѓ")) Or meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Р°Рј")) _
+        Or meth = UCase(MyZnak & trans("РћС‚РєСЂС‹С‚СЊ РїР°РїРєСѓ")) _
         Then
-            Dim temp() As String = {trans("Путь к файлу или папке")}
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РїР°РїРєРµ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Отправить клиентам кроме")) Then
-            Dim temp() As String = {trans("Имена клиентов, которым не отправлять"), trans("Содержимое сообщения")}
+        ElseIf meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ РєР»РёРµРЅС‚Р°Рј РєСЂРѕРјРµ")) Then
+            Dim temp() As String = {trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ, РєРѕС‚РѕСЂС‹Рј РЅРµ РѕС‚РїСЂР°РІР»СЏС‚СЊ"), trans("РЎРѕРґРµСЂР¶РёРјРѕРµ СЃРѕРѕР±С‰РµРЅРёСЏ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Отправить клиенту")) Then
-            Dim temp() As String = {trans("Имена клиентов"), trans("Содержимое сообщения")}
+        ElseIf meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ РєР»РёРµРЅС‚Сѓ")) Then
+            Dim temp() As String = {trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ"), trans("РЎРѕРґРµСЂР¶РёРјРѕРµ СЃРѕРѕР±С‰РµРЅРёСЏ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Отправить файл клиентам кроме")) Then
-            Dim temp() As String = {trans("Имена клиентов, которым не отправлять"), trans("Путь к файлу или папке")}
+        ElseIf meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Р°Рј РєСЂРѕРјРµ")) Then
+            Dim temp() As String = {trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ, РєРѕС‚РѕСЂС‹Рј РЅРµ РѕС‚РїСЂР°РІР»СЏС‚СЊ"), trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РїР°РїРєРµ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Отправить файл клиенту")) Then
-            Dim temp() As String = {trans("Имена клиентов"), trans("Путь к файлу или папке")}
+        ElseIf meth = UCase(trans("РћС‚РїСЂР°РІРёС‚СЊ С„Р°Р№Р» РєР»РёРµРЅС‚Сѓ")) Then
+            Dim temp() As String = {trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ"), trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РїР°РїРєРµ")}
             Return temp
 
-        ElseIf meth = UCase(trans("Добавить в лог")) Then
-            Dim temp() As String = {trans("Добавляемый текст")}
+        ElseIf meth = UCase(trans("Р”РѕР±Р°РІРёС‚СЊ РІ Р»РѕРі")) Then
+            Dim temp() As String = {trans("Р”РѕР±Р°РІР»СЏРµРјС‹Р№ С‚РµРєСЃС‚")}
             Return temp
 
-        ElseIf meth = UCase(trans("Выполнить команду")) Then
-            Dim temp() As String = {trans("Команда")}
+        ElseIf meth = UCase(trans("Р’С‹РїРѕР»РЅРёС‚СЊ РєРѕРјР°РЅРґСѓ")) Then
+            Dim temp() As String = {trans("РљРѕРјР°РЅРґР°")}
             Return temp
 
-            ' ИНТЕРНЕТ
-        ElseIf meth = UCase(trans("Получить код страницы")) Then
-            Dim temp() As String = {trans("Ссылка")}
+            ' РРќРўР•Р РќР•Рў
+        ElseIf meth = UCase(trans("РџРѕР»СѓС‡РёС‚СЊ РєРѕРґ СЃС‚СЂР°РЅРёС†С‹")) Then
+            Dim temp() As String = {trans("РЎСЃС‹Р»РєР°")}
             Return temp
 
-        ElseIf meth = UCase(trans("Скачать файл")) Then
-            Dim temp() As String = {trans("Ссылка"), trans("Ждать пока скачается")}
+        ElseIf meth = UCase(trans("РЎРєР°С‡Р°С‚СЊ С„Р°Р№Р»")) Then
+            Dim temp() As String = {trans("РЎСЃС‹Р»РєР°"), trans("Р–РґР°С‚СЊ РїРѕРєР° СЃРєР°С‡Р°РµС‚СЃСЏ")}
             Return temp
 
-            ' ПРОЧЕЕ
-        ElseIf meth = MyZnak & UCase(trans("Количество файлов")) Or meth = MyZnak & UCase(trans("Количество папок")) Then
-            Dim temp() As String = {trans("Путь к папке"), "неважно"}
+            ' РџР РћР§Р•Р•
+        ElseIf meth = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ С„Р°Р№Р»РѕРІ")) Or meth = MyZnak & UCase(trans("РљРѕР»РёС‡РµСЃС‚РІРѕ РїР°РїРѕРє")) Then
+            Dim temp() As String = {trans("РџСѓС‚СЊ Рє РїР°РїРєРµ"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Зашифровать текст")) Or meth = MyZnak & UCase(trans("Расшифровать текст")) Then
-            Dim temp() As String = {trans("Текст"), trans("Ключ шифрования текста"), "неважно"}
+        ElseIf meth = MyZnak & UCase(trans("Р—Р°С€РёС„СЂРѕРІР°С‚СЊ С‚РµРєСЃС‚")) Or meth = MyZnak & UCase(trans("Р Р°СЃС€РёС„СЂРѕРІР°С‚СЊ С‚РµРєСЃС‚")) Then
+            Dim temp() As String = {trans("РўРµРєСЃС‚"), trans("РљР»СЋС‡ С€РёС„СЂРѕРІР°РЅРёСЏ С‚РµРєСЃС‚Р°"), "РЅРµРІР°Р¶РЅРѕ"}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Процесс убить")) Then
-            Dim temp() As String = {trans("Имя процесса")}
+        ElseIf meth = MyZnak & UCase(trans("РџСЂРѕС†РµСЃСЃ СѓР±РёС‚СЊ")) Then
+            Dim temp() As String = {trans("РРјСЏ РїСЂРѕС†РµСЃСЃР°")}
             Return temp
 
-        ElseIf meth = MyZnak & UCase(trans("Окно в фокусе")) Then
-            Dim temp() As String = {trans("Заголовок окна")}
+        ElseIf meth = MyZnak & UCase(trans("РћРєРЅРѕ РІ С„РѕРєСѓСЃРµ")) Then
+            Dim temp() As String = {trans("Р—Р°РіРѕР»РѕРІРѕРє РѕРєРЅР°")}
             Return temp
 
         Else
@@ -4245,137 +4245,137 @@ PropVParam:     If vParamah Then
 
     End Function
 
-    ' ПОЛУЧИТЬ ЗНАЧЕНИЕ АРГУМЕНТА У СВОЙСТВА ИЛИ МЕТОДА ПО УМОЛЧАНИЮ
+    ' РџРћР›РЈР§РРўР¬ Р—РќРђР§Р•РќРР• РђР Р“РЈРњР•РќРўРђ РЈ РЎР’РћР™РЎРўР’Рђ РР›Р РњР•РўРћР”Рђ РџРћ РЈРњРћР›Р§РђРќРР®
     Public Function DefaultValue(ByVal arg As String) As String
         arg = UCase(arg)
-        If arg = UCase(trans("Путь к файлу")) Or arg = UCase(trans("Новый путь к файлу")) _
-        Or arg = UCase(trans("Путь к файлу или папке")) Then
+        If arg = UCase(trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ")) Or arg = UCase(trans("РќРѕРІС‹Р№ РїСѓС‚СЊ Рє С„Р°Р№Р»Сѓ")) _
+        Or arg = UCase(trans("РџСѓС‚СЊ Рє С„Р°Р№Р»Сѓ РёР»Рё РїР°РїРєРµ")) Then
             Return """\" & proj.iPathShort & "\" & proj.pPicNameDef & ".jpg"""
-        ElseIf arg = UCase(trans("Путь к папке")) Then
+        ElseIf arg = UCase(trans("РџСѓС‚СЊ Рє РїР°РїРєРµ")) Then
             Return """\" & proj.iPathShort & """"
-        ElseIf arg = UCase(trans("Новое имя")) Then
-            Return """" & trans("Файл") & ".txt"""
-        ElseIf arg = UCase(trans("Что сохранять")) Then
-            Return trans("Окно") & "1." & trans("Окно") & "1." & trans("Текст")
-        ElseIf arg = UCase(trans("Что искать")) Then
+        ElseIf arg = UCase(trans("РќРѕРІРѕРµ РёРјСЏ")) Then
+            Return """" & trans("Р¤Р°Р№Р»") & ".txt"""
+        ElseIf arg = UCase(trans("Р§С‚Рѕ СЃРѕС…СЂР°РЅСЏС‚СЊ")) Then
+            Return trans("РћРєРЅРѕ") & "1." & trans("РћРєРЅРѕ") & "1." & trans("РўРµРєСЃС‚")
+        ElseIf arg = UCase(trans("Р§С‚Рѕ РёСЃРєР°С‚СЊ")) Then
             Return """*.*"""
-        ElseIf arg = UCase(trans("Рисунок для сохранения")) Then
-            Return trans("Окно") & "1." & trans("Окно") & "1." & trans("Фоновой рисунок")
-        ElseIf arg = UCase(trans("Заменять совпадающие файлы")) Then
-            Return trans("Да")
-        ElseIf arg = UCase(trans("Только активное окно")) Then
-            Return trans("Нет")
-        ElseIf arg = UCase(trans("Симулировать набор следующего текста")) Then
-            Return """" & trans("Этот текст печатает программа") & """"
-        ElseIf arg = UCase(trans("Команда Windows или имя файла")) Then
+        ElseIf arg = UCase(trans("Р РёСЃСѓРЅРѕРє РґР»СЏ СЃРѕС…СЂР°РЅРµРЅРёСЏ")) Then
+            Return trans("РћРєРЅРѕ") & "1." & trans("РћРєРЅРѕ") & "1." & trans("Р¤РѕРЅРѕРІРѕР№ СЂРёСЃСѓРЅРѕРє")
+        ElseIf arg = UCase(trans("Р—Р°РјРµРЅСЏС‚СЊ СЃРѕРІРїР°РґР°СЋС‰РёРµ С„Р°Р№Р»С‹")) Then
+            Return trans("Р”Р°")
+        ElseIf arg = UCase(trans("РўРѕР»СЊРєРѕ Р°РєС‚РёРІРЅРѕРµ РѕРєРЅРѕ")) Then
+            Return trans("РќРµС‚")
+        ElseIf arg = UCase(trans("РЎРёРјСѓР»РёСЂРѕРІР°С‚СЊ РЅР°Р±РѕСЂ СЃР»РµРґСѓСЋС‰РµРіРѕ С‚РµРєСЃС‚Р°")) Then
+            Return """" & trans("Р­С‚РѕС‚ С‚РµРєСЃС‚ РїРµС‡Р°С‚Р°РµС‚ РїСЂРѕРіСЂР°РјРјР°") & """"
+        ElseIf arg = UCase(trans("РљРѕРјР°РЅРґР° Windows РёР»Рё РёРјСЏ С„Р°Р№Р»Р°")) Then
             Return """" & trans("explorer.exe") & """"
-        ElseIf arg = UCase(trans("Аргументы")) Then
+        ElseIf arg = UCase(trans("РђСЂРіСѓРјРµРЅС‚С‹")) Then
             Return """" & trans("C:\") & """"
-        ElseIf arg = UCase(trans("Размер вращения")) Then
+        ElseIf arg = UCase(trans("Р Р°Р·РјРµСЂ РІСЂР°С‰РµРЅРёСЏ")) Then
             Return """" & trans("100") & """"
-        ElseIf arg = UCase(trans("Путь реестра")) Then
+        ElseIf arg = UCase(trans("РџСѓС‚СЊ СЂРµРµСЃС‚СЂР°")) Then
             Return """" & trans("HKEY_CURRENT_USER\Control Panel\Mouse") & """"
-        ElseIf arg = UCase(trans("Тип ключа")) Then
-            Return trans("Строка")
-        ElseIf arg = UCase(trans("X")) Or arg = UCase(trans("X")) Or arg = UCase(trans("Порядковый номер строки")) _
-        Or arg = UCase(trans("Порядковый номер символа")) Or arg = UCase(trans("Y")) Or arg = UCase(trans("У")) Then
+        ElseIf arg = UCase(trans("РўРёРї РєР»СЋС‡Р°")) Then
+            Return trans("РЎС‚СЂРѕРєР°")
+        ElseIf arg = UCase(trans("X")) Or arg = UCase(trans("X")) Or arg = UCase(trans("РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё")) _
+        Or arg = UCase(trans("РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ СЃРёРјРІРѕР»Р°")) Or arg = UCase(trans("Y")) Or arg = UCase(trans("РЈ")) Then
             Return trans("0")
-        ElseIf arg = UCase(trans("Обновить страницу")) Then
-            Return trans("Обычно")
-        ElseIf arg = UCase(trans("Область выборки")) Then
-            Return trans("Вся таблица")
-        ElseIf arg = UCase(trans("Область выборки")) Then
-            Return trans("Вся таблица")
-        ElseIf arg = UCase(trans("Сортировать по возрастанию")) Then
-            Return trans("Да")
-        ElseIf arg = UCase(trans("Порядковый номер символа в тексте")) _
-        Or arg = UCase(trans("Номер символа откуда начинать поиск")) _
-        Or arg = UCase(trans("Номер нужной части")) _
-        Or arg = UCase(trans("Номер символа начала куска")) Or arg = UCase(trans("Длинна куска")) _
-        Or arg = UCase(trans("Подряд символы которые должен содержать текст")) _
-        Or arg = UCase(trans("Подряд символы которые должен не содержать текст")) _
-        Or arg = UCase(trans("Порядковый номер строки в тексте")) _
-        Or arg = UCase(trans("Номер символа куда вставлять")) _
+        ElseIf arg = UCase(trans("РћР±РЅРѕРІРёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ")) Then
+            Return trans("РћР±С‹С‡РЅРѕ")
+        ElseIf arg = UCase(trans("РћР±Р»Р°СЃС‚СЊ РІС‹Р±РѕСЂРєРё")) Then
+            Return trans("Р’СЃСЏ С‚Р°Р±Р»РёС†Р°")
+        ElseIf arg = UCase(trans("РћР±Р»Р°СЃС‚СЊ РІС‹Р±РѕСЂРєРё")) Then
+            Return trans("Р’СЃСЏ С‚Р°Р±Р»РёС†Р°")
+        ElseIf arg = UCase(trans("РЎРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ РІРѕР·СЂР°СЃС‚Р°РЅРёСЋ")) Then
+            Return trans("Р”Р°")
+        ElseIf arg = UCase(trans("РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ СЃРёРјРІРѕР»Р° РІ С‚РµРєСЃС‚Рµ")) _
+        Or arg = UCase(trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РѕС‚РєСѓРґР° РЅР°С‡РёРЅР°С‚СЊ РїРѕРёСЃРє")) _
+        Or arg = UCase(trans("РќРѕРјРµСЂ РЅСѓР¶РЅРѕР№ С‡Р°СЃС‚Рё")) _
+        Or arg = UCase(trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РЅР°С‡Р°Р»Р° РєСѓСЃРєР°")) Or arg = UCase(trans("Р”Р»РёРЅРЅР° РєСѓСЃРєР°")) _
+        Or arg = UCase(trans("РџРѕРґСЂСЏРґ СЃРёРјРІРѕР»С‹ РєРѕС‚РѕСЂС‹Рµ РґРѕР»Р¶РµРЅ СЃРѕРґРµСЂР¶Р°С‚СЊ С‚РµРєСЃС‚")) _
+        Or arg = UCase(trans("РџРѕРґСЂСЏРґ СЃРёРјРІРѕР»С‹ РєРѕС‚РѕСЂС‹Рµ РґРѕР»Р¶РµРЅ РЅРµ СЃРѕРґРµСЂР¶Р°С‚СЊ С‚РµРєСЃС‚")) _
+        Or arg = UCase(trans("РџРѕСЂСЏРґРєРѕРІС‹Р№ РЅРѕРјРµСЂ СЃС‚СЂРѕРєРё РІ С‚РµРєСЃС‚Рµ")) _
+        Or arg = UCase(trans("РќРѕРјРµСЂ СЃРёРјРІРѕР»Р° РєСѓРґР° РІСЃС‚Р°РІР»СЏС‚СЊ")) _
         Then
             Return "1"
-        ElseIf arg = UCase(trans("Кнопки сообщения")) Then
-            Return trans("Ок")
-        ElseIf arg = UCase(trans("Тип сообщения")) Then
-            Return trans("Обычный")
-        ElseIf arg = UCase(trans("Кодировка текста")) Then
-            Return trans("По умолчанию")
-        ElseIf arg = UCase(trans("Новая дата и время")) _
-        Or arg = UCase(trans("Дата")) Or arg = UCase(trans("Дата1 которую вычитать")) _
-        Or arg = UCase(trans("Дата2 из которой вычитать")) Or arg = UCase(trans("Дата к которой прибавлять")) _
-        Or arg = UCase(trans("Дата из которой брать")) _
+        ElseIf arg = UCase(trans("РљРЅРѕРїРєРё СЃРѕРѕР±С‰РµРЅРёСЏ")) Then
+            Return trans("РћРє")
+        ElseIf arg = UCase(trans("РўРёРї СЃРѕРѕР±С‰РµРЅРёСЏ")) Then
+            Return trans("РћР±С‹С‡РЅС‹Р№")
+        ElseIf arg = UCase(trans("РљРѕРґРёСЂРѕРІРєР° С‚РµРєСЃС‚Р°")) Then
+            Return trans("РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")
+        ElseIf arg = UCase(trans("РќРѕРІР°СЏ РґР°С‚Р° Рё РІСЂРµРјСЏ")) _
+        Or arg = UCase(trans("Р”Р°С‚Р°")) Or arg = UCase(trans("Р”Р°С‚Р°1 РєРѕС‚РѕСЂСѓСЋ РІС‹С‡РёС‚Р°С‚СЊ")) _
+        Or arg = UCase(trans("Р”Р°С‚Р°2 РёР· РєРѕС‚РѕСЂРѕР№ РІС‹С‡РёС‚Р°С‚СЊ")) Or arg = UCase(trans("Р”Р°С‚Р° Рє РєРѕС‚РѕСЂРѕР№ РїСЂРёР±Р°РІР»СЏС‚СЊ")) _
+        Or arg = UCase(trans("Р”Р°С‚Р° РёР· РєРѕС‚РѕСЂРѕР№ Р±СЂР°С‚СЊ")) _
         Then
             Return ToMyDate(Now)
-        ElseIf arg = UCase(trans("Номер формата вывода (от 1 до 52)")) Then
+        ElseIf arg = UCase(trans("РќРѕРјРµСЂ С„РѕСЂРјР°С‚Р° РІС‹РІРѕРґР° (РѕС‚ 1 РґРѕ 52)")) Then
             Return "11"
-        ElseIf arg = UCase(trans("Год")) Then
+        ElseIf arg = UCase(trans("Р“РѕРґ")) Then
             Return Now.Year
-        ElseIf arg = UCase(trans("Месяц")) Then
+        ElseIf arg = UCase(trans("РњРµСЃСЏС†")) Then
             Return Now.Month
-        ElseIf arg = UCase(trans("Сколько прибавить")) Then
+        ElseIf arg = UCase(trans("РЎРєРѕР»СЊРєРѕ РїСЂРёР±Р°РІРёС‚СЊ")) Then
             Return "1"
-        ElseIf arg = UCase(trans("Код VBScript")) Then
-            Return """Sub main()" & Chr(182) & " msgbox(""""" & trans("Привет") & "!"""")" & Chr(182) & "End Sub"""
-        ElseIf arg = UCase(trans("Код Алгоритма 2")) Then
-            Return """_" & trans("Полезные объекты") & "._" & trans("Показать сообщение") & "._" & _
-                    trans("Запустить сообщение") & "(""""" & trans("Привет") & "!"""", " & _
-                    trans("Ок") & ", " & trans("Обычный") & ", )"""
-        ElseIf arg = UCase(trans("Код VBNet")) Then
+        ElseIf arg = UCase(trans("РљРѕРґ VBScript")) Then
+            Return """Sub main()" & Chr(182) & " msgbox(""""" & trans("РџСЂРёРІРµС‚") & "!"""")" & Chr(182) & "End Sub"""
+        ElseIf arg = UCase(trans("РљРѕРґ РђР»РіРѕСЂРёС‚РјР° 2")) Then
+            Return """_" & trans("РџРѕР»РµР·РЅС‹Рµ РѕР±СЉРµРєС‚С‹") & "._" & trans("РџРѕРєР°Р·Р°С‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ") & "._" & _
+                    trans("Р—Р°РїСѓСЃС‚РёС‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ") & "(""""" & trans("РџСЂРёРІРµС‚") & "!"""", " & _
+                    trans("РћРє") & ", " & trans("РћР±С‹С‡РЅС‹Р№") & ", )"""
+        ElseIf arg = UCase(trans("РљРѕРґ VBNet")) Then
             Return """Imports System.Windows.Forms" & Chr(182) & _
-                    "'" & trans("Класс MainClass и функция Main должны обязательно присутствовать") & Chr(182) & _
+                    "'" & trans("РљР»Р°СЃСЃ MainClass Рё С„СѓРЅРєС†РёСЏ Main РґРѕР»Р¶РЅС‹ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РїСЂРёСЃСѓС‚СЃС‚РІРѕРІР°С‚СЊ") & Chr(182) & _
                     "Public Class MainClass " & Chr(182) & _
                     "   Public Function Main()" & Chr(182) & _
                     "       Dim frm as New Form" & Chr(182) & _
-                    "       frm.Text=""""" & trans("Привет") & "!""""" & Chr(182) & _
+                    "       frm.Text=""""" & trans("РџСЂРёРІРµС‚") & "!""""" & Chr(182) & _
                     "       frm.Show" & Chr(182) & _
                     "   End Function" & Chr(182) & _
                     "End Class"""
-        ElseIf arg = UCase(trans("Код CSharp")) Then
+        ElseIf arg = UCase(trans("РљРѕРґ CSharp")) Then
             Return """using System.Windows.Forms;" & Chr(182) & _
-                    "//" & trans("Класс MainClass и функция Main должны обязательно присутствовать") & Chr(182) & _
+                    "//" & trans("РљР»Р°СЃСЃ MainClass Рё С„СѓРЅРєС†РёСЏ Main РґРѕР»Р¶РЅС‹ РѕР±СЏР·Р°С‚РµР»СЊРЅРѕ РїСЂРёСЃСѓС‚СЃС‚РІРѕРІР°С‚СЊ") & Chr(182) & _
                     "public class MainClass  {" & Chr(182) & _
                     "   public void Main() {" & Chr(182) & _
                     "       Form frm = new Form();" & Chr(182) & _
-                    "       frm.Text=""""" & trans("Привет") & "!"""";" & Chr(182) & _
+                    "       frm.Text=""""" & trans("РџСЂРёРІРµС‚") & "!"""";" & Chr(182) & _
                     "       frm.Show();" & Chr(182) & _
                     "   }" & Chr(182) & _
                     "}"""
-        ElseIf arg = UCase(trans("SQL запрос выборки из базы данных")) Then
-            Return """SELECT * FROM " & trans("Таблица") & "1"""
-        ElseIf arg = UCase(trans("SQL запрос изменения базы данных")) Then
-            Return """INSERT INTO " & trans("Таблица") & "1 VALUES ('1', 'a')"""
-        ElseIf arg = UCase(trans("Тип базы данных")) Then
+        ElseIf arg = UCase(trans("SQL Р·Р°РїСЂРѕСЃ РІС‹Р±РѕСЂРєРё РёР· Р±Р°Р·С‹ РґР°РЅРЅС‹С…")) Then
+            Return """SELECT * FROM " & trans("РўР°Р±Р»РёС†Р°") & "1"""
+        ElseIf arg = UCase(trans("SQL Р·Р°РїСЂРѕСЃ РёР·РјРµРЅРµРЅРёСЏ Р±Р°Р·С‹ РґР°РЅРЅС‹С…")) Then
+            Return """INSERT INTO " & trans("РўР°Р±Р»РёС†Р°") & "1 VALUES ('1', 'a')"""
+        ElseIf arg = UCase(trans("РўРёРї Р±Р°Р·С‹ РґР°РЅРЅС‹С…")) Then
             Return "Access"
-        ElseIf arg = UCase(trans("Название таблицы")) Then
-            Return """" & trans("Таблица") & "1"""
-        ElseIf arg = UCase(trans("Имена клиентов")) Or arg = UCase(trans("Имена клиентов, которым не отправлять")) Then
-            Return """" & trans("Клиент") & "1," & trans("Клиент") & "2," & trans("Клиент") & "3" & """"
-        ElseIf arg = UCase(trans("Тип файла")) Then
+        ElseIf arg = UCase(trans("РќР°Р·РІР°РЅРёРµ С‚Р°Р±Р»РёС†С‹")) Then
+            Return """" & trans("РўР°Р±Р»РёС†Р°") & "1"""
+        ElseIf arg = UCase(trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ")) Or arg = UCase(trans("РРјРµРЅР° РєР»РёРµРЅС‚РѕРІ, РєРѕС‚РѕСЂС‹Рј РЅРµ РѕС‚РїСЂР°РІР»СЏС‚СЊ")) Then
+            Return """" & trans("РљР»РёРµРЅС‚") & "1," & trans("РљР»РёРµРЅС‚") & "2," & trans("РљР»РёРµРЅС‚") & "3" & """"
+        ElseIf arg = UCase(trans("РўРёРї С„Р°Р№Р»Р°")) Then
             Return """" & trans("image/gif") & """"
-        ElseIf arg = UCase(trans("Ждать пока скачается")) Then
-            Return trans("Да")
-        ElseIf arg = UCase(trans("Текст сообщения")) Then
-            Return """" & trans("Текст сообщения") & """"
-        ElseIf arg = UCase(trans("Заголовок")) Then
-            Return """" & trans("Заголовок") & """"
-        ElseIf arg = UCase(trans("Ключ шифрования текста")) Then
-            Return """" & trans("абвгд12345") & """"
-        ElseIf arg = UCase(trans("Что искать в таблице")) Then
-            Return """" & trans("Текст") & """"
-        ElseIf arg = UCase(trans("C учетом регистра")) Then
-            Return trans("Нет")
-        ElseIf arg = UCase(trans("Слово целиком")) Then
-            Return trans("Нет")
-        ElseIf arg = UCase(trans("Строка откуда начинать поиск")) Then
+        ElseIf arg = UCase(trans("Р–РґР°С‚СЊ РїРѕРєР° СЃРєР°С‡Р°РµС‚СЃСЏ")) Then
+            Return trans("Р”Р°")
+        ElseIf arg = UCase(trans("РўРµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ")) Then
+            Return """" & trans("РўРµРєСЃС‚ СЃРѕРѕР±С‰РµРЅРёСЏ") & """"
+        ElseIf arg = UCase(trans("Р—Р°РіРѕР»РѕРІРѕРє")) Then
+            Return """" & trans("Р—Р°РіРѕР»РѕРІРѕРє") & """"
+        ElseIf arg = UCase(trans("РљР»СЋС‡ С€РёС„СЂРѕРІР°РЅРёСЏ С‚РµРєСЃС‚Р°")) Then
+            Return """" & trans("Р°Р±РІРіРґ12345") & """"
+        ElseIf arg = UCase(trans("Р§С‚Рѕ РёСЃРєР°С‚СЊ РІ С‚Р°Р±Р»РёС†Рµ")) Then
+            Return """" & trans("РўРµРєСЃС‚") & """"
+        ElseIf arg = UCase(trans("C СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°")) Then
+            Return trans("РќРµС‚")
+        ElseIf arg = UCase(trans("РЎР»РѕРІРѕ С†РµР»РёРєРѕРј")) Then
+            Return trans("РќРµС‚")
+        ElseIf arg = UCase(trans("РЎС‚СЂРѕРєР° РѕС‚РєСѓРґР° РЅР°С‡РёРЅР°С‚СЊ РїРѕРёСЃРє")) Then
             Return 0
-        ElseIf arg = UCase(trans("Столбец откуда начинать поиск")) Then
+        ElseIf arg = UCase(trans("РЎС‚РѕР»Р±РµС† РѕС‚РєСѓРґР° РЅР°С‡РёРЅР°С‚СЊ РїРѕРёСЃРє")) Then
             Return 0
-        ElseIf arg = UCase(trans("Объект съемки")) Then
-            Return """" & trans("Окно") & "1"""
+        ElseIf arg = UCase(trans("РћР±СЉРµРєС‚ СЃСЉРµРјРєРё")) Then
+            Return """" & trans("РћРєРЅРѕ") & "1"""
 
 
         Else
@@ -4383,22 +4383,22 @@ PropVParam:     If vParamah Then
         End If
     End Function
 
-    ' ПРОВЕРЯЕТ, МОЖНО ЛИ ИСПОЛЬЗОВАТЬ ТАКОЕ ИМЯ
+    ' РџР РћР’Р•Р РЇР•Рў, РњРћР–РќРћ Р›Р РРЎРџРћР›Р¬Р—РћР’РђРўР¬ РўРђРљРћР• РРњРЇ
     Function ValidName(ByVal name As String) As Boolean
         Dim i As Integer
-        ' Длинна имени
+        ' Р”Р»РёРЅРЅР° РёРјРµРЅРё
         If name.Length = 0 Then
             If IsHttpCompil = False Then MsgBox(Errors.NameInvalidLength(name), MsgBoxStyle.Exclamation)
             Return False
         End If
-        ' Недопустимые символы
+        ' РќРµРґРѕРїСѓСЃС‚РёРјС‹Рµ СЃРёРјРІРѕР»С‹
         For i = 0 To name.Length - 1
             If Char.IsLetter(name(i)) = False And Char.IsDigit(name(i)) = False And name(i) <> " " Then
                 If IsHttpCompil = False Then MsgBox(Errors.NameInvalidSimvols(name), MsgBoxStyle.Exclamation)
                 Return False
             End If
         Next
-        ' Пробел в начале
+        ' РџСЂРѕР±РµР» РІ РЅР°С‡Р°Р»Рµ
         If name(0) = " " Then
             If IsHttpCompil = False Then MsgBox(Errors.NameInvalidProbels(name), MsgBoxStyle.Exclamation)
             Return False
@@ -4407,21 +4407,21 @@ PropVParam:     If vParamah Then
             If IsHttpCompil = False Then MsgBox(Errors.NameInvalidDigit(name), MsgBoxStyle.Exclamation)
             Return False
         End If
-        ' Совпадение с именем функции
+        ' РЎРѕРІРїР°РґРµРЅРёРµ СЃ РёРјРµРЅРµРј С„СѓРЅРєС†РёРё
         For i = 0 To AllFuncs.Length - 1
             If LCase(AllFuncs(i)) = LCase(name) Then
                 If IsHttpCompil = False Then MsgBox(Errors.NameInvalidFuns(AllFuncs(i)), MsgBoxStyle.Exclamation)
                 Return False
             End If
         Next
-        ' Совпадение с вспомогательными словами
+        ' РЎРѕРІРїР°РґРµРЅРёРµ СЃ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹РјРё СЃР»РѕРІР°РјРё
         For i = 0 To AllHW.Length - 1
             If LCase(AllHW(i)) = LCase(name) Then
                 If IsHttpCompil = False Then MsgBox(Errors.NameInvalidHW(AllHW(i)), MsgBoxStyle.Exclamation)
                 Return False
             End If
         Next
-        ' Совпадение с прочими ключевыми словами
+        ' РЎРѕРІРїР°РґРµРЅРёРµ СЃ РїСЂРѕС‡РёРјРё РєР»СЋС‡РµРІС‹РјРё СЃР»РѕРІР°РјРё
         For i = 0 To VBKeyWords.Length - 1
             If LCase(VBKeyWords(i)) = LCase(name) Then
                 If IsHttpCompil = False Then MsgBox(Errors.NameInvalidHW(VBKeyWords(i)), MsgBoxStyle.Exclamation)
@@ -4440,7 +4440,7 @@ PropVParam:     If vParamah Then
         Return True
     End Function
 
-    ' ЧТОБЫ ЗАНЕСТИ Х И У В СВОЙСТВА. И В КТРЛ+З ТОЖЕ.
+    ' Р§РўРћР‘Р« Р—РђРќР•РЎРўР РҐ Р РЈ Р’ РЎР’РћР™РЎРўР’Рђ. Р Р’ РљРўР Р›+Р— РўРћР–Р•.
     Sub IzmenenieBylo(Optional ByVal withNoMarkerVis As Boolean = True)
         Dim i As Integer, MyObj As Object, mozhno As Boolean = False
         'If fromIzmenenieBylo = True Then Exit Sub
@@ -4459,30 +4459,30 @@ PropVParam:     If vParamah Then
         If fromIzmenenieBylo = True Then Exit Sub
         fromIzmenenieBylo = True
         If Iz.IsRT(myObj) = False Then
-            izmenit(UCase(trans("Текст")), myObj.obj.Text, myObj, mozhno)
+            izmenit(UCase(trans("РўРµРєСЃС‚")), myObj.obj.Text, myObj, mozhno)
         End If
         If Iz.IsTr(myObj) Then
-            izmenit(UCase(trans("Текст поля")), myObj.obj.TextB.Text, myObj, mozhno)
+            izmenit(UCase(trans("РўРµРєСЃС‚ РїРѕР»СЏ")), myObj.obj.TextB.Text, myObj, mozhno)
         End If
         If Iz.IsFORM(myObj) = False Then
             izmenit(UCase(trans("X")), myObj.obj.Left, myObj, mozhno)
             izmenit(UCase(trans("Y")), myObj.obj.Top, myObj, mozhno)
         End If
-        izmenit(UCase(trans("Вышина")), myObj.obj.Height, myObj, mozhno)
-        izmenit(UCase(trans("Ширина")), myObj.obj.Width, myObj, mozhno)
+        izmenit(UCase(trans("Р’С‹С€РёРЅР°")), myObj.obj.Height, myObj, mozhno)
+        izmenit(UCase(trans("РЁРёСЂРёРЅР°")), myObj.obj.Width, myObj, mozhno)
         If Iz.IsDP(myObj) Then
-            izmenit(UCase(trans("Расстояние разделителя")), myObj.obj.SplitterDistance, myObj, mozhno)
+            izmenit(UCase(trans("Р Р°СЃСЃС‚РѕСЏРЅРёРµ СЂР°Р·РґРµР»РёС‚РµР»СЏ")), myObj.obj.SplitterDistance, myObj, mozhno)
         End If
         If Iz.IsTP(myObj) Then
-            izmenit(UCase(trans("Позиция выделенной закладки")), myObj.obj.SelectedIndex, myObj, mozhno)
+            izmenit(UCase(trans("РџРѕР·РёС†РёСЏ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РєР»Р°РґРєРё")), myObj.obj.SelectedIndex, myObj, mozhno)
         End If
         If Iz.IsC(myObj) Or Iz.IsL(myObj) Or Iz.IsCL(myObj) Then
-            izmenit(UCase(trans("Номер выделенной записи")), myObj.obj.SelectedIndex, myObj, mozhno)
-            izmenit(UCase(trans("Выделенная запись")), myObj.obj.SelectedItem, myObj, mozhno)
+            izmenit(UCase(trans("РќРѕРјРµСЂ РІС‹РґРµР»РµРЅРЅРѕР№ Р·Р°РїРёСЃРё")), myObj.obj.SelectedIndex, myObj, mozhno)
+            izmenit(UCase(trans("Р’С‹РґРµР»РµРЅРЅР°СЏ Р·Р°РїРёСЃСЊ")), myObj.obj.SelectedItem, myObj, mozhno)
         End If
         If Iz.IsL(myObj) Then
-            izmenit(UCase(trans("Номера выделенных записей")), myObj.obj.SelectedIndex, myObj, mozhno)
-            izmenit(UCase(trans("Выделенные записи")), myObj.obj.SelectedItem, myObj, mozhno)
+            izmenit(UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… Р·Р°РїРёСЃРµР№")), myObj.obj.SelectedIndex, myObj, mozhno)
+            izmenit(UCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Рµ Р·Р°РїРёСЃРё")), myObj.obj.SelectedItem, myObj, mozhno)
         End If
         fromIzmenenieBylo = False
     End Sub
@@ -4495,7 +4495,7 @@ PropVParam:     If vParamah Then
             MainForm.RefreshListViewOneItem(prop, value)
         End If
     End Sub
-    ' ЧТОБЫ ЗАНЕСТИ В МОЙОБЪЕКТ И В СПИСОК В СВОЙСТВА, КОТОРЫМ НЕТ АЛЬТЕРНАТИВ В ВИЗУАЛСТУДИИ
+    ' Р§РўРћР‘Р« Р—РђРќР•РЎРўР Р’ РњРћР™РћР‘РЄР•РљРў Р Р’ РЎРџРРЎРћРљ Р’ РЎР’РћР™РЎРўР’Рђ, РљРћРўРћР Р«Рњ РќР•Рў РђР›Р¬РўР•Р РќРђРўРР’ Р’ Р’РР—РЈРђР›РЎРўРЈР”РР
     Sub IzmenenieByloExpert()
         Dim i As Integer, MyObj As Object, bilo As Boolean = False
         If fromIzmenenieBylo = True Then Exit Sub
@@ -4506,10 +4506,10 @@ PropVParam:     If vParamah Then
             MyObj = proj.ActiveForm.ActiveObj(i)
 
             If Iz.IsTl(MyObj) Then
-                izmenitExp(UCase(trans("Номера выделенных строк")), MyObj.obj.Props.selRows, MyObj.obj.Props.SelectedRows, bilo)
-                izmenitExp(UCase(trans("Номера выделенных столбцов")), MyObj.obj.Props.selCol, MyObj.obj.Props.SelectedColumns, bilo)
-                izmenitExp(UCase(trans("Ширина столбцов")), MyObj.obj.Props.colsWids, MyObj.obj.Props.WidthOfColumns, bilo)
-                izmenitExp(UCase(trans("Вышина строк")), MyObj.obj.Props.RowsH, MyObj.obj.Props.HeightOfRows, bilo)
+                izmenitExp(UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚СЂРѕРє")), MyObj.obj.Props.selRows, MyObj.obj.Props.SelectedRows, bilo)
+                izmenitExp(UCase(trans("РќРѕРјРµСЂР° РІС‹РґРµР»РµРЅРЅС‹С… СЃС‚РѕР»Р±С†РѕРІ")), MyObj.obj.Props.selCol, MyObj.obj.Props.SelectedColumns, bilo)
+                izmenitExp(UCase(trans("РЁРёСЂРёРЅР° СЃС‚РѕР»Р±С†РѕРІ")), MyObj.obj.Props.colsWids, MyObj.obj.Props.WidthOfColumns, bilo)
+                izmenitExp(UCase(trans("Р’С‹С€РёРЅР° СЃС‚СЂРѕРє")), MyObj.obj.Props.RowsH, MyObj.obj.Props.HeightOfRows, bilo)
             End If
 
         Next
@@ -4521,7 +4521,7 @@ PropVParam:     If vParamah Then
         MainForm.RefreshListViewOneItem(prop, varPublicPropertys)
     End Sub
 
-    ' ВСПОМОГАТЕЛЬНЫЕ СЛОВА КОТОРЫЕ НАДО ПЕРЕВОДИТЬ В СТРОКИ
+    ' Р’РЎРџРћРњРћР“РђРўР•Р›Р¬РќР«Р• РЎР›РћР’Рђ РљРћРўРћР Р«Р• РќРђР”Рћ РџР•Р Р•Р’РћР”РРўР¬ Р’ РЎРўР РћРљР
     Function SrazuPerevoditHW(ByVal word As String) As String
         If Papks.ContainsKey(LCase(word)) Then
             If isCompilBest = False Then
@@ -4533,196 +4533,196 @@ PropVParam:     If vParamah Then
         Return Nothing
     End Function
 
-    ' CОЗДАНИЕ СПУТНИКОВ СВОЙСТВ, ТАКИХ КАК КОНСТАНТЫ, МЕНЮ И Т.Д.
+    ' CРћР—Р”РђРќРР• РЎРџРЈРўРќРРљРћР’ РЎР’РћР™РЎРўР’, РўРђРљРРҐ РљРђРљ РљРћРќРЎРўРђРќРўР«, РњР•РќР® Р Рў.Р”.
     Sub CreateConstants()
         Try
             IO.Path.GetTempFileName()
         Catch ex As Exception
-            MsgBox(trans("Папка с временными файлами переполнена! Очистите её. Она откроется, когда вы нажмете Ok."))
+            MsgBox(trans("РџР°РїРєР° СЃ РІСЂРµРјРµРЅРЅС‹РјРё С„Р°Р№Р»Р°РјРё РїРµСЂРµРїРѕР»РЅРµРЅР°! РћС‡РёСЃС‚РёС‚Рµ РµС‘. РћРЅР° РѕС‚РєСЂРѕРµС‚СЃСЏ, РєРѕРіРґР° РІС‹ РЅР°Р¶РјРµС‚Рµ Ok."))
             Diagnostics.Process.Start("explorer", IO.Path.GetTempPath)
             End
         End Try
         Dim i As Integer
-        ' СОЗДАНИЕ ЦВЕТОВЫХ КОНСТАНТ
+        ' РЎРћР—Р”РђРќРР• Р¦Р’Р•РўРћР’Р«РҐ РљРћРќРЎРўРђРќРў
         Colors.Clear()
-        Colors.Add(LCase(trans("аква")), Color.Aqua)
-        Colors.Add(LCase(trans("черный")), Color.Black)
-        Colors.Add(LCase(trans("синий")), Color.Blue)
-        Colors.Add(LCase(trans("коричневый")), Color.Brown)
-        Colors.Add(LCase(trans("шоколадный")), Color.Chocolate)
-        Colors.Add(LCase(trans("кораловый")), Color.Coral)
-        Colors.Add(LCase(trans("серый")), Color.Gray)
-        Colors.Add(LCase(trans("салатовый")), Color.GreenYellow)
-        Colors.Add(LCase(trans("индиго")), Color.Indigo)
-        Colors.Add(LCase(trans("лайм")), Color.Lime)
-        Colors.Add(LCase(trans("розовый")), Color.Magenta)
-        Colors.Add(LCase(trans("фиолетовый")), Color.Violet)
-        Colors.Add(LCase(trans("серебряный")), Color.Silver)
-        Colors.Add(LCase(trans("оранжевый")), Color.Orange)
-        Colors.Add(LCase(trans("хаки")), Color.DarkKhaki)
-        Colors.Add(LCase(trans("море")), Color.Teal)
-        Colors.Add(LCase(trans("яркосиний")), Color.DodgerBlue)
-        Colors.Add(LCase(trans("пурпурный")), Color.Purple)
-        Colors.Add(LCase(trans("системный")), SystemColors.Control)
-        Colors.Add(LCase(trans("системный темный")), SystemColors.ControlDark)
-        Colors.Add(LCase(trans("белый")), Color.White)
-        Colors.Add(LCase(trans("красный")), Color.Red)
-        Colors.Add(LCase(trans("зеленый")), Color.Green)
-        Colors.Add(LCase(trans("желтый")), Color.Yellow)
+        Colors.Add(LCase(trans("Р°РєРІР°")), Color.Aqua)
+        Colors.Add(LCase(trans("С‡РµСЂРЅС‹Р№")), Color.Black)
+        Colors.Add(LCase(trans("СЃРёРЅРёР№")), Color.Blue)
+        Colors.Add(LCase(trans("РєРѕСЂРёС‡РЅРµРІС‹Р№")), Color.Brown)
+        Colors.Add(LCase(trans("С€РѕРєРѕР»Р°РґРЅС‹Р№")), Color.Chocolate)
+        Colors.Add(LCase(trans("РєРѕСЂР°Р»РѕРІС‹Р№")), Color.Coral)
+        Colors.Add(LCase(trans("СЃРµСЂС‹Р№")), Color.Gray)
+        Colors.Add(LCase(trans("СЃР°Р»Р°С‚РѕРІС‹Р№")), Color.GreenYellow)
+        Colors.Add(LCase(trans("РёРЅРґРёРіРѕ")), Color.Indigo)
+        Colors.Add(LCase(trans("Р»Р°Р№Рј")), Color.Lime)
+        Colors.Add(LCase(trans("СЂРѕР·РѕРІС‹Р№")), Color.Magenta)
+        Colors.Add(LCase(trans("С„РёРѕР»РµС‚РѕРІС‹Р№")), Color.Violet)
+        Colors.Add(LCase(trans("СЃРµСЂРµР±СЂСЏРЅС‹Р№")), Color.Silver)
+        Colors.Add(LCase(trans("РѕСЂР°РЅР¶РµРІС‹Р№")), Color.Orange)
+        Colors.Add(LCase(trans("С…Р°РєРё")), Color.DarkKhaki)
+        Colors.Add(LCase(trans("РјРѕСЂРµ")), Color.Teal)
+        Colors.Add(LCase(trans("СЏСЂРєРѕСЃРёРЅРёР№")), Color.DodgerBlue)
+        Colors.Add(LCase(trans("РїСѓСЂРїСѓСЂРЅС‹Р№")), Color.Purple)
+        Colors.Add(LCase(trans("СЃРёСЃС‚РµРјРЅС‹Р№")), SystemColors.Control)
+        Colors.Add(LCase(trans("СЃРёСЃС‚РµРјРЅС‹Р№ С‚РµРјРЅС‹Р№")), SystemColors.ControlDark)
+        Colors.Add(LCase(trans("Р±РµР»С‹Р№")), Color.White)
+        Colors.Add(LCase(trans("РєСЂР°СЃРЅС‹Р№")), Color.Red)
+        Colors.Add(LCase(trans("Р·РµР»РµРЅС‹Р№")), Color.Green)
+        Colors.Add(LCase(trans("Р¶РµР»С‚С‹Р№")), Color.Yellow)
 
-        ' СОЗДАНИЕ КОНСТАНТ ПРИВЯЗКИ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РџР РР’РЇР—РљР
         Anchors.Clear()
-        Anchors.Add(LCase(trans("Никакой")), 0)
-        Anchors.Add(LCase(trans("Слева")), 4)
-        Anchors.Add(LCase(trans("Справа")), 8)
-        Anchors.Add(LCase(trans("Сверху")), 1)
-        Anchors.Add(LCase(trans("Снизу")), 2)
-        Anchors.Add(LCase(trans("Слева_Сверху")), 5)
-        Anchors.Add(LCase(trans("Слева_Снизу")), 6)
-        Anchors.Add(LCase(trans("Справа_Слева")), 12)
-        Anchors.Add(LCase(trans("Справа_Сверху")), 9)
-        Anchors.Add(LCase(trans("Справа_Снизу")), 10)
-        Anchors.Add(LCase(trans("Сверху_Снизу")), 3)
-        Anchors.Add(LCase(trans("Слева_Сверху_Снизу")), 7)
-        Anchors.Add(LCase(trans("Справа_Сверху_Снизу")), 11)
-        Anchors.Add(LCase(trans("Справа_Слева_Сверху")), 13)
-        Anchors.Add(LCase(trans("Справа_Слева_Снизу")), 14)
-        Anchors.Add(LCase(trans("Справа_Слева_Сверху_Снизу")), 15)
+        Anchors.Add(LCase(trans("РќРёРєР°РєРѕР№")), 0)
+        Anchors.Add(LCase(trans("РЎР»РµРІР°")), 4)
+        Anchors.Add(LCase(trans("РЎРїСЂР°РІР°")), 8)
+        Anchors.Add(LCase(trans("РЎРІРµСЂС…Сѓ")), 1)
+        Anchors.Add(LCase(trans("РЎРЅРёР·Сѓ")), 2)
+        Anchors.Add(LCase(trans("РЎР»РµРІР°_РЎРІРµСЂС…Сѓ")), 5)
+        Anchors.Add(LCase(trans("РЎР»РµРІР°_РЎРЅРёР·Сѓ")), 6)
+        Anchors.Add(LCase(trans("РЎРїСЂР°РІР°_РЎР»РµРІР°")), 12)
+        Anchors.Add(LCase(trans("РЎРїСЂР°РІР°_РЎРІРµСЂС…Сѓ")), 9)
+        Anchors.Add(LCase(trans("РЎРїСЂР°РІР°_РЎРЅРёР·Сѓ")), 10)
+        Anchors.Add(LCase(trans("РЎРІРµСЂС…Сѓ_РЎРЅРёР·Сѓ")), 3)
+        Anchors.Add(LCase(trans("РЎР»РµРІР°_РЎРІРµСЂС…Сѓ_РЎРЅРёР·Сѓ")), 7)
+        Anchors.Add(LCase(trans("РЎРїСЂР°РІР°_РЎРІРµСЂС…Сѓ_РЎРЅРёР·Сѓ")), 11)
+        Anchors.Add(LCase(trans("РЎРїСЂР°РІР°_РЎР»РµРІР°_РЎРІРµСЂС…Сѓ")), 13)
+        Anchors.Add(LCase(trans("РЎРїСЂР°РІР°_РЎР»РµРІР°_РЎРЅРёР·Сѓ")), 14)
+        Anchors.Add(LCase(trans("РЎРїСЂР°РІР°_РЎР»РµРІР°_РЎРІРµСЂС…Сѓ_РЎРЅРёР·Сѓ")), 15)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ ФОНА   
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ Р¤РћРќРђ   
         bkImStyles.Clear()
-        bkImStyles.Add(LCase(trans("Никакой")), ImageLayout.None)
-        bkImStyles.Add(LCase(trans("Плитка")), ImageLayout.Tile)
-        bkImStyles.Add(LCase(trans("По центру")), ImageLayout.Center)
-        bkImStyles.Add(LCase(trans("Растянутый")), ImageLayout.Stretch)
-        bkImStyles.Add(LCase(trans("Масштабированный")), ImageLayout.Zoom)
+        bkImStyles.Add(LCase(trans("РќРёРєР°РєРѕР№")), ImageLayout.None)
+        bkImStyles.Add(LCase(trans("РџР»РёС‚РєР°")), ImageLayout.Tile)
+        bkImStyles.Add(LCase(trans("РџРѕ С†РµРЅС‚СЂСѓ")), ImageLayout.Center)
+        bkImStyles.Add(LCase(trans("Р Р°СЃС‚СЏРЅСѓС‚С‹Р№")), ImageLayout.Stretch)
+        bkImStyles.Add(LCase(trans("РњР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРЅС‹Р№")), ImageLayout.Zoom)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ ФОНА  
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ Р¤РћРќРђ  
         Cursori.Clear()
-        Cursori.Add(LCase(trans("Обычный")), Cursors.Default)
-        Cursori.Add(LCase(trans("Старт приложения")), Cursors.AppStarting)
-        Cursori.Add(LCase(trans("Пересечение")), Cursors.Cross)
-        Cursori.Add(LCase(trans("Рука")), Cursors.Hand)
-        Cursori.Add(LCase(trans("Помощь")), Cursors.Help)
-        Cursori.Add(LCase(trans("Горизонтальный разделитель")), Cursors.HSplit)
-        Cursori.Add(LCase(trans("Текстовый")), Cursors.IBeam)
-        Cursori.Add(LCase(trans("Запрещающий")), Cursors.No)
-        Cursori.Add(LCase(trans("Запрещающий перемещение")), Cursors.NoMove2D)
-        Cursori.Add(LCase(trans("Запрещающий по горизонтали")), Cursors.NoMoveHoriz)
-        Cursori.Add(LCase(trans("Запрещающий по вертикали")), Cursors.NoMoveVert)
-        Cursori.Add(LCase(trans("Направление восток")), Cursors.PanEast)
-        Cursori.Add(LCase(trans("Направление СВ")), Cursors.PanNE)
-        Cursori.Add(LCase(trans("Направление север")), Cursors.PanNorth)
-        Cursori.Add(LCase(trans("Направление СЗ")), Cursors.PanNW)
-        Cursori.Add(LCase(trans("Направление ЮВ")), Cursors.PanSE)
-        Cursori.Add(LCase(trans("Направление юг")), Cursors.PanSouth)
-        Cursori.Add(LCase(trans("Направление ЮЗ")), Cursors.PanSW)
-        Cursori.Add(LCase(trans("Направление запад")), Cursors.PanWest)
-        Cursori.Add(LCase(trans("Растянивание везде")), Cursors.SizeAll)
-        Cursori.Add(LCase(trans("Растянивание СВЮЗ")), Cursors.SizeNESW)
-        Cursori.Add(LCase(trans("Растянивание СЮ")), Cursors.SizeNS)
-        Cursori.Add(LCase(trans("Растянивание СЗЮВ")), Cursors.SizeNWSE)
-        Cursori.Add(LCase(trans("Растянивание ЗВ")), Cursors.SizeWE)
-        Cursori.Add(LCase(trans("Стрелка вверх")), Cursors.UpArrow)
-        Cursori.Add(LCase(trans("Вертикальный разделитель")), Cursors.VSplit)
-        Cursori.Add(LCase(trans("Ожидание")), Cursors.WaitCursor)
+        Cursori.Add(LCase(trans("РћР±С‹С‡РЅС‹Р№")), Cursors.Default)
+        Cursori.Add(LCase(trans("РЎС‚Р°СЂС‚ РїСЂРёР»РѕР¶РµРЅРёСЏ")), Cursors.AppStarting)
+        Cursori.Add(LCase(trans("РџРµСЂРµСЃРµС‡РµРЅРёРµ")), Cursors.Cross)
+        Cursori.Add(LCase(trans("Р СѓРєР°")), Cursors.Hand)
+        Cursori.Add(LCase(trans("РџРѕРјРѕС‰СЊ")), Cursors.Help)
+        Cursori.Add(LCase(trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№ СЂР°Р·РґРµР»РёС‚РµР»СЊ")), Cursors.HSplit)
+        Cursori.Add(LCase(trans("РўРµРєСЃС‚РѕРІС‹Р№")), Cursors.IBeam)
+        Cursori.Add(LCase(trans("Р—Р°РїСЂРµС‰Р°СЋС‰РёР№")), Cursors.No)
+        Cursori.Add(LCase(trans("Р—Р°РїСЂРµС‰Р°СЋС‰РёР№ РїРµСЂРµРјРµС‰РµРЅРёРµ")), Cursors.NoMove2D)
+        Cursori.Add(LCase(trans("Р—Р°РїСЂРµС‰Р°СЋС‰РёР№ РїРѕ РіРѕСЂРёР·РѕРЅС‚Р°Р»Рё")), Cursors.NoMoveHoriz)
+        Cursori.Add(LCase(trans("Р—Р°РїСЂРµС‰Р°СЋС‰РёР№ РїРѕ РІРµСЂС‚РёРєР°Р»Рё")), Cursors.NoMoveVert)
+        Cursori.Add(LCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ РІРѕСЃС‚РѕРє")), Cursors.PanEast)
+        Cursori.Add(LCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ РЎР’")), Cursors.PanNE)
+        Cursori.Add(LCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ СЃРµРІРµСЂ")), Cursors.PanNorth)
+        Cursori.Add(LCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ РЎР—")), Cursors.PanNW)
+        Cursori.Add(LCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ Р®Р’")), Cursors.PanSE)
+        Cursori.Add(LCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ СЋРі")), Cursors.PanSouth)
+        Cursori.Add(LCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ Р®Р—")), Cursors.PanSW)
+        Cursori.Add(LCase(trans("РќР°РїСЂР°РІР»РµРЅРёРµ Р·Р°РїР°Рґ")), Cursors.PanWest)
+        Cursori.Add(LCase(trans("Р Р°СЃС‚СЏРЅРёРІР°РЅРёРµ РІРµР·РґРµ")), Cursors.SizeAll)
+        Cursori.Add(LCase(trans("Р Р°СЃС‚СЏРЅРёРІР°РЅРёРµ РЎР’Р®Р—")), Cursors.SizeNESW)
+        Cursori.Add(LCase(trans("Р Р°СЃС‚СЏРЅРёРІР°РЅРёРµ РЎР®")), Cursors.SizeNS)
+        Cursori.Add(LCase(trans("Р Р°СЃС‚СЏРЅРёРІР°РЅРёРµ РЎР—Р®Р’")), Cursors.SizeNWSE)
+        Cursori.Add(LCase(trans("Р Р°СЃС‚СЏРЅРёРІР°РЅРёРµ Р—Р’")), Cursors.SizeWE)
+        Cursori.Add(LCase(trans("РЎС‚СЂРµР»РєР° РІРІРµСЂС…")), Cursors.UpArrow)
+        Cursori.Add(LCase(trans("Р’РµСЂС‚РёРєР°Р»СЊРЅС‹Р№ СЂР°Р·РґРµР»РёС‚РµР»СЊ")), Cursors.VSplit)
+        Cursori.Add(LCase(trans("РћР¶РёРґР°РЅРёРµ")), Cursors.WaitCursor)
 
-        ' СОЗДАНИЕ КОНСТАНТ РАСТЯЖЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў Р РђРЎРўРЇР–Р•РќРРЇ
         Docks.Clear()
-        Docks.Add(LCase(trans("Никакой")), DockStyle.None)
-        Docks.Add(LCase(trans("По верху")), DockStyle.Top)
-        Docks.Add(LCase(trans("По низу")), DockStyle.Bottom)
-        Docks.Add(LCase(trans("Слева")), DockStyle.Left)
-        Docks.Add(LCase(trans("Справа")), DockStyle.Right)
-        Docks.Add(LCase(trans("Везде")), DockStyle.Fill)
+        Docks.Add(LCase(trans("РќРёРєР°РєРѕР№")), DockStyle.None)
+        Docks.Add(LCase(trans("РџРѕ РІРµСЂС…Сѓ")), DockStyle.Top)
+        Docks.Add(LCase(trans("РџРѕ РЅРёР·Сѓ")), DockStyle.Bottom)
+        Docks.Add(LCase(trans("РЎР»РµРІР°")), DockStyle.Left)
+        Docks.Add(LCase(trans("РЎРїСЂР°РІР°")), DockStyle.Right)
+        Docks.Add(LCase(trans("Р’РµР·РґРµ")), DockStyle.Fill)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ КНОПКИ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ РљРќРћРџРљР
         FlatStyles.Clear()
-        FlatStyles.Add(LCase(trans("Плоский")), FlatStyle.Flat)
-        FlatStyles.Add(LCase(trans("Поднимающийся")), FlatStyle.Popup)
-        FlatStyles.Add(LCase(trans("Обычный")), FlatStyle.Standard)
-        FlatStyles.Add(LCase(trans("Системный")), FlatStyle.System)
+        FlatStyles.Add(LCase(trans("РџР»РѕСЃРєРёР№")), FlatStyle.Flat)
+        FlatStyles.Add(LCase(trans("РџРѕРґРЅРёРјР°СЋС‰РёР№СЃСЏ")), FlatStyle.Popup)
+        FlatStyles.Add(LCase(trans("РћР±С‹С‡РЅС‹Р№")), FlatStyle.Standard)
+        FlatStyles.Add(LCase(trans("РЎРёСЃС‚РµРјРЅС‹Р№")), FlatStyle.System)
 
-        ' СОЗДАНИЕ КОНСТАНТ ШРИФТА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЁР РР¤РўРђ
         Dim ff As New Drawing.Text.InstalledFontCollection
         Fonts.Clear()
         For i = 0 To ff.Families.Length - 1
             Fonts.Add(LCase(ff.Families(i).Name), ff.Families(i).Name)
         Next
 
-        ' СОЗДАНИЕ КОНСТАНТ ПОЛОЖЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РџРћР›РћР–Р•РќРРЇ
         Aligns.Clear()
-        Aligns.Add(LCase(trans("Верх слева")), ContentAlignment.TopLeft)
-        Aligns.Add(LCase(trans("Верх")), ContentAlignment.TopCenter)
-        Aligns.Add(LCase(trans("Верх справа")), ContentAlignment.TopRight)
-        Aligns.Add(LCase(trans("Слева")), ContentAlignment.MiddleLeft)
-        Aligns.Add(LCase(trans("Центр")), ContentAlignment.MiddleCenter)
-        Aligns.Add(LCase(trans("Справа")), ContentAlignment.MiddleRight)
-        Aligns.Add(LCase(trans("Низ слева")), ContentAlignment.BottomLeft)
-        Aligns.Add(LCase(trans("Низ")), ContentAlignment.BottomCenter)
-        Aligns.Add(LCase(trans("Низ справа")), ContentAlignment.BottomRight)
+        Aligns.Add(LCase(trans("Р’РµСЂС… СЃР»РµРІР°")), ContentAlignment.TopLeft)
+        Aligns.Add(LCase(trans("Р’РµСЂС…")), ContentAlignment.TopCenter)
+        Aligns.Add(LCase(trans("Р’РµСЂС… СЃРїСЂР°РІР°")), ContentAlignment.TopRight)
+        Aligns.Add(LCase(trans("РЎР»РµРІР°")), ContentAlignment.MiddleLeft)
+        Aligns.Add(LCase(trans("Р¦РµРЅС‚СЂ")), ContentAlignment.MiddleCenter)
+        Aligns.Add(LCase(trans("РЎРїСЂР°РІР°")), ContentAlignment.MiddleRight)
+        Aligns.Add(LCase(trans("РќРёР· СЃР»РµРІР°")), ContentAlignment.BottomLeft)
+        Aligns.Add(LCase(trans("РќРёР·")), ContentAlignment.BottomCenter)
+        Aligns.Add(LCase(trans("РќРёР· СЃРїСЂР°РІР°")), ContentAlignment.BottomRight)
 
-        ' СОЗДАНИЕ КОНСТАНТ ПОЛОЖЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РџРћР›РћР–Р•РќРРЇ
         TextImages.Clear()
-        TextImages.Add(LCase(trans("Поверх")), TextImageRelation.Overlay)
-        TextImages.Add(LCase(trans("Слева")), TextImageRelation.TextBeforeImage)
-        TextImages.Add(LCase(trans("Сверху")), TextImageRelation.TextAboveImage)
-        TextImages.Add(LCase(trans("Снизу")), TextImageRelation.ImageAboveText)
-        TextImages.Add(LCase(trans("Справа")), TextImageRelation.ImageBeforeText)
+        TextImages.Add(LCase(trans("РџРѕРІРµСЂС…")), TextImageRelation.Overlay)
+        TextImages.Add(LCase(trans("РЎР»РµРІР°")), TextImageRelation.TextBeforeImage)
+        TextImages.Add(LCase(trans("РЎРІРµСЂС…Сѓ")), TextImageRelation.TextAboveImage)
+        TextImages.Add(LCase(trans("РЎРЅРёР·Сѓ")), TextImageRelation.ImageAboveText)
+        TextImages.Add(LCase(trans("РЎРїСЂР°РІР°")), TextImageRelation.ImageBeforeText)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ РАМКИ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ Р РђРњРљР
         BorderStyles.Clear()
-        BorderStyles.Add(LCase(trans("Никакой")), BorderStyle.None)
-        BorderStyles.Add(LCase(trans("Линия")), BorderStyle.FixedSingle)
-        BorderStyles.Add(LCase(trans("Объем")), BorderStyle.Fixed3D)
+        BorderStyles.Add(LCase(trans("РќРёРєР°РєРѕР№")), BorderStyle.None)
+        BorderStyles.Add(LCase(trans("Р›РёРЅРёСЏ")), BorderStyle.FixedSingle)
+        BorderStyles.Add(LCase(trans("РћР±СЉРµРј")), BorderStyle.Fixed3D)
 
-        ' СОЗДАНИЕ КОНСТАНТ ПАНЕЛЕЙ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РџРђРќР•Р›Р•Р™
         FixedPanels.Clear()
-        FixedPanels.Add(LCase(trans("Никакой")), FixedPanel.None)
-        FixedPanels.Add(LCase(trans("Панель1")), FixedPanel.Panel1)
-        FixedPanels.Add(LCase(trans("Панель2")), FixedPanel.Panel2)
+        FixedPanels.Add(LCase(trans("РќРёРєР°РєРѕР№")), FixedPanel.None)
+        FixedPanels.Add(LCase(trans("РџР°РЅРµР»СЊ1")), FixedPanel.Panel1)
+        FixedPanels.Add(LCase(trans("РџР°РЅРµР»СЊ2")), FixedPanel.Panel2)
 
-        ' СОЗДАНИЕ КОНСТАНТ ОРИЕНТАЦИИ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РћР РР•РќРўРђР¦РР
         Orientations.Clear()
-        Orientations.Add(LCase(trans("Горизонтальная")), Orientation.Horizontal)
-        Orientations.Add(LCase(trans("Вертикальная")), Orientation.Vertical)
+        Orientations.Add(LCase(trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ")), Orientation.Horizontal)
+        Orientations.Add(LCase(trans("Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ")), Orientation.Vertical)
 
-        ' СОЗДАНИЕ КОНСТАНТ ПАПОК
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РџРђРџРћРљ
         Papks.Clear()
         If isHelp = False Then
-            Papks.Add(LCase(trans("Папка проекта")), proj.pPath)
-            Papks.Add(LCase(trans("Рисунки проекта")), proj.iPath)
+            Papks.Add(LCase(trans("РџР°РїРєР° РїСЂРѕРµРєС‚Р°")), proj.pPath)
+            Papks.Add(LCase(trans("Р РёСЃСѓРЅРєРё РїСЂРѕРµРєС‚Р°")), proj.iPath)
         Else
-            Papks.Add(LCase(trans("Папка проекта")), "")
-            Papks.Add(LCase(trans("Рисунки проекта")), "")
+            Papks.Add(LCase(trans("РџР°РїРєР° РїСЂРѕРµРєС‚Р°")), "")
+            Papks.Add(LCase(trans("Р РёСЃСѓРЅРєРё РїСЂРѕРµРєС‚Р°")), "")
         End If
-        Papks.Add(MyZnak & LCase(trans("Куки")), Environment.GetFolderPath(Environment.SpecialFolder.Cookies) & "\")
-        Papks.Add(MyZnak & LCase(trans("Рабочий стол")), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\")
-        Papks.Add(MyZnak & LCase(trans("Избранное")), Environment.GetFolderPath(Environment.SpecialFolder.Favorites) & "\")
-        Papks.Add(MyZnak & LCase(trans("Журнал")), Environment.GetFolderPath(Environment.SpecialFolder.History) & "\")
-        Papks.Add(MyZnak & LCase(trans("Интернет кэш")), Environment.GetFolderPath(Environment.SpecialFolder.InternetCache) & "\")
+        Papks.Add(MyZnak & LCase(trans("РљСѓРєРё")), Environment.GetFolderPath(Environment.SpecialFolder.Cookies) & "\")
+        Papks.Add(MyZnak & LCase(trans("Р Р°Р±РѕС‡РёР№ СЃС‚РѕР»")), Environment.GetFolderPath(Environment.SpecialFolder.Desktop) & "\")
+        Papks.Add(MyZnak & LCase(trans("РР·Р±СЂР°РЅРЅРѕРµ")), Environment.GetFolderPath(Environment.SpecialFolder.Favorites) & "\")
+        Papks.Add(MyZnak & LCase(trans("Р–СѓСЂРЅР°Р»")), Environment.GetFolderPath(Environment.SpecialFolder.History) & "\")
+        Papks.Add(MyZnak & LCase(trans("РРЅС‚РµСЂРЅРµС‚ РєСЌС€")), Environment.GetFolderPath(Environment.SpecialFolder.InternetCache) & "\")
         Papks.Add(MyZnak & LCase("ApplicationData"), Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) & "\")
-        Papks.Add(MyZnak & LCase(trans("Мои документы")), Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) & "\")
-        Papks.Add(MyZnak & LCase(trans("Мой компьютер")), Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) & "\")
-        Papks.Add(MyZnak & LCase(trans("Моя музыка")), Environment.GetFolderPath(Environment.SpecialFolder.MyMusic) & "\")
-        Papks.Add(MyZnak & LCase(trans("Мои рисунки")), Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) & "\")
+        Papks.Add(MyZnak & LCase(trans("РњРѕРё РґРѕРєСѓРјРµРЅС‚С‹")), Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) & "\")
+        Papks.Add(MyZnak & LCase(trans("РњРѕР№ РєРѕРјРїСЊСЋС‚РµСЂ")), Environment.GetFolderPath(Environment.SpecialFolder.MyComputer) & "\")
+        Papks.Add(MyZnak & LCase(trans("РњРѕСЏ РјСѓР·С‹РєР°")), Environment.GetFolderPath(Environment.SpecialFolder.MyMusic) & "\")
+        Papks.Add(MyZnak & LCase(trans("РњРѕРё СЂРёСЃСѓРЅРєРё")), Environment.GetFolderPath(Environment.SpecialFolder.MyPictures) & "\")
         Papks.Add(MyZnak & LCase("ProgramFiles"), Environment.GetFolderPath(Environment.SpecialFolder.ProgramFiles) & "\")
-        Papks.Add(MyZnak & LCase(trans("Пуск-программы")), Environment.GetFolderPath(Environment.SpecialFolder.Programs) & "\")
-        Papks.Add(MyZnak & LCase(trans("Недавние файлы")), Environment.GetFolderPath(Environment.SpecialFolder.Recent) & "\")
-        Papks.Add(MyZnak & LCase(trans("Отправить")), Environment.GetFolderPath(Environment.SpecialFolder.SendTo) & "\")
-        Papks.Add(MyZnak & LCase(trans("Пуск")), Environment.GetFolderPath(Environment.SpecialFolder.StartMenu) & "\")
-        Papks.Add(MyZnak & LCase(trans("Автозагрузка")), Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "\")
+        Papks.Add(MyZnak & LCase(trans("РџСѓСЃРє-РїСЂРѕРіСЂР°РјРјС‹")), Environment.GetFolderPath(Environment.SpecialFolder.Programs) & "\")
+        Papks.Add(MyZnak & LCase(trans("РќРµРґР°РІРЅРёРµ С„Р°Р№Р»С‹")), Environment.GetFolderPath(Environment.SpecialFolder.Recent) & "\")
+        Papks.Add(MyZnak & LCase(trans("РћС‚РїСЂР°РІРёС‚СЊ")), Environment.GetFolderPath(Environment.SpecialFolder.SendTo) & "\")
+        Papks.Add(MyZnak & LCase(trans("РџСѓСЃРє")), Environment.GetFolderPath(Environment.SpecialFolder.StartMenu) & "\")
+        Papks.Add(MyZnak & LCase(trans("РђРІС‚РѕР·Р°РіСЂСѓР·РєР°")), Environment.GetFolderPath(Environment.SpecialFolder.Startup) & "\")
         Papks.Add(MyZnak & LCase("System32"), Environment.GetFolderPath(Environment.SpecialFolder.System) & "\")
         Papks.Add(MyZnak & LCase("Windows"), IO.Path.GetDirectoryName(Environment.GetFolderPath(Environment.SpecialFolder.System)) & "\")
-        Papks.Add(MyZnak & LCase(trans("Временная папка")), IO.Path.GetTempPath & "\")
-        Papks.Add(MyZnak & LCase(trans("Временный файл")), IO.Path.GetTempFileName)
-        Papks.Add(MyZnak & LCase(trans("Папка пользователя")), Environment.GetEnvironmentVariable("USERPROFILE") & "\")
-        Papks.Add(MyZnak & LCase(trans("Все пользователи")), Environment.GetEnvironmentVariable("ALLUSERSPROFILE") & "\")
+        Papks.Add(MyZnak & LCase(trans("Р’СЂРµРјРµРЅРЅР°СЏ РїР°РїРєР°")), IO.Path.GetTempPath & "\")
+        Papks.Add(MyZnak & LCase(trans("Р’СЂРµРјРµРЅРЅС‹Р№ С„Р°Р№Р»")), IO.Path.GetTempFileName)
+        Papks.Add(MyZnak & LCase(trans("РџР°РїРєР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЏ")), Environment.GetEnvironmentVariable("USERPROFILE") & "\")
+        Papks.Add(MyZnak & LCase(trans("Р’СЃРµ РїРѕР»СЊР·РѕРІР°С‚РµР»Рё")), Environment.GetEnvironmentVariable("ALLUSERSPROFILE") & "\")
         If Environment.GetCommandLineArgs.Length > 0 Then
-            Papks.Add(LCase(trans("Имя файла")), Environment.GetCommandLineArgs(0))
+            Papks.Add(LCase(trans("РРјСЏ С„Р°Р№Р»Р°")), Environment.GetCommandLineArgs(0))
         End If
 
-        ' СОЗДАНИЕ КОНСТАНТ КЛАВИШ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РљР›РђР’РРЁ
         Dim a As New Keys
         Dim mass() As Object = {[Enum].GetNames(a.GetType()), [Enum].GetValues(a.GetType())}
         Keyz.Clear()
@@ -4730,56 +4730,56 @@ PropVParam:     If vParamah Then
             Keyz.Add(LCase(mass(0)(i)), mass(1)(i))
         Next
 
-        ' СОЗДАНИЕ КОНСТАНТ РИСУНКА РАБОЧЕГО СТОЛА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў Р РРЎРЈРќРљРђ Р РђР‘РћР§Р•Р“Рћ РЎРўРћР›Рђ
         DeskStyle.Clear()
-        DeskStyle.Add(LCase(trans("Плитка")), "0,1")
-        DeskStyle.Add(LCase(trans("По центру")), "1,0")
-        DeskStyle.Add(LCase(trans("Растянутый")), "2,0")
+        DeskStyle.Add(LCase(trans("РџР»РёС‚РєР°")), "0,1")
+        DeskStyle.Add(LCase(trans("РџРѕ С†РµРЅС‚СЂСѓ")), "1,0")
+        DeskStyle.Add(LCase(trans("Р Р°СЃС‚СЏРЅСѓС‚С‹Р№")), "2,0")
 
-        ' СОЗДАНИЕ КОНСТАНТ ДЛЯ ТИПА КЛЮЧА РЕГИСТРА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў Р”Р›РЇ РўРРџРђ РљР›Р®Р§Рђ Р Р•Р“РРЎРўР Рђ
         TypeRegistry.Clear()
-        TypeRegistry.Add(LCase(trans("Двоичное число")), Microsoft.Win32.RegistryValueKind.Binary)
-        TypeRegistry.Add(LCase(trans("Число")), Microsoft.Win32.RegistryValueKind.DWord)
-        TypeRegistry.Add(LCase(trans("Расширенная строка")), Microsoft.Win32.RegistryValueKind.ExpandString)
-        TypeRegistry.Add(LCase(trans("Мультистрока")), Microsoft.Win32.RegistryValueKind.MultiString)
-        TypeRegistry.Add(LCase(trans("Большое число")), Microsoft.Win32.RegistryValueKind.QWord)
-        TypeRegistry.Add(LCase(trans("Строка")), Microsoft.Win32.RegistryValueKind.String)
+        TypeRegistry.Add(LCase(trans("Р”РІРѕРёС‡РЅРѕРµ С‡РёСЃР»Рѕ")), Microsoft.Win32.RegistryValueKind.Binary)
+        TypeRegistry.Add(LCase(trans("Р§РёСЃР»Рѕ")), Microsoft.Win32.RegistryValueKind.DWord)
+        TypeRegistry.Add(LCase(trans("Р Р°СЃС€РёСЂРµРЅРЅР°СЏ СЃС‚СЂРѕРєР°")), Microsoft.Win32.RegistryValueKind.ExpandString)
+        TypeRegistry.Add(LCase(trans("РњСѓР»СЊС‚РёСЃС‚СЂРѕРєР°")), Microsoft.Win32.RegistryValueKind.MultiString)
+        TypeRegistry.Add(LCase(trans("Р‘РѕР»СЊС€РѕРµ С‡РёСЃР»Рѕ")), Microsoft.Win32.RegistryValueKind.QWord)
+        TypeRegistry.Add(LCase(trans("РЎС‚СЂРѕРєР°")), Microsoft.Win32.RegistryValueKind.String)
 
-        ' СОЗДАНИЕ КОНСТАНТ СКРОЛБАРОВ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРљР РћР›Р‘РђР РћР’
         ScrollBarz.Clear()
-        ScrollBarz.Add(LCase(trans("Нет")), ScrollBars.None)
-        ScrollBarz.Add(LCase(trans("Горизонтальная")), ScrollBars.Horizontal)
-        ScrollBarz.Add(LCase(trans("Вертикальная")), ScrollBars.Vertical)
-        ScrollBarz.Add(LCase(trans("Обе")), ScrollBars.Both)
+        ScrollBarz.Add(LCase(trans("РќРµС‚")), ScrollBars.None)
+        ScrollBarz.Add(LCase(trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅР°СЏ")), ScrollBars.Horizontal)
+        ScrollBarz.Add(LCase(trans("Р’РµСЂС‚РёРєР°Р»СЊРЅР°СЏ")), ScrollBars.Vertical)
+        ScrollBarz.Add(LCase(trans("РћР±Рµ")), ScrollBars.Both)
 
-        ' СОЗДАНИЕ КОНСТАНТ РАСПОЛОЖЕНИЯ ТЕКСТА 
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў Р РђРЎРџРћР›РћР–Р•РќРРЇ РўР•РљРЎРўРђ 
         TextPositions.Clear()
-        TextPositions.Add(LCase(trans("Слева")), HorizontalAlignment.Left)
-        TextPositions.Add(LCase(trans("Справа")), HorizontalAlignment.Right)
-        TextPositions.Add(LCase(trans("Центр")), HorizontalAlignment.Center)
+        TextPositions.Add(LCase(trans("РЎР»РµРІР°")), HorizontalAlignment.Left)
+        TextPositions.Add(LCase(trans("РЎРїСЂР°РІР°")), HorizontalAlignment.Right)
+        TextPositions.Add(LCase(trans("Р¦РµРЅС‚СЂ")), HorizontalAlignment.Center)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ ОТОБРАЖЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ РћРўРћР‘Р РђР–Р•РќРРЇ
         DisplayStyles.Clear()
-        DisplayStyles.Add(LCase(trans("Нет")), ToolStripItemDisplayStyle.None)
-        DisplayStyles.Add(LCase(trans("Текст")), ToolStripItemDisplayStyle.Text)
-        DisplayStyles.Add(LCase(trans("Рисунок")), ToolStripItemDisplayStyle.Image)
-        DisplayStyles.Add(LCase(trans("Рисунок и текст")), ToolStripItemDisplayStyle.ImageAndText)
+        DisplayStyles.Add(LCase(trans("РќРµС‚")), ToolStripItemDisplayStyle.None)
+        DisplayStyles.Add(LCase(trans("РўРµРєСЃС‚")), ToolStripItemDisplayStyle.Text)
+        DisplayStyles.Add(LCase(trans("Р РёСЃСѓРЅРѕРє")), ToolStripItemDisplayStyle.Image)
+        DisplayStyles.Add(LCase(trans("Р РёСЃСѓРЅРѕРє Рё С‚РµРєСЃС‚")), ToolStripItemDisplayStyle.ImageAndText)
 
-        ' СОЗДАНИЕ КОНСТАНТ НАПРАВЛЕНИЕ ТЕКТСА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РќРђРџР РђР’Р›Р•РќРР• РўР•РљРўРЎРђ
         TextDirections.Clear()
-        TextDirections.Add(LCase(trans("Горизонтальный")), ToolStripTextDirection.Horizontal)
-        TextDirections.Add(LCase(trans("Вертикальный 90")), ToolStripTextDirection.Vertical90)
-        TextDirections.Add(LCase(trans("Вертикальный 270")), ToolStripTextDirection.Vertical270)
+        TextDirections.Add(LCase(trans("Р“РѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№")), ToolStripTextDirection.Horizontal)
+        TextDirections.Add(LCase(trans("Р’РµСЂС‚РёРєР°Р»СЊРЅС‹Р№ 90")), ToolStripTextDirection.Vertical90)
+        TextDirections.Add(LCase(trans("Р’РµСЂС‚РёРєР°Р»СЊРЅС‹Р№ 270")), ToolStripTextDirection.Vertical270)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТАТУСА ГОТОВНОСТИ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРђРўРЈРЎРђ Р“РћРўРћР’РќРћРЎРўР
         ReadyStates.Clear()
-        ReadyStates.Add(LCase(trans("Страницы нет")), WebBrowserReadyState.Uninitialized)
-        ReadyStates.Add(LCase(trans("Страница загружается")), WebBrowserReadyState.Loading)
-        ReadyStates.Add(LCase(trans("Страница загружена")), WebBrowserReadyState.Loaded)
-        ReadyStates.Add(LCase(trans("Пользователькая активность")), WebBrowserReadyState.Interactive)
-        ReadyStates.Add(LCase(trans("Страница полностью готова")), WebBrowserReadyState.Complete)
+        ReadyStates.Add(LCase(trans("РЎС‚СЂР°РЅРёС†С‹ РЅРµС‚")), WebBrowserReadyState.Uninitialized)
+        ReadyStates.Add(LCase(trans("РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР¶Р°РµС‚СЃСЏ")), WebBrowserReadyState.Loading)
+        ReadyStates.Add(LCase(trans("РЎС‚СЂР°РЅРёС†Р° Р·Р°РіСЂСѓР¶РµРЅР°")), WebBrowserReadyState.Loaded)
+        ReadyStates.Add(LCase(trans("РџРѕР»СЊР·РѕРІР°С‚РµР»СЊРєР°СЏ Р°РєС‚РёРІРЅРѕСЃС‚СЊ")), WebBrowserReadyState.Interactive)
+        ReadyStates.Add(LCase(trans("РЎС‚СЂР°РЅРёС†Р° РїРѕР»РЅРѕСЃС‚СЊСЋ РіРѕС‚РѕРІР°")), WebBrowserReadyState.Complete)
 
-        ' СОЗДАНИЕ КОНСТАНТ КОДИРОВОК
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РљРћР”РР РћР’РћРљ
         DocumentEncodings.Clear()
         DocumentEncodings.Add(LCase("Western"), LCase("Windows-1252"))
         DocumentEncodings.Add(LCase("ASCII"), LCase("us-ascii"))
@@ -4812,128 +4812,128 @@ PropVParam:     If vParamah Then
         DocumentEncodings.Add(LCase("Greek (ISO)"), LCase("iso-8859-7"))
         DocumentEncodings.Add(LCase("Turkish (ISO)"), LCase("iso-8859-9"))
 
-        ' СОЗДАНИЕ КОНСТАНТ ОБНОВЛЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РћР‘РќРћР’Р›Р•РќРРЇ
         Refreshs.Clear()
-        Refreshs.Add(LCase(trans("Обычно")), WebBrowserRefreshOption.Normal)
-        Refreshs.Add(LCase(trans("Полностью")), WebBrowserRefreshOption.Completely)
-        Refreshs.Add(LCase(trans("Если устарела")), WebBrowserRefreshOption.IfExpired)
+        Refreshs.Add(LCase(trans("РћР±С‹С‡РЅРѕ")), WebBrowserRefreshOption.Normal)
+        Refreshs.Add(LCase(trans("РџРѕР»РЅРѕСЃС‚СЊСЋ")), WebBrowserRefreshOption.Completely)
+        Refreshs.Add(LCase(trans("Р•СЃР»Рё СѓСЃС‚Р°СЂРµР»Р°")), WebBrowserRefreshOption.IfExpired)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ ОКНА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ РћРљРќРђ
         FormBorderStyles.Clear()
-        FormBorderStyles.Add(LCase(trans("Никакой")), FormBorderStyle.None)
-        FormBorderStyles.Add(LCase(trans("Фиксированное простое")), FormBorderStyle.FixedSingle)
-        FormBorderStyles.Add(LCase(trans("Фиксированное объемное")), FormBorderStyle.Fixed3D)
-        FormBorderStyles.Add(LCase(trans("Фиксированное окно")), FormBorderStyle.FixedDialog)
-        FormBorderStyles.Add(LCase(trans("Нормальный")), FormBorderStyle.Sizable)
-        FormBorderStyles.Add(LCase(trans("Окно инструментов")), FormBorderStyle.SizableToolWindow)
-        FormBorderStyles.Add(LCase(trans("Фиксированное окно инструментов")), FormBorderStyle.FixedToolWindow)
+        FormBorderStyles.Add(LCase(trans("РќРёРєР°РєРѕР№")), FormBorderStyle.None)
+        FormBorderStyles.Add(LCase(trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅРѕРµ РїСЂРѕСЃС‚РѕРµ")), FormBorderStyle.FixedSingle)
+        FormBorderStyles.Add(LCase(trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅРѕРµ РѕР±СЉРµРјРЅРѕРµ")), FormBorderStyle.Fixed3D)
+        FormBorderStyles.Add(LCase(trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅРѕРµ РѕРєРЅРѕ")), FormBorderStyle.FixedDialog)
+        FormBorderStyles.Add(LCase(trans("РќРѕСЂРјР°Р»СЊРЅС‹Р№")), FormBorderStyle.Sizable)
+        FormBorderStyles.Add(LCase(trans("РћРєРЅРѕ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ")), FormBorderStyle.SizableToolWindow)
+        FormBorderStyles.Add(LCase(trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅРѕРµ РѕРєРЅРѕ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ")), FormBorderStyle.FixedToolWindow)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТАРТОВОЙ ПОЗИЦИИ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРђР РўРћР’РћР™ РџРћР—РР¦РР
         StartPositions.Clear()
-        StartPositions.Add(LCase(trans("Заданная координатами")), FormStartPosition.Manual)
-        StartPositions.Add(LCase(trans("По центру экрана")), FormStartPosition.CenterScreen)
-        StartPositions.Add(LCase(trans("Размер по умолчанию")), FormStartPosition.WindowsDefaultBounds)
-        StartPositions.Add(LCase(trans("Расположение по умолчанию")), FormStartPosition.WindowsDefaultLocation)
+        StartPositions.Add(LCase(trans("Р—Р°РґР°РЅРЅР°СЏ РєРѕРѕСЂРґРёРЅР°С‚Р°РјРё")), FormStartPosition.Manual)
+        StartPositions.Add(LCase(trans("РџРѕ С†РµРЅС‚СЂСѓ СЌРєСЂР°РЅР°")), FormStartPosition.CenterScreen)
+        StartPositions.Add(LCase(trans("Р Р°Р·РјРµСЂ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")), FormStartPosition.WindowsDefaultBounds)
+        StartPositions.Add(LCase(trans("Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")), FormStartPosition.WindowsDefaultLocation)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТАТУС ОКНА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРђРўРЈРЎ РћРљРќРђ
         WindowStates.Clear()
-        WindowStates.Add(LCase(trans("Нормальный")), FormWindowState.Normal)
-        WindowStates.Add(LCase(trans("Свернуто")), FormWindowState.Minimized)
-        WindowStates.Add(LCase(trans("Развернуто")), FormWindowState.Maximized)
+        WindowStates.Add(LCase(trans("РќРѕСЂРјР°Р»СЊРЅС‹Р№")), FormWindowState.Normal)
+        WindowStates.Add(LCase(trans("РЎРІРµСЂРЅСѓС‚Рѕ")), FormWindowState.Minimized)
+        WindowStates.Add(LCase(trans("Р Р°Р·РІРµСЂРЅСѓС‚Рѕ")), FormWindowState.Maximized)
 
-        ' СОЗДАНИЕ КОНСТАНТ ПОЛОЖЕНИЯ ЗАКЛАДОК ТАБА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РџРћР›РћР–Р•РќРРЇ Р—РђРљР›РђР”РћРљ РўРђР‘Рђ
         Alignments.Clear()
-        Alignments.Add(LCase(trans("Сверху")), TabAlignment.Top)
-        Alignments.Add(LCase(trans("Снизу")), TabAlignment.Bottom)
-        Alignments.Add(LCase(trans("Слева")), TabAlignment.Left)
-        Alignments.Add(LCase(trans("Справа")), TabAlignment.Right)
+        Alignments.Add(LCase(trans("РЎРІРµСЂС…Сѓ")), TabAlignment.Top)
+        Alignments.Add(LCase(trans("РЎРЅРёР·Сѓ")), TabAlignment.Bottom)
+        Alignments.Add(LCase(trans("РЎР»РµРІР°")), TabAlignment.Left)
+        Alignments.Add(LCase(trans("РЎРїСЂР°РІР°")), TabAlignment.Right)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ РАМКИ ЯЧЕЙКИ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ Р РђРњРљР РЇР§Р•Р™РљР
         CellBorderStyles.Clear()
-        CellBorderStyles.Add(LCase(trans("Никакой")), DataGridViewCellBorderStyle.None)
-        CellBorderStyles.Add(LCase(trans("Выпуклый")), DataGridViewCellBorderStyle.Raised)
-        CellBorderStyles.Add(LCase(trans("Выпуклый вертикальный")), DataGridViewCellBorderStyle.RaisedVertical)
-        CellBorderStyles.Add(LCase(trans("Выпуклый горизонтальный")), DataGridViewCellBorderStyle.RaisedHorizontal)
-        CellBorderStyles.Add(LCase(trans("Обычный")), DataGridViewCellBorderStyle.Single)
-        CellBorderStyles.Add(LCase(trans("Обычный вертикальный")), DataGridViewCellBorderStyle.SingleVertical)
-        CellBorderStyles.Add(LCase(trans("Обычный горизонтальный")), DataGridViewCellBorderStyle.SingleHorizontal)
-        CellBorderStyles.Add(LCase(trans("Вогнутый")), DataGridViewCellBorderStyle.Sunken)
-        CellBorderStyles.Add(LCase(trans("Вогнутый вертикальный")), DataGridViewCellBorderStyle.SunkenVertical)
-        CellBorderStyles.Add(LCase(trans("Вогнутый горизонтальный")), DataGridViewCellBorderStyle.SunkenHorizontal)
+        CellBorderStyles.Add(LCase(trans("РќРёРєР°РєРѕР№")), DataGridViewCellBorderStyle.None)
+        CellBorderStyles.Add(LCase(trans("Р’С‹РїСѓРєР»С‹Р№")), DataGridViewCellBorderStyle.Raised)
+        CellBorderStyles.Add(LCase(trans("Р’С‹РїСѓРєР»С‹Р№ РІРµСЂС‚РёРєР°Р»СЊРЅС‹Р№")), DataGridViewCellBorderStyle.RaisedVertical)
+        CellBorderStyles.Add(LCase(trans("Р’С‹РїСѓРєР»С‹Р№ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№")), DataGridViewCellBorderStyle.RaisedHorizontal)
+        CellBorderStyles.Add(LCase(trans("РћР±С‹С‡РЅС‹Р№")), DataGridViewCellBorderStyle.Single)
+        CellBorderStyles.Add(LCase(trans("РћР±С‹С‡РЅС‹Р№ РІРµСЂС‚РёРєР°Р»СЊРЅС‹Р№")), DataGridViewCellBorderStyle.SingleVertical)
+        CellBorderStyles.Add(LCase(trans("РћР±С‹С‡РЅС‹Р№ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№")), DataGridViewCellBorderStyle.SingleHorizontal)
+        CellBorderStyles.Add(LCase(trans("Р’РѕРіРЅСѓС‚С‹Р№")), DataGridViewCellBorderStyle.Sunken)
+        CellBorderStyles.Add(LCase(trans("Р’РѕРіРЅСѓС‚С‹Р№ РІРµСЂС‚РёРєР°Р»СЊРЅС‹Р№")), DataGridViewCellBorderStyle.SunkenVertical)
+        CellBorderStyles.Add(LCase(trans("Р’РѕРіРЅСѓС‚С‹Р№ РіРѕСЂРёР·РѕРЅС‚Р°Р»СЊРЅС‹Р№")), DataGridViewCellBorderStyle.SunkenHorizontal)
 
-        ' СОЗДАНИЕ КОНСТАНТ РЕЖИМА РЕДАКТИРОВАНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў Р Р•Р–РРњРђ Р Р•Р”РђРљРўРР РћР’РђРќРРЇ
         EditModes.Clear()
-        EditModes.Add(LCase(trans("Нет")), DataGridViewEditMode.EditProgrammatically)
-        EditModes.Add(LCase(trans("При получении фокуса")), DataGridViewEditMode.EditOnEnter)
-        EditModes.Add(LCase(trans("По клавише F2")), DataGridViewEditMode.EditOnF2)
-        EditModes.Add(LCase(trans("Обычный")), DataGridViewEditMode.EditOnKeystroke)
-        EditModes.Add(LCase(trans("Обычный и F2")), DataGridViewEditMode.EditOnKeystrokeOrF2)
+        EditModes.Add(LCase(trans("РќРµС‚")), DataGridViewEditMode.EditProgrammatically)
+        EditModes.Add(LCase(trans("РџСЂРё РїРѕР»СѓС‡РµРЅРёРё С„РѕРєСѓСЃР°")), DataGridViewEditMode.EditOnEnter)
+        EditModes.Add(LCase(trans("РџРѕ РєР»Р°РІРёС€Рµ F2")), DataGridViewEditMode.EditOnF2)
+        EditModes.Add(LCase(trans("РћР±С‹С‡РЅС‹Р№")), DataGridViewEditMode.EditOnKeystroke)
+        EditModes.Add(LCase(trans("РћР±С‹С‡РЅС‹Р№ Рё F2")), DataGridViewEditMode.EditOnKeystrokeOrF2)
 
-        ' СОЗДАНИЕ КОНСТАНТ РЕЖИМА ВЫДЕЛЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў Р Р•Р–РРњРђ Р’Р«Р”Р•Р›Р•РќРРЇ
         SelectionModes.Clear()
-        SelectionModes.Add(LCase(trans("Ячейки")), DataGridViewSelectionMode.CellSelect)
-        SelectionModes.Add(LCase(trans("Строки")), DataGridViewSelectionMode.FullRowSelect)
-        SelectionModes.Add(LCase(trans("Ячейки и строки")), DataGridViewSelectionMode.RowHeaderSelect)
+        SelectionModes.Add(LCase(trans("РЇС‡РµР№РєРё")), DataGridViewSelectionMode.CellSelect)
+        SelectionModes.Add(LCase(trans("РЎС‚СЂРѕРєРё")), DataGridViewSelectionMode.FullRowSelect)
+        SelectionModes.Add(LCase(trans("РЇС‡РµР№РєРё Рё СЃС‚СЂРѕРєРё")), DataGridViewSelectionMode.RowHeaderSelect)
 
-        ' СОЗДАНИЕ КОНСТАНТ РЕЖИМА ВЫДЕЛЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў Р Р•Р–РРњРђ Р’Р«Р”Р•Р›Р•РќРРЇ
         Filters.Clear()
-        Filters.Add(LCase(trans("Вся таблица")), DataGridViewElementStates.None)
-        Filters.Add(LCase(trans("Отображаемое на экране")), DataGridViewElementStates.Displayed)
-        Filters.Add(LCase(trans("Выделенные стоки")), DataGridViewElementStates.Selected)
+        Filters.Add(LCase(trans("Р’СЃСЏ С‚Р°Р±Р»РёС†Р°")), DataGridViewElementStates.None)
+        Filters.Add(LCase(trans("РћС‚РѕР±СЂР°Р¶Р°РµРјРѕРµ РЅР° СЌРєСЂР°РЅРµ")), DataGridViewElementStates.Displayed)
+        Filters.Add(LCase(trans("Р’С‹РґРµР»РµРЅРЅС‹Рµ СЃС‚РѕРєРё")), DataGridViewElementStates.Selected)
 
-        ' СОЗДАНИЕ КОНСТАНТ РЕЖИМА ВЫДЕЛЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў Р Р•Р–РРњРђ Р’Р«Р”Р•Р›Р•РќРРЇ
         LinkBehaviors.Clear()
-        LinkBehaviors.Add(LCase(trans("По умолчанию")), LinkBehavior.SystemDefault)
-        LinkBehaviors.Add(LCase(trans("Всегда")), LinkBehavior.AlwaysUnderline)
-        LinkBehaviors.Add(LCase(trans("При наведении")), LinkBehavior.HoverUnderline)
-        LinkBehaviors.Add(LCase(trans("Никогда")), LinkBehavior.NeverUnderline)
+        LinkBehaviors.Add(LCase(trans("РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")), LinkBehavior.SystemDefault)
+        LinkBehaviors.Add(LCase(trans("Р’СЃРµРіРґР°")), LinkBehavior.AlwaysUnderline)
+        LinkBehaviors.Add(LCase(trans("РџСЂРё РЅР°РІРµРґРµРЅРёРё")), LinkBehavior.HoverUnderline)
+        LinkBehaviors.Add(LCase(trans("РќРёРєРѕРіРґР°")), LinkBehavior.NeverUnderline)
 
-        ' СОЗДАНИЕ КОНСТАНТ КНОПОК СООБЩЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РљРќРћРџРћРљ РЎРћРћР‘Р©Р•РќРРЇ
         MsgStyleButtons.Clear()
-        MsgStyleButtons.Add(LCase(trans("Прервать Поворить Пропустить")), MsgBoxStyle.AbortRetryIgnore)
-        MsgStyleButtons.Add(LCase(trans("Ок Справка")), MsgBoxStyle.MsgBoxHelp)
-        MsgStyleButtons.Add(LCase(trans("Ок Отмена")), MsgBoxStyle.OkCancel)
-        MsgStyleButtons.Add(LCase(trans("Ок")), MsgBoxStyle.OkOnly)
-        MsgStyleButtons.Add(LCase(trans("Повторить Отмена")), MsgBoxStyle.RetryCancel)
-        MsgStyleButtons.Add(LCase(trans("Да Нет")), MsgBoxStyle.YesNo)
-        MsgStyleButtons.Add(LCase(trans("Да Нет Отмена")), MsgBoxStyle.YesNoCancel)
+        MsgStyleButtons.Add(LCase(trans("РџСЂРµСЂРІР°С‚СЊ РџРѕРІРѕСЂРёС‚СЊ РџСЂРѕРїСѓСЃС‚РёС‚СЊ")), MsgBoxStyle.AbortRetryIgnore)
+        MsgStyleButtons.Add(LCase(trans("РћРє РЎРїСЂР°РІРєР°")), MsgBoxStyle.MsgBoxHelp)
+        MsgStyleButtons.Add(LCase(trans("РћРє РћС‚РјРµРЅР°")), MsgBoxStyle.OkCancel)
+        MsgStyleButtons.Add(LCase(trans("РћРє")), MsgBoxStyle.OkOnly)
+        MsgStyleButtons.Add(LCase(trans("РџРѕРІС‚РѕСЂРёС‚СЊ РћС‚РјРµРЅР°")), MsgBoxStyle.RetryCancel)
+        MsgStyleButtons.Add(LCase(trans("Р”Р° РќРµС‚")), MsgBoxStyle.YesNo)
+        MsgStyleButtons.Add(LCase(trans("Р”Р° РќРµС‚ РћС‚РјРµРЅР°")), MsgBoxStyle.YesNoCancel)
 
-        ' СОЗДАНИЕ КОНСТАНТ ТИПА СООБЩЕНИЯ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РўРРџРђ РЎРћРћР‘Р©Р•РќРРЇ
         MsgStyleTypes.Clear()
-        MsgStyleTypes.Add(LCase(trans("Обычный")), 0)
-        MsgStyleTypes.Add(LCase(trans("Ошибка")), MsgBoxStyle.Critical)
-        MsgStyleTypes.Add(LCase(trans("Внимание")), MsgBoxStyle.Exclamation)
-        MsgStyleTypes.Add(LCase(trans("Информационное")), MsgBoxStyle.Information)
-        MsgStyleTypes.Add(LCase(trans("Вопросительное")), MsgBoxStyle.Question)
+        MsgStyleTypes.Add(LCase(trans("РћР±С‹С‡РЅС‹Р№")), 0)
+        MsgStyleTypes.Add(LCase(trans("РћС€РёР±РєР°")), MsgBoxStyle.Critical)
+        MsgStyleTypes.Add(LCase(trans("Р’РЅРёРјР°РЅРёРµ")), MsgBoxStyle.Exclamation)
+        MsgStyleTypes.Add(LCase(trans("РРЅС„РѕСЂРјР°С†РёРѕРЅРЅРѕРµ")), MsgBoxStyle.Information)
+        MsgStyleTypes.Add(LCase(trans("Р’РѕРїСЂРѕСЃРёС‚РµР»СЊРЅРѕРµ")), MsgBoxStyle.Question)
 
-        ' СОЗДАНИЕ КОНСТАНТ ТИПА БАЗЫ ДАННЫХ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РўРРџРђ Р‘РђР—Р« Р”РђРќРќР«РҐ
         BdTypes.Clear()
         BdTypes.Add(LCase("Access"), "Access")
         BdTypes.Add(LCase("Excel"), "Excel")
 
-        ' СОЗДАНИЕ КОНСТАНТ ФОРМАТА ДАТЫ В КАЛЕНДАРЕ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў Р¤РћР РњРђРўРђ Р”РђРўР« Р’ РљРђР›Р•РќР”РђР Р•
         DateFormats.Clear()
-        DateFormats.Add(LCase(trans("Длинная дата")), DateTimePickerFormat.Long)
-        DateFormats.Add(LCase(trans("Короткая дата")), DateTimePickerFormat.Short)
-        DateFormats.Add(LCase(trans("Время")), DateTimePickerFormat.Time)
-        DateFormats.Add(LCase(trans("По выбору")), DateTimePickerFormat.Custom)
+        DateFormats.Add(LCase(trans("Р”Р»РёРЅРЅР°СЏ РґР°С‚Р°")), DateTimePickerFormat.Long)
+        DateFormats.Add(LCase(trans("РљРѕСЂРѕС‚РєР°СЏ РґР°С‚Р°")), DateTimePickerFormat.Short)
+        DateFormats.Add(LCase(trans("Р’СЂРµРјСЏ")), DateTimePickerFormat.Time)
+        DateFormats.Add(LCase(trans("РџРѕ РІС‹Р±РѕСЂСѓ")), DateTimePickerFormat.Custom)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ БЕГУНКА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ Р‘Р•Р“РЈРќРљРђ
         TickStyles.Clear()
-        TickStyles.Add(LCase(trans("Верхний")), Windows.Forms.TickStyle.TopLeft)
-        TickStyles.Add(LCase(trans("Нижний")), Windows.Forms.TickStyle.BottomRight)
-        TickStyles.Add(LCase(trans("Средний")), Windows.Forms.TickStyle.Both)
-        TickStyles.Add(LCase(trans("Никакой")), Windows.Forms.TickStyle.None)
+        TickStyles.Add(LCase(trans("Р’РµСЂС…РЅРёР№")), Windows.Forms.TickStyle.TopLeft)
+        TickStyles.Add(LCase(trans("РќРёР¶РЅРёР№")), Windows.Forms.TickStyle.BottomRight)
+        TickStyles.Add(LCase(trans("РЎСЂРµРґРЅРёР№")), Windows.Forms.TickStyle.Both)
+        TickStyles.Add(LCase(trans("РќРёРєР°РєРѕР№")), Windows.Forms.TickStyle.None)
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ БЕГУНКА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ Р‘Р•Р“РЈРќРљРђ
         FileEncodings.Clear()
-        FileEncodings.Add(LCase(trans("По умолчанию")), System.Text.Encoding.Default)
+        FileEncodings.Add(LCase(trans("РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")), System.Text.Encoding.Default)
         FileEncodings.Add(LCase("ASCII"), System.Text.Encoding.ASCII)
         FileEncodings.Add(LCase("BigEndian"), System.Text.Encoding.BigEndianUnicode)
-        FileEncodings.Add(LCase(trans("Юникод")), System.Text.Encoding.Unicode)
-        FileEncodings.Add(LCase(trans("Юникод") & "32"), System.Text.Encoding.UTF32)
-        FileEncodings.Add(LCase(trans("Юникод") & "7"), System.Text.Encoding.UTF7)
-        FileEncodings.Add(LCase(trans("Юникод") & "8"), System.Text.Encoding.UTF8)
+        FileEncodings.Add(LCase(trans("Р®РЅРёРєРѕРґ")), System.Text.Encoding.Unicode)
+        FileEncodings.Add(LCase(trans("Р®РЅРёРєРѕРґ") & "32"), System.Text.Encoding.UTF32)
+        FileEncodings.Add(LCase(trans("Р®РЅРёРєРѕРґ") & "7"), System.Text.Encoding.UTF7)
+        FileEncodings.Add(LCase(trans("Р®РЅРёРєРѕРґ") & "8"), System.Text.Encoding.UTF8)
         FileEncodings.Add("""" & "DOS-866" & """", System.Text.Encoding.GetEncoding(866))
         Dim encs() As EncodingInfo = System.Text.Encoding.GetEncodings
         For i = 0 To encs.Length - 1
@@ -4942,39 +4942,39 @@ PropVParam:     If vParamah Then
             End If
         Next
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ РИСУНКА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ Р РРЎРЈРќРљРђ
         SizeModes.Clear()
-        SizeModes.Add(LCase(trans("По умолчанию")), PictureBoxSizeMode.Normal)
-        SizeModes.Add(LCase(trans("Растянутый")), PictureBoxSizeMode.StretchImage)
-        SizeModes.Add(LCase(trans("Авторазмер")), PictureBoxSizeMode.AutoSize)
-        SizeModes.Add(LCase(trans("По центру")), PictureBoxSizeMode.CenterImage)
-        SizeModes.Add(LCase(trans("Масштабированный")), PictureBoxSizeMode.Zoom)
+        SizeModes.Add(LCase(trans("РџРѕ СѓРјРѕР»С‡Р°РЅРёСЋ")), PictureBoxSizeMode.Normal)
+        SizeModes.Add(LCase(trans("Р Р°СЃС‚СЏРЅСѓС‚С‹Р№")), PictureBoxSizeMode.StretchImage)
+        SizeModes.Add(LCase(trans("РђРІС‚РѕСЂР°Р·РјРµСЂ")), PictureBoxSizeMode.AutoSize)
+        SizeModes.Add(LCase(trans("РџРѕ С†РµРЅС‚СЂСѓ")), PictureBoxSizeMode.CenterImage)
+        SizeModes.Add(LCase(trans("РњР°СЃС€С‚Р°Р±РёСЂРѕРІР°РЅРЅС‹Р№")), PictureBoxSizeMode.Zoom)
 
-        ' СОЗДАНИЕ КОНСТАНТ ТИПА ВВОДА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РўРРџРђ Р’Р’РћР”Рђ
         InputTypes.Clear()
-        InputTypes.Add(LCase(trans("Все")), trans("Все"))
-        InputTypes.Add(LCase(trans("Только цифры")), trans("Только цифры"))
-        InputTypes.Add(LCase(trans("Только буквы")), trans("Только буквы"))
-        InputTypes.Add(LCase(trans("Только латинские буквы")), trans("Только латинские буквы"))
-        InputTypes.Add(LCase(trans("Только буквы и цифры")), trans("Только буквы и цифры"))
-        InputTypes.Add(LCase(trans("Только латинские буквы и цифры")), trans("Только латинские буквы и цифры"))
+        InputTypes.Add(LCase(trans("Р’СЃРµ")), trans("Р’СЃРµ"))
+        InputTypes.Add(LCase(trans("РўРѕР»СЊРєРѕ С†РёС„СЂС‹")), trans("РўРѕР»СЊРєРѕ С†РёС„СЂС‹"))
+        InputTypes.Add(LCase(trans("РўРѕР»СЊРєРѕ Р±СѓРєРІС‹")), trans("РўРѕР»СЊРєРѕ Р±СѓРєРІС‹"))
+        InputTypes.Add(LCase(trans("РўРѕР»СЊРєРѕ Р»Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹")), trans("РўРѕР»СЊРєРѕ Р»Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹"))
+        InputTypes.Add(LCase(trans("РўРѕР»СЊРєРѕ Р±СѓРєРІС‹ Рё С†РёС„СЂС‹")), trans("РўРѕР»СЊРєРѕ Р±СѓРєРІС‹ Рё С†РёС„СЂС‹"))
+        InputTypes.Add(LCase(trans("РўРѕР»СЊРєРѕ Р»Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹ Рё С†РёС„СЂС‹")), trans("РўРѕР»СЊРєРѕ Р»Р°С‚РёРЅСЃРєРёРµ Р±СѓРєРІС‹ Рё С†РёС„СЂС‹"))
 
-        ' СОЗДАНИЕ КОНСТАНТ СТАТУСОВ КЛИЕНТ-СЕРВЕРА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРђРўРЈРЎРћР’ РљР›РР•РќРў-РЎР•Р Р’Р•Р Рђ
         ClientServStates.Clear()
-        ClientServStates.Add(LCase(trans("Закрыт")), 0)
-        ClientServStates.Add(LCase(trans("Прослушивается")), 1)
-        ClientServStates.Add(LCase(trans("Вычисляется хост")), 2)
-        ClientServStates.Add(LCase(trans("Вычислился хост")), 3)
-        ClientServStates.Add(LCase(trans("Соединение")), 4)
-        ClientServStates.Add(LCase(trans("Соединился")), 5)
-        ClientServStates.Add(LCase(trans("Закрытие")), 6)
+        ClientServStates.Add(LCase(trans("Р—Р°РєСЂС‹С‚")), 0)
+        ClientServStates.Add(LCase(trans("РџСЂРѕСЃР»СѓС€РёРІР°РµС‚СЃСЏ")), 1)
+        ClientServStates.Add(LCase(trans("Р’С‹С‡РёСЃР»СЏРµС‚СЃСЏ С…РѕСЃС‚")), 2)
+        ClientServStates.Add(LCase(trans("Р’С‹С‡РёСЃР»РёР»СЃСЏ С…РѕСЃС‚")), 3)
+        ClientServStates.Add(LCase(trans("РЎРѕРµРґРёРЅРµРЅРёРµ")), 4)
+        ClientServStates.Add(LCase(trans("РЎРѕРµРґРёРЅРёР»СЃСЏ")), 5)
+        ClientServStates.Add(LCase(trans("Р—Р°РєСЂС‹С‚РёРµ")), 6)
 
-        ' СОЗДАНИЕ КОНСТАНТ ТИПОВ КЛИЕНТ-СЕРВЕРА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РўРРџРћР’ РљР›РР•РќРў-РЎР•Р Р’Р•Р Рђ
         ClientServerTypes.Clear()
-        ClientServerTypes.Add(LCase(trans("Клиент")), trans("Клиент"))
-        ClientServerTypes.Add(LCase(trans("Сервер")), trans("Сервер"))
+        ClientServerTypes.Add(LCase(trans("РљР»РёРµРЅС‚")), trans("РљР»РёРµРЅС‚"))
+        ClientServerTypes.Add(LCase(trans("РЎРµСЂРІРµСЂ")), trans("РЎРµСЂРІРµСЂ"))
 
-        ' СОЗДАНИЕ КОНСТАНТ ТИПОВ СОДЕРЖИМОГО ЗАПРОСА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РўРРџРћР’ РЎРћР”Р•Р Р–РРњРћР“Рћ Р—РђРџР РћРЎРђ
         ContentTypes.Clear()
         ContentTypes.Add((("""*/*""")), ("""*/*"""))
         ContentTypes.Add((("""application/x-www-form-urlencoded""")), ("""application/x-www-form-urlencoded"""))
@@ -5001,24 +5001,24 @@ PropVParam:     If vParamah Then
         ContentTypes.Add((("""application/zip""")), ("""application/zip"""))
         ContentTypes.Add((("""application/x-shockwave-flash""")), ("""application/x-shockwave-flash"""))
 
-        ' СОЗДАНИЕ КОНСТАНТ МЕТОДА ЗАПРОСА
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РњР•РўРћР”Рђ Р—РђРџР РћРЎРђ
         HttpMethods.Clear()
         HttpMethods.Add(("GET"), """GET""")
         HttpMethods.Add(("POST"), """POST""")
 
-        ' СОЗДАНИЕ КОНСТАНТ СТИЛЯ ПОЛОСЫ ЗАГРУЗКИ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРЎРўРђРќРў РЎРўРР›РЇ РџРћР›РћРЎР« Р—РђР“Р РЈР—РљР
         StylesProgress.Clear()
-        StylesProgress.Add(LCase(trans("Блоки")), ProgressBarStyle.Blocks)
-        StylesProgress.Add(LCase(trans("Непрерывность")), ProgressBarStyle.Continuous)
-        StylesProgress.Add(LCase(trans("Анимация")), ProgressBarStyle.Marquee)
+        StylesProgress.Add(LCase(trans("Р‘Р»РѕРєРё")), ProgressBarStyle.Blocks)
+        StylesProgress.Add(LCase(trans("РќРµРїСЂРµСЂС‹РІРЅРѕСЃС‚СЊ")), ProgressBarStyle.Continuous)
+        StylesProgress.Add(LCase(trans("РђРЅРёРјР°С†РёСЏ")), ProgressBarStyle.Marquee)
 
     End Sub
     Sub CreateHelpWords()
-        ' ОБОЗНАЧЕНИЕ СВОЙСТВ ТОЛЬКО ДЛЯ ЧТЕНИЯ
+        ' РћР‘РћР—РќРђР§Р•РќРР• РЎР’РћР™РЎРўР’ РўРћР›Р¬РљРћ Р”Р›РЇ Р§РўР•РќРРЇ
         SetReadOnlys()
 
         Dim i, j, ind As Integer
-        ' СОЗДАНИЕ СПИСКА ВСЕХ ВСПОМОГАТЕЛЬНЫХ СЛОВ
+        ' РЎРћР—Р”РђРќРР• РЎРџРРЎРљРђ Р’РЎР•РҐ Р’РЎРџРћРњРћР“РђРўР•Р›Р¬РќР«РҐ РЎР›РћР’
         ReDim HWAnchors(Anchors.Count - 1) : Anchors.Keys.CopyTo(HWAnchors, 0)
         ReDim HWbkImStyles(bkImStyles.Count - 1) : bkImStyles.Keys.CopyTo(HWbkImStyles, 0)
         ReDim HWCursori(Cursori.Count - 1) : Cursori.Keys.CopyTo(HWCursori, 0)
@@ -5065,16 +5065,16 @@ PropVParam:     If vParamah Then
         ReDim HWHttpMethods(HttpMethods.GetKeyList.Count - 1) : HttpMethods.GetKeyList.CopyTo(HWHttpMethods, 0)
         ReDim HWStylesProgress(StylesProgress.GetKeyList.Count - 1) : StylesProgress.GetKeyList.CopyTo(HWStylesProgress, 0)
 
-        ' ДаНет
-        ind = 0 : ReDim Preserve HWDaNet(ind) : HWDaNet(ind) = trans("Да")
-        ind += 1 : ReDim Preserve HWDaNet(ind) : HWDaNet(ind) = trans("Нет")
-        ' КнопкиМыши
-        ind = 0 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("Левая")
-        ind += 1 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("Правая")
-        ind += 1 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("Колесико")
-        ind += 1 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("ДопКнопка1")
-        ind += 1 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("ДопКнопка2")
-        ' Разрешения экрана
+        ' Р”Р°РќРµС‚
+        ind = 0 : ReDim Preserve HWDaNet(ind) : HWDaNet(ind) = trans("Р”Р°")
+        ind += 1 : ReDim Preserve HWDaNet(ind) : HWDaNet(ind) = trans("РќРµС‚")
+        ' РљРЅРѕРїРєРёРњС‹С€Рё
+        ind = 0 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("Р›РµРІР°СЏ")
+        ind += 1 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("РџСЂР°РІР°СЏ")
+        ind += 1 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("РљРѕР»РµСЃРёРєРѕ")
+        ind += 1 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("Р”РѕРїРљРЅРѕРїРєР°1")
+        ind += 1 : ReDim Preserve HWKnopkiMishi(ind) : HWKnopkiMishi(ind) = trans("Р”РѕРїРљРЅРѕРїРєР°2")
+        ' Р Р°Р·СЂРµС€РµРЅРёСЏ СЌРєСЂР°РЅР°
         ind = 0 : ReDim Preserve HWDeskResolution(ind) : HWDeskResolution(ind) = "640x480"
         ind += 1 : ReDim Preserve HWDeskResolution(ind) : HWDeskResolution(ind) = "800x600"
         ind += 1 : ReDim Preserve HWDeskResolution(ind) : HWDeskResolution(ind) = "1024x768"
@@ -5088,14 +5088,14 @@ PropVParam:     If vParamah Then
         ind += 1 : ReDim Preserve HWDeskResolution(ind) : HWDeskResolution(ind) = "1600x900"
         ind += 1 : ReDim Preserve HWDeskResolution(ind) : HWDeskResolution(ind) = "1600x1200"
         ind += 1 : ReDim Preserve HWDeskResolution(ind) : HWDeskResolution(ind) = "1920x1080"
-        ' прочее
-        ind = 0 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("Никакой")
-        ind += 1 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("Да")
-        ind += 1 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("Нет")
-        ind += 1 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("Все")
-        ind += 1 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("Символ новой строки")
+        ' РїСЂРѕС‡РµРµ
+        ind = 0 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("РќРёРєР°РєРѕР№")
+        ind += 1 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("Р”Р°")
+        ind += 1 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("РќРµС‚")
+        ind += 1 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("Р’СЃРµ")
+        ind += 1 : ReDim Preserve HWOthers(ind) : HWOthers(ind) = trans("РЎРёРјРІРѕР» РЅРѕРІРѕР№ СЃС‚СЂРѕРєРё")
 
-        ' Все вспомогательные слова
+        ' Р’СЃРµ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Рµ СЃР»РѕРІР°
         ind = 0 : Dim Massivs2() As Object = {HWOthers, HWCols, HWPapki, HWKnopkiMishi, HWKeys, _
                                               HWAnchors, HWbkImStyles, HWCursori, HWDocks, HWFlatStyles, HWFonts, _
                                               HWAligns, HWTextImages, HWBorderStyles, HWFixedPanels, HWOrientations, _
@@ -5113,7 +5113,7 @@ PropVParam:     If vParamah Then
                 ReDim Preserve AllHW(ind) : AllHW(ind) = Massivs2(i)(j) : ind += 1
             Next
         Next
-        ' Все вспомогательные слова в высоком регистре
+        ' Р’СЃРµ РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Рµ СЃР»РѕРІР° РІ РІС‹СЃРѕРєРѕРј СЂРµРіРёСЃС‚СЂРµ
         ReDim AllHWUp(AllHW.Length - 1)
         For i = 0 To AllHW.Length - 1 : AllHWUp(i) = UCase(AllHW(i)) : Next
 
@@ -5121,19 +5121,19 @@ PropVParam:     If vParamah Then
         If isDevelop And isRUN() = False Then CreateHWMenu()
     End Sub
     Sub CreateHWCategrs()
-        ' Запись в HWCategrs всех категорий вспомогателных слов
+        ' Р—Р°РїРёСЃСЊ РІ HWCategrs РІСЃРµС… РєР°С‚РµРіРѕСЂРёР№ РІСЃРїРѕРјРѕРіР°С‚РµР»РЅС‹С… СЃР»РѕРІ
         Dim tempHWCats() As String = { _
-            trans("Прочие"), trans("Цвета"), trans("Папки"), trans("Кнопки мыши"), trans("Клавиши") _
-            , trans("Привязки"), trans("Стиль фона"), trans("Курсоры"), trans("Растяжки"), trans("Стиль кнопки"), trans("Шрифт") _
-            , trans("Положения"), trans("Текст и рисунок"), trans("Фиксированная панель"), trans("Стиль рамки"), trans("Ориентация") _
-            , trans("Стиль рабочего стола"), trans("Разрешение экрана"), trans("Тип ключа реестра"), trans("Расположение текста"), trans("Полосы прокрутки") _
-            , trans("Стиль отображения"), trans("Направление текста"), trans("Статус готовности"), trans("Кодировка") _
-            , trans("Обновить страницу"), trans("Стиль окна"), trans("Стартовая позиция"), trans("Статус окна") _
-            , trans("Положение закладок"), trans("Стиль рамки ячейки"), trans("Режим редактирования"), trans("Режим выделения") _
-            , trans("Фильтры"), trans("Стиль подчеркивания"), trans("Кнопки сообщения"), trans("Тип сообщения") _
-            , trans("Тип базы данных"), trans("Формат даты календаря"), trans("Стиль бегунка") _
-            , trans("Кодировка текста"), trans("Стиль рисунка"), trans("Тип ввода"), trans("Статус клиент сервера") _
-            , trans("Тип клиент сервера"), trans("Тип содержимого"), trans("Метод запроса"), trans("Стиль загрузки") _
+            trans("РџСЂРѕС‡РёРµ"), trans("Р¦РІРµС‚Р°"), trans("РџР°РїРєРё"), trans("РљРЅРѕРїРєРё РјС‹С€Рё"), trans("РљР»Р°РІРёС€Рё") _
+            , trans("РџСЂРёРІСЏР·РєРё"), trans("РЎС‚РёР»СЊ С„РѕРЅР°"), trans("РљСѓСЂСЃРѕСЂС‹"), trans("Р Р°СЃС‚СЏР¶РєРё"), trans("РЎС‚РёР»СЊ РєРЅРѕРїРєРё"), trans("РЁСЂРёС„С‚") _
+            , trans("РџРѕР»РѕР¶РµРЅРёСЏ"), trans("РўРµРєСЃС‚ Рё СЂРёСЃСѓРЅРѕРє"), trans("Р¤РёРєСЃРёСЂРѕРІР°РЅРЅР°СЏ РїР°РЅРµР»СЊ"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё"), trans("РћСЂРёРµРЅС‚Р°С†РёСЏ") _
+            , trans("РЎС‚РёР»СЊ СЂР°Р±РѕС‡РµРіРѕ СЃС‚РѕР»Р°"), trans("Р Р°Р·СЂРµС€РµРЅРёРµ СЌРєСЂР°РЅР°"), trans("РўРёРї РєР»СЋС‡Р° СЂРµРµСЃС‚СЂР°"), trans("Р Р°СЃРїРѕР»РѕР¶РµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РџРѕР»РѕСЃС‹ РїСЂРѕРєСЂСѓС‚РєРё") _
+            , trans("РЎС‚РёР»СЊ РѕС‚РѕР±СЂР°Р¶РµРЅРёСЏ"), trans("РќР°РїСЂР°РІР»РµРЅРёРµ С‚РµРєСЃС‚Р°"), trans("РЎС‚Р°С‚СѓСЃ РіРѕС‚РѕРІРЅРѕСЃС‚Рё"), trans("РљРѕРґРёСЂРѕРІРєР°") _
+            , trans("РћР±РЅРѕРІРёС‚СЊ СЃС‚СЂР°РЅРёС†Сѓ"), trans("РЎС‚РёР»СЊ РѕРєРЅР°"), trans("РЎС‚Р°СЂС‚РѕРІР°СЏ РїРѕР·РёС†РёСЏ"), trans("РЎС‚Р°С‚СѓСЃ РѕРєРЅР°") _
+            , trans("РџРѕР»РѕР¶РµРЅРёРµ Р·Р°РєР»Р°РґРѕРє"), trans("РЎС‚РёР»СЊ СЂР°РјРєРё СЏС‡РµР№РєРё"), trans("Р РµР¶РёРј СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ"), trans("Р РµР¶РёРј РІС‹РґРµР»РµРЅРёСЏ") _
+            , trans("Р¤РёР»СЊС‚СЂС‹"), trans("РЎС‚РёР»СЊ РїРѕРґС‡РµСЂРєРёРІР°РЅРёСЏ"), trans("РљРЅРѕРїРєРё СЃРѕРѕР±С‰РµРЅРёСЏ"), trans("РўРёРї СЃРѕРѕР±С‰РµРЅРёСЏ") _
+            , trans("РўРёРї Р±Р°Р·С‹ РґР°РЅРЅС‹С…"), trans("Р¤РѕСЂРјР°С‚ РґР°С‚С‹ РєР°Р»РµРЅРґР°СЂСЏ"), trans("РЎС‚РёР»СЊ Р±РµРіСѓРЅРєР°") _
+            , trans("РљРѕРґРёСЂРѕРІРєР° С‚РµРєСЃС‚Р°"), trans("РЎС‚РёР»СЊ СЂРёСЃСѓРЅРєР°"), trans("РўРёРї РІРІРѕРґР°"), trans("РЎС‚Р°С‚СѓСЃ РєР»РёРµРЅС‚ СЃРµСЂРІРµСЂР°") _
+            , trans("РўРёРї РєР»РёРµРЅС‚ СЃРµСЂРІРµСЂР°"), trans("РўРёРї СЃРѕРґРµСЂР¶РёРјРѕРіРѕ"), trans("РњРµС‚РѕРґ Р·Р°РїСЂРѕСЃР°"), trans("РЎС‚РёР»СЊ Р·Р°РіСЂСѓР·РєРё") _
         }
         HWCategrs = tempHWCats
         HWCategrsSort.Clear()
@@ -5147,20 +5147,20 @@ PropVParam:     If vParamah Then
     Sub CreateHWMenu()
         MainForm.CreateHWMenu()
     End Sub
-    ' СОЗДАНИЕ НАБОРОВ И СПИСКОВ ДЛЯ МАСТЕРА
+    ' РЎРћР—Р”РђРќРР• РќРђР‘РћР РћР’ Р РЎРџРРЎРљРћР’ Р”Р›РЇ РњРђРЎРўР•Р Рђ
     Sub CreateArrays()
         Dim i, j As Integer
-        ' Создание списка дополнительных функций
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… С„СѓРЅРєС†РёР№
         Dim TempF() As String = { _
-            trans("Нет"), trans("Корень"), trans("Корень3"), trans("Квадрат"), trans("Модуль"), _
-            trans("Синус"), trans("Косинус"), trans("Тангенс"), _
-            trans("АркСинус"), trans("АркКосинус"), trans("АркТангенс"), _
-            trans("Экспонента"), trans("Логарифм"), trans("Логарифм10"), _
-            trans("Округлить"), trans("Округлить денежное"), trans("Сменить знак (+/-)"), _
-            trans("Инвертировать (Да/Нет)"), trans("Случайное число (от 1 до введенного)")}
+            trans("РќРµС‚"), trans("РљРѕСЂРµРЅСЊ"), trans("РљРѕСЂРµРЅСЊ3"), trans("РљРІР°РґСЂР°С‚"), trans("РњРѕРґСѓР»СЊ"), _
+            trans("РЎРёРЅСѓСЃ"), trans("РљРѕСЃРёРЅСѓСЃ"), trans("РўР°РЅРіРµРЅСЃ"), _
+            trans("РђСЂРєРЎРёРЅСѓСЃ"), trans("РђСЂРєРљРѕСЃРёРЅСѓСЃ"), trans("РђСЂРєРўР°РЅРіРµРЅСЃ"), _
+            trans("Р­РєСЃРїРѕРЅРµРЅС‚Р°"), trans("Р›РѕРіР°СЂРёС„Рј"), trans("Р›РѕРіР°СЂРёС„Рј10"), _
+            trans("РћРєСЂСѓРіР»РёС‚СЊ"), trans("РћРєСЂСѓРіР»РёС‚СЊ РґРµРЅРµР¶РЅРѕРµ"), trans("РЎРјРµРЅРёС‚СЊ Р·РЅР°Рє (+/-)"), _
+            trans("РРЅРІРµСЂС‚РёСЂРѕРІР°С‚СЊ (Р”Р°/РќРµС‚)"), trans("РЎР»СѓС‡Р°Р№РЅРѕРµ С‡РёСЃР»Рѕ (РѕС‚ 1 РґРѕ РІРІРµРґРµРЅРЅРѕРіРѕ)")}
         DopFuns = TempF
 
-        ' Создание списка дополнительных функций, не считая за функцию первую строку - "Нет"
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° РґРѕРїРѕР»РЅРёС‚РµР»СЊРЅС‹С… С„СѓРЅРєС†РёР№, РЅРµ СЃС‡РёС‚Р°СЏ Р·Р° С„СѓРЅРєС†РёСЋ РїРµСЂРІСѓСЋ СЃС‚СЂРѕРєСѓ - "РќРµС‚"
         ReDim DopFunsSimple(DopFuns.Length - 2)
         For i = 0 To DopFuns.Length - 2
             If DopFuns(i + 1).IndexOf(" (") <> -1 Then
@@ -5170,12 +5170,12 @@ PropVParam:     If vParamah Then
             End If
         Next
 
-        ' Создание списка математических операций
-        Dim TempO() As String = {"&    (" & transInfc("Склеить строки") & ")", _
-            "+    (" & transInfc("Сложить") & ")", "-     (" & transInfc("Вычесть") & ")", _
-            "*    (" & transInfc("Умножить") & ")", "/    (" & transInfc("Разделить") & ")", _
-            "\    (" & transInfc("Разделить нацело") & ")", "%    (" & transInfc("Остаток деления") & ")", _
-            "^    (" & transInfc("Возведение в степень") & ")"}
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° РјР°С‚РµРјР°С‚РёС‡РµСЃРєРёС… РѕРїРµСЂР°С†РёР№
+        Dim TempO() As String = {"&    (" & transInfc("РЎРєР»РµРёС‚СЊ СЃС‚СЂРѕРєРё") & ")", _
+            "+    (" & transInfc("РЎР»РѕР¶РёС‚СЊ") & ")", "-     (" & transInfc("Р’С‹С‡РµСЃС‚СЊ") & ")", _
+            "*    (" & transInfc("РЈРјРЅРѕР¶РёС‚СЊ") & ")", "/    (" & transInfc("Р Р°Р·РґРµР»РёС‚СЊ") & ")", _
+            "\    (" & transInfc("Р Р°Р·РґРµР»РёС‚СЊ РЅР°С†РµР»Рѕ") & ")", "%    (" & transInfc("РћСЃС‚Р°С‚РѕРє РґРµР»РµРЅРёСЏ") & ")", _
+            "^    (" & transInfc("Р’РѕР·РІРµРґРµРЅРёРµ РІ СЃС‚РµРїРµРЅСЊ") & ")"}
         Operations = TempO
         ReDim opers(Operations.Length - 1)
         For i = 0 To Operations.Length - 1
@@ -5185,13 +5185,13 @@ PropVParam:     If vParamah Then
             End If
             opers(i) = Trim(opers(i))
         Next
-        ' Создание списка логических операций
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° Р»РѕРіРёС‡РµСЃРєРёС… РѕРїРµСЂР°С†РёР№
         Dim TempU() As String = { _
-            "=    (" & transInfc("Если равно") & ")", "<=>    (" & transInfc("Равно c учетом регистра") & ")", _
-            "<>   (" & transInfc("Если неравно") & ")", _
-            ">    (" & transInfc("Если больше") & ")", "<   (" & transInfc("Если меньше") & ")", _
-            ">=    (" & transInfc("Больше либо равно") & ")", "<=   (" & transInfc("Меньше либо равно") & ")", _
-            trans("_И"), trans("_ИЛИ")}
+            "=    (" & transInfc("Р•СЃР»Рё СЂР°РІРЅРѕ") & ")", "<=>    (" & transInfc("Р Р°РІРЅРѕ c СѓС‡РµС‚РѕРј СЂРµРіРёСЃС‚СЂР°") & ")", _
+            "<>   (" & transInfc("Р•СЃР»Рё РЅРµСЂР°РІРЅРѕ") & ")", _
+            ">    (" & transInfc("Р•СЃР»Рё Р±РѕР»СЊС€Рµ") & ")", "<   (" & transInfc("Р•СЃР»Рё РјРµРЅСЊС€Рµ") & ")", _
+            ">=    (" & transInfc("Р‘РѕР»СЊС€Рµ Р»РёР±Рѕ СЂР°РІРЅРѕ") & ")", "<=   (" & transInfc("РњРµРЅСЊС€Рµ Р»РёР±Рѕ СЂР°РІРЅРѕ") & ")", _
+            trans("_Р"), trans("_РР›Р")}
         Dim ind As Integer = TempU.Length
         For i = 0 To Operations.Length - 1
             ReDim Preserve TempU(ind) : TempU(ind) = Operations(i) : ind += 1
@@ -5208,38 +5208,38 @@ PropVParam:     If vParamah Then
         ReDims(uslovs) : uslovs(uslovs.Length - 1) = "And"
         ReDims(uslovs) : uslovs(uslovs.Length - 1) = "Or"
 
-        ' Разбиение всех операторов по приоритетам
+        ' Р Р°Р·Р±РёРµРЅРёРµ РІСЃРµС… РѕРїРµСЂР°С‚РѕСЂРѕРІ РїРѕ РїСЂРёРѕСЂРёС‚РµС‚Р°Рј
         Dim TempP0() As String = {"&"}
         Dim TempP1() As String = {"^"}
         Dim TempP2() As String = {"*", "/", "\", "%"}
         Dim TempP3() As String = {"+", "-"}
         Dim TempP4() As String = {"=", "<=>", "<", ">", "<>", "<=", ">=", "=<", "=>"}
-        Dim TempP5() As String = {trans("_И"), trans("_ИЛИ")}
+        Dim TempP5() As String = {trans("_Р"), trans("_РР›Р")}
         Dim TempP() As Object = {TempP0, TempP1, TempP2, TempP3, TempP4, TempP5}
         Prioritets = TempP
-        ' Создание списка прочих зарезервированных символов
+        ' РЎРѕР·РґР°РЅРёРµ СЃРїРёСЃРєР° РїСЂРѕС‡РёС… Р·Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРЅС‹С… СЃРёРјРІРѕР»РѕРІ
         Dim TempOther() As String = {",", "(", ")", "[", "]", """"}
         othersSimb = TempOther
-        ' Создание полного списка зарезервированных символов
+        ' РЎРѕР·РґР°РЅРёРµ РїРѕР»РЅРѕРіРѕ СЃРїРёСЃРєР° Р·Р°СЂРµР·РµСЂРІРёСЂРѕРІР°РЅРЅС‹С… СЃРёРјРІРѕР»РѕРІ
         Dim mass() As Object = {uslovs, othersSimb}
         For i = 0 To mass.Length - 1
             For j = 0 To mass(i).Length - 1
                 ReDim Preserve allSimb(i + j) : allSimb(i + j) = mass(i)(j)
             Next
         Next
-        ' Список ключевых слов VB для избежания ошибок в компиляторе
+        ' РЎРїРёСЃРѕРє РєР»СЋС‡РµРІС‹С… СЃР»РѕРІ VB РґР»СЏ РёР·Р±РµР¶Р°РЅРёСЏ РѕС€РёР±РѕРє РІ РєРѕРјРїРёР»СЏС‚РѕСЂРµ
         VBKeyWords = New String() {"and", "or", "not", "nothing", "is", "isnot", _
                                    "dim", "as", "string", "object", "integer", "char", "new", "public", "private", _
                                    "class", "module", "array", "function", "event", "handles", "redim", "preserve", _
                                    "if", "then", "else", "elseif", "end", _
                                    "for", "to", "next", "step", "while", "do", "loop", "until"}
-        ' создание регярной строки запретных символов
+        ' СЃРѕР·РґР°РЅРёРµ СЂРµРіСЏСЂРЅРѕР№ СЃС‚СЂРѕРєРё Р·Р°РїСЂРµС‚РЅС‹С… СЃРёРјРІРѕР»РѕРІ
         noSimb = "[^\."
         For i = 0 To allSimb.Length - 1
             noSimb &= "\" & allSimb(i)
         Next : noSimb &= "]"
 
-        ' СОЗДАНИЕ СПИСКА ВСЕХ ВОЗМОЖНЫХ ФУНКЦИЙ
+        ' РЎРћР—Р”РђРќРР• РЎРџРРЎРљРђ Р’РЎР•РҐ Р’РћР—РњРћР–РќР«РҐ Р¤РЈРќРљР¦РР™
         ind = 0 : Dim Massivs() As Object = {DopFunsSimple}
         For i = 0 To Massivs.Length - 1
             For j = 0 To Massivs(i).Length - 1
@@ -5248,7 +5248,7 @@ PropVParam:     If vParamah Then
         Next
     End Sub
 
-    ' СОЗДАНИЕ ОБЪЕКТОВ
+    ' РЎРћР—Р”РђРќРР• РћР‘РЄР•РљРўРћР’
     Sub CreatePustishki(ByRef Pustishki As SortedList)
         Pustishki.Clear()
         Pustishki.Add("F", New Forms(True))
@@ -5283,7 +5283,7 @@ PropVParam:     If vParamah Then
         Pustishki.Add("PrD", New PrintDialog(True))
         Pustishki.Add("Tm", New Timer(True))
         Pustishki.Add("Pb", New PictureBoks(True))
-        Pustishki.Add("Сr", New Calendar(True))
+        Pustishki.Add("РЎr", New Calendar(True))
         Pustishki.Add("Tb", New TrackBar(True))
         Pustishki.Add("Tr", New Trial(True))
         Pustishki.Add("CS", New ClientServer(True))
@@ -5331,52 +5331,52 @@ PropVParam:     If vParamah Then
             Case "I" : MyObjs(MyObjs.Length - 1) = New Internet(True, isRun, fromEng)
             Case "PrB" : MyObjs(MyObjs.Length - 1) = New ProgressBar(True, isRun, fromEng)
         End Select
-        ' Если это большой сборный объект, то настроить его так, чтобы обработчики событий не работали в самой среде
+        ' Р•СЃР»Рё СЌС‚Рѕ Р±РѕР»СЊС€РѕР№ СЃР±РѕСЂРЅС‹Р№ РѕР±СЉРµРєС‚, С‚Рѕ РЅР°СЃС‚СЂРѕРёС‚СЊ РµРіРѕ С‚Р°Рє, С‡С‚РѕР±С‹ РѕР±СЂР°Р±РѕС‚С‡РёРєРё СЃРѕР±С‹С‚РёР№ РЅРµ СЂР°Р±РѕС‚Р°Р»Рё РІ СЃР°РјРѕР№ СЃСЂРµРґРµ
         If isDevelop And isRun = False Then SettingDevelop(MyObjs(MyObjs.Length - 1))
     End Sub
     Sub CreatePoleznie()
         PoleznieObjs = Nothing
-        ' Создание массива полезных объектов
+        ' РЎРѕР·РґР°РЅРёРµ РјР°СЃСЃРёРІР° РїРѕР»РµР·РЅС‹С… РѕР±СЉРµРєС‚РѕРІ
         Dim ind As Integer = 0 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Экран"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Р­РєСЂР°РЅ"))
         ind += 1 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Файлы и папки"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Р¤Р°Р№Р»С‹ Рё РїР°РїРєРё"))
         ind += 1 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Прерывания"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("РџСЂРµСЂС‹РІР°РЅРёСЏ"))
         ind += 1 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Система"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("РЎРёСЃС‚РµРјР°"))
         ind += 1 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Реестр"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Р РµРµСЃС‚СЂ"))
         ind += 1 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Вызвать событие"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Р’С‹Р·РІР°С‚СЊ СЃРѕР±С‹С‚РёРµ"))
         ind += 1 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Текст"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("РўРµРєСЃС‚"))
         ind += 1 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Показать сообщение"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("РџРѕРєР°Р·Р°С‚СЊ СЃРѕРѕР±С‰РµРЅРёРµ"))
         ind += 1 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Дата"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Р”Р°С‚Р°"))
         ind += 1 : ReDim Preserve PoleznieObjs(ind)
-        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Расширенные возможности"))
+        PoleznieObjs(ind) = New Poleznie(MyZnak & trans("Р Р°СЃС€РёСЂРµРЅРЅС‹Рµ РІРѕР·РјРѕР¶РЅРѕСЃС‚Рё"))
     End Sub
-    ' ЕСЛИ ОБЪЕКТ USERCONTROL
+    ' Р•РЎР›Р РћР‘РЄР•РљРў USERCONTROL
     Function ObjectsInPaths(ByVal ListTypes() As String) As ArrayList
-        ' Объекты хранящиеся в отдельных папках. Нужно их найти, чтобы подключить при компиляции
+        ' РћР±СЉРµРєС‚С‹ С…СЂР°РЅСЏС‰РёРµСЃСЏ РІ РѕС‚РґРµР»СЊРЅС‹С… РїР°РїРєР°С…. РќСѓР¶РЅРѕ РёС… РЅР°Р№С‚Рё, С‡С‚РѕР±С‹ РїРѕРґРєР»СЋС‡РёС‚СЊ РїСЂРё РєРѕРјРїРёР»СЏС†РёРё
         Dim sourcs As New ArrayList
-        ' ВНИМАНИЕ! Незабудь подставно объявить в Peremens3.vb этот класс!
+        ' Р’РќРРњРђРќРР•! РќРµР·Р°Р±СѓРґСЊ РїРѕРґСЃС‚Р°РІРЅРѕ РѕР±СЉСЏРІРёС‚СЊ РІ Peremens3.vb СЌС‚РѕС‚ РєР»Р°СЃСЃ!
         If Array.IndexOf(ListTypes, "ClientServer") <> -1 Then sourcs.Add(" """ & CompilPath & "ClientServer\*.vb""")
         If Array.IndexOf(ListTypes, "Internet") <> -1 Then sourcs.Add(" """ & CompilPath & "Internet\*.vb""")
-        ' ВНИМАНИЕ! Незабудь подставно объявить в Peremens3.vb этот класс!
+        ' Р’РќРРњРђРќРР•! РќРµР·Р°Р±СѓРґСЊ РїРѕРґСЃС‚Р°РІРЅРѕ РѕР±СЉСЏРІРёС‚СЊ РІ Peremens3.vb СЌС‚РѕС‚ РєР»Р°СЃСЃ!
         Return sourcs
     End Function
     Sub SettingDevelop(ByVal MyObj As Object)
-        ' Если это большой сборный объект, то настроить его так, чтобы обработчики событий не работали в самой среде
+        ' Р•СЃР»Рё СЌС‚Рѕ Р±РѕР»СЊС€РѕР№ СЃР±РѕСЂРЅС‹Р№ РѕР±СЉРµРєС‚, С‚Рѕ РЅР°СЃС‚СЂРѕРёС‚СЊ РµРіРѕ С‚Р°Рє, С‡С‚РѕР±С‹ РѕР±СЂР°Р±РѕС‚С‡РёРєРё СЃРѕР±С‹С‚РёР№ РЅРµ СЂР°Р±РѕС‚Р°Р»Рё РІ СЃР°РјРѕР№ СЃСЂРµРґРµ
         If Iz.IsI(MyObj) Or Iz.IsCS(MyObj) Then
             MyObj.obj.isDevelop = True
         End If
     End Sub
 
 
-    ' Доп. Фунции
+    ' Р”РѕРї. Р¤СѓРЅС†РёРё
     Function Radical(ByVal vl As String) As Double
         Return Math.Sqrt(Val(vl.Replace(",", ".")))
     End Function
@@ -5430,10 +5430,10 @@ PropVParam:     If vParamah Then
         Return rnd.Next(1, Val(vl.Replace(",", ".")))
     End Function
     Function Invert(ByVal vl As String) As String
-        If Trim(vl) = "1" Or UCase(Trim(vl)) = UCase(Trim(trans("Да"))) Then
-            Return """" & trans("Нет") & """"
-        ElseIf Trim(vl) = "0" Or UCase(Trim(vl)) = UCase(Trim(trans("Нет"))) Then
-            Return """" & trans("Да") & """"
+        If Trim(vl) = "1" Or UCase(Trim(vl)) = UCase(Trim(trans("Р”Р°"))) Then
+            Return """" & trans("РќРµС‚") & """"
+        ElseIf Trim(vl) = "0" Or UCase(Trim(vl)) = UCase(Trim(trans("РќРµС‚"))) Then
+            Return """" & trans("Р”Р°") & """"
         Else
             Return ""
         End If

@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class CreateIf
     Inherits System.Windows.Forms.UserControl
 
@@ -90,7 +90,7 @@ Partial Class CreateIf
         Me.ifUsually.Size = New System.Drawing.Size(256, 21)
         Me.ifUsually.TabIndex = 2
         Me.ifUsually.TabStop = True
-        Me.ifUsually.Text = "Создать условие"
+        Me.ifUsually.Text = "РЎРѕР·РґР°С‚СЊ СѓСЃР»РѕРІРёРµ"
         Me.ifUsually.UseVisualStyleBackColor = True
         '
         'PalkaUsually
@@ -149,7 +149,7 @@ Partial Class CreateIf
         Me.IfPodIf.Name = "IfPodIf"
         Me.IfPodIf.Size = New System.Drawing.Size(255, 21)
         Me.IfPodIf.TabIndex = 2
-        Me.IfPodIf.Text = "Создать подУсловие"
+        Me.IfPodIf.Text = "РЎРѕР·РґР°С‚СЊ РїРѕРґРЈСЃР»РѕРІРёРµ"
         Me.IfPodIf.UseVisualStyleBackColor = True
         '
         'PalkaPodIf
@@ -195,7 +195,7 @@ Partial Class CreateIf
         Me.ifElse.Name = "ifElse"
         Me.ifElse.Size = New System.Drawing.Size(255, 21)
         Me.ifElse.TabIndex = 2
-        Me.ifElse.Text = "Создать раздел: ""во всех остальных случаях"""
+        Me.ifElse.Text = "РЎРѕР·РґР°С‚СЊ СЂР°Р·РґРµР»: ""РІРѕ РІСЃРµС… РѕСЃС‚Р°Р»СЊРЅС‹С… СЃР»СѓС‡Р°СЏС…"""
         Me.ifElse.UseVisualStyleBackColor = True
         '
         'LabelIf
@@ -205,7 +205,7 @@ Partial Class CreateIf
         Me.LabelIf.Name = "LabelIf"
         Me.LabelIf.Size = New System.Drawing.Size(42, 23)
         Me.LabelIf.TabIndex = 27
-        Me.LabelIf.Text = "ЕСЛИ"
+        Me.LabelIf.Text = "Р•РЎР›Р"
         Me.LabelIf.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'LabelThen
@@ -216,7 +216,7 @@ Partial Class CreateIf
         Me.LabelThen.Name = "LabelThen"
         Me.LabelThen.Size = New System.Drawing.Size(50, 15)
         Me.LabelThen.TabIndex = 28
-        Me.LabelThen.Text = "ТОГДА"
+        Me.LabelThen.Text = "РўРћР“Р”Рђ"
         Me.LabelThen.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'LabelElseIf
@@ -226,7 +226,7 @@ Partial Class CreateIf
         Me.LabelElseIf.Name = "LabelElseIf"
         Me.LabelElseIf.Size = New System.Drawing.Size(68, 22)
         Me.LabelElseIf.TabIndex = 29
-        Me.LabelElseIf.Text = "ИЛИЕСЛИ"
+        Me.LabelElseIf.Text = "РР›РР•РЎР›Р"
         Me.LabelElseIf.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'LabelThen2
@@ -237,7 +237,7 @@ Partial Class CreateIf
         Me.LabelThen2.Name = "LabelThen2"
         Me.LabelThen2.Size = New System.Drawing.Size(49, 13)
         Me.LabelThen2.TabIndex = 29
-        Me.LabelThen2.Text = "ТОГДА"
+        Me.LabelThen2.Text = "РўРћР“Р”Рђ"
         '
         'CreateIf
         '
