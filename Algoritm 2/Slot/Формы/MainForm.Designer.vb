@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class MainForm
     Inherits System.Windows.Forms.Form
 
@@ -51,7 +51,7 @@ Partial Class MainForm
         Me.TraslateProjMenu = New System.Windows.Forms.ToolStripMenuItem
         Me.ToolStripMenuItem12 = New System.Windows.Forms.ToolStripSeparator
         Me.OptionsMenu = New System.Windows.Forms.ToolStripMenuItem
-        Me.ПомощьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
+        Me.РџРѕРјРѕС‰СЊToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem
         Me.UpdateMenu = New System.Windows.Forms.ToolStripMenuItem
         Me.RegistrMenu = New System.Windows.Forms.ToolStripMenuItem
@@ -342,7 +342,7 @@ Partial Class MainForm
         '
         Me.MenuStrip1.Dock = System.Windows.Forms.DockStyle.None
         Me.MenuStrip1.GripStyle = System.Windows.Forms.ToolStripGripStyle.Visible
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitMenu, Me.EditMenu, Me.ProjectMenu, Me.Tools, Me.ПомощьToolStripMenuItem})
+        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ExitMenu, Me.EditMenu, Me.ProjectMenu, Me.Tools, Me.РџРѕРјРѕС‰СЊToolStripMenuItem})
         Me.MenuStrip1.Location = New System.Drawing.Point(3, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
@@ -362,14 +362,14 @@ Partial Class MainForm
         Me.ExitMenu.Name = "ExitMenu"
         Me.ExitMenu.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded
         Me.ExitMenu.Size = New System.Drawing.Size(48, 20)
-        Me.ExitMenu.Text = "Файл"
+        Me.ExitMenu.Text = "Р¤Р°Р№Р»"
         '
         'NewMenu
         '
         Me.NewMenu.Name = "NewMenu"
         Me.NewMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.N), System.Windows.Forms.Keys)
         Me.NewMenu.Size = New System.Drawing.Size(286, 22)
-        Me.NewMenu.Text = "Новый проект"
+        Me.NewMenu.Text = "РќРѕРІС‹Р№ РїСЂРѕРµРєС‚"
         '
         'OpenMenu
         '
@@ -377,14 +377,14 @@ Partial Class MainForm
         Me.OpenMenu.Name = "OpenMenu"
         Me.OpenMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
         Me.OpenMenu.Size = New System.Drawing.Size(286, 22)
-        Me.OpenMenu.Text = "Открыть проект"
+        Me.OpenMenu.Text = "РћС‚РєСЂС‹С‚СЊ РїСЂРѕРµРєС‚"
         '
         'SaveMenu
         '
         Me.SaveMenu.Name = "SaveMenu"
         Me.SaveMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.SaveMenu.Size = New System.Drawing.Size(286, 22)
-        Me.SaveMenu.Text = "Сохранить проект"
+        Me.SaveMenu.Text = "РЎРѕС…СЂР°РЅРёС‚СЊ РїСЂРѕРµРєС‚"
         '
         'SaveAsMenu
         '
@@ -392,7 +392,7 @@ Partial Class MainForm
         Me.SaveAsMenu.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
                     Or System.Windows.Forms.Keys.S), System.Windows.Forms.Keys)
         Me.SaveAsMenu.Size = New System.Drawing.Size(286, 22)
-        Me.SaveAsMenu.Text = "Сохранить как..."
+        Me.SaveAsMenu.Text = "РЎРѕС…СЂР°РЅРёС‚СЊ РєР°Рє..."
         '
         'ToolStripMenuItem5
         '
@@ -404,7 +404,7 @@ Partial Class MainForm
         Me.BuildMenu.Name = "BuildMenu"
         Me.BuildMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
         Me.BuildMenu.Size = New System.Drawing.Size(286, 22)
-        Me.BuildMenu.Text = "Создать готовую программу"
+        Me.BuildMenu.Text = "РЎРѕР·РґР°С‚СЊ РіРѕС‚РѕРІСѓСЋ РїСЂРѕРіСЂР°РјРјСѓ"
         '
         'ExportVBMenu
         '
@@ -412,7 +412,7 @@ Partial Class MainForm
         Me.ExportVBMenu.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
                     Or System.Windows.Forms.Keys.B), System.Windows.Forms.Keys)
         Me.ExportVBMenu.Size = New System.Drawing.Size(286, 22)
-        Me.ExportVBMenu.Text = "Экспорт в VB.NET-проект"
+        Me.ExportVBMenu.Text = "Р­РєСЃРїРѕСЂС‚ РІ VB.NET-РїСЂРѕРµРєС‚"
         '
         'ToolStripMenuItem6
         '
@@ -423,7 +423,7 @@ Partial Class MainForm
         '
         Me.RecentProjects.Name = "RecentProjects"
         Me.RecentProjects.Size = New System.Drawing.Size(286, 22)
-        Me.RecentProjects.Text = "Последние проекты"
+        Me.RecentProjects.Text = "РџРѕСЃР»РµРґРЅРёРµ РїСЂРѕРµРєС‚С‹"
         '
         'ToolStripMenuItem14
         '
@@ -435,7 +435,7 @@ Partial Class MainForm
         Me.ExitMenu2.Name = "ExitMenu2"
         Me.ExitMenu2.ShortcutKeys = CType((System.Windows.Forms.Keys.Alt Or System.Windows.Forms.Keys.F4), System.Windows.Forms.Keys)
         Me.ExitMenu2.Size = New System.Drawing.Size(286, 22)
-        Me.ExitMenu2.Text = "Выход"
+        Me.ExitMenu2.Text = "Р’С‹С…РѕРґ"
         '
         'EditMenu
         '
@@ -444,7 +444,7 @@ Partial Class MainForm
         Me.EditMenu.Name = "EditMenu"
         Me.EditMenu.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded
         Me.EditMenu.Size = New System.Drawing.Size(59, 20)
-        Me.EditMenu.Text = "Правка"
+        Me.EditMenu.Text = "РџСЂР°РІРєР°"
         '
         'UndoMenu
         '
@@ -452,7 +452,7 @@ Partial Class MainForm
         Me.UndoMenu.Name = "UndoMenu"
         Me.UndoMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
         Me.UndoMenu.Size = New System.Drawing.Size(190, 22)
-        Me.UndoMenu.Text = "Отменить"
+        Me.UndoMenu.Text = "РћС‚РјРµРЅРёС‚СЊ"
         '
         'RedoMenu
         '
@@ -460,7 +460,7 @@ Partial Class MainForm
         Me.RedoMenu.Name = "RedoMenu"
         Me.RedoMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
         Me.RedoMenu.Size = New System.Drawing.Size(190, 22)
-        Me.RedoMenu.Text = "Повторить"
+        Me.RedoMenu.Text = "РџРѕРІС‚РѕСЂРёС‚СЊ"
         '
         'ToolStripMenuItem7
         '
@@ -473,28 +473,28 @@ Partial Class MainForm
         Me.CopyMenu4.Name = "CopyMenu4"
         Me.CopyMenu4.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.CopyMenu4.Size = New System.Drawing.Size(190, 22)
-        Me.CopyMenu4.Text = "Копировать"
+        Me.CopyMenu4.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ"
         '
         'CutMenu4
         '
         Me.CutMenu4.Name = "CutMenu4"
         Me.CutMenu4.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
         Me.CutMenu4.Size = New System.Drawing.Size(190, 22)
-        Me.CutMenu4.Text = "Вырезать"
+        Me.CutMenu4.Text = "Р’С‹СЂРµР·Р°С‚СЊ"
         '
         'PasteMenu4
         '
         Me.PasteMenu4.Name = "PasteMenu4"
         Me.PasteMenu4.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.PasteMenu4.Size = New System.Drawing.Size(190, 22)
-        Me.PasteMenu4.Text = "Вставить"
+        Me.PasteMenu4.Text = "Р’СЃС‚Р°РІРёС‚СЊ"
         '
         'DelMenu4
         '
         Me.DelMenu4.Name = "DelMenu4"
         Me.DelMenu4.ShortcutKeyDisplayString = "Del"
         Me.DelMenu4.Size = New System.Drawing.Size(190, 22)
-        Me.DelMenu4.Text = "Удалить"
+        Me.DelMenu4.Text = "РЈРґР°Р»РёС‚СЊ"
         '
         'ToolStripMenuItem9
         '
@@ -506,7 +506,7 @@ Partial Class MainForm
         Me.SelectAllMenu4.Name = "SelectAllMenu4"
         Me.SelectAllMenu4.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.SelectAllMenu4.Size = New System.Drawing.Size(190, 22)
-        Me.SelectAllMenu4.Text = "Выделить всё"
+        Me.SelectAllMenu4.Text = "Р’С‹РґРµР»РёС‚СЊ РІСЃС‘"
         '
         'ProjectMenu
         '
@@ -515,14 +515,14 @@ Partial Class MainForm
         Me.ProjectMenu.Name = "ProjectMenu"
         Me.ProjectMenu.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded
         Me.ProjectMenu.Size = New System.Drawing.Size(59, 20)
-        Me.ProjectMenu.Text = "Проект"
+        Me.ProjectMenu.Text = "РџСЂРѕРµРєС‚"
         '
         'RunMenu
         '
         Me.RunMenu.Name = "RunMenu"
         Me.RunMenu.ShortcutKeys = System.Windows.Forms.Keys.F5
         Me.RunMenu.Size = New System.Drawing.Size(214, 22)
-        Me.RunMenu.Text = "Запустить программу"
+        Me.RunMenu.Text = "Р—Р°РїСѓСЃС‚РёС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ"
         '
         'PauseMenu
         '
@@ -530,7 +530,7 @@ Partial Class MainForm
         Me.PauseMenu.Name = "PauseMenu"
         Me.PauseMenu.ShortcutKeys = System.Windows.Forms.Keys.F6
         Me.PauseMenu.Size = New System.Drawing.Size(214, 22)
-        Me.PauseMenu.Text = "Пауза"
+        Me.PauseMenu.Text = "РџР°СѓР·Р°"
         '
         'StopMenu
         '
@@ -538,7 +538,7 @@ Partial Class MainForm
         Me.StopMenu.Name = "StopMenu"
         Me.StopMenu.ShortcutKeys = System.Windows.Forms.Keys.F7
         Me.StopMenu.Size = New System.Drawing.Size(214, 22)
-        Me.StopMenu.Text = "Остановить"
+        Me.StopMenu.Text = "РћСЃС‚Р°РЅРѕРІРёС‚СЊ"
         '
         'ToolStripMenuItem11
         '
@@ -550,21 +550,21 @@ Partial Class MainForm
         Me.StepIntoMenu.Name = "StepIntoMenu"
         Me.StepIntoMenu.ShortcutKeys = System.Windows.Forms.Keys.F10
         Me.StepIntoMenu.Size = New System.Drawing.Size(214, 22)
-        Me.StepIntoMenu.Text = "Пошагово (внутрь)"
+        Me.StepIntoMenu.Text = "РџРѕС€Р°РіРѕРІРѕ (РІРЅСѓС‚СЂСЊ)"
         '
         'StepOverMenu
         '
         Me.StepOverMenu.Name = "StepOverMenu"
         Me.StepOverMenu.ShortcutKeys = System.Windows.Forms.Keys.F11
         Me.StepOverMenu.Size = New System.Drawing.Size(214, 22)
-        Me.StepOverMenu.Text = "Пошагово"
+        Me.StepOverMenu.Text = "РџРѕС€Р°РіРѕРІРѕ"
         '
         'StepOutMenu
         '
         Me.StepOutMenu.Name = "StepOutMenu"
         Me.StepOutMenu.ShortcutKeys = System.Windows.Forms.Keys.F12
         Me.StepOutMenu.Size = New System.Drawing.Size(214, 22)
-        Me.StepOutMenu.Text = "Пошагово (наружу)"
+        Me.StepOutMenu.Text = "РџРѕС€Р°РіРѕРІРѕ (РЅР°СЂСѓР¶Сѓ)"
         '
         'Tools
         '
@@ -573,13 +573,13 @@ Partial Class MainForm
         Me.Tools.Name = "Tools"
         Me.Tools.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded
         Me.Tools.Size = New System.Drawing.Size(95, 20)
-        Me.Tools.Text = "Инструменты"
+        Me.Tools.Text = "РРЅСЃС‚СЂСѓРјРµРЅС‚С‹"
         '
         'TraslateProjMenu
         '
         Me.TraslateProjMenu.Name = "TraslateProjMenu"
         Me.TraslateProjMenu.Size = New System.Drawing.Size(209, 22)
-        Me.TraslateProjMenu.Text = "Перевести проект на"
+        Me.TraslateProjMenu.Text = "РџРµСЂРµРІРµСЃС‚Рё РїСЂРѕРµРєС‚ РЅР°"
         '
         'ToolStripMenuItem12
         '
@@ -592,40 +592,40 @@ Partial Class MainForm
         Me.OptionsMenu.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
                     Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
         Me.OptionsMenu.Size = New System.Drawing.Size(209, 22)
-        Me.OptionsMenu.Text = "Настройки"
+        Me.OptionsMenu.Text = "РќР°СЃС‚СЂРѕР№РєРё"
         '
-        'ПомощьToolStripMenuItem
+        'РџРѕРјРѕС‰СЊToolStripMenuItem
         '
-        Me.ПомощьToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpMenu, Me.UpdateMenu, Me.RegistrMenu, Me.MecenatMenu, Me.ToolStripMenuItem15, Me.LessonMenu, Me.SamplesMenu, Me.ToolStripMenuItem13, Me.AboutMenu})
-        Me.ПомощьToolStripMenuItem.Name = "ПомощьToolStripMenuItem"
-        Me.ПомощьToolStripMenuItem.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded
-        Me.ПомощьToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
-        Me.ПомощьToolStripMenuItem.Text = "Помощь"
+        Me.РџРѕРјРѕС‰СЊToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpMenu, Me.UpdateMenu, Me.RegistrMenu, Me.MecenatMenu, Me.ToolStripMenuItem15, Me.LessonMenu, Me.SamplesMenu, Me.ToolStripMenuItem13, Me.AboutMenu})
+        Me.РџРѕРјРѕС‰СЊToolStripMenuItem.Name = "РџРѕРјРѕС‰СЊToolStripMenuItem"
+        Me.РџРѕРјРѕС‰СЊToolStripMenuItem.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded
+        Me.РџРѕРјРѕС‰СЊToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
+        Me.РџРѕРјРѕС‰СЊToolStripMenuItem.Text = "РџРѕРјРѕС‰СЊ"
         '
         'HelpMenu
         '
         Me.HelpMenu.Name = "HelpMenu"
         Me.HelpMenu.ShortcutKeys = System.Windows.Forms.Keys.F1
         Me.HelpMenu.Size = New System.Drawing.Size(182, 22)
-        Me.HelpMenu.Text = "Справка"
+        Me.HelpMenu.Text = "РЎРїСЂР°РІРєР°"
         '
         'UpdateMenu
         '
         Me.UpdateMenu.Name = "UpdateMenu"
         Me.UpdateMenu.Size = New System.Drawing.Size(182, 22)
-        Me.UpdateMenu.Text = "Обновления"
+        Me.UpdateMenu.Text = "РћР±РЅРѕРІР»РµРЅРёСЏ"
         '
         'RegistrMenu
         '
         Me.RegistrMenu.Name = "RegistrMenu"
         Me.RegistrMenu.Size = New System.Drawing.Size(182, 22)
-        Me.RegistrMenu.Text = "Регистрация"
+        Me.RegistrMenu.Text = "Р РµРіРёСЃС‚СЂР°С†РёСЏ"
         '
         'MecenatMenu
         '
         Me.MecenatMenu.Name = "MecenatMenu"
         Me.MecenatMenu.Size = New System.Drawing.Size(182, 22)
-        Me.MecenatMenu.Text = "Благотворители"
+        Me.MecenatMenu.Text = "Р‘Р»Р°РіРѕС‚РІРѕСЂРёС‚РµР»Рё"
         '
         'ToolStripMenuItem15
         '
@@ -637,13 +637,13 @@ Partial Class MainForm
         Me.LessonMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LessonsFirstMenu, Me.ToolStripMenuItem16, Me.LessonsOthersMenu})
         Me.LessonMenu.Name = "LessonMenu"
         Me.LessonMenu.Size = New System.Drawing.Size(182, 22)
-        Me.LessonMenu.Text = "Видео-уроки"
+        Me.LessonMenu.Text = "Р’РёРґРµРѕ-СѓСЂРѕРєРё"
         '
         'LessonsFirstMenu
         '
         Me.LessonsFirstMenu.Name = "LessonsFirstMenu"
         Me.LessonsFirstMenu.Size = New System.Drawing.Size(262, 22)
-        Me.LessonsFirstMenu.Text = "Видео-урок ""Мой первый проект"""
+        Me.LessonsFirstMenu.Text = "Р’РёРґРµРѕ-СѓСЂРѕРє ""РњРѕР№ РїРµСЂРІС‹Р№ РїСЂРѕРµРєС‚"""
         '
         'ToolStripMenuItem16
         '
@@ -654,20 +654,20 @@ Partial Class MainForm
         '
         Me.LessonsOthersMenu.Name = "LessonsOthersMenu"
         Me.LessonsOthersMenu.Size = New System.Drawing.Size(262, 22)
-        Me.LessonsOthersMenu.Text = "Еще видео-уроки..."
+        Me.LessonsOthersMenu.Text = "Р•С‰Рµ РІРёРґРµРѕ-СѓСЂРѕРєРё..."
         '
         'SamplesMenu
         '
         Me.SamplesMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SamplesBaseMenu, Me.ToolStripMenuItem17, Me.SamplesOthersMenu})
         Me.SamplesMenu.Name = "SamplesMenu"
         Me.SamplesMenu.Size = New System.Drawing.Size(182, 22)
-        Me.SamplesMenu.Text = "Примеры проектов"
+        Me.SamplesMenu.Text = "РџСЂРёРјРµСЂС‹ РїСЂРѕРµРєС‚РѕРІ"
         '
         'SamplesBaseMenu
         '
         Me.SamplesBaseMenu.Name = "SamplesBaseMenu"
         Me.SamplesBaseMenu.Size = New System.Drawing.Size(231, 22)
-        Me.SamplesBaseMenu.Text = "Примеры проектов базовые"
+        Me.SamplesBaseMenu.Text = "РџСЂРёРјРµСЂС‹ РїСЂРѕРµРєС‚РѕРІ Р±Р°Р·РѕРІС‹Рµ"
         '
         'ToolStripMenuItem17
         '
@@ -678,7 +678,7 @@ Partial Class MainForm
         '
         Me.SamplesOthersMenu.Name = "SamplesOthersMenu"
         Me.SamplesOthersMenu.Size = New System.Drawing.Size(231, 22)
-        Me.SamplesOthersMenu.Text = "Еще примеры проектов..."
+        Me.SamplesOthersMenu.Text = "Р•С‰Рµ РїСЂРёРјРµСЂС‹ РїСЂРѕРµРєС‚РѕРІ..."
         '
         'ToolStripMenuItem13
         '
@@ -689,7 +689,7 @@ Partial Class MainForm
         '
         Me.AboutMenu.Name = "AboutMenu"
         Me.AboutMenu.Size = New System.Drawing.Size(182, 22)
-        Me.AboutMenu.Text = "О программе"
+        Me.AboutMenu.Text = "Рћ РїСЂРѕРіСЂР°РјРјРµ"
         '
         'ToolStripContainer1
         '
@@ -955,7 +955,7 @@ Partial Class MainForm
         Me.FindCombo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.FindCombo.DropDownWidth = 167
         Me.FindCombo.FormattingEnabled = True
-        Me.FindCombo.Items.AddRange(New Object() {"Везде", "В текущем окне", "В текущем объекте", "В текущем событии", "На текущем уровне и ниже"})
+        Me.FindCombo.Items.AddRange(New Object() {"Р’РµР·РґРµ", "Р’ С‚РµРєСѓС‰РµРј РѕРєРЅРµ", "Р’ С‚РµРєСѓС‰РµРј РѕР±СЉРµРєС‚Рµ", "Р’ С‚РµРєСѓС‰РµРј СЃРѕР±С‹С‚РёРё", "РќР° С‚РµРєСѓС‰РµРј СѓСЂРѕРІРЅРµ Рё РЅРёР¶Рµ"})
         Me.FindCombo.Location = New System.Drawing.Point(168, 5)
         Me.FindCombo.Name = "FindCombo"
         Me.FindCombo.Size = New System.Drawing.Size(67, 21)
@@ -969,7 +969,7 @@ Partial Class MainForm
         Me.FindButton.Name = "FindButton"
         Me.FindButton.Size = New System.Drawing.Size(55, 23)
         Me.FindButton.TabIndex = 9
-        Me.FindButton.Text = "Найти"
+        Me.FindButton.Text = "РќР°Р№С‚Рё"
         Me.FindButton.UseVisualStyleBackColor = True
         '
         'FindCheck
@@ -979,7 +979,7 @@ Partial Class MainForm
         Me.FindCheck.Name = "FindCheck"
         Me.FindCheck.Size = New System.Drawing.Size(111, 24)
         Me.FindCheck.TabIndex = 8
-        Me.FindCheck.Text = "Слово целиком"
+        Me.FindCheck.Text = "РЎР»РѕРІРѕ С†РµР»РёРєРѕРј"
         Me.FindCheck.UseVisualStyleBackColor = True
         '
         'forFindText
@@ -1022,17 +1022,17 @@ Partial Class MainForm
         '
         Me.RunDeistMenu.Name = "RunDeistMenu"
         Me.RunDeistMenu.Size = New System.Drawing.Size(250, 22)
-        Me.RunDeistMenu.Text = "Выполнить действие"
-        Me.RunDeistMenu.ToolTipText = "Выбранное действие принудительно выполнится, когда вы запустите проект из режима " & _
-            "паузы"
+        Me.RunDeistMenu.Text = "Р’С‹РїРѕР»РЅРёС‚СЊ РґРµР№СЃС‚РІРёРµ"
+        Me.RunDeistMenu.ToolTipText = "Р’С‹Р±СЂР°РЅРЅРѕРµ РґРµР№СЃС‚РІРёРµ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РІС‹РїРѕР»РЅРёС‚СЃСЏ, РєРѕРіРґР° РІС‹ Р·Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРµРєС‚ РёР· СЂРµР¶РёРјР° " & _
+            "РїР°СѓР·С‹"
         '
         'NotRunDeistMenu
         '
         Me.NotRunDeistMenu.Name = "NotRunDeistMenu"
         Me.NotRunDeistMenu.Size = New System.Drawing.Size(250, 22)
-        Me.NotRunDeistMenu.Text = "Не выполнять действие"
-        Me.NotRunDeistMenu.ToolTipText = "Выбранное действие принудительно не выполнится, когда вы запустите проект из режи" & _
-            "ма паузы"
+        Me.NotRunDeistMenu.Text = "РќРµ РІС‹РїРѕР»РЅСЏС‚СЊ РґРµР№СЃС‚РІРёРµ"
+        Me.NotRunDeistMenu.ToolTipText = "Р’С‹Р±СЂР°РЅРЅРѕРµ РґРµР№СЃС‚РІРёРµ РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РЅРµ РІС‹РїРѕР»РЅРёС‚СЃСЏ, РєРѕРіРґР° РІС‹ Р·Р°РїСѓСЃС‚РёС‚Рµ РїСЂРѕРµРєС‚ РёР· СЂРµР¶Рё" & _
+            "РјР° РїР°СѓР·С‹"
         '
         'RunDeistMenuSplit
         '
@@ -1044,32 +1044,32 @@ Partial Class MainForm
         Me.EditNodeMenu.Name = "EditNodeMenu"
         Me.EditNodeMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.E), System.Windows.Forms.Keys)
         Me.EditNodeMenu.Size = New System.Drawing.Size(250, 22)
-        Me.EditNodeMenu.Text = "Редактировать"
+        Me.EditNodeMenu.Text = "Р РµРґР°РєС‚РёСЂРѕРІР°С‚СЊ"
         '
         'SelectMenu
         '
         Me.SelectMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SelectOneMenu, Me.SelectAllMenu, Me.UnSelectMenu})
         Me.SelectMenu.Name = "SelectMenu"
         Me.SelectMenu.Size = New System.Drawing.Size(250, 22)
-        Me.SelectMenu.Text = "Выделение"
+        Me.SelectMenu.Text = "Р’С‹РґРµР»РµРЅРёРµ"
         '
         'SelectOneMenu
         '
         Me.SelectOneMenu.Name = "SelectOneMenu"
         Me.SelectOneMenu.Size = New System.Drawing.Size(222, 22)
-        Me.SelectOneMenu.Text = "Выделить действие/объект"
+        Me.SelectOneMenu.Text = "Р’С‹РґРµР»РёС‚СЊ РґРµР№СЃС‚РІРёРµ/РѕР±СЉРµРєС‚"
         '
         'SelectAllMenu
         '
         Me.SelectAllMenu.Name = "SelectAllMenu"
         Me.SelectAllMenu.Size = New System.Drawing.Size(222, 22)
-        Me.SelectAllMenu.Text = "Выделить все действия"
+        Me.SelectAllMenu.Text = "Р’С‹РґРµР»РёС‚СЊ РІСЃРµ РґРµР№СЃС‚РІРёСЏ"
         '
         'UnSelectMenu
         '
         Me.UnSelectMenu.Name = "UnSelectMenu"
         Me.UnSelectMenu.Size = New System.Drawing.Size(222, 22)
-        Me.UnSelectMenu.Text = "Убрать выделения"
+        Me.UnSelectMenu.Text = "РЈР±СЂР°С‚СЊ РІС‹РґРµР»РµРЅРёСЏ"
         '
         'ToolStripMenuItem3
         '
@@ -1081,16 +1081,16 @@ Partial Class MainForm
         Me.CommMenu.Name = "CommMenu"
         Me.CommMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Q), System.Windows.Forms.Keys)
         Me.CommMenu.Size = New System.Drawing.Size(250, 22)
-        Me.CommMenu.Text = "Исключить"
-        Me.CommMenu.ToolTipText = "Исключить выделенные действия из работы программы"
+        Me.CommMenu.Text = "РСЃРєР»СЋС‡РёС‚СЊ"
+        Me.CommMenu.ToolTipText = "РСЃРєР»СЋС‡РёС‚СЊ РІС‹РґРµР»РµРЅРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ РёР· СЂР°Р±РѕС‚С‹ РїСЂРѕРіСЂР°РјРјС‹"
         '
         'UnCommMenu
         '
         Me.UnCommMenu.Name = "UnCommMenu"
         Me.UnCommMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.W), System.Windows.Forms.Keys)
         Me.UnCommMenu.Size = New System.Drawing.Size(250, 22)
-        Me.UnCommMenu.Text = "Задействовать"
-        Me.UnCommMenu.ToolTipText = "Задействовать выделенные действия в работу программы"
+        Me.UnCommMenu.Text = "Р—Р°РґРµР№СЃС‚РІРѕРІР°С‚СЊ"
+        Me.UnCommMenu.ToolTipText = "Р—Р°РґРµР№СЃС‚РІРѕРІР°С‚СЊ РІС‹РґРµР»РµРЅРЅС‹Рµ РґРµР№СЃС‚РІРёСЏ РІ СЂР°Р±РѕС‚Сѓ РїСЂРѕРіСЂР°РјРјС‹"
         '
         'CommSplit
         '
@@ -1103,7 +1103,7 @@ Partial Class MainForm
         Me.ShowAllMenu2.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
                     Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.ShowAllMenu2.Size = New System.Drawing.Size(250, 22)
-        Me.ShowAllMenu2.Text = "Развернуть внутри"
+        Me.ShowAllMenu2.Text = "Р Р°Р·РІРµСЂРЅСѓС‚СЊ РІРЅСѓС‚СЂРё"
         '
         'HideAllMenu2
         '
@@ -1111,7 +1111,7 @@ Partial Class MainForm
         Me.HideAllMenu2.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
                     Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
         Me.HideAllMenu2.Size = New System.Drawing.Size(250, 22)
-        Me.HideAllMenu2.Text = "Свернуть внутри"
+        Me.HideAllMenu2.Text = "РЎРІРµСЂРЅСѓС‚СЊ РІРЅСѓС‚СЂРё"
         '
         'ToolStripSeparator8
         '
@@ -1123,14 +1123,14 @@ Partial Class MainForm
         Me.ShowAllMenu.Name = "ShowAllMenu"
         Me.ShowAllMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.ShowAllMenu.Size = New System.Drawing.Size(250, 22)
-        Me.ShowAllMenu.Text = "Развернуть все"
+        Me.ShowAllMenu.Text = "Р Р°Р·РІРµСЂРЅСѓС‚СЊ РІСЃРµ"
         '
         'HideAllMenu
         '
         Me.HideAllMenu.Name = "HideAllMenu"
         Me.HideAllMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.H), System.Windows.Forms.Keys)
         Me.HideAllMenu.Size = New System.Drawing.Size(250, 22)
-        Me.HideAllMenu.Text = "Свернуть все"
+        Me.HideAllMenu.Text = "РЎРІРµСЂРЅСѓС‚СЊ РІСЃРµ"
         '
         'ToolStripMenuItem10
         '
@@ -1142,7 +1142,7 @@ Partial Class MainForm
         Me.BreakpointMenu.Name = "BreakpointMenu"
         Me.BreakpointMenu.ShortcutKeys = System.Windows.Forms.Keys.F9
         Me.BreakpointMenu.Size = New System.Drawing.Size(250, 22)
-        Me.BreakpointMenu.Text = "Контрольная точка"
+        Me.BreakpointMenu.Text = "РљРѕРЅС‚СЂРѕР»СЊРЅР°СЏ С‚РѕС‡РєР°"
         '
         'ToolStripMenuItem20
         '
@@ -1155,8 +1155,8 @@ Partial Class MainForm
         Me.CodeViewMenu.Name = "CodeViewMenu"
         Me.CodeViewMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.K), System.Windows.Forms.Keys)
         Me.CodeViewMenu.Size = New System.Drawing.Size(250, 22)
-        Me.CodeViewMenu.Text = "Программный код"
-        Me.CodeViewMenu.ToolTipText = "Посмотреть\изменить программный код элемента"
+        Me.CodeViewMenu.Text = "РџСЂРѕРіСЂР°РјРјРЅС‹Р№ РєРѕРґ"
+        Me.CodeViewMenu.ToolTipText = "РџРѕСЃРјРѕС‚СЂРµС‚СЊ\РёР·РјРµРЅРёС‚СЊ РїСЂРѕРіСЂР°РјРјРЅС‹Р№ РєРѕРґ СЌР»РµРјРµРЅС‚Р°"
         '
         'ToolStripMenuItem1
         '
@@ -1168,28 +1168,28 @@ Partial Class MainForm
         Me.CutMenu.Name = "CutMenu"
         Me.CutMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
         Me.CutMenu.Size = New System.Drawing.Size(250, 22)
-        Me.CutMenu.Text = "Вырезать"
+        Me.CutMenu.Text = "Р’С‹СЂРµР·Р°С‚СЊ"
         '
         'CopyMenu
         '
         Me.CopyMenu.Name = "CopyMenu"
         Me.CopyMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.CopyMenu.Size = New System.Drawing.Size(250, 22)
-        Me.CopyMenu.Text = "Копировать"
+        Me.CopyMenu.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ"
         '
         'PasteMenu
         '
         Me.PasteMenu.Name = "PasteMenu"
         Me.PasteMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.PasteMenu.Size = New System.Drawing.Size(250, 22)
-        Me.PasteMenu.Text = "Вставить"
+        Me.PasteMenu.Text = "Р’СЃС‚Р°РІРёС‚СЊ"
         '
         'DelMenu
         '
         Me.DelMenu.Name = "DelMenu"
         Me.DelMenu.ShortcutKeys = System.Windows.Forms.Keys.Delete
         Me.DelMenu.Size = New System.Drawing.Size(250, 22)
-        Me.DelMenu.Text = "Удалить"
+        Me.DelMenu.Text = "РЈРґР°Р»РёС‚СЊ"
         '
         'ToolStripMenuItem2
         '
@@ -1201,14 +1201,14 @@ Partial Class MainForm
         Me.UpMenu.Name = "UpMenu"
         Me.UpMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Up), System.Windows.Forms.Keys)
         Me.UpMenu.Size = New System.Drawing.Size(250, 22)
-        Me.UpMenu.Text = "Выше"
+        Me.UpMenu.Text = "Р’С‹С€Рµ"
         '
         'DownMenu
         '
         Me.DownMenu.Name = "DownMenu"
         Me.DownMenu.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Down), System.Windows.Forms.Keys)
         Me.DownMenu.Size = New System.Drawing.Size(250, 22)
-        Me.DownMenu.Text = "Ниже"
+        Me.DownMenu.Text = "РќРёР¶Рµ"
         '
         'FindLabel
         '
@@ -1216,7 +1216,7 @@ Partial Class MainForm
         Me.FindLabel.Name = "FindLabel"
         Me.FindLabel.Size = New System.Drawing.Size(46, 22)
         Me.FindLabel.TabIndex = 7
-        Me.FindLabel.Text = "Поиск:"
+        Me.FindLabel.Text = "РџРѕРёСЃРє:"
         Me.FindLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Apply
@@ -1227,7 +1227,7 @@ Partial Class MainForm
         Me.Apply.Name = "Apply"
         Me.Apply.Size = New System.Drawing.Size(72, 23)
         Me.Apply.TabIndex = 2
-        Me.Apply.Text = "Применить"
+        Me.Apply.Text = "РџСЂРёРјРµРЅРёС‚СЊ"
         Me.Apply.UseVisualStyleBackColor = True
         '
         'forEditNodeText
@@ -1263,14 +1263,14 @@ Partial Class MainForm
         Me.UndoMenu6.Name = "UndoMenu6"
         Me.UndoMenu6.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
         Me.UndoMenu6.Size = New System.Drawing.Size(190, 22)
-        Me.UndoMenu6.Text = "Отменить"
+        Me.UndoMenu6.Text = "РћС‚РјРµРЅРёС‚СЊ"
         '
         'RedoMenu6
         '
         Me.RedoMenu6.Name = "RedoMenu6"
         Me.RedoMenu6.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
         Me.RedoMenu6.Size = New System.Drawing.Size(190, 22)
-        Me.RedoMenu6.Text = "Повторить"
+        Me.RedoMenu6.Text = "РџРѕРІС‚РѕСЂРёС‚СЊ"
         '
         'ToolStripSeparator10
         '
@@ -1282,27 +1282,27 @@ Partial Class MainForm
         Me.CutMenu6.Name = "CutMenu6"
         Me.CutMenu6.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
         Me.CutMenu6.Size = New System.Drawing.Size(190, 22)
-        Me.CutMenu6.Text = "Вырезать"
+        Me.CutMenu6.Text = "Р’С‹СЂРµР·Р°С‚СЊ"
         '
         'CopyMenu6
         '
         Me.CopyMenu6.Name = "CopyMenu6"
         Me.CopyMenu6.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.CopyMenu6.Size = New System.Drawing.Size(190, 22)
-        Me.CopyMenu6.Text = "Копировать"
+        Me.CopyMenu6.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ"
         '
         'PasteMenu6
         '
         Me.PasteMenu6.Name = "PasteMenu6"
         Me.PasteMenu6.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.PasteMenu6.Size = New System.Drawing.Size(190, 22)
-        Me.PasteMenu6.Text = "Вставить"
+        Me.PasteMenu6.Text = "Р’СЃС‚Р°РІРёС‚СЊ"
         '
         'DelMenu6
         '
         Me.DelMenu6.Name = "DelMenu6"
         Me.DelMenu6.Size = New System.Drawing.Size(190, 22)
-        Me.DelMenu6.Text = "Удалить"
+        Me.DelMenu6.Text = "РЈРґР°Р»РёС‚СЊ"
         '
         'ToolStripSeparator11
         '
@@ -1314,7 +1314,7 @@ Partial Class MainForm
         Me.SelectAllMenu6.Name = "SelectAllMenu6"
         Me.SelectAllMenu6.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.SelectAllMenu6.Size = New System.Drawing.Size(190, 22)
-        Me.SelectAllMenu6.Text = "Выделить все"
+        Me.SelectAllMenu6.Text = "Р’С‹РґРµР»РёС‚СЊ РІСЃРµ"
         '
         'SplitRight
         '
@@ -1378,7 +1378,7 @@ Partial Class MainForm
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(10, 23)
         Me.Button1.TabIndex = 3
-        Me.Button1.Text = "Создать"
+        Me.Button1.Text = "РЎРѕР·РґР°С‚СЊ"
         Me.Button1.UseVisualStyleBackColor = True
         Me.Button1.Visible = False
         '
@@ -1534,7 +1534,7 @@ Partial Class MainForm
         Me.Label1.Size = New System.Drawing.Size(237, 16)
         Me.Label1.TabIndex = 0
         Me.Label1.Tag = "1"
-        Me.Label1.Text = "Создать событие"
+        Me.Label1.Text = "РЎРѕР·РґР°С‚СЊ СЃРѕР±С‹С‚РёРµ"
         Me.Label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'deistviya
@@ -1584,7 +1584,7 @@ Partial Class MainForm
         Me.DeistLabel.Size = New System.Drawing.Size(222, 16)
         Me.DeistLabel.TabIndex = 3
         Me.DeistLabel.Tag = "2"
-        Me.DeistLabel.Text = "Создание действия"
+        Me.DeistLabel.Text = "РЎРѕР·РґР°РЅРёРµ РґРµР№СЃС‚РІРёСЏ"
         Me.DeistLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'ifs
@@ -1635,7 +1635,7 @@ Partial Class MainForm
         Me.IfLabel.Size = New System.Drawing.Size(220, 16)
         Me.IfLabel.TabIndex = 5
         Me.IfLabel.Tag = "3"
-        Me.IfLabel.Text = "Создание условие"
+        Me.IfLabel.Text = "РЎРѕР·РґР°РЅРёРµ СѓСЃР»РѕРІРёРµ"
         Me.IfLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'cycles
@@ -1685,7 +1685,7 @@ Partial Class MainForm
         Me.CycleLabel.Size = New System.Drawing.Size(215, 16)
         Me.CycleLabel.TabIndex = 7
         Me.CycleLabel.Tag = "4"
-        Me.CycleLabel.Text = "Создание циклических повторений"
+        Me.CycleLabel.Text = "РЎРѕР·РґР°РЅРёРµ С†РёРєР»РёС‡РµСЃРєРёС… РїРѕРІС‚РѕСЂРµРЅРёР№"
         Me.CycleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'comm
@@ -1733,7 +1733,7 @@ Partial Class MainForm
         Me.Label2.Size = New System.Drawing.Size(218, 15)
         Me.Label2.TabIndex = 1
         Me.Label2.Tag = "5"
-        Me.Label2.Text = "Сделать пояснительный комментарий"
+        Me.Label2.Text = "РЎРґРµР»Р°С‚СЊ РїРѕСЏСЃРЅРёС‚РµР»СЊРЅС‹Р№ РєРѕРјРјРµРЅС‚Р°СЂРёР№"
         Me.Label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Create1
@@ -1744,7 +1744,7 @@ Partial Class MainForm
         Me.Create1.Name = "Create1"
         Me.Create1.Size = New System.Drawing.Size(75, 23)
         Me.Create1.TabIndex = 0
-        Me.Create1.Text = "Создать"
+        Me.Create1.Text = "РЎРѕР·РґР°С‚СЊ"
         Me.Create1.UseVisualStyleBackColor = True
         '
         'Cancel1
@@ -1754,7 +1754,7 @@ Partial Class MainForm
         Me.Cancel1.Name = "Cancel1"
         Me.Cancel1.Size = New System.Drawing.Size(75, 23)
         Me.Cancel1.TabIndex = 1
-        Me.Cancel1.Text = "Отмена"
+        Me.Cancel1.Text = "РћС‚РјРµРЅР°"
         Me.Cancel1.UseVisualStyleBackColor = True
         '
         'Peremeschatel
@@ -1777,7 +1777,7 @@ Partial Class MainForm
         '
         Me.AddMenu.Name = "AddMenu"
         Me.AddMenu.Size = New System.Drawing.Size(219, 22)
-        Me.AddMenu.Text = "Добавить"
+        Me.AddMenu.Text = "Р”РѕР±Р°РІРёС‚СЊ"
         '
         'AddUp
         '
@@ -1788,58 +1788,58 @@ Partial Class MainForm
         '
         Me.CreateArrayMenu.Name = "CreateArrayMenu"
         Me.CreateArrayMenu.Size = New System.Drawing.Size(219, 22)
-        Me.CreateArrayMenu.Text = "Создать массив"
-        Me.CreateArrayMenu.ToolTipText = "Объединение элементов одним именем. Различаться они будут по индексам."
+        Me.CreateArrayMenu.Text = "РЎРѕР·РґР°С‚СЊ РјР°СЃСЃРёРІ"
+        Me.CreateArrayMenu.ToolTipText = "РћР±СЉРµРґРёРЅРµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РѕРґРЅРёРј РёРјРµРЅРµРј. Р Р°Р·Р»РёС‡Р°С‚СЊСЃСЏ РѕРЅРё Р±СѓРґСѓС‚ РїРѕ РёРЅРґРµРєСЃР°Рј."
         '
         'CreateSubArrayMenu
         '
         Me.CreateSubArrayMenu.Name = "CreateSubArrayMenu"
         Me.CreateSubArrayMenu.Size = New System.Drawing.Size(219, 22)
-        Me.CreateSubArrayMenu.Text = "Создать подмассив"
-        Me.CreateSubArrayMenu.ToolTipText = "Создать массив, в уже существующем массиве."
+        Me.CreateSubArrayMenu.Text = "РЎРѕР·РґР°С‚СЊ РїРѕРґРјР°СЃСЃРёРІ"
+        Me.CreateSubArrayMenu.ToolTipText = "РЎРѕР·РґР°С‚СЊ РјР°СЃСЃРёРІ, РІ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРј РјР°СЃСЃРёРІРµ."
         '
         'ArrayWorkMenu
         '
         Me.ArrayWorkMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.UniteInSubArrayMenu, Me.SelectArrayMenu, Me.SelectSubArrayMenu, Me.AddToArrayMenu, Me.ExcludeFromArrayMenu})
         Me.ArrayWorkMenu.Name = "ArrayWorkMenu"
         Me.ArrayWorkMenu.Size = New System.Drawing.Size(219, 22)
-        Me.ArrayWorkMenu.Text = "Работа с массивами"
-        Me.ArrayWorkMenu.ToolTipText = "Функции для удобного редактирования ваших массивов."
+        Me.ArrayWorkMenu.Text = "Р Р°Р±РѕС‚Р° СЃ РјР°СЃСЃРёРІР°РјРё"
+        Me.ArrayWorkMenu.ToolTipText = "Р¤СѓРЅРєС†РёРё РґР»СЏ СѓРґРѕР±РЅРѕРіРѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РІР°С€РёС… РјР°СЃСЃРёРІРѕРІ."
         '
         'UniteInSubArrayMenu
         '
         Me.UniteInSubArrayMenu.Name = "UniteInSubArrayMenu"
         Me.UniteInSubArrayMenu.Size = New System.Drawing.Size(219, 22)
-        Me.UniteInSubArrayMenu.Text = "Объединить в подмассиве"
-        Me.UniteInSubArrayMenu.ToolTipText = "Объединить объекты в одном индексе массива."
+        Me.UniteInSubArrayMenu.Text = "РћР±СЉРµРґРёРЅРёС‚СЊ РІ РїРѕРґРјР°СЃСЃРёРІРµ"
+        Me.UniteInSubArrayMenu.ToolTipText = "РћР±СЉРµРґРёРЅРёС‚СЊ РѕР±СЉРµРєС‚С‹ РІ РѕРґРЅРѕРј РёРЅРґРµРєСЃРµ РјР°СЃСЃРёРІР°."
         '
         'SelectArrayMenu
         '
         Me.SelectArrayMenu.Name = "SelectArrayMenu"
         Me.SelectArrayMenu.Size = New System.Drawing.Size(219, 22)
-        Me.SelectArrayMenu.Text = "Выделить массив"
-        Me.SelectArrayMenu.ToolTipText = "Выделятся все объекты, с которыми данный объект находится в массиве."
+        Me.SelectArrayMenu.Text = "Р’С‹РґРµР»РёС‚СЊ РјР°СЃСЃРёРІ"
+        Me.SelectArrayMenu.ToolTipText = "Р’С‹РґРµР»СЏС‚СЃСЏ РІСЃРµ РѕР±СЉРµРєС‚С‹, СЃ РєРѕС‚РѕСЂС‹РјРё РґР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ РЅР°С…РѕРґРёС‚СЃСЏ РІ РјР°СЃСЃРёРІРµ."
         '
         'SelectSubArrayMenu
         '
         Me.SelectSubArrayMenu.Name = "SelectSubArrayMenu"
         Me.SelectSubArrayMenu.Size = New System.Drawing.Size(219, 22)
-        Me.SelectSubArrayMenu.Text = "Выделить подмассив"
-        Me.SelectSubArrayMenu.ToolTipText = "Выделятся все объекты, с которыми данный объект находится в подмассиве."
+        Me.SelectSubArrayMenu.Text = "Р’С‹РґРµР»РёС‚СЊ РїРѕРґРјР°СЃСЃРёРІ"
+        Me.SelectSubArrayMenu.ToolTipText = "Р’С‹РґРµР»СЏС‚СЃСЏ РІСЃРµ РѕР±СЉРµРєС‚С‹, СЃ РєРѕС‚РѕСЂС‹РјРё РґР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ РЅР°С…РѕРґРёС‚СЃСЏ РІ РїРѕРґРјР°СЃСЃРёРІРµ."
         '
         'AddToArrayMenu
         '
         Me.AddToArrayMenu.Name = "AddToArrayMenu"
         Me.AddToArrayMenu.Size = New System.Drawing.Size(219, 22)
-        Me.AddToArrayMenu.Text = "Добавить в массив"
-        Me.AddToArrayMenu.ToolTipText = "Добавить объект в уже существующий массив."
+        Me.AddToArrayMenu.Text = "Р”РѕР±Р°РІРёС‚СЊ РІ РјР°СЃСЃРёРІ"
+        Me.AddToArrayMenu.ToolTipText = "Р”РѕР±Р°РІРёС‚СЊ РѕР±СЉРµРєС‚ РІ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ РјР°СЃСЃРёРІ."
         '
         'ExcludeFromArrayMenu
         '
         Me.ExcludeFromArrayMenu.Name = "ExcludeFromArrayMenu"
         Me.ExcludeFromArrayMenu.Size = New System.Drawing.Size(219, 22)
-        Me.ExcludeFromArrayMenu.Text = "Исключить из массива"
-        Me.ExcludeFromArrayMenu.ToolTipText = "Объекту присвоится новое имя, и обнулится индекс."
+        Me.ExcludeFromArrayMenu.Text = "РСЃРєР»СЋС‡РёС‚СЊ РёР· РјР°СЃСЃРёРІР°"
+        Me.ExcludeFromArrayMenu.ToolTipText = "РћР±СЉРµРєС‚Сѓ РїСЂРёСЃРІРѕРёС‚СЃСЏ РЅРѕРІРѕРµ РёРјСЏ, Рё РѕР±РЅСѓР»РёС‚СЃСЏ РёРЅРґРµРєСЃ."
         '
         'MassiveUp
         '
@@ -1852,8 +1852,8 @@ Partial Class MainForm
         Me.CodeViewMenu2.Name = "CodeViewMenu2"
         Me.CodeViewMenu2.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.K), System.Windows.Forms.Keys)
         Me.CodeViewMenu2.Size = New System.Drawing.Size(219, 22)
-        Me.CodeViewMenu2.Text = "Программный код"
-        Me.CodeViewMenu2.ToolTipText = "Посмотреть\изменить программный код элемента"
+        Me.CodeViewMenu2.Text = "РџСЂРѕРіСЂР°РјРјРЅС‹Р№ РєРѕРґ"
+        Me.CodeViewMenu2.ToolTipText = "РџРѕСЃРјРѕС‚СЂРµС‚СЊ\РёР·РјРµРЅРёС‚СЊ РїСЂРѕРіСЂР°РјРјРЅС‹Р№ РєРѕРґ СЌР»РµРјРµРЅС‚Р°"
         '
         'ToolStripMenuItem18
         '
@@ -1865,39 +1865,39 @@ Partial Class MainForm
         Me.PlanMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.BringToFrontMenu, Me.BringToFrontMenuOne, Me.SendToBackMenuOne, Me.SendToBackMenu})
         Me.PlanMenu.Name = "PlanMenu"
         Me.PlanMenu.Size = New System.Drawing.Size(219, 22)
-        Me.PlanMenu.Text = "Уровни"
-        Me.PlanMenu.ToolTipText = "Преимущественное расположение объекта, относительно других объектов"
+        Me.PlanMenu.Text = "РЈСЂРѕРІРЅРё"
+        Me.PlanMenu.ToolTipText = "РџСЂРµРёРјСѓС‰РµСЃС‚РІРµРЅРЅРѕРµ СЂР°СЃРїРѕР»РѕР¶РµРЅРёРµ РѕР±СЉРµРєС‚Р°, РѕС‚РЅРѕСЃРёС‚РµР»СЊРЅРѕ РґСЂСѓРіРёС… РѕР±СЉРµРєС‚РѕРІ"
         '
         'BringToFrontMenu
         '
         Me.BringToFrontMenu.Name = "BringToFrontMenu"
         Me.BringToFrontMenu.Size = New System.Drawing.Size(175, 22)
-        Me.BringToFrontMenu.Text = "На передний план"
+        Me.BringToFrontMenu.Text = "РќР° РїРµСЂРµРґРЅРёР№ РїР»Р°РЅ"
         '
         'BringToFrontMenuOne
         '
         Me.BringToFrontMenuOne.Name = "BringToFrontMenuOne"
         Me.BringToFrontMenuOne.Size = New System.Drawing.Size(175, 22)
-        Me.BringToFrontMenuOne.Text = "На уровень выше"
+        Me.BringToFrontMenuOne.Text = "РќР° СѓСЂРѕРІРµРЅСЊ РІС‹С€Рµ"
         '
         'SendToBackMenuOne
         '
         Me.SendToBackMenuOne.Name = "SendToBackMenuOne"
         Me.SendToBackMenuOne.Size = New System.Drawing.Size(175, 22)
-        Me.SendToBackMenuOne.Text = "На уровень ниже"
+        Me.SendToBackMenuOne.Text = "РќР° СѓСЂРѕРІРµРЅСЊ РЅРёР¶Рµ"
         '
         'SendToBackMenu
         '
         Me.SendToBackMenu.Name = "SendToBackMenu"
         Me.SendToBackMenu.Size = New System.Drawing.Size(175, 22)
-        Me.SendToBackMenu.Text = "На задний план"
+        Me.SendToBackMenu.Text = "РќР° Р·Р°РґРЅРёР№ РїР»Р°РЅ"
         '
         'MoveMenu
         '
         Me.MoveMenu.Name = "MoveMenu"
         Me.MoveMenu.Size = New System.Drawing.Size(219, 22)
-        Me.MoveMenu.Text = "Перенести"
-        Me.MoveMenu.ToolTipText = "Переместить на другой объект-контейнер."
+        Me.MoveMenu.Text = "РџРµСЂРµРЅРµСЃС‚Рё"
+        Me.MoveMenu.ToolTipText = "РџРµСЂРµРјРµСЃС‚РёС‚СЊ РЅР° РґСЂСѓРіРѕР№ РѕР±СЉРµРєС‚-РєРѕРЅС‚РµР№РЅРµСЂ."
         '
         'EditUp
         '
@@ -1909,28 +1909,28 @@ Partial Class MainForm
         Me.CutMenu2.Name = "CutMenu2"
         Me.CutMenu2.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
         Me.CutMenu2.Size = New System.Drawing.Size(219, 22)
-        Me.CutMenu2.Text = "Вырезать"
+        Me.CutMenu2.Text = "Р’С‹СЂРµР·Р°С‚СЊ"
         '
         'CopyMenu2
         '
         Me.CopyMenu2.Name = "CopyMenu2"
         Me.CopyMenu2.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.CopyMenu2.Size = New System.Drawing.Size(219, 22)
-        Me.CopyMenu2.Text = "Копировать"
+        Me.CopyMenu2.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ"
         '
         'PasteMenu2
         '
         Me.PasteMenu2.Name = "PasteMenu2"
         Me.PasteMenu2.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.PasteMenu2.Size = New System.Drawing.Size(219, 22)
-        Me.PasteMenu2.Text = "Вставить"
+        Me.PasteMenu2.Text = "Р’СЃС‚Р°РІРёС‚СЊ"
         '
         'DelMenu2
         '
         Me.DelMenu2.Name = "DelMenu2"
         Me.DelMenu2.ShortcutKeys = System.Windows.Forms.Keys.Delete
         Me.DelMenu2.Size = New System.Drawing.Size(219, 22)
-        Me.DelMenu2.Text = "Удалить"
+        Me.DelMenu2.Text = "РЈРґР°Р»РёС‚СЊ"
         '
         'ToolStripMenuItem8
         '
@@ -1942,7 +1942,7 @@ Partial Class MainForm
         Me.SelectAllMenu2.Name = "SelectAllMenu2"
         Me.SelectAllMenu2.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.SelectAllMenu2.Size = New System.Drawing.Size(219, 22)
-        Me.SelectAllMenu2.Text = "Выделить всё"
+        Me.SelectAllMenu2.Text = "Р’С‹РґРµР»РёС‚СЊ РІСЃС‘"
         '
         'ObjectPanel
         '
@@ -1962,7 +1962,7 @@ Partial Class MainForm
         Me.Button.Name = "Button"
         Me.Button.Size = New System.Drawing.Size(148, 20)
         Me.Button.Tag = "B"
-        Me.Button.Text = "Кнопка"
+        Me.Button.Text = "РљРЅРѕРїРєР°"
         Me.Button.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Panel
@@ -1974,7 +1974,7 @@ Partial Class MainForm
         Me.Panel.Name = "Panel"
         Me.Panel.Size = New System.Drawing.Size(148, 20)
         Me.Panel.Tag = "P"
-        Me.Panel.Text = "Панель"
+        Me.Panel.Text = "РџР°РЅРµР»СЊ"
         Me.Panel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'DPanel
@@ -1986,7 +1986,7 @@ Partial Class MainForm
         Me.DPanel.Name = "DPanel"
         Me.DPanel.Size = New System.Drawing.Size(148, 20)
         Me.DPanel.Tag = "DP"
-        Me.DPanel.Text = "Двойная панель"
+        Me.DPanel.Text = "Р”РІРѕР№РЅР°СЏ РїР°РЅРµР»СЊ"
         Me.DPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Window
@@ -1998,7 +1998,7 @@ Partial Class MainForm
         Me.Window.Name = "Window"
         Me.Window.Size = New System.Drawing.Size(148, 20)
         Me.Window.Tag = "F"
-        Me.Window.Text = "Окно"
+        Me.Window.Text = "РћРєРЅРѕ"
         Me.Window.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TPage
@@ -2010,7 +2010,7 @@ Partial Class MainForm
         Me.TPage.Name = "TPage"
         Me.TPage.Size = New System.Drawing.Size(148, 20)
         Me.TPage.Tag = "TP"
-        Me.TPage.Text = "Закладки"
+        Me.TPage.Text = "Р—Р°РєР»Р°РґРєРё"
         Me.TPage.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Memory
@@ -2022,7 +2022,7 @@ Partial Class MainForm
         Me.Memory.Name = "Memory"
         Me.Memory.Size = New System.Drawing.Size(148, 20)
         Me.Memory.Tag = "M"
-        Me.Memory.Text = "Память"
+        Me.Memory.Text = "РџР°РјСЏС‚СЊ"
         Me.Memory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'mmenu
@@ -2034,7 +2034,7 @@ Partial Class MainForm
         Me.mmenu.Name = "mmenu"
         Me.mmenu.Size = New System.Drawing.Size(148, 20)
         Me.mmenu.Tag = "MM"
-        Me.mmenu.Text = "Меню"
+        Me.mmenu.Text = "РњРµРЅСЋ"
         Me.mmenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'cmenu
@@ -2046,7 +2046,7 @@ Partial Class MainForm
         Me.cmenu.Name = "cmenu"
         Me.cmenu.Size = New System.Drawing.Size(148, 20)
         Me.cmenu.Tag = "MM"
-        Me.cmenu.Text = "Всплывающее меню"
+        Me.cmenu.Text = "Р’СЃРїР»С‹РІР°СЋС‰РµРµ РјРµРЅСЋ"
         Me.cmenu.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Media
@@ -2057,7 +2057,7 @@ Partial Class MainForm
         Me.Media.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Media.Name = "Media"
         Me.Media.Size = New System.Drawing.Size(148, 20)
-        Me.Media.Text = "Медиа"
+        Me.Media.Text = "РњРµРґРёР°"
         Me.Media.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Audio
@@ -2068,7 +2068,7 @@ Partial Class MainForm
         Me.Audio.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Audio.Name = "Audio"
         Me.Audio.Size = New System.Drawing.Size(148, 20)
-        Me.Audio.Text = "Аудио"
+        Me.Audio.Text = "РђСѓРґРёРѕ"
         Me.Audio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TextBoks
@@ -2080,7 +2080,7 @@ Partial Class MainForm
         Me.TextBoks.Name = "TextBoks"
         Me.TextBoks.Size = New System.Drawing.Size(148, 20)
         Me.TextBoks.Tag = "T"
-        Me.TextBoks.Text = "Текстовое поле"
+        Me.TextBoks.Text = "РўРµРєСЃС‚РѕРІРѕРµ РїРѕР»Рµ"
         Me.TextBoks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'CheckBoks
@@ -2091,7 +2091,7 @@ Partial Class MainForm
         Me.CheckBoks.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CheckBoks.Name = "CheckBoks"
         Me.CheckBoks.Size = New System.Drawing.Size(148, 20)
-        Me.CheckBoks.Text = "Галочка"
+        Me.CheckBoks.Text = "Р“Р°Р»РѕС‡РєР°"
         Me.CheckBoks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'RadioBut
@@ -2102,7 +2102,7 @@ Partial Class MainForm
         Me.RadioBut.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RadioBut.Name = "RadioBut"
         Me.RadioBut.Size = New System.Drawing.Size(148, 20)
-        Me.RadioBut.Text = "Точка"
+        Me.RadioBut.Text = "РўРѕС‡РєР°"
         Me.RadioBut.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'TPanel
@@ -2113,7 +2113,7 @@ Partial Class MainForm
         Me.TPanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.TPanel.Name = "TPanel"
         Me.TPanel.Size = New System.Drawing.Size(148, 20)
-        Me.TPanel.Text = "Панель инструментов"
+        Me.TPanel.Text = "РџР°РЅРµР»СЊ РёРЅСЃС‚СЂСѓРјРµРЅС‚РѕРІ"
         Me.TPanel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'WBrowser
@@ -2124,7 +2124,7 @@ Partial Class MainForm
         Me.WBrowser.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.WBrowser.Name = "WBrowser"
         Me.WBrowser.Size = New System.Drawing.Size(148, 20)
-        Me.WBrowser.Text = "Браузер"
+        Me.WBrowser.Text = "Р‘СЂР°СѓР·РµСЂ"
         Me.WBrowser.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Table
@@ -2135,9 +2135,9 @@ Partial Class MainForm
         Me.Table.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Table.Name = "Table"
         Me.Table.Size = New System.Drawing.Size(148, 20)
-        Me.Table.Text = "Таблица"
+        Me.Table.Text = "РўР°Р±Р»РёС†Р°"
         Me.Table.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Table.ToolTipText = "Таблица"
+        Me.Table.ToolTipText = "РўР°Р±Р»РёС†Р°"
         '
         'ComboBoks
         '
@@ -2147,9 +2147,9 @@ Partial Class MainForm
         Me.ComboBoks.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ComboBoks.Name = "ComboBoks"
         Me.ComboBoks.Size = New System.Drawing.Size(148, 20)
-        Me.ComboBoks.Text = "Список"
+        Me.ComboBoks.Text = "РЎРїРёСЃРѕРє"
         Me.ComboBoks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ComboBoks.ToolTipText = "Список"
+        Me.ComboBoks.ToolTipText = "РЎРїРёСЃРѕРє"
         '
         'ListBoks
         '
@@ -2159,9 +2159,9 @@ Partial Class MainForm
         Me.ListBoks.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ListBoks.Name = "ListBoks"
         Me.ListBoks.Size = New System.Drawing.Size(148, 20)
-        Me.ListBoks.Text = "Большой список"
+        Me.ListBoks.Text = "Р‘РѕР»СЊС€РѕР№ СЃРїРёСЃРѕРє"
         Me.ListBoks.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ListBoks.ToolTipText = "Большой список"
+        Me.ListBoks.ToolTipText = "Р‘РѕР»СЊС€РѕР№ СЃРїРёСЃРѕРє"
         '
         'CheckedList
         '
@@ -2171,9 +2171,9 @@ Partial Class MainForm
         Me.CheckedList.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.CheckedList.Name = "CheckedList"
         Me.CheckedList.Size = New System.Drawing.Size(148, 20)
-        Me.CheckedList.Text = "Список галочек"
+        Me.CheckedList.Text = "РЎРїРёСЃРѕРє РіР°Р»РѕС‡РµРє"
         Me.CheckedList.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.CheckedList.ToolTipText = "Большой список"
+        Me.CheckedList.ToolTipText = "Р‘РѕР»СЊС€РѕР№ СЃРїРёСЃРѕРє"
         '
         'Label
         '
@@ -2183,9 +2183,9 @@ Partial Class MainForm
         Me.Label.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Label.Name = "Label"
         Me.Label.Size = New System.Drawing.Size(148, 20)
-        Me.Label.Text = "Надпись"
+        Me.Label.Text = "РќР°РґРїРёСЃСЊ"
         Me.Label.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Label.ToolTipText = "Надпись"
+        Me.Label.ToolTipText = "РќР°РґРїРёСЃСЊ"
         '
         'LinkLabel
         '
@@ -2195,9 +2195,9 @@ Partial Class MainForm
         Me.LinkLabel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.LinkLabel.Name = "LinkLabel"
         Me.LinkLabel.Size = New System.Drawing.Size(148, 20)
-        Me.LinkLabel.Text = "Ссылка"
+        Me.LinkLabel.Text = "РЎСЃС‹Р»РєР°"
         Me.LinkLabel.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.LinkLabel.ToolTipText = "Ссылка"
+        Me.LinkLabel.ToolTipText = "РЎСЃС‹Р»РєР°"
         '
         'RichText
         '
@@ -2207,9 +2207,9 @@ Partial Class MainForm
         Me.RichText.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RichText.Name = "RichText"
         Me.RichText.Size = New System.Drawing.Size(148, 20)
-        Me.RichText.Text = "Текстовый документ"
+        Me.RichText.Text = "РўРµРєСЃС‚РѕРІС‹Р№ РґРѕРєСѓРјРµРЅС‚"
         Me.RichText.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.RichText.ToolTipText = "Текстовый документ"
+        Me.RichText.ToolTipText = "РўРµРєСЃС‚РѕРІС‹Р№ РґРѕРєСѓРјРµРЅС‚"
         '
         'ColorDialog
         '
@@ -2219,9 +2219,9 @@ Partial Class MainForm
         Me.ColorDialog.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ColorDialog.Name = "ColorDialog"
         Me.ColorDialog.Size = New System.Drawing.Size(148, 20)
-        Me.ColorDialog.Text = "Окно выбора цвета"
+        Me.ColorDialog.Text = "РћРєРЅРѕ РІС‹Р±РѕСЂР° С†РІРµС‚Р°"
         Me.ColorDialog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.ColorDialog.ToolTipText = "Окно выбора цвета"
+        Me.ColorDialog.ToolTipText = "РћРєРЅРѕ РІС‹Р±РѕСЂР° С†РІРµС‚Р°"
         '
         'PathDialog
         '
@@ -2231,9 +2231,9 @@ Partial Class MainForm
         Me.PathDialog.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PathDialog.Name = "PathDialog"
         Me.PathDialog.Size = New System.Drawing.Size(148, 20)
-        Me.PathDialog.Text = "Окно выбора папки"
+        Me.PathDialog.Text = "РћРєРЅРѕ РІС‹Р±РѕСЂР° РїР°РїРєРё"
         Me.PathDialog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PathDialog.ToolTipText = "Окно выбора папки"
+        Me.PathDialog.ToolTipText = "РћРєРЅРѕ РІС‹Р±РѕСЂР° РїР°РїРєРё"
         '
         'FontDialog
         '
@@ -2243,9 +2243,9 @@ Partial Class MainForm
         Me.FontDialog.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.FontDialog.Name = "FontDialog"
         Me.FontDialog.Size = New System.Drawing.Size(104, 22)
-        Me.FontDialog.Text = "Окно шрифта"
+        Me.FontDialog.Text = "РћРєРЅРѕ С€СЂРёС„С‚Р°"
         Me.FontDialog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.FontDialog.ToolTipText = "Окно шрифта"
+        Me.FontDialog.ToolTipText = "РћРєРЅРѕ С€СЂРёС„С‚Р°"
         '
         'SaveDialog
         '
@@ -2255,9 +2255,9 @@ Partial Class MainForm
         Me.SaveDialog.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.SaveDialog.Name = "SaveDialog"
         Me.SaveDialog.Size = New System.Drawing.Size(123, 22)
-        Me.SaveDialog.Text = "Окно сохранения"
+        Me.SaveDialog.Text = "РћРєРЅРѕ СЃРѕС…СЂР°РЅРµРЅРёСЏ"
         Me.SaveDialog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.SaveDialog.ToolTipText = "Окно сохранения"
+        Me.SaveDialog.ToolTipText = "РћРєРЅРѕ СЃРѕС…СЂР°РЅРµРЅРёСЏ"
         '
         'OpenDialog
         '
@@ -2267,9 +2267,9 @@ Partial Class MainForm
         Me.OpenDialog.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.OpenDialog.Name = "OpenDialog"
         Me.OpenDialog.Size = New System.Drawing.Size(111, 22)
-        Me.OpenDialog.Text = "Окно открытия"
+        Me.OpenDialog.Text = "РћРєРЅРѕ РѕС‚РєСЂС‹С‚РёСЏ"
         Me.OpenDialog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.OpenDialog.ToolTipText = "Окно открытия"
+        Me.OpenDialog.ToolTipText = "РћРєРЅРѕ РѕС‚РєСЂС‹С‚РёСЏ"
         '
         'PrintDialog
         '
@@ -2280,9 +2280,9 @@ Partial Class MainForm
         Me.PrintDialog.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PrintDialog.Name = "PrintDialog"
         Me.PrintDialog.Size = New System.Drawing.Size(97, 22)
-        Me.PrintDialog.Text = "Окно печати"
+        Me.PrintDialog.Text = "РћРєРЅРѕ РїРµС‡Р°С‚Рё"
         Me.PrintDialog.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.PrintDialog.ToolTipText = "Окно печати"
+        Me.PrintDialog.ToolTipText = "РћРєРЅРѕ РїРµС‡Р°С‚Рё"
         '
         'Timer
         '
@@ -2292,9 +2292,9 @@ Partial Class MainForm
         Me.Timer.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Timer.Name = "Timer"
         Me.Timer.Size = New System.Drawing.Size(95, 22)
-        Me.Timer.Text = "Секундомер"
+        Me.Timer.Text = "РЎРµРєСѓРЅРґРѕРјРµСЂ"
         Me.Timer.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        Me.Timer.ToolTipText = "Секундомер"
+        Me.Timer.ToolTipText = "РЎРµРєСѓРЅРґРѕРјРµСЂ"
         '
         'PictureBoks
         '
@@ -2303,7 +2303,7 @@ Partial Class MainForm
         Me.PictureBoks.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PictureBoks.Name = "PictureBoks"
         Me.PictureBoks.Size = New System.Drawing.Size(73, 22)
-        Me.PictureBoks.Text = "Рисунок"
+        Me.PictureBoks.Text = "Р РёСЃСѓРЅРѕРє"
         '
         'TrackBar
         '
@@ -2312,7 +2312,7 @@ Partial Class MainForm
         Me.TrackBar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.TrackBar.Name = "TrackBar"
         Me.TrackBar.Size = New System.Drawing.Size(71, 22)
-        Me.TrackBar.Text = "Бегунок"
+        Me.TrackBar.Text = "Р‘РµРіСѓРЅРѕРє"
         '
         'Trial
         '
@@ -2321,7 +2321,7 @@ Partial Class MainForm
         Me.Trial.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Trial.Name = "Trial"
         Me.Trial.Size = New System.Drawing.Size(61, 22)
-        Me.Trial.Text = "Триал"
+        Me.Trial.Text = "РўСЂРёР°Р»"
         '
         'Calendar
         '
@@ -2330,7 +2330,7 @@ Partial Class MainForm
         Me.Calendar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Calendar.Name = "Calendar"
         Me.Calendar.Size = New System.Drawing.Size(85, 22)
-        Me.Calendar.Text = "Календарь"
+        Me.Calendar.Text = "РљР°Р»РµРЅРґР°СЂСЊ"
         '
         'Internet
         '
@@ -2339,7 +2339,7 @@ Partial Class MainForm
         Me.Internet.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.Internet.Name = "Internet"
         Me.Internet.Size = New System.Drawing.Size(148, 20)
-        Me.Internet.Text = "Интернет"
+        Me.Internet.Text = "РРЅС‚РµСЂРЅРµС‚"
         '
         'ProgressBar
         '
@@ -2348,7 +2348,7 @@ Partial Class MainForm
         Me.ProgressBar.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ProgressBar.Name = "ProgressBar"
         Me.ProgressBar.Size = New System.Drawing.Size(148, 20)
-        Me.ProgressBar.Text = "Полоса загрузки"
+        Me.ProgressBar.Text = "РџРѕР»РѕСЃР° Р·Р°РіСЂСѓР·РєРё"
         '
         'ClientServer
         '
@@ -2357,7 +2357,7 @@ Partial Class MainForm
         Me.ClientServer.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.ClientServer.Name = "ClientServer"
         Me.ClientServer.Size = New System.Drawing.Size(148, 20)
-        Me.ClientServer.Text = "КлиентСервер"
+        Me.ClientServer.Text = "РљР»РёРµРЅС‚РЎРµСЂРІРµСЂ"
         '
         'StandartPanel
         '
@@ -2378,7 +2378,7 @@ Partial Class MainForm
         Me.NewPanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.NewPanel.Name = "NewPanel"
         Me.NewPanel.Size = New System.Drawing.Size(23, 22)
-        Me.NewPanel.ToolTipText = "Новый проект"
+        Me.NewPanel.ToolTipText = "РќРѕРІС‹Р№ РїСЂРѕРµРєС‚"
         '
         'OpenPanel
         '
@@ -2388,7 +2388,7 @@ Partial Class MainForm
         Me.OpenPanel.Name = "OpenPanel"
         Me.OpenPanel.Size = New System.Drawing.Size(23, 22)
         Me.OpenPanel.Text = "ToolStripButton1"
-        Me.OpenPanel.ToolTipText = "Открыть проект"
+        Me.OpenPanel.ToolTipText = "РћС‚РєСЂС‹С‚СЊ РїСЂРѕРµРєС‚"
         '
         'SavePanel
         '
@@ -2398,7 +2398,7 @@ Partial Class MainForm
         Me.SavePanel.Name = "SavePanel"
         Me.SavePanel.Size = New System.Drawing.Size(23, 22)
         Me.SavePanel.Text = "ToolStripButton1"
-        Me.SavePanel.ToolTipText = "Сохранить проект"
+        Me.SavePanel.ToolTipText = "РЎРѕС…СЂР°РЅРёС‚СЊ РїСЂРѕРµРєС‚"
         '
         'BuildPanel
         '
@@ -2408,7 +2408,7 @@ Partial Class MainForm
         Me.BuildPanel.Name = "BuildPanel"
         Me.BuildPanel.Size = New System.Drawing.Size(23, 22)
         Me.BuildPanel.Text = "ToolStripButton1"
-        Me.BuildPanel.ToolTipText = "Создать готовую программу"
+        Me.BuildPanel.ToolTipText = "РЎРѕР·РґР°С‚СЊ РіРѕС‚РѕРІСѓСЋ РїСЂРѕРіСЂР°РјРјСѓ"
         '
         'ToolStripSeparator3
         '
@@ -2423,7 +2423,7 @@ Partial Class MainForm
         Me.CutPanel.Name = "CutPanel"
         Me.CutPanel.Size = New System.Drawing.Size(23, 22)
         Me.CutPanel.Text = "ToolStripButton1"
-        Me.CutPanel.ToolTipText = "Вырезать"
+        Me.CutPanel.ToolTipText = "Р’С‹СЂРµР·Р°С‚СЊ"
         '
         'CopyPanel
         '
@@ -2433,7 +2433,7 @@ Partial Class MainForm
         Me.CopyPanel.Name = "CopyPanel"
         Me.CopyPanel.Size = New System.Drawing.Size(23, 22)
         Me.CopyPanel.Text = "ToolStripButton1"
-        Me.CopyPanel.ToolTipText = "Копировать"
+        Me.CopyPanel.ToolTipText = "РљРѕРїРёСЂРѕРІР°С‚СЊ"
         '
         'PastePanel
         '
@@ -2443,7 +2443,7 @@ Partial Class MainForm
         Me.PastePanel.Name = "PastePanel"
         Me.PastePanel.Size = New System.Drawing.Size(23, 22)
         Me.PastePanel.Text = "ToolStripButton1"
-        Me.PastePanel.ToolTipText = "Вставить"
+        Me.PastePanel.ToolTipText = "Р’СЃС‚Р°РІРёС‚СЊ"
         '
         'ToolStripSeparator4
         '
@@ -2458,7 +2458,7 @@ Partial Class MainForm
         Me.UndoPanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.UndoPanel.Name = "UndoPanel"
         Me.UndoPanel.Size = New System.Drawing.Size(23, 22)
-        Me.UndoPanel.Text = "Отменить"
+        Me.UndoPanel.Text = "РћС‚РјРµРЅРёС‚СЊ"
         '
         'RedoPanel
         '
@@ -2468,7 +2468,7 @@ Partial Class MainForm
         Me.RedoPanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.RedoPanel.Name = "RedoPanel"
         Me.RedoPanel.Size = New System.Drawing.Size(23, 22)
-        Me.RedoPanel.Text = "Повторить"
+        Me.RedoPanel.Text = "РџРѕРІС‚РѕСЂРёС‚СЊ"
         '
         'ToolStripSeparator1
         '
@@ -2484,7 +2484,7 @@ Partial Class MainForm
         Me.RunPanel.MergeAction = System.Windows.Forms.MergeAction.Replace
         Me.RunPanel.Name = "RunPanel"
         Me.RunPanel.Size = New System.Drawing.Size(32, 22)
-        Me.RunPanel.Text = "Запустить"
+        Me.RunPanel.Text = "Р—Р°РїСѓСЃС‚РёС‚СЊ"
         '
         'RunDropPanel
         '
@@ -2494,21 +2494,21 @@ Partial Class MainForm
         Me.RunDropPanel.MergeAction = System.Windows.Forms.MergeAction.MatchOnly
         Me.RunDropPanel.Name = "RunDropPanel"
         Me.RunDropPanel.Size = New System.Drawing.Size(212, 22)
-        Me.RunDropPanel.Text = "Запустить проект"
+        Me.RunDropPanel.Text = "Р—Р°РїСѓСЃС‚РёС‚СЊ РїСЂРѕРµРєС‚"
         '
         'RunSaveDropPanel
         '
         Me.RunSaveDropPanel.CheckOnClick = True
         Me.RunSaveDropPanel.Name = "RunSaveDropPanel"
         Me.RunSaveDropPanel.Size = New System.Drawing.Size(212, 22)
-        Me.RunSaveDropPanel.Text = "Сохраниться и запустить"
+        Me.RunSaveDropPanel.Text = "РЎРѕС…СЂР°РЅРёС‚СЊСЃСЏ Рё Р·Р°РїСѓСЃС‚РёС‚СЊ"
         '
         'RunFormDropPanel
         '
         Me.RunFormDropPanel.CheckOnClick = True
         Me.RunFormDropPanel.Name = "RunFormDropPanel"
         Me.RunFormDropPanel.Size = New System.Drawing.Size(212, 22)
-        Me.RunFormDropPanel.Text = "Запустить активное окно"
+        Me.RunFormDropPanel.Text = "Р—Р°РїСѓСЃС‚РёС‚СЊ Р°РєС‚РёРІРЅРѕРµ РѕРєРЅРѕ"
         '
         'PausePanel
         '
@@ -2518,7 +2518,7 @@ Partial Class MainForm
         Me.PausePanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.PausePanel.Name = "PausePanel"
         Me.PausePanel.Size = New System.Drawing.Size(23, 22)
-        Me.PausePanel.Text = "Приостановить проект"
+        Me.PausePanel.Text = "РџСЂРёРѕСЃС‚Р°РЅРѕРІРёС‚СЊ РїСЂРѕРµРєС‚"
         '
         'StopPanel
         '
@@ -2528,7 +2528,7 @@ Partial Class MainForm
         Me.StopPanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.StopPanel.Name = "StopPanel"
         Me.StopPanel.Size = New System.Drawing.Size(23, 22)
-        Me.StopPanel.Text = "Закончить выполнение программы"
+        Me.StopPanel.Text = "Р—Р°РєРѕРЅС‡РёС‚СЊ РІС‹РїРѕР»РЅРµРЅРёРµ РїСЂРѕРіСЂР°РјРјС‹"
         '
         'StepIntoPanel
         '
@@ -2537,7 +2537,7 @@ Partial Class MainForm
         Me.StepIntoPanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.StepIntoPanel.Name = "StepIntoPanel"
         Me.StepIntoPanel.Size = New System.Drawing.Size(23, 22)
-        Me.StepIntoPanel.Text = "Выполнять программу, прерываясь на каждом действии"
+        Me.StepIntoPanel.Text = "Р’С‹РїРѕР»РЅСЏС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РїСЂРµСЂС‹РІР°СЏСЃСЊ РЅР° РєР°Р¶РґРѕРј РґРµР№СЃС‚РІРёРё"
         '
         'StepOverPanel
         '
@@ -2546,7 +2546,7 @@ Partial Class MainForm
         Me.StepOverPanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.StepOverPanel.Name = "StepOverPanel"
         Me.StepOverPanel.Size = New System.Drawing.Size(23, 22)
-        Me.StepOverPanel.Text = "Выполнять программу, прерываясь на каждом действии, не заходя во внутрь их"
+        Me.StepOverPanel.Text = "Р’С‹РїРѕР»РЅСЏС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РїСЂРµСЂС‹РІР°СЏСЃСЊ РЅР° РєР°Р¶РґРѕРј РґРµР№СЃС‚РІРёРё, РЅРµ Р·Р°С…РѕРґСЏ РІРѕ РІРЅСѓС‚СЂСЊ РёС…"
         '
         'StepOutPanel
         '
@@ -2556,7 +2556,7 @@ Partial Class MainForm
         Me.StepOutPanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.StepOutPanel.Name = "StepOutPanel"
         Me.StepOutPanel.Size = New System.Drawing.Size(23, 22)
-        Me.StepOutPanel.Text = "Выполнять программу, прерываясь на каждом выходе из блока действии"
+        Me.StepOutPanel.Text = "Р’С‹РїРѕР»РЅСЏС‚СЊ РїСЂРѕРіСЂР°РјРјСѓ, РїСЂРµСЂС‹РІР°СЏСЃСЊ РЅР° РєР°Р¶РґРѕРј РІС‹С…РѕРґРµ РёР· Р±Р»РѕРєР° РґРµР№СЃС‚РІРёРё"
         '
         'ToolStripSeparator2
         '
@@ -2570,7 +2570,7 @@ Partial Class MainForm
         Me.HelpPanel.ImageTransparentColor = System.Drawing.Color.Magenta
         Me.HelpPanel.Name = "HelpPanel"
         Me.HelpPanel.Size = New System.Drawing.Size(23, 22)
-        Me.HelpPanel.Text = "Справка"
+        Me.HelpPanel.Text = "РЎРїСЂР°РІРєР°"
         '
         'EditPrMenu
         '
@@ -2582,7 +2582,7 @@ Partial Class MainForm
         '
         Me.HelpWords.Name = "HelpWords"
         Me.HelpWords.Size = New System.Drawing.Size(209, 22)
-        Me.HelpWords.Text = "Вспомогательные слова"
+        Me.HelpWords.Text = "Р’СЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹Рµ СЃР»РѕРІР°"
         '
         'ToolStripSeparator5
         '
@@ -2594,14 +2594,14 @@ Partial Class MainForm
         Me.UndoMenu5.Name = "UndoMenu5"
         Me.UndoMenu5.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Z), System.Windows.Forms.Keys)
         Me.UndoMenu5.Size = New System.Drawing.Size(209, 22)
-        Me.UndoMenu5.Text = "Отменить"
+        Me.UndoMenu5.Text = "РћС‚РјРµРЅРёС‚СЊ"
         '
         'RedoMenu5
         '
         Me.RedoMenu5.Name = "RedoMenu5"
         Me.RedoMenu5.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Y), System.Windows.Forms.Keys)
         Me.RedoMenu5.Size = New System.Drawing.Size(209, 22)
-        Me.RedoMenu5.Text = "Повторить"
+        Me.RedoMenu5.Text = "РџРѕРІС‚РѕСЂРёС‚СЊ"
         '
         'ToolStripSeparator6
         '
@@ -2613,27 +2613,27 @@ Partial Class MainForm
         Me.CutMenu5.Name = "CutMenu5"
         Me.CutMenu5.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.X), System.Windows.Forms.Keys)
         Me.CutMenu5.Size = New System.Drawing.Size(209, 22)
-        Me.CutMenu5.Text = "Вырезать"
+        Me.CutMenu5.Text = "Р’С‹СЂРµР·Р°С‚СЊ"
         '
         'CopyMenu5
         '
         Me.CopyMenu5.Name = "CopyMenu5"
         Me.CopyMenu5.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.C), System.Windows.Forms.Keys)
         Me.CopyMenu5.Size = New System.Drawing.Size(209, 22)
-        Me.CopyMenu5.Text = "Копировать"
+        Me.CopyMenu5.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ"
         '
         'PasteMenu5
         '
         Me.PasteMenu5.Name = "PasteMenu5"
         Me.PasteMenu5.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.PasteMenu5.Size = New System.Drawing.Size(209, 22)
-        Me.PasteMenu5.Text = "Вставить"
+        Me.PasteMenu5.Text = "Р’СЃС‚Р°РІРёС‚СЊ"
         '
         'DelMenu5
         '
         Me.DelMenu5.Name = "DelMenu5"
         Me.DelMenu5.Size = New System.Drawing.Size(209, 22)
-        Me.DelMenu5.Text = "Удалить"
+        Me.DelMenu5.Text = "РЈРґР°Р»РёС‚СЊ"
         '
         'ToolStripSeparator7
         '
@@ -2645,7 +2645,7 @@ Partial Class MainForm
         Me.SelectAllMenu5.Name = "SelectAllMenu5"
         Me.SelectAllMenu5.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.A), System.Windows.Forms.Keys)
         Me.SelectAllMenu5.Size = New System.Drawing.Size(209, 22)
-        Me.SelectAllMenu5.Text = "Выделить все"
+        Me.SelectAllMenu5.Text = "Р’С‹РґРµР»РёС‚СЊ РІСЃРµ"
         '
         'Timer1
         '
@@ -2670,13 +2670,13 @@ Partial Class MainForm
         '
         Me.CopyMenu3.Name = "CopyMenu3"
         Me.CopyMenu3.Size = New System.Drawing.Size(146, 22)
-        Me.CopyMenu3.Text = "Копировать"
+        Me.CopyMenu3.Text = "РљРѕРїРёСЂРѕРІР°С‚СЊ"
         '
         'MoveMenu3
         '
         Me.MoveMenu3.Name = "MoveMenu3"
         Me.MoveMenu3.Size = New System.Drawing.Size(146, 22)
-        Me.MoveMenu3.Text = "Переместить"
+        Me.MoveMenu3.Text = "РџРµСЂРµРјРµСЃС‚РёС‚СЊ"
         '
         'ToolStripMenuItem4
         '
@@ -2687,7 +2687,7 @@ Partial Class MainForm
         '
         Me.CancelMenu3.Name = "CancelMenu3"
         Me.CancelMenu3.Size = New System.Drawing.Size(146, 22)
-        Me.CancelMenu3.Text = "Отменить"
+        Me.CancelMenu3.Text = "РћС‚РјРµРЅРёС‚СЊ"
         '
         'OpenFileDialog1
         '
@@ -2702,7 +2702,7 @@ Partial Class MainForm
         Me.PasteMenu3.Name = "PasteMenu3"
         Me.PasteMenu3.ShortcutKeys = CType((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.V), System.Windows.Forms.Keys)
         Me.PasteMenu3.Size = New System.Drawing.Size(163, 22)
-        Me.PasteMenu3.Text = "Вставить"
+        Me.PasteMenu3.Text = "Р’СЃС‚Р°РІРёС‚СЊ"
         '
         'SplitPanelMenu
         '
@@ -3021,7 +3021,7 @@ Partial Class MainForm
     Friend WithEvents OptionsMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents TraslateProjMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem12 As System.Windows.Forms.ToolStripSeparator
-    Friend WithEvents ПомощьToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents РџРѕРјРѕС‰СЊToolStripMenuItem As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents HelpMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents ToolStripMenuItem13 As System.Windows.Forms.ToolStripSeparator
     Friend WithEvents AboutMenu As System.Windows.Forms.ToolStripMenuItem

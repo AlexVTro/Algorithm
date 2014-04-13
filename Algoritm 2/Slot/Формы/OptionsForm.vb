@@ -191,20 +191,20 @@
         txt &= "#bistro_podsvKov" & vbCrLf & YesOrNo(bistro_podsvKov) & vbCrLf & vbCrLf
         txt &= "#bistro_podsvObs" & vbCrLf & YesOrNo(bistro_podsvObs) & vbCrLf & vbCrLf
         txt &= "#bistro_podsvPMs" & vbCrLf & YesOrNo(bistro_podsvPMs) & vbCrLf & vbCrLf
-        Dim fl As IO.StreamWriter = IO.File.CreateText(AppPath & "Options.ini")
+        Dim fl As IO.StreamWriter = IO.File.CreateText(OptionsFilePath)
         fl.Write(txt) : fl.Close()
     End Sub
     Public Sub OpenOptions()
-        Dim fl As IO.StreamReader = IO.File.OpenText(AppPath & "Options.ini")
+        Dim fl As IO.StreamReader = IO.File.OpenText(OptionsFilePath)
         Dim txt As String = fl.ReadToEnd : fl.Close()
-        lang_interface = GetNuzhPunkt("#Lang_interface", txt)
-        lang_def = GetNuzhPunkt("#lang_def", txt)
+        lang_interface = IsNull(GetNuzhPunkt("#Lang_interface", txt), lang_interface)
+        lang_def = IsNull(GetNuzhPunkt("#lang_def", txt), lang_def)
         Skin = GetNuzhPunkt("#Skin", txt)
-        ProjectsPath = GetNuzhPunkt("#ProjectsPath", txt)
-        If IO.Directory.Exists(AppPath & ProjectsPath) Then ProjectsPath = AppPath & ProjectsPath
-        ProjIpath = GetNuzhPunkt("#ProjIpath", txt)
-        StartEdu = GetNuzhPunkt("#StartEdu", txt)
-        StartUved = GetNuzhPunkt("#StartUved", txt)
+        ProjectsPath = IsNull(GetNuzhPunkt("#ProjectsPath", txt), ProjectsPath)
+        'If IO.Directory.Exists(AppPath & ProjectsPath) Then ProjectsPath = AppPath & ProjectsPath
+        ProjIpath = IsNull(GetNuzhPunkt("#ProjIpath", txt), ProjIpath)
+        StartEdu = IsNull(GetNuzhPunkt("#StartEdu", txt), StartEdu)
+        StartUved = IsNull(GetNuzhPunkt("#StartUved", txt), StartUved)
         bistro_StatusLine = YesOrNo(GetNuzhPunkt("#bistro_StatusLine", txt))
         bistro_orfo = YesOrNo(GetNuzhPunkt("#bistro_orfo", txt))
         bistro_UnRe = YesOrNo(GetNuzhPunkt("#bistro_UnRe", txt))

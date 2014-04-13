@@ -1,54 +1,54 @@
-Public Class Project
-    Public f() As Forms = Nothing   ' Массив форм
-    Public ActiveForm As Forms      ' Форма, активная в данный момент
-    Public pPath, iPath, iPathShort, pFileName, pIcon, pPicNameDef, pProgressForm As String   ' Папка данного проекта и папка его рисунков
-    Public SobytMyObjs() As Object  ' МойОбъект, которому создают создают действие
+п»їPublic Class Project
+    Public f() As Forms = Nothing   ' РњР°СЃСЃРёРІ С„РѕСЂРј
+    Public ActiveForm As Forms      ' Р¤РѕСЂРјР°, Р°РєС‚РёРІРЅР°СЏ РІ РґР°РЅРЅС‹Р№ РјРѕРјРµРЅС‚
+    Public pPath, iPath, iPathShort, pFileName, pIcon, pPicNameDef, pProgressForm As String   ' РџР°РїРєР° РґР°РЅРЅРѕРіРѕ РїСЂРѕРµРєС‚Р° Рё РїР°РїРєР° РµРіРѕ СЂРёСЃСѓРЅРєРѕРІ
+    Public SobytMyObjs() As Object  ' РњРѕР№РћР±СЉРµРєС‚, РєРѕС‚РѕСЂРѕРјСѓ СЃРѕР·РґР°СЋС‚ СЃРѕР·РґР°СЋС‚ РґРµР№СЃС‚РІРёРµ
     'Public Undo, Redo As String
     Public UndoAr(), RedoAr() As String
     Public UndoRedoCount As Integer
     Public UndoRedoNoWrite As Boolean
     Public lastForm As Object
 
-    ' <<<<<<<< СОЗДАНИЕ И НАСТРОЙКА ПРОЕКТА >>>>>>>>>
+    ' <<<<<<<< РЎРћР—Р”РђРќРР• Р РќРђРЎРўР РћР™РљРђ РџР РћР•РљРўРђ >>>>>>>>>
 #Region "CREATE"
 
-    ' СОЗДАНИЕ ПРОЕКТА С ОПРЕДЕЛЕННЫМ ИМЕНЕМ
+    ' РЎРћР—Р”РђРќРР• РџР РћР•РљРўРђ РЎ РћРџР Р•Р”Р•Р›Р•РќРќР«Рњ РРњР•РќР•Рњ
     Sub New(ByVal pname As String)
         Dim i As Integer = 1
-        If IO.Directory.Exists(ProjectsPath) = False Then
-            ProjectsPath = AppPath & trans("Проекты") & "\"
-        End If
+        'If IO.Directory.Exists(ProjectsPath) = False Then
+        '    ProjectsPath = AppPath & trans("РџСЂРѕРµРєС‚С‹") & "\"
+        'End If
         While System.IO.Directory.Exists(ProjectsPath & "\" & pname & i)
             If System.IO.Directory.GetDirectories(ProjectsPath & "\" & pname & i).Length + System.IO.Directory.GetFiles(ProjectsPath & "\" & pname & i).Length = 0 Then Exit While
             i += 1
         End While
-        ' Создать требуемые папки
+        ' РЎРѕР·РґР°С‚СЊ С‚СЂРµР±СѓРµРјС‹Рµ РїР°РїРєРё
         pPath = ProjectsPath & pname & i & "\"
         iPathShort = ProjIpath
         iPath = pPath & iPathShort
         pFileName = pname & i & ".alg"
-        pPicNameDef = trans("Рисунок")
+        pPicNameDef = trans("Р РёСЃСѓРЅРѕРє")
         pProgressForm = "yes"
         IO.Directory.CreateDirectory(pPath)
-        MainForm.Text = pPath & pFileName & " - " & trans("АЛГОРИТМ 2")
-        ' Создать массив полезных объектов на форме
+        MainForm.Text = pPath & pFileName & " - " & trans("РђР›Р“РћР РРўРњ 2")
+        ' РЎРѕР·РґР°С‚СЊ РјР°СЃСЃРёРІ РїРѕР»РµР·РЅС‹С… РѕР±СЉРµРєС‚РѕРІ РЅР° С„РѕСЂРјРµ
         ReDim Preserve f(0) : f(0) = New Forms(, True)
-        ' Добавить первую форму
+        ' Р”РѕР±Р°РІРёС‚СЊ РїРµСЂРІСѓСЋ С„РѕСЂРјСѓ
         AddForm()
     End Sub
 
-    ' ПРОСТО СОЗДАТЬ ПУСТОЙ ПРОЕКТ, ДЛЯ ДОСТУПА К ЕГО ФУНКЦИЯМ
+    ' РџР РћРЎРўРћ РЎРћР—Р”РђРўР¬ РџРЈРЎРўРћР™ РџР РћР•РљРў, Р”Р›РЇ Р”РћРЎРўРЈРџРђ Рљ Р•Р“Рћ Р¤РЈРќРљР¦РРЇРњ
     Sub New()
     End Sub
 
-    ' ДОБАВЛЕНЕ ФОРМЫ В ПРОЕКТ
+    ' Р”РћР‘РђР’Р›Р•РќР• Р¤РћР РњР« Р’ РџР РћР•РљРў
     Sub AddForm(Optional ByVal form As Forms = Nothing)
         Dim NewInd As Integer
         If f Is Nothing Then NewInd = 0 Else NewInd = f.Length
         ReDim Preserve f(NewInd)
-        ' Переместить массив полезных объектов в конец
+        ' РџРµСЂРµРјРµСЃС‚РёС‚СЊ РјР°СЃСЃРёРІ РїРѕР»РµР·РЅС‹С… РѕР±СЉРµРєС‚РѕРІ РІ РєРѕРЅРµС†
         f(NewInd) = f(NewInd - 1)
-        ' На место массива полезных объектов записать новую форму
+        ' РќР° РјРµСЃС‚Рѕ РјР°СЃСЃРёРІР° РїРѕР»РµР·РЅС‹С… РѕР±СЉРµРєС‚РѕРІ Р·Р°РїРёСЃР°С‚СЊ РЅРѕРІСѓСЋ С„РѕСЂРјСѓ
         If form Is Nothing Then
             f(NewInd - 1) = New Forms() : ActiveForm = f(NewInd - 1)
             MainForm.TabControl1.SelectTab(f(NewInd - 1).obj.Parent.Parent.Parent)
@@ -63,17 +63,17 @@ Public Class Project
 
 #End Region
 
-    ' <<<<<<<< РАЗНЫЕ ФУНКЦИИ ПРОЕКТА >>>>>>>>>
+    ' <<<<<<<< Р РђР—РќР«Р• Р¤РЈРќРљР¦РР РџР РћР•РљРўРђ >>>>>>>>>
 #Region "FUNCTIONS"
 
-    ' ПОДОБРАТЬ ИМЯ ОБЪЕКТУ НА ОСНОВЕ str
+    ' РџРћР”РћР‘Р РђРўР¬ РРњРЇ РћР‘РЄР•РљРўРЈ РќРђ РћРЎРќРћР’Р• str
     Function GiveName(ByVal str As String) As String
         Dim i As Integer = 1
         While ExistName(str & i) : i += 1 : End While
         Return str & i
     End Function
 
-    ' ЕСЛИ ИЗМЕНИЛИ ИМЯ ТО ВЫЗЫВАЕТСЯ ЭТА ФУНКЦИЯ
+    ' Р•РЎР›Р РР—РњР•РќРР›Р РРњРЇ РўРћ Р’Р«Р—Р«Р’РђР•РўРЎРЇ Р­РўРђ Р¤РЈРќРљР¦РРЇ
     Public Sub ChangeName(ByVal obj As Object, ByVal oldName As String)
         Dim myObj As Object = GetMyObjFromObj(obj)
         If myObj Is Nothing Then Exit Sub
@@ -82,15 +82,15 @@ Public Class Project
             exp = myObj.getNode(oldName).IsExpanded()
         End If
         If UndoAr Is Nothing = False Then
-            ' Обновить текст ветки со старого имени на новое
+            ' РћР±РЅРѕРІРёС‚СЊ С‚РµРєСЃС‚ РІРµС‚РєРё СЃРѕ СЃС‚Р°СЂРѕРіРѕ РёРјРµРЅРё РЅР° РЅРѕРІРѕРµ
             If UndoAr(UndoAr.Length - 1).LastIndexOf("#Union Undos(Redos)") = UndoAr(UndoAr.Length - 1).Length - "#Union Undos(Redos)".Length And UndoAr(UndoAr.Length - 1).LastIndexOf("#Union Undos(Redos)") <> -1 Then
-            Else ' Если
+            Else ' Р•СЃР»Рё
                 UndoRedo("#Reverses", "", "", "")
             End If
         End If
         If myObj Is Nothing = False Then myObj.NodeRefresh(oldName)
 
-        ' Переименовать объект ВЕЗДЕ в дереве действий
+        ' РџРµСЂРµРёРјРµРЅРѕРІР°С‚СЊ РѕР±СЉРµРєС‚ Р’Р•Р—Р”Р• РІ РґРµСЂРµРІРµ РґРµР№СЃС‚РІРёР№
         Dim old_frm As String
         If Iz.IsFORM(myObj) Then old_frm = oldName Else old_frm = myObj.getmyform.obj.name
         If isOpening = False And isTranslate = False Then
@@ -112,23 +112,23 @@ Public Class Project
         Return ""
     End Function
 
-    ' ПРОВЕРИТЬ, СУЩЕСТВУЕТ ЛИ ТАКОЕ ИМЯ
+    ' РџР РћР’Р•Р РРўР¬, РЎРЈР©Р•РЎРўР’РЈР•Рў Р›Р РўРђРљРћР• РРњРЇ
     Function ExistName(ByVal name As String, Optional ByVal obj As Object = Nothing, Optional ByVal myForms As Object = Nothing) As Boolean
         Dim i, j As Integer
-        ' Форма, в которой надо искать существование имени name
+        ' Р¤РѕСЂРјР°, РІ РєРѕС‚РѕСЂРѕР№ РЅР°РґРѕ РёСЃРєР°С‚СЊ СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ РёРјРµРЅРё name
         Dim myForm() = myForms
-        ' Если такое имя есть у формы
+        ' Р•СЃР»Рё С‚Р°РєРѕРµ РёРјСЏ РµСЃС‚СЊ Сѓ С„РѕСЂРјС‹
         If f Is Nothing Then Return False
         For i = 0 To f.Length - 1
             If f(i) Is Nothing = False Then
-                ' Если эта форма не сам объект obj, для которого скорее всего подбирается имя
+                ' Р•СЃР»Рё СЌС‚Р° С„РѕСЂРјР° РЅРµ СЃР°Рј РѕР±СЉРµРєС‚ obj, РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ СЃРєРѕСЂРµРµ РІСЃРµРіРѕ РїРѕРґР±РёСЂР°РµС‚СЃСЏ РёРјСЏ
                 If f(i).obj Is obj = False Then
-                    ' Если форма с таким именем есть
+                    ' Р•СЃР»Рё С„РѕСЂРјР° СЃ С‚Р°РєРёРј РёРјРµРЅРµРј РµСЃС‚СЊ
                     If UCase(f(i).obj.Props.Name) = UCase(name) Then Return True
                 End If
             End If
         Next
-        ' Если форму не передали в функцию, то ищем в активной форме
+        ' Р•СЃР»Рё С„РѕСЂРјСѓ РЅРµ РїРµСЂРµРґР°Р»Рё РІ С„СѓРЅРєС†РёСЋ, С‚Рѕ РёС‰РµРј РІ Р°РєС‚РёРІРЅРѕР№ С„РѕСЂРјРµ
         If myForm Is Nothing Then
             If obj IsNot Nothing AndAlso obj.myobj IsNot Nothing AndAlso obj.myobj.getmyform IsNot Nothing Then
                 myForm = New Object() {obj.myobj.getmyform}
@@ -140,30 +140,30 @@ Public Class Project
         For i = 0 To myForm.Length - 1
             If myForm(i).MyObjs Is Nothing Then Continue For
             For j = 0 To myForm(i).MyObjs.Length - 1
-                ' Если это не сам объект obj, для которого скорее всего подбирается имя
+                ' Р•СЃР»Рё СЌС‚Рѕ РЅРµ СЃР°Рј РѕР±СЉРµРєС‚ obj, РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ СЃРєРѕСЂРµРµ РІСЃРµРіРѕ РїРѕРґР±РёСЂР°РµС‚СЃСЏ РёРјСЏ
                 If myForm(i).MyObjs(j).obj Is obj = False Then
-                    ' Если объект с таким именем есть
+                    ' Р•СЃР»Рё РѕР±СЉРµРєС‚ СЃ С‚Р°РєРёРј РёРјРµРЅРµРј РµСЃС‚СЊ
                     If UCase(myForm(i).MyObjs(j).obj.Props.name) = UCase(name) Then Return True
                 End If
             Next
         Next
-        Return False ' Если совпадений имён с str не найдено
+        Return False ' Р•СЃР»Рё СЃРѕРІРїР°РґРµРЅРёР№ РёРјС‘РЅ СЃ str РЅРµ РЅР°Р№РґРµРЅРѕ
     End Function
 
-    ' СФОРМИРОВАТЬ СПИСОК НАЗВАНИЙ СВОЙСТВ, ПЕРЕДАННЫХ ОБЪЕКТОВ
+    ' РЎР¤РћР РњРР РћР’РђРўР¬ РЎРџРРЎРћРљ РќРђР—Р’РђРќРР™ РЎР’РћР™РЎРўР’, РџР•Р Р•Р”РђРќРќР«РҐ РћР‘РЄР•РљРўРћР’
     Function GetPropertyNames(ByVal IncludeReadOnly As Boolean, ByVal ParamArray MyObjs() As Object) As String()
         Dim props() As String = Nothing, i, j, ind As Integer, adds As String
-        ' Просмотреть все объекты
+        ' РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РѕР±СЉРµРєС‚С‹
         For i = 0 To MyObjs.Length - 1
-            ' Если props пуст
+            ' Р•СЃР»Рё props РїСѓСЃС‚
             If props Is Nothing Then ind = 0 : ReDim Preserve props(ind) : props(ind) = ""
-            ' Если props не пуст, добавить те свойства, которых там еще нет
+            ' Р•СЃР»Рё props РЅРµ РїСѓСЃС‚, РґРѕР±Р°РІРёС‚СЊ С‚Рµ СЃРІРѕР№СЃС‚РІР°, РєРѕС‚РѕСЂС‹С… С‚Р°Рј РµС‰Рµ РЅРµС‚
             If MyObjs(i).Propertys Is Nothing = False Then
                 For j = 0 To MyObjs(i).Propertys.Length - 1
                     If Array.IndexOf(props, MyObjs(i).Propertys(j)) = -1 Then
-                        ' Надо ли брать свойства только для чтения
+                        ' РќР°РґРѕ Р»Рё Р±СЂР°С‚СЊ СЃРІРѕР№СЃС‚РІР° С‚РѕР»СЊРєРѕ РґР»СЏ С‡С‚РµРЅРёСЏ
                         If Array.IndexOf(ReadOnlyProps, MyObjs(i).PropertysUp(j)) <> -1 And IncludeReadOnly = False Then
-                            adds = "  -  [" & trans("есть в мастере сложных действий") & "]" : Else : adds = "" ' Continue For
+                            adds = "  -  [" & trans("РµСЃС‚СЊ РІ РјР°СЃС‚РµСЂРµ СЃР»РѕР¶РЅС‹С… РґРµР№СЃС‚РІРёР№") & "]" : Else : adds = "" ' Continue For
                         End If
                         ReDim Preserve props(ind)
                         props(ind) = MyObjs(i).Propertys(j) & adds : ind += 1
@@ -175,16 +175,16 @@ Public Class Project
         Return props
     End Function
 
-    ' СФОРМИРОВАТЬ СПИСОК НАЗВАНИЙ МЕТОДОВ, ПЕРЕДАННЫХ ОБЪЕКТОВ
+    ' РЎР¤РћР РњРР РћР’РђРўР¬ РЎРџРРЎРћРљ РќРђР—Р’РђРќРР™ РњР•РўРћР”РћР’, РџР•Р Р•Р”РђРќРќР«РҐ РћР‘РЄР•РљРўРћР’
     Function GetMethodNames(ByVal ParamArray MyObjs() As Object) As String()
         Dim meths() As String = Nothing, i, j As Integer
-        ' Просмотреть все объекты
+        ' РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РѕР±СЉРµРєС‚С‹
         For i = 0 To MyObjs.Length - 1
-            ' Если meths пуст, занести в него все методы объекта
+            ' Р•СЃР»Рё meths РїСѓСЃС‚, Р·Р°РЅРµСЃС‚Рё РІ РЅРµРіРѕ РІСЃРµ РјРµС‚РѕРґС‹ РѕР±СЉРµРєС‚Р°
             If meths Is Nothing Then
                 meths = MyObjs(i).Methods
             Else
-                ' Если meths не пуст, добавить те методы, которых там еще нет
+                ' Р•СЃР»Рё meths РЅРµ РїСѓСЃС‚, РґРѕР±Р°РІРёС‚СЊ С‚Рµ РјРµС‚РѕРґС‹, РєРѕС‚РѕСЂС‹С… С‚Р°Рј РµС‰Рµ РЅРµС‚
                 For j = 0 To MyObjs(i).Methods.Length - 1
                     If Array.IndexOf(meths, MyObjs(i).Methods(j)) = -1 Then
                         ReDim Preserve meths(meths.Length)
@@ -198,26 +198,26 @@ Public Class Project
 
    
 
-    ' ПОЛУЧИТЬ СОСТАВНОЙ ОБЪЕКТ(напр. ТабКонтрол) ПО ИНКЛУД ОБЪЕТКТУ(ТабВкладке)
+    ' РџРћР›РЈР§РРўР¬ РЎРћРЎРўРђР’РќРћР™ РћР‘РЄР•РљРў(РЅР°РїСЂ. РўР°Р±РљРѕРЅС‚СЂРѕР») РџРћ РРќРљР›РЈР” РћР‘РЄР•РўРљРўРЈ(РўР°Р±Р’РєР»Р°РґРєРµ)
     Public Function GetSostObjFromIncludeObj(ByVal MyObj As Object) As Object
         Dim SostObj As Object, fl As Integer
-        ' Если это вложенный объект и ему еще не назначен контенер, то назначить можно только контенер такого же типа как сам инклудобъект
+        ' Р•СЃР»Рё СЌС‚Рѕ РІР»РѕР¶РµРЅРЅС‹Р№ РѕР±СЉРµРєС‚ Рё РµРјСѓ РµС‰Рµ РЅРµ РЅР°Р·РЅР°С‡РµРЅ РєРѕРЅС‚РµРЅРµСЂ, С‚Рѕ РЅР°Р·РЅР°С‡РёС‚СЊ РјРѕР¶РЅРѕ С‚РѕР»СЊРєРѕ РєРѕРЅС‚РµРЅРµСЂ С‚Р°РєРѕРіРѕ Р¶Рµ С‚РёРїР° РєР°Рє СЃР°Рј РёРЅРєР»СѓРґРѕР±СЉРµРєС‚
         SostObj = ActiveForm.ActiveObj(0)
         If fl <> 1 Then
-            ' Если вставляемый объект и активный родственных типов
+            ' Р•СЃР»Рё РІСЃС‚Р°РІР»СЏРµРјС‹Р№ РѕР±СЉРµРєС‚ Рё Р°РєС‚РёРІРЅС‹Р№ СЂРѕРґСЃС‚РІРµРЅРЅС‹С… С‚РёРїРѕРІ
             If SostObj.GetType.ToString = MyObj.GetType.ToString _
             Or (Iz.IsCM(SostObj) And Iz.IsMMs(MyObj)) Or (Iz.IsTPl(SostObj) And Iz.IsMMs(MyObj)) Then
                 fl = 1
                 If Iz.IsTPs(SostObj) Then SostObj = SostObj.conteiner
                 '   If (Iz.IsMMs(SostObj) Or Iz.IsCM(SostObj) Or Iz.IsTPl(SostObj)) And isConsole Then
-                ' В этом случае место куда создавать пункт меню уже выделено
+                ' Р’ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ РјРµСЃС‚Рѕ РєСѓРґР° СЃРѕР·РґР°РІР°С‚СЊ РїСѓРЅРєС‚ РјРµРЅСЋ СѓР¶Рµ РІС‹РґРµР»РµРЅРѕ
                 ' Else
                 ' SostObj = SostObj.conteiner
                 '  End If
             End If
         End If
         If fl <> 1 Then
-            ' Если вставляемый объект и активный родственных типов (без s на конце)
+            ' Р•СЃР»Рё РІСЃС‚Р°РІР»СЏРµРјС‹Р№ РѕР±СЉРµРєС‚ Рё Р°РєС‚РёРІРЅС‹Р№ СЂРѕРґСЃС‚РІРµРЅРЅС‹С… С‚РёРїРѕРІ (Р±РµР· s РЅР° РєРѕРЅС†Рµ)
             If SostObj.GetType.ToString = MyObj.GetType.ToString.Substring(0, MyObj.GetType.ToString.Length - 1) Then
                 fl = 1
             End If
@@ -226,17 +226,17 @@ Public Class Project
     End Function
 
 
-    ' ПОЛУЧИТЬ ЗНАЧЕНИЯ ДЕЙСТВИЯ ДЛЯ УНДО ЕСЛИ ИМЕЕТСЯ ТАКОЕ ЗНАЧЕНИЕ ДЛЯ РЕДО
+    ' РџРћР›РЈР§РРўР¬ Р—РќРђР§Р•РќРРЇ Р”Р•Р™РЎРўР’РРЇ Р”Р›РЇ РЈРќР”Рћ Р•РЎР›Р РРњР•Р•РўРЎРЇ РўРђРљРћР• Р—РќРђР§Р•РќРР• Р”Р›РЇ Р Р•Р”Рћ
     Function ProtivoDeist(ByVal deistv As String) As String
         Dim protivo As String
-        If deistv = "Удалить" Then
-            protivo = "Создать"
-        ElseIf deistv = "Создать" Then
-            protivo = "Удалить"
-        ElseIf deistv = "На передний план" Then
-            protivo = "На задний план"
-        ElseIf deistv = "На задний план" Then
-            protivo = "На передний план"
+        If deistv = "РЈРґР°Р»РёС‚СЊ" Then
+            protivo = "РЎРѕР·РґР°С‚СЊ"
+        ElseIf deistv = "РЎРѕР·РґР°С‚СЊ" Then
+            protivo = "РЈРґР°Р»РёС‚СЊ"
+        ElseIf deistv = "РќР° РїРµСЂРµРґРЅРёР№ РїР»Р°РЅ" Then
+            protivo = "РќР° Р·Р°РґРЅРёР№ РїР»Р°РЅ"
+        ElseIf deistv = "РќР° Р·Р°РґРЅРёР№ РїР»Р°РЅ" Then
+            protivo = "РќР° РїРµСЂРµРґРЅРёР№ РїР»Р°РЅ"
         Else
             protivo = deistv
         End If
@@ -244,11 +244,11 @@ Public Class Project
     End Function
     Sub ReDimUndoRedo()
         If UndoAr Is Nothing = False Then
-            ' Если был юнион причем в самом конце, то надо добавить интер
+            ' Р•СЃР»Рё Р±С‹Р» СЋРЅРёРѕРЅ РїСЂРёС‡РµРј РІ СЃР°РјРѕРј РєРѕРЅС†Рµ, С‚Рѕ РЅР°РґРѕ РґРѕР±Р°РІРёС‚СЊ РёРЅС‚РµСЂ
             If UndoAr(UndoAr.Length - 1).LastIndexOf("#Union Undos(Redos)") = UndoAr(UndoAr.Length - 1).Length - "#Union Undos(Redos)".Length And UndoAr(UndoAr.Length - 1).LastIndexOf("#Union Undos(Redos)") <> -1 Then
                 UndoAr(UndoAr.Length - 1) &= vbCrLf : RedoAr(RedoAr.Length - 1) &= vbCrLf
             ElseIf UndoAr(UndoAr.Length - 1) = "#Revers Undo" & vbCrLf Or RedoAr(RedoAr.Length - 1) = "#Revers Redo" & vbCrLf Then
-                ' если хотят чтобы в ундо был инвертитрован порядок действий, то всё уже объявлено
+                ' РµСЃР»Рё С…РѕС‚СЏС‚ С‡С‚РѕР±С‹ РІ СѓРЅРґРѕ Р±С‹Р» РёРЅРІРµСЂС‚РёС‚СЂРѕРІР°РЅ РїРѕСЂСЏРґРѕРє РґРµР№СЃС‚РІРёР№, С‚Рѕ РІСЃС‘ СѓР¶Рµ РѕР±СЉСЏРІР»РµРЅРѕ
             Else
                 ReDims(UndoAr) : ReDims(RedoAr)
             End If
@@ -256,7 +256,7 @@ Public Class Project
             ReDims(UndoAr) : ReDims(RedoAr)
         End If
     End Sub
-    ' ЗАПИСЬ В ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ УНДО И РЕДО НОВОГО ПРОИШЕСТВИЯ
+    ' Р—РђРџРРЎР¬ Р’ Р“Р›РћР‘РђР›Р¬РќР«Р• РџР•Р Р•РњР•РќРќР«Р• РЈРќР”Рћ Р Р Р•Р”Рћ РќРћР’РћР“Рћ РџР РћРРЁР•РЎРўР’РРЇ
     Public Sub UndoRedo(ByVal Deistv As String, ByVal tip As String, ByVal Chto As String, _
     Optional ByVal protivoChto As String = "~tozhe chto i chto~", Optional ByVal onlyUndo As Boolean = False)
         Dim Undo, Redo As String
@@ -293,18 +293,18 @@ Public Class Project
         Undo &= ProtivoDeist(Deistv) & ":" & tip & vbCrLf
         Undo &= protivoChto & vbCrLf
 
-        ' т.к. по именам объектов я определяю у кого, что менять, то если меняют имя, в редо должно быть записано старое, которое хотят поменять на новое
+        ' С‚.Рє. РїРѕ РёРјРµРЅР°Рј РѕР±СЉРµРєС‚РѕРІ СЏ РѕРїСЂРµРґРµР»СЏСЋ Сѓ РєРѕРіРѕ, С‡С‚Рѕ РјРµРЅСЏС‚СЊ, С‚Рѕ РµСЃР»Рё РјРµРЅСЏСЋС‚ РёРјСЏ, РІ СЂРµРґРѕ РґРѕР»Р¶РЅРѕ Р±С‹С‚СЊ Р·Р°РїРёСЃР°РЅРѕ СЃС‚Р°СЂРѕРµ, РєРѕС‚РѕСЂРѕРµ С…РѕС‚СЏС‚ РїРѕРјРµРЅСЏС‚СЊ РЅР° РЅРѕРІРѕРµ
         If tip.Split(".").Length = 3 Then
-            If tip.Split(".")(2) = trans("Имя") Then
+            If tip.Split(".")(2) = trans("РРјСЏ") Then
                 Dim index As String = "[" & tip.Split(".")(1).Split("[")(1)
-                ' Если меняют имя формы
+                ' Р•СЃР»Рё РјРµРЅСЏСЋС‚ РёРјСЏ С„РѕСЂРјС‹
                 If GetMyObjFromUniqName(tip).obj.GetType.ToString = ClassAplication & "F" Then
                     tip = protivoChto & "." & protivoChto & index & "." & tip.Split(".")(2)
                 Else
-                    ' Если меняют имя обычного объекта
+                    ' Р•СЃР»Рё РјРµРЅСЏСЋС‚ РёРјСЏ РѕР±С‹С‡РЅРѕРіРѕ РѕР±СЉРµРєС‚Р°
                     tip = tip.Split(".")(0) & "." & protivoChto & index & "." & tip.Split(".")(2)
                 End If
-            ElseIf tip.Split(".")(2) = trans("Номер") Then
+            ElseIf tip.Split(".")(2) = trans("РќРѕРјРµСЂ") Then
                 tip = tip.Replace(tip.Split(".")(1).Split("[")(1), protivoChto & "]")
             End If
         End If
@@ -323,7 +323,7 @@ Public Class Project
         MainForm.RichTextBox1.Text = RedoAr(RedoAr.Length - 1)
         MainForm.RichTextBox2.Text = UndoAr(UndoAr.Length - 1)
     End Sub
-    ' ЗАПИСЬ В ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ УНДО И РЕДО ДОБАВЛЕНИЯ\УДАЛЕНИЯ НОВОГО ЭЛЕМЕНТА ДЕРЕВА
+    ' Р—РђРџРРЎР¬ Р’ Р“Р›РћР‘РђР›Р¬РќР«Р• РџР•Р Р•РњР•РќРќР«Р• РЈРќР”Рћ Р Р Р•Р”Рћ Р”РћР‘РђР’Р›Р•РќРРЇ\РЈР”РђР›Р•РќРРЇ РќРћР’РћР“Рћ Р­Р›Р•РњР•РќРўРђ Р”Р•Р Р•Р’Рђ
     Sub UndoRedoTree(ByVal withUnion As Boolean, ByVal SozdOrUdal As Boolean, ByVal ParamArray nodes() As TreeNode)
         If bistro_UnRe Then Exit Sub
         If nodes Is Nothing Then Exit Sub
@@ -331,9 +331,9 @@ Public Class Project
         If withUnion Then UndoRedo("#Union Undos(Redos)", "", "", "")
         Dim str As String = MainForm.GetCopyTree(nodes, True)
         If SozdOrUdal = True Then
-            UndoRedo("Создать", "элемент дерева", str, str)
+            UndoRedo("РЎРѕР·РґР°С‚СЊ", "СЌР»РµРјРµРЅС‚ РґРµСЂРµРІР°", str, str)
         Else
-            UndoRedo("Удалить", "элемент дерева", str, str)
+            UndoRedo("РЈРґР°Р»РёС‚СЊ", "СЌР»РµРјРµРЅС‚ РґРµСЂРµРІР°", str, str)
         End If
     End Sub
 
@@ -349,7 +349,7 @@ Public Class Project
 
     'End Sub
 
-    ' ПОЛУЧЕНИЕ ОБЪЕКТА ПО УНИКАЛЬНОМУ ИМЕНИ
+    ' РџРћР›РЈР§Р•РќРР• РћР‘РЄР•РљРўРђ РџРћ РЈРќРРљРђР›Р¬РќРћРњРЈ РРњР•РќР
     Public Function GetMyObjFromUniqName(ByVal uniqName As String) As Object
         If isCompilBest Then Return Nothing
 
@@ -377,7 +377,7 @@ Public Class Project
         For i = 0 To forms.Length - 1
             For j = 0 To forms(i).MyObjs.Length - 1
                 If forms(i).MyObjs(j).obj.Props.name = obj And forms(i).MyObjs(j).obj.Props.index = index Then
-                    ' Активировать одну из панелей сплитПанели, дабы не спрашивать, куда вставлять объекты
+                    ' РђРєС‚РёРІРёСЂРѕРІР°С‚СЊ РѕРґРЅСѓ РёР· РїР°РЅРµР»РµР№ СЃРїР»РёС‚РџР°РЅРµР»Рё, РґР°Р±С‹ РЅРµ СЃРїСЂР°С€РёРІР°С‚СЊ, РєСѓРґР° РІСЃС‚Р°РІР»СЏС‚СЊ РѕР±СЉРµРєС‚С‹
                     If Iz.IsDP(forms(i).MyObjs(j)) Then forms(i).MyObjs(j).ActivePanel = dop
                     Return forms(i).MyObjs(j)
                 End If
@@ -392,29 +392,29 @@ Public Class Project
 
 #End Region
 
-    ' <<<<<<<< РАБОТА С ВЕТКАМИ ДЕРЕВЬЕВ >>>>>>>>>
+    ' <<<<<<<< Р РђР‘РћРўРђ РЎ Р’Р•РўРљРђРњР Р”Р•Р Р•Р’Р¬Р•Р’ >>>>>>>>>
 #Region "VETKI"
 
-    ' СКОПИРОВАТЬ ВЕТКУ СОБЫТИЯ, ВКЛЮЧАЯ ВСЕ ПОДВЕТКИ
+    ' РЎРљРћРџРР РћР’РђРўР¬ Р’Р•РўРљРЈ РЎРћР‘Р«РўРРЇ, Р’РљР›Р®Р§РђРЇ Р’РЎР• РџРћР”Р’Р•РўРљР
     Sub CopySobyts(ByVal oldNode As TreeNode, ByVal newNode As TreeNode)
         Dim i, j As Integer, clon As TreeNode
         For i = 0 To oldNode.Nodes.Count - 1
-            ' если в новой ветке такого события нет, то клонировать его
+            ' РµСЃР»Рё РІ РЅРѕРІРѕР№ РІРµС‚РєРµ С‚Р°РєРѕРіРѕ СЃРѕР±С‹С‚РёСЏ РЅРµС‚, С‚Рѕ РєР»РѕРЅРёСЂРѕРІР°С‚СЊ РµРіРѕ
             If GetNode(oldNode.Nodes(i), newNode) Is Nothing Then
-                ' Если копируют действия, а они все совпадают, то не надо копировать их
+                ' Р•СЃР»Рё РєРѕРїРёСЂСѓСЋС‚ РґРµР№СЃС‚РІРёСЏ, Р° РѕРЅРё РІСЃРµ СЃРѕРІРїР°РґР°СЋС‚, С‚Рѕ РЅРµ РЅР°РґРѕ РєРѕРїРёСЂРѕРІР°С‚СЊ РёС…
                 If GetNode(oldNode.Nodes(i), newNode, 1, True) Is Nothing = False Then Continue For
-                ' создать копию недостающей ветки
+                ' СЃРѕР·РґР°С‚СЊ РєРѕРїРёСЋ РЅРµРґРѕСЃС‚Р°СЋС‰РµР№ РІРµС‚РєРё
                 clon = CloneTreeNode(oldNode.Nodes(i))
-                ' и разместить её в новой ветке newNode
+                ' Рё СЂР°Р·РјРµСЃС‚РёС‚СЊ РµС‘ РІ РЅРѕРІРѕР№ РІРµС‚РєРµ newNode
                 newNode.Nodes.Add(clon)
                 UndoRedoTree(True, True, clon)
             Else
-                ' если в новой ветке такое события есть, то клонировать все его действия
+                ' РµСЃР»Рё РІ РЅРѕРІРѕР№ РІРµС‚РєРµ С‚Р°РєРѕРµ СЃРѕР±С‹С‚РёСЏ РµСЃС‚СЊ, С‚Рѕ РєР»РѕРЅРёСЂРѕРІР°С‚СЊ РІСЃРµ РµРіРѕ РґРµР№СЃС‚РІРёСЏ
                 If oldNode.Nodes(i).Nodes Is Nothing Then Continue For
                 For j = 0 To oldNode.Nodes(i).Nodes.Count - 1
-                    ' создать копию недостающей ветки
+                    ' СЃРѕР·РґР°С‚СЊ РєРѕРїРёСЋ РЅРµРґРѕСЃС‚Р°СЋС‰РµР№ РІРµС‚РєРё
                     clon = CloneTreeNode(oldNode.Nodes(i).Nodes(j))
-                    ' и разместить её в новой ветке newNode
+                    ' Рё СЂР°Р·РјРµСЃС‚РёС‚СЊ РµС‘ РІ РЅРѕРІРѕР№ РІРµС‚РєРµ newNode
                     GetNode(oldNode.Nodes(i), newNode).Nodes.Add(clon)
                     UndoRedoTree(True, True, clon)
                 Next
@@ -422,7 +422,7 @@ Public Class Project
         Next
     End Sub
 
-    ' ЕСТЬ ЛИ В ДАННОЙ ВЕТКИ ТАКОЕ СОБЫТИЕ
+    ' Р•РЎРўР¬ Р›Р Р’ Р”РђРќРќРћР™ Р’Р•РўРљР РўРђРљРћР• РЎРћР‘Р«РўРР•
     Function ExistNodeFromText(ByVal text As String, ByVal node As TreeNode) As TreeNode
         Dim i As Integer
         For i = 0 To node.Nodes.Count - 1
@@ -431,34 +431,34 @@ Public Class Project
         Return Nothing
     End Function
 
-    ' РЕКУРСИВНАЯ ФУНКЦИЯ СОЗДАНИЯ КЛОНА ВЕТКИ, ВМЕСТЕ СО ВСЕМИ ПОДВЕТКАМИ
+    ' Р Р•РљРЈР РЎРР’РќРђРЇ Р¤РЈРќРљР¦РРЇ РЎРћР—Р”РђРќРРЇ РљР›РћРќРђ Р’Р•РўРљР, Р’РњР•РЎРўР• РЎРћ Р’РЎР•РњР РџРћР”Р’Р•РўРљРђРњР
     Function CloneTreeNode(ByVal Node As TreeNode, Optional ByVal withUniqName As Boolean = True, Optional ByVal clon As TreeNode = Nothing) As TreeNode
         Dim i As Integer
         If Node Is Nothing Then Return Nothing
-        ' Если корень ветки еще не создан, то создать его по образу и подобию Node
+        ' Р•СЃР»Рё РєРѕСЂРµРЅСЊ РІРµС‚РєРё РµС‰Рµ РЅРµ СЃРѕР·РґР°РЅ, С‚Рѕ СЃРѕР·РґР°С‚СЊ РµРіРѕ РїРѕ РѕР±СЂР°Р·Сѓ Рё РїРѕРґРѕР±РёСЋ Node
         If clon Is Nothing Then
             clon = New TreeNode(Node.Text) : clon.Name = Node.Name : clon.Tag = Node.Tag
             clon.ImageKey = Node.ImageKey : clon.SelectedImageKey = Node.SelectedImageKey
             If clon.Tag <> "Obj" And withUniqName Then clon.Name = GetUIN()
         End If
-        ' Пройтись по всем подветкам
+        ' РџСЂРѕР№С‚РёСЃСЊ РїРѕ РІСЃРµРј РїРѕРґРІРµС‚РєР°Рј
         For i = 0 To Node.Nodes.Count - 1
-            ' Добавить просматриваемую подветку
+            ' Р”РѕР±Р°РІРёС‚СЊ РїСЂРѕСЃРјР°С‚СЂРёРІР°РµРјСѓСЋ РїРѕРґРІРµС‚РєСѓ
             clon.Nodes.Add(Node.Nodes(i).Name, Node.Nodes(i).Text, Node.Nodes(i).ImageKey, Node.Nodes(i).SelectedImageKey)
             clon.Nodes(i).Tag = Node.Nodes(i).Tag
             If clon.Nodes(i).Tag <> "Obj" And withUniqName Then clon.Nodes(i).Name = GetUIN()
-            ' Вызвать фунцию клонирования для подветок текущей подветки
+            ' Р’С‹Р·РІР°С‚СЊ С„СѓРЅС†РёСЋ РєР»РѕРЅРёСЂРѕРІР°РЅРёСЏ РґР»СЏ РїРѕРґРІРµС‚РѕРє С‚РµРєСѓС‰РµР№ РїРѕРґРІРµС‚РєРё
             CloneTreeNode(Node.Nodes(i), withUniqName, clon.Nodes(i))
         Next
         Return clon
     End Function
 
-    ' ПРИ РАБОТЕ С МАССИВАМИ ФОРМ, ВЕТКИ ОБЪЕКТОВ НАДО ПЕРЕБРАСЫВАТЬ ИЗ ОДНОЙ ФОРМЫ В ДРУГУЮ
+    ' РџР Р Р РђР‘РћРўР• РЎ РњРђРЎРЎРР’РђРњР Р¤РћР Рњ, Р’Р•РўРљР РћР‘РЄР•РљРўРћР’ РќРђР”Рћ РџР•Р Р•Р‘Р РђРЎР«Р’РђРўР¬ РР— РћР”РќРћР™ Р¤РћР РњР« Р’ Р”Р РЈР“РЈР®
     Sub PerebrosatTreeNodes(ByVal newNode As Object, ByVal oldNode As TreeNode, ByVal MyObj As Object)
-        ' Задание переменных
-        Dim i, j As Integer, clon As TreeNode ' Содержит копию ветки
+        ' Р—Р°РґР°РЅРёРµ РїРµСЂРµРјРµРЅРЅС‹С…
+        Dim i, j As Integer, clon As TreeNode ' РЎРѕРґРµСЂР¶РёС‚ РєРѕРїРёСЋ РІРµС‚РєРё
         If newNode Is Nothing Then
-            ' Если перебрасывать не надо, т.к. временная ветка уже содержит все узлы объекта
+            ' Р•СЃР»Рё РїРµСЂРµР±СЂР°СЃС‹РІР°С‚СЊ РЅРµ РЅР°РґРѕ, С‚.Рє. РІСЂРµРјРµРЅРЅР°СЏ РІРµС‚РєР° СѓР¶Рµ СЃРѕРґРµСЂР¶РёС‚ РІСЃРµ СѓР·Р»С‹ РѕР±СЉРµРєС‚Р°
             If MyObj.nodeTemp Is Nothing = False Then MyObj.AddNode(MyObj.obj.Props.name) : Exit Sub
             If oldNode Is Nothing Then Exit Sub
             MyObj.AddNode(MyObj.obj.Props.name, oldNode.Index)
@@ -466,23 +466,23 @@ Public Class Project
         End If
         If oldNode Is Nothing Then Exit Sub
 
-        Dim newName As String = newNode.Name ' Содержит настоящее имя объекта
-        Dim oldName As String = oldNode.Name ' Содержит старое имя объекта
-        'Dim oldNode As TreeNode = MyObj.GetNode(oldName) ' Содержит старую ветку объекта
-        'Dim newNode As TreeNode = MyObj.GetNode(newName) ' Содержит сейчашнюю ветку объекта
-        Dim forms() As Object = proj.GetMyFormsFromName(newName) ' Все формы с тамже именем как у myForm
-        Dim ToRemove() As TreeNode = Nothing ' Список на удаление веток
+        Dim newName As String = newNode.Name ' РЎРѕРґРµСЂР¶РёС‚ РЅР°СЃС‚РѕСЏС‰РµРµ РёРјСЏ РѕР±СЉРµРєС‚Р°
+        Dim oldName As String = oldNode.Name ' РЎРѕРґРµСЂР¶РёС‚ СЃС‚Р°СЂРѕРµ РёРјСЏ РѕР±СЉРµРєС‚Р°
+        'Dim oldNode As TreeNode = MyObj.GetNode(oldName) ' РЎРѕРґРµСЂР¶РёС‚ СЃС‚Р°СЂСѓСЋ РІРµС‚РєСѓ РѕР±СЉРµРєС‚Р°
+        'Dim newNode As TreeNode = MyObj.GetNode(newName) ' РЎРѕРґРµСЂР¶РёС‚ СЃРµР№С‡Р°С€РЅСЋСЋ РІРµС‚РєСѓ РѕР±СЉРµРєС‚Р°
+        Dim forms() As Object = proj.GetMyFormsFromName(newName) ' Р’СЃРµ С„РѕСЂРјС‹ СЃ С‚Р°РјР¶Рµ РёРјРµРЅРµРј РєР°Рє Сѓ myForm
+        Dim ToRemove() As TreeNode = Nothing ' РЎРїРёСЃРѕРє РЅР° СѓРґР°Р»РµРЅРёРµ РІРµС‚РѕРє
 
         If UndoRedoNoWrite = False Then
-            ' Дабавить объекты в ветку новой нового имени формы
+            ' Р”Р°Р±Р°РІРёС‚СЊ РѕР±СЉРµРєС‚С‹ РІ РІРµС‚РєСѓ РЅРѕРІРѕР№ РЅРѕРІРѕРіРѕ РёРјРµРЅРё С„РѕСЂРјС‹
             For i = 0 To oldNode.Nodes.Count - 1
                 Dim ExistNode As TreeNode = GetNode(oldNode.Nodes(i), newNode)
-                ' если в новой ветке такого объекта/события нет, то клонировать его
+                ' РµСЃР»Рё РІ РЅРѕРІРѕР№ РІРµС‚РєРµ С‚Р°РєРѕРіРѕ РѕР±СЉРµРєС‚Р°/СЃРѕР±С‹С‚РёСЏ РЅРµС‚, С‚Рѕ РєР»РѕРЅРёСЂРѕРІР°С‚СЊ РµРіРѕ
                 If ExistNode Is Nothing Then
                     If MyObj.obj.GetType.ToString = ClassAplication & "F" Then
-                        ' если такого объекта на форме нет
+                        ' РµСЃР»Рё С‚Р°РєРѕРіРѕ РѕР±СЉРµРєС‚Р° РЅР° С„РѕСЂРјРµ РЅРµС‚
                         If MyObj.ExistName(oldNode.Nodes(i).Name, MyObj.obj) = False Then
-                            ' Если это ветка со старыми событиями формы, то скопировать эти собтия
+                            ' Р•СЃР»Рё СЌС‚Рѕ РІРµС‚РєР° СЃРѕ СЃС‚Р°СЂС‹РјРё СЃРѕР±С‹С‚РёСЏРјРё С„РѕСЂРјС‹, С‚Рѕ СЃРєРѕРїРёСЂРѕРІР°С‚СЊ СЌС‚Рё СЃРѕР±С‚РёСЏ
                             If oldNode.Nodes(i).Name = oldName Then
                                 CopySobyts(oldNode.Nodes(i), newNode.Nodes(MyObj.obj.Props.Name))
                                 UndoRedo("#Union Undos(Redos)", "", "", "")
@@ -490,30 +490,30 @@ Public Class Project
                             Continue For
                         End If
                     End If
-                    clon = CloneTreeNode(oldNode.Nodes(i)) ' создать копию недостающей ветки
-                    newNode.Nodes.Add(clon) ' и разместить её в новой ветке
+                    clon = CloneTreeNode(oldNode.Nodes(i)) ' СЃРѕР·РґР°С‚СЊ РєРѕРїРёСЋ РЅРµРґРѕСЃС‚Р°СЋС‰РµР№ РІРµС‚РєРё
+                    newNode.Nodes.Add(clon) ' Рё СЂР°Р·РјРµСЃС‚РёС‚СЊ РµС‘ РІ РЅРѕРІРѕР№ РІРµС‚РєРµ
                     UndoRedoTree(True, True, clon)
                     UndoRedo("#Union Undos(Redos)", "", "", "")
                 ElseIf MyObj.obj.GetType.ToString = ClassAplication & "F" Then
-                    ' Если в новой ветке такой объект уже есть, то событий всех может не быть
+                    ' Р•СЃР»Рё РІ РЅРѕРІРѕР№ РІРµС‚РєРµ С‚Р°РєРѕР№ РѕР±СЉРµРєС‚ СѓР¶Рµ РµСЃС‚СЊ, С‚Рѕ СЃРѕР±С‹С‚РёР№ РІСЃРµС… РјРѕР¶РµС‚ РЅРµ Р±С‹С‚СЊ
                     CopySobyts(oldNode.Nodes(i), newNode.Nodes(oldNode.Nodes(i).Name))
                 Else
-                    ' Если в новой ветке такое событие уже есть, то действий всех может не быть
+                    ' Р•СЃР»Рё РІ РЅРѕРІРѕР№ РІРµС‚РєРµ С‚Р°РєРѕРµ СЃРѕР±С‹С‚РёРµ СѓР¶Рµ РµСЃС‚СЊ, С‚Рѕ РґРµР№СЃС‚РІРёР№ РІСЃРµС… РјРѕР¶РµС‚ РЅРµ Р±С‹С‚СЊ
                     CopySobyts(oldNode.Nodes(i), ExistNode)
                 End If
             Next
         End If
         If MyObj.obj.GetType.ToString = ClassAplication & "F" Then
             forms = proj.GetMyFormsFromName(oldName)
-            ' Удалить ветку, если форм с таким именем больше нет
+            ' РЈРґР°Р»РёС‚СЊ РІРµС‚РєСѓ, РµСЃР»Рё С„РѕСЂРј СЃ С‚Р°РєРёРј РёРјРµРЅРµРј Р±РѕР»СЊС€Рµ РЅРµС‚
             If forms Is Nothing Then
-                ' Если объектов со старым именем не осталось
+                ' Р•СЃР»Рё РѕР±СЉРµРєС‚РѕРІ СЃРѕ СЃС‚Р°СЂС‹Рј РёРјРµРЅРµРј РЅРµ РѕСЃС‚Р°Р»РѕСЃСЊ
                 '  If proj.ExistName(oldName) = False Then
                 UndoRedoTree(True, False, MainForm.TreeToArray(oldNode, False))
                 If MainForm.TreeToArray(oldNode, False).Length > 0 Then UndoRedo("#Union Undos(Redos)", "", "", "")
-                ' если просто переименовали
+                ' РµСЃР»Рё РїСЂРѕСЃС‚Рѕ РїРµСЂРµРёРјРµРЅРѕРІР°Р»Рё
                 ' If GetMyAllFromName(newName).Length = 1 Then
-                ' Пройтись по старым объектам, а в них по старым событиям и сделать в новой ветки имена действий такимиже как в старой
+                ' РџСЂРѕР№С‚РёСЃСЊ РїРѕ СЃС‚Р°СЂС‹Рј РѕР±СЉРµРєС‚Р°Рј, Р° РІ РЅРёС… РїРѕ СЃС‚Р°СЂС‹Рј СЃРѕР±С‹С‚РёСЏРј Рё СЃРґРµР»Р°С‚СЊ РІ РЅРѕРІРѕР№ РІРµС‚РєРё РёРјРµРЅР° РґРµР№СЃС‚РІРёР№ С‚Р°РєРёРјРёР¶Рµ РєР°Рє РІ СЃС‚Р°СЂРѕР№
                 'For j = 0 To oldNode.Nodes.Count - 1
                 '    Dim k As Integer
                 '     For k = 0 To oldNode.Nodes(j).Nodes.Count - 1
@@ -525,7 +525,7 @@ Public Class Project
                 '      Next
                 '   Next
                 'Else
-                ' Отрубить ктрл-з чтобы небыло глюков на счет имен действий
+                ' РћС‚СЂСѓР±РёС‚СЊ РєС‚СЂР»-Р· С‡С‚РѕР±С‹ РЅРµР±С‹Р»Рѕ РіР»СЋРєРѕРІ РЅР° СЃС‡РµС‚ РёРјРµРЅ РґРµР№СЃС‚РІРёР№
                 '  Dim tmp As String : proj.UndoRedoCount = 0
                 '  tmp = UndoAr(UndoAr.Length - 1) : ReDim UndoAr(0) : UndoAr(0) = tmp
                 '  tmp = RedoAr(RedoAr.Length - 1) : ReDim RedoAr(0) : RedoAr(0) = tmp
@@ -539,21 +539,21 @@ Public Class Project
                 'End If
                 ' oldNode.Remove()
             Else
-                ' Если с таким именем еще остались формы, то удалить объекты, которых на них нет
+                ' Р•СЃР»Рё СЃ С‚Р°РєРёРј РёРјРµРЅРµРј РµС‰Рµ РѕСЃС‚Р°Р»РёСЃСЊ С„РѕСЂРјС‹, С‚Рѕ СѓРґР°Р»РёС‚СЊ РѕР±СЉРµРєС‚С‹, РєРѕС‚РѕСЂС‹С… РЅР° РЅРёС… РЅРµС‚
                 Dim fl As Byte, ind As Integer = 0
                 For i = 0 To oldNode.Nodes.Count - 1
                     fl = 0
-                    ' Просмотреть все формы со старым именем
+                    ' РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ С„РѕСЂРјС‹ СЃРѕ СЃС‚Р°СЂС‹Рј РёРјРµРЅРµРј
                     For j = 0 To forms.Length - 1
                         If forms(j).ExistName(oldNode.Nodes(i).Name) Then fl = 1
                     Next
-                    ' если такого объекта нет ни на одной форме, а в дереве есть, то занести в список на удаление
+                    ' РµСЃР»Рё С‚Р°РєРѕРіРѕ РѕР±СЉРµРєС‚Р° РЅРµС‚ РЅРё РЅР° РѕРґРЅРѕР№ С„РѕСЂРјРµ, Р° РІ РґРµСЂРµРІРµ РµСЃС‚СЊ, С‚Рѕ Р·Р°РЅРµСЃС‚Рё РІ СЃРїРёСЃРѕРє РЅР° СѓРґР°Р»РµРЅРёРµ
                     If fl = 0 And oldNode.Nodes(i) Is Nothing = False Then
-                        ' занести в список на удаление
+                        ' Р·Р°РЅРµСЃС‚Рё РІ СЃРїРёСЃРѕРє РЅР° СѓРґР°Р»РµРЅРёРµ
                         ReDim Preserve ToRemove(ind) : ToRemove(ind) = oldNode.Nodes(i) : ind += 1
                     End If
                 Next
-                ' Удалить ветки, занесенные в список на удаление
+                ' РЈРґР°Р»РёС‚СЊ РІРµС‚РєРё, Р·Р°РЅРµСЃРµРЅРЅС‹Рµ РІ СЃРїРёСЃРѕРє РЅР° СѓРґР°Р»РµРЅРёРµ
                 If ToRemove Is Nothing = False Then
                     For i = 0 To ToRemove.Length - 1
                         UndoRedoTree(True, False, ToRemove(i))
@@ -561,21 +561,21 @@ Public Class Project
                     Next
                     UndoRedo("#Union Undos(Redos)", "", "", "")
                 End If
-                ' Отрубить ктрл-з чтобы небыло глюков на счет имен действий
+                ' РћС‚СЂСѓР±РёС‚СЊ РєС‚СЂР»-Р· С‡С‚РѕР±С‹ РЅРµР±С‹Р»Рѕ РіР»СЋРєРѕРІ РЅР° СЃС‡РµС‚ РёРјРµРЅ РґРµР№СЃС‚РІРёР№
                 'Dim tmp As String : proj.UndoRedoCount = 0
                 'tmp = UndoAr(UndoAr.Length - 1) : ReDim UndoAr(0) : UndoAr(0) = tmp
                 'tmp = RedoAr(RedoAr.Length - 1) : ReDim RedoAr(0) : RedoAr(0) = tmp
             End If
         Else
-            ' Если объектов со старым именем не осталось
+            ' Р•СЃР»Рё РѕР±СЉРµРєС‚РѕРІ СЃРѕ СЃС‚Р°СЂС‹Рј РёРјРµРЅРµРј РЅРµ РѕСЃС‚Р°Р»РѕСЃСЊ
             If proj.ExistName(oldName) = False Then
                 If oldNode.Tag = "Obj" And oldNode.Name <> MyZnak & "none" Then
                     UndoRedoTree(True, False, MainForm.TreeToArray(oldNode, False))
                     If MainForm.TreeToArray(oldNode, False).Length > 0 Then UndoRedo("#Union Undos(Redos)", "", "", "")
                 End If
-                ' если просто переименовали
+                ' РµСЃР»Рё РїСЂРѕСЃС‚Рѕ РїРµСЂРµРёРјРµРЅРѕРІР°Р»Рё
                 'If GetMyAllFromName(newName).Length = 1 Then
-                ' Пройтись по старым событиям и сделать в новой ветки имена действий такимиже как в старой
+                ' РџСЂРѕР№С‚РёСЃСЊ РїРѕ СЃС‚Р°СЂС‹Рј СЃРѕР±С‹С‚РёСЏРј Рё СЃРґРµР»Р°С‚СЊ РІ РЅРѕРІРѕР№ РІРµС‚РєРё РёРјРµРЅР° РґРµР№СЃС‚РІРёР№ С‚Р°РєРёРјРёР¶Рµ РєР°Рє РІ СЃС‚Р°СЂРѕР№
                 'For j = 0 To oldNode.Nodes.Count - 1
                 '   Dim newOldNode As TreeNode = oldNode.Nodes(j)
                 '    Dim oldNewNode As TreeNode = ExistNodeFromText(oldNode.Nodes(j).Text, newNode)
@@ -584,7 +584,7 @@ Public Class Project
                 '       oldNewNode.Remove()
                 '    Next
                 ' Else
-                ' Отрубить ктрл-з чтобы небыло глюков на счет имен действий
+                ' РћС‚СЂСѓР±РёС‚СЊ РєС‚СЂР»-Р· С‡С‚РѕР±С‹ РЅРµР±С‹Р»Рѕ РіР»СЋРєРѕРІ РЅР° СЃС‡РµС‚ РёРјРµРЅ РґРµР№СЃС‚РІРёР№
                 '  Dim tmp As String : proj.UndoRedoCount = 0
                 '  tmp = UndoAr(UndoAr.Length - 1) : ReDim UndoAr(0) : UndoAr(0) = tmp
                 '  tmp = RedoAr(RedoAr.Length - 1) : ReDim RedoAr(0) : RedoAr(0) = tmp
@@ -592,20 +592,20 @@ Public Class Project
                 oldNode.Remove()
             End If
         End If
-        ' Если объект не входит в массив, то присвоить ему рисунок, с изображением объекта, которым он является
+        ' Р•СЃР»Рё РѕР±СЉРµРєС‚ РЅРµ РІС…РѕРґРёС‚ РІ РјР°СЃСЃРёРІ, С‚Рѕ РїСЂРёСЃРІРѕРёС‚СЊ РµРјСѓ СЂРёСЃСѓРЅРѕРє, СЃ РёР·РѕР±СЂР°Р¶РµРЅРёРµРј РѕР±СЉРµРєС‚Р°, РєРѕС‚РѕСЂС‹Рј РѕРЅ СЏРІР»СЏРµС‚СЃСЏ
         Dim obs() As Object = GetMyAllFromName(newName)
         If obs Is Nothing = False Then
             If obs.Length = 1 Then
                 newNode.ImageKey = MyObj.picture : newNode.SelectedImageKey = newNode.ImageKey
             End If
         End If
-        ' Раскрыть ветку
+        ' Р Р°СЃРєСЂС‹С‚СЊ РІРµС‚РєСѓ
         ' newNode.Expand()
     End Sub
 
 #End Region
 
-    ' <<<<<<<< ПОДСВЕТКА СИНТАКСИСА >>>>>>>>>
+    ' <<<<<<<< РџРћР”РЎР’Р•РўРљРђ РЎРРќРўРђРљРЎРРЎРђ >>>>>>>>>
 #Region "PODSVETKA"
 
     Public Function Podsvetka(ByVal str As String) As Boolean
@@ -613,128 +613,128 @@ Public Class Project
     End Function
     Public Function Podsvetka(ByVal text As RichTextBox, Optional ByVal vsegda As Boolean = False) As Boolean
         Dim ind = -1, i As Integer
-        Dim isStr As Boolean = True  ' Принимает true если в тексте нет объектов и функций (т.е. это строка)
+        Dim isStr As Boolean = True  ' РџСЂРёРЅРёРјР°РµС‚ true РµСЃР»Рё РІ С‚РµРєСЃС‚Рµ РЅРµС‚ РѕР±СЉРµРєС‚РѕРІ Рё С„СѓРЅРєС†РёР№ (С‚.Рµ. СЌС‚Рѕ СЃС‚СЂРѕРєР°)
         If text Is Nothing Then Return True
         If text.TextLength > 1000 And vsegda = False Then Return True
-        ' Все изменения проводить в отдельном RichTextBox, а данные оригинального RichTextBox сохранить
+        ' Р’СЃРµ РёР·РјРµРЅРµРЅРёСЏ РїСЂРѕРІРѕРґРёС‚СЊ РІ РѕС‚РґРµР»СЊРЅРѕРј RichTextBox, Р° РґР°РЅРЅС‹Рµ РѕСЂРёРіРёРЅР°Р»СЊРЅРѕРіРѕ RichTextBox СЃРѕС…СЂР°РЅРёС‚СЊ
         Dim t As New RichTextBox : t.Multiline = True : t.Text = text.Text
         Dim oldT As New RichTextBox : oldT.Multiline = True : oldT.Rtf = text.Rtf
         Dim start As Integer = text.SelectionStart, len As Integer = text.SelectionLength
-        ' Заменить цвет всего текста на цвет по умолчанию
+        ' Р—Р°РјРµРЅРёС‚СЊ С†РІРµС‚ РІСЃРµРіРѕ С‚РµРєСЃС‚Р° РЅР° С†РІРµС‚ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
         RichSelectColor(t, 0, t.TextLength, ColKode)
 
-        ' Разукраска функций (корень, квадрат и т.д.)
+        ' Р Р°Р·СѓРєСЂР°СЃРєР° С„СѓРЅРєС†РёР№ (РєРѕСЂРµРЅСЊ, РєРІР°РґСЂР°С‚ Рё С‚.Рґ.)
         If bistro_podsvFun = False Then
             For i = 0 To AllFuncs.Length - 1
                 ind = -1
                 Do
-                    If t.Text.Length - ind = 1 Then Exit Do ' Если это последний символ, то больше совпадений точно не будет, нужно выходить
+                    If t.Text.Length - ind = 1 Then Exit Do ' Р•СЃР»Рё СЌС‚Рѕ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР», С‚Рѕ Р±РѕР»СЊС€Рµ СЃРѕРІРїР°РґРµРЅРёР№ С‚РѕС‡РЅРѕ РЅРµ Р±СѓРґРµС‚, РЅСѓР¶РЅРѕ РІС‹С…РѕРґРёС‚СЊ
                     ind = t.Find(AllFuncs(i), ind + 1, RichTextBoxFinds.None)
                     If ind = -1 Then Exit Do
-                    ' Если имя функции было частью другого слова
+                    ' Р•СЃР»Рё РёРјСЏ С„СѓРЅРєС†РёРё Р±С‹Р»Рѕ С‡Р°СЃС‚СЊСЋ РґСЂСѓРіРѕРіРѕ СЃР»РѕРІР°
                     If ind > 0 Then If Char.IsLetterOrDigit(t.Text.Chars(ind - 1)) Then ind += 1 : Continue Do
                     If ind + AllFuncs(i).Length < t.Text.Length Then If Char.IsLetterOrDigit(t.Text.Chars(ind + AllFuncs(i).Length)) Then ind += 1 : Continue Do
-                    ' Разукрасить имя функции, и помеметить, что это уже не просто строка
+                    ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РёРјСЏ С„СѓРЅРєС†РёРё, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                     RichSelectColor(t, ind, AllFuncs(i).Length, ColFunction) : isStr = False
                 Loop
             Next
         End If
 
-        ' Разукраска вспомогательных слов (папка виндос, желтый и т.д.)
+        ' Р Р°Р·СѓРєСЂР°СЃРєР° РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… СЃР»РѕРІ (РїР°РїРєР° РІРёРЅРґРѕСЃ, Р¶РµР»С‚С‹Р№ Рё С‚.Рґ.)
         If bistro_podsvHW = False Then
             For i = 0 To AllHW.Length - 1
                 ind = -1
                 Do
-                    If t.Text.Length - ind <= 1 Then Exit Do ' Если это последний символ, то больше совпадений точно не будет, нужно выходить
+                    If t.Text.Length - ind <= 1 Then Exit Do ' Р•СЃР»Рё СЌС‚Рѕ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР», С‚Рѕ Р±РѕР»СЊС€Рµ СЃРѕРІРїР°РґРµРЅРёР№ С‚РѕС‡РЅРѕ РЅРµ Р±СѓРґРµС‚, РЅСѓР¶РЅРѕ РІС‹С…РѕРґРёС‚СЊ
                     ind = t.Find(AllHW(i), ind + 1, RichTextBoxFinds.None)
                     If ind = -1 Then Exit Do
-                    ' Если имя функции было частью другого слова
+                    ' Р•СЃР»Рё РёРјСЏ С„СѓРЅРєС†РёРё Р±С‹Р»Рѕ С‡Р°СЃС‚СЊСЋ РґСЂСѓРіРѕРіРѕ СЃР»РѕРІР°
                     If ind > 0 Then If Char.IsLetterOrDigit(t.Text.Chars(ind - 1)) Or t.Text.Chars(ind - 1) = "_" Then ind += 1 : Continue Do
                     If ind + AllHW(i).Length < t.Text.Length Then
                         If Char.IsLetterOrDigit(t.Text.Chars(ind + AllHW(i).Length)) Or t.Text.Chars(ind + AllHW(i).Length) = "_" Then ind += 1 : Continue Do
                     End If
-                    ' Разукрасить имя функции, и помеметить, что это уже не просто строка
+                    ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РёРјСЏ С„СѓРЅРєС†РёРё, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                     RichSelectColor(t, ind, AllHW(i).Length, ColConsts) : isStr = False
                 Loop
             Next
         End If
 
-        ' Разукраска объектов форм
+        ' Р Р°Р·СѓРєСЂР°СЃРєР° РѕР±СЉРµРєС‚РѕРІ С„РѕСЂРј
         If bistro_podsvObs = False Then
             Dim AllObjs = proj.GetAllObjNames.ToArray
             For i = 0 To AllObjs.Length - 1
                 ind = -1
                 Do
-                    If t.Text.Length - ind = 1 Then Exit Do ' Если это последний символ, то больше совпадений точно не будет, нужно выходить
+                    If t.Text.Length - ind = 1 Then Exit Do ' Р•СЃР»Рё СЌС‚Рѕ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР», С‚Рѕ Р±РѕР»СЊС€Рµ СЃРѕРІРїР°РґРµРЅРёР№ С‚РѕС‡РЅРѕ РЅРµ Р±СѓРґРµС‚, РЅСѓР¶РЅРѕ РІС‹С…РѕРґРёС‚СЊ
                     ind = t.Find(AllObjs(i), ind + 1, RichTextBoxFinds.None)
                     If ind = -1 Then Exit Do
-                    ' Если имя функции было частью другого слова
+                    ' Р•СЃР»Рё РёРјСЏ С„СѓРЅРєС†РёРё Р±С‹Р»Рѕ С‡Р°СЃС‚СЊСЋ РґСЂСѓРіРѕРіРѕ СЃР»РѕРІР°
                     If ind > 0 Then If Char.IsLetterOrDigit(t.Text.Chars(ind - 1)) Then ind += 1 : Continue Do
                     If ind + AllObjs(i).Length < t.Text.Length Then If Char.IsLetterOrDigit(t.Text.Chars(ind + AllObjs(i).Length)) Then ind += 1 : Continue Do
-                    ' Разукрасить имя функции, и помеметить, что это уже не просто строка
+                    ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РёРјСЏ С„СѓРЅРєС†РёРё, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                     RichSelectColor(t, ind, AllObjs(i).Length, ColObject) : isStr = False
-                    If t.Text.Length - ind = 1 Then Exit Do ' Если совпал последний символ, то больше совпадений точно не будет, нужно выходить
+                    If t.Text.Length - ind = 1 Then Exit Do ' Р•СЃР»Рё СЃРѕРІРїР°Р» РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР», С‚Рѕ Р±РѕР»СЊС€Рµ СЃРѕРІРїР°РґРµРЅРёР№ С‚РѕС‡РЅРѕ РЅРµ Р±СѓРґРµС‚, РЅСѓР¶РЅРѕ РІС‹С…РѕРґРёС‚СЊ
                 Loop
             Next
         End If
 
         If bistro_podsvPMs = False Then
-            ' Разукраска свойств объектов
+            ' Р Р°Р·СѓРєСЂР°СЃРєР° СЃРІРѕР№СЃС‚РІ РѕР±СЉРµРєС‚РѕРІ
             Dim AllPropertys = proj.GetAllPropNames.ToArray
             For i = 0 To AllPropertys.Length - 1
                 ind = -1
                 Do
-                    If t.Text.Length - ind <= 1 Then Exit Do ' Если это последний символ, то больше совпадений точно не будет, нужно выходить
+                    If t.Text.Length - ind <= 1 Then Exit Do ' Р•СЃР»Рё СЌС‚Рѕ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР», С‚Рѕ Р±РѕР»СЊС€Рµ СЃРѕРІРїР°РґРµРЅРёР№ С‚РѕС‡РЅРѕ РЅРµ Р±СѓРґРµС‚, РЅСѓР¶РЅРѕ РІС‹С…РѕРґРёС‚СЊ
                     ind = t.Find(AllPropertys(i), ind + 1, RichTextBoxFinds.None)
                     If ind = -1 Then Exit Do
-                    ' Если имя функции было частью другого слова
+                    ' Р•СЃР»Рё РёРјСЏ С„СѓРЅРєС†РёРё Р±С‹Р»Рѕ С‡Р°СЃС‚СЊСЋ РґСЂСѓРіРѕРіРѕ СЃР»РѕРІР°
                     If ind > 0 Then If Char.IsLetterOrDigit(t.Text.Chars(ind - 1)) Then ind += 1 : Continue Do
                     If ind + AllPropertys(i).Length < t.Text.Length Then If Char.IsLetterOrDigit(t.Text.Chars(ind + AllPropertys(i).Length)) Then ind += 1 : Continue Do
-                    ' Разукрасить имя функции, и помеметить, что это уже не просто строка
+                    ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РёРјСЏ С„СѓРЅРєС†РёРё, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                     RichSelectColor(t, ind, AllPropertys(i).Length, ColProperty) : isStr = False
-                    If t.Text.Length - ind = 1 Then Exit Do ' Если совпал последний символ, то больше совпадений точно не будет, нужно выходить
+                    If t.Text.Length - ind = 1 Then Exit Do ' Р•СЃР»Рё СЃРѕРІРїР°Р» РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР», С‚Рѕ Р±РѕР»СЊС€Рµ СЃРѕРІРїР°РґРµРЅРёР№ С‚РѕС‡РЅРѕ РЅРµ Р±СѓРґРµС‚, РЅСѓР¶РЅРѕ РІС‹С…РѕРґРёС‚СЊ
                 Loop
             Next
-            ' Разукраска методов объектов
+            ' Р Р°Р·СѓРєСЂР°СЃРєР° РјРµС‚РѕРґРѕРІ РѕР±СЉРµРєС‚РѕРІ
             Dim AllMethods = proj.GetAllMethNames.ToArray
             For i = 0 To AllMethods.Length - 1
                 ind = -1
                 Do
-                    If t.Text.Length - ind = 1 Then Exit Do ' Если это последний символ, то больше совпадений точно не будет, нужно выходить
+                    If t.Text.Length - ind = 1 Then Exit Do ' Р•СЃР»Рё СЌС‚Рѕ РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР», С‚Рѕ Р±РѕР»СЊС€Рµ СЃРѕРІРїР°РґРµРЅРёР№ С‚РѕС‡РЅРѕ РЅРµ Р±СѓРґРµС‚, РЅСѓР¶РЅРѕ РІС‹С…РѕРґРёС‚СЊ
                     ind = t.Find(AllMethods(i), ind + 1, RichTextBoxFinds.None)
                     If ind = -1 Then Exit Do
-                    ' Если имя функции было частью другого слова
+                    ' Р•СЃР»Рё РёРјСЏ С„СѓРЅРєС†РёРё Р±С‹Р»Рѕ С‡Р°СЃС‚СЊСЋ РґСЂСѓРіРѕРіРѕ СЃР»РѕРІР°
                     If ind > 0 Then If Char.IsLetterOrDigit(t.Text.Chars(ind - 1)) Then ind += 1 : Continue Do
                     If ind + AllMethods(i).Length < t.Text.Length Then If Char.IsLetterOrDigit(t.Text.Chars(ind + AllMethods(i).Length)) Then ind += 1 : Continue Do
-                    ' Разукрасить имя функции, и помеметить, что это уже не просто строка
+                    ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РёРјСЏ С„СѓРЅРєС†РёРё, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                     RichSelectColor(t, ind, AllMethods(i).Length, ColMethod) : isStr = False
-                    If t.Text.Length - ind = 1 Then Exit Do ' Если совпал последний символ, то больше совпадений точно не будет, нужно выходить
+                    If t.Text.Length - ind = 1 Then Exit Do ' Р•СЃР»Рё СЃРѕРІРїР°Р» РїРѕСЃР»РµРґРЅРёР№ СЃРёРјРІРѕР», С‚Рѕ Р±РѕР»СЊС€Рµ СЃРѕРІРїР°РґРµРЅРёР№ С‚РѕС‡РЅРѕ РЅРµ Р±СѓРґРµС‚, РЅСѓР¶РЅРѕ РІС‹С…РѕРґРёС‚СЊ
                 Loop
             Next
         End If
 
 
-        ' ИЩЕМ КОВЫЧКУ, А СПРАВА ОТ НЕЕ ВТОРУЮ
+        ' РР©Р•Рњ РљРћР’Р«Р§РљРЈ, Рђ РЎРџР РђР’Рђ РћРў РќР•Р• Р’РўРћР РЈР®
         If bistro_podsvKov = False Then
             Dim kovi4ka1, kovi4ka2 As Integer
             kovi4ka1 = t.Find("""", 0, RichTextBoxFinds.None)
-            ' Просматриваем все открывающиеся кавычки
+            ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІСЃРµ РѕС‚РєСЂС‹РІР°СЋС‰РёРµСЃСЏ РєР°РІС‹С‡РєРё
             While kovi4ka1 <> -1
-                ' Ищем закрывающуюся кавычку
+                ' РС‰РµРј Р·Р°РєСЂС‹РІР°СЋС‰СѓСЋСЃСЏ РєР°РІС‹С‡РєСѓ
                 kovi4ka2 = t.Find("""", kovi4ka1 + 1, RichTextBoxFinds.None)
-                ' Если после кавычки есть еще текст
+                ' Р•СЃР»Рё РїРѕСЃР»Рµ РєР°РІС‹С‡РєРё РµСЃС‚СЊ РµС‰Рµ С‚РµРєСЃС‚
                 If kovi4ka2 + 1 < t.TextLength - 1 Then
-                    ' Если это две подряд кавычки, то ищем одинарную
+                    ' Р•СЃР»Рё СЌС‚Рѕ РґРІРµ РїРѕРґСЂСЏРґ РєР°РІС‹С‡РєРё, С‚Рѕ РёС‰РµРј РѕРґРёРЅР°СЂРЅСѓСЋ
                     While t.Text.Chars(kovi4ka2 + 1) = """"
                         kovi4ka2 = t.Find("""", kovi4ka2 + 2, RichTextBoxFinds.None)
                         If kovi4ka2 + 1 >= t.TextLength - 1 Or kovi4ka2 = -1 Then Exit While
                     End While
                 End If
-                ' Если вторая кавычка найдена успешно
+                ' Р•СЃР»Рё РІС‚РѕСЂР°СЏ РєР°РІС‹С‡РєР° РЅР°Р№РґРµРЅР° СѓСЃРїРµС€РЅРѕ
                 If kovi4ka2 <= kovi4ka1 Then Exit While
-                ' Разукрасить весь текст в кавычках вместе с кавычками
+                ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РІРµСЃСЊ С‚РµРєСЃС‚ РІ РєР°РІС‹С‡РєР°С… РІРјРµСЃС‚Рµ СЃ РєР°РІС‹С‡РєР°РјРё
                 RichSelectColor(t, kovi4ka1, kovi4ka2 - kovi4ka1 + 1, ColKovi4ki, oldT)
-                ' Если кавычка не ушла за длинну текста, то найти следующую
+                ' Р•СЃР»Рё РєР°РІС‹С‡РєР° РЅРµ СѓС€Р»Р° Р·Р° РґР»РёРЅРЅСѓ С‚РµРєСЃС‚Р°, С‚Рѕ РЅР°Р№С‚Рё СЃР»РµРґСѓСЋС‰СѓСЋ
                 If kovi4ka2 + 1 >= t.TextLength - 1 Then Exit While
                 kovi4ka1 = t.Find("""", kovi4ka2 + 1, RichTextBoxFinds.None)
             End While
@@ -748,31 +748,31 @@ Public Class Project
         Return isStr
     End Function
     Function isStr(ByVal str As String) As Boolean
-        ' ИЩЕМ КОВЫЧКУ, А СПРАВА ОТ НЕЕ ВТОРУЮ
+        ' РР©Р•Рњ РљРћР’Р«Р§РљРЈ, Рђ РЎРџР РђР’Рђ РћРў РќР•Р• Р’РўРћР РЈР®
         Dim kovi4ka1, kovi4ka2 As Integer
         Do
-            ' Просматриваем все открывающиеся кавычки
+            ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІСЃРµ РѕС‚РєСЂС‹РІР°СЋС‰РёРµСЃСЏ РєР°РІС‹С‡РєРё
             kovi4ka1 = str.IndexOf("""")
             If kovi4ka1 = -1 Then Exit Do
-            ' Ищем закрывающуюся кавычку
+            ' РС‰РµРј Р·Р°РєСЂС‹РІР°СЋС‰СѓСЋСЃСЏ РєР°РІС‹С‡РєСѓ
             kovi4ka2 = str.IndexOf("""", kovi4ka1 + 1)
-            ' Если после кавычки есть еще текст
+            ' Р•СЃР»Рё РїРѕСЃР»Рµ РєР°РІС‹С‡РєРё РµСЃС‚СЊ РµС‰Рµ С‚РµРєСЃС‚
             If kovi4ka2 + 1 < str.Length - 1 Then
-                ' Если это две подряд кавычки, то ищем одинарную
+                ' Р•СЃР»Рё СЌС‚Рѕ РґРІРµ РїРѕРґСЂСЏРґ РєР°РІС‹С‡РєРё, С‚Рѕ РёС‰РµРј РѕРґРёРЅР°СЂРЅСѓСЋ
                 While str.Chars(kovi4ka2 + 1) = """"
                     kovi4ka2 = str.IndexOf("""", kovi4ka2 + 2)
                     If kovi4ka2 + 1 >= str.Length - 1 Or kovi4ka2 = -1 Then Exit While
                 End While
             End If
-            ' Если вторая кавычка найдена успешно
+            ' Р•СЃР»Рё РІС‚РѕСЂР°СЏ РєР°РІС‹С‡РєР° РЅР°Р№РґРµРЅР° СѓСЃРїРµС€РЅРѕ
             If kovi4ka2 <= kovi4ka1 Then Exit Do
-            ' Удалить весь текст в кавычках вместе с кавычками
+            ' РЈРґР°Р»РёС‚СЊ РІРµСЃСЊ С‚РµРєСЃС‚ РІ РєР°РІС‹С‡РєР°С… РІРјРµСЃС‚Рµ СЃ РєР°РІС‹С‡РєР°РјРё
             str = str.Substring(0, kovi4ka1) & str.Substring(kovi4ka2 + 1)
         Loop
         str = Trim(str) : str = LCase(str)
         If str = "" Then Return True
 
-        ' ПРОВЕРКА НА ВСПОМОГАТЕЛЬНЫЕ КОНСТАНТЫ
+        ' РџР РћР’Р•Р РљРђ РќРђ Р’РЎРџРћРњРћР“РђРўР•Р›Р¬РќР«Р• РљРћРќРЎРўРђРќРўР«
         Dim ind = -1, fl = 0, i As Integer
         For i = 0 To AllHW.Length - 1
             Do
@@ -780,71 +780,71 @@ Public Class Project
                 If ind = -1 Then Exit Do
                 If ind + AllHW(i).Length = str.Length Then fl += 1
                 If ind = 0 Then fl += 1
-                If ind > 0 Then ' Если символ до найденой строки - существует
-                    ' тогда если он разделитель(пробел, запятая), значит это не строка
+                If ind > 0 Then ' Р•СЃР»Рё СЃРёРјРІРѕР» РґРѕ РЅР°Р№РґРµРЅРѕР№ СЃС‚СЂРѕРєРё - СЃСѓС‰РµСЃС‚РІСѓРµС‚
+                    ' С‚РѕРіРґР° РµСЃР»Рё РѕРЅ СЂР°Р·РґРµР»РёС‚РµР»СЊ(РїСЂРѕР±РµР», Р·Р°РїСЏС‚Р°СЏ), Р·РЅР°С‡РёС‚ СЌС‚Рѕ РЅРµ СЃС‚СЂРѕРєР°
                     If Char.IsLetterOrDigit(str(ind - 1)) = False Then fl += 1
                 End If
-                If ind + AllHW(i).Length + 1 < str.Length Then ' Если символ после найденой строки - существует
-                    ' тогда если он разделитель(пробел, запятая), значит это не строка
+                If ind + AllHW(i).Length + 1 < str.Length Then ' Р•СЃР»Рё СЃРёРјРІРѕР» РїРѕСЃР»Рµ РЅР°Р№РґРµРЅРѕР№ СЃС‚СЂРѕРєРё - СЃСѓС‰РµСЃС‚РІСѓРµС‚
+                    ' С‚РѕРіРґР° РµСЃР»Рё РѕРЅ СЂР°Р·РґРµР»РёС‚РµР»СЊ(РїСЂРѕР±РµР», Р·Р°РїСЏС‚Р°СЏ), Р·РЅР°С‡РёС‚ СЌС‚Рѕ РЅРµ СЃС‚СЂРѕРєР°
                     If Char.IsLetterOrDigit(str(ind + AllHW(i).Length + 1)) = False Then fl += 1
                 End If
                 If fl >= 2 Then Return False Else fl = 0
             Loop
         Next
 
-        ' ПРОВЕРКА НА ТО, ЧТО ЭТО ЧИСЛО
+        ' РџР РћР’Р•Р РљРђ РќРђ РўРћ, Р§РўРћ Р­РўРћ Р§РРЎР›Рћ
         If Iz.isDouble(str) Then Return False
 
         Return True
     End Function
 
 
-    ' ПОДСВЕТКА СИНТАКСИСА В ОБЪЕКТЕ text (Возвращает true если в тексте нет объектов и функций)
+    ' РџРћР”РЎР’Р•РўРљРђ РЎРРќРўРђРљРЎРРЎРђ Р’ РћР‘РЄР•РљРўР• text (Р’РѕР·РІСЂР°С‰Р°РµС‚ true РµСЃР»Рё РІ С‚РµРєСЃС‚Рµ РЅРµС‚ РѕР±СЉРµРєС‚РѕРІ Рё С„СѓРЅРєС†РёР№)
     Public Function Podsvetka2(ByVal text As RichTextBox) As Boolean
 
         Dim cm
-        ' СОЗДАНИЕ КОНТЕКСТНОГО МЕНЮ ОБЪЕКТОВ
+        ' РЎРћР—Р”РђРќРР• РљРћРќРўР•РљРЎРўРќРћР“Рћ РњР•РќР® РћР‘РЄР•РљРўРћР’
         Dim cmItem, cmMassiv As ToolStripMenuItem, cmSeparat As ToolStripSeparator
         'cm = New ContextMenuStrip : AddHandler cm.Opening, AddressOf proj.cm_Opening
-        ' Массивы
+        ' РњР°СЃСЃРёРІС‹
         cmSeparat = New ToolStripSeparator() : cmSeparat.Name = "MassiveUp" : cm.Items.Add(cmSeparat)
 
-        cmItem = New ToolStripMenuItem(trans("Создать массив")) : cmItem.Name = cmItem.Text
-        cmItem.ToolTipText = trans("Объединение элементов одним именем. Различаться они будут по индексам.")
+        cmItem = New ToolStripMenuItem(trans("РЎРѕР·РґР°С‚СЊ РјР°СЃСЃРёРІ")) : cmItem.Name = cmItem.Text
+        cmItem.ToolTipText = trans("РћР±СЉРµРґРёРЅРµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РѕРґРЅРёРј РёРјРµРЅРµРј. Р Р°Р·Р»РёС‡Р°С‚СЊСЃСЏ РѕРЅРё Р±СѓРґСѓС‚ РїРѕ РёРЅРґРµРєСЃР°Рј.")
         ' cm.Items.Add(cmItem) : AddHandler cmItem.Click, AddressOf proj.MassiveCreate_Click
 
-        cmItem = New ToolStripMenuItem(trans("Создать подмассив")) : cmItem.Name = cmItem.Text
-        cmItem.ToolTipText = trans("Создать массив, в уже существующем массиве.")
+        cmItem = New ToolStripMenuItem(trans("РЎРѕР·РґР°С‚СЊ РїРѕРґРјР°СЃСЃРёРІ")) : cmItem.Name = cmItem.Text
+        cmItem.ToolTipText = trans("РЎРѕР·РґР°С‚СЊ РјР°СЃСЃРёРІ, РІ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РµРј РјР°СЃСЃРёРІРµ.")
         ' cm.Items.Add(cmItem) : AddHandler cmItem.Click, AddressOf proj.podMassiveCreate_Click
 
-        cmMassiv = New ToolStripMenuItem(trans("Работа с массивами")) : cmMassiv.Name = cmMassiv.Text
-        cmMassiv.ToolTipText = trans("Функции для удобного редактирования ваших массивов.")
+        cmMassiv = New ToolStripMenuItem(trans("Р Р°Р±РѕС‚Р° СЃ РјР°СЃСЃРёРІР°РјРё")) : cmMassiv.Name = cmMassiv.Text
+        cmMassiv.ToolTipText = trans("Р¤СѓРЅРєС†РёРё РґР»СЏ СѓРґРѕР±РЅРѕРіРѕ СЂРµРґР°РєС‚РёСЂРѕРІР°РЅРёСЏ РІР°С€РёС… РјР°СЃСЃРёРІРѕРІ.")
         cm.Items.Add(cmMassiv)
 
-        cmItem = New ToolStripMenuItem(trans("Объединить в подмассиве")) : cmItem.Name = cmItem.Text
-        cmItem.ToolTipText = trans("Объединить объекты в одном индексе массива.")
+        cmItem = New ToolStripMenuItem(trans("РћР±СЉРµРґРёРЅРёС‚СЊ РІ РїРѕРґРјР°СЃСЃРёРІРµ")) : cmItem.Name = cmItem.Text
+        cmItem.ToolTipText = trans("РћР±СЉРµРґРёРЅРёС‚СЊ РѕР±СЉРµРєС‚С‹ РІ РѕРґРЅРѕРј РёРЅРґРµРєСЃРµ РјР°СЃСЃРёРІР°.")
         '  cmMassiv.DropDownItems.Add(cmItem) : AddHandler cmItem.Click, AddressOf proj.podMassiveUnited_Click
 
-        cmItem = New ToolStripMenuItem(trans("Выделить массив")) : cmItem.Name = cmItem.Text
-        cmItem.ToolTipText = trans("Выделятся все объекты, с которыми данный объект находится в массиве.")
+        cmItem = New ToolStripMenuItem(trans("Р’С‹РґРµР»РёС‚СЊ РјР°СЃСЃРёРІ")) : cmItem.Name = cmItem.Text
+        cmItem.ToolTipText = trans("Р’С‹РґРµР»СЏС‚СЃСЏ РІСЃРµ РѕР±СЉРµРєС‚С‹, СЃ РєРѕС‚РѕСЂС‹РјРё РґР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ РЅР°С…РѕРґРёС‚СЃСЏ РІ РјР°СЃСЃРёРІРµ.")
         '  cmMassiv.DropDownItems.Add(cmItem) : AddHandler cmItem.Click, AddressOf proj.MassiveSelect_Click
 
-        cmItem = New ToolStripMenuItem(trans("Выделить подмассив")) : cmItem.Name = cmItem.Text
-        cmItem.ToolTipText = trans("Выделятся все объекты, с которыми данный объект находится в подмассиве.")
+        cmItem = New ToolStripMenuItem(trans("Р’С‹РґРµР»РёС‚СЊ РїРѕРґРјР°СЃСЃРёРІ")) : cmItem.Name = cmItem.Text
+        cmItem.ToolTipText = trans("Р’С‹РґРµР»СЏС‚СЃСЏ РІСЃРµ РѕР±СЉРµРєС‚С‹, СЃ РєРѕС‚РѕСЂС‹РјРё РґР°РЅРЅС‹Р№ РѕР±СЉРµРєС‚ РЅР°С…РѕРґРёС‚СЃСЏ РІ РїРѕРґРјР°СЃСЃРёРІРµ.")
         '  cmMassiv.DropDownItems.Add(cmItem) : AddHandler cmItem.Click, AddressOf proj.podMassiveSelect_Click
 
-        cmItem = New ToolStripMenuItem(trans("Добавить в массив")) : cmItem.Name = cmItem.Text
-        cmItem.ToolTipText = trans("Добавить объект в уже существующий массив.")
+        cmItem = New ToolStripMenuItem(trans("Р”РѕР±Р°РІРёС‚СЊ РІ РјР°СЃСЃРёРІ")) : cmItem.Name = cmItem.Text
+        cmItem.ToolTipText = trans("Р”РѕР±Р°РІРёС‚СЊ РѕР±СЉРµРєС‚ РІ СѓР¶Рµ СЃСѓС‰РµСЃС‚РІСѓСЋС‰РёР№ РјР°СЃСЃРёРІ.")
         cmMassiv.DropDownItems.Add(cmItem)
 
-        cmItem = New ToolStripMenuItem(trans("Исключить из массива")) : cmItem.Name = cmItem.Text
-        cmItem.ToolTipText = trans("Объекту присвоится новое имя, и обнулится индекс.")
+        cmItem = New ToolStripMenuItem(trans("РСЃРєР»СЋС‡РёС‚СЊ РёР· РјР°СЃСЃРёРІР°")) : cmItem.Name = cmItem.Text
+        cmItem.ToolTipText = trans("РћР±СЉРµРєС‚Сѓ РїСЂРёСЃРІРѕРёС‚СЃСЏ РЅРѕРІРѕРµ РёРјСЏ, Рё РѕР±РЅСѓР»РёС‚СЃСЏ РёРЅРґРµРєСЃ.")
         '   cmMassiv.DropDownItems.Add(cmItem) : AddHandler cmItem.Click, AddressOf proj.MassiveExecute_Click
-        ' Редактирование
+        ' Р РµРґР°РєС‚РёСЂРѕРІР°РЅРёРµ
         cmSeparat = New ToolStripSeparator() : cmSeparat.Name = "EditUp" : cm.Items.Add(cmSeparat)
 
-        cmItem = New ToolStripMenuItem(trans("Перенести")) : cmItem.Name = cmItem.Text
-        cmItem.ToolTipText = trans("Переместить на другой объект-контейнер.")
+        cmItem = New ToolStripMenuItem(trans("РџРµСЂРµРЅРµСЃС‚Рё")) : cmItem.Name = cmItem.Text
+        cmItem.ToolTipText = trans("РџРµСЂРµРјРµСЃС‚РёС‚СЊ РЅР° РґСЂСѓРіРѕР№ РѕР±СЉРµРєС‚-РєРѕРЅС‚РµР№РЅРµСЂ.")
         cm.Items.Add(cmItem)
 
 
@@ -854,54 +854,54 @@ Public Class Project
 
 
         Dim i, wasEdit As Integer
-        Dim isStr As Boolean = True  ' Принимает true если в тексте нет объектов и функций (т.е. это строка)
-        ' Все изменения проводить в отдельном RichTextBox, а данные оригинального RichTextBox сохранить
+        Dim isStr As Boolean = True  ' РџСЂРёРЅРёРјР°РµС‚ true РµСЃР»Рё РІ С‚РµРєСЃС‚Рµ РЅРµС‚ РѕР±СЉРµРєС‚РѕРІ Рё С„СѓРЅРєС†РёР№ (С‚.Рµ. СЌС‚Рѕ СЃС‚СЂРѕРєР°)
+        ' Р’СЃРµ РёР·РјРµРЅРµРЅРёСЏ РїСЂРѕРІРѕРґРёС‚СЊ РІ РѕС‚РґРµР»СЊРЅРѕРј RichTextBox, Р° РґР°РЅРЅС‹Рµ РѕСЂРёРіРёРЅР°Р»СЊРЅРѕРіРѕ RichTextBox СЃРѕС…СЂР°РЅРёС‚СЊ
         Dim t As New RichTextBox : t.Text = text.Text
         Dim oldT As New RichTextBox : oldT.Rtf = text.Rtf
         Dim start As Integer = text.SelectionStart, len As Integer = text.SelectionLength
-        ' Заменить весь цвет на цвет по умолчанию
+        ' Р—Р°РјРµРЅРёС‚СЊ РІРµСЃСЊ С†РІРµС‚ РЅР° С†РІРµС‚ РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ
         RichSelectColor(t, 0, t.TextLength, ColKode)
         ' t.SelectAll() : t.SelectionColor = ColKode
 
-        ' ИЩЕМ СКОБКУ, А СЛЕВА ОТ НЕЕ ИМЯ ФУНКЦИИ
+        ' РР©Р•Рњ РЎРљРћР‘РљРЈ, Рђ РЎР›Р•Р’Рђ РћРў РќР•Р• РРњРЇ Р¤РЈРќРљР¦РР
         Dim skobka As Integer
         skobka = t.Find("(", 0, RichTextBoxFinds.None)
         If skobka = -1 Then skobka = t.TextLength
-        ' Просматриваем все открывающиеся скобки
+        ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІСЃРµ РѕС‚РєСЂС‹РІР°СЋС‰РёРµСЃСЏ СЃРєРѕР±РєРё
         While skobka <> -1
-            ' Ищем слева от скобки имя функции
+            ' РС‰РµРј СЃР»РµРІР° РѕС‚ СЃРєРѕР±РєРё РёРјСЏ С„СѓРЅРєС†РёРё
             For i = skobka - 1 To 0 Step -1
                 'Try
-                ' Если текущий символ разделитель (пробел, запятая и т.д.)
+                ' Р•СЃР»Рё С‚РµРєСѓС‰РёР№ СЃРёРјРІРѕР» СЂР°Р·РґРµР»РёС‚РµР»СЊ (РїСЂРѕР±РµР», Р·Р°РїСЏС‚Р°СЏ Рё С‚.Рґ.)
                 If Char.IsLetterOrDigit(t.Text.Chars(i)) = False Then
-                    ' От скобки ушли дальше чем на 0 символов
+                    ' РћС‚ СЃРєРѕР±РєРё СѓС€Р»Рё РґР°Р»СЊС€Рµ С‡РµРј РЅР° 0 СЃРёРјРІРѕР»РѕРІ
                     If skobka - i - 1 > 0 Then
-                        ' Если такая функция существует
+                        ' Р•СЃР»Рё С‚Р°РєР°СЏ С„СѓРЅРєС†РёСЏ СЃСѓС‰РµСЃС‚РІСѓРµС‚
                         Dim funS As String = proj.isFunction(t.Text.Substring(i + 1, skobka - i - 1))
                         If funS <> "" Then
                             If funS <> t.Text.Substring(i + 1, skobka - i - 1) Then
                                 t.Text = t.Text.Substring(0, i + 1) & funS & t.Text.Substring(i + 1 + funS.Length)
                             End If
-                            ' Разукрасить имя функции, и помеметить, что это уже не просто строка
+                            ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РёРјСЏ С„СѓРЅРєС†РёРё, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                             wasEdit += RichSelectColor(t, i + 1, skobka - i - 1, ColFunction, oldT) : isStr = False : Exit For
                         End If
                     End If
                 End If
                 If i = 0 Then
-                    ' Если дошли до начала строки, проверить есть ли до скобки имя функции
+                    ' Р•СЃР»Рё РґРѕС€Р»Рё РґРѕ РЅР°С‡Р°Р»Р° СЃС‚СЂРѕРєРё, РїСЂРѕРІРµСЂРёС‚СЊ РµСЃС‚СЊ Р»Рё РґРѕ СЃРєРѕР±РєРё РёРјСЏ С„СѓРЅРєС†РёРё
                     Dim funS As String = proj.isFunction(t.Text.Substring(i, skobka))
                     If funS <> "" Then
                         If funS <> t.Text.Substring(i, skobka) Then
                             t.Text = funS & t.Text.Substring(funS.Length)
                         End If
-                        ' Разукрасить имя функции, и помеметить, что это уже не просто строка
+                        ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РёРјСЏ С„СѓРЅРєС†РёРё, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                         wasEdit += RichSelectColor(t, i, skobka, ColFunction, oldT) : isStr = False : Exit For
                     End If
                 End If
                 'Catch ex As Exception
                 'End Try
             Next
-            ' Если скобка не ушла за длинну текста, то найти следующую
+            ' Р•СЃР»Рё СЃРєРѕР±РєР° РЅРµ СѓС€Р»Р° Р·Р° РґР»РёРЅРЅСѓ С‚РµРєСЃС‚Р°, С‚Рѕ РЅР°Р№С‚Рё СЃР»РµРґСѓСЋС‰СѓСЋ
             If t.TextLength > skobka + 1 Then
                 skobka = t.Find("(", skobka + 1, RichTextBoxFinds.None)
             Else
@@ -909,69 +909,69 @@ Public Class Project
             End If
         End While
 
-        ' ИЩЕМ ТОЧКУ, А СЛЕВА ОТ НЕЕ ИМЯ ОБЪЕКТА, СПРАВА - НАЗВАНИЕ СВОЙСТВА
+        ' РР©Р•Рњ РўРћР§РљРЈ, Рђ РЎР›Р•Р’Рђ РћРў РќР•Р• РРњРЇ РћР‘РЄР•РљРўРђ, РЎРџР РђР’Рђ - РќРђР—Р’РђРќРР• РЎР’РћР™РЎРўР’Рђ
         Dim to4ka As Integer
         to4ka = t.Find(".", 0, RichTextBoxFinds.None)
-        ' Просматриваем все точки
+        ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІСЃРµ С‚РѕС‡РєРё
         While to4ka <> -1
-            ' Ищем слева от точки имя объекта
+            ' РС‰РµРј СЃР»РµРІР° РѕС‚ С‚РѕС‡РєРё РёРјСЏ РѕР±СЉРµРєС‚Р°
             For i = to4ka To 0 Step -1
                 'Try
-                ' Если текущий символ разделитель (пробел, запятая и т.д.)
+                ' Р•СЃР»Рё С‚РµРєСѓС‰РёР№ СЃРёРјРІРѕР» СЂР°Р·РґРµР»РёС‚РµР»СЊ (РїСЂРѕР±РµР», Р·Р°РїСЏС‚Р°СЏ Рё С‚.Рґ.)
                 If Char.IsLetterOrDigit(t.Text.Chars(i)) = False Then
-                    ' От точки ушли дальше чем на 0 символов
+                    ' РћС‚ С‚РѕС‡РєРё СѓС€Р»Рё РґР°Р»СЊС€Рµ С‡РµРј РЅР° 0 СЃРёРјРІРѕР»РѕРІ
                     If to4ka - i - 1 > 0 Then
-                        ' Если такой объект есть
+                        ' Р•СЃР»Рё С‚Р°РєРѕР№ РѕР±СЉРµРєС‚ РµСЃС‚СЊ
                         Dim obS As String = proj.isObject(t.Text.Substring(i + 1, to4ka - i - 1))
                         If obS <> "" Then
                             If obS <> t.Text.Substring(i + 1, to4ka - i - 1) Then
                                 t.Text = t.Text.Substring(0, i + 1) & obS & t.Text.Substring(i + 1 + obS.Length)
                             End If
-                            ' Разукрасить имя объекта, и помеметить, что это уже не просто строка
+                            ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РёРјСЏ РѕР±СЉРµРєС‚Р°, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                             wasEdit += RichSelectColor(t, i + 1, to4ka - i - 1, ColObject, oldT) : isStr = False : Exit For
                         End If
                     End If
                 End If
                 If i = 0 Then
-                    ' Если дошли до начала строки, проверить есть ли до точки имя объекта
+                    ' Р•СЃР»Рё РґРѕС€Р»Рё РґРѕ РЅР°С‡Р°Р»Р° СЃС‚СЂРѕРєРё, РїСЂРѕРІРµСЂРёС‚СЊ РµСЃС‚СЊ Р»Рё РґРѕ С‚РѕС‡РєРё РёРјСЏ РѕР±СЉРµРєС‚Р°
                     Dim obS As String = proj.isObject(t.Text.Substring(i, to4ka))
                     If obS <> "" Then
                         If obS <> t.Text.Substring(i, to4ka) Then
                             t.Text = t.Text.Substring(0, i) & obS & t.Text.Substring(i + obS.Length)
                         End If
-                        ' Разукрасить имя объекта, и помеметить, что это уже не просто строка
+                        ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РёРјСЏ РѕР±СЉРµРєС‚Р°, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                         wasEdit += RichSelectColor(t, i, to4ka, ColObject, oldT) : isStr = False : Exit For
                     End If
                 End If
                 'Catch ex As Exception
                 'End Try
             Next
-            ' Ищем справа от точки название свойства
+            ' РС‰РµРј СЃРїСЂР°РІР° РѕС‚ С‚РѕС‡РєРё РЅР°Р·РІР°РЅРёРµ СЃРІРѕР№СЃС‚РІР°
             For i = to4ka + 1 To t.TextLength - 1
                 'Try
-                ' Если текущий символ разделитель (пробел, запятая и т.д.)
+                ' Р•СЃР»Рё С‚РµРєСѓС‰РёР№ СЃРёРјРІРѕР» СЂР°Р·РґРµР»РёС‚РµР»СЊ (РїСЂРѕР±РµР», Р·Р°РїСЏС‚Р°СЏ Рё С‚.Рґ.)
                 If Char.IsLetterOrDigit(t.Text.Chars(i)) = False Then
-                    ' От точки ушли дальше чем на 0 символов
+                    ' РћС‚ С‚РѕС‡РєРё СѓС€Р»Рё РґР°Р»СЊС€Рµ С‡РµРј РЅР° 0 СЃРёРјРІРѕР»РѕРІ
                     If i - to4ka - 1 > 0 Then
-                        ' Если такое свойство существует
+                        ' Р•СЃР»Рё С‚Р°РєРѕРµ СЃРІРѕР№СЃС‚РІРѕ СЃСѓС‰РµСЃС‚РІСѓРµС‚
                         Dim prS As String = proj.isProperty(t.Text.Substring(to4ka + 1, i - to4ka - 1))
                         If prS <> "" Then
                             If prS <> t.Text.Substring(to4ka + 1, i - to4ka - 1) Then
                                 t.Text = t.Text.Substring(0, to4ka + 1) & prS & t.Text.Substring(to4ka + 1 + prS.Length)
                             End If
-                            ' Разукрасить название свойства, и помеметить, что это уже не просто строка
+                            ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РЅР°Р·РІР°РЅРёРµ СЃРІРѕР№СЃС‚РІР°, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                             wasEdit += RichSelectColor(t, to4ka + 1, i - to4ka - 1, ColProperty, oldT) : isStr = False : Exit For
                         End If
                     End If
                 End If
                 If i = t.TextLength - 1 Then
-                    ' Если дошли до конца строки, проверить есть ли от точки название свойства
+                    ' Р•СЃР»Рё РґРѕС€Р»Рё РґРѕ РєРѕРЅС†Р° СЃС‚СЂРѕРєРё, РїСЂРѕРІРµСЂРёС‚СЊ РµСЃС‚СЊ Р»Рё РѕС‚ С‚РѕС‡РєРё РЅР°Р·РІР°РЅРёРµ СЃРІРѕР№СЃС‚РІР°
                     Dim prS As String = proj.isProperty(t.Text.Substring(to4ka + 1, i - to4ka))
                     If prS <> "" Then
                         If prS <> t.Text.Substring(to4ka + 1, i - to4ka) Then
                             t.Text = t.Text.Substring(0, to4ka + 1) & prS & t.Text.Substring(to4ka + 1 + prS.Length)
                         End If
-                        ' Разукрасить название свойства, и помеметить, что это уже не просто строка
+                        ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РЅР°Р·РІР°РЅРёРµ СЃРІРѕР№СЃС‚РІР°, Рё РїРѕРјРµРјРµС‚РёС‚СЊ, С‡С‚Рѕ СЌС‚Рѕ СѓР¶Рµ РЅРµ РїСЂРѕСЃС‚Рѕ СЃС‚СЂРѕРєР°
                         wasEdit += RichSelectColor(t, to4ka + 1, i - to4ka, ColProperty, oldT) : isStr = False : Exit For
                     End If
                 End If
@@ -979,7 +979,7 @@ Public Class Project
                 'Catch ex As Exception
                 'End Try
             Next
-            ' Если точка не ушла за длинну текста, то найти следующую
+            ' Р•СЃР»Рё С‚РѕС‡РєР° РЅРµ СѓС€Р»Р° Р·Р° РґР»РёРЅРЅСѓ С‚РµРєСЃС‚Р°, С‚Рѕ РЅР°Р№С‚Рё СЃР»РµРґСѓСЋС‰СѓСЋ
             If to4ka + 1 < t.TextLength Then
                 to4ka = t.Find(".", to4ka + 1, RichTextBoxFinds.None)
             Else
@@ -989,31 +989,31 @@ Public Class Project
 
 
 
-        ' ИЩЕМ КОВЫЧКУ, А СПРАВА ОТ НЕЕ ВТОРУЮ
+        ' РР©Р•Рњ РљРћР’Р«Р§РљРЈ, Рђ РЎРџР РђР’Рђ РћРў РќР•Р• Р’РўРћР РЈР®
         Dim kovi4ka1, kovi4ka2 As Integer
         kovi4ka1 = t.Find("""", 0, RichTextBoxFinds.None)
-        ' Просматриваем все открывающиеся кавычки
+        ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІСЃРµ РѕС‚РєСЂС‹РІР°СЋС‰РёРµСЃСЏ РєР°РІС‹С‡РєРё
         While kovi4ka1 <> -1
-            ' Ищем закрывающуюся кавычку
+            ' РС‰РµРј Р·Р°РєСЂС‹РІР°СЋС‰СѓСЋСЃСЏ РєР°РІС‹С‡РєСѓ
             kovi4ka2 = t.Find("""", kovi4ka1 + 1, RichTextBoxFinds.None)
-            ' Если после кавычки есть еще текст
+            ' Р•СЃР»Рё РїРѕСЃР»Рµ РєР°РІС‹С‡РєРё РµСЃС‚СЊ РµС‰Рµ С‚РµРєСЃС‚
             If kovi4ka2 + 1 < t.TextLength - 1 Then
-                ' Если это две подряд кавычки, то ищем одинарную
+                ' Р•СЃР»Рё СЌС‚Рѕ РґРІРµ РїРѕРґСЂСЏРґ РєР°РІС‹С‡РєРё, С‚Рѕ РёС‰РµРј РѕРґРёРЅР°СЂРЅСѓСЋ
                 While t.Text.Chars(kovi4ka2 + 1) = """"
                     kovi4ka2 = t.Find("""", kovi4ka2 + 2, RichTextBoxFinds.None)
                     If kovi4ka2 + 1 >= t.TextLength - 1 Or kovi4ka2 = -1 Then Exit While
                 End While
             End If
-            ' Если вторая кавычка найдена успешно
+            ' Р•СЃР»Рё РІС‚РѕСЂР°СЏ РєР°РІС‹С‡РєР° РЅР°Р№РґРµРЅР° СѓСЃРїРµС€РЅРѕ
             If kovi4ka2 <= kovi4ka1 Then Exit While
-            ' Разукрасить весь текст в кавычках вместе с кавычками
+            ' Р Р°Р·СѓРєСЂР°СЃРёС‚СЊ РІРµСЃСЊ С‚РµРєСЃС‚ РІ РєР°РІС‹С‡РєР°С… РІРјРµСЃС‚Рµ СЃ РєР°РІС‹С‡РєР°РјРё
             wasEdit += RichSelectColor(t, kovi4ka1, kovi4ka2 - kovi4ka1 + 1, ColKovi4ki, oldT)
-            ' Если кавычка не ушла за длинну текста, то найти следующую
+            ' Р•СЃР»Рё РєР°РІС‹С‡РєР° РЅРµ СѓС€Р»Р° Р·Р° РґР»РёРЅРЅСѓ С‚РµРєСЃС‚Р°, С‚Рѕ РЅР°Р№С‚Рё СЃР»РµРґСѓСЋС‰СѓСЋ
             If kovi4ka2 + 1 >= t.TextLength - 1 Then Exit While
             kovi4ka1 = t.Find("""", kovi4ka2 + 1, RichTextBoxFinds.None)
         End While
 
-        ' ЯВЛЯЕТСЯ ЛИ ТЕКСТ ЧИСЛОМ. ЕСЛИ ТАК, ТО ТЕКСТ ЭТО НЕ СТРОКА (isStr = False) 
+        ' РЇР’Р›РЇР•РўРЎРЇ Р›Р РўР•РљРЎРў Р§РРЎР›РћРњ. Р•РЎР›Р РўРђРљ, РўРћ РўР•РљРЎРў Р­РўРћ РќР• РЎРўР РћРљРђ (isStr = False) 
         Dim fl As Integer = 0
         For i = 0 To text.TextLength - 1
             If Char.IsDigit(text.Text(i)) = False And text.Text(i) <> "(" And text.Text(i) <> ")" And text.Text(i) <> "." Then fl = 1
@@ -1022,7 +1022,7 @@ Public Class Project
 
         'If text.Rtf.Substring(text.Rtf.IndexOf("\viewkind4\")) <> t.Rtf.Substring(t.Rtf.IndexOf("\viewkind4\")) Then
 
-        ' Вернуть отфарматированый текст в исходный RichTextBox
+        ' Р’РµСЂРЅСѓС‚СЊ РѕС‚С„Р°СЂРјР°С‚РёСЂРѕРІР°РЅС‹Р№ С‚РµРєСЃС‚ РІ РёСЃС…РѕРґРЅС‹Р№ RichTextBox
         Dim m As System.Text.RegularExpressions.Match, result1, result2 As String, ind1, ind2 As Integer
         wasEdit = 0
         'Do
@@ -1049,29 +1049,29 @@ Public Class Project
         'End If
 
         If result1.Length + 1 <> result2.Length Then text.Rtf = t.Rtf : text.SelectionLength = len : text.SelectionStart = start
-        ' Вернуть true если обнаружены функции или объекты
+        ' Р’РµСЂРЅСѓС‚СЊ true РµСЃР»Рё РѕР±РЅР°СЂСѓР¶РµРЅС‹ С„СѓРЅРєС†РёРё РёР»Рё РѕР±СЉРµРєС‚С‹
         Return isStr
     End Function
 
-    ' ПРОВЕРЯЕТ, ЯВЛЯЕТСЯ ЛИ name ИМЕНЕМ ОБЪЕКТА
+    ' РџР РћР’Р•Р РЇР•Рў, РЇР’Р›РЇР•РўРЎРЇ Р›Р name РРњР•РќР•Рњ РћР‘РЄР•РљРўРђ
     Function isObject(ByVal name As String) As String
         If proj.f Is Nothing Then Return False
         Dim i, j As Integer
-        ' Увеличить регистр дабы не он не влиял на поиск
+        ' РЈРІРµР»РёС‡РёС‚СЊ СЂРµРіРёСЃС‚СЂ РґР°Р±С‹ РЅРµ РѕРЅ РЅРµ РІР»РёСЏР» РЅР° РїРѕРёСЃРє
         name = Trim(UCase(name))
         If name.IndexOf("(") <> -1 Then name = Left(name, name.IndexOf("("))
         For i = 0 To proj.f.Length - 1
-            ' Если найдена форма с таким именем
+            ' Р•СЃР»Рё РЅР°Р№РґРµРЅР° С„РѕСЂРјР° СЃ С‚Р°РєРёРј РёРјРµРЅРµРј
             If UCase(proj.f(i).obj.Props.name) = name Then Return proj.f(i).obj.Props.name
             If proj.f(i).MyObjs Is Nothing Then Return False
             For j = 0 To proj.f(i).MyObjs.Length - 1
-                ' Если у объекта нужное имя
+                ' Р•СЃР»Рё Сѓ РѕР±СЉРµРєС‚Р° РЅСѓР¶РЅРѕРµ РёРјСЏ
                 If UCase(proj.f(i).MyObjs(j).obj.Props.name) = name Then Return proj.f(i).MyObjs(j).obj.Props.name
             Next
         Next
         Return ""
     End Function
-    ' ПОЛУЧИТЬ ВСЕ ОБЪЕКТЫ
+    ' РџРћР›РЈР§РРўР¬ Р’РЎР• РћР‘РЄР•РљРўР«
     Function GetAllObjs() As ArrayList
         Dim arr As New ArrayList
         If proj.f Is Nothing Then Return Nothing
@@ -1085,7 +1085,7 @@ Public Class Project
         Next
         Return arr
     End Function
-    ' ПОЛУЧИТЬ ВСЕ ИМЕНА ОБЪЕКТЫ
+    ' РџРћР›РЈР§РРўР¬ Р’РЎР• РРњР•РќРђ РћР‘РЄР•РљРўР«
     Function GetAllObjNames() As ArrayList
         Dim arr As New ArrayList
         If proj.f Is Nothing Then Return Nothing
@@ -1095,31 +1095,31 @@ Public Class Project
             If proj.f(i).MyObjs Is Nothing = False Then
                 For j = 0 To proj.f(i).MyObjs.Length - 1
                     arr.Add(proj.f(i).MyObjs(j).obj.Props.name)
-                    If Iz.IsCM(proj.f(i).MyObjs(j)) Then arr.Add(MyZnak & trans("Хозяин") & " " & proj.f(i).MyObjs(j).obj.Props.name)
+                    If Iz.IsCM(proj.f(i).MyObjs(j)) Then arr.Add(MyZnak & trans("РҐРѕР·СЏРёРЅ") & " " & proj.f(i).MyObjs(j).obj.Props.name)
                 Next
             End If
         Next
-        arr.Add(MyZnak & trans("Окно события"))
-        arr.Add(MyZnak & trans("Объект события"))
+        arr.Add(MyZnak & trans("РћРєРЅРѕ СЃРѕР±С‹С‚РёСЏ"))
+        arr.Add(MyZnak & trans("РћР±СЉРµРєС‚ СЃРѕР±С‹С‚РёСЏ"))
         Return arr
     End Function
-    ' ПОЛУЧИТЬ ВСЕ ОСВОЙСТВА ОБЪЕКТА
+    ' РџРћР›РЈР§РРўР¬ Р’РЎР• РћРЎР’РћР™РЎРўР’Рђ РћР‘РЄР•РљРўРђ
     Function GetAllPropNames(Optional ByVal bezPoleznih As Boolean = False, Optional ByVal includeReadOnly As Boolean = True) As ArrayList
         Dim arr, arrUp As New ArrayList
         If proj.f Is Nothing Then Return Nothing
         Dim i, j, z As Integer
         For i = 0 To proj.f.Length - 1 - Convert.ToByte(bezPoleznih)
-            ' Пробежаться по всем свойствам формы
+            ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј СЃРІРѕР№СЃС‚РІР°Рј С„РѕСЂРјС‹
             'For z = 0 To proj.f(i).Propertys.Length - 1
             ' If arr.IndexOf(proj.f(i).PropertysUp(z)) = -1 Then arr.Add(proj.f(i).Propertys(z))
             'Next
             If proj.f(i).MyObjs Is Nothing Then Continue For
-            ' Пробежаться по всем объектам формы
+            ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РѕР±СЉРµРєС‚Р°Рј С„РѕСЂРјС‹
             For j = 0 To proj.f(i).MyObjs.Length - 1
-                ' Пробежаться по всем свойствам объекта
+                ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј СЃРІРѕР№СЃС‚РІР°Рј РѕР±СЉРµРєС‚Р°
                 If proj.f(i).MyObjs(j).Propertys Is Nothing = False Then
                     For z = 0 To proj.f(i).MyObjs(j).Propertys.Length - 1
-                        ' Если найдено нужное свойство у объекта 
+                        ' Р•СЃР»Рё РЅР°Р№РґРµРЅРѕ РЅСѓР¶РЅРѕРµ СЃРІРѕР№СЃС‚РІРѕ Сѓ РѕР±СЉРµРєС‚Р° 
                         If arrUp.IndexOf(proj.f(i).MyObjs(j).PropertysUp(z)) = -1 Then
                             arrUp.Add(proj.f(i).MyObjs(j).Propertysup(z))
                             arr.Add(proj.f(i).MyObjs(j).Propertys(z))
@@ -1129,7 +1129,7 @@ Public Class Project
             Next
         Next
         Dim sobytObj As Sobitiya = GetSobytObj(MyZnak & "All")
-        ' Пробежаться по всем полезным свойствам, обычных объектов
+        ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РїРѕР»РµР·РЅС‹Рј СЃРІРѕР№СЃС‚РІР°Рј, РѕР±С‹С‡РЅС‹С… РѕР±СЉРµРєС‚РѕРІ
         For i = 0 To sobytObj.Propertys.Length - 1
             If includeReadOnly Or Array.IndexOf(SobytsNotReadOnly, sobytObj.PropertysUp(i)) <> -1 Then
                 If arrUp.IndexOf(sobytObj.PropertysUp(i)) = -1 Then
@@ -1140,19 +1140,19 @@ Public Class Project
         Next
         Return arr
     End Function
-    ' ПРОВЕРЯЕТ, ЯВЛЯЕТСЯ ЛИ prop НАЗВАНИЕМ СВОЙСТВА
+    ' РџР РћР’Р•Р РЇР•Рў, РЇР’Р›РЇР•РўРЎРЇ Р›Р prop РќРђР—Р’РђРќРР•Рњ РЎР’РћР™РЎРўР’Рђ
     Function GetAllMethNames(Optional ByVal bezPoleznih As Boolean = False) As ArrayList
         Dim arr, arrUp As New ArrayList
         If proj.f Is Nothing Then Return Nothing
         Dim i, j, z As Integer
         For i = 0 To proj.f.Length - 1 - Convert.ToByte(bezPoleznih)
             If proj.f(i).MyObjs Is Nothing Then Continue For
-            ' Пробежаться по всем объектам формы
+            ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РѕР±СЉРµРєС‚Р°Рј С„РѕСЂРјС‹
             For j = 0 To proj.f(i).MyObjs.Length - 1
-                ' Пробежаться по всем методам объекта
+                ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РјРµС‚РѕРґР°Рј РѕР±СЉРµРєС‚Р°
                 If proj.f(i).MyObjs(j).Methods Is Nothing = False Then
                     For z = 0 To proj.f(i).MyObjs(j).Methods.Length - 1
-                        ' Если найдено нужное свойство у объекта 
+                        ' Р•СЃР»Рё РЅР°Р№РґРµРЅРѕ РЅСѓР¶РЅРѕРµ СЃРІРѕР№СЃС‚РІРѕ Сѓ РѕР±СЉРµРєС‚Р° 
                         If arrUp.IndexOf(proj.f(i).MyObjs(j).MethodsUp(z)) = -1 Then
                             arrUp.Add(proj.f(i).MyObjs(j).MethodsUp(z))
                             arr.Add(proj.f(i).MyObjs(j).Methods(z))
@@ -1162,81 +1162,81 @@ Public Class Project
             Next
         Next
         'Dim sobytObj As Other = GetSobytObj(MyZnak & "All")
-        ' Пробежаться по всем полезным свойствам, обычных объектов
+        ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РїРѕР»РµР·РЅС‹Рј СЃРІРѕР№СЃС‚РІР°Рј, РѕР±С‹С‡РЅС‹С… РѕР±СЉРµРєС‚РѕРІ
         'For i = 0 To sobytObj.Methods.Length - 1
         ' If arr.IndexOf(sobytObj.MethodsUp(i)) = -1 Then arr.Add(sobytObj.MethodsUp(i))
         ' Next
         Return arr
     End Function
-    ' ПРОВЕРЯЕТ, ЯВЛЯЕТСЯ ЛИ prop НАЗВАНИЕМ СВОЙСТВА
+    ' РџР РћР’Р•Р РЇР•Рў, РЇР’Р›РЇР•РўРЎРЇ Р›Р prop РќРђР—Р’РђРќРР•Рњ РЎР’РћР™РЎРўР’Рђ
     Function isProperty(ByVal prop As String) As String
         If proj.f Is Nothing Then Return False
         Dim i, j, z As Integer
-        ' Увеличить регистр дабы не он не влиял на поиск
+        ' РЈРІРµР»РёС‡РёС‚СЊ СЂРµРіРёСЃС‚СЂ РґР°Р±С‹ РЅРµ РѕРЅ РЅРµ РІР»РёСЏР» РЅР° РїРѕРёСЃРє
         prop = Trim(UCase(prop))
         For i = 0 To proj.f.Length - 1
-            ' Пробежаться по всем свойствам формы
+            ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј СЃРІРѕР№СЃС‚РІР°Рј С„РѕСЂРјС‹
             'For z = 0 To proj.f(i).Propertys.Length - 1
-            '    ' Если найдено свойство у формы с таким же названиме
+            '    ' Р•СЃР»Рё РЅР°Р№РґРµРЅРѕ СЃРІРѕР№СЃС‚РІРѕ Сѓ С„РѕСЂРјС‹ СЃ С‚Р°РєРёРј Р¶Рµ РЅР°Р·РІР°РЅРёРјРµ
             '    If proj.f(i).PropertysUp(z) = prop Then Return proj.f(i).Propertys(z)
             'Next
             If proj.f(i).MyObjs Is Nothing Then Return False
-            ' Пробежаться по всем объектам формы
+            ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РѕР±СЉРµРєС‚Р°Рј С„РѕСЂРјС‹
             For j = 0 To proj.f(i).MyObjs.Length - 1
-                ' Пробежаться по всем свойствам объекта
+                ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј СЃРІРѕР№СЃС‚РІР°Рј РѕР±СЉРµРєС‚Р°
                 If proj.f(i).MyObjs(j).Propertys Is Nothing = False Then
                     For z = 0 To proj.f(i).MyObjs(j).Propertys.Length - 1
-                        ' Если найдено нужное свойство у объекта 
+                        ' Р•СЃР»Рё РЅР°Р№РґРµРЅРѕ РЅСѓР¶РЅРѕРµ СЃРІРѕР№СЃС‚РІРѕ Сѓ РѕР±СЉРµРєС‚Р° 
                         If proj.f(i).MyObjs(j).PropertysUp(z) = prop Then Return proj.f(i).MyObjs(j).Propertys(z)
                     Next
                 End If
             Next
         Next
         Dim sobytObj As Sobitiya = GetSobytObj(MyZnak & "All")
-        ' Пробежаться по всем полезным свойствам, обычных объектов
+        ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РїРѕР»РµР·РЅС‹Рј СЃРІРѕР№СЃС‚РІР°Рј, РѕР±С‹С‡РЅС‹С… РѕР±СЉРµРєС‚РѕРІ
         For i = 0 To sobytObj.Propertys.Length - 1
             If sobytObj.PropertysUp(i) = prop Then Return sobytObj.Propertys(i)
         Next
         Return ""
     End Function
-    ' ПРОВЕРЯЕТ, ЯВЛЯЕТСЯ ЛИ prop НАЗВАНИЕМ СВОЙСТВА ИЛИ МЕТОДА
+    ' РџР РћР’Р•Р РЇР•Рў, РЇР’Р›РЇР•РўРЎРЇ Р›Р prop РќРђР—Р’РђРќРР•Рњ РЎР’РћР™РЎРўР’Рђ РР›Р РњР•РўРћР”Рђ
     Function isPropertyMethod(ByVal prop As String) As String
         If proj.f Is Nothing Then Return False
         Dim i, j, z As Integer
-        ' Увеличить регистр дабы не он не влиял на поиск
+        ' РЈРІРµР»РёС‡РёС‚СЊ СЂРµРіРёСЃС‚СЂ РґР°Р±С‹ РЅРµ РѕРЅ РЅРµ РІР»РёСЏР» РЅР° РїРѕРёСЃРє
         prop = Trim(UCase(prop))
         For i = 0 To proj.f.Length - 1
             If proj.f(i).MyObjs Is Nothing Then Return False
-            ' Пробежаться по всем объектам формы
+            ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РѕР±СЉРµРєС‚Р°Рј С„РѕСЂРјС‹
             For j = 0 To proj.f(i).MyObjs.Length - 1
-                ' Пробежаться по всем свойствам объекта
+                ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј СЃРІРѕР№СЃС‚РІР°Рј РѕР±СЉРµРєС‚Р°
                 If proj.f(i).MyObjs(j).Propertys Is Nothing = False Then
                     For z = 0 To proj.f(i).MyObjs(j).Propertys.Length - 1
-                        ' Если найдено нужное свойство у объекта 
+                        ' Р•СЃР»Рё РЅР°Р№РґРµРЅРѕ РЅСѓР¶РЅРѕРµ СЃРІРѕР№СЃС‚РІРѕ Сѓ РѕР±СЉРµРєС‚Р° 
                         If proj.f(i).MyObjs(j).PropertysUp(z) = prop Then Return proj.f(i).MyObjs(j).Propertys(z)
                     Next
                 End If
-                ' Пробежаться по всем методам объекта
+                ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РјРµС‚РѕРґР°Рј РѕР±СЉРµРєС‚Р°
                 If proj.f(i).MyObjs(j).Methods Is Nothing = False Then
                     For z = 0 To proj.f(i).MyObjs(j).Methods.Length - 1
-                        ' Если найдено нужное свойство у объекта 
+                        ' Р•СЃР»Рё РЅР°Р№РґРµРЅРѕ РЅСѓР¶РЅРѕРµ СЃРІРѕР№СЃС‚РІРѕ Сѓ РѕР±СЉРµРєС‚Р° 
                         If proj.f(i).MyObjs(j).MethodsUp(z) = prop Then Return proj.f(i).MyObjs(j).Methods(z)
                     Next
                 End If
             Next
         Next
         Dim sobytObj As Sobitiya = GetSobytObj(MyZnak & "All")
-        ' Пробежаться по всем полезным свойствам, обычных объектов
+        ' РџСЂРѕР±РµР¶Р°С‚СЊСЃСЏ РїРѕ РІСЃРµРј РїРѕР»РµР·РЅС‹Рј СЃРІРѕР№СЃС‚РІР°Рј, РѕР±С‹С‡РЅС‹С… РѕР±СЉРµРєС‚РѕРІ
         For i = 0 To sobytObj.Propertys.Length - 1
             If sobytObj.PropertysUp(i) = prop Then Return sobytObj.Propertys(i)
         Next
         Return ""
     End Function
 
-    ' ПРОВЕРЯЕТ, ЯВЛЯЕТСЯ ЛИ prop ИМЕНЕМ ФУНКЦИИ
+    ' РџР РћР’Р•Р РЇР•Рў, РЇР’Р›РЇР•РўРЎРЇ Р›Р prop РРњР•РќР•Рњ Р¤РЈРќРљР¦РР
     Function isFunction(ByVal prop As String) As String
         Dim i As Integer
-        ' Увеличить регистр дабы не он не влиял на поиск
+        ' РЈРІРµР»РёС‡РёС‚СЊ СЂРµРіРёСЃС‚СЂ РґР°Р±С‹ РЅРµ РѕРЅ РЅРµ РІР»РёСЏР» РЅР° РїРѕРёСЃРє
         prop = Trim(UCase(prop))
         For i = 0 To AllFuncs.Length - 1
             If prop = UCase(AllFuncs(i)) Then Return AllFuncs(i)
@@ -1244,7 +1244,7 @@ Public Class Project
         Return ""
     End Function
 
-    ' РАЗУКРАШИВАЕТ ТЕКСТ, ЗАДАННЫЙ АРГУМЕНТАМИ
+    ' Р РђР—РЈРљР РђРЁРР’РђР•Рў РўР•РљРЎРў, Р—РђР”РђРќРќР«Р™ РђР Р“РЈРњР•РќРўРђРњР
     Function RichSelectColor(ByVal t As RichTextBox, ByVal start As Integer, ByVal len As Integer, ByVal col As Color, Optional ByVal oldT As RichTextBox = Nothing) As Integer
         t.SelectionStart = start : t.SelectionLength = len : t.SelectionColor = col
         If oldT Is Nothing = False Then
@@ -1254,11 +1254,11 @@ Public Class Project
         Return 1
     End Function
 
-    ' ПРОВЕРЯЕТ, ЯВЛЯЕТСЯ ЛИ text СТРОКОЙ, ИЛИ ЭТО КОД ПРОГРАММЫ С ОБЪЕКТАМИ И ФУНКЦИЯМИ
+    ' РџР РћР’Р•Р РЇР•Рў, РЇР’Р›РЇР•РўРЎРЇ Р›Р text РЎРўР РћРљРћР™, РР›Р Р­РўРћ РљРћР” РџР РћР“Р РђРњРњР« РЎ РћР‘РЄР•РљРўРђРњР Р Р¤РЈРќРљР¦РРЇРњР
     Public Function isString(ByVal text As String) As Boolean
         Dim richText As New RichTextBox
         richText.Text = text
-        ' Если подветка найдет объекты или функции, она их подсветит
+        ' Р•СЃР»Рё РїРѕРґРІРµС‚РєР° РЅР°Р№РґРµС‚ РѕР±СЉРµРєС‚С‹ РёР»Рё С„СѓРЅРєС†РёРё, РѕРЅР° РёС… РїРѕРґСЃРІРµС‚РёС‚
         Return Podsvetka(richText)
     End Function
 
@@ -1280,42 +1280,42 @@ Public Class Project
 
 #End Region
 
-    ' <<<<<<<< ПОЛУЧЕНИЕ ФОРМ И ОБЪЕКТОВ >>>>>>>>>
+    ' <<<<<<<< РџРћР›РЈР§Р•РќРР• Р¤РћР Рњ Р РћР‘РЄР•РљРўРћР’ >>>>>>>>>
 #Region "GETMYOBJ"
 
-    ' ПОЛУЧИТЬ ФОРМУ ЧЕРЕЗ ИМЯ
+    ' РџРћР›РЈР§РРўР¬ Р¤РћР РњРЈ Р§Р•Р Р•Р— РРњРЇ
     Function GetMyFormsFromName(ByVal name As Object, Optional ByVal index As String = "") As Object()
         Dim ind = 0, i As Integer, Massive() As Object = Nothing
         If proj.f Is Nothing Then Return Nothing
-        ' Есть ли форма с таким именем
+        ' Р•СЃС‚СЊ Р»Рё С„РѕСЂРјР° СЃ С‚Р°РєРёРј РёРјРµРЅРµРј
         For i = 0 To proj.f.Length - 1
             If proj.f(i) Is Nothing Then Continue For
-            ' Если у объекта нужное имя, и не является сам собой, т.е. другой индекс
+            ' Р•СЃР»Рё Сѓ РѕР±СЉРµРєС‚Р° РЅСѓР¶РЅРѕРµ РёРјСЏ, Рё РЅРµ СЏРІР»СЏРµС‚СЃСЏ СЃР°Рј СЃРѕР±РѕР№, С‚.Рµ. РґСЂСѓРіРѕР№ РёРЅРґРµРєСЃ
             If UCase(proj.f(i).obj.Props.name) = UCase(name) And proj.f(i).obj.Props.index.indexof(index) = 0 Then
                 ReDim Preserve Massive(ind) : Massive(ind) = proj.f(i) : ind += 1
             End If
         Next
-        If UCase(name) = UCase(MyZnak & trans("Окно события")) Then
+        If UCase(name) = UCase(MyZnak & trans("РћРєРЅРѕ СЃРѕР±С‹С‚РёСЏ")) Then
             ReDim Massive(0) : Massive(0) = New Forms(True)
-            Massive(0).obj.props.name = MyZnak & trans("Окно события")
+            Massive(0).obj.props.name = MyZnak & trans("РћРєРЅРѕ СЃРѕР±С‹С‚РёСЏ")
             Massive(0).MyObjs = proj.GetAllObjs.ToArray
         End If
         Return Massive
     End Function
 
-    ' ПОЛУЧИТЬ ВСЕ МОИОБЪЕКТЫ С ТАКИМ ИМЕНЕМ
+    ' РџРћР›РЈР§РРўР¬ Р’РЎР• РњРћРРћР‘РЄР•РљРўР« РЎ РўРђРљРРњ РРњР•РќР•Рњ
     Function GetMyAllFromName(ByVal name As Object, Optional ByVal index As String = "", Optional ByVal formName As String = "", Optional ByVal includeReadOnly As Boolean = True) As Object()
-        ' Вернуть объекты с таким именем
+        ' Р’РµСЂРЅСѓС‚СЊ РѕР±СЉРµРєС‚С‹ СЃ С‚Р°РєРёРј РёРјРµРЅРµРј
         Dim ind As Integer = 0, i, j As Integer
         Dim Massive() As Object = Nothing, Forms() As Object = Nothing
         If proj.f Is Nothing Then Return Nothing
-        ' Если форму задали, то искать в ней, иначе в форме с именем name
+        ' Р•СЃР»Рё С„РѕСЂРјСѓ Р·Р°РґР°Р»Рё, С‚Рѕ РёСЃРєР°С‚СЊ РІ РЅРµР№, РёРЅР°С‡Рµ РІ С„РѕСЂРјРµ СЃ РёРјРµРЅРµРј name
         If formName <> "" Then
             Forms = GetMyFormsFromName(formName)
         Else
             Forms = GetMyFormsFromName(name, index)
         End If
-        ' Если формы с именем name нет, то берется активная форма
+        ' Р•СЃР»Рё С„РѕСЂРјС‹ СЃ РёРјРµРЅРµРј name РЅРµС‚, С‚Рѕ Р±РµСЂРµС‚СЃСЏ Р°РєС‚РёРІРЅР°СЏ С„РѕСЂРјР°
         If Forms Is Nothing Then
             If ActiveForm Is Nothing Then Return Massive
             Forms = GetMyFormsFromName(ActiveForm.obj.Props.name)
@@ -1324,23 +1324,23 @@ Public Class Project
         For i = 0 To Forms.Length - 1
             If Forms(i).MyObjs Is Nothing Then Return Nothing
             For j = 0 To Forms(i).MyObjs.Length - 1
-                ' Если у объекта нужное имя, и не является сам собой
+                ' Р•СЃР»Рё Сѓ РѕР±СЉРµРєС‚Р° РЅСѓР¶РЅРѕРµ РёРјСЏ, Рё РЅРµ СЏРІР»СЏРµС‚СЃСЏ СЃР°Рј СЃРѕР±РѕР№
                 If (UCase(Forms(i).MyObjs(j).obj.Props.name) = UCase(name) Or name = "") And Forms(i).MyObjs(j).obj.Props.index.indexof(index) = 0 Then
                     ReDim Preserve Massive(ind) : Massive(ind) = Forms(i).MyObjs(j) : ind += 1
                 End If
             Next
         Next
         If name <> "" Then
-            If UCase(name) = UCase(MyZnak & trans("Объект события")) _
-                   Or UCase(name).IndexOf(UCase(MyZnak & trans("Хозяин") & " ")) = 0 Then
+            If UCase(name) = UCase(MyZnak & trans("РћР±СЉРµРєС‚ СЃРѕР±С‹С‚РёСЏ")) _
+                   Or UCase(name).IndexOf(UCase(MyZnak & trans("РҐРѕР·СЏРёРЅ") & " ")) = 0 Then
                 ReDim Massive(0) : Massive(0) = New Button(True)
-                Massive(0).obj.props.name = MyZnak & trans("Объект события")
+                Massive(0).obj.props.name = MyZnak & trans("РћР±СЉРµРєС‚ СЃРѕР±С‹С‚РёСЏ")
                 Massive(0).Propertys = proj.GetAllPropNames(True, includeReadOnly).ToArray("".GetType)
                 Massive(0).Methods = proj.GetAllMethNames(True).ToArray("".GetType)
                 CreatePropertySobytsUp(Massive(0))
-            ElseIf UCase(name) = UCase(MyZnak & trans("Окно события")) Then
+            ElseIf UCase(name) = UCase(MyZnak & trans("РћРєРЅРѕ СЃРѕР±С‹С‚РёСЏ")) Then
                 ReDim Massive(0) : Massive(0) = New Forms(True)
-                Massive(0).obj.props.name = MyZnak & trans("Окно события")
+                Massive(0).obj.props.name = MyZnak & trans("РћРєРЅРѕ СЃРѕР±С‹С‚РёСЏ")
                 If includeReadOnly Then
                     Dim mass() As String = New Sobitiya(MyZnak & "All").Propertys
                     If mass Is Nothing = False Then
@@ -1358,18 +1358,18 @@ Public Class Project
 
  
 
-    ' ВОЗВРАЩАЕТ ВСЕ ОБЪЕКТЫ КОТОРЫЕ ЕСТЬ ВНУТРИ MyObj
+    ' Р’РћР—Р’Р РђР©РђР•Рў Р’РЎР• РћР‘РЄР•РљРўР« РљРћРўРћР Р«Р• Р•РЎРўР¬ Р’РќРЈРўР Р MyObj
     Function GetDo4ernieMyObjs(ByVal ParamArray MyObj() As Object) As Object()
         Dim i, j As Integer, MyObjs(), ContObjs() As Object
         If MyObj Is Nothing Then Return Nothing
-        ' Записать все объекты которые есть внутри MyObj в один массив MyObjs
+        ' Р—Р°РїРёСЃР°С‚СЊ РІСЃРµ РѕР±СЉРµРєС‚С‹ РєРѕС‚РѕСЂС‹Рµ РµСЃС‚СЊ РІРЅСѓС‚СЂРё MyObj РІ РѕРґРёРЅ РјР°СЃСЃРёРІ MyObjs
         For i = 0 To MyObj.Length - 1
-            ' Определение всех объектов которые надо копировать
+            ' РћРїСЂРµРґРµР»РµРЅРёРµ РІСЃРµС… РѕР±СЉРµРєС‚РѕРІ РєРѕС‚РѕСЂС‹Рµ РЅР°РґРѕ РєРѕРїРёСЂРѕРІР°С‚СЊ
             If Iz.isPanel(MyObj(i).obj) Then
-                ' Если один из элементов контенер, то придется копировать и все внутреннии элементы
+                ' Р•СЃР»Рё РѕРґРёРЅ РёР· СЌР»РµРјРµРЅС‚РѕРІ РєРѕРЅС‚РµРЅРµСЂ, С‚Рѕ РїСЂРёРґРµС‚СЃСЏ РєРѕРїРёСЂРѕРІР°С‚СЊ Рё РІСЃРµ РІРЅСѓС‚СЂРµРЅРЅРёРё СЌР»РµРјРµРЅС‚С‹
                 ContObjs = proj.GetMyObjsFromConteiner(MyObj(i))
             ElseIf Iz.isSostObj(MyObj(i).obj) Then
-                ' Если вставляют составной объект, то не надо в УндоРедо все инклуд объекты пихать. Они запихаются попозже сами.
+                ' Р•СЃР»Рё РІСЃС‚Р°РІР»СЏСЋС‚ СЃРѕСЃС‚Р°РІРЅРѕР№ РѕР±СЉРµРєС‚, С‚Рѕ РЅРµ РЅР°РґРѕ РІ РЈРЅРґРѕР РµРґРѕ РІСЃРµ РёРЅРєР»СѓРґ РѕР±СЉРµРєС‚С‹ РїРёС…Р°С‚СЊ. РћРЅРё Р·Р°РїРёС…Р°СЋС‚СЃСЏ РїРѕРїРѕР·Р¶Рµ СЃР°РјРё.
                 If MyObj(i).VstavkaOrCreate = True Then
                     ReDim ContObjs(0) : ContObjs(0) = MyObj(i)
                 Else
@@ -1378,7 +1378,7 @@ Public Class Project
             Else
                 ReDim ContObjs(0) : ContObjs(0) = MyObj(i)
             End If
-            ' Записывание все объекты для копирования в один массив MyObjs
+            ' Р—Р°РїРёСЃС‹РІР°РЅРёРµ РІСЃРµ РѕР±СЉРµРєС‚С‹ РґР»СЏ РєРѕРїРёСЂРѕРІР°РЅРёСЏ РІ РѕРґРёРЅ РјР°СЃСЃРёРІ MyObjs
             ReDims(MyObjs, ContObjs.Length - 1, ContObjs.Length - 1)
             For j = 0 To ContObjs.Length - 1
                 If Array.IndexOf(MyObjs, ContObjs(j)) = -1 Then
@@ -1391,18 +1391,18 @@ Public Class Project
         Return MyObjs
     End Function
 
-    ' ПОЛУЧИТЬ МОЙОБЪЕКТ ЗНАЯ ТОЛЬКО КОНТРОЛ, Т.Е. obj
+    ' РџРћР›РЈР§РРўР¬ РњРћР™РћР‘РЄР•РљРў Р—РќРђРЇ РўРћР›Р¬РљРћ РљРћРќРўР РћР›, Рў.Р•. obj
     Function GetMyObjFromObj(ByVal obj As Object) As Object
         Dim i, j As Integer
-        'If obj.MyObj Is Nothing = False Then Return obj.MyObj ' Слишком рано доступен
+        'If obj.MyObj Is Nothing = False Then Return obj.MyObj ' РЎР»РёС€РєРѕРј СЂР°РЅРѕ РґРѕСЃС‚СѓРїРµРЅ
         If f Is Nothing Then Return Nothing
-        ' Просматриваем все формы
+        ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІСЃРµ С„РѕСЂРјС‹
         For i = 0 To f.Length - 1
             If f(i) Is Nothing = False Then
-                ' Есть ли форма с таким объектом
+                ' Р•СЃС‚СЊ Р»Рё С„РѕСЂРјР° СЃ С‚Р°РєРёРј РѕР±СЉРµРєС‚РѕРј
                 If f(i).obj Is obj Then Return f(i)
                 If f(i).MyObjs Is Nothing = False Then
-                    ' Есть ли в форме мойобъект с таким объектом
+                    ' Р•СЃС‚СЊ Р»Рё РІ С„РѕСЂРјРµ РјРѕР№РѕР±СЉРµРєС‚ СЃ С‚Р°РєРёРј РѕР±СЉРµРєС‚РѕРј
                     For j = 0 To f(i).MyObjs.Length - 1
                         If obj Is f(i).MyObjs(j).obj Then Return f(i).MyObjs(j)
                     Next
@@ -1415,23 +1415,23 @@ Public Class Project
         Dim MyObjs(0) As Object, i, j As Integer ', level(0) As Integer
         MyObjs(0) = cont ': level(0) = 0
         If f Is Nothing Then Return MyObjs
-        ' Просматриваем во всех формах все объекты
+        ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІРѕ РІСЃРµС… С„РѕСЂРјР°С… РІСЃРµ РѕР±СЉРµРєС‚С‹
         For i = 0 To f.Length - 1
             If f(i) Is Nothing = False Then
                 If f(i).MyObjs Is Nothing = False Then
                     For j = 0 To f(i).MyObjs.Length - 1
-                        ' если форма, то с ней должны быть и все полуобъекты
+                        ' РµСЃР»Рё С„РѕСЂРјР°, С‚Рѕ СЃ РЅРµР№ РґРѕР»Р¶РЅС‹ Р±С‹С‚СЊ Рё РІСЃРµ РїРѕР»СѓРѕР±СЉРµРєС‚С‹
                         If Iz.IsFORM(cont) Then
                             If Iz.isPoluObj(f(i).MyObjs(j).obj) And f(i) Is cont Then
                                 ReDim Preserve MyObjs(MyObjs.Length)
                                 MyObjs(MyObjs.Length - 1) = f(i).MyObjs(j)
                             End If
                         End If
-                        ' Является ли cont контенером данного объекта пусть хоть в 10 поколении(level)
+                        ' РЇРІР»СЏРµС‚СЃСЏ Р»Рё cont РєРѕРЅС‚РµРЅРµСЂРѕРј РґР°РЅРЅРѕРіРѕ РѕР±СЉРµРєС‚Р° РїСѓСЃС‚СЊ С…РѕС‚СЊ РІ 10 РїРѕРєРѕР»РµРЅРёРё(level)
                         Dim tempCont As Object = f(i).MyObjs(j).conteiner
                         ' Dim tempLevel As Integer = 1
                         While tempCont Is Nothing = False
-                            ' Если да , то добавить его в массив объектов этого контенера
+                            ' Р•СЃР»Рё РґР° , С‚Рѕ РґРѕР±Р°РІРёС‚СЊ РµРіРѕ РІ РјР°СЃСЃРёРІ РѕР±СЉРµРєС‚РѕРІ СЌС‚РѕРіРѕ РєРѕРЅС‚РµРЅРµСЂР°
                             If tempCont Is cont Then
                                 ReDim Preserve MyObjs(MyObjs.Length)
                                 ' ReDim Preserve level(level.Length)
@@ -1439,7 +1439,7 @@ Public Class Project
                                 ' level(level.Length - 1) = tempLevel
                                 Exit While
                             End If
-                            ' Если это полуобъект, то он располагается на сплит панели не имеющей контенера и являющейся конечной точкой вложенности
+                            ' Р•СЃР»Рё СЌС‚Рѕ РїРѕР»СѓРѕР±СЉРµРєС‚, С‚Рѕ РѕРЅ СЂР°СЃРїРѕР»Р°РіР°РµС‚СЃСЏ РЅР° СЃРїР»РёС‚ РїР°РЅРµР»Рё РЅРµ РёРјРµСЋС‰РµР№ РєРѕРЅС‚РµРЅРµСЂР° Рё СЏРІР»СЏСЋС‰РµР№СЃСЏ РєРѕРЅРµС‡РЅРѕР№ С‚РѕС‡РєРѕР№ РІР»РѕР¶РµРЅРЅРѕСЃС‚Рё
                             If tempCont.GetType.ToString = "System.Windows.Forms.SplitterPanel" Then tempCont = Nothing : Continue While
                             tempCont = tempCont.conteiner ': tempLevel += 1
                         End While
@@ -1447,7 +1447,7 @@ Public Class Project
                 End If
             End If
         Next
-        ' Отсортировать по уровню вложенности в контенер (level)
+        ' РћС‚СЃРѕСЂС‚РёСЂРѕРІР°С‚СЊ РїРѕ СѓСЂРѕРІРЅСЋ РІР»РѕР¶РµРЅРЅРѕСЃС‚Рё РІ РєРѕРЅС‚РµРЅРµСЂ (level)
         'If withSortLevel Then
         ' Dim fl As Boolean = True, temp As Object
         ' While fl = True
@@ -1469,18 +1469,18 @@ Public Class Project
         While fl = True
             fl = False
             For i = 0 To MyObjs.Length - 2
-                ' Занести в objs все элементы МуОбъвс , распологающиеся ниже индекса i
+                ' Р—Р°РЅРµСЃС‚Рё РІ objs РІСЃРµ СЌР»РµРјРµРЅС‚С‹ РњСѓРћР±СЉРІСЃ , СЂР°СЃРїРѕР»РѕРіР°СЋС‰РёРµСЃСЏ РЅРёР¶Рµ РёРЅРґРµРєСЃР° i
                 Dim objs(MyObjs.Length - 1) As Object
                 Array.Copy(MyObjs, i + 1, objs, 0, MyObjs.Length - (i + 1))
                 cont = MyObjs(i).conteiner
                 If MyObjs(i).obj.TypeObj = "PoluObj" Then Continue For
-                ' Просматривать все контенеры данного объета до самого последнего
+                ' РџСЂРѕСЃРјР°С‚СЂРёРІР°С‚СЊ РІСЃРµ РєРѕРЅС‚РµРЅРµСЂС‹ РґР°РЅРЅРѕРіРѕ РѕР±СЉРµС‚Р° РґРѕ СЃР°РјРѕРіРѕ РїРѕСЃР»РµРґРЅРµРіРѕ
                 While cont Is Nothing = False
-                    ' Если найден в МайОбъс объект, являющийся контенером вышестоящего МайОбъс, то переместить найденый объект в конец
+                    ' Р•СЃР»Рё РЅР°Р№РґРµРЅ РІ РњР°Р№РћР±СЉСЃ РѕР±СЉРµРєС‚, СЏРІР»СЏСЋС‰РёР№СЃСЏ РєРѕРЅС‚РµРЅРµСЂРѕРј РІС‹С€РµСЃС‚РѕСЏС‰РµРіРѕ РњР°Р№РћР±СЉСЃ, С‚Рѕ РїРµСЂРµРјРµСЃС‚РёС‚СЊ РЅР°Р№РґРµРЅС‹Р№ РѕР±СЉРµРєС‚ РІ РєРѕРЅРµС†
                     If Array.IndexOf(objs, cont) <> -1 Then
                         Dim k = 0, l As Integer = 0
                         Dim temp(MyObjs.Length - 1) As Object
-                        ' Алгоритм перемещения i-го элемента массива в конец этого массива (пользоваться ReDims запрещенно, это удаляет нафиг объекты)
+                        ' РђР»РіРѕСЂРёС‚Рј РїРµСЂРµРјРµС‰РµРЅРёСЏ i-РіРѕ СЌР»РµРјРµРЅС‚Р° РјР°СЃСЃРёРІР° РІ РєРѕРЅРµС† СЌС‚РѕРіРѕ РјР°СЃСЃРёРІР° (РїРѕР»СЊР·РѕРІР°С‚СЊСЃСЏ ReDims Р·Р°РїСЂРµС‰РµРЅРЅРѕ, СЌС‚Рѕ СѓРґР°Р»СЏРµС‚ РЅР°С„РёРі РѕР±СЉРµРєС‚С‹)
                         For k = 0 To MyObjs.Length - 1
                             If l <> i Then l += 1 Else l += 2
                             If l > MyObjs.Length Then l = i + 1
@@ -1544,7 +1544,7 @@ Public Class Project
 
     Function GetMyAllTypes() As String()
         Dim ret As New ArrayList, i, j As Integer
-        ' Просматриваем во всех формах все объекты
+        ' РџСЂРѕСЃРјР°С‚СЂРёРІР°РµРј РІРѕ РІСЃРµС… С„РѕСЂРјР°С… РІСЃРµ РѕР±СЉРµРєС‚С‹
         For i = 0 To f.Length - 1
             If f(i) Is Nothing = False AndAlso f(i).MyObjs Is Nothing = False Then
                 For j = 0 To f(i).MyObjs.Length - 1
@@ -1557,112 +1557,112 @@ Public Class Project
     End Function
 #End Region
 
-    ' <<<<<<<< ОПЕРАЦИИ С СОБЫТИЯМИ >>>>>>>>>
+    ' <<<<<<<< РћРџР•Р РђР¦РР РЎ РЎРћР‘Р«РўРРЇРњР >>>>>>>>>
 #Region "SOBYTS"
 
-    ' ПОЛУЧЕНИЕ СОБЫТИЙ СРАЗУ У МНОЖЕСТВА ОБЪЕКТОВ
+    ' РџРћР›РЈР§Р•РќРР• РЎРћР‘Р«РўРР™ РЎР РђР—РЈ РЈ РњРќРћР–Р•РЎРўР’Рђ РћР‘РЄР•РљРўРћР’
     Function GetSobyts(ByVal ParamArray MyObjs() As Object) As String()
         Dim sobyts() As String = Nothing, i, j, ind As Integer
         If MyObjs Is Nothing Then Return Nothing
         If MyObjs(0) Is Nothing Then Return Nothing
-        ' Занести в sobyts все названия событий переданных
+        ' Р—Р°РЅРµСЃС‚Рё РІ sobyts РІСЃРµ РЅР°Р·РІР°РЅРёСЏ СЃРѕР±С‹С‚РёР№ РїРµСЂРµРґР°РЅРЅС‹С…
         For i = 0 To MyObjs.Length - 1
-            ' Просмотреть все события каждого объекта
+            ' РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ СЃРѕР±С‹С‚РёСЏ РєР°Р¶РґРѕРіРѕ РѕР±СЉРµРєС‚Р°
             For j = 0 To MyObjs(i).Sobyts.Length - 1
-                ' Если просматривается не первый объект
+                ' Р•СЃР»Рё РїСЂРѕСЃРјР°С‚СЂРёРІР°РµС‚СЃСЏ РЅРµ РїРµСЂРІС‹Р№ РѕР±СЉРµРєС‚
                 If sobyts Is Nothing = False Then
-                    ' Если событие уже есть в списке событий, то перейти к следующему событию
+                    ' Р•СЃР»Рё СЃРѕР±С‹С‚РёРµ СѓР¶Рµ РµСЃС‚СЊ РІ СЃРїРёСЃРєРµ СЃРѕР±С‹С‚РёР№, С‚Рѕ РїРµСЂРµР№С‚Рё Рє СЃР»РµРґСѓСЋС‰РµРјСѓ СЃРѕР±С‹С‚РёСЋ
                     If Array.IndexOf(sobyts, MyObjs(i).Sobyts(j)) <> -1 Then Continue For
                 End If
-                ' Если уже есть ветка с таким событием
+                ' Р•СЃР»Рё СѓР¶Рµ РµСЃС‚СЊ РІРµС‚РєР° СЃ С‚Р°РєРёРј СЃРѕР±С‹С‚РёРµРј
                 If MyObjs(i) Is Nothing Then Continue For
                 If MyObjs(i).getNode(, True) Is Nothing Then Continue For
                 If proj.FindSobyt(MyObjs(i).Sobyts(j), MyObjs(i).getNode(, True)) Is Nothing = False Then Continue For
-                ' Если это первый объект, который просматривается
+                ' Р•СЃР»Рё СЌС‚Рѕ РїРµСЂРІС‹Р№ РѕР±СЉРµРєС‚, РєРѕС‚РѕСЂС‹Р№ РїСЂРѕСЃРјР°С‚СЂРёРІР°РµС‚СЃСЏ
                 If sobyts Is Nothing Then ind = 0 Else ind = sobyts.Length
-                ' Занести событие в массив
+                ' Р—Р°РЅРµСЃС‚Рё СЃРѕР±С‹С‚РёРµ РІ РјР°СЃСЃРёРІ
                 ReDim Preserve sobyts(ind) : sobyts(ind) = MyObjs(i).Sobyts(j)
             Next
         Next
         Return sobyts
     End Function
 
-    ' СОЗДАНИЕ СОБЫТИЯ
+    ' РЎРћР—Р”РђРќРР• РЎРћР‘Р«РўРРЇ
     Sub SetSobyts(ByVal sobyt As String, ByVal ParamArray MyObjs() As Object)
         Dim i As Integer, selNode, node, SobytNode As TreeNode, fl As Boolean
         If MyObjs Is Nothing Or sobyt = "" Then Exit Sub
-        ' Создать событие в каждом объекте
+        ' РЎРѕР·РґР°С‚СЊ СЃРѕР±С‹С‚РёРµ РІ РєР°Р¶РґРѕРј РѕР±СЉРµРєС‚Рµ
         For i = 0 To MyObjs.Length - 1
-            ' Если у объекта существует возможность такого события
+            ' Р•СЃР»Рё Сѓ РѕР±СЉРµРєС‚Р° СЃСѓС‰РµСЃС‚РІСѓРµС‚ РІРѕР·РјРѕР¶РЅРѕСЃС‚СЊ С‚Р°РєРѕРіРѕ СЃРѕР±С‹С‚РёСЏ
             If Array.IndexOf(MyObjs(i).SobytsUp, UCase(sobyt)) <> -1 Then
-                ' Получить ветку объекта
+                ' РџРѕР»СѓС‡РёС‚СЊ РІРµС‚РєСѓ РѕР±СЉРµРєС‚Р°
                 node = MyObjs(i).GetNode(, True)
                 If node Is Nothing Then Exit Sub
-                ' Получить ветку с именем события, из ветки объекта
+                ' РџРѕР»СѓС‡РёС‚СЊ РІРµС‚РєСѓ СЃ РёРјРµРЅРµРј СЃРѕР±С‹С‚РёСЏ, РёР· РІРµС‚РєРё РѕР±СЉРµРєС‚Р°
                 SobytNode = FindSobyt(sobyt, node)
-                ' Если у объекта нет такого события, то добавить его
+                ' Р•СЃР»Рё Сѓ РѕР±СЉРµРєС‚Р° РЅРµС‚ С‚Р°РєРѕРіРѕ СЃРѕР±С‹С‚РёСЏ, С‚Рѕ РґРѕР±Р°РІРёС‚СЊ РµРіРѕ
                 If SobytNode Is Nothing Then
                     node.Nodes.Add(GetUIN(), sobyt, trans(sobyt, True), trans(sobyt, True))
                     node.Nodes(node.Nodes.Count - 1).Tag = "Sobyt"
                     node.Expand()
                     selNode = node.LastNode
-                    ' создание ундоредо
+                    ' СЃРѕР·РґР°РЅРёРµ СѓРЅРґРѕСЂРµРґРѕ
                     UndoRedoTree(fl, True, node.LastNode) : fl = True
                 End If
             End If
         Next
-        ' Перевести фокус на ветку созданного действия
+        ' РџРµСЂРµРІРµСЃС‚Рё С„РѕРєСѓСЃ РЅР° РІРµС‚РєСѓ СЃРѕР·РґР°РЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
         If selNode Is Nothing = False Then
             Tree.SelectedNode = selNode : tab.SelectedTab = tab.TabPages("deistviya")
         End If
-        ' сделать чтобы список свойств-события для разукраски обновился
+        ' СЃРґРµР»Р°С‚СЊ С‡С‚РѕР±С‹ СЃРїРёСЃРѕРє СЃРІРѕР№СЃС‚РІ-СЃРѕР±С‹С‚РёСЏ РґР»СЏ СЂР°Р·СѓРєСЂР°СЃРєРё РѕР±РЅРѕРІРёР»СЃСЏ
         old_sobytAll = Nothing
     End Sub
 
-    ' СОЗДАНИЕ ДЕЙСТВИЯ
+    ' РЎРћР—Р”РђРќРР• Р”Р•Р™РЎРўР’РРЇ
     Sub SetDeistvs(ByVal deist As String)
         Dim ind As Integer ', selNode, node, SobytNode As TreeNode
         Dim ParentAddNode As TreeNode = Nothing
         If deist = "" Then Exit Sub
         GetParentAddNode(ind, ParentAddNode)
         If ParentAddNode Is Nothing Then Exit Sub
-        ' Удаление пустых вспомогательных действий
+        ' РЈРґР°Р»РµРЅРёРµ РїСѓСЃС‚С‹С… РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… РґРµР№СЃС‚РІРёР№
         RemoveEmpty(ind)
         ParentAddNode.Nodes.Insert(ind, GetUIN(), deist, "deist", "deist")
         ParentAddNode.Nodes(ind).Tag = "Deist"
-        ' создание ундоредо
+        ' СЃРѕР·РґР°РЅРёРµ СѓРЅРґРѕСЂРµРґРѕ
         UndoRedoTree(False, True, ParentAddNode.Nodes(ind))
-        ' Перевести фокус на ветку созданного действия
+        ' РџРµСЂРµРІРµСЃС‚Рё С„РѕРєСѓСЃ РЅР° РІРµС‚РєСѓ СЃРѕР·РґР°РЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
         ParentAddNode.Expand()
         MainForm.SelNode = ParentAddNode.Nodes(ind) : Tree.SelectedNode = MainForm.SelNode
     End Sub
 
-    ' СОЗДАНИЕ ЦИКЛ
+    ' РЎРћР—Р”РђРќРР• Р¦РРљР›
     Sub SetCycles(ByVal cycl As String)
         Dim ind As Integer ', selNode, node, SobytNode As TreeNode
         Dim ParentAddNode As TreeNode = Nothing
         If cycl = "" Then Exit Sub
         GetParentAddNode(ind, ParentAddNode)
         If ParentAddNode Is Nothing Then Exit Sub
-        ' Удаление пустых вспомогательных действий
+        ' РЈРґР°Р»РµРЅРёРµ РїСѓСЃС‚С‹С… РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… РґРµР№СЃС‚РІРёР№
         RemoveEmpty(ind)
         ParentAddNode.Nodes.Insert(ind, GetUIN(), cycl, "while", "while")
         ParentAddNode.Nodes(ind).Tag = "While"
-        ParentAddNode.Nodes.Insert(ind + 1, GetUIN(), trans("Конец цикла"), "endwhile", "endwhile")
+        ParentAddNode.Nodes.Insert(ind + 1, GetUIN(), trans("РљРѕРЅРµС† С†РёРєР»Р°"), "endwhile", "endwhile")
         ParentAddNode.Nodes(ind + 1).Tag = "EndWhile"
-        ParentAddNode.Nodes(ind).Nodes.Add(GetUIN(), trans("Добавьте сюда действия"), "Nothing", "Nothing")
+        ParentAddNode.Nodes(ind).Nodes.Add(GetUIN(), trans("Р”РѕР±Р°РІСЊС‚Рµ СЃСЋРґР° РґРµР№СЃС‚РІРёСЏ"), "Nothing", "Nothing")
         ParentAddNode.Nodes(ind).Nodes(0).Tag = "EmptyCycle"
-        ' создание ундоредо
+        ' СЃРѕР·РґР°РЅРёРµ СѓРЅРґРѕСЂРµРґРѕ
         UndoRedoTree(False, True, ParentAddNode.Nodes(ind), ParentAddNode.Nodes(ind).Nodes(0), ParentAddNode.Nodes(ind + 1))
-        ' Удаление пустых вспомогательных действий
+        ' РЈРґР°Р»РµРЅРёРµ РїСѓСЃС‚С‹С… РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… РґРµР№СЃС‚РІРёР№
         RemoveEmpty(ind)
-        ' Перевести фокус на ветку созданного действия
+        ' РџРµСЂРµРІРµСЃС‚Рё С„РѕРєСѓСЃ РЅР° РІРµС‚РєСѓ СЃРѕР·РґР°РЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
         ParentAddNode.Expand()
         Tree.SelectedNode = ParentAddNode.Nodes(ind).Nodes(0)
         tab.SelectedTab = tab.TabPages("deistviya")
     End Sub
 
-    ' СОЗДАНИЕ УСЛОВИЕ
+    ' РЎРћР—Р”РђРќРР• РЈРЎР›РћР’РР•
     Sub SetIfs(ByVal ifs As String, ByVal type As String)
         Dim ind As Integer ', selNode, node, SobytNode As TreeNode
         Dim ParentAddNode As TreeNode = Nothing
@@ -1670,15 +1670,15 @@ Public Class Project
         If type = "Usually" Then
             GetParentAddNode(ind, ParentAddNode)
             If ParentAddNode Is Nothing Then Exit Sub
-            ' Удаление пустых вспомогательных действий
+            ' РЈРґР°Р»РµРЅРёРµ РїСѓСЃС‚С‹С… РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… РґРµР№СЃС‚РІРёР№
             RemoveEmpty(ind)
             ParentAddNode.Nodes.Insert(ind, GetUIN(), ifs, "if", "if")
             ParentAddNode.Nodes(ind).Tag = "If"
-            ' Определить нужно ли еще добавлять ендиф или он уже есть в дереве
+            ' РћРїСЂРµРґРµР»РёС‚СЊ РЅСѓР¶РЅРѕ Р»Рё РµС‰Рµ РґРѕР±Р°РІР»СЏС‚СЊ РµРЅРґРёС„ РёР»Рё РѕРЅ СѓР¶Рµ РµСЃС‚СЊ РІ РґРµСЂРµРІРµ
             Dim nn As TreeNode = ParentAddNode.Nodes(ind).NextNode, tag As String = ""
             If nn Is Nothing = False Then tag = nn.Tag
             If tag <> "Else" And tag <> "ElseIf" And tag <> "EndIf" Then
-                ParentAddNode.Nodes.Insert(ind + 1, GetUIN(), trans("Конец условия"), "endif", "endif")
+                ParentAddNode.Nodes.Insert(ind + 1, GetUIN(), trans("РљРѕРЅРµС† СѓСЃР»РѕРІРёСЏ"), "endif", "endif")
                 ParentAddNode.Nodes(ind + 1).Tag = "EndIf"
                 UndoRedoTree(False, True, ParentAddNode.Nodes(ind), ParentAddNode.Nodes(ind + 1))
             Else
@@ -1690,20 +1690,20 @@ Public Class Project
             ind = ParentAddNode.Index + 1
             ParentAddNode = ParentAddNode.Parent
             If ParentAddNode.Nodes.Count <= ind Then
-                ParentAddNode.Nodes.Insert(ParentAddNode.Nodes.Count, GetUIN(), trans("Конец условия"), "endif", "endif")
+                ParentAddNode.Nodes.Insert(ParentAddNode.Nodes.Count, GetUIN(), trans("РљРѕРЅРµС† СѓСЃР»РѕРІРёСЏ"), "endif", "endif")
                 ParentAddNode.Nodes(ParentAddNode.Nodes.Count - 1).Tag = "EndIf"
                 UndoRedoTree(False, True, ParentAddNode.Nodes(ParentAddNode.Nodes.Count - 2), ParentAddNode.Nodes(ParentAddNode.Nodes.Count - 1))
                 Exit Sub
             End If
             If type = "podIf" Then
-                ' Если хотят разместить елсеиф после елсе
+                ' Р•СЃР»Рё С…РѕС‚СЏС‚ СЂР°Р·РјРµСЃС‚РёС‚СЊ РµР»СЃРµРёС„ РїРѕСЃР»Рµ РµР»СЃРµ
                 If ParentAddNode.Nodes(ind).Tag = "EndIf" And ParentAddNode.Nodes(ind - 1).Tag = "Else" Then ind -= 1
                 ParentAddNode.Nodes.Insert(ind, GetUIN(), ifs, "elseif", "elseif")
                 ParentAddNode.Nodes(ind).Tag = "ElseIf"
             ElseIf type = "Else" Then
-                ' если элсе нет в даном условии
+                ' РµСЃР»Рё СЌР»СЃРµ РЅРµС‚ РІ РґР°РЅРѕРј СѓСЃР»РѕРІРёРё
                 If GetElseOrElseIf(ParentAddNode.Nodes(ind)) Is Nothing Then
-                    ' Размещать элсе в конце условия
+                    ' Р Р°Р·РјРµС‰Р°С‚СЊ СЌР»СЃРµ РІ РєРѕРЅС†Рµ СѓСЃР»РѕРІРёСЏ
                     While ParentAddNode.Nodes(ind).Tag <> "EndIf"
                         ind += 1
                         If ind > ParentAddNode.Nodes.Count - 1 Then Exit Sub
@@ -1717,20 +1717,20 @@ Public Class Project
             UndoRedoTree(False, True, ParentAddNode.Nodes(ind))
         End If
 
-        ParentAddNode.Nodes(ind).Nodes.Add(GetUIN(), trans("Добавьте сюда действия"), "Nothing", "Nothing")
+        ParentAddNode.Nodes(ind).Nodes.Add(GetUIN(), trans("Р”РѕР±Р°РІСЊС‚Рµ СЃСЋРґР° РґРµР№СЃС‚РІРёСЏ"), "Nothing", "Nothing")
         ParentAddNode.Nodes(ind).Nodes(0).Tag = "EmptyIf"
         UndoRedoTree(True, True, ParentAddNode.Nodes(ind).Nodes(0))
-        ' Удаление пустых вспомогательных действий
+        ' РЈРґР°Р»РµРЅРёРµ РїСѓСЃС‚С‹С… РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… РґРµР№СЃС‚РІРёР№
         If type = "Usually" Then RemoveEmpty(ind, "do")
 
-        ' Перевести фокус на ветку созданного действия
+        ' РџРµСЂРµРІРµСЃС‚Рё С„РѕРєСѓСЃ РЅР° РІРµС‚РєСѓ СЃРѕР·РґР°РЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
         ParentAddNode.Expand()
         On Error Resume Next
         MainForm.SelNode = ParentAddNode.Nodes(ind).Nodes(0) : Tree.SelectedNode = MainForm.SelNode
         tab.SelectedTab = tab.TabPages("deistviya")
     End Sub
 
-    ' СОЗДАНИЕ КОММЕНТАРИЯ
+    ' РЎРћР—Р”РђРќРР• РљРћРњРњР•РќРўРђР РРЇ
     Sub SetComm(ByVal comm As String, Optional ByVal fromEdit As Boolean = False)
         If Tree.SelectedNode Is Nothing Then Exit Sub
         'Dim bylNext As Boolean = False
@@ -1744,20 +1744,20 @@ Public Class Project
         If ParentAddNode Is Nothing Then ParentAddNode = Tree
         If ind > 0 And Tree.SelectedNode.Nodes.Count > 0 Then ind -= 1
         ' If ind = ParentAddNode.nodes.count - 1 And Tree.SelectedNode.Tag <> "Sobyt" Then ind += 1
-        ' Удаление пустых вспомогательных действий
+        ' РЈРґР°Р»РµРЅРёРµ РїСѓСЃС‚С‹С… РІСЃРїРѕРјРѕРіР°С‚РµР»СЊРЅС‹С… РґРµР№СЃС‚РІРёР№
         RemoveEmpty(ind)
         ParentAddNode.Nodes.Insert(ind, GetUIN(), comm, "comm", "comm")
         ParentAddNode.Nodes(ind).Tag = "Comm"
-        ' создание ундоредо
+        ' СЃРѕР·РґР°РЅРёРµ СѓРЅРґРѕСЂРµРґРѕ
         UndoRedoTree(False, True, ParentAddNode.Nodes(ind))
-        ' Перевести фокус на ветку созданного действия
+        ' РџРµСЂРµРІРµСЃС‚Рё С„РѕРєСѓСЃ РЅР° РІРµС‚РєСѓ СЃРѕР·РґР°РЅРЅРѕРіРѕ РґРµР№СЃС‚РІРёСЏ
         If ParentAddNode Is Tree = False Then ParentAddNode.Expand()
         MainForm.SelNode = ParentAddNode.Nodes(ind) : Tree.SelectedNode = MainForm.SelNode
         '        If bylNext Then
         '            MainForm.SelNode = Tree.SelectedNode.PrevNode : Tree.SelectedNode = Tree.SelectedNode.PrevNode
         '        End If
     End Sub
-    ' ПОЛУЧИТЬ УЗЕЛ ДЕРЕВА (В КОТОРЫЙ НАДО ДОБАВЛЯТЬ НОВЫЕ ДЕЙСТВИЯ ИЛИ УСЛОВИЯ) И ИНДЕКС В ЭТОМ УЗЛЕ 
+    ' РџРћР›РЈР§РРўР¬ РЈР—Р•Р› Р”Р•Р Р•Р’Рђ (Р’ РљРћРўРћР Р«Р™ РќРђР”Рћ Р”РћР‘РђР’Р›РЇРўР¬ РќРћР’Р«Р• Р”Р•Р™РЎРўР’РРЇ РР›Р РЈРЎР›РћР’РРЇ) Р РРќР”Р•РљРЎ Р’ Р­РўРћРњ РЈР—Р›Р• 
     Sub GetParentAddNode(ByRef ind As Integer, ByRef AddToNode As TreeNode)
         If Tree.SelectedNode Is Nothing Then Exit Sub
         If Tree.SelectedNode.Level < 2 Then
@@ -1769,29 +1769,29 @@ Public Class Project
             ind = Tree.SelectedNode.Index + 1 : AddToNode = Tree.SelectedNode.Parent
         End If
     End Sub
-    ' УДАЛЕНИЕ ПУСТЫХ ВСПОМОГАТЕЛЬНЫХ ДЕЙСТВИЙ
+    ' РЈР”РђР›Р•РќРР• РџРЈРЎРўР«РҐ Р’РЎРџРћРњРћР“РђРўР•Р›Р¬РќР«РҐ Р”Р•Р™РЎРўР’РР™
     Sub RemoveEmpty(ByRef ind As Integer, Optional ByVal union As String = "")
         Dim i As Integer
         For i = 0 To Tree.SelectedNode.Nodes.Count - 1
             If Tree.SelectedNode.Nodes(i).Tag = "EmptyIf" Or Tree.SelectedNode.Nodes(i).Tag = "EmptyCycle" Then
-                ' создание ундоредо
+                ' СЃРѕР·РґР°РЅРёРµ СѓРЅРґРѕСЂРµРґРѕ
                 If union = "do" Then UndoRedo("#Union Undos(Redos)", "", "", "")
                 If union <> "" Then UndoRedoTree(False, False, Tree.SelectedNode.Nodes(i))
                 If union = "posle" Then UndoRedo("#Union Undos(Redos)", "", "", "")
-                ' собственно удаление
+                ' СЃРѕР±СЃС‚РІРµРЅРЅРѕ СѓРґР°Р»РµРЅРёРµ
                 Tree.SelectedNode.Nodes(i).Remove() : ind = 0
             End If
         Next
         If Tree.SelectedNode.Tag = "EmptyIf" Or Tree.SelectedNode.Tag = "EmptyCycle" Then
-            ' создание ундоредо
+            ' СЃРѕР·РґР°РЅРёРµ СѓРЅРґРѕСЂРµРґРѕ
             If union = "do" Then UndoRedo("#Union Undos(Redos)", "", "", "")
             If union <> "" Then UndoRedoTree(False, False, Tree.SelectedNode)
             If union = "posle" Then UndoRedo("#Union Undos(Redos)", "", "", "")
-            ' собственно удаление
+            ' СЃРѕР±СЃС‚РІРµРЅРЅРѕ СѓРґР°Р»РµРЅРёРµ
             Tree.SelectedNode.Remove() : ind = 0
         End If
     End Sub
-    ' СУЩЕСТВУЕТ ЛИ В ДАННОМ УСЛОВИИ РАЗДЕЛ "ВО ВСЕХ ОСТАЛЬНЫХ СЛУЧАЯХ" ИЛИ "ИЛИ ЕСЛИ"
+    ' РЎРЈР©Р•РЎРўР’РЈР•Рў Р›Р Р’ Р”РђРќРќРћРњ РЈРЎР›РћР’РР Р РђР—Р”Р•Р› "Р’Рћ Р’РЎР•РҐ РћРЎРўРђР›Р¬РќР«РҐ РЎР›РЈР§РђРЇРҐ" РР›Р "РР›Р Р•РЎР›Р"
     Function GetElseOrElseIf(ByVal node As TreeNode, Optional ByVal ChtoIshem As String = "Else") As TreeNode
         If node Is Nothing Then Return Nothing
         While node Is Nothing = False
@@ -1807,7 +1807,7 @@ Public Class Project
     End Function
 
 
-    ' ПОЛУЧИТЬ ВЕТКУ ПО ИМЕНИ (а события по тексту) И КОРНЕВОЙ ВЕТКИ, ГОВОРЯЩЕЙ ОТКУДА НАЧИНАТЬ ОТСЧЕТ
+    ' РџРћР›РЈР§РРўР¬ Р’Р•РўРљРЈ РџРћ РРњР•РќР (Р° СЃРѕР±С‹С‚РёСЏ РїРѕ С‚РµРєСЃС‚Сѓ) Р РљРћР РќР•Р’РћР™ Р’Р•РўРљР, Р“РћР’РћР РЇР©Р•Р™ РћРўРљРЈР”Рђ РќРђР§РРќРђРўР¬ РћРўРЎР§Р•Рў
     Function GetNode(ByVal chto As TreeNode, Optional ByVal root As TreeNode = Nothing, Optional ByVal level As Integer = -1, _
     Optional ByVal IskatPoTextu As Boolean = False) As TreeNode
         Dim i As Integer, node As TreeNode = Nothing
@@ -1818,15 +1818,15 @@ Public Class Project
             If root.Text = chto.Text Then Return root
         End If
         If root.Nodes.Count > 0 Then
-            ' Просмотреть все подветки
+            ' РџСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РїРѕРґРІРµС‚РєРё
             For i = 0 To root.Nodes.Count - 1
-                ' Рекурсивно просмотреть все подветки данной подветки
+                ' Р РµРєСѓСЂСЃРёРІРЅРѕ РїСЂРѕСЃРјРѕС‚СЂРµС‚СЊ РІСЃРµ РїРѕРґРІРµС‚РєРё РґР°РЅРЅРѕР№ РїРѕРґРІРµС‚РєРё
                 node = Nothing : node = GetNode(chto, root.Nodes(i), level, IskatPoTextu)
-                ' Если найдена ветка с нужным именем
+                ' Р•СЃР»Рё РЅР°Р№РґРµРЅР° РІРµС‚РєР° СЃ РЅСѓР¶РЅС‹Рј РёРјРµРЅРµРј
                 If node Is Nothing = False Then Return node
             Next
         End If
-        ' Если подветок с нужным именем не найдено, но до начального корневого уровеня еще не вернулись
+        ' Р•СЃР»Рё РїРѕРґРІРµС‚РѕРє СЃ РЅСѓР¶РЅС‹Рј РёРјРµРЅРµРј РЅРµ РЅР°Р№РґРµРЅРѕ, РЅРѕ РґРѕ РЅР°С‡Р°Р»СЊРЅРѕРіРѕ РєРѕСЂРЅРµРІРѕРіРѕ СѓСЂРѕРІРµРЅСЏ РµС‰Рµ РЅРµ РІРµСЂРЅСѓР»РёСЃСЊ
         If level >= root.Level Then Return Nothing
     End Function
     Function FindSobyt(ByVal sobyt As String, ByVal root As TreeNode) As TreeNode
@@ -1837,16 +1837,16 @@ Public Class Project
         Next
         Return Nothing
     End Function
-    ' ПОЛУЧИТЬ ВЕТКУ ПО ИМЕНИ
+    ' РџРћР›РЈР§РРўР¬ Р’Р•РўРљРЈ РџРћ РРњР•РќР
     Function GetNodeFromName(ByVal name As String, Optional ByVal root As Object = Nothing, Optional ByVal isObj As Boolean = False) As Object
         Dim i As Integer, ret As TreeNode
         If root Is Nothing Then root = Tree
         If name = "" Then Return root
-        ' Если передали полный путь узлу
+        ' Р•СЃР»Рё РїРµСЂРµРґР°Р»Рё РїРѕР»РЅС‹Р№ РїСѓС‚СЊ СѓР·Р»Сѓ
         If name.Split("\").Length = 2 Then
             root = Tree.Nodes(name.Split("\")(0))
             If root Is Nothing Then Return Nothing
-            ' Если в пути ветки есть индекс нужного узла
+            ' Р•СЃР»Рё РІ РїСѓС‚Рё РІРµС‚РєРё РµСЃС‚СЊ РёРЅРґРµРєСЃ РЅСѓР¶РЅРѕРіРѕ СѓР·Р»Р°
             If name.Split("\")(1).IndexOf("(") <> -1 Then
                 Dim ind As Integer = name.Substring(name.IndexOf("(") + 1, name.Length - name.IndexOf("(") - 2)
                 name = Left(name, name.IndexOf("("))
@@ -1873,9 +1873,9 @@ Public Class Project
         Return MainForm.PasteTree(kuda, CopyNodes, sVoprosom, fromMove)
     End Function
     Public old_sobytAll As Sobitiya = Nothing
-    ' ПОЛУЧИТЬ ОБЪЕКТ СОБЫТИЯ СО ВСЕМИ СВОЙСТВАМИ
+    ' РџРћР›РЈР§РРўР¬ РћР‘РЄР•РљРў РЎРћР‘Р«РўРРЇ РЎРћ Р’РЎР•РњР РЎР’РћР™РЎРўР’РђРњР
     Function GetSobytObj(Optional ByVal sobyt As String = Nothing) As Object
-        ' Если событие не задано, то попробывать определить его автоматически из дерева
+        ' Р•СЃР»Рё СЃРѕР±С‹С‚РёРµ РЅРµ Р·Р°РґР°РЅРѕ, С‚Рѕ РїРѕРїСЂРѕР±С‹РІР°С‚СЊ РѕРїСЂРµРґРµР»РёС‚СЊ РµРіРѕ Р°РІС‚РѕРјР°С‚РёС‡РµСЃРєРё РёР· РґРµСЂРµРІР°
         If sobyt = Nothing Then
             If GetSobytNameFromTreeNode() = Nothing Then Return Nothing
             sobyt = GetSobytNameFromTreeNode()
@@ -1887,12 +1887,12 @@ Public Class Project
         Return New Sobitiya(sobyt)
     End Function
 
-    ' ПОЛУЧИТЬ МОЙОБЪЕКТ ПО СВОЙСТВУ
+    ' РџРћР›РЈР§РРўР¬ РњРћР™РћР‘РЄР•РљРў РџРћ РЎР’РћР™РЎРўР’РЈ
     Function GetSobytObjObject() As Object()
         Return GetMyObjsFromTreeNode(Tree.SelectedNode)
     End Function
 
-    ' ПОЛУЧИТЬ ИМЯ СОБЫТИЯ, КОТОРОЕ ВЫДЕЛЕНО В ДЕРЕВЕ
+    ' РџРћР›РЈР§РРўР¬ РРњРЇ РЎРћР‘Р«РўРРЇ, РљРћРўРћР РћР• Р’Р«Р”Р•Р›Р•РќРћ Р’ Р”Р•Р Р•Р’Р•
     Function GetSobytNameFromTreeNode(Optional ByVal node As TreeNode = Nothing) As String
         If node Is Nothing Then node = Tree.SelectedNode
         If node Is Nothing Then Return ""
@@ -1901,7 +1901,7 @@ Public Class Project
         Return node.Text
     End Function
 
-    ' ПОЛУЧИТЬ ИМЯ УСЛОВИЯ, КОТОРОЕ ВЫДЕЛЕНО В ДЕРЕВЕ
+    ' РџРћР›РЈР§РРўР¬ РРњРЇ РЈРЎР›РћР’РРЇ, РљРћРўРћР РћР• Р’Р«Р”Р•Р›Р•РќРћ Р’ Р”Р•Р Р•Р’Р•
     Function GetIfNameFromTreeNode(Optional ByVal withKonec As Boolean = True, Optional ByVal node As TreeNode = Nothing) As TreeNode
         If node Is Nothing Then node = Tree.SelectedNode
         If node Is Nothing Then Return Nothing
@@ -1915,13 +1915,13 @@ Public Class Project
         End If
     End Function
 
-    ' СОЗДАТЬ ТАБЫ КОНСТРУКТОРА ДЕЙСТВИЙ
+    ' РЎРћР—Р”РђРўР¬ РўРђР‘Р« РљРћРќРЎРўР РЈРљРўРћР Рђ Р”Р•Р™РЎРўР’РР™
     Sub DeistvRefresh(ByVal ParamArray MyObjs() As Object)
         Dim i, ind As Integer, names As String = ""
         SobytMyObjs = MyObjs : MainForm.ComboBox1.Items.Clear()
-        tab.TabPages.Remove(CommTab) ' Удалить комментарий
+        tab.TabPages.Remove(CommTab) ' РЈРґР°Р»РёС‚СЊ РєРѕРјРјРµРЅС‚Р°СЂРёР№
 
-        ' События
+        ' РЎРѕР±С‹С‚РёСЏ
         Dim s() As String = GetSobyts(SobytMyObjs)
         If s Is Nothing = False Then
             MainForm.ComboBox1.Items.AddRange(s)
@@ -1929,8 +1929,8 @@ Public Class Project
                 MainForm.ComboBox1.SelectedIndex = MainForm.ComboBox1.Items.IndexOf(SobytMyObjs(0).obj.lastSobyt)
             Else
                 MainForm.ComboBox1.SelectedIndex = 0
-                If MainForm.ComboBox1.Items.IndexOf(trans("Клик")) <> -1 Then
-                    MainForm.ComboBox1.SelectedIndex = MainForm.ComboBox1.Items.IndexOf(trans("Клик"))
+                If MainForm.ComboBox1.Items.IndexOf(trans("РљР»РёРє")) <> -1 Then
+                    MainForm.ComboBox1.SelectedIndex = MainForm.ComboBox1.Items.IndexOf(trans("РљР»РёРє"))
                 End If
             End If
 
@@ -1940,7 +1940,7 @@ Public Class Project
                     names &= ", " & SobytMyObjs(i).obj.Props.name
                 End If
             Next
-            MainForm.Label1.Text = trans("Создать событие для") & " " & names.Substring(2)
+            MainForm.Label1.Text = trans("РЎРѕР·РґР°С‚СЊ СЃРѕР±С‹С‚РёРµ РґР»СЏ") & " " & names.Substring(2)
             ind = SobytsTab.Tag
             If tab.TabPages.Count < ind Then ind = tab.TabPages.Count
             If tab.TabPages(SobytsTab.Name) Is Nothing Then tab.TabPages.Insert(ind, SobytsTab) : tab.SelectedTab = SobytsTab
@@ -1963,34 +1963,34 @@ Public Class Project
             ' GetMyObjsFromTreeNode()(0).parent.remove()
             ' MainForm.TabControl2_SelectedIndexChanged(tab, New EventArgs)
             'End If
-            ' Действия
+            ' Р”РµР№СЃС‚РІРёСЏ
             ind = DeistTab.Tag
             If tab.TabPages.Count < ind Then ind = tab.TabPages.Count
             If tab.TabPages(DeistTab.Name) Is Nothing Then tab.TabPages.Insert(ind, DeistTab) : tab.SelectedTab = DeistTab
-            MainForm.DeistLabel.Text = trans("Создать действие, для события") & " " & _
-                GetSobytNameFromTreeNode() & " " & trans("объекта") & " " & GetMyObjsFromTreeNode()(0).obj.Props.name
+            MainForm.DeistLabel.Text = trans("РЎРѕР·РґР°С‚СЊ РґРµР№СЃС‚РІРёРµ, РґР»СЏ СЃРѕР±С‹С‚РёСЏ") & " " & _
+                GetSobytNameFromTreeNode() & " " & trans("РѕР±СЉРµРєС‚Р°") & " " & GetMyObjsFromTreeNode()(0).obj.Props.name
             CreateDs.SetProperty()
-            ' Условия
+            ' РЈСЃР»РѕРІРёСЏ
             ind = ifTab.Tag
             If tab.TabPages.Count < ind Then ind = tab.TabPages.Count
             If tab.TabPages(ifTab.Name) Is Nothing Then tab.TabPages.Insert(ind, ifTab)
-            MainForm.IfLabel.Text = trans("Создать условие, для события") & " " & _
-                GetSobytNameFromTreeNode() & " " & trans("объекта") & " " & GetMyObjsFromTreeNode()(0).obj.Props.name
+            MainForm.IfLabel.Text = trans("РЎРѕР·РґР°С‚СЊ СѓСЃР»РѕРІРёРµ, РґР»СЏ СЃРѕР±С‹С‚РёСЏ") & " " & _
+                GetSobytNameFromTreeNode() & " " & trans("РѕР±СЉРµРєС‚Р°") & " " & GetMyObjsFromTreeNode()(0).obj.Props.name
             CreateIfs.Shown()
-            ' Циклы
+            ' Р¦РёРєР»С‹
             ind = CycleTab.Tag
             If tab.TabPages.Count < ind Then ind = tab.TabPages.Count
             If tab.TabPages(CycleTab.Name) Is Nothing Then tab.TabPages.Insert(ind, CycleTab)
-            MainForm.CycleLabel.Text = trans("Создать цикл, для события") & " " & _
-                GetSobytNameFromTreeNode() & " " & trans("объекта") & " " & GetMyObjsFromTreeNode()(0).obj.Props.name
+            MainForm.CycleLabel.Text = trans("РЎРѕР·РґР°С‚СЊ С†РёРєР», РґР»СЏ СЃРѕР±С‹С‚РёСЏ") & " " & _
+                GetSobytNameFromTreeNode() & " " & trans("РѕР±СЉРµРєС‚Р°") & " " & GetMyObjsFromTreeNode()(0).obj.Props.name
         End If
 
-        ' Комментарии
+        ' РљРѕРјРјРµРЅС‚Р°СЂРёРё
         ind = CommTab.Tag
         If tab.TabPages.Count < ind Then ind = tab.TabPages.Count
         If tab.TabPages(CommTab.Name) Is Nothing Then tab.TabPages.Insert(ind, CommTab)
 
-        ' Сделать кнопки енаблнд фолсе
+        ' РЎРґРµР»Р°С‚СЊ РєРЅРѕРїРєРё РµРЅР°Р±Р»РЅРґ С„РѕР»СЃРµ
         MainForm.TabControl2_SelectedIndexChanged(tab, New EventArgs)
     End Sub
 #End Region
