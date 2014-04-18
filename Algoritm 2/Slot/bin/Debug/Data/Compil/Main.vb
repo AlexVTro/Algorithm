@@ -2,8 +2,8 @@
     Public Sub main()
         ' ЧТЕНИЕ ВЛОЖЕННЫХ ДАННЫХ ИЗ ЕХЕ ФАЙЛА
         Dim fname As String = System.Environment.GetCommandLineArgs()(0)
-        Dim code_bytes(), start_bytes(5) As Byte
-        Dim code_chars(), start_chars(5) As Char
+        Dim code_bytes(), start_bytes(15) As Byte
+        Dim code_chars(), start_chars(15) As Char
         Dim code, start As String
         Dim fs As System.IO.FileStream
         Try
@@ -12,7 +12,7 @@
             Errors.FileNoAccess(ex.Message) : Exit Sub
         End Try
         ' Определение позиции, с которой идет код пользователя
-        fs.Position = fs.Length - 6
+        fs.Position = fs.Length - 15
         fs.Read(start_bytes, 0, start_bytes.Length)
         start_chars = System.Text.Encoding.UTF8.GetChars(start_bytes)
         start = String.Concat(start_chars)

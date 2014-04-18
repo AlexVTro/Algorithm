@@ -1292,7 +1292,7 @@
         ' Выполняем найденное событие
         Try
             es = proj.RunBlock(eventNode, 0, New PropertysSobyt(sender, e, type), True)
-            If es.err <> "" Then Errors.MessangeCritic(es.err)
+            If es.err <> "" And es.err <> "BreakEvent" Then Errors.MessangeCritic(es.err)
         Catch ex As Exception
             If IgnorEr = False Then
                 Dim deist As String

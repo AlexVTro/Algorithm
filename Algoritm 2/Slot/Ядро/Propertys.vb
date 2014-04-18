@@ -1265,7 +1265,7 @@ Public Class PropertysOther
                     Next
                     Return str
                 End If
-                If Clipboard.ContainsText Then Return Clipboard.GetText
+                If Clipboard.ContainsText Then Return Clipboard.GetText(TextDataFormat.UnicodeText)
                 Return ""
             Catch ex As Exception
                 If IgnorEr = False Then MsgBox(ex.Message)
@@ -1273,7 +1273,7 @@ Public Class PropertysOther
         End Get
         Set(ByVal value As String)
             Try
-                Clipboard.SetText(value)
+                Clipboard.SetText(value, TextDataFormat.UnicodeText)
             Catch ex As Exception
                 If IgnorEr = False Then MsgBox(ex.Message)
             End Try
@@ -5405,10 +5405,9 @@ Public Class Propertys
         cn.Close()
         If openOleSql() = False Then Exit Sub
         Dim i, j As Integer, tmp As Object, constr As String
-        cmd = New Data.OleDb.OleDbCommand("DELETE FROM " & tablName, cn)
-        i = cmd.ExecuteNonQuery
+
         For i = 0 To obj.RowCount - 2
-            constr = "Insert into " & tablName & " values("
+            constr = "Insert into [" & tablName & "] values("
             For j = 0 To obj.ColumnCount - 1
                 tmp = obj.Rows(i).Cells(j).Value
                 If tmp Is Nothing Or tmp Is DBNull.Value Then

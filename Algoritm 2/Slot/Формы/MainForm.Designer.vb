@@ -14,7 +14,7 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", ""}, -1)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", ""}, -1)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ExitMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -346,7 +346,7 @@ Partial Class MainForm
         Me.MenuStrip1.Location = New System.Drawing.Point(3, 0)
         Me.MenuStrip1.Name = "MenuStrip1"
         Me.MenuStrip1.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.MenuStrip1.Size = New System.Drawing.Size(433, 24)
+        Me.MenuStrip1.Size = New System.Drawing.Size(341, 24)
         Me.MenuStrip1.Stretch = False
         Me.MenuStrip1.TabIndex = 1
         Me.MenuStrip1.Text = "MenuStrip1"
@@ -837,9 +837,9 @@ Partial Class MainForm
         '
         Me.SplitApply.Panel2.Controls.Add(Me.Apply)
         Me.SplitApply.Panel2.Controls.Add(Me.forEditNodeText)
-        Me.SplitApply.Panel2MinSize = 30
+        Me.SplitApply.Panel2MinSize = 40
         Me.SplitApply.Size = New System.Drawing.Size(439, 265)
-        Me.SplitApply.SplitterDistance = 233
+        Me.SplitApply.SplitterDistance = 223
         Me.SplitApply.SplitterWidth = 2
         Me.SplitApply.TabIndex = 2
         '
@@ -873,7 +873,7 @@ Partial Class MainForm
         Me.SplitTreeView.Panel2.Controls.Add(Me.TreeView)
         Me.SplitTreeView.Panel2.Controls.Add(Me.FindLabel)
         Me.SplitTreeView.Panel2MinSize = 30
-        Me.SplitTreeView.Size = New System.Drawing.Size(439, 233)
+        Me.SplitTreeView.Size = New System.Drawing.Size(439, 223)
         Me.SplitTreeView.SplitterDistance = 26
         Me.SplitTreeView.SplitterWidth = 2
         Me.SplitTreeView.TabIndex = 1
@@ -884,7 +884,7 @@ Partial Class MainForm
         Me.NodeBreakpoint.BackColor = System.Drawing.Color.Transparent
         Me.NodeBreakpoint.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NodeBreakpoint.ImageList = Nothing
-        Me.NodeBreakpoint.Location = New System.Drawing.Point(2, 108)
+        Me.NodeBreakpoint.Location = New System.Drawing.Point(2, 103)
         Me.NodeBreakpoint.Name = "NodeBreakpoint"
         Me.NodeBreakpoint.Size = New System.Drawing.Size(22, 22)
         Me.NodeBreakpoint.TabIndex = 18
@@ -896,7 +896,7 @@ Partial Class MainForm
         Me.NodeEdit.BackColor = System.Drawing.Color.Transparent
         Me.NodeEdit.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NodeEdit.ImageList = Nothing
-        Me.NodeEdit.Location = New System.Drawing.Point(2, 52)
+        Me.NodeEdit.Location = New System.Drawing.Point(2, 47)
         Me.NodeEdit.Name = "NodeEdit"
         Me.NodeEdit.Size = New System.Drawing.Size(22, 22)
         Me.NodeEdit.TabIndex = 17
@@ -908,7 +908,7 @@ Partial Class MainForm
         Me.NodeDel.BackColor = System.Drawing.Color.Transparent
         Me.NodeDel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NodeDel.ImageList = Nothing
-        Me.NodeDel.Location = New System.Drawing.Point(2, 80)
+        Me.NodeDel.Location = New System.Drawing.Point(2, 75)
         Me.NodeDel.Name = "NodeDel"
         Me.NodeDel.Size = New System.Drawing.Size(22, 22)
         Me.NodeDel.TabIndex = 14
@@ -920,7 +920,7 @@ Partial Class MainForm
         Me.NodeDown.BackColor = System.Drawing.Color.Transparent
         Me.NodeDown.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NodeDown.ImageList = Nothing
-        Me.NodeDown.Location = New System.Drawing.Point(2, 164)
+        Me.NodeDown.Location = New System.Drawing.Point(2, 159)
         Me.NodeDown.Name = "NodeDown"
         Me.NodeDown.Size = New System.Drawing.Size(22, 22)
         Me.NodeDown.TabIndex = 16
@@ -932,7 +932,7 @@ Partial Class MainForm
         Me.NodeUp.BackColor = System.Drawing.Color.Transparent
         Me.NodeUp.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.NodeUp.ImageList = Nothing
-        Me.NodeUp.Location = New System.Drawing.Point(2, 136)
+        Me.NodeUp.Location = New System.Drawing.Point(2, 131)
         Me.NodeUp.Name = "NodeUp"
         Me.NodeUp.Size = New System.Drawing.Size(22, 22)
         Me.NodeUp.TabIndex = 15
@@ -1009,7 +1009,7 @@ Partial Class MainForm
         Me.TreeView.Location = New System.Drawing.Point(0, 29)
         Me.TreeView.Name = "TreeView"
         Me.TreeView.ShowNodeToolTips = True
-        Me.TreeView.Size = New System.Drawing.Size(407, 201)
+        Me.TreeView.Size = New System.Drawing.Size(407, 191)
         Me.TreeView.TabIndex = 0
         '
         'TreeMenu
@@ -1223,7 +1223,7 @@ Partial Class MainForm
         '
         Me.Apply.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Apply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Apply.Location = New System.Drawing.Point(362, 2)
+        Me.Apply.Location = New System.Drawing.Point(362, 10)
         Me.Apply.Name = "Apply"
         Me.Apply.Size = New System.Drawing.Size(72, 23)
         Me.Apply.TabIndex = 2
@@ -1237,9 +1237,9 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.forEditNodeText.BackColor = System.Drawing.Color.Transparent
         Me.forEditNodeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forEditNodeText.Location = New System.Drawing.Point(6, 5)
+        Me.forEditNodeText.Location = New System.Drawing.Point(6, 7)
         Me.forEditNodeText.Name = "forEditNodeText"
-        Me.forEditNodeText.Size = New System.Drawing.Size(355, 17)
+        Me.forEditNodeText.Size = New System.Drawing.Size(355, 25)
         Me.forEditNodeText.TabIndex = 5
         '
         'Output
@@ -1419,7 +1419,7 @@ Partial Class MainForm
         Me.ListView.FullRowSelect = True
         Me.ListView.GridLines = True
         Me.ListView.HideSelection = False
-        Me.ListView.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
+        Me.ListView.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem2})
         Me.ListView.LabelEdit = True
         Me.ListView.Location = New System.Drawing.Point(-2, 20)
         Me.ListView.Margin = New System.Windows.Forms.Padding(10)
@@ -1484,7 +1484,7 @@ Partial Class MainForm
         Me.TabControl2.Padding = New System.Drawing.Point(3, 3)
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.ShowToolTips = True
-        Me.TabControl2.Size = New System.Drawing.Size(246, 302)
+        Me.TabControl2.Size = New System.Drawing.Size(246, 304)
         Me.TabControl2.TabIndex = 0
         Me.TabControl2.Tag = "Environment/EventPart"
         '
@@ -1498,14 +1498,14 @@ Partial Class MainForm
         Me.sobyts.Margin = New System.Windows.Forms.Padding(0, 0, 3, 3)
         Me.sobyts.Name = "sobyts"
         Me.sobyts.Padding = New System.Windows.Forms.Padding(3)
-        Me.sobyts.Size = New System.Drawing.Size(238, 276)
+        Me.sobyts.Size = New System.Drawing.Size(238, 278)
         Me.sobyts.TabIndex = 0
         Me.sobyts.Text = "TabPage2"
         '
         'help1
         '
         Me.help1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.help1.Location = New System.Drawing.Point(168, 112)
+        Me.help1.Location = New System.Drawing.Point(168, 113)
         Me.help1.Name = "help1"
         Me.help1.Size = New System.Drawing.Size(16, 16)
         Me.help1.TabIndex = 2
@@ -1517,7 +1517,7 @@ Partial Class MainForm
         Me.ComboBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 131)
+        Me.ComboBox1.Location = New System.Drawing.Point(13, 132)
         Me.ComboBox1.MaxDropDownItems = 16
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(213, 21)
@@ -1529,7 +1529,7 @@ Partial Class MainForm
         Me.Label1.AutoEllipsis = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 113)
+        Me.Label1.Location = New System.Drawing.Point(0, 114)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 16)
         Me.Label1.TabIndex = 0
@@ -1545,7 +1545,7 @@ Partial Class MainForm
         Me.deistviya.Location = New System.Drawing.Point(4, 22)
         Me.deistviya.Name = "deistviya"
         Me.deistviya.Padding = New System.Windows.Forms.Padding(3)
-        Me.deistviya.Size = New System.Drawing.Size(238, 276)
+        Me.deistviya.Size = New System.Drawing.Size(238, 278)
         Me.deistviya.TabIndex = 1
         Me.deistviya.Text = "TabPage3"
         Me.deistviya.UseVisualStyleBackColor = True
@@ -1596,7 +1596,7 @@ Partial Class MainForm
         Me.ifs.Location = New System.Drawing.Point(4, 22)
         Me.ifs.Name = "ifs"
         Me.ifs.Padding = New System.Windows.Forms.Padding(3)
-        Me.ifs.Size = New System.Drawing.Size(238, 276)
+        Me.ifs.Size = New System.Drawing.Size(238, 278)
         Me.ifs.TabIndex = 2
         Me.ifs.Text = "TabPage4"
         Me.ifs.UseVisualStyleBackColor = True
@@ -1646,7 +1646,7 @@ Partial Class MainForm
         Me.cycles.Location = New System.Drawing.Point(4, 22)
         Me.cycles.Name = "cycles"
         Me.cycles.Padding = New System.Windows.Forms.Padding(3)
-        Me.cycles.Size = New System.Drawing.Size(238, 276)
+        Me.cycles.Size = New System.Drawing.Size(238, 278)
         Me.cycles.TabIndex = 3
         Me.cycles.Text = "TabPage5"
         Me.cycles.UseVisualStyleBackColor = True
@@ -1697,7 +1697,7 @@ Partial Class MainForm
         Me.comm.Location = New System.Drawing.Point(4, 22)
         Me.comm.Name = "comm"
         Me.comm.Padding = New System.Windows.Forms.Padding(3)
-        Me.comm.Size = New System.Drawing.Size(238, 276)
+        Me.comm.Size = New System.Drawing.Size(238, 278)
         Me.comm.TabIndex = 4
         Me.comm.Text = "TabPage1"
         Me.comm.UseVisualStyleBackColor = True
@@ -1740,7 +1740,7 @@ Partial Class MainForm
         '
         Me.Create1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Create1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Create1.Location = New System.Drawing.Point(3, 2)
+        Me.Create1.Location = New System.Drawing.Point(3, 1)
         Me.Create1.Name = "Create1"
         Me.Create1.Size = New System.Drawing.Size(75, 23)
         Me.Create1.TabIndex = 0
@@ -1750,7 +1750,7 @@ Partial Class MainForm
         'Cancel1
         '
         Me.Cancel1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Cancel1.Location = New System.Drawing.Point(160, 2)
+        Me.Cancel1.Location = New System.Drawing.Point(160, 1)
         Me.Cancel1.Name = "Cancel1"
         Me.Cancel1.Size = New System.Drawing.Size(75, 23)
         Me.Cancel1.TabIndex = 1

@@ -7,3 +7,12 @@ D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\best
 D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\bestCompil.InternetControl.resources
 D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\bestCompil.Progress.resources
 D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\bestCompil.vbproj.GenerateResource.Cache
+E:\Work\Alg\Algoritm 2\obj\Debug\bestCompil.exe
+E:\Work\Alg\Algoritm 2\obj\Debug\bestCompil.pdb
+E:\Work\Alg\Algoritm 2\bin\Debug\bestCompil.exe
+E:\Work\Alg\Algoritm 2\bin\Debug\bestCompil.pdb
+E:\Work\Alg\Algoritm 2\obj\Debug\bestCompil.vbprojResolveAssemblyReference.cache
+E:\Work\Alg\Algoritm 2\obj\Debug\bestCompil.ClientServerMy.resources
+E:\Work\Alg\Algoritm 2\obj\Debug\bestCompil.InternetControl.resources
+E:\Work\Alg\Algoritm 2\obj\Debug\bestCompil.Progress.resources
+E:\Work\Alg\Algoritm 2\obj\Debug\bestCompil.vbproj.GenerateResource.Cache

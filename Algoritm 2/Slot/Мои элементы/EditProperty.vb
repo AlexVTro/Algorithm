@@ -668,7 +668,7 @@
         If tagBox Is Nothing = False Then If tagBox.Focused Then Tbox = tagBox
         If Tbox Is Nothing Then Exit Sub
         Try
-            If Tbox.SelectedText <> "" Then System.Windows.Forms.Clipboard.SetText(Tbox.SelectedText)
+            If Tbox.SelectedText <> "" Then System.Windows.Forms.Clipboard.SetText(Tbox.SelectedText, TextDataFormat.UnicodeText)
         Catch ex As Exception
 
         End Try
@@ -681,7 +681,7 @@
         ' If Clipboard.GetData(DataFormats.Rtf) <> "" Then
         ' Tbox.SelectedRtf = Clipboard.GetData(DataFormats.Rtf)
         ' Else
-        Tbox.SelectedText = Clipboard.GetText(TextDataFormat.Text)
+        Tbox.SelectedText = Clipboard.GetText(TextDataFormat.UnicodeText)
         ' End If
         Timer1.Start() ' Перевод текста на др. текст поле
     End Sub

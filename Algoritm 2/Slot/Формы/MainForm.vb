@@ -2801,7 +2801,7 @@ Public Class MainForm
             ' копирование
             CopyObj = CopyObjFun(proj.ActiveForm.ActiveObj)
             Try
-                Clipboard.SetText(CopyObj)
+                Clipboard.SetText(CopyObj, TextDataFormat.UnicodeText)
             Catch ex As Exception
             End Try
         End If
@@ -2813,10 +2813,10 @@ Public Class MainForm
     End Sub
     Private Sub PasteMenu2_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PasteMenu2.Click
         ' Извлечение из буфера
-        If Iz.isMyObj(Clipboard.GetText) Then
-            CopyObj = Clipboard.GetText
+        If Iz.isMyObj(Clipboard.GetText(TextDataFormat.UnicodeText)) Then
+            CopyObj = Clipboard.GetText(TextDataFormat.UnicodeText)
         Else
-            CopyTree = Clipboard.GetText
+            CopyTree = Clipboard.GetText(TextDataFormat.UnicodeText)
         End If
         If CopyObj Is Nothing Or mozhnoObjEdit() = False Then Exit Sub
         ' Прогресс-Форма
@@ -2966,7 +2966,7 @@ Public Class MainForm
         Else
             CopyTree = GetCopyTree(nodes)
             Try
-                Clipboard.SetText(CopyTree)
+                Clipboard.SetText(CopyTree, TextDataFormat.UnicodeText)
             Catch ex As Exception
             End Try
         End If
@@ -2975,10 +2975,10 @@ Public Class MainForm
     Private Sub PasteMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles PasteMenu.Click
         If isEditTree Then Exit Sub
         ' Извлечение из буфера
-        If Iz.isMyObj(Clipboard.GetText) Then
-            CopyObj = Clipboard.GetText
+        If Iz.isMyObj(Clipboard.GetText(TextDataFormat.UnicodeText)) Then
+            CopyObj = Clipboard.GetText(TextDataFormat.UnicodeText)
         Else
-            CopyTree = Clipboard.GetText
+            CopyTree = Clipboard.GetText(TextDataFormat.UnicodeText)
         End If
         ' Если вставляют объекты, то отправить в процедуру ОбъМеню
         If SelNode Is Nothing And CopyObj <> "" Then GoTo pasteobj
@@ -4364,7 +4364,8 @@ noAccess:
                 ' Запись в указанный файл кода программы и первоначальный размер файла
                 Dim fo As System.IO.FileStream = System.IO.File.OpenRead(SaveFileDialog2.FileName)
                 Dim size As String = fo.Length : fo.Close()
-                System.IO.File.AppendAllText(SaveFileDialog2.FileName, lang_name & "~~~" & langStr & "~~~" & langEngStr & "~~~" & "КОНЕЦ" & size)
+                size = size.PadLeft(15, "0")
+                System.IO.File.AppendAllText(SaveFileDialog2.FileName, lang_name & "~~~" & langStr & "~~~" & langEngStr & "~~~" & "КОНЕЦ" & size, Encoding.UTF8)
                 '            Errors.MessangeExclamen(ex.Message & ". " & vbCrLf & vbCrLf & trans("Для исправления ошибки скопируйте в папку с файлом который только что запустили библиотеки Kennedy.ManagedHooks.dll и SystemHookCore.dll. Они находятся в корне папки с Алгоритмом 2."))
             Catch ex As Exception
                 Errors.FileNoAccess(ex.Message) : GoTo noAccess

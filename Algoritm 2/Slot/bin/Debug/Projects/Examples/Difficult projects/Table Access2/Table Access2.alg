@@ -1,5 +1,9 @@
 Language = English
 F
+Allow run copies
+Yes
+Associate with extensions
+
 Auto scroll minSize height
 0
 Auto scroll minSize width
@@ -8,14 +12,14 @@ Auto scroll position X
 0
 Auto scroll position Y
 0
+AutoRun
+No
 Back color
 235; 233; 237;
 Background image
 Nothing
 Background image layout
 Tile
-Cancel close
-No
 Context menu
 MenuTables
 Control box
@@ -24,6 +28,12 @@ Cursor
 Default
 Enabled
 Yes
+Forbid close
+No
+Forbid maximize
+No
+Forbid minimize
+No
 Fore color
 Black
 Form border style
@@ -59,7 +69,7 @@ Yes
 Show in tray
 No
 Start position
-Specified coordinates
+center screen
 Tab index
 0
 Tab stop
@@ -68,6 +78,8 @@ Tag
 
 Text
 Tables
+ToolTip
+
 TopMost
 No
 Transparentcy key
@@ -101,7 +113,7 @@ Obj
  Created
  Created
  Sobyt
-  Window1.Table1.Open Access("Data base.mdb", "Goods_names")
+  Window1.Table1.Open Access("Data base.accdb", "Goods_names")
   UbAGjPeIsQ
   deist
   deist
@@ -111,7 +123,7 @@ Obj
   deist
   deist
   Deist
-  Window1.Table2.Open Access("Data base.mdb", "Goods_exists")
+  Window1.Table2.Open Access("Data base.accdb", "Goods_exists")
   PNffcopGRK
   deist
   deist
@@ -203,6 +215,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -299,6 +313,8 @@ Text
 Goods names
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -368,10 +384,24 @@ Edit mode
 Default
 Enabled
 Yes
+Font bold
+No
+Font family
+Microsoft Sans Serif
+Font italic
+No
+Font size
+8
+Font strikeout
+No
+Font underline
+No
 Grid color
 SystemDark
 Height
 219
+Height of rows
+22,22,22
 Index
 0
 Maximum height
@@ -398,6 +428,8 @@ Scroll bars
 Both
 Selected columns
 0,1,2,3
+Selected items value
+"Row1","Row1","",""
 Selected rows
 0
 Selection mode
@@ -408,10 +440,14 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
 339
+Width of columns
+100,100,100,100
 X
 -3
 Y
@@ -493,6 +529,8 @@ Obj
 #End
 
 T
+Allow input
+All
 Anchor
 Left_bottom
 Back color
@@ -561,6 +599,8 @@ Text
 6
 Text position
 On left
+ToolTip
+
 Visible
 Yes
 Width
@@ -588,6 +628,8 @@ Obj
 #End
 
 T
+Allow input
+All
 Anchor
 Right_left_bottom
 Back color
@@ -645,7 +687,7 @@ Selected text
 Selection length
 0
 Selection start
-6
+1
 Tab index
 0
 Tab stop
@@ -656,6 +698,8 @@ Text
 Goods
 Text position
 On left
+ToolTip
+
 Visible
 Yes
 Width
@@ -683,6 +727,8 @@ Obj
 #End
 
 T
+Allow input
+All
 Anchor
 Right_bottom
 Back color
@@ -751,6 +797,8 @@ Text
 100
 Text position
 On left
+ToolTip
+
 Visible
 Yes
 Width
@@ -850,6 +898,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -955,6 +1005,8 @@ Text
 Id
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -1050,6 +1102,8 @@ Text
 Name
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -1145,6 +1199,8 @@ Text
 Cost
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -1240,6 +1296,8 @@ Text
 Date
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -1319,6 +1377,8 @@ Tag
 
 Text
 15 июн 2009
+ToolTip
+
 Visible
 Yes
 Width
@@ -1418,6 +1478,8 @@ Text align
 on left
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -1527,6 +1589,8 @@ Text align
 on left
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -1632,6 +1696,8 @@ Text
 Goods exists
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -1701,10 +1767,24 @@ Edit mode
 Default
 Enabled
 Yes
+Font bold
+No
+Font family
+Microsoft Sans Serif
+Font italic
+No
+Font size
+8
+Font strikeout
+No
+Font underline
+No
 Grid color
 SystemDark
 Height
 218
+Height of rows
+22,22,22
 Index
 0
 Maximum height
@@ -1731,6 +1811,8 @@ Scroll bars
 Both
 Selected columns
 0,1,2
+Selected items value
+"Row1","Row1","Row1"
 Selected rows
 0
 Selection mode
@@ -1741,10 +1823,14 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
 341
+Width of columns
+100,100,100
 X
 1
 Y
@@ -1826,6 +1912,8 @@ Obj
 #End
 
 T
+Allow input
+All
 Anchor
 Left_bottom
 Back color
@@ -1894,6 +1982,8 @@ Text
 1
 Text position
 On left
+ToolTip
+
 Visible
 Yes
 Width
@@ -1921,6 +2011,8 @@ Obj
 #End
 
 T
+Allow input
+All
 Anchor
 Right_left_bottom
 Back color
@@ -1978,7 +2070,7 @@ Selected text
 Selection length
 0
 Selection start
-9
+1
 Tab index
 0
 Tab stop
@@ -1989,6 +2081,8 @@ Text
 Market #15
 Text position
 On left
+ToolTip
+
 Visible
 Yes
 Width
@@ -2016,6 +2110,8 @@ Obj
 #End
 
 T
+Allow input
+All
 Anchor
 Right_bottom
 Back color
@@ -2084,6 +2180,8 @@ Text
 20
 Text position
 On left
+ToolTip
+
 Visible
 Yes
 Width
@@ -2183,6 +2281,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -2288,6 +2388,8 @@ Text
 Goods id
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -2383,6 +2485,8 @@ Text
 Market
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -2478,6 +2582,8 @@ Text
 Count
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -2577,6 +2683,8 @@ Text align
 on left
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -2691,6 +2799,8 @@ Text align
 on left
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -3280,6 +3390,8 @@ Text
 REPORTS:
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -3369,6 +3481,8 @@ Tag
 
 Text
 The goods, cost more than 100$
+ToolTip
+
 Visible
 Yes
 Width
@@ -3464,6 +3578,8 @@ Obj
 #End
 
 T
+Allow input
+All
 Anchor
 Right_left_bottom
 Back color
@@ -3521,7 +3637,7 @@ Selected text
 Selection length
 0
 Selection start
-38
+1
 Tab index
 0
 Tab stop
@@ -3532,6 +3648,8 @@ Text
 SELECT * FROM Goods_names WHERE Cost > 100
 Text position
 On left
+ToolTip
+
 Visible
 Yes
 Width
@@ -3622,6 +3740,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -3649,7 +3769,7 @@ Obj
  Click
  Click
  Sobyt
-  Window2.TableReport.SQL query select(Access, "Data base.mdb", Window1.TextQuery.Text)
+  Window2.TableReport.SQL query select(Access, "Data base.accdb", Window1.TextQuery.Text)
   ssXfMFuCwS
   deist
   deist
@@ -3667,6 +3787,10 @@ Obj
 #End
 
 F
+Allow run copies
+Yes
+Associate with extensions
+
 Auto scroll minSize height
 0
 Auto scroll minSize width
@@ -3675,14 +3799,14 @@ Auto scroll position X
 0
 Auto scroll position Y
 0
+AutoRun
+No
 Back color
 Sys
 Background image
 Nothing
 Background image layout
 Tile
-Cancel close
-No
 Context menu
 Nothing
 Control box
@@ -3691,6 +3815,12 @@ Cursor
 Default
 Enabled
 Yes
+Forbid close
+No
+Forbid maximize
+No
+Forbid minimize
+No
 Fore color
 Black
 Form border style
@@ -3726,7 +3856,7 @@ Yes
 Show in tray
 No
 Start position
-Specified coordinates
+center screen
 Tab index
 0
 Tab stop
@@ -3735,6 +3865,8 @@ Tag
 
 Text
 Reports
+ToolTip
+
 TopMost
 No
 Transparentcy key
@@ -3810,10 +3942,24 @@ Edit mode
 Default
 Enabled
 Yes
+Font bold
+No
+Font family
+Microsoft Sans Serif
+Font italic
+No
+Font size
+8
+Font strikeout
+No
+Font underline
+No
 Grid color
 SystemDark
 Height
 263
+Height of rows
+22,22
 Index
 0
 Maximum height
@@ -3840,6 +3986,8 @@ Scroll bars
 Both
 Selected columns
 0
+Selected items value
+"Row1"
 Selected rows
 0
 Selection mode
@@ -3850,10 +3998,14 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
 502
+Width of columns
+100,100
 X
 -1
 Y
@@ -3945,6 +4097,8 @@ Text
 Report
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -4042,6 +4196,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -4159,6 +4315,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -4204,6 +4362,8 @@ Obj
 #End
 
 PrD
+Copies
+1
 Dialog color
 0; 0; 0;
 Font bold
@@ -4218,11 +4378,23 @@ Font strikeout
 No
 Font underline
 No
+From page
+1
 Index
 0
 Name
 Print dialog1
+Padding bottom
+10
+Padding left
+30
+Padding right
+10
+Padding top
+10
 Print document
+
+Print object
 
 Print picture
 Nothing
@@ -4234,6 +4406,8 @@ Table on center
 Yes
 Tag
 
+To page
+999
 X
 8
 Y
@@ -4256,10 +4430,11 @@ Obj
 
 #ProjectParams
 #PoleznieDistance
-36
-59
+28
+51
 #EndPoleznieDistance
 #Expands
+Window1
 Window1
 cbMEGEIPFI
 ErBxYNXtbW
@@ -4287,17 +4462,18 @@ JYDIbpNQJc
 aNwHTSHQHA
 goockPcaAw
 iuJJJNkASd
+ButtonReports
 UdPNQefbMv
 Window2
+ButtonPreview
 wPbViATtkc
+ButtonPrint
 CUCSLAMHph
 #EndExpands
-#SelNode
-Window1
 #ActiveForm
-Window1.Window1[0]
+Window2.Window2[0]
 #ActiveObj
-Window1.Label8[0]
+Window2.Window2[0]
 #ImagePath
 Рисунки
 #ImageDefName
