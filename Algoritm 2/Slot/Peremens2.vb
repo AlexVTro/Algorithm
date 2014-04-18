@@ -1,4 +1,6 @@
 ﻿' МОДУЛЬ ДЛЯ ОБХОДА ОТЛИЧИЙ МЕЖДУ СРЕДОЙ РАЗРАБОТКИ И КОМПИЛЯТОРОМ
+Imports System.Diagnostics
+
 Module peremens2
     Public MnFrm As MainForm = Application.OpenForms.Item("MainForm") ' Главная форма
     Public MnFrmPotok As MainForm = Application.OpenForms.Item("MainForm") ' Главная форма
@@ -404,14 +406,15 @@ Module peremens2
         Dim all As String = dt & vr
         Dim i As Integer, ret As Double
         For i = 0 To all.Length - 1 Step 2
-            ret += all(i).GetHashCode
+            ret += AscW(all(i))
         Next
         Dim l As Long = Math.Sin(ret) * 1000000000000000000
         ' Расставляем левые буквы в псевдослучайном порядке
-        Dim uid As String = l
+        Dim uid As String = Math.Abs(l)
         Dim rn As New Random(uid.Substring(0, 5))
         For i = 0 To uid.Length - 1
             Dim ind As Integer = rn.Next(65, 90)
+            Debug.WriteLine(Chr(ind))
             uid = uid.Insert(rn.Next(0, uid.Length), Chr(ind))
         Next
         Return uid
