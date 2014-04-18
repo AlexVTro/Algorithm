@@ -95,9 +95,12 @@ Public Class Update
             Exit Sub
         End If
 
+        ' Помечаем что сделующий запуск будет после апдейта
+        FirstLaunchAfterUpdate = True : MnFrm.SaveParametrs()
+
         tokaSohranil = True ' для избежания повторного вопроса сохранения от ReadyToCloseProgramm
-        MnFrm.Close()
         Diagnostics.Process.Start(newFilePath)
+        MnFrm.Close()
     End Sub
 
     Private Sub ShowInfoPanel()

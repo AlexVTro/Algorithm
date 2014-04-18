@@ -98,6 +98,7 @@ Public Module peremens
     Public MasterHeight, MasterWidth, MasterSplit, OptionsHeight, OptionsWidth, _
            MainHeight, MainWidth, MainX, MainY As Integer ' Параметры форм
     Public SkippedVersion, PayLink As String
+    Public FirstLaunchAfterUpdate As Boolean
     Public BeginProgress As Integer = 0
     Public AlphaPik As Integer = 255
     Public AlphaNiz As Integer = 50

@@ -64,6 +64,8 @@ Public Class MainForm
     End Sub
     ' ИНИЦИАЛИЗАЦИЯ, ТРЕБУЮЩАЯСЯ ДЛЯ СОЗДАНИЯ ПРОЕКТА
     Sub InitializeBeforeProject(Optional ByVal fromOptions As Boolean = False)
+        ' попробовать получить параметры
+        OpenOptions(True)
         ' Создание папок в директории юзера
         CreateUserFolders()
 
@@ -140,20 +142,16 @@ Public Class MainForm
         If IO.Directory.Exists(ProjectsPath) = False Then
             IO.Directory.CreateDirectory(ProjectsPath)
         End If
-        ' Папка примеров проектов
-        If IO.Directory.Exists(SamplesPath) = False Then
+        ' Копирование папки примеров проектов
+        If IO.Directory.Exists(SamplesPath) = False Or FirstLaunchAfterUpdate Then
             If IO.Directory.Exists(SamplesPathDefault) Then
                 My.Computer.FileSystem.CopyDirectory(SamplesPathDefault, SamplesPath, True)
-            Else
-                IO.Directory.CreateDirectory(SamplesPath)
             End If
         End If
-        ' Папка компиляции
-        If IO.Directory.Exists(CompilPath) = False Then
+        ' Копирование папки компиляции
+        If IO.Directory.Exists(CompilPath) = False Or FirstLaunchAfterUpdate Then
             If IO.Directory.Exists(CompilPathDefault) Then
                 My.Computer.FileSystem.CopyDirectory(CompilPathDefault, CompilPath, True)
-            Else
-                IO.Directory.CreateDirectory(CompilPath)
             End If
         End If
         ' Перенос файлов
@@ -168,12 +166,14 @@ Public Class MainForm
                 My.Computer.FileSystem.CopyFile(OptionsFilePathDefault, OptionsFilePath, True)
             End If
         End If
+
+        FirstLaunchAfterUpdate = False
     End Sub
     ' Проверка обновлений
     Private Function CheckNewVersion(Optional ByVal ignoreSkipped As Boolean = False) As Boolean
         Dim newVersion As String = GetRequestResult(lastVersionUrl).Trim()
 
-        If String.IsNullOrEmpty(newVersion) Or newVersion = Version Or (Version = SkippedVersion And Not ignoreSkipped) Then
+        If String.IsNullOrEmpty(newVersion) Or newVersion = Version Or (newVersion = SkippedVersion And Not ignoreSkipped) Then
             Return False
         End If
 
@@ -183,6 +183,7 @@ Public Class MainForm
 
         Return True
     End Function
+    ' Получить содиржимое по url
     Private Function GetRequestResult(ByVal url As String) As String
         Try
             Dim request As WebRequest = WebRequest.Create(url)
@@ -530,6 +531,7 @@ Public Class MainForm
         ' форма
         txt &= "#SkippedVersion" & vbCrLf & SkippedVersion & vbCrLf & vbCrLf
         txt &= "#PayLink" & vbCrLf & PayLink & vbCrLf & vbCrLf
+        txt &= "#FirstLaunchAfterUpdate" & vbCrLf & YesOrNo(FirstLaunchAfterUpdate) & vbCrLf & vbCrLf
         txt &= "#WindowState" & vbCrLf & Me.WindowState & vbCrLf & vbCrLf
         txt &= "#Left" & vbCrLf & MainX & vbCrLf & vbCrLf
         txt &= "#Top" & vbCrLf & MainY & vbCrLf & vbCrLf
@@ -567,12 +569,22 @@ Public Class MainForm
         Dim fl As IO.StreamWriter = IO.File.CreateText(ParamFilePath)
         fl.Write(txt) : fl.Close()
     End Sub
-    Public Sub OpenOptions()
+    Public Sub OpenOptions(Optional ByVal onlyFirst As Boolean = False)
+        If Not IO.File.Exists(ParamFilePath) Then
+            Exit Sub
+        End If
+
         Dim fl As IO.StreamReader = IO.File.OpenText(ParamFilePath)
         Dim txt As String = fl.ReadToEnd : fl.Close()
-        ' форма
+
+        ' переменные обслуживания
         SkippedVersion = GetNuzhPunkt("#SkippedVersion", txt)
         PayLink = GetNuzhPunkt("#PayLink", txt)
+        FirstLaunchAfterUpdate = YesOrNo(GetNuzhPunkt("#FirstLaunchAfterUpdate", txt))
+        
+        If (onlyFirst) Then Exit Sub
+
+        ' форма
         Me.WindowState = GetNuzhPunkt("#WindowState", txt)
         MainX = GetNuzhPunkt("#Left", txt)
         MainY = GetNuzhPunkt("#Top", txt)
