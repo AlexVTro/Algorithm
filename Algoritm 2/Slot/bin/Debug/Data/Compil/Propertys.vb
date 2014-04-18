@@ -5365,7 +5365,7 @@ Public Class Propertys
     Sub SaveTable(ByVal ParamArray args() As String)
         Try
             args(0) = GetMaxPath(args(0))
-            System.IO.File.WriteAllText(UbratKovich(args(0)).str, Columns & "~""""""~" & Rows, System.Text.Encoding.Default)
+            System.IO.File.WriteAllText(UbratKovich(args(0)).str, Columns & "~""""""~" & Rows, System.Text.Encoding.UTF8)
         Catch ex As Exception
             If IgnorEr = False Then MessangeCritic(Errors.FileNotCreate(ex.Message))
         End Try
@@ -5373,7 +5373,7 @@ Public Class Propertys
     Sub OpenTable(ByVal ParamArray args() As String)
         typeName = "" : dbName = "" : tablName = ""
         args(0) = GetMaxPath(args(0))
-        Dim dat As String = System.IO.File.ReadAllText(UbratKovich(args(0)).str, System.Text.Encoding.Default)
+        Dim dat As String = System.IO.File.ReadAllText(UbratKovich(args(0)).str, System.Text.Encoding.UTF8)
         Dim sep() As String = {"~""""""~"}
         Columns = dat.Split(sep, StringSplitOptions.None)(0)
         Rows = dat.Split(sep, StringSplitOptions.None)(1)
@@ -5388,12 +5388,12 @@ Public Class Propertys
     Dim dt As Data.DataTable
     Sub OpenAccess(ByVal ParamArray args() As String)
         typeName = "Access" : dbName = args(0) : tablName = args(1)
-        lastSelect = "SELECT * FROM " & tablName
+        lastSelect = "SELECT * FROM [" & tablName & "]"
         SQLquerySelect(typeName, dbName, lastSelect)
     End Sub
     Sub OpenExcel(ByVal ParamArray args() As String)
         typeName = "Excel" : dbName = args(0) : tablName = args(1)
-        lastSelect = "SELECT * FROM " & tablName
+        lastSelect = "SELECT * FROM [" & tablName & "]"
         SQLquerySelect(typeName, dbName, lastSelect)
     End Sub
     Sub SaveAccess(ByVal ParamArray args() As String)
@@ -5488,10 +5488,10 @@ Public Class Propertys
         Dim conStr As String = ""
         file = GetMaxPath(file)
         ' Генерируем строку соединения на основании типа бд и файла бд
-        If UCase(tip) = UCase("Access") Then
-            conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source = " & file & "; Persist Security Info = false"
+        If UCase(tip) = UCase("Access") Then ' Microsoft.Jet.OLEDB.4.0
+            conStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " & file & "; Persist Security Info = false"
         ElseIf UCase(tip) = UCase("Excel") Then
-            conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source = " & file & "; Extended Properties = 'Excel 8.0; HDR = Yes'"
+            conStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " & file & "; Extended Properties = 'Excel 12.0; HDR = Yes'"
         Else
             Return Nothing
         End If
@@ -6801,7 +6801,7 @@ Public Class Propertys
         ' Для шифрования нам достаточно публичного ключа
         RSA.FromXmlString(KeyEncryption)
         ' Получаем данные
-        Data = System.Text.Encoding.Default.GetBytes(str)
+        Data = System.Text.Encoding.UTF8.GetBytes(str)
         ' Шифруем данные
         Data = RSA.Encrypt(Data, True)
         ' Преобразуем байтовый массив в строку и покажем юзеру
@@ -6814,12 +6814,12 @@ Public Class Propertys
         ' Для дешифрования нам понадобится закрытый ключ
         RSA.FromXmlString(KeyEncryption)
         ' Получаем данные
-        '    Data = System.Text.Encoding.Default.GetBytes(str)
+        '    Data = System.Text.Encoding.UTF8.GetBytes(str)
         Data = toByteArray(str)
         ' Дешифруем данные
         Data = RSA.Decrypt(Data, True)
         ' Преобразуем байтовый массив в строку и покажем юзеру
-        Return System.Text.Encoding.Default.GetString(Data)
+        Return System.Text.Encoding.UTF8.GetString(Data)
     End Function
     Sub TrialStart()
         Dim dniTrial As Long = DaysAll * 60 * 60 * 24 : dniTrial *= 10000000

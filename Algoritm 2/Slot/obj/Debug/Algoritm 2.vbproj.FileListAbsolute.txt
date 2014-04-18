@@ -90,7 +90,6 @@ E:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.About.resources
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Edu.resources
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Demo.resources
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.OutputFrm.resources
-E:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Sinner.resources
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Uvedomlenie.resources
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.CodeVE.resources
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.intro.resources
@@ -116,3 +115,4 @@ E:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.exe
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.xml
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.pdb
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.vbprojResolveAssemblyReference.cache
+E:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Update.resources

@@ -1593,11 +1593,21 @@ _ИЛИ~~_OR
 Перевод~~Translation
 Мастер сложных действий~~Complex operations wizard
 Иконки~~Icons
-Применение~~Application
+Применение~~Applying
 Отключить справочную статусную строку~~Disable status bar
 Рекомендуется для медленных машин~~It is recommended for slow computers
-
-
+Доступна новая версия программы - *! Загрузить её сейчас?~~A new version of the program is available - *! Download it now?
+Загрузить~~Download
+Напомнить позже~~Remind me later
+Пропустить это обновление~~Skip this update
+Обновление~~Update
+Введите, пожалуйста, ссылку для скачивания Алгоритма, которая вам пришла в пункте 2 в письме с ключем для Алгоритма~~Please enter the download link of the Algorithm 2 that you received in a letter with a key, in paragraph 2
+Готово~~Ok
+Загрузка...~~Downloading...
+Неверная ссылка. Если проблема повторяется, обратитесь, пожалуйста, в support@algoritm2.ru~~Link is invalid. If the problem persists, please contact support@algorithm2.com
+Невозможно скачать программу. Если проблема повторяется, обратитесь, пожалуйста, в support@algoritm2.ru~~Unable to download the program. If the problem persists, please contact support@algorithm2.com
+Для дальнейшей установки необходимо закрыть программу Алгоритм~~For further installation is necessary to close the program algorithm
+Установка обновления была отменена~~Installing the update was canceled
 
 
 

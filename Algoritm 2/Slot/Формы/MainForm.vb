@@ -49,6 +49,10 @@ Public Class MainForm
         proj.f(proj.f.Length - 2).obj.contextmenustrip = ObjsMenu
         ' Открытие проекта из строки аргументов
         If Environment.GetCommandLineArgs().Length >= 2 Then OpenProj(Environment.GetCommandLineArgs()(1))
+
+        ' Проверка обновлений
+        CheckNewVersion()
+
         ' Запуск либо обучения, либо демки
         If StartEdu = "Yes" Then
             Dim ed As New Edu : ed.Show()
@@ -56,8 +60,7 @@ Public Class MainForm
             ' If PerfomanceProgress() = False Then Dim dm As New Demo : dm.TopMost = True : dm.Show()
         End If
 
-        ' Проверка обновлений
-        CheckNewVersion()
+        
     End Sub
     ' ИНИЦИАЛИЗАЦИЯ, ТРЕБУЮЩАЯСЯ ДЛЯ СОЗДАНИЯ ПРОЕКТА
     Sub InitializeBeforeProject(Optional ByVal fromOptions As Boolean = False)
@@ -167,13 +170,19 @@ Public Class MainForm
         End If
     End Sub
     ' Проверка обновлений
-    Private Sub CheckNewVersion()
-        Dim version As String = GetRequestResult(lastVersionUrl)
-            
-        If Not String.IsNullOrEmpty(version.Trim()) Then
-            ' TODO : Сообщение о скачке новой версии!
+    Private Function CheckNewVersion(Optional ByVal ignoreSkipped As Boolean = False) As Boolean
+        Dim newVersion As String = GetRequestResult(lastVersionUrl).Trim()
+
+        If String.IsNullOrEmpty(newVersion) Or newVersion = Version Or (Version = SkippedVersion And Not ignoreSkipped) Then
+            Return False
         End If
-    End Sub
+
+        Dim updForm As Update = New Update()
+        updForm.ShowDialog(newVersion)
+        updForm.Dispose()
+
+        Return True
+    End Function
     Private Function GetRequestResult(ByVal url As String) As String
         Try
             Dim request As WebRequest = WebRequest.Create(url)
@@ -520,6 +529,7 @@ Public Class MainForm
         MainForm_SizeChanged(Nothing, Nothing)
         ' форма
         txt &= "#SkippedVersion" & vbCrLf & SkippedVersion & vbCrLf & vbCrLf
+        txt &= "#PayLink" & vbCrLf & PayLink & vbCrLf & vbCrLf
         txt &= "#WindowState" & vbCrLf & Me.WindowState & vbCrLf & vbCrLf
         txt &= "#Left" & vbCrLf & MainX & vbCrLf & vbCrLf
         txt &= "#Top" & vbCrLf & MainY & vbCrLf & vbCrLf
@@ -562,6 +572,7 @@ Public Class MainForm
         Dim txt As String = fl.ReadToEnd : fl.Close()
         ' форма
         SkippedVersion = GetNuzhPunkt("#SkippedVersion", txt)
+        PayLink = GetNuzhPunkt("#PayLink", txt)
         Me.WindowState = GetNuzhPunkt("#WindowState", txt)
         MainX = GetNuzhPunkt("#Left", txt)
         MainY = GetNuzhPunkt("#Top", txt)
@@ -995,17 +1006,25 @@ Public Class MainForm
 #Region "COMMON"
 
     Private Sub MainForm_FormClosing(ByVal sender As Object, ByVal e As System.Windows.Forms.FormClosingEventArgs) Handles Me.FormClosing
+        If Not ReadyToCloseProgramm() Then
+            e.Cancel = True
+        End If
+    End Sub
+
+    ' Можно ли закрыть программу?
+    Public Function ReadyToCloseProgramm() As Boolean
+        Dim result As Boolean = True
+
         ' Сохранить параметры элементов окна (ширина, положение)
         SaveParametrs()
         ' Остановили ли проект
-        If Me.Ostanovili = False Then e.Cancel = True : Exit Sub
+        If Me.Ostanovili = False Then Return False
         ' Сохранили ли проект
-        If Me.Sohranilili = False Then e.Cancel = True
+        If Me.Sohranilili = False Then result = False
         If RunProj Is Nothing = False Then RunProj.ClosAl = True
-        'If PerfomanceProgress() = False Then Dim dm As New Demo : dm.Tag = "!" : dm.Show() : dm.Focus() : e.Cancel = True
-    End Sub
 
-
+        Return result
+    End Function
     ' ПОЛУЧАЕТ ПОЛНЫЙ КОД ПРОЕКТА
     Function GetCoding(Optional ByVal toExeFile As Boolean = False, Optional ByVal code As String = "", Optional ByRef ObjsTres As ObjsTreesText = Nothing) As String
         Dim i As Integer
@@ -4517,7 +4536,7 @@ noAccess:
         ProgressForm.Hide()
         Return True
     End Function
-    Private Sub RecentProjects_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExitMenu2.Click
+    Private Sub RecentProjects_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If sender.tag Is Nothing Then Exit Sub
         If IO.File.Exists(sender.tag) = False Then
             MsgBox(ProjNotFound(sender.tag)) : RecentProjectsCreate() : Exit Sub
@@ -4551,8 +4570,8 @@ noAccess:
     ' Выдать запрос на сохранение файла и вернуть уже результат
     Function Ostanovili() As Boolean
         If isRUNorPause() = True Then
-            Dim res As MsgBoxResult = MsgBox(transInfc("Проект запущен. Остановить выполнение проекта?"), MsgBoxStyle.Question + MsgBoxStyle.YesNoCancel, trans("АЛГОРИТМ 2"))
-            If res = MsgBoxResult.Yes Then
+            Dim res As MsgBoxResult = MsgBox(transInfc("Проект запущен. Остановить выполнение проекта?"), MsgBoxStyle.Question + MsgBoxStyle.OkCancel, trans("АЛГОРИТМ 2"))
+            If res = MsgBoxResult.Ok Then
                 StopMenu_Click(Nothing, Nothing)
             ElseIf res = MsgBoxResult.Cancel Then
                 Return False
@@ -4874,9 +4893,7 @@ enabli: If Me.InvokeRequired Then
         Catch ex As Exception : MsgBox(ex.Message) : End Try
     End Sub
     Private Sub UpdateMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateMenu.Click
-        Try
-            Diagnostics.Process.Start(SiteAlg)
-        Catch ex As Exception : MsgBox(ex.Message) : End Try
+        CheckNewVersion(True)
     End Sub
     Private Sub RegistrMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RegistrMenu.Click
         Dim dm As New Demo : dm.Show()

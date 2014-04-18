@@ -24,7 +24,8 @@ Public Module peremens
     Private Const PicturesDirName As String = "Рисунки"
     Public lang_def As String = "Russian" ' язык программирования по умолчанию
     Public lang_interface As String = "Russian"  ' язык среды разработки
-    Public lastVersionUrl As String = "http://algoritm2.ru/download/LastVersionRu.php"
+    Public lastVersionUrl As String = "http://algoritm2.ru/api/LastVersionRu.php"
+    Public lastFreeVersionDownloadUrl As String = "http://algoritm2.ru/download/Algoritm2RuLast.exe"
 #Else
     Public Const AppName As String = "Algorithm"
     Public Const IntroImage As String = "AlgorithmEn.jpg"
@@ -34,7 +35,8 @@ Public Module peremens
     Private Const PicturesDirName As String = "Pictures"
     Public lang_def As String = "English" ' язык программирования по умолчанию
     Public lang_interface As String = "English"  ' язык среды разработки
-    Public lastVersionUrl As String = "http://algorithm2.com/download/LastVersionEn.php" 
+    Public lastVersionUrl As String = "http://algorithm2.com/api/LastVersionEn.php" 
+    Public lastFreeVersionDownloadUrl As String = "http://algorithm2.com/download/Algoritm2EnLast.exe"
 #End If
 
     Public referral As String
@@ -95,7 +97,7 @@ Public Module peremens
     Public PoleznieObjs(), Prioritets() As Object
     Public MasterHeight, MasterWidth, MasterSplit, OptionsHeight, OptionsWidth, _
            MainHeight, MainWidth, MainX, MainY As Integer ' Параметры форм
-    Public SkippedVersion As String
+    Public SkippedVersion, PayLink As String
     Public BeginProgress As Integer = 0
     Public AlphaPik As Integer = 255
     Public AlphaNiz As Integer = 50

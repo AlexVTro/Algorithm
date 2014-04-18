@@ -5388,12 +5388,12 @@ Public Class Propertys
     Dim dt As Data.DataTable
     Sub OpenAccess(ByVal ParamArray args() As String)
         typeName = "Access" : dbName = args(0) : tablName = args(1)
-        lastSelect = "SELECT * FROM " & tablName
+        lastSelect = "SELECT * FROM [" & tablName & "]"
         SQLquerySelect(typeName, dbName, lastSelect)
     End Sub
     Sub OpenExcel(ByVal ParamArray args() As String)
         typeName = "Excel" : dbName = args(0) : tablName = args(1)
-        lastSelect = "SELECT * FROM " & tablName
+        lastSelect = "SELECT * FROM [" & tablName & "]"
         SQLquerySelect(typeName, dbName, lastSelect)
     End Sub
     Sub SaveAccess(ByVal ParamArray args() As String)
@@ -5488,10 +5488,10 @@ Public Class Propertys
         Dim conStr As String = ""
         file = GetMaxPath(file)
         ' Генерируем строку соединения на основании типа бд и файла бд
-        If UCase(tip) = UCase("Access") Then
-            conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source = " & file & "; Persist Security Info = false"
+        If UCase(tip) = UCase("Access") Then ' Microsoft.Jet.OLEDB.4.0
+            conStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " & file & "; Persist Security Info = false"
         ElseIf UCase(tip) = UCase("Excel") Then
-            conStr = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source = " & file & "; Extended Properties = 'Excel 8.0; HDR = Yes'"
+            conStr = "Provider=Microsoft.ACE.OLEDB.12.0; Data Source = " & file & "; Extended Properties = 'Excel 12.0; HDR = Yes'"
         Else
             Return Nothing
         End If
