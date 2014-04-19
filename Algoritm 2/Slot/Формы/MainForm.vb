@@ -4315,7 +4315,7 @@ noAccess:
             ' Dim res As String = "", sourcs, reses As New ArrayList
             ' If reses.Count > 0 Then res = Join(reses.ToArray(), "")
             ' прочие параметры, такие как непоказывать варнинги, создать вин32 приложение, главный модуль MainClass
-            Dim othersParam As String = " /nowarn /target:winexe /main:MainClass"
+            Dim othersParam As String = " /platform:x86 /nowarn /target:winexe /main:MainClass"
             ' выходной файл компиляции
             Dim out As String = " /out:""" & SaveFileDialog2.FileName & """"
             ' исходники для компиляции (все vb файлы папки)

@@ -464,6 +464,7 @@ RTF код документа~~Rtf
 Процесс убить~~Kill process
 Окна системы~~Windows list
 Окно в фокусе~~Window in focus
+Невозможно перехватить нажатия клавиш~~It is impossible to hook key press and mouse movement
 
 
 # TEXT BOKS
@@ -1490,7 +1491,7 @@ Y~~Y
 В строке~~In line
 Microsoft Sans Serif~~Microsoft Sans Serif
 Невозможно открыть/воспроизвести файл~~Unable to open/play the file
-Возможно формат файла не поддерживается или файл не существует~~Perhaps the file format is not supported or file does not exist
+Возможно, формат файла не поддерживается и требуется установить кодеки. Либо файл не существует.~~Perhaps the file format is not supported and you have to install codecs. Or file does not exist.
 Соединение к БД закрыто~~Connection to the database is closed
 Ошибка в написании RTF кода.~~Error in RTF code.
 Ключ верный!~~The key is valid!

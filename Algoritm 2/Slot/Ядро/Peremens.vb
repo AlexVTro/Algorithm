@@ -1930,24 +1930,28 @@ Public Module peremens
         If RunProj Is Nothing Then Exit Sub
         If RunProj.isRUN = False Then Exit Sub
 
-        If hook Is "mouse" Then
-            Dim h As New Kennedy.ManagedHooks.MouseHook
-            AddHandler h.MouseEvent, AddressOf mouseHook_MouseEvent
-            mouseHook = h : hook = mouseHook
-        ElseIf hook Is "key" Then
-            Dim h As New Kennedy.ManagedHooks.KeyboardHookExt
-            AddHandler h.KeyboardEvent, AddressOf keyboardHook_KeyboardEvent
-            AddHandler h.SystemKeyDown, AddressOf keyboardHook_SystemKeyDown
-            AddHandler h.SystemKeyUp, AddressOf keyboardHook_SystemKeyUp
-            keyboardHook = h : hook = keyboardHook
-            'Else
-            'Exit Sub
-            'If hook.IsHooked = False Then : mouseHook = "mouse"
-            ' If hook.IsHooked = False Then hook.InstallHook()
-        End If
+        Try
+            If hook Is "mouse" Then
+                Dim h As New Kennedy.ManagedHooks.MouseHook
+                AddHandler h.MouseEvent, AddressOf mouseHook_MouseEvent
+                mouseHook = h : hook = mouseHook
+            ElseIf hook Is "key" Then
+                Dim h As New Kennedy.ManagedHooks.KeyboardHookExt
+                AddHandler h.KeyboardEvent, AddressOf keyboardHook_KeyboardEvent
+                AddHandler h.SystemKeyDown, AddressOf keyboardHook_SystemKeyDown
+                AddHandler h.SystemKeyUp, AddressOf keyboardHook_SystemKeyUp
+                keyboardHook = h : hook = keyboardHook
+                'Else
+                'Exit Sub
+                'If hook.IsHooked = False Then : mouseHook = "mouse"
+                ' If hook.IsHooked = False Then hook.InstallHook()
+            End If
 
-
-        If hook.IsHooked = False Then hook.InstallHook()
+            If hook.IsHooked = False Then hook.InstallHook()
+        Catch ex As Exception
+            Errors.MessangeCritic(trans("Невозможно перехватить нажатия клавиш"))
+            Exit Sub
+        End Try
     End Sub
     Public Sub HookStops()
         If keyboardHook Is "key" = False Then If keyboardHook.IsHooked Then keyboardHook.UninstallHook()

@@ -1,5 +1,9 @@
-﻿Language = English
+Language = English
 F
+Allow run copies
+Yes
+Associate with extensions
+
 Auto scroll minSize height
 0
 Auto scroll minSize width
@@ -8,14 +12,14 @@ Auto scroll position X
 0
 Auto scroll position Y
 0
+AutoRun
+No
 Back color
 255; 0; 255;
 Background image
 Nothing
 Background image layout
 Tile
-Cancel close
-No
 Context menu
 Nothing
 Control box
@@ -24,6 +28,12 @@ Cursor
 Default
 Enabled
 Yes
+Forbid close
+No
+Forbid maximize
+No
+Forbid minimize
+No
 Fore color
 Black
 Form border style
@@ -68,6 +78,8 @@ Tag
 
 Text
 Окно1
+ToolTip
+
 TopMost
 No
 Transparentcy key
@@ -169,6 +181,8 @@ Text
 Player
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -332,6 +346,8 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
@@ -404,6 +420,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -478,6 +496,8 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
@@ -551,6 +571,8 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
@@ -623,6 +645,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -787,6 +811,8 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
@@ -859,6 +885,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -933,6 +961,8 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
@@ -1005,6 +1035,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -1079,6 +1111,8 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
@@ -1152,6 +1186,8 @@ Tab stop
 Yes
 Tag
 
+ToolTip
+
 Visible
 Yes
 Width
@@ -1214,6 +1250,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -1333,6 +1371,11 @@ Obj
  Sobyt
   Window2.Media1.Stop movie
   kEatJDFVql
+  deist
+  deist
+  Deist
+  Window1.ToolPlay.Image = "Media\Play.png"
+  OoYBPQgPOO
   deist
   deist
   Deist
@@ -1876,6 +1919,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -2038,6 +2083,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+Volume -
 Visible
 Yes
 Width
@@ -2170,6 +2217,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+Volume +
 Visible
 Yes
 Width
@@ -2302,6 +2351,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -2419,6 +2470,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -2556,6 +2609,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -2638,6 +2693,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -2756,6 +2813,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -2991,6 +3050,8 @@ Text
 00:00:00
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -3086,6 +3147,8 @@ Text
 
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -3146,7 +3209,7 @@ No
 Fore color
 Black
 Height
-14
+20
 Image
 Media\Picture15.png
 Image align
@@ -3181,14 +3244,16 @@ Text
 
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
-13
+20
 X
 49
 Y
-8
+5
 #Conteiner
 Window1.PanelForSplitter[0]
 #HistoryLevel
@@ -3327,6 +3392,10 @@ Obj
 #End
 
 F
+Allow run copies
+Yes
+Associate with extensions
+
 Auto scroll minSize height
 0
 Auto scroll minSize width
@@ -3335,14 +3404,14 @@ Auto scroll position X
 0
 Auto scroll position Y
 0
+AutoRun
+No
 Back color
 Sys
 Background image
 Nothing
 Background image layout
 Tile
-Cancel close
-No
 Context menu
 Nothing
 Control box
@@ -3351,6 +3420,12 @@ Cursor
 Default
 Enabled
 Yes
+Forbid close
+No
+Forbid maximize
+No
+Forbid minimize
+No
 Fore color
 Black
 Form border style
@@ -3395,6 +3470,8 @@ Tag
 
 Text
 Окно2
+ToolTip
+
 TopMost
 No
 Transparentcy key
@@ -3470,7 +3547,7 @@ Fill
 Enabled
 Yes
 File name played
-Media\Movie1.flv
+Media\Movie.avi
 Height
 189
 Index
@@ -3487,6 +3564,8 @@ Mute
 No
 Name
 Media1
+On full screen
+No
 Play position
 0
 Play time
@@ -3496,6 +3575,8 @@ No
 Speed
 0
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -3586,7 +3667,7 @@ Obj
 #ProjectParams
 #PoleznieDistance
 25
-0
+1
 #EndPoleznieDistance
 #Expands
 Window1
@@ -3596,7 +3677,9 @@ gCgPGgQhvI
 oSSbmQsMQA
 qktuSYIwEC
 inxqvHjOCn
+ToolStop
 PUdVXwhuJL
+ToolPlay
 WAbAfIRdge
 naLBpenBmT
 LjnbHTMSNW
@@ -3638,11 +3721,11 @@ xWCLxgYAom
 MSvluaqlBb
 #EndExpands
 #SelNode
-LabelSplitter
+OoYBPQgPOO
 #ActiveForm
 Window1.Window1[0]
 #ActiveObj
-Window1.LabelTime[0]
+Window1.ButtonSilent[0]
 #ImagePath
 Media
 #ImageDefName

@@ -3721,8 +3721,8 @@ Public Class Propertys
             If ctrWindow Is Nothing Then ctrWindow = obj
             strAlias = "video1" & (New Random).Next(1, 10000)
             If mciSendString("OPEN """ & args(0) & """ alias " & strAlias & " TYPE MPEGVIDEO PARENT " & ctrWindow.Handle.ToString & " STYLE CHILD", 0&, 0, IntPtr.Zero) <> 0 Then
-                Errors.MessangeCritic(trans("Невозможно открыть/воспроизвести файл") & " """ & args(0) & """. " & _
-                trans("Возможно формат файла не поддерживается или файл не существует")) : Exit Function
+                Errors.MessangeExclamen(trans("Невозможно открыть/воспроизвести файл") & " """ & args(0) & """. " & _
+                trans("Возможно, формат файла не поддерживается и требуется установить кодеки. Либо файл не существует.")) : Exit Function
             End If
             Filename = args(0)
             bOpened = True
