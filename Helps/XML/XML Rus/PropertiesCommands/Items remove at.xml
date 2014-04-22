@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Удалить запись по номеру</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Удаляет запись списка по ее порядковому  номеру в списке. Записи в списке начинаются с нуля. </text>
+      </p>
+      <p>
+        <textAll>
+	 
+   </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+     
+      <text></text>
+    </remarks>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Действие удалит первую запись в списке:</sampletitle>
+        <samplecode>
+<![CDATA[Окно1.Большой список1.Удалить запись по номеру("0")
+]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><li/><propsLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

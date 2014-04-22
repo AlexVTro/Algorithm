@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Y</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text><b>Coordinate Y</b> of the object upper left edge.</text>
+      </p>
+      <p>
+        <textAll>
+          <b>Coordinates</b> of all objects are arranged not like usual coordinates. The origin of coordinates is not in the left bottom edge, but in the <b>left upper</b> one. So the coordinate Y is nothing but a <b>distance</b> from the left edge.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+      <text>
+        If you placed an object inside of the other object (e.g. inside of a <link file="Objects/Panel.html">panel</link>),
+        then coordinates are calculated relative to <b>this object</b> (panel).
+      </text>
+    </remarks>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how button coordinate Y can be set:</sampletitle>
+        <samplecode>
+          <![CDATA[Window1.Button1.Y = 150
+Window1.Button1.X = -10
+Window1.Button1.X = Window1.Window1.Height / 2]]>
+        </samplecode>
+      </sample>
+    </samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Comments tab</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Development environment</link>
+        ->
+        <link file="Environment/CommPart.html">Comments tab</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Comments</b> are your <b>explanatory notes</b> in the 
+        <link file="Environment/TreePart.html">Actions tree</link>. They <b>execute nothing</b> and you can use them
+          to note something for clarity's sake.
+        </text>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development environment</link>
+    </seealso>
+  </file>
+</xml>

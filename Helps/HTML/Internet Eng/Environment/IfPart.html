@@ -1,0 +1,57 @@
+﻿<HTML><HEAD><link href="../_TemplateMSDN_files/MSDNstyles.css" type="text/css" rel="stylesheet" /><script language="javascript">var gCHM=true;</script><script language="javascript" src="../_TemplateMSDN_files/common.js">var a;</script><script language="javascript" src="../_TemplateMSDN_files/script.js">var b;</script><TITLE>Conditions tab</TITLE></HEAD><BODY class="xsl_file"><div class="notshown"><img src="../_TemplateMSDN_files/plus.gif" /><img src="../_TemplateMSDN_files/plus_small.gif" /></div><div class="xsl_file_header"><div class="xsl_file_title">Conditions tab</div><div class="xsl_file_breadcumbs"><a class="xsl_file" target="_top" href="../index.html&#xA;          ">
+      Help
+    </a> -&gt;
+    <span class="xsl_file_test"><a class="xsl_file" href="../Environment.html">Development environment</a>
+        -&gt;
+        <a class="xsl_file" href="../Environment/IfPart.html">Conditions tab</a></span></div><br /><a class="xsl_file" href="#see">See also</a></div><div class="xsl_file_header1"><span class="xsl_file_spanLink" onClick="javascript:ChColExpAll('xsl_file_spColexpAll', 'xsl_file_imgColexpAll')"><img id="xsl_file_imgColexpAll" src="../_TemplateMSDN_files/minus_small.gif" align="absmiddle" /><span id="xsl_file_spColexpAll">Collapse all</span></span></div><div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divSyntax','xsl_file_imgSyntax');"><img id="xsl_file_imgSyntax" src="../_TemplateMSDN_files/minus.gif" border="0" /> Description
+      </span></h4><div><div id="xsl_file_divSyntax" class="xsl_file_container"><p class="xsl_file" align=""><b>Conditions</b> make it possible to specify whether the action should be executed at the moment or not.
+         Condition is a kind of rule, it is usually a <b>comparison</b> (e.g. 
+          <a class="xsl_file" href="../Objects/Window/PropertiesCommands/Text.html">the text of the window</a> is equal to "Window1"
+          or <a class="xsl_file" href="../Objects/Button/PropertiesCommands/Width.html">the button width</a> is more than 100) and all
+          <a class="xsl_file" href="../Environment/ActionPart.html">actions</a> 
+          created in the framework of this condition are executed
+          only when the <b>condition is true</b> (i.e.
+          <a class="xsl_file" href="../Objects/Window/PropertiesCommands/Text.html">the text of the window</a> is actually equal to "Window1"
+          and <a class="xsl_file" href="../Objects/Button/PropertiesCommands/Width.html">the button width</a> is more than 100)
+        </p><p class="xsl_file" align="">
+          You can <b>set the condition</b> in the Conditions tab of
+          <a class="xsl_file" href="../Environment.html">Algorithm2 development environment</a>:
+          <div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/IfPart.jpg" alt="" /></div></p><p class="xsl_file" align="">
+          There you should specify the <b>condition itself</b> in the form of: "something" is equal/unequally to "something" 
+          ("unequally" is specified by the symbol &lt;&gt;, "more or equal" - by the symbol &gt;=)
+          <pre class="xsl_file_codesnip">Window1.Text1.Text = "Required text"
+Window1.Window1.Width &gt; "200"
+Window1.Button1.Fore color &lt;&gt; black
+Window1.Window1.X &gt;= Window1.Text1.Text</pre>
+          After you have clicked the button <b>Create</b> a condition block will appear in the 
+          <a class="xsl_file" href="../Environment/TreePart.html">Actions tree</a>:
+        </p><p class="xsl_file" align=""><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/IfPart2.jpg" alt="" /></div></p><p class="xsl_file" align="">
+          Now all <a class="xsl_file" href="../Environment/ActionPart.html">actions</a> inside of this condition block 
+          (in the example there is just one action - to make the window hidden) would be executed
+          <b>only in case</b> the Text of the object Window1 is equal to "Window"
+        </p><p class="xsl_file" align="">
+          But there is more to come. You can also create <b>otherCases</b> and a section <b>In all other cases</b>.
+          To do this <b>click</b> on the created <b>standard condition</b> and use the conditions tab.
+        </p><p class="xsl_file" align=""><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/IfPart3.jpg" alt="" /></div><div class="xsl_file_codesnip"><p class="xsl_file" align="">
+                Note: Symbol <b>_AND</b> is used to show that <b>both conditions</b> of the string:
+                and "Window1.Window1.Width &gt; 100" and "Window1.Window1.Width &lt; 300" should be met.
+                Along with <b>_AND</b> there is a symbol <b>_OR</b> which means that the condition is true
+                <b>even if one of the conditions</b> is true, i.e. either "Window1.Window1.Width &gt; 100",
+                or "Window1.Window1.Width &lt; 300".
+                All this you can do using <a class="xsl_file" href="../Environment/Master.html">Complex operations wizard</a> (click on the button with a magic wand on it)
+              </p></div></p><p class="xsl_file" align=""><b>otherCases:</b><br />
+          They are verified only in case a standard condition is <b>false</b>.
+          If the otherCase is true, then <b>its</b> actions are executed. If false, then the
+          <b>next</b> otherCases are verified. OtherCases are created in the same way as standard conditions.
+        </p><p class="xsl_file" align=""><b>In all other cases:</b><br />
+          This section is aimed for cases when the condition and otherCases (if they are given) are <b>false</b>.
+          All its actions would be executed only if condition is not true.
+        </p></div></div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divRemarks','xsl_file_imgRemarks');"><img id="xsl_file_imgRemarks" src="../_TemplateMSDN_files/minus.gif" border="0" /> Remark
+        </span></h4><div><div id="xsl_file_divRemarks" class="xsl_file_container"><span class="xsl_file_test">Conditions can be not only <b>simple</b> (texts or numbers comparison), but also <b>complex</b>
+      (formula, comparing with a property value of the other object).
+      To create a complex condition use
+      <a class="xsl_file" href="../Environment/Master.html">Complex operations wizard</a> (click on the button with a magic wand on it).
+        <p class="xsl_file" align="">
+          You can interrupt a condition pre-term, without waiting for the rest of actions have been executed. Learn more about it in the section
+          <a class="xsl_file" href="../UsefulObjects.html">Useful Objects</a>.<a class="xsl_file" href="../UsefulObjects/_Interrupts.html">Interrupts</a></p></span></div></div><a class="xsl_file" name="see" /><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="SwapDisplay('xsl_file_divSeealso','xsl_file_imgSeealso');"><img id="xsl_file_imgSeealso" src="../_TemplateMSDN_files/minus.gif" border="0" /> See also
+        </span></h4><div id="xsl_file_divSeealso" class="xsl_file_container"><div class="xsl_file_container"><a class="xsl_file" href="../Environment.html">Development environment</a><br /><a class="xsl_file" href="../Objects.html">Objects</a><br /><a class="xsl_file" href="../UsefulObjects/_Interrupts.html">Interrupts</a></div></div></div><p> </p></BODY></HTML>

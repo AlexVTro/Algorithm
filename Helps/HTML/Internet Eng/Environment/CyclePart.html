@@ -1,0 +1,35 @@
+﻿<HTML><HEAD><link href="../_TemplateMSDN_files/MSDNstyles.css" type="text/css" rel="stylesheet" /><script language="javascript">var gCHM=true;</script><script language="javascript" src="../_TemplateMSDN_files/common.js">var a;</script><script language="javascript" src="../_TemplateMSDN_files/script.js">var b;</script><TITLE>Cycles tab</TITLE></HEAD><BODY class="xsl_file"><div class="notshown"><img src="../_TemplateMSDN_files/plus.gif" /><img src="../_TemplateMSDN_files/plus_small.gif" /></div><div class="xsl_file_header"><div class="xsl_file_title">Cycles tab</div><div class="xsl_file_breadcumbs"><a class="xsl_file" target="_top" href="../index.html&#xA;          ">
+      Help
+    </a> -&gt;
+    <span class="xsl_file_test"><a class="xsl_file" href="../Environment.html">Development environment</a>
+        -&gt;
+        <a class="xsl_file" href="../Environment/CyclePart.html">Cycles tab</a></span></div><br /><a class="xsl_file" href="#see">See also</a></div><div class="xsl_file_header1"><span class="xsl_file_spanLink" onClick="javascript:ChColExpAll('xsl_file_spColexpAll', 'xsl_file_imgColexpAll')"><img id="xsl_file_imgColexpAll" src="../_TemplateMSDN_files/minus_small.gif" align="absmiddle" /><span id="xsl_file_spColexpAll">Collapse all</span></span></div><div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divSyntax','xsl_file_imgSyntax');"><img id="xsl_file_imgSyntax" src="../_TemplateMSDN_files/minus.gif" border="0" /> Description
+      </span></h4><div><div id="xsl_file_divSyntax" class="xsl_file_container"><p class="xsl_file" align=""><b>Cycles</b> are same <a class="xsl_file" href="../Environment/IfPart.html">conditions</a> except for that
+          all <a class="xsl_file" href="../Environment/ActionPart.html">actions</a> inside of cycles are being executed constantly,
+          <b>until the condition is false</b> (e.g. until the 
+          <a class="xsl_file" href="../Objects/Window/PropertiesCommands/Height.html">height of the window</a> is less than 100)
+        </p><p class="xsl_file" align="">
+          You can <b>create a cycle</b> in the Cycles tab of
+          <a class="xsl_file" href="../Environment.html">Algorithm2 development environment</a>:
+          <div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/CyclePart.jpg" alt="" /></div></p><p class="xsl_file" align="">
+          There you should specify the <b>condition of cycle itself</b> in the form of: "something" is equal/unequally to "something" 
+          ("unequally" is specified by the symbol &lt;&gt;, "more or equal" - by the symbol &gt;=)
+          <pre class="xsl_file_codesnip">Window1.Text1.Text = "Required text"
+Window1.Window1.Width &gt; "200"
+Window1.Button1.Fore color  &lt;&gt; black
+Window1.Window1.X &gt;= Window1.Text1.Text</pre>
+           After you have clicked the button <b>Create</b> cycle block appears in the 
+          <a class="xsl_file" href="../Environment/TreePart.html">Actions tree</a>.
+        </p><p class="xsl_file" align="">
+          Now all <a class="xsl_file" href="../Environment/ActionPart.html">actions</a> inside of this cycle block  
+          are being <b>constantly cyclically executed</b> until the cycle condition is false. In other respects 
+          cycle conditions function the same way <a class="xsl_file" href="../Environment/IfPart.html">standard conditions</a> function.
+        </p></div></div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divRemarks','xsl_file_imgRemarks');"><img id="xsl_file_imgRemarks" src="../_TemplateMSDN_files/minus.gif" border="0" /> Remark
+        </span></h4><div><div id="xsl_file_divRemarks" class="xsl_file_container"><span class="xsl_file_test">Cycle conditions can be not only <b>simple</b> (texts or numbers comparison), but also <b>complex</b>
+      (formula, comparing with a property value of the other object).
+      To create a complex condition use
+      <a class="xsl_file" href="../Environment/Master.html">Complex operations wizard</a> (click on the button with a magic wand on it).
+      <p class="xsl_file" align="">
+        You can interrupt a cycle pre-term, without waiting for the rest of actions have been executed. Learn more about it in the section
+        <a class="xsl_file" href="../UsefulObjects.html">Useful Objects</a>.<a class="xsl_file" href="../UsefulObjects/_Interrupts.html">Interrupts</a></p></span></div></div><a class="xsl_file" name="see" /><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="SwapDisplay('xsl_file_divSeealso','xsl_file_imgSeealso');"><img id="xsl_file_imgSeealso" src="../_TemplateMSDN_files/minus.gif" border="0" /> See also
+        </span></h4><div id="xsl_file_divSeealso" class="xsl_file_container"><div class="xsl_file_container"><a class="xsl_file" href="../Environment.html">Development environment</a><br /><a class="xsl_file" href="../Objects.html">Objects</a><br /><a class="xsl_file" href="../UsefulObjects/Interrupts.html">Interrupts</a></div></div></div><p> </p></BODY></HTML>

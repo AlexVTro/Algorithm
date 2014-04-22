@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Открыть Excel</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          комманда открывает базу данных формата <b>Excel</b>, и отображает указанную таблицу из базы.
+          При этом <b>сохранить</b> таблицу после изменения в формат Excel уже нельзя. Также знайте, что открывается
+          только Excel <b>8.0</b>. Если ваша таблица Excel не открывается программой, то используйте эту:
+          <i>Проекты\Примеры\Сложные проекты\Таблица2\База Excel.xls</i>
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link2 file="Save table.html">Сохранить таблицу</link2><br/>
+      <link2 file="Save Access.html">Сохранить Access</link2><br/>
+      <link file="Objects.html">Объекты</link><br/>
+      Другие <propsLink/> объекта <objLink/><br/>
+      <eventsLink/> объекта <objLink/>
+    </seealso>
+
+  </file>
+</xml>

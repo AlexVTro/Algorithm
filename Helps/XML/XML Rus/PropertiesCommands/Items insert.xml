@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Вставить запись</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Позволяет вставить запись в список в определенное место по номеру записи</text>
+      </p>
+      <p>
+        <textAll>
+	  Этим свойством можно вставить в спискок конкретную нужную нам запись в то место, куда мы хотим чтобы она поместилась. Место записи выбирается по номерам записей списка. Например: номер первой записи - 0, второй - 1, третьей - 2 и т.д.
+  Чтобы вставить, например новую запись третьей по списку, в поле "Место для записи списка"  ставим значение "4". 
+   </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+     
+      <text>Если номер вставляемой записи в списке уже существует, новая запись заменит ее, а старую поставит на номер выше (визуально ниже) по списку. </text>
+    </remarks>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle></sampletitle>
+        <samplecode>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><li/><propsLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

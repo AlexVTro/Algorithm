@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Focus</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text><link2 file="Focused.html">Focus</link2> makes one particular object active, so the user works exactly with it (e.g. the user can focus a <link file="Objects/Text.html">text box</link> and values of all buttons he presses are input into this text box).</text>
+      </p>
+      <textAll>
+        <p>
+          The concept <b>"focus"</b> has the same meaning as in photocameras - "be in focus" means "be at the center of attention". In our case - be at the center of the user attention. If an object is out of the focus it remains <b>enabled</b>, but the user does not use it yet.
+        </p>
+        </textAll>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the objects <objLink/>
+    </seealso>
+
+  </file>
+</xml>

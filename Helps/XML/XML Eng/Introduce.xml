@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Itroduction page</title>
+    <breadcumbs>
+      <link file="Introduce.html">Itroduction page</link>
+    </breadcumbs>
+    <descriptionarticle >
+      <p>
+        <text>
+          Welcome to the <b>Development Environment of Algorithm2</b>! You can use it to create your own program of <b>any complexity</b>! All you need for this is fantasy and some desire to learn.
+        </text>
+      </p>
+      <textAll>
+        <p> <imgMy src="Oblozhka.jpg"></imgMy> </p>
+        <p>
+          <b>If there is something unclear for you in the Main Window of the program:</b><br/>
+          The main window and other interface elements are described in <link file="Environment.html">Development Environment of Algorithm2</link>.
+        </p>
+        <p>
+          <b>If it is not clear how to work with some object or property:</b><br/>
+          All objects and their properties, commands and events are described in sections
+          <link file="Objects.html">Objects</link> and <link file="UsefulObjects.html">Useful objects</link>.
+        </p>
+        <p>
+          <b>If you have a problem relating programming:</b><br/>
+Try to find solution in sections <link file="Environment.html">Development Environment</link>, <link file="Programming.html">Programming</link>,
+          <link file="Programming/HelpWords.html">Quick fill words</link>.
+        </p>
+        <p>
+          <b>Solutions of other problems:</b><br/>
+          In case you haven't found a solution in this Help section we advise you to visit the official site of the program <url file="http://www.Algorithm2.com">http://www.Algorithm2.com</url>
+        </p>
+      </textAll>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development Environment</link><br/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful objects</link><br/>
+      <link file="Programming.html">Programming</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link>
+    </seealso>
+  </file>
+</xml>

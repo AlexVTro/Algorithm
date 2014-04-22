@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Conditions tab</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Development environment</link>
+        ->
+        <link file="Environment/IfPart.html">Conditions tab</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Conditions</b> make it possible to specify whether the action should be executed at the moment or not.
+         Condition is a kind of rule, it is usually a <b>comparison</b> (e.g. 
+          <link file="Objects/Window/PropertiesCommands/Text.html">the text of the window</link> is equal to "Window1"
+          or <link file="Objects/Button/PropertiesCommands/Width.html">the button width</link> is more than 100) and all
+          <link file="Environment/ActionPart.html">actions</link> 
+          created in the framework of this condition are executed
+          only when the <b>condition is true</b> (i.e.
+          <link file="Objects/Window/PropertiesCommands/Text.html">the text of the window</link> is actually equal to "Window1"
+          and <link file="Objects/Button/PropertiesCommands/Width.html">the button width</link> is more than 100)
+        </text>
+      </p>
+      <textAll>
+        <p>
+          You can <b>set the condition</b> in the Conditions tab of
+          <link file="Environment.html">Algorithm2 development environment</link>:
+          <imgMy src="IfPart.jpg"></imgMy>
+        </p>
+        <p>
+          There you should specify the <b>condition itself</b> in the form of: "something" is equal/unequally to "something" 
+          ("unequally" is specified by the symbol &lt;&gt;, "more or equal" - by the symbol &gt;=)
+          <codesnip><![CDATA[Window1.Text1.Text = "Required text"
+Window1.Window1.Width > "200"
+Window1.Button1.Fore color <> black
+Window1.Window1.X >= Window1.Text1.Text]]></codesnip>
+          After you have clicked the button <b>Create</b> a condition block will appear in the 
+          <link file="Environment/TreePart.html">Actions tree</link>:
+        </p>
+        <p> <imgMy src="IfPart2.jpg"></imgMy>      </p>
+        <p>
+          Now all <link file="Environment/ActionPart.html">actions</link> inside of this condition block 
+          (in the example there is just one action - to make the window hidden) would be executed
+          <b>only in case</b> the Text of the object Window1 is equal to "Window"
+        </p>
+        <p>
+          But there is more to come. You can also create <b>otherCases</b> and a section <b>In all other cases</b>.
+          To do this <b>click</b> on the created <b>standard condition</b> and use the conditions tab.
+        </p>
+        <p>
+          <imgMy src="IfPart3.jpg"></imgMy>
+          <codesnip2>
+            <textAll>
+              <p>
+                Note: Symbol <b>_AND</b> is used to show that <b>both conditions</b> of the string:
+                and "Window1.Window1.Width &gt; 100" and "Window1.Window1.Width &lt; 300" should be met.
+                Along with <b>_AND</b> there is a symbol <b>_OR</b> which means that the condition is true
+                <b>even if one of the conditions</b> is true, i.e. either "Window1.Window1.Width &gt; 100",
+                or "Window1.Window1.Width &lt; 300".
+                All this you can do using <link file="Environment/Master.html">Complex operations wizard</link> (click on the button with a magic wand on it)
+              </p>
+            </textAll>
+          </codesnip2>
+        </p>
+        <p>
+          <b>otherCases:</b><br/>
+          They are verified only in case a standard condition is <b>false</b>.
+          If the otherCase is true, then <b>its</b> actions are executed. If false, then the
+          <b>next</b> otherCases are verified. OtherCases are created in the same way as standard conditions.
+        </p>
+        <p>
+          <b>In all other cases:</b><br/>
+          This section is aimed for cases when the condition and otherCases (if they are given) are <b>false</b>.
+          All its actions would be executed only if condition is not true.
+        </p>
+      </textAll>
+    </descriptionarticle>
+    
+    <remarks>
+      <text>Conditions can be not only <b>simple</b> (texts or numbers comparison), but also <b>complex</b>
+      (formula, comparing with a property value of the other object).
+      To create a complex condition use
+      <link file="Environment/Master.html">Complex operations wizard</link> (click on the button with a magic wand on it).
+        <p>
+          You can interrupt a condition pre-term, without waiting for the rest of actions have been executed. Learn more about it in the section
+          <link file="UsefulObjects.html">Useful Objects</link>.<link file="UsefulObjects/_Interrupts.html">Interrupts</link>
+        </p>
+      </text>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development environment</link><br/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects/_Interrupts.html">Interrupts</link>
+    </seealso>
+  </file>
+</xml>

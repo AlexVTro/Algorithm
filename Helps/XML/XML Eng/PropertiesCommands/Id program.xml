@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>ID program</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          For <b>every</b> program a special <b>unique ID program</b> is generated. All registration keys are associated with the specific <b>ID program</b>. If you'd change ID, all keys associated with the old ID would become invalid for the new ID. The <link2 file="Key encryption.html">encryption key</link2> should also remain the same.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <remarks>
+      <text>
+        If you use two objects Trial, for example, one for activation key input and the other for generation of these keys        (like in the example <i>Examples\Difficult projects\Trial</i>) then make sure that <b>Id program</b> and <b>encryption key</b> are the <b>same</b>!
+      </text>
+    </remarks>
+ 
+    <seealso>
+      <est/>
+      <link2 file="Id user.html">Id user</link2><br/>
+      <link2 file="Key issue.html">Key issue</link2><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Открыть медиафайл</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Данным свойством выбираем, какой файл хотим проиграть. Только после того, как открыли медиафайл, его можно проиграть свойством "Плей". </text>
+      </p>
+      <p>
+        <textAll>
+	 
+   </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+     
+      <text></text>
+    </remarks>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Пример открытия mp3 файла и его последующее проигрывание:</sampletitle>
+        <samplecode>
+<![CDATA[Окно1.Аудио1.Открыть медиафайл = "С:\Track1.mp3"
+Окно1.Аудио1.Плей]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><li/><propsLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

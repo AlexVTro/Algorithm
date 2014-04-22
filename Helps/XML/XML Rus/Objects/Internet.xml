@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Интернет</title>
+    <breadcumbs>
+      <link file="Objects.html">Объекты</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>Объект дает возможность работать с интернетом, осуществлять  POST/GET –запросы, получать результаты запросов, скачивать файлы с ресурсов сети Интернет.  С помощью POST/GET-запросов можно получать(GET)  содержимое web-страниц,  а также отправлять (POST) пользовательские  данные какому-нибудь ресурсу Интернет (например, подставлять в переменные Логин и Пароль, или другую информацию).  Большенство свойств возвращают параметры хидеров(header), полученных от сервера. Потому, разобравшись с ними, вопросов у Вас будет намного меньше.
+      Для более понятного изучения объекта просмотрите пример "Интернет" в папке Проекты\Примеры\Простые примеры, а также прочитайте страничку <link2 file="http://ru.wikipedia.org/wiki/HTTP">Википедии</link2>
+</text>
+      </p>
+      <p>
+        <textAll></textAll>
+      </p>
+      <p>
+        <i>
+          <text>Возможности этого объекта:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>События</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Свойства и комманды</name>
+            <descr> 
+              
+              <descrProperties/>
+              
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Object events.html">Объект события</link><br/>
+      Другие <link file="Objects.html">Объекты</link><br/>
+      <link file="UsefulObjects.html">Полезные объекты</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

@@ -13,3 +13,6 @@ D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\Help
 D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\Help1.Progress.resources
 D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\GenerateResource-ResGen.read.1.tlog
 D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\obj\Debug\GenerateResource-ResGen.write.1.tlog
+E:\Work\Alg\Algoritm 2\obj\Debug\Help1.exe
+E:\Work\Alg\Algoritm 2\obj\Debug\Help1.xml
+E:\Work\Alg\Algoritm 2\obj\Debug\Help1.pdb

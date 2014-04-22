@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Settings</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Development environment</link>
+        ->
+        <link file="Environment/Options.html">Settings</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          You can open a configuration dialog box by selecting menu items <b>Tools</b> -> <b>Settings</b>. Dialog box sections:
+        </text>
+      </p>
+      <textAll>
+        <p>
+          <b>Interface language:</b><br/>
+          Here you can choose a language of <b>development environment</b>. All menus and titles will be shown in the language specified, but the language in which the project has been created initially remains for all actions and programming.
+        </p>
+        <p>
+          <b>Programming language:</b><br/>
+          is the language in which all <b>new</b> projects will be programmed after the given option has been changed, but the language in which the <b>current</b> project has been created initially remains for all actions and programming of this project. To change the language of the current project select
+          menu items <b>Tools</b> -> <b>Translate project into</b>.
+        </p>
+        <p>
+          <b>Skin:</b><br/>
+          is a theme of Algorithm2 development environment.
+        </p>
+        <p>
+          <b>Project Folder:</b><br/>
+          is a folder where all projects are stored on default. You can create your own directories there.
+        </p>
+        <p>
+          <b>Default folder with project images:</b><br/>
+          When you specify images in the <link file="Environment/PropertiesPart.html">Properties panel</link>
+         they are automatically copied into a <b>special image folder</b> which is stored in the 
+          <b> directory of your project</b>. You can <b>rename</b> this image folder in this setting
+          and it will have this title in all <b>new</b> projects, but for the current project it <b>won't change</b>.
+        </p>
+        <p>
+          <b>Current project's images folder:</b><br/>
+          When you specify images in the <link file="Environment/PropertiesPart.html">Properties panel</link>
+         they are automatically copied into a special image folder which is stored in the 
+          directory of your project. You can <b>rename</b> this image folder in this setting
+          and the title <b>will be changed</b> right for the current project.
+        </p>
+        <p>
+          <b>Default image filename:</b><br/>
+          When you specify images in the <link file="Environment/PropertiesPart.html">Properties panel</link>
+          they are automatically copied into a special image folder which is stored in
+          the directory of your project. The <b>image title</b> changes to the title specified in this setting.
+        </p>
+        <p>
+          <b>Program's icon:</b><br/>
+          When you create an <b>exe</b>-file of your project (File -> Compile Executable) the file gets an icon specified in this option.
+        </p>
+        <p>
+          <b>Show loading window at the project start:</b><br/>
+          When users <b>run</b> your program it takes <b>some time</b> for the program to be loaded completely and to be displayed. So during this time a 
+          <b>loading window</b> with a progress bar is being displayed to the user. In this setting you can disable the option.
+        </p>
+      </textAll>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development environment</link>
+    </seealso>
+  </file>
+</xml>

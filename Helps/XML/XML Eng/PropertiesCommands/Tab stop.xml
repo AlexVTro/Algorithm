@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Tab stop</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>When the <b>Tab</b> key is pressed all objects of the window are <b>activated in turn</b> (they become <link2 file="Focused.html">focused</link2>). This property controls whether an object should be <b>activated</b> in its turn or <b>skipped</b>.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link2 file="Focused.html">Focused</link2><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Events</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        Объекты
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <eventsLink/>
+      </text>
+    </breadcumbs>
+    <descriptionarticle only="true">
+      <p>
+        <text>
+          <b>Events</b> are actions performed by the user (clicking, cursor moving, keys pressing) which can be registered by <link file="Objects.html">objects</link>.
+        </text>
+      </p>
+      <p>
+        <textAll>
+          Every object has <b>particular events</b> to register.  You can program registering of events in the
+          <link file="Environment/ActionPart.html">Actions tab</link>. After you've programmed it all actions inside of the event in the
+          <link file="Environment/TreePart.html">Actions tree</link> would be executed only when the given event has occured (for example, after clicking).
+        </textAll>
+        <imgMy src="EventPart.jpg"></imgMy>
+      </p>
+      <p>
+        <i>
+          <text>
+            </text>
+        </i>
+        <childlist type="event">
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est/>
+      <link2 file="PropertiesCommands.html">Properties and Commands</link2> of the object <objLink/>
+    </seealso>
+  </file>
+</xml>

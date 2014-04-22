@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Quick fill words</title>
+
+    <breadcumbs>
+      <text>
+        <link file="Programming.html">Programming</link>
+        ->
+        <link file="Programming/HelpWords.html">Quick fill words</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text><b>Quick fill words</b> are letter symbols for specifying of different values  
+        (colors, cursors, etc.). They are used when it is necessary to assign a the property the <b>value</b>.</text>
+      </p>
+      <textAll>
+        <p>
+          For example, to make the window red it is enough to assign property  
+          <link file="Objects/Window/PropertiesCommands/Back color.html">Back color</link> a quick fill word "Red".
+          Or if it is necessary to set a specific <link file="Objects/Button/PropertiesCommands/Text Align.html">Text Align</link> on a button, then you should assign the property Text Align a quick fill word "Center".
+        </p>
+        <p>
+          Quick fill words change <b>nothing</b> and do nothing,  they are just information specified in objects' properties.
+          All quick fill words are grouped in <b>categories</b> (paths, image align, cursors) and located in <b>menu</b>, which becomes available after clicking with right mouse button on any text field in <link file="Environment.html">Development Environment of Algorithm2</link>.
+        </p>
+      </textAll>
+      <p>
+        <i>
+          <text>The list of all categories of quick fill words:</text>
+        </i>
+        <childlist type="HelpWords">
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link>
+    </seealso>
+  </file>
+</xml>

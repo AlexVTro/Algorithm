@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Font family</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          It is the name of the <b>font</b> used for the object text (Arial, Time new roman, etc.).
+        </text>
+      </p>
+      <p>
+        <textAll>
+          All available <b>fonts</b> are specified in 
+          <link file="Programming/HelpWords.html">Quick fill words</link> ->
+          <link file="Programming/HelpWords.html#Font family">Font family</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how button font can be set: </sampletitle>
+        <samplecode>
+          <![CDATA[Window1.Button1.Font family = Arial Black
+Window1.Button1.Font family = "Time" & " new roman"
+Window1.Button1.Font family = Window1.Button2.Font family
+Window1.Button1.Font family = Window1.Text1.Text]]>
+        </samplecode>
+      </sample>
+    </samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link> ->
+      <link file="Programming/HelpWords.html#Font family">Font family</link><br/>
+      <link2 file="Font bold.html">Font bold</link2><br/>
+      <link2 file="Font italic.html">Font italic</link2><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

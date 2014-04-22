@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Events tab</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Development environment</link>
+        ->
+        <link file="Environment/EventPart.html">Events tab</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Events</b> are actions performed by the user (clicking, cursor movement, etc.) which are connected with
+          <link file="Objects.html">objects</link> (buttons, labels, windows). In <b>Events panel</b> you can assign objects those events which should be detected in the process of program work.
+        </text>
+      </p>
+      <textAll>
+        <p>
+          <b>To assign</b> an object some <b>event</b> select the latter in the list of events, then click the button Create. 
+          All these functions you can find in the Events panel of <link file="Environment.html">Algorithm2 development environment</link>.
+        </p>
+        <p>
+          So if you <b>assign</b> the object <b>Button</b>the event <b>Click</b>, then all actions inside of this event are executed every time after the button has been clicked:
+          <imgMy src="EventPart.jpg"></imgMy>
+        </p>
+        <p>
+          In this example after clicking on the button the text of the window title changes to "Window1".
+        </p>
+      </textAll>
+    </descriptionarticle>
+    
+    <remarks>
+      <text>Events are not only the actions performed by the user (clicking, text typing, sizing), but also those inside of the objects. 
+      For example, such events as <link file="Objects/Memory/Events/Changing value.html">memory cell value changing</link>, <link file="Objects/Media/Events/On end.html">video-file playing completion</link>,
+      <link file="Objects/Stopwatch/Events/Tick.html">stopwatch ticking</link>, etc.</text>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development environment</link><br/>
+      <link file="Objects.html">Objects</link>
+    </seealso>
+  </file>
+</xml>

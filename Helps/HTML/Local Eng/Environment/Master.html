@@ -1,0 +1,75 @@
+﻿<HTML><HEAD><link href="../_TemplateMSDN_files/MSDNstyles.css" type="text/css" rel="stylesheet" /><script language="javascript">var gCHM=true;</script><script language="javascript" src="../_TemplateMSDN_files/common.js">var a;</script><script language="javascript" src="../_TemplateMSDN_files/script.js">var b;</script><TITLE>Complex operations wizard</TITLE></HEAD><BODY class="xsl_file"><div class="notshown"><img src="../_TemplateMSDN_files/plus.gif" /><img src="../_TemplateMSDN_files/plus_small.gif" /></div><div class="xsl_file_header"><div class="xsl_file_title">Complex operations wizard</div><div class="xsl_file_breadcumbs"><a class="xsl_file" target="_top" href="../index.html&#xA;          ">
+      Help
+    </a> -&gt;
+    <span class="xsl_file_test"><a class="xsl_file" href="../Environment.html">Development environment</a>
+        -&gt;
+        <a class="xsl_file" href="../Environment/Master.html">Complex operations wizard</a></span></div><br /><a class="xsl_file" href="#see">See also</a></div><div class="xsl_file_header1"><span class="xsl_file_spanLink" onClick="javascript:ChColExpAll('xsl_file_spColexpAll', 'xsl_file_imgColexpAll')"><img id="xsl_file_imgColexpAll" src="../_TemplateMSDN_files/minus_small.gif" align="absmiddle" /><span id="xsl_file_spColexpAll">Collapse all</span></span></div><div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divSyntax','xsl_file_imgSyntax');"><img id="xsl_file_imgSyntax" src="../_TemplateMSDN_files/minus.gif" border="0" /> Description
+      </span></h4><div><div id="xsl_file_divSyntax" class="xsl_file_container"><p class="xsl_file" align=""><b>Complex operations wizard</b> is the most complex part of Algorithm environment, but it
+          gives <b>lots of potentials</b> for developing a great variety of software solutions.
+        </p><p class="xsl_file" align="">
+          To open the wizard click a button with <b>a magic wand</b> on it. This button can be found to the right of text boxes (e.g. in <a class="xsl_file" href="../Environment/ActionPart.html">Actions tab</a>).
+        </p><p class="xsl_file" align="">
+          Let's learn the process of creating a complex action by the example of calculating how many years have gone from the year specified in the
+          <a class="xsl_file" href="../Objects/Text.html">text box</a>:
+          <div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/Master.jpg" alt="" /></div></p><p class="xsl_file" align="">
+          Here the string "Years have gone" is concatenated with the result of calculation, where the
+          <a class="xsl_file" href="../UsefulObjects/_Date/PropertiesCommands/Today.html">current year</a> is subtracted out of the year specified in the
+          <a class="xsl_file" href="../Objects/Text.html">text box</a> (Window1.Text1.Text).
+          For example, if in the text box you input "2000" and today is 2009, then the result of the complex operation produced in the wizard is to be: "Years have gone: -9", that's because "2000" - "2009" is "-9".
+          If we press the button <b>Ок</b>, then the wizard would give us <b>the result</b> of its work. This is a complex operation, in our case: <i>"Years have gone: " &amp; (Absolute(Window1.Text1.Text) -
+          _Useful objects._Date._Year(_Useful objects._Date._Today))</i></p><p class="xsl_file" align="">
+          Now let's review each element of the wizard in details:
+        </p><p class="xsl_file" align=""><table style="border: 1px #bbbbbb solid;" cellpadding="1" cellspacing="0"><tbody><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>1 - Wizard blocks</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    The wizard consists of <b>blocks</b> which help to compose complex operations.
+                    The number of blocks is unlimited, you can <b>add</b> them by clicking button <b>2</b> and <b>delete</b> by clicking button <b>4</b>.
+                  </p><p class="xsl_file" align="">
+                    Each <b>block</b> have two states: a <b>simple</b> one - when particular data is input
+                    (as in the first block on the shot) and a <b>complex</b> state - when one can choose properties of the object (the second and third blocks on the shot). You can switch between two states by clicking button <b>6</b>.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>2 - Addition of a block</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    This button <b>adds</b> a new block in the place near the button.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>3 - Parentheses  arrangement</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    Each block can be separated with parentheses. There are <b>left</b> and <b>right</b> parentheses, their number is <b>unlimited</b> and the number of left ones can differ from the number of right ones.
+                    For example, if you need to create an action (("-2")+"3"), then in the first block (where 
+                    the number "-2" is) you should specify two left parentheses and one right. And in the second block (where the number
+                  "3" is) you should specify just one right parenthesis.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>4 - Deletion of a block</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    This button <b>deletes</b> a block.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>5 - Additional function</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    For each block you can use additional <b>function</b>. All additional
+                    functions are <b>common mathematical</b>
+                    operations - root, sine, cosine, rounding, changing sign. As for the shot, in the block 2 the function
+                    <b>absolute</b> is used (this function makes a negative number positive in case something like 
+                    "-2000" would be input).
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><b>6 - Change of block state</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-bottom: 1px #cccccc solid; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    Each <b>block</b> have 2 states: a <b>simple</b> one - when particular data is input
+                    (as in the first block on the shot) and a <b>complex</b> one - when one can choose properties of the object
+                    (the second and third blocks of the shot). By clicking this button you'll <b>change</b> the block state from simple to complex.
+                  </p></span></td></tr><tr><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; border-right: 1px #cccccc solid; "><span class="xsl_file_test"><b>7 - Blocks connection</b></span></td><td class="xsl_file" colspan="" rowspan="" style="padding: 2px; "><span class="xsl_file_test"><p class="xsl_file" align="">
+                    All blocks are bound with a particular <b>type of connection</b>. Connection can be <b>mathematical</b>
+                    (addition, division, concatenation) and <b>logical</b> (unequally, more, less, _AND, _OR).
+                  </p><p class="xsl_file" align="">
+                    In the given example we have a <b>mathematical connection</b>, i.e. blocks are connected with some mathematical
+                    operation. Here blocks 2 and 3 are <b>bound by subtraction</b> and the block 2 is a
+                    <b>minuend</b> and the block 3 is a <b>subtrahend</b>. Between block 1 and the difference of blocks 2 and 3 there is  a
+                    <b>plus</b>, which means that they are connected with <b>addition</b> and the result of the action is a <b>sum</b> 
+                    of summands of <i> block 1</i> and <i>(block 2 - block 3)</i>.
+                  </p><p class="xsl_file" align="">
+                    Apart from mathematical connection there is also a <b>logical</b> connection (equal, unequally, more, less or equal).
+                    This type of connection is helpful in creating
+                    <a class="xsl_file" href="../Environment/IfPart.html">events</a> and
+                    <a class="xsl_file" href="../Environment/CyclePart.html">cycles</a>.
+                    The result of condition is whether the condition is <b>true</b> or 
+                    <b>false</b>. So if it is necessary to create an event, then logical operators are used
+                    which definitely indicate <b>either "Yes"</b>, <b>or "No"</b>. 
+                    For example, expression "2" &lt; "3" can be either a true condition,
+                    or a false one. There are <b>no other variants</b>. In the example it's true.
+                  </p><p class="xsl_file" align="">
+                    Besides, if the condition is <b>complex</b>, then special logical operations are used:
+                    <b>_AND</b> and <b>_OR</b>. If two conditions are connected with <b>_AND</b>, then their mutual result would be "Yes" 
+                    (i.e. taken together they would be a true condition) only if <b>both condtions are true</b>.
+                    For example, if we need to confirm that the number specified in the text box is more than 5 and less than 10, then in the wizard it looks like this:
+                  </p><p class="xsl_file" align=""><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/Master2.jpg" alt="" /></div></p><p class="xsl_file" align="">
+                    Similarly to this the mutual result of two conditions connected with <b>_OR</b> would be a true condition
+                    <b>even if one of the condition is true</b>. So if you need to confirm that the number specified in the text box is less than 2 and more than 7, then in the wizard it looks like this:
+                    <i>Window1.Window1.Text &lt; "2" _AND Window1.Text1.Text &gt; "7"</i></p></span></td></tr></tbody></table></p></div></div><a class="xsl_file" name="see" /><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="SwapDisplay('xsl_file_divSeealso','xsl_file_imgSeealso');"><img id="xsl_file_imgSeealso" src="../_TemplateMSDN_files/minus.gif" border="0" /> See also
+        </span></h4><div id="xsl_file_divSeealso" class="xsl_file_container"><div class="xsl_file_container"><a class="xsl_file" href="../Environment.html">Development environment</a><br /><a class="xsl_file" href="../Objects.html">Objects</a><br /><a class="xsl_file" href="../Environment/IfPart.html">Conditions</a><a class="xsl_file" href="../Environment/CyclePart.html">Cycles</a></div></div></div><p> </p></BODY></HTML>

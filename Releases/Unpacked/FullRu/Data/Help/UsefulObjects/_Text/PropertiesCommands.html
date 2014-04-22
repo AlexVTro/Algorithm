@@ -1,0 +1,121 @@
+﻿<HTML><HEAD><link href="../../_TemplateMSDN_files/MSDNstyles.css" type="text/css" rel="stylesheet" /><script language="javascript">var gCHM=true;</script><script language="javascript" src="../../_TemplateMSDN_files/common.js">var a;</script><script language="javascript" src="../../_TemplateMSDN_files/script.js">var b;</script><TITLE>Свойства и комманды</TITLE></HEAD><BODY class="xsl_file"><div class="notshown"><img src="../../_TemplateMSDN_files/plus.gif" /><img src="../../_TemplateMSDN_files/plus_small.gif" /></div><div class="xsl_file_header"><div class="xsl_file_title">Свойства и комманды</div><div class="xsl_file_breadcumbs"><a class="xsl_file" target="_top" href="../../index.html&#xA;          ">
+      Справка
+    </a> -&gt;
+    <a class="xsl_file" href="../../Objects.html">
+        Объекты
+      </a><span class="xsl_file_test">
+        -&gt; <a class="xsl_file" href="../../UsefulObjects/_Text.html&#xA;      ">_Текст</a></span><span class="xsl_file_test">
+        -&gt; <a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands.html&#xA;      ">
+      Свойства и комманды
+    </a></span></div><br /><a class="xsl_file" href="#see">Смотрите также</a></div><div class="xsl_file_header1"><span class="xsl_file_spanLink" onClick="javascript:ChColExpAll('xsl_file_spColexpAll', 'xsl_file_imgColexpAll')"><img id="xsl_file_imgColexpAll" src="../../_TemplateMSDN_files/minus_small.gif" align="absmiddle" /><span id="xsl_file_spColexpAll">Свернуть все</span></span></div><div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divSyntax','xsl_file_imgSyntax');"><img id="xsl_file_imgSyntax" src="../../_TemplateMSDN_files/minus.gif" border="0" /> Описание
+      </span></h4><div><div id="xsl_file_divSyntax" class="xsl_file_container"><span class="xsl_file_test"><p class="xsl_file" align=""><b>Свойства</b> - это настройки <a class="xsl_file" href="../../Objects.html">объектов</a> (цвет, текст, размер), 
+          изменяя которые вы можете настроить объект необходимым образом.
+          Объекты также могут выполнять некоторые действия над собой, которые называются <b>коммандами</b>.
+      </p><p class="xsl_file" align="">
+          Изменять свойства можно вручную в <a class="xsl_file" href="../../Environment/PropertiesPart.html">Разделе свойств</a>.
+          Или запрограммировать их изменение в <a class="xsl_file" href="../../Environment/ActionPart.html">Разделе действий</a>.
+          Во втором случае сначала для объекта создается <a class="xsl_file" href="Events.html">событие</a> в 
+          <a class="xsl_file" href="../../Environment/EventPart.html">Разделе событий</a>,
+          при котором данное свойство должно поменяться.
+          Примеры использования свойств и комманд в Разделе действий:</p></span><pre class="xsl_file_codesnip">Окно1.Объект1.Текст = "Новый текст1"
+Окно1.Объект2.Рисунок = "C:\Картинка.jpg"
+Окно1.Объект2.Получить фокус</pre><p class="xsl_file" align=""><i><span class="xsl_file_test" /></i>
+        Список свойств объекта <a class="xsl_file" href="../../UsefulObjects/_Text.html&#xA;      ">_Текст</a>:
+      <table style="margin-left: 20px" cellpadding="1" cellspacing="1"><col width="20" /><col width="30%" /><col /><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Substring.html" /><name>_Взять кусок текста</name></td><td class="xsl_file_lt">
+          Позволяет взять из текста любую его часть, если известен порядковый номер первого символа части и ее длинна.
+          Например, из текста "Привет мир!" можно получить второе слово ("мир") указав, что начало куска 8-ой символ,
+          а длинна куска 3 символа. В этом случае результатом работы комманды будет слово "мир".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Insert.html" /><name>_Вставить символы в текст</name></td><td class="xsl_file_hl">Вставляет в любое место текста то, что вы захотите.</td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Replace one.html" /><name>_Заменить</name></td><td class="xsl_file_lt">Ищет в тексте первую встретившуюся строку, которая указана в качестве поисковой.
+        И заменяет эту строку на текст, переданный как текст для замены.</td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Replace all.html" /><name>_Заменить все</name></td><td class="xsl_file_hl">Ищет в тексте все строки, похожие на шаблон поиска.
+        И заменяет все эти строки на тексты, которые указаны как текст для замены.</td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Encrypt text.html" /><name>_Зашифровать текст</name></td><td class="xsl_file_lt" /></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Put in quotes.html" /><name>_Кавычками обособить</name></td><td class="xsl_file_hl">
+          комманда заключает переданный ей текст в кавычки. Также, если в тексте уже есть двойная
+          кавычка ("), то она преобразуется в две двойных кавычки (" -&gt; "").
+          Например, текст Привет, "Друг" после работы данной комманды превратится в "Привет, ""Друг""".
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Delete quotes.html" /><name>_Кавычки убрать</name></td><td class="xsl_file_lt">
+          Если исходный текст обособлен кавычками, то комманда убирает эти кавычки. Также если встретятся две двойные
+          кавычки ("") внутри текста, обособленного кавычками, то они превратятся в одну двойную кавычку ("" -&gt; ").
+          Например, текст "Привет, ""Друг""" после работы данной комманды превратится в Привет, "Друг".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Chars length.html" /><name>_Количество символов</name></td><td class="xsl_file_hl">
+          Данное свойство возвращает количество символов в тексте.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Lines count.html" /><name>_Количество строк</name></td><td class="xsl_file_lt" /></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Split without quotes count.html" /><name>_Количество частей без кавычек</name></td><td class="xsl_file_hl">
+          Позволяет узнать на сколько частей можно разбить текст, части которого будут разделяются каким-либо символом
+          или строкой. Если во время поиска в тексте встретится кусок текста,
+          обособленный кавычками, то этот кусок пропускается и поиск в нем не производится.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Split count.html" /><name>_Количество частей текста</name></td><td class="xsl_file_lt">
+          Позволяет узнать на сколько частей можно разбить текст, части которого будут разделяются каким-либо символом 
+          или строкой. Например, если разбить текст "привет, как дела, а?" на части, указав
+          разделительным символом ",". То текст разобьется на "привет", " как дела" и " а?", и комманда вернет вам их 
+          количество равное "3".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Index of without quotes.html" /><name>_Поиск без кавычек</name></td><td class="xsl_file_hl">
+          комманда ищет указанный вами текст и возвращает номер символа, начиная с которого, идет 
+          ваш искомый текст. Регистр букв при поиске не имеет значения, 
+          т.е. буквы "А" и "а" считаются одинаковыми. Если во время поиска в тексте встретится кусок текста,
+          обособленный кавычками, то этот кусок пропускается и поиск в нем не производится. Если ничего найдено
+          не будет, то комманда вернет значение "0".
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Index of ignore case.html" /><name>_Поиск в тексте</name></td><td class="xsl_file_lt">
+          комманда ищет указанный вами текст и возвращает номер символа, начиная с которого, идет 
+          ваш искомый текст. Если ничего найдено не будет, то комманда вернет значение "0".
+          Регистр букв при поиске не имеет значения, т.е. буквы "А" и "а" считаются одинаковыми.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Last index of ignore case.html" /><name>_Поиск в тексте с конца</name></td><td class="xsl_file_hl">
+          комманда ищет в тексте указанную вами строку начиная с конца текста и возвращает номер символа,
+          начиная с которого, идет ваша искомая строка. Регистр букв при поиске не имеет значения, 
+          т.е. буквы "А" и "а" считаются одинаковыми.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Index of line.html" /><name>_Поиск номера строки</name></td><td class="xsl_file_lt" /></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Index of regular.html" /><name>_Поиск с регулярными выражениями</name></td><td class="xsl_file_hl">
+          комманда ищет в тексте указанный вами шаблон регулярного выражения (например, "Рисунок1\.(jpg|gif|png)")
+          и возвращает номер символа, начиная с которого, идет ваша искомая строка.
+          Если ничего найдено не будет, то комманда вернет значение "0".
+          О том как пишутся
+          регулярные выражения можно прочитать здесь http://ru.wikipedia.org/wiki/Регулярные_выражения.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Index of.html" /><name>_Поиск с учетом регистра</name></td><td class="xsl_file_lt">
+          комманда ищет указанный вами текст и возвращает номер символа, начиная с которого, идет 
+          ваш искомый текст. Регистр букв при поиске имеет значение, т.е. буквы "А" и "а" считаются разными.
+          Если ничего найдено не будет, то комманда вернет значение "0".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Split.html" /><name>_Разбить на части</name></td><td class="xsl_file_hl">
+          Позволяет любой текст разбить на части, разделяемые каким-либо символом или строкой. И потом возвращает ту часть
+          текста, номер которой вы укажите. Например, если разбить текст "привет, как дела, а?" на части, указав
+          разделительным символом ",". То текст разобьется на "привет", " как дела" и " а?". И если вы укажите
+          в качестве номера части 3, то получите текст " а?".
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Split without quotes.html" /><name>_Разбить на части без кавычек</name></td><td class="xsl_file_lt">
+          Позволяет любой текст разбить на части, разделяемые каким-либо символом или строкой. И потом возвращает ту часть
+          текста, номер которой вы укажите. Если во время поиска в тексте встретится кусок текста,
+          обособленный кавычками, то этот кусок пропускается и поиск в нем не производится. 
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Decrypt text.html" /><name>_Расшифровать текст</name></td><td class="xsl_file_hl" /></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_To upper.html" /><name>_Сделать буквы заглавными</name></td><td class="xsl_file_lt">
+          комманда делает все буквы в тексте заглавными, т.е. переводит в верхний регистр ("а" -&gt; "А")
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_To lower.html" /><name>_Сделать буквы прописными</name></td><td class="xsl_file_hl">
+          комманда делает все буквы в тексте прописными, т.е. переводит в нижний регистр ("А" -&gt; "а")
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Chars.html" /><name>_Символ по номеру</name></td><td class="xsl_file_lt">
+          Данное свойство возвращает символ, порядковый номер которого вы передали свойству. 
+          Первый символ имеет номер "1". Если символов в тексте меньше, чем номер который вы передали, то 
+          это свойство вернет пустоту, т.е. "".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Compare.html" /><name>_Сравнить тексты</name></td><td class="xsl_file_hl">
+          комманда сравнивает тексты и если они равны возвращает "0". Если неравны, то когда первый текст выше по алфавиту
+          второго, то комманда будет равна "-1". Если второй текст в алфавитном порядке выше первого, то комманда вернет "1".
+          Т.о. с помощью данной комманды можно, например, организовать сортировку текстов по алфавиту.
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Line.html" /><name>_Строка по номеру</name></td><td class="xsl_file_lt">
+          Данное свойство возвращает строку, порядковый номер которой вы передали свойству. 
+          Первая строка имеет номер "1". Если строк в тексте меньше, чем номер, который вы передали, то 
+          это свойство вернет пустоту, т.е. "".
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Is numeric text.html" /><name>_Текст есть цифры</name></td><td class="xsl_file_hl">
+          Проверяет, чтобы текст состоял только из цифр ("0123456789").
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Is number text.html" /><name>_Текст есть число</name></td><td class="xsl_file_lt">
+          Проверяет, является ли текст числом ("23", "-12,54", "3,2+E12").
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Consist no.html" /><name>_Текст не содержит</name></td><td class="xsl_file_hl">
+          комманда проверяет наличие любых символов в исходном тексте. Если хотя бы один из указанных символов присутствует
+          в тексте, то комманда вернет значение "Нет", если ни один из перечисленных символов не содержится в тексте,
+          то комманда будет равна значению "Да". Например, если в тексте
+          "ывАаы" искать символы "па8", то комманда возвратит "Нет" (т.е. текст содержит символ "а").
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Consist.html" /><name>_Текст содержит</name></td><td class="xsl_file_lt">
+          комманда проверяет наличие любых символов в исходном тексте. Если хотя бы один из указанных символов присутствует
+          в тексте, то комманда вернет порядковый номер этого символа в исходном тексте. Например, если в тексте
+          "ывАаы" искать символы "па8", то комада возвратит "4", т.е. номер символа "а" в исходном тексте.
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Consist all.html" /><name>_Текст состоит из</name></td><td class="xsl_file_hl">
+          Проверяет, чтобы текст состоял исключительно из символов, переданных этой комманде. Если хотя бы
+          один символ будет не такой, комманда вернет "Нет".
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Trim all.html" /><name>_Убрать пробелы</name></td><td class="xsl_file_lt">
+          Убирает из конца текста и из начала все пробельные символы (пробелы, символы табуляции, абзацев).
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Trim end.html" /><name>_Убрать пробелы в конце</name></td><td class="xsl_file_hl">
+          Убирает из конца текста все пробельные символы (пробелы, символы табуляции, абзацев).
+        </td></tr><tr><td class="xsl_file_lt"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_lt"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Trim start.html" /><name>_Убрать пробелы в начале</name></td><td class="xsl_file_lt">
+          Убирает из начала все пробельные символы (пробелы, символы табуляции, абзацев).
+        </td></tr><tr><td class="xsl_file_hl"><img border="0" align="middle" src="../../_TemplateMSDN_files/Icons/27.png&#xA;                    " /></td><td class="xsl_file_hl"><a class="xsl_file" href="../../UsefulObjects/_Text/PropertiesCommands/_Remove.html" /><name>_Удалить кусок текста</name></td><td class="xsl_file_hl">Удаляет из текста определенную часть.</td></tr></table></p></div></div><a class="xsl_file" name="see" /><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="SwapDisplay('xsl_file_divSeealso','xsl_file_imgSeealso');"><img id="xsl_file_imgSeealso" src="../../_TemplateMSDN_files/minus.gif" border="0" /> Смотрите также
+        </span></h4><div id="xsl_file_divSeealso" class="xsl_file_container"><div class="xsl_file_container"><a class="xsl_file" href="Events.html">События</a> объекта <a class="xsl_file" href="../../UsefulObjects/_Text.html&#xA;      ">_Текст</a></div></div></div><p> </p></BODY></HTML>

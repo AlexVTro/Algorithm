@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Index</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Along with <link file="Objects/Window/PropertiesCommands/Name.html">name</link> <b> index</b> is an 
+        <b>identifying</b> property of the object. This property helps to differentiate
+        <link file="Objects.html">objects</link> with same names
+        (in <link file="Programming/Array.html">arrays</link>).</text>
+      </p>
+      <p>
+        <textAll>
+          Index can be <b>any positive</b> number. Besides, when you create actions and it is necessary to specify the object index, you can use
+          <link file="Programming/HelpWords.html#Others">Quick fill word</link> <b> "All..."</b>.
+          In this case the created action is applied to <b>all objects</b> with the specified <b>name</b> independently of their <b>indices</b>.
+          
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+      <text>
+        Two objects should not have both <b>same names and indices</b>, because these properties are destined for unambiguous identification of the object in the Algorithm environment.
+      </text>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="Programming/Array.html">Array</link><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

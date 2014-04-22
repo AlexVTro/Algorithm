@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Font color</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>It specifies the color of the object text.</text>
+      </p>
+      <p>
+        <textAll>
+          <b>All colors</b> can be set in text values (Red, Blue, Black). See more details in the section 
+          <link file="Programming/HelpWords.html">Quick fill words</link> ->
+		  <link file="Programming/HelpWords.html#Colors">Colors</link>.
+          The color can be also specified <b>in a special form</b> where the tint of the red color is specified firstly, then in semicolumn - the tint of green and at last - the tint of blue. Maximum tint has the value of 255, minimal - 0. For example:
+          <codesnip>
+<![CDATA["255; 0; 0;" = red
+"0; 0; 255;" = blue
+"0; 0; 0;" = black
+"255; 255; 255;" = white
+"255; 255; 128;" = pale yellow]]>
+        </codesnip>
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+      <text>If you want to make the color <b>transparent</b> (not all objects have this option) then set the value "Nothing" or "" for this property.</text>
+    </remarks>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how button text color can se set:</sampletitle>
+        <samplecode>
+<![CDATA[Window1.Button1.Fore color = red
+Window1.Button1.Fore color = "255; 201; 128;"
+Window1.Button1.Fore color = "128;128;0;"
+Window1.Button1.Fore color = Window1.Button1.Back color]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><link file="Programming/HelpWords.html">Quick fill words</link> such as <link file="Programming/HelpWords.html#Colors">Colors</link>
+      <li/>Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

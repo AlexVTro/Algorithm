@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Object events</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">Useful Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>The useful object <b>Object events</b> makes accessible the properties and commands of <b>that</b> object
+        where the <link file="Environment/EventPart.html">event</link> is being executed at the moment.</text>
+      </p>
+       <p>
+        <textAll>Example:
+          <imgMy src="EventObj.jpg"></imgMy>
+
+          There <b>Object events</b> makes accessible the properties and commands of the <b>Button1</b>, because it is in the event <b>Click</b> of this button.
+          <p>
+            Thus the useful object <b>Object events</b> has <b>nothing new</b>, it just <b>simplifies</b> the process of actions
+            creation. Now in case it is necessary to <b>change the property</b> of the object where the <b>event</b> has been executed, there is no need to specify its <b>name</b> (e.g. Button1), but simply a universal name "Object events" can be specified. This is very helpful, for example, when <link file="Programming/Array.html">arrays</link> are used.
+          </p>
+          <p>
+             <b>All properties</b> which are possible under different <b>events</b> and different
+          <b>objects</b> are included in <b>Object events</b> in advance. That's why <b>not all</b> properties and commands are available under every particular event, but only properties and commands of the <b>object</b> where the given event has been executed. In the example only those properties and commands of <b>Object events</b> work, which are included in the  object Button1 (Text in the given example).
+          </p> </textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      Other <link file="UsefulObjects.html">Useful Objects
+    </link>
+    </seealso>
+    
+  </file>
+</xml>

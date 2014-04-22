@@ -1,0 +1,10 @@
+E:\Work\Alg\AlgBuild\AlgBuild\bin\Debug\AlgBuild.exe.config
+E:\Work\Alg\AlgBuild\bin\Debug\AlgBuild.exe.config
+E:\Work\Alg\AlgBuild\bin\Debug\AlgBuild.exe
+E:\Work\Alg\AlgBuild\bin\Debug\AlgBuild.pdb
+E:\Work\Alg\AlgBuild\obj\Debug\AlgBuild.csprojResolveAssemblyReference.cache
+E:\Work\Alg\AlgBuild\obj\Debug\AlgBuild.Form1.resources
+E:\Work\Alg\AlgBuild\obj\Debug\AlgBuild.Properties.Resources.resources
+E:\Work\Alg\AlgBuild\obj\Debug\AlgBuild.csproj.GenerateResource.Cache
+E:\Work\Alg\AlgBuild\obj\Debug\AlgBuild.exe
+E:\Work\Alg\AlgBuild\obj\Debug\AlgBuild.pdb

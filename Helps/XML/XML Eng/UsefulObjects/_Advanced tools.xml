@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Advanced tools</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">Useful Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>This useful object is the most <b>advanced</b> tool available for you in the environment of <b>Algorithm2</b>. 
+        It <b>executes</b> any programme code written
+       in high-level <b>programming languages</b> - VB.NET, C#, VBScript. 
+        It also executes the programme code of <b>Algorithm2</b>.</text>
+      </p>
+      <p>
+        <textAll>
+          Read <b>more</b> about programming in these languages in the <b>Internet</b> or on the official website of Algorithm2 - <url file="http://www.Algorithm2.com">http://www.Algorithm2.com</url>.
+        </textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      Other <link file="UsefulObjects.html">Useful Objects
+    </link>
+    </seealso>
+    
+  </file>
+</xml>

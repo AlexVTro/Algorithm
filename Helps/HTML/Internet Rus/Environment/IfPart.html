@@ -1,0 +1,55 @@
+﻿<HTML><HEAD><link href="../_TemplateMSDN_files/MSDNstyles.css" type="text/css" rel="stylesheet" /><script language="javascript">var gCHM=true;</script><script language="javascript" src="../_TemplateMSDN_files/common.js">var a;</script><script language="javascript" src="../_TemplateMSDN_files/script.js">var b;</script><TITLE>Раздел условий</TITLE></HEAD><BODY class="xsl_file"><div class="notshown"><img src="../_TemplateMSDN_files/plus.gif" /><img src="../_TemplateMSDN_files/plus_small.gif" /></div><div class="xsl_file_header"><div class="xsl_file_title">Раздел условий</div><div class="xsl_file_breadcumbs"><a class="xsl_file" target="_top" href="../index.html&#xA;          ">
+      Справка
+    </a> -&gt;
+    <span class="xsl_file_test"><a class="xsl_file" href="../Environment.html">Среда разработки</a>
+        -&gt;
+        <a class="xsl_file" href="../Environment/IfPart.html">Раздел условий</a></span></div><br /><a class="xsl_file" href="#see">Смотрите также</a></div><div class="xsl_file_header1"><span class="xsl_file_spanLink" onClick="javascript:ChColExpAll('xsl_file_spColexpAll', 'xsl_file_imgColexpAll')"><img id="xsl_file_imgColexpAll" src="../_TemplateMSDN_files/minus_small.gif" align="absmiddle" /><span id="xsl_file_spColexpAll">Свернуть все</span></span></div><div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divSyntax','xsl_file_imgSyntax');"><img id="xsl_file_imgSyntax" src="../_TemplateMSDN_files/minus.gif" border="0" /> Описание
+      </span></h4><div><div id="xsl_file_divSyntax" class="xsl_file_container"><p class="xsl_file" align=""><b>Условия</b> позволяют указать, следует ли выполнять в данный момент действия или нет.
+          Условие это некоторое правило, обычно <b>сравнение</b> (например, 
+          <a class="xsl_file" href="../Objects/Window/PropertiesCommands/Text.html">текст окна</a> равен "Окно1"
+          или <a class="xsl_file" href="../Objects/Button/PropertiesCommands/Width.html">ширина кнопки</a> больше 100) и все 
+          <a class="xsl_file" href="../Environment/ActionPart.html">действия</a> 
+          которые идут после этого условия будут выполняться
+          только тогда когда <b>условие верн<i>O</i></b> (т.е.,
+          <a class="xsl_file" href="../Objects/Window/PropertiesCommands/Text.html">текст окна</a> действительно равен "Окно1"
+          а <a class="xsl_file" href="../Objects/Button/PropertiesCommands/Width.html">ширина кнопки</a> больше 100)
+        </p><p class="xsl_file" align=""><b>Создать условие</b> можно зайдя в Раздел условий
+          <a class="xsl_file" href="../Environment.html">Среды разработки Алгоритм 2</a>:
+          <div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/IfPart.jpg" alt="" /></div></p><p class="xsl_file" align="">
+          Здесь следует ввести само <b>условие в виде</b>: "Что-то" равно/неравно "чему-то" 
+          (неравно обозначается значком &lt;&gt;, больше либо равно значком &gt;=)
+          <pre class="xsl_file_codesnip">Окно1.Текст1.Текст = "Ввели нужный текст"
+Окно1.Окно1.Ширина &gt; "200"
+Онко1.Кнопка1.Цвет шрифта &lt;&gt; черный
+Окно1.Окно1.X &gt;= Окно1.Текст1.Текст</pre>
+          Затем клик по кнопке <b>Создать</b> создаст блок условия в 
+          <a class="xsl_file" href="../Environment/TreePart.html">дереве действий</a>:
+        </p><p class="xsl_file" align=""><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/IfPart2.jpg" alt="" /></div></p><p class="xsl_file" align="">
+          Теперь все <a class="xsl_file" href="../Environment/ActionPart.html">действия</a> внутри этого блока условий 
+          (в данном случае тут одно действие: сделать окно невидимым) выполнятся
+          <b>только в том случае</b>, если Текст объекта Окно1 будет равен "Окно"
+        </p><p class="xsl_file" align=""><b>Но это еще не все</b>. Вы также можете создавать <b>подУсловия</b> и раздел <b>Во всех остальных случаях</b>.
+          Для их создания нужно <b>кликнуть</b> по созданному вами <b>обычному условию</b> и зайти в раздел условий.
+        </p><p class="xsl_file" align=""><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/IfPart3.jpg" alt="" /></div><div class="xsl_file_codesnip"><p class="xsl_file" align="">
+                Примечание: Символ <b>_И</b> используется как обозначение того, что должны выполниться <b>оба условия</b> строки:
+                и "Окно1.Окно1.Вышина &gt; 100" и "Окно1.Окно1.Вышина &lt; 300".
+                Наряду с <b>_И</b> предусмотрен символ <b>_ИЛИ</b>, который обозначает что условие будет верным,
+                если будет верно <b>хотябы одно из условий</b>, т.е. либо "Окно1.Окно1.Вышина &gt; 100",
+                либо "Окно1.Окно1.Вышина &lt; 300".
+                Это все можно создать в <a class="xsl_file" href="../Environment/Master.html">Мастере сложных действий</a> (кнопка с волшебной палочкой справа)
+              </p></div></p><p class="xsl_file" align=""><b>подУсловия:</b><br />
+          Они проверяются в том случае, если обычное условие оказалось <b>неверным</b>.
+          Если подУсловие окажется правильным, то <b>его</b> действия выполнятся. Если нет, то пойдут просматриваться
+          <b>следующие</b> подУсловия. Создаются подУсловия точно также как обычные условия.
+        </p><p class="xsl_file" align=""><b>Во всех остальных случаях:</b><br />
+          Этот раздел предусмотрен для случаев, когда условие и (если есть) подУсловия окажутся неверными.
+          Все его действия выполнятся только если не сработает условие.
+        </p></div></div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divRemarks','xsl_file_imgRemarks');"><img id="xsl_file_imgRemarks" src="../_TemplateMSDN_files/minus.gif" border="0" /> Примечание
+        </span></h4><div><div id="xsl_file_divRemarks" class="xsl_file_container"><span class="xsl_file_test">Условия могут быть не только <b>простыми</b> (сравнение текста, чисел) но и <b>сложными</b>
+      (математическая формула, сравнение со значением свойства другого объекта).
+      Для создания сложных действий воспользуйтесь
+      <a class="xsl_file" href="../Environment/Master.html">Мастером сложных действий</a> (кнопка с волшебной палочкой справа)
+        <p class="xsl_file" align="">
+          Выйти из условия можно досрочно, не ожидая пока выполнятся оставшиеся действия, подробнее об этом в
+          <a class="xsl_file" href="../UsefulObjects.html">Полезные объекты</a>.<a class="xsl_file" href="../UsefulObjects/_Interrupts.html">Прерывания</a></p></span></div></div><a class="xsl_file" name="see" /><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="SwapDisplay('xsl_file_divSeealso','xsl_file_imgSeealso');"><img id="xsl_file_imgSeealso" src="../_TemplateMSDN_files/minus.gif" border="0" /> Смотрите также
+        </span></h4><div id="xsl_file_divSeealso" class="xsl_file_container"><div class="xsl_file_container"><a class="xsl_file" href="../Environment.html">Среда разработки</a><br /><a class="xsl_file" href="../Objects.html">Объекты</a><br /><a class="xsl_file" href="../UsefulObjects/Interrupts.html">Прерывания</a></div></div></div><p> </p></BODY></HTML>

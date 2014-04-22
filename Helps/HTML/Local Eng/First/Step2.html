@@ -1,0 +1,83 @@
+﻿<HTML><HEAD><link href="../_TemplateMSDN_files/MSDNstyles.css" type="text/css" rel="stylesheet" /><script language="javascript">var gCHM=true;</script><script language="javascript" src="../_TemplateMSDN_files/common.js">var a;</script><script language="javascript" src="../_TemplateMSDN_files/script.js">var b;</script><TITLE>Шаг 2. Программирование.</TITLE></HEAD><BODY class="xsl_file"><div class="notshown"><img src="../_TemplateMSDN_files/plus.gif" /><img src="../_TemplateMSDN_files/plus_small.gif" /></div><div class="xsl_file_header"><div class="xsl_file_title">Шаг 2. Программирование.</div><div class="xsl_file_breadcumbs"><a class="xsl_file" target="_top" href="../index.html&#xA;          ">
+      Help
+    </a> -&gt;
+    <a class="xsl_file" href="../First.html">Мой первый проект</a><span class="xsl_file_test"> -&gt; </span><a class="xsl_file" href="../First/Step2.html">Шаг 2. Программирование.</a></div><br /><a class="xsl_file" href="#see">See also</a></div><div class="xsl_file_header1"><span class="xsl_file_spanLink" onClick="javascript:ChColExpAll('xsl_file_spColexpAll', 'xsl_file_imgColexpAll')"><img id="xsl_file_imgColexpAll" src="../_TemplateMSDN_files/minus_small.gif" align="absmiddle" /><span id="xsl_file_spColexpAll">Collapse all</span></span></div><div><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="javascript:SwapDisplay('xsl_file_divSyntax','xsl_file_imgSyntax');"><img id="xsl_file_imgSyntax" src="../_TemplateMSDN_files/minus.gif" border="0" /> Description
+      </span></h4><div><div id="xsl_file_divSyntax" class="xsl_file_container"><p class="xsl_file" align="">
+          Пришло время самого интересного - <b>программирования</b>! Делать это в Алгоритме 2 черезвычайно <b>просто</b>.
+          Давайте убедимся в этом, <b>запрограммировав</b> кнопку <b>"КнопкаРассчитать"</b> на вычисление оптимальности 
+          вашего веса.
+        </p><p class="xsl_file" align="">
+          В предыдущем уроке мы меняли <b>свойства</b> (текст, имя, ширина) разных <b>объектов</b> (кнопок, надписей, окон).
+          Так вот <b>программирование</b>, это тоже самое <b>изменение свойств</b>, только не вручную, а автоматически,
+          <b>программно</b>! Таким образом, наше программирование сводится к тому, чтобы при <b>нажатии</b> на кноку
+          <b>"КнопкаРассчитать"</b> изменялся <b>текст</b> у надписи <b>"НадписьРезультат"</b> на результат 
+          <b>вычисления веса</b>.
+        </p><p class="xsl_file" align="">
+          Итак, как же нам узнать, <b>когда</b> пользователь <b>нажал</b> на кнопку? Для этого существуют <b>события</b>.
+          <b>События</b> - это <b>действия пользователя</b> (клики, движения мышки, нажатие клавиатуры), которые
+          могут <b>отлавливать</b> объекты (кнопки, надписи, рисунки).
+        </p><p class="xsl_file" align="">
+          Создадим для кнопки <b>"КнопкаРассчитать"</b>
+          событие <a class="xsl_file" href="../Objects/Button/Events/Click.html">Клик</a>.
+          Для этого нажмите один раз на эту кнопку, и выберите в
+          <a class="xsl_file" href="../Environment/EventPart.html">разделе событий</a>
+          в <a class="xsl_file" href="../Environment.html">среде разработки Алгоритм 2</a> событие <b>клик</b>. А затем 
+          нажмите кнопку <b>"Создать"</b> (она чуть ниже).
+          <b>Раздел событий</b> это вкладка <b>"События"</b>, которая располагается в закладках в <b>правом нижнем</b> углу.
+        </p><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/First4.jpg" alt="" /></div><p class="xsl_file" align=""><b>Отлично!</b> Событие клик создано. Теперь когда пользователь нажмет на кнопку, наша программа
+          выполнит все, что мы поместим внутрь созданного события. А помещать внутрь мы будем <b>действия</b>.
+        </p><p class="xsl_file" align=""><b>Действия</b> - это комманды программе (изменить текст объекта, переместить его, поменять цвет).
+          Как мы уже выяснили, в большинстве случаев это обычное <b>изменение свойств</b>
+            (цвета, текста).
+            Действия создаются в <a class="xsl_file" href="../Environment/ActionPart.html">разделе действий</a> -
+          это вкладка <b>"Действия"</b>, которая располагается в закладках в <b>правом нижнем</b> углу.
+        </p><p class="xsl_file" align="">
+          Создадим сначала <b>простое действие</b> - очистку <b>текста</b> у надписи <b>"НадписьРезультат"</b>.
+          Для этого выберите в <b>разделе действий</b> в списке <b>Окно</b> пункт <b>"Окно1"</b> (это имя окна вашей 
+          программы, в котором располагаются ваши кнопки, надписи и тексты), в списке <b>Объект</b> выберите
+          <b>"НадписьРезультат"</b> (имя объекта, у которого мы хотим поменять свойство),
+          а в списке <b>Свойство</b> выберите <b>"Текст"</b> (название изменяемого свойства). Теперь, чуть ниже,
+          в текстовом поле под надписью <b>"на следующее значение"</b> мы можем <b>писать</b> что угодно,
+          что мы хотим <b>увидеть написанным</b> в надписи <b>"НадписьРезультат"</b>. Текст обязательно вводится
+          в <b>двойных кавычках</b> (например так, "Привет!"), подробнее об этом в свойстве
+          <a class="xsl_file" href="../Objects/Button/PropertiesCommands/Text.html">Текст</a>. 
+          Таким образом, если мы хотим <b>стереть текст</b>, то введите туда просто две <b>двойных кавычки</b> (""),
+          это означает что мы изменяем текст на <b>пустой</b>.
+        </p><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/First5.jpg" alt="" /></div><p class="xsl_file" align="">
+          Нажмите кнопку "Создать" и действие создано! Можете проверить как оно работает <b>запустив</b> 
+          созданную <b>программу</b> через меню <b>Проект</b> -&gt; <b>Запустить программу</b> (<b>F5</b>).
+        </p><p class="xsl_file" align="">
+          Хорошо, теперь попробуем создать более сложное действие. Оно собственно и будет вычислять
+          насколько ваш вес соответствует росту. Результат вычислений мы занесем также в текст
+          надписи "НадписьРезультат". А вычислять будем по общеизвестной формуле индекса массы тела
+          (<a class="xsl_file" target="_blank" href="http://ru.wikipedia.org/wiki/Имт">ИМТ</a>). В ней надо вес поделить на рост в квадрате.
+          Попробуем создать такое действие.
+        </p><p class="xsl_file" align="">
+          Кликните на созданное действие в <a class="xsl_file" href="../Environment/ActionPart.html">дереве действий</a>
+          (находится внизу окна <a class="xsl_file" href="../Environment.html">среды разработки Алгоритм 2</a>).
+          Выберите как в прошлый раз в <b>разделе действий</b> в списке <b>Окно</b> пункт <b>"Окно1"</b>, в списке 
+          <b>Объект</b> выберите <b>"НадписьРезультат"</b>, а в списке <b>Свойство</b> выберите <b>"Текст"</b>.
+          Справа от текстового поля, под надписью <b>"на следующее значение"</b>, кликните по кнопке с
+          волшебной палочкой. Перед вами откроется 
+          <a class="xsl_file" href="../Environment/Master.html">Мастер сложных действий</a>!
+        </p><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/First6.jpg" alt="" /></div><p class="xsl_file" align="">
+          Работать с ним предельно <b>просто</b>! Будем действовать как написано формуле (вес / рост в квадрате). 
+          Сначала нам надо взять <b>вес</b>, чтобы потом разделить на <b>рост в квадрате</b>. А вес у нас хранится в 
+          свойстве <b>Текст</b> объекта <b>"ТекстВес"</b>. Нажмите на кнопку со <b>стрелочкой</b> вниз (под текстовым полем), 
+          для открытия возможности выбора <b>объекта</b>. Выберите в нем <b>"Окно1"</b>, <b>"ТекстВес"</b>, <b>"Текст"</b>. 
+          Затем нажмите кнопку с <b>плюсиком</b> справа, и в списке, который появится над этой кнопкой,
+          выберите пункт "/ (деление нацело)". А в открывшейся области выбора объекта выберите
+          <b>"Окно1"</b>, <b>"ТекстРост"</b>, <b>"Текст"</b>. Для того, чтобы рост возвелся в квадрат, выберите
+          в списке "Доп. функции" (он чуть выше) пункт "Квадрат".
+        </p><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/First7.jpg" alt="" /></div><p class="xsl_file" align="">
+          Нажмите кнопку <b>"Создать"</b> в мастере сложных действий, а потом кнопку <b>"Создать"</b> в разделе действий.
+          <b>Поздравляем</b>! Вы создали сложное действие и теперь приложение по-настоящему <b>работает</b>.
+          Проверьте это. <b>Запустите</b> проект (F5), введите свой рост, вес и нажмите кнопку "Рассчитать".
+          Вам выведится число - это ваш индекс массы тела (<a class="xsl_file" target="_blank" href="http://ru.wikipedia.org/wiki/Имт">ИМТ</a>).
+          Если число от 20 до 25, то ваш вес оптимален. Если менее 20, то у вас дефицит веса. Если
+          больше 25, то ожирение.
+        </p><div style="text-align:center"><img border="0" src="../_TemplateMSDN_files/Pictures/First8.jpg" alt="" /></div><p class="xsl_file" align="">
+          В принципе программа <b>рабочая</b>, и можно на этом закончить. Но ее можно <b>усовершенствовать</b>
+          с помощью <b>условий</b>. Об этом в <a class="xsl_file" href="../First/Step3.html">ЗАКЛЮЧИТЕЛЬНОМ УРОКЕ</a>!
+          <br /></p></div></div><a class="xsl_file" name="see" /><h4 class="xsl_file"><span class="xsl_file_spanLink" onClick="SwapDisplay('xsl_file_divSeealso','xsl_file_imgSeealso');"><img id="xsl_file_imgSeealso" src="../_TemplateMSDN_files/minus.gif" border="0" /> See also
+        </span></h4><div id="xsl_file_divSeealso" class="xsl_file_container"><div class="xsl_file_container"><a class="xsl_file" href="../First/Step3.html">Шаг 3. Условия.</a><br /><a class="xsl_file" href="../First/Step1.html">Шаг 1. Графический интерфейс.</a><br /><a class="xsl_file" href="../Objects.html">Объекты</a><br /><a class="xsl_file" href="../Environment.html">Среда разработки</a><br /><a class="xsl_file" href="../First.html">Мой первый проект</a><br /></div></div></div><p> </p></BODY></HTML>

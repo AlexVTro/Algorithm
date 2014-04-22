@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Раздел свойств</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Среда разработки</link>
+        ->
+        <link file="Environment/PropertiesPart.html">Раздел свойств</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Раздел свойств</b> позволяет <b>настроить</b> все свойства главных действующих лиц программ - 
+          <link file="Objects.html">Объектов</link> (кнопки, надписи, окна).
+        </text>
+      </p>
+      <textAll>
+        <p>
+          <b>Свойства</b> это настройки <link file="Objects.html">объектов</link> (цвет, текст, размер),
+          изменяя которые вы можете настроить объект необходимым образом. Подробнее узнать про
+          свойства каждого объекта вы можете в разделе <link file="Objects.html">Объекты</link>.
+        </p>
+        <p>
+          Для того чтобы изменить свойство, достаточно выбрать его из списка, отредактировать значение и нажать Enter.
+          </p>
+      </textAll>
+    </descriptionarticle>
+   
+    <seealso>
+      <est/>
+      <link file="Environment.html">Среда разработки</link><br/>
+      <link file="Objects.html">Объекты</link><br/>
+    </seealso>
+  </file>
+</xml>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Дерево действий</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Среда разработки</link>
+        ->
+        <link file="Environment/TreePart.html">Дерево действий</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          В <b>Дереве действий</b> создается <b>вся программная начинка</b> вашей программы. Все
+          <link file="Objects.html">объекты</link>,
+          <link file="Environment/EventPart.html">события</link>,
+          <link file="Environment/ActionPart.html">действия</link>,
+          <link file="Environment/IfPart.html">условия</link>,
+          <link file="Environment/CyclePart.html">циклы</link>,
+          <link file="Environment/CommPart.html">комментарии</link>
+          располагаются в <b>Дереве действий</b>
+        </text>
+    </p>
+    <textAll>
+      <p>
+        <b>Структура</b> дерева действий следующая:<br/>
+        <p>
+          <imgMy src="TreePart.jpg"></imgMy>
+        </p>
+      </p>
+      <p> 
+        Самыми первыми, коренными ветками являются <link file="Objects/Window.html">Окна</link>.
+        В них, в ветки окон, вложены все <link file="Objects.html">объекты</link> данного окна. Далее идут
+        <link file="Environment/EventPart.html">события</link> каждого объекта. А в них располагаются
+        все <link file="Environment/ActionPart.html">действия</link>,
+        <link file="Environment/IfPart.html">условия</link> и
+        <link file="Environment/CyclePart.html">циклы</link>. 
+        <link file="Environment/CommPart.html">Комментарии</link> могут располагаться в любом месте дерева действий.
+      </p>
+      <p>
+        Вы можете свободно перемещать, копировать, вставлять, удалять все элементы дерева действий. Кроме того вы
+        можете <b>редактировать</b> их двумя способами:<br/>
+        1) Выделить редактируемое действие и изменить его <b>в текстовом поле</b>, которое чуть ниже дерева действий.<br/>
+        2) Либо кликнув правой кнопкой по редактируемому действию вызвать меню и выбрать
+        пункт <b>Редактировать</b> (либо просто два раза кликнуть по действию). И в 
+        <link file="Environment/ActionPart.html">разделе действий</link> будет отображено и готово к редактированию
+        выбранное действие.        
+      </p>
+      <p>
+        Кроме того, любые действия вы можете помечать <b>контрольными точками</b>:
+       <imgMy src="BreakpointPassive.gif"></imgMy>
+            Подробнее о них в разделе <link file="Programming/Debug.html">Отладка программ</link>
+    </p>
+  </textAll>
+</descriptionarticle>
+
+<seealso>
+  <est/>
+    <link file="Programming/Debug.html">Отладка программ</link><br/>
+    <link file="Environment.html">Среда разработки</link><br/>
+    <link file="Objects.html">Объекты</link>
+    </seealso>
+  </file>
+</xml>

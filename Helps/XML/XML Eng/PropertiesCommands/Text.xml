@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Text</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>A <b>text</b> specified in this property is displayed on the object.</text>
+      </p>
+      <p>
+        <textAll>For example, the text of the object <link file="Objects/Window.html">Window</link> is its title and the text of the object <link file="Objects/Text box.html">Text box</link> is a text which is input in it.</textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how main window text can be set:</sampletitle>
+        <samplecode><![CDATA[Window1.Window1.Text = "New text of window title"
+Window1.Window1.Text = "New" & "text of window title"
+Window1.Window1.Text = Window1.Window1.Text & "<- window text"
+Window1.Window1.Text = "Window width: """ & Window1.Window1.Width & """"]]></samplecode>
+      </sample>
+    </samples>
+    
+    <remarks>
+      <text>If it is necessary to input quotes into text then you should double them inside of the text:</text>
+      <codesnip>
+<![CDATA["There a text is without quotes and ""there is in quotes""."]]></codesnip>
+      <p>
+        <text>To insert <b>Newline</b> (equal to pressing of Enter key) use
+          <link file="Programming/HelpWords.html">Quick fill words</link> -> 
+		  <link file="Programming/HelpWords.html#Others">Others</link> or input a symbol "¶"</text>
+        <codesnip>
+<![CDATA[Window1.Button1.Text = "Text ¶ Text on a newline"]]></codesnip>
+      </p>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects.html">UsefulObjects</link> -> <link file="UsefulObjects/Text.html">Text</link><br/>
+     Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

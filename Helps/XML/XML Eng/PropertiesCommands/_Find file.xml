@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Find file</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          The property searches files and folders in the specified directory. For searching you can use a pattern - "*","?","+".
+          E.g. if you specify "a*.jpg", it would find all files with extension <i>jpg</i> beginning with "a"
+          (for example, "аbcdef.jpg", "a2.jpg", "a.jpg").
+          For "a?c.exe" it would find all applicaions consisting of three letters beginning with "a" and ending with "c" (for example, "аbc.exe", "a2c.exe").
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="Programming/HelpWords.html">Quick fill words</link>
+      such as <link file="Programming/HelpWords.html#Paths">Paths</link><br/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Exist path.html">_Exist path</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

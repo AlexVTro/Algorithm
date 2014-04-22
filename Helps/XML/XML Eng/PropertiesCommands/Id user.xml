@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>ID user</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>This <b>ID</b> is generated for any computer on the basis of registry data. 
+        Software and hardware replacement in most cases  <b>has NO influence</b> on ID,  but exceptions can happen sometimes.</text>
+      </p>
+      <p>
+        <textAll>
+          ID user is constantly changing: at themoment it can be "2323243...", but then - "432532320...". But don't be confused.  Encrypted <b>content remains the same</b>, only the <b>display format</b> is changing.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+ 
+    <seealso>
+      <est/>
+      <link2 file="Id program.html">ID program</link2><br/>
+      <link2 file="Key issue.html">Key issue</link2><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

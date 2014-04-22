@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hws>
+  <hw cat="others">
+    <text>
+      This category contains all words which do not match any other category. There you can find <b>most commonly</b> used and useful words. For example, words "<b>Yes</b>" and "<b>No</b>" are used for a great number of properties, such as <b>Visible, Font bold, Enabled</b>, etc.
+      The word "<b>Nothing</b>" is used everywhere where it is necessary to leave the property value empty. For example, to remove a <link file="Objects/Window/PropertiesCommands/Background image.html">background image</link> of the window it is necessary to specify this word ("Nothing") for this property.
+      <codesnip>
+<![CDATA[Window1.Window1.Back color = Nothing
+Window1.Button1.Enabled = Yes
+Window1.Window1.Visible= "No"]]></codesnip>
+      <br/><br/><b>
+        <i>The list of all words:</i>
+      </b><br/>
+    </text>
+  </hw>
+  <hw cat="colors">
+    <text>
+      There all basic <b>colors</b> are collected. By equating one of quick fill words of this group (red, blue, yellow, etc.) with some color property (Back color, Fore color) you'll color the object in a way you need.
+      <codesnip>
+<![CDATA[Window1.Window1.Back color = Yellow
+Window1.Button1.Fore color = brightBlue
+Window1.Window1.Back color = "Red"]]></codesnip>
+      Besides using quick fill words you can set the color in numbers. More details about this you'll find there:
+      <link file="Objects/Window/PropertiesCommands/Back color.html">Back color</link>.
+      <br/><br/><b>
+        <i>The list of all available colors:</i>
+      </b><br/>
+    </text>
+  </hw>
+</hws>

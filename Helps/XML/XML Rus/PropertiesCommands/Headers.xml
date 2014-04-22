@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Заголовки запросов</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Объекты</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Свойство возвращает так называемые Headers(Заголовки) запросов.</text>
+      </p>
+      <p>
+        <textAll>
+	  
+   </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+     
+      <text></text>
+    </remarks>
+
+    <samples>
+      <sample lang="Aлгоритм2">
+        <sampletitle>Примеры заголовков выглядят так: </sampletitle>
+ <samplecode>
+<![CDATA[Server: Apache/2.2.11 (Win32) PHP/5.3.0
+Last-Modified: Sat, 16 Jan 2010 21:16:42 GMT
+Content-Type: text/plain; charset=windows-1251
+Content-Language: ru]]>
+       
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><li/><propsLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

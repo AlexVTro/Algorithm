@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>ID registry program</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          <b>ID registry program</b> defines where in the registry data about trial period of your program should be stored.
+          All registration keys are valid for the paticular <b>ID program</b>. If you'd change it, the keys would become invalid for the new ID program. And <link2 file="Key encryption.html">encryption key</link2> should also remain the same.
+        </text>
+      </p>
+      <p>
+        <textAll>
+           If you use two objects Trial, for example, one for activation key input and the other for generating these keys        (like in the example <i>Examples\Difficult projects\Trial</i>) then make sure that <b>Id program</b> and <b>encryption key</b> are the <b>same</b>!
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+ 
+    <seealso>
+      <est/>
+      <link2 file="Id user.html">Id user</link2><br/>
+      <link2 file="Key issue.html">Key issue</link2><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

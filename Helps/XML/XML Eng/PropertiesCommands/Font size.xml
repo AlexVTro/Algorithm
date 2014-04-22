@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Font size</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          It is used to specify the <b>font size</b> of the text.
+        </text>
+      </p>
+      <p>
+        <textAll>
+          The size is specified in pixels.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link2 file="Font family.html">Font family</link2><br/>
+      <link2 file="Font bold.html">Font bold</link2><br/>
+      <link2 file="Font italic.html">Font italic</link2><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

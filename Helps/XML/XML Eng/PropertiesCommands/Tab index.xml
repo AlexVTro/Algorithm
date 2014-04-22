@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Tab index</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>When <b>Tab</b> key is pressed all objects of the window are <b>activated in turn</b> (they become <link2 file="Focused.html">focused</link2>). The less the <b>Tab number</b> is, the later the object would be activated.
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link2 file="Focused.html">Focused</link2><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

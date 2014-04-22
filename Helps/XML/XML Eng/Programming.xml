@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Programming</title>
+    <breadcumbs>
+      <link file="Programming.html">Programming</link>
+    </breadcumbs>
+    <descriptionarticle >
+      <p>
+        <text>The <b>development environment</b> of Algorithm2 has a lot of complex means for programming.</text>
+      </p>
+      <p>
+        <childlist>
+        </childlist>
+      </p>
+
+    </descriptionarticle>
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development Environment</link><br/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link><br/>
+    </seealso>
+  </file>
+</xml>

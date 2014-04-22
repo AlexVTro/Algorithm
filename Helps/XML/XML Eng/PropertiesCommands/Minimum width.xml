@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Minimum width</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Defines <b>minimum available</b> <link file="Objects/Window/PropertiesCommands/Width.html"> width</link>
+         of the object. If it's not necessary to limit the object width, then set "0" as the property value.</text>
+      </p>
+      <p>
+        <textAll>
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+      <text>
+        If the object content comes out of borders you can enable a
+        <link file="Objects/Window/PropertiesCommands/Scroll.html">scroll bar</link>.
+      </text>
+    </remarks>
+    
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

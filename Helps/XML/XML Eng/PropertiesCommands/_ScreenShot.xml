@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Screen Shot</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>The command shots the screen and saves the picture into
+        <link file="UsefulObjects/_System/_Clipboard picture.html">clipboard</link> 
+          (a place that stores everytning you copy and insert).</text>
+      </p>
+      <p>
+        <textAll>
+         The <b>image</b> is also saved as a temporary file which can be assigned as the image of some object (e.g. background image of a window).
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+    <samples>
+        <sample lang="Algorithm2">
+          <sampletitle>Variants of how main window background images can be set:</sampletitle>
+          <samplecode>
+<![CDATA[Window1.Window1.Background image = "C:/1.bmp"
+Window1.Window1.Background image = "/1.bmp"
+Window1.Window1.Background image = My documents & "/2.jpg"
+Window1.Window1.Background image = Window1.Button1.Background image]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><link2 file="Background image layout.html">Background image layout</link2><br/>
+      <li/><link file="Programming/HelpWords.html">Quick fill words</link>
+      such as <link file="Programming/HelpWords.html#Paths">Paths</link>
+      <li/>Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>
