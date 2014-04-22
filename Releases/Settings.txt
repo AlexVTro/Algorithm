@@ -9,6 +9,34 @@
         <string>Algoritm 2.exe|Алгоритм 2.exe</string>
       </Files>
     </PathSettingItem>
+	<PathSettingItem Name="CompilExe" VersionType="Free" Lang="En">
+      <SourcePath>Releases\Exes\FreeEn</SourcePath>
+      <TargetPath />
+      <Files>
+        <string>Algoritm 2.exe|Algorithm 2.exe</string>
+      </Files>
+    </PathSettingItem>
+	<PathSettingItem Name="CompilExe" VersionType="Full" Lang="Ru">
+      <SourcePath>Releases\Exes\FullRu</SourcePath>
+      <TargetPath />
+      <Files>
+        <string>Algoritm 2.exe|Алгоритм 2.exe</string>
+      </Files>
+    </PathSettingItem>
+	<PathSettingItem Name="CompilExe" VersionType="Full" Lang="En">
+      <SourcePath>Releases\Exes\FullEn</SourcePath>
+      <TargetPath />
+      <Files>
+        <string>Algoritm 2.exe|Algorithm 2.exe</string>
+      </Files>
+    </PathSettingItem>
+	<PathSettingItem Name="CompilExe" VersionType="Http" Lang="All">
+      <SourcePath>Releases\Exes\FullEn</SourcePath>
+      <TargetPath />
+      <Files>
+        <string>Algoritm 2.exe|Алгоритм 2 Http.exe</string>
+      </Files>
+    </PathSettingItem>
 	
 	<!-- Languages -->
 	<PathSettingItem Name="Languages" VersionType="All" Lang="Ru">
