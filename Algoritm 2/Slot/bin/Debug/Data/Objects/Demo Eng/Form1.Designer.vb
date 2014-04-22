@@ -1,4 +1,4 @@
-<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+п»ї<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
 Partial Class Form1
     Inherits System.Windows.Forms.Form
 
@@ -29,12 +29,12 @@ Partial Class Form1
         Me.LinkLabel2.BackColor = System.Drawing.Color.Transparent
         Me.LinkLabel2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.LinkLabel2.LinkColor = System.Drawing.Color.Blue
-        Me.LinkLabel2.Location = New System.Drawing.Point(0, 189)
+        Me.LinkLabel2.Location = New System.Drawing.Point(0, 177)
         Me.LinkLabel2.Name = "LinkLabel2"
         Me.LinkLabel2.Size = New System.Drawing.Size(376, 23)
         Me.LinkLabel2.TabIndex = 12
         Me.LinkLabel2.TabStop = True
-        Me.LinkLabel2.Text = "Приобрести лицензионный Алгоритм 2!"
+        Me.LinkLabel2.Text = "Get LICENSED version of the Algorithm 2"
         Me.LinkLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'LinkLabel3
@@ -47,7 +47,7 @@ Partial Class Form1
         Me.LinkLabel3.Size = New System.Drawing.Size(372, 23)
         Me.LinkLabel3.TabIndex = 18
         Me.LinkLabel3.TabStop = True
-        Me.LinkLabel3.Text = "http://www.Algoritm2.ru"
+        Me.LinkLabel3.Text = "http://www.Algorithm2.com"
         Me.LinkLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Label3
@@ -55,13 +55,12 @@ Partial Class Form1
         Me.Label3.BackColor = System.Drawing.Color.Transparent
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Label3.ForeColor = System.Drawing.Color.Black
-        Me.Label3.Location = New System.Drawing.Point(40, 35)
+        Me.Label3.Location = New System.Drawing.Point(40, 9)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(300, 154)
+        Me.Label3.Size = New System.Drawing.Size(300, 168)
         Me.Label3.TabIndex = 15
-        Me.Label3.Text = "Если вы хотите экспортировать ваши программы в язык высокого уровня Visual Basic " & _
-            ".NET, то для этого необходимо приобретите программу Алгоритм. Это займет менее 3" & _
-            " минут! Этим вы ОЧЕНЬ поможете нам:"
+        Me.Label3.Text = "If you want to compile your programs to Visual basic .NET code - buy the Algorith" & _
+            "m. It will take less than 3 minutes! You will GREATLY help us by buying it:"
         Me.Label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Form1
@@ -74,7 +73,7 @@ Partial Class Form1
         Me.Controls.Add(Me.Label3)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow
         Me.Name = "Form1"
-        Me.Text = "Бесплатная версия"
+        Me.Text = "The free version"
         Me.ResumeLayout(False)
 
     End Sub

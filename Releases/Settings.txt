@@ -60,7 +60,7 @@
 	
 	<!-- VideoLessons -->
 	<PathSettingItem Name="VideoLessons" VersionType="All" Lang="Ru">
-      <SourcePath>Lessons\Lesson1\Lesson1</SourcePath>
+      <SourcePath>Lessons\Lesson1</SourcePath>
 	  <TargetPath>Data</TargetPath>
 	  <Directories>
         <string>Lesson1|VideoLessons</string>
@@ -75,6 +75,99 @@
     </PathSettingItem>  
 	
 	<!-- Compil -->
+	<PathSettingItem Name="Compil" VersionType="Full" Lang="All">
+      <SourcePath>Algoritm 2</SourcePath>
+	  <TargetPath>Data\Compil</TargetPath>
+	  <Directories>
+        <string>Slot\Мои элементы\ClientServer</string>
+        <string>Slot\Мои элементы\Internet</string>
+      </Directories>
+	  <Files>
+        <string>Main.vb</string>
+        <string>Code.vb</string>
+        <string>Slot\Формы\Progress.vb</string>
+        <string>Slot\Формы\Progress.Designer.vb</string>
+        <string>Slot\Ядро\CodeString.vb</string>
+        <string>Slot\Ядро\Enumerations.vb</string>
+        <string>Slot\Ядро\Errors.vb</string>
+        <string>Slot\Ядро\EventArgs.vb</string>
+        <string>Slot\Ядро\Forms.vb</string>
+        <string>Slot\Ядро\Iz.vb</string>
+        <string>Slot\Ядро\MyObjects.vb</string>
+        <string>Slot\Ядро\Objetus.vb</string>
+        <string>Slot\Ядро\Peremens.vb</string>
+        <string>Slot\Ядро\Peremens3.vb</string>
+        <string>Slot\Ядро\Perevodi.vb</string>
+        <string>Slot\Ядро\Propertys.vb</string>
+        <string>Slot\Ядро\Props.vb</string>
+        <string>Slot\Ядро\Run.vb</string>
+      </Files>
+	</PathSettingItem>
+	<!-- Http compil getting with hack data from Full -->
+	<PathSettingItem Name="Compil" VersionType="Http" Lang="All">
+      <SourcePath>Releases\Unpacked\FullEn\Data</SourcePath>
+	  <TargetPath>Data</TargetPath>
+	  <Directories>
+        <string>Compil</string>
+      </Directories>
+	</PathSettingItem>
+	
+	<!-- Objectus -->
+	<PathSettingItem Name="ObjectusDemo" VersionType="All" Lang="Ru">
+      <SourcePath>Algoritm 2\Slot\bin\Debug\Data\Objects</SourcePath>
+	  <TargetPath>Data\Objects</TargetPath>
+	  <Directories>
+        <string>Demo Ru|Demo</string>
+      </Directories>
+	  <Files>
+        <string>Demo Ru.exe|Demo.exe</string>
+      </Files>
+	</PathSettingItem>	
+	<PathSettingItem Name="ObjectusDemo" VersionType="All" Lang="En">
+      <SourcePath>Algoritm 2\Slot\bin\Debug\Data\Objects</SourcePath>
+	  <TargetPath>Data\Objects</TargetPath>
+	  <Directories>
+        <string>Demo En|Demo</string>
+      </Directories>
+	  <Files>
+        <string>Demo En.exe|Demo.exe</string>
+      </Files>
+	</PathSettingItem>
+	<PathSettingItem Name="ObjectusReferal" VersionType="All" Lang="All">
+      <SourcePath>Algoritm 2\Slot\bin\Debug\Data\Objects</SourcePath>
+	  <TargetPath>Data\Objects</TargetPath>
+	  <Files>
+        <string>Referral.txt</string>
+      </Files>
+	</PathSettingItem>
+	<PathSettingItem Name="ObjectusBat" VersionType="Full" Lang="All"> 
+      <SourcePath>Algoritm 2\Slot\bin\Debug\Data\Objects</SourcePath>
+	  <TargetPath>Data\Objects</TargetPath>
+	  <Files>
+        <string>Compil.bat</string> <!-- батник просто на всякий случай -->
+      </Files>
+	</PathSettingItem>
+	
+	<!-- Dlls -->
+	<PathSettingItem Name="Dlls" VersionType="All" Lang="All"> 
+      <SourcePath>Algoritm 2\Slot\bin\Debug</SourcePath>
+	  <TargetPath>Data\Objects</TargetPath>
+	  <Files>
+        <string>Interop.MSScriptControl.dll</string> 
+        <string>Kennedy.ManagedHooks.dll</string> 
+        <string>SystemHookCore.dll</string> 
+      </Files>
+	</PathSettingItem>	
+	<PathSettingItem Name="Dlls" VersionType="All" Lang="All"> 
+      <SourcePath>Algoritm 2\Slot\bin\Debug</SourcePath>
+	  <TargetPath></TargetPath>
+	  <Files>
+        <string>Interop.MSScriptControl.dll</string> 
+        <string>Kennedy.ManagedHooks.dll</string> 
+        <string>SystemHookCore.dll</string> 
+        <string>MyButton.dll</string> 
+      </Files>
+	</PathSettingItem>
 	
 	<!-- Pictures -->
     <PathSettingItem Name="Pictures" VersionType="All" Lang="All">
@@ -83,6 +176,32 @@
 	  <Directories>
         <string>Pictures</string>
       </Directories>
+	</PathSettingItem>
+	
+	<!-- Projects -->
+	<PathSettingItem Name="Projects" VersionType="All" Lang="Ru">
+      <SourcePath>Algoritm 2\Slot\bin\Debug</SourcePath>
+	  <TargetPath></TargetPath>
+	  <Directories>
+        <string>Проекты</string>
+      </Directories>
+	</PathSettingItem>
+	<PathSettingItem Name="Projects" VersionType="All" Lang="En">
+      <SourcePath>Algoritm 2\Slot\bin\Debug</SourcePath>
+	  <TargetPath></TargetPath>
+	  <Directories>
+        <string>Projects</string>
+      </Directories>
+	</PathSettingItem>
+	
+	<!-- Options&Parameters -->
+	<PathSettingItem Name="Projects" VersionType="All" Lang="All">
+      <SourcePath>Algoritm 2\Slot\bin\Debug</SourcePath>
+	  <TargetPath></TargetPath>
+	  <Files>
+        <string>Options.ini</string>
+        <string>Parametrs.ini</string>
+      </Files>
 	</PathSettingItem>
 	
   </PathSettings>

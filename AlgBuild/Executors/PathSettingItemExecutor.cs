@@ -43,7 +43,7 @@ namespace AlgBuild.Executors
                 _settingItem.Files.ForEach(f =>
                                                {
                                                    var oldFilePath = Path.Combine(sourcePath, GetOldFileName(f));
-                                                   var newFilePath = Path.Combine(toPath, GetNewFileName(f));
+                                                   var newFilePath = Path.Combine(targetPath, GetNewFileName(f));
 
                                                    File.Copy(oldFilePath, newFilePath);
                                                });
