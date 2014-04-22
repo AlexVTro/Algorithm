@@ -6690,8 +6690,14 @@ Public Class Propertys
         End Set
     End Property
     Function getBiDat() As String
-        Dim dt As String = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Hardware\Description\System").GetValue("SystemBiosDate")
-        Return dt
+        Dim biosVer = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Hardware\Description\System").GetValue("SystemBiosVersion")
+        If IsArray(biosVer) Then
+            biosVer = String.Join(" ", biosVer)
+        End If
+        If biosVer.Length > 5 Then
+            biosVer = biosVer.Substring(0, 5)
+        End If
+        Return biosVer
     End Function
     Dim idpr As String
     Overloads Property IdProgram() As String
@@ -6757,7 +6763,7 @@ Public Class Propertys
         End Set
     End Property
     Function KeyValidation(ByVal ParamArray args() As String) As String
-        Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\Programms\" & IdRegistryProgram).SetValue("K", args(0))
+        Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\" & IdRegistryProgram).SetValue("K", args(0))
         Dim act As String = Activation
 
         ' Показать в окне, если это задано
@@ -6823,9 +6829,9 @@ Public Class Propertys
     Sub TrialStart()
         Dim dniTrial As Long = DaysAll * 60 * 60 * 24 : dniTrial *= 10000000
         Dim trSt As String = EncryptRSA(Now.Ticks + dniTrial)
-        Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\Programms\" & IdRegistryProgram).SetValue("D", trSt)
+        Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\" & IdRegistryProgram).SetValue("D", trSt)
         Dim lsSt As String = EncryptRSA(Now.Ticks)
-        Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\Microsoft\" & IdRegistryProgram).SetValue("L", lsSt)
+        Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\Microsoft\" & IdRegistryProgram).SetValue("L", lsSt)
     End Sub
     Sub ActivationCancel()
         Activation = DaOrNet(False)
@@ -6840,7 +6846,7 @@ Public Class Propertys
             If status = 3 Then Return 0
             ' Получаем дату начала триала
             Try
-                dt = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\Programms\" & IdRegistryProgram).GetValue("D")
+                dt = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\" & IdRegistryProgram).GetValue("D")
             Catch ex As Exception
                 Return 0
             End Try
@@ -6859,7 +6865,7 @@ Public Class Propertys
     Function LastTime() As String
         Dim dt As String = ""
         Try
-            dt = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\Microsoft\" & IdRegistryProgram).GetValue("L")
+            dt = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\" & IdRegistryProgram).GetValue("L")
         Catch ex As Exception
             Return 0
         End Try
@@ -6872,14 +6878,14 @@ Public Class Propertys
             Dim ret As Boolean = True
             ' не должен существовать Programms
             Try
-                If Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\Programms\" & IdRegistryProgram) Is Nothing Then ret = False
+                If Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\" & IdRegistryProgram) Is Nothing Then ret = False
             Catch ex As Exception
                 ret = False
             End Try
-            ' и не должен существовать Microdoft
+            ' и не должен существовать Microsoft
             If ret = False Then
                 Try
-                    If Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\Microsoft\" & IdRegistryProgram) IsNot Nothing Then ret = True
+                    If Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\Microsoft\" & IdRegistryProgram) IsNot Nothing Then ret = True
                 Catch ex As Exception
                 End Try
             End If
@@ -6890,8 +6896,8 @@ Public Class Propertys
                 TrialStart()
             Else
                 Try
-                    Microsoft.Win32.Registry.LocalMachine.DeleteSubKey("Software\Programms\" & IdRegistryProgram)
-                    Microsoft.Win32.Registry.LocalMachine.DeleteSubKey("Software\Microsoft\" & IdRegistryProgram)
+                    Microsoft.Win32.Registry.CurrentUser.DeleteSubKey("Software\" & IdRegistryProgram)
+                    Microsoft.Win32.Registry.CurrentUser.DeleteSubKey("Software\Microsoft\" & IdRegistryProgram)
                 Catch ex As Exception
                 End Try
             End If
@@ -6903,7 +6909,7 @@ Public Class Propertys
             dt = Remark()
             ' Получаем дату начала триала
             Try
-                dt = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\Programms\" & IdRegistryProgram).GetValue("K")
+                dt = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\" & IdRegistryProgram).GetValue("K")
             Catch ex As Exception
                 Return DaOrNet(False)
             End Try
@@ -6920,9 +6926,9 @@ Public Class Propertys
         End Get
         Set(ByVal value As String)
             If DaOrNet(value) = True Then
-                Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\Programms\" & IdRegistryProgram).SetValue("K", KeyIssue(IdUser))
+                Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\" & IdRegistryProgram).SetValue("K", KeyIssue(IdUser))
             Else
-                Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\Programms\" & IdRegistryProgram).SetValue("K", "")
+                Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\" & IdRegistryProgram).SetValue("K", "")
             End If
         End Set
     End Property
@@ -6935,7 +6941,7 @@ Public Class Propertys
             If LastTime() = 0 Then status = 3 : Return trans("Попытка удалить триальный период.")
             ' Проверка на переводы часов
             Try
-                dt = Microsoft.Win32.Registry.LocalMachine.OpenSubKey("Software\Programms\" & IdRegistryProgram).GetValue("D")
+                dt = Microsoft.Win32.Registry.CurrentUser.OpenSubKey("Software\" & IdRegistryProgram).GetValue("D")
             Catch ex As Exception
                 Return trans("Попытка удалить триальный период.")
             End Try
@@ -6949,7 +6955,7 @@ Public Class Propertys
                 status = 2 : Return trans("Системное время было изменено на более раннее.")
             Else
                 Dim lsSt As String = EncryptRSA(Now.Ticks)
-                Microsoft.Win32.Registry.LocalMachine.CreateSubKey("Software\Microsoft\" & IdRegistryProgram).SetValue("L", lsSt)
+                Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\Microsoft\" & IdRegistryProgram).SetValue("L", lsSt)
             End If
 
             Return ""
@@ -7755,7 +7761,9 @@ Public Class PropertysRun
         End Get
         Set(ByVal value As String)
             ur = GetUrlFromString(value)
-            If ur Is Nothing = False Then obj.Url = ur
+            If ur Is Nothing = False Then
+                obj.Url = ur
+            End If
         End Set
     End Property
     Overloads Property MainMenuStrip(Optional ByVal fromLoad As Boolean = False) As String
@@ -8081,7 +8089,12 @@ Public Class PropertysRun
     Overloads Property AssociationPassedFile() As String
         Get
             If Environment.GetCommandLineArgs().Length >= 2 Then
-                Return Environment.GetCommandLineArgs()(1)
+                Dim result As String = ""
+                For i As Integer = 1 To Environment.GetCommandLineArgs().Length - 1
+                    result &= Environment.GetCommandLineArgs()(i) & " "
+                Next
+                result = result.Trim()
+                Return result
             Else
                 Return ""
             End If

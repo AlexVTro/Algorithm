@@ -372,7 +372,7 @@ Url redirect
 Url referer
 
 Url to go
-http://Algoritm2.ru
+http://Algorithm2.com
 User agent
 Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; SV1; MyIE2;
 Visible
@@ -534,15 +534,15 @@ Microsoft Sans Serif
 Font italic
 No
 Font size
-8
+10
 Font strikeout
 No
 Font underline
 No
 Fore color
-Black
+Red
 Height
-13
+31
 Image
 Nothing
 Image align
@@ -574,7 +574,7 @@ Yes
 Tag
 
 Text
-SingIn Mail.ru
+LogIn Mail.ru
 Text align
 center
 ToolTip
@@ -582,7 +582,7 @@ ToolTip
 Visible
 Yes
 Width
-125
+127
 X
 504
 Y
@@ -681,9 +681,9 @@ Yes
 Width
 122
 X
-507
+504
 Y
-32
+48
 #Conteiner
 Window1.Window1[0]
 #HistoryLevel
@@ -760,15 +760,15 @@ Selected text
 Selection length
 0
 Selection start
-1
+11
 Tab index
-0
+1
 Tab stop
 Yes
 Tag
 
 Text
-AlgoritmTest
+Your login
 Text position
 On left
 ToolTip
@@ -780,9 +780,9 @@ Width
 Word wrap
 Yes
 X
-507
+504
 Y
-46
+64
 #Conteiner
 Window1.Window1[0]
 #HistoryLevel
@@ -867,7 +867,7 @@ Yes
 Tag
 
 Text
-Пароль:
+Password:
 Text align
 center
 ToolTip
@@ -879,7 +879,7 @@ Width
 X
 504
 Y
-72
+88
 #Conteiner
 Window1.Window1[0]
 #HistoryLevel
@@ -956,15 +956,15 @@ Selected text
 Selection length
 0
 Selection start
-1
+14
 Tab index
-0
+2
 Tab stop
 Yes
 Tag
 
 Text
-thepassword
+Your password
 Text position
 On left
 ToolTip
@@ -978,7 +978,7 @@ Yes
 X
 504
 Y
-88
+104
 #Conteiner
 Window1.Window1[0]
 #HistoryLevel
@@ -1075,7 +1075,7 @@ Width
 X
 504
 Y
-112
+128
 #Conteiner
 Window1.Window1[0]
 #HistoryLevel
@@ -1150,7 +1150,7 @@ mail.ru
 Sorted
 No
 Tab index
-0
+3
 Tab stop
 Yes
 Tag
@@ -1162,11 +1162,11 @@ ToolTip
 Visible
 Yes
 Width
-126
+123
 X
-503
+504
 Y
-126
+144
 #Conteiner
 Window1.Window1[0]
 #HistoryLevel
@@ -1245,7 +1245,7 @@ Padding right
 Padding top
 0
 Tab index
-0
+4
 Tab stop
 Yes
 Tag
@@ -1265,7 +1265,7 @@ Width
 X
 504
 Y
-168
+184
 #Conteiner
 Window1.Window1[0]
 #HistoryLevel
@@ -1305,6 +1305,21 @@ Obj
   deist
   deist
   Deist
+  IF _Useful objects._Text._Index of ignore case(Window1.Internet1.Url redirect, "fail=1", 1) <> 0 THEN
+  tLUuwfoFvC
+  if
+  if
+  If
+   _Useful objects._Show messange._Show message("Invalid login or password", Ok, Default, "")
+   rhlxhiMemB
+   deist
+   deist
+   Deist
+  End If
+  qtUtadoKgY
+  endif
+  endif
+  EndIf
 #End
 
 B
@@ -1369,13 +1384,13 @@ Padding right
 Padding top
 0
 Tab index
-0
+5
 Tab stop
 Yes
 Tag
 
 Text
-2. Get cookies
+2. Go to inbox
 Text align
 center
 Text image relation
@@ -1389,7 +1404,7 @@ Width
 X
 504
 Y
-216
+232
 #Conteiner
 Window1.Window1[0]
 #HistoryLevel
@@ -1473,348 +1488,6 @@ Minimum height
 Minimum width
 0
 Name
-Button3Redirect
-Padding bottom
-0
-Padding left
-0
-Padding right
-0
-Padding top
-0
-Tab index
-0
-Tab stop
-Yes
-Tag
-
-Text
-3. Redirect to sendbox
-Text align
-center
-Text image relation
-Overlay
-ToolTip
-
-Visible
-Yes
-Width
-125
-X
-504
-Y
-264
-#Conteiner
-Window1.Window1[0]
-#HistoryLevel
-14
-#TreeNode
-#Parent
-Window1(0)
-#Index
-14
-Button3Redirect
-Button3Redirect
-button
-button
-Obj
- Click
- CrlgIJfxqE
- Click
- Click
- Sobyt
-  Window1.Internet1.Url to go = Window1.Internet1.Url redirect
-  ERtXgiQnsp
-  deist
-  deist
-  Deist
-  Window1.Internet1.Execute query
-  rsKMhBexnI
-  deist
-  deist
-  Deist
-#End
-
-B
-Anchor
-Right_top
-Auto ellipsis
-Yes
-Back color
-Nothing
-Background image
-Nothing
-Background image layout
-Tile
-Context menu
-Nothing
-Cursor
-Default
-Dock
-Nothing
-Enabled
-Yes
-Flat style
-Default
-Font bold
-No
-Font family
-Microsoft Sans Serif
-Font italic
-No
-Font size
-8
-Font strikeout
-No
-Font underline
-No
-Fore color
-Black
-Height
-45
-Image
-Nothing
-Image align
-Center
-Index
-0
-Maximum height
-0
-Maximum width
-0
-Minimum height
-0
-Minimum width
-0
-Name
-Button4Inbox
-Padding bottom
-0
-Padding left
-0
-Padding right
-0
-Padding top
-0
-Tab index
-0
-Tab stop
-Yes
-Tag
-
-Text
-4. Go to inbox
-Text align
-center
-Text image relation
-Overlay
-ToolTip
-
-Visible
-Yes
-Width
-125
-X
-504
-Y
-312
-#Conteiner
-Window1.Window1[0]
-#HistoryLevel
-15
-#TreeNode
-#Parent
-Window1(0)
-#Index
-15
-Button4Inbox
-Button4Inbox
-button
-button
-Obj
- Click
- ddmLHdYDgN
- Click
- Click
- Sobyt
-  Window1.Internet1.Url to go = "http://win.mail.ru/cgi-bin/msglist?folder=0"
-  eivjiisibr
-  deist
-  deist
-  Deist
-  Window1.Internet1.Execute query
-  BLMdJIhXxH
-  deist
-  deist
-  Deist
-#End
-
-B
-Anchor
-Right_top
-Auto ellipsis
-Yes
-Back color
-Nothing
-Background image
-Nothing
-Background image layout
-Tile
-Context menu
-Nothing
-Cursor
-Default
-Dock
-Nothing
-Enabled
-Yes
-Flat style
-Default
-Font bold
-No
-Font family
-Microsoft Sans Serif
-Font italic
-No
-Font size
-8
-Font strikeout
-No
-Font underline
-No
-Fore color
-Black
-Height
-45
-Image
-Nothing
-Image align
-Center
-Index
-0
-Maximum height
-0
-Maximum width
-0
-Minimum height
-0
-Minimum width
-0
-Name
-Button5Letter
-Padding bottom
-0
-Padding left
-0
-Padding right
-0
-Padding top
-0
-Tab index
-0
-Tab stop
-Yes
-Tag
-
-Text
-5. Read letter from Algorithm team
-Text align
-center
-Text image relation
-Overlay
-ToolTip
-
-Visible
-Yes
-Width
-125
-X
-504
-Y
-360
-#Conteiner
-Window1.Window1[0]
-#HistoryLevel
-16
-#TreeNode
-#Parent
-Window1(0)
-#Index
-16
-Button5Letter
-Button5Letter
-button
-button
-Obj
- Click
- egKiYYdhPC
- Click
- Click
- Sobyt
-  Window1.Internet1.Url to go = "http://win.mail.ru/cgi-bin/readmsg?id=12630249250000000963"
-  INHfKJuYcw
-  deist
-  deist
-  Deist
-  Window1.Internet1.Execute query
-  HtVuHQQICx
-  deist
-  deist
-  Deist
-#End
-
-B
-Anchor
-Right_top
-Auto ellipsis
-Yes
-Back color
-Nothing
-Background image
-Nothing
-Background image layout
-Tile
-Context menu
-Nothing
-Cursor
-Default
-Dock
-Nothing
-Enabled
-Yes
-Flat style
-Default
-Font bold
-No
-Font family
-Microsoft Sans Serif
-Font italic
-No
-Font size
-8
-Font strikeout
-No
-Font underline
-No
-Fore color
-Black
-Height
-45
-Image
-Nothing
-Image align
-Center
-Index
-0
-Maximum height
-0
-Maximum width
-0
-Minimum height
-0
-Minimum width
-0
-Name
 Button6Loguot
 Padding bottom
 0
@@ -1825,7 +1498,7 @@ Padding right
 Padding top
 0
 Tab index
-0
+6
 Tab stop
 Yes
 Tag
@@ -1845,16 +1518,16 @@ Width
 X
 504
 Y
-408
+280
 #Conteiner
 Window1.Window1[0]
 #HistoryLevel
-17
+14
 #TreeNode
 #Parent
 Window1(0)
 #Index
-17
+14
 Button6Loguot
 Button6Loguot
 button
@@ -1892,23 +1565,18 @@ Internet1
 BIFgWvHTmB
 Button1Submit
 LKftwRBDoT
+tLUuwfoFvC
 Button2Cookies
 olIPbekIOK
-Button3Redirect
-CrlgIJfxqE
-Button4Inbox
-ddmLHdYDgN
-Button5Letter
-egKiYYdhPC
 Button6Loguot
 uADXhvWNJI
 #EndExpands
 #SelNode
-Кнопка6Выход
+tLUuwfoFvC
 #ActiveForm
 Window1.Window1[0]
 #ActiveObj
-Window1.Window1[0]
+Window1.Button6Loguot[0]
 #ImagePath
 Pictures
 #ImageDefName
