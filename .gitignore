@@ -8,3 +8,12 @@
 /Releases/Publish
 
 /Releases/Exes
+
+/Releases/Installs/AlgorithmFreeEn.exe
+/Releases/Installs/AlgorithmFreeRu.exe
+/Releases/Installs/AlgorithmFullEn.exe
+/Releases/Installs/AlgorithmFullRu.exe
+/Releases/AlgBuildProject/bin
+/Releases/AlgBuildProject/_ReSharper.AlgBuild
+
+/Releases/AlgBuildProject/obj
