@@ -44,18 +44,25 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BuildSettings\PublishSetting.cs" />
+    <Compile Include="Engine\Constants.cs" />
     <Compile Include="Engine\Executor.cs" />
-    <Compile Include="Engine\Lang.cs" />
-    <Compile Include="Engine\VersionType.cs" />
+    <Compile Include="BuildTypes\Lang.cs" />
+    <Compile Include="Engine\SettingsIO.cs" />
+    <Compile Include="BuildTypes\VersionType.cs" />
+    <Compile Include="Executors\PublishSettingExecutor.cs" />
+    <Compile Include="Executors\InstallSettingExecutor.cs" />
+    <Compile Include="Executors\PathSettingExecutor.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
-    <Compile Include="PathSettings\PathSetting.cs" />
+    <Compile Include="BuildSettings\InstallSetting.cs" />
+    <Compile Include="BuildSettings\PathSetting.cs" />
     <Compile Include="Executors\PathSettingItemExecutor.cs" />
-    <Compile Include="PathSettings\PathSettingItem.cs" />
+    <Compile Include="BuildSettings\PathSettingItem.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Form1.resx">

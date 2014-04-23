@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PathSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PathSettings>
+    <PathSettingItem Name="CompilExe" VersionType="All" Lang="Ru">
+      <SourcePath>sf</SourcePath>
+      <TargetPath />
+      <Directories>
+        <string>a</string>
+        <string>b</string>
+      </Directories>
+      <Files>
+        <string>dfa</string>
+        <string>bdf</string>
+      </Files>
+    </PathSettingItem>
+  </PathSettings>
+</PathSetting>

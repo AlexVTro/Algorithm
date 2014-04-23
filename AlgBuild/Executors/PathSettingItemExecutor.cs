@@ -1,7 +1,6 @@
-﻿using System;
-using System.IO;
-using AlgBuild.Engine;
-using AlgBuild.PathSettings;
+﻿using System.IO;
+using AlgBuild.BuildSettings;
+using AlgBuild.BuildTypes;
 
 namespace AlgBuild.Executors
 {
@@ -14,7 +13,7 @@ namespace AlgBuild.Executors
             _settingItem = settingItem;
         }
 
-        public void Copy(string fromPath, string toPath, VersionType versionType, Lang lang)
+        public void Execute(string fromPath, string toPath, VersionType versionType, Lang lang)
         {
             if (_settingItem.VersionType != versionType && _settingItem.VersionType != VersionType.All)
                 return;

@@ -1,4 +1,4 @@
-﻿namespace AlgBuild.Engine
+﻿namespace AlgBuild.BuildTypes
 {
     public enum Lang
     {

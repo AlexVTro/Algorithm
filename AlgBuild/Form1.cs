@@ -1,15 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Serialization;
+using AlgBuild.BuildSettings;
+using AlgBuild.BuildTypes;
 using AlgBuild.Engine;
-using AlgBuild.PathSettings;
 
 namespace AlgBuild
 {
@@ -20,15 +14,30 @@ namespace AlgBuild
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private Executor _executor;
+        protected Executor Executor
         {
-            var executor = new Executor();
-            executor.RunSettings();
+            get { return _executor ?? (_executor = new Executor()); }
+        }
+        
+        private void ButtonBuildClick(object sender, EventArgs e)
+        {
+            //Executor.RunPathSettings();
+            Executor.RunInstallSettings();
+
+            MessageBox.Show("Build success");
         }
 
-        private void WriteTestSettings()
+        private void ButtonPublishClick(object sender, EventArgs e)
         {
-            var sets = new PathSetting()
+            Executor.RunPublishSettings();
+
+            MessageBox.Show("Publish success");
+        }
+
+        private void ButtonWriteTestSettings_Click(object sender, EventArgs e)
+        {
+            var testPathSettings = new PathSetting()
             {
                 PathSettings =
                     new List<PathSettingItem>
@@ -46,10 +55,37 @@ namespace AlgBuild
                                        }
             };
 
-            var fileStream = System.IO.File.CreateText("Settings.txt");
+            var testInstallSettings = new InstallSetting()
+            {
+                InnoSetupCompilerPath = @"C:\Program Files (x86)\Inno Setup 5"
+            };
 
-            var ser = new XmlSerializer(typeof(PathSetting));
-            ser.Serialize(fileStream, sets);
+            var testPublishSettings = new PublishSetting
+                                          {
+                                              PublishFtpSetting = new PublishFtpSetting
+                                                                      {
+                                                                          FtpUrl = "ftp://algoritm2.ru/www/algoritm2.ru",
+                                                                          FtpUsername = "alg",
+                                                                          FtpPassword = "tT2NI2gP",
+                                                                      },
+
+                                              PublishSettings =
+                                                  new List<PublishSettingItem>
+                                                      {
+                                                          new PublishSettingItem
+                                                              {
+                                                                  VersionType = VersionType.Free,
+                                                                  Lang = Lang.Ru,
+                                                                  TargetPath = "download",
+                                                                  TargetName = "Algoritm2RuLastTest.exe"
+                                                              },
+                                                      }
+                                          };
+
+            SettingsIO.WriteSetting("TestPathSettings.txt", testPathSettings);
+            SettingsIO.WriteSetting("TestInstallSettings.txt", testInstallSettings);
+            SettingsIO.WriteSetting("TestPublishSettings.txt", testPublishSettings);
         }
+
     }
 }

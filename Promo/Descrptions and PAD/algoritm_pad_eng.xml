@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<XML_DIZ_INFO>
+  <MASTER_PAD_VERSION_INFO>
+    <MASTER_PAD_VERSION>3.11</MASTER_PAD_VERSION>
+    <MASTER_PAD_EDITOR>RoboSoft 4.0.709</MASTER_PAD_EDITOR>
+    <MASTER_PAD_EDITOR_URL>http://robosoft.rudenko.com</MASTER_PAD_EDITOR_URL>
+    <MASTER_PAD_INFO>Portable Application Description, or PAD for short, is a data set that is used by shareware authors to disseminate information to anyone interested in their software products. To find out more go to http://www.asp-shareware.org/pad</MASTER_PAD_INFO>
+  </MASTER_PAD_VERSION_INFO>
+  <RoboSoft>
+    <Company_UIN>CMP-009B1262C8F</Company_UIN>
+    <Company_Description>Do you want to create your own program? Algorithm2 is a free tool for game and software development.</Company_Description>
+    <Product_UIN>APP-009B12FC00</Product_UIN>
+    <Search_String>Algorithm</Search_String>
+    <Publish_on_CD>FALSE</Publish_on_CD>
+    <RSProductType></RSProductType>
+    <Press_Release_Search_String></Press_Release_Search_String>
+    <NewsFeed_Search_String></NewsFeed_Search_String>
+    <Search_Engine_Search_String></Search_Engine_Search_String>
+    <Web_Directories_Search_String></Web_Directories_Search_String>
+    <Search_String_Unique></Search_String_Unique>
+    <Comments_For_Reviewer></Comments_For_Reviewer>
+    <Backlink></Backlink>
+  </RoboSoft>
+  <Company_Info>
+    <Company_Name>Algorithm 2</Company_Name>
+    <Address_1>Russia, Krasnoyarsk, Kuybisheva 88</Address_1>
+    <Address_2></Address_2>
+    <City_Town>Krasnoyarsk</City_Town>
+    <State_Province>Krasnoyarskiy krai</State_Province>
+    <Zip_Postal_Code>660018</Zip_Postal_Code>
+    <Country>Russian Federation</Country>
+    <Company_WebSite_URL>http://Algorithm2.com</Company_WebSite_URL>
+    <Contact_Info>
+      <Contact_First_Name>Alexandr</Contact_First_Name>
+      <Contact_Last_Name>Trofimov</Contact_Last_Name>
+      <Contact_Email>algoritm2@mail.ru</Contact_Email>
+      <Author_First_Name>Alexandr</Author_First_Name>
+      <Author_Last_Name>Trofimov</Author_Last_Name>
+      <Author_Email>algoritm2@mail.ru</Author_Email>
+    </Contact_Info>
+    <Support_Info>
+      <Sales_Email>algoritm2@mail.ru</Sales_Email>
+      <Support_Email>algoritm2@mail.ru</Support_Email>
+      <General_Email>algoritm2@mail.ru</General_Email>
+      <Sales_Phone></Sales_Phone>
+      <Support_Phone></Support_Phone>
+      <General_Phone></General_Phone>
+      <Fax_Phone></Fax_Phone>
+    </Support_Info>
+  </Company_Info>
+  <NewsFeed>
+    <NewsFeed_FORM>Y</NewsFeed_FORM>
+    <NewsFeed_VERSION>1.0</NewsFeed_VERSION>
+    <NewsFeed_URL>http://Submit-Everywhere.com/extensions/NewsFeed.htm</NewsFeed_URL>
+    <NewsFeed_Type>RSS 0.90</NewsFeed_Type>
+    <NewsFeed_Language>English</NewsFeed_Language>
+    <NewsFeed_Purpose>News</NewsFeed_Purpose>
+    <NewsFeed_Author_Email>algoritm2@mail.ru</NewsFeed_Author_Email>
+    <NewsFeed_Author_First_Name>Alexandr</NewsFeed_Author_First_Name>
+    <NewsFeed_Author_Last_Name>Trofimov</NewsFeed_Author_Last_Name>
+    <NewsFeed_DESCRIPTION>This PAD extension allows you to add your RSS and Atom news feeds info into your PAD file. This info can be used by RSS feed submission software or by feed directories themselves.</NewsFeed_DESCRIPTION>
+    <NewsFeed_Feed_URL></NewsFeed_Feed_URL>
+    <NewsFeed_Site_Name></NewsFeed_Site_Name>
+    <NewsFeed_Site_URL></NewsFeed_Site_URL>
+    <NewsFeed_Title></NewsFeed_Title>
+    <NewsFeed_Description_70></NewsFeed_Description_70>
+    <NewsFeed_Description_250></NewsFeed_Description_250>
+  </NewsFeed>
+  <Site>
+    <Site_FORM>Y</Site_FORM>
+    <Site_VERSION>1.0</Site_VERSION>
+    <Site_URL>http://Submit-Everywhere.com/extensions/Site.htm</Site_URL>
+    <Site_DESCRIPTION>This PAD extension allows you to add your site info into your PAD file. This info can be used by site submission software or by web directories themselves.</Site_DESCRIPTION>
+    <Site_Contact_Email>algoritm2@mail.ru</Site_Contact_Email>
+    <Site_Contact_First_Name>Alexandr</Site_Contact_First_Name>
+    <Site_Contact_Last_Name>Trofimov</Site_Contact_Last_Name>
+    <Site_Site_Title>Algorithm</Site_Site_Title>
+    <Site_Site_URL>http://www.algorithm2.com</Site_Site_URL>
+    <Site_Description_100>How to create your own program? Free tool for software development at home!</Site_Description_100>
+    <Site_Description_250>Do you want to create your own program? Algorithm2 is a free tool for game and software development at home! With its help anybody can create a program without a knowledge of any programming language.</Site_Description_250>
+    <Site_Description_450>Algorithm is a program for software development. With it's help anyone can create programs without any programming knowledge. Up-to-date objects will let you to create your own multimedia players, browsers, text editors, it will provide you with tools for working with file-system, screen, system registry, keyboard and mouse. You can immediately compile your program into an exe-file and publish it in internet or start selling it and making money!</Site_Description_450>
+    <Site_Keywords>create your program, How to create your own program, algorithm 2, How to make your software, Programming, Free</Site_Keywords>
+  </Site>
+  <Press_Release>
+    <Press_Release>Algorithm2 is a fully visual RAD system but it is not a strict programming language. It aims to help anyone create programs without any programming knowledge. Algorithm2 is a development environment where the programmer does not (and may not) write a single line of code, but it programs by setting the behaviours of objects and controls. Algorithm2 has as really good RAD environment and a very good and complete help made by an online manual, video tutorials and reference guide. The language offers a rich set of tools, objects and controls with which the user may create a variety of applications, work with file-system, screen, system registry, keyboard and mouse or handle multimedia and graphics. Algorithm2 comes in two versions: a freeware version and a pay version. The difference between them is that the free version may create stand alone EXEs only through a online builder. The user uploads - for free - its application to Algorithm2 web site's and the online builder outputs a stand alone EXE after a 90 seconds delay. The pay version has a built in compiler. The resulting EXE has an overhead of about 950Kb. Algorithm2 needs Microsoft Framework 2.0 to work. Unfortunately the well built RAD interface responds quite slowly to the user's input and this, in my opinion, affects the fun of programming. As Algorithm2 does not offer the programmer any classic programming structure it may not be considered a typical programming language nor a Basic-like language, but due to the fact that Algorithm2 may export the sources to VisualBasic.NET projects - so that the program can be finished in a real programming language - I think it could be interesting to take a look at it.</Press_Release>
+    <Headline>How to create your own program? Get Algorithm 2 now!</Headline>
+    <Summary>Algorithm2 is a free tool for game and software development at home!</Summary>
+    <Keywords>create your program, How to create your own program, algorithm 2, How to make your software, Programming, Free, without programming, not a strict programming language, RAD environment, exe, exe-file, compiling, program development, soft develop</Keywords>
+    <Related_URL>http://basic.mindteq.com/index.php/component/content/article/40-reviews/index.php?option=com_content&amp;view=article&amp;id=154:algorithm2&amp;catid=40:reviews</Related_URL>
+    <Press_Release_Plain></Press_Release_Plain>
+  </Press_Release>
+  <Affiliates>
+    <Affiliates_FORM>Y</Affiliates_FORM>
+    <Affiliates_FORM_VER>1.4</Affiliates_FORM_VER>
+    <Affiliates_VERSION>1.4</Affiliates_VERSION>
+    <Affiliates_URL>http://www.asp-shareware.org/pad/extensions/Affiliates.htm</Affiliates_URL>
+    <Affiliates_Regnow_Product_ID>24231-1</Affiliates_Regnow_Product_ID>
+    <Affiliates_Regnow_Maximum_Commission_Rate>50%</Affiliates_Regnow_Maximum_Commission_Rate>
+    <Affiliates_Regnow_Vendor_ID>v24231</Affiliates_Regnow_Vendor_ID>
+    <Affiliates_Regnow_Order_Page>https://www.regnow.com/softsell/nph-softsell.cgi?item=24231-1</Affiliates_Regnow_Order_Page>
+    <Affiliates_Information_Page></Affiliates_Information_Page>
+    <Affiliates_Avangate_Order_Page></Affiliates_Avangate_Order_Page>
+    <Affiliates_Avangate_Vendor_ID></Affiliates_Avangate_Vendor_ID>
+    <Affiliates_Avangate_Product_ID></Affiliates_Avangate_Product_ID>
+    <Affiliates_Avangate_Maximum_Commission_Rate></Affiliates_Avangate_Maximum_Commission_Rate>
+    <Affiliates_Cleverbridge_Order_Page></Affiliates_Cleverbridge_Order_Page>
+    <Affiliates_Cleverbridge_Vendor_ID></Affiliates_Cleverbridge_Vendor_ID>
+    <Affiliates_Cleverbridge_Product_ID></Affiliates_Cleverbridge_Product_ID>
+    <Affiliates_Cleverbridge_Maximum_Commission_Rate></Affiliates_Cleverbridge_Maximum_Commission_Rate>
+    <Affiliates_clixGalore_Order_Page></Affiliates_clixGalore_Order_Page>
+    <Affiliates_clixGalore_Vendor_ID></Affiliates_clixGalore_Vendor_ID>
+    <Affiliates_clixGalore_Product_ID></Affiliates_clixGalore_Product_ID>
+    <Affiliates_clixGalore_Maximum_Commission_Rate></Affiliates_clixGalore_Maximum_Commission_Rate>
+    <Affiliates_CommissionJunction_Order_Page></Affiliates_CommissionJunction_Order_Page>
+    <Affiliates_CommissionJunction_Vendor_ID></Affiliates_CommissionJunction_Vendor_ID>
+    <Affiliates_CommissionJunction_Product_ID></Affiliates_CommissionJunction_Product_ID>
+    <Affiliates_CommissionJunction_Maximum_Commission_Rate></Affiliates_CommissionJunction_Maximum_Commission_Rate>
+    <Affiliates_LinkShare_Order_Page></Affiliates_LinkShare_Order_Page>
+    <Affiliates_LinkShare_Vendor_ID></Affiliates_LinkShare_Vendor_ID>
+    <Affiliates_LinkShare_Product_ID></Affiliates_LinkShare_Product_ID>
+    <Affiliates_LinkShare_Maximum_Commission_Rate></Affiliates_LinkShare_Maximum_Commission_Rate>
+    <Affiliates_OneNetworkDirect_Order_Page></Affiliates_OneNetworkDirect_Order_Page>
+    <Affiliates_OneNetworkDirect_Vendor_ID></Affiliates_OneNetworkDirect_Vendor_ID>
+    <Affiliates_OneNetworkDirect_Product_ID></Affiliates_OneNetworkDirect_Product_ID>
+    <Affiliates_OneNetworkDirect_Maximum_Commission_Rate></Affiliates_OneNetworkDirect_Maximum_Commission_Rate>
+    <Affiliates_Plimus_Order_Page></Affiliates_Plimus_Order_Page>
+    <Affiliates_Plimus_Vendor_ID></Affiliates_Plimus_Vendor_ID>
+    <Affiliates_Plimus_Product_ID></Affiliates_Plimus_Product_ID>
+    <Affiliates_Plimus_Maximum_Commission_Rate></Affiliates_Plimus_Maximum_Commission_Rate>
+    <Affiliates_Shareasale_Order_Page></Affiliates_Shareasale_Order_Page>
+    <Affiliates_Shareasale_Vendor_ID></Affiliates_Shareasale_Vendor_ID>
+    <Affiliates_Shareasale_Product_ID></Affiliates_Shareasale_Product_ID>
+    <Affiliates_Shareasale_Maximum_Commission_Rate></Affiliates_Shareasale_Maximum_Commission_Rate>
+    <Affiliates_BMTMicro_Order_Page></Affiliates_BMTMicro_Order_Page>
+    <Affiliates_BMTMicro_Vendor_ID></Affiliates_BMTMicro_Vendor_ID>
+    <Affiliates_BMTMicro_Product_ID></Affiliates_BMTMicro_Product_ID>
+    <Affiliates_BMTMicro_Maximum_Commission_Rate></Affiliates_BMTMicro_Maximum_Commission_Rate>
+    <Affiliates_DigiBuy_Order_Page></Affiliates_DigiBuy_Order_Page>
+    <Affiliates_DigiBuy_Vendor_ID></Affiliates_DigiBuy_Vendor_ID>
+    <Affiliates_DigiBuy_Product_ID></Affiliates_DigiBuy_Product_ID>
+    <Affiliates_DigiBuy_Maximum_Commission_Rate></Affiliates_DigiBuy_Maximum_Commission_Rate>
+    <Affiliates_DigitalCandle_Order_Page></Affiliates_DigitalCandle_Order_Page>
+    <Affiliates_DigitalCandle_Vendor_ID></Affiliates_DigitalCandle_Vendor_ID>
+    <Affiliates_DigitalCandle_Product_ID></Affiliates_DigitalCandle_Product_ID>
+    <Affiliates_DigitalCandle_Maximum_Commission_Rate></Affiliates_DigitalCandle_Maximum_Commission_Rate>
+    <Affiliates_Emetrix_Order_Page></Affiliates_Emetrix_Order_Page>
+    <Affiliates_Emetrix_Vendor_ID></Affiliates_Emetrix_Vendor_ID>
+    <Affiliates_Emetrix_Product_ID></Affiliates_Emetrix_Product_ID>
+    <Affiliates_Emetrix_Maximum_Commission_Rate></Affiliates_Emetrix_Maximum_Commission_Rate>
+    <Affiliates_eSellerate_Order_Page></Affiliates_eSellerate_Order_Page>
+    <Affiliates_eSellerate_Vendor_ID></Affiliates_eSellerate_Vendor_ID>
+    <Affiliates_eSellerate_Product_ID></Affiliates_eSellerate_Product_ID>
+    <Affiliates_eSellerate_Maximum_Commission_Rate></Affiliates_eSellerate_Maximum_Commission_Rate>
+    <Affiliates_Kagi_Order_Page></Affiliates_Kagi_Order_Page>
+    <Affiliates_Kagi_Vendor_ID></Affiliates_Kagi_Vendor_ID>
+    <Affiliates_Kagi_Product_ID></Affiliates_Kagi_Product_ID>
+    <Affiliates_Kagi_Maximum_Commission_Rate></Affiliates_Kagi_Maximum_Commission_Rate>
+    <Affiliates_NorthStarSol_Order_Page></Affiliates_NorthStarSol_Order_Page>
+    <Affiliates_NorthStarSol_Vendor_ID></Affiliates_NorthStarSol_Vendor_ID>
+    <Affiliates_NorthStarSol_Product_ID></Affiliates_NorthStarSol_Product_ID>
+    <Affiliates_NorthStarSol_Maximum_Commission_Rate></Affiliates_NorthStarSol_Maximum_Commission_Rate>
+    <Affiliates_Order1_Order_Page></Affiliates_Order1_Order_Page>
+    <Affiliates_Order1_Vendor_ID></Affiliates_Order1_Vendor_ID>
+    <Affiliates_Order1_Product_ID></Affiliates_Order1_Product_ID>
+    <Affiliates_Order1_Maximum_Commission_Rate></Affiliates_Order1_Maximum_Commission_Rate>
+    <Affiliates_Osolis_Order_Page></Affiliates_Osolis_Order_Page>
+    <Affiliates_Osolis_Vendor_ID></Affiliates_Osolis_Vendor_ID>
+    <Affiliates_Osolis_Product_ID></Affiliates_Osolis_Product_ID>
+    <Affiliates_Osolis_Maximum_Commission_Rate></Affiliates_Osolis_Maximum_Commission_Rate>
+    <Affiliates_Regnet_Order_Page></Affiliates_Regnet_Order_Page>
+    <Affiliates_Regnet_Vendor_ID></Affiliates_Regnet_Vendor_ID>
+    <Affiliates_Regnet_Product_ID></Affiliates_Regnet_Product_ID>
+    <Affiliates_Regnet_Maximum_Commission_Rate></Affiliates_Regnet_Maximum_Commission_Rate>
+    <Affiliates_Regsoft_Order_Page></Affiliates_Regsoft_Order_Page>
+    <Affiliates_Regsoft_Vendor_ID></Affiliates_Regsoft_Vendor_ID>
+    <Affiliates_Regsoft_Product_ID></Affiliates_Regsoft_Product_ID>
+    <Affiliates_Regsoft_Maximum_Commission_Rate></Affiliates_Regsoft_Maximum_Commission_Rate>
+    <Affiliates_ShareIt_Order_Page></Affiliates_ShareIt_Order_Page>
+    <Affiliates_ShareIt_Vendor_ID></Affiliates_ShareIt_Vendor_ID>
+    <Affiliates_ShareIt_Product_ID></Affiliates_ShareIt_Product_ID>
+    <Affiliates_ShareIt_Maximum_Commission_Rate></Affiliates_ShareIt_Maximum_Commission_Rate>
+    <Affiliates_SWReg_Order_Page></Affiliates_SWReg_Order_Page>
+    <Affiliates_SWReg_Vendor_ID></Affiliates_SWReg_Vendor_ID>
+    <Affiliates_SWReg_Product_ID></Affiliates_SWReg_Product_ID>
+    <Affiliates_SWReg_Maximum_Commission_Rate></Affiliates_SWReg_Maximum_Commission_Rate>
+    <Affiliates_V-Share_Order_Page></Affiliates_V-Share_Order_Page>
+    <Affiliates_V-Share_Vendor_ID></Affiliates_V-Share_Vendor_ID>
+    <Affiliates_V-Share_Product_ID></Affiliates_V-Share_Product_ID>
+    <Affiliates_V-Share_Maximum_Commission_Rate></Affiliates_V-Share_Maximum_Commission_Rate>
+    <Affiliates_VFree_Order_Page></Affiliates_VFree_Order_Page>
+    <Affiliates_VFree_Vendor_ID></Affiliates_VFree_Vendor_ID>
+    <Affiliates_VFree_Product_ID></Affiliates_VFree_Product_ID>
+    <Affiliates_VFree_Maximum_Commission_Rate></Affiliates_VFree_Maximum_Commission_Rate>
+    <Affiliates_Yaskifo_Order_Page></Affiliates_Yaskifo_Order_Page>
+    <Affiliates_Yaskifo_Vendor_ID></Affiliates_Yaskifo_Vendor_ID>
+    <Affiliates_Yaskifo_Product_ID></Affiliates_Yaskifo_Product_ID>
+    <Affiliates_Yaskifo_Maximum_Commission_Rate></Affiliates_Yaskifo_Maximum_Commission_Rate>
+  </Affiliates>
+  <OnlineShops>
+    <OnlineShops_FORM>Y</OnlineShops_FORM>
+    <OnlineShops_VERSION>1.0</OnlineShops_VERSION>
+    <OnlineShops_URL>http://Submit-Everywhere.com/extensions/OnlineShops.htm</OnlineShops_URL>
+    <OnlineShops_DESCRIPTION>This PAD extension allows you to check these sites distribution agreements and decide wether you wish to sell your product through them</OnlineShops_DESCRIPTION>
+    <OnlineShops_PalmGear>off</OnlineShops_PalmGear>
+    <OnlineShops_PocketLand>off</OnlineShops_PocketLand>
+    <OnlineShops_PDAssi>off</OnlineShops_PDAssi>
+    <OnlineShops_PDATopSoft>off</OnlineShops_PDATopSoft>
+    <OnlineShops_PocketGear>off</OnlineShops_PocketGear>
+    <OnlineShops_Softahead>on</OnlineShops_Softahead>
+    <OnlineShops_Softonic>on</OnlineShops_Softonic>
+    <OnlineShops_SoftSearch>on</OnlineShops_SoftSearch>
+    <OnlineShops_Winowin>on</OnlineShops_Winowin>
+    <OnlineShops_Handango>on</OnlineShops_Handango>
+  </OnlineShops>
+  <Program_Info>
+    <Program_Name>Algorithm</Program_Name>
+    <Program_Version>2.5</Program_Version>
+    <Program_Release_Month>06</Program_Release_Month>
+    <Program_Release_Day>27</Program_Release_Day>
+    <Program_Release_Year>2010</Program_Release_Year>
+    <Program_Cost_Dollars>0.00</Program_Cost_Dollars>
+    <Program_Type>Freeware</Program_Type>
+    <Program_Release_Status>New Release</Program_Release_Status>
+    <Program_Install_Support>Install and Uninstall</Program_Install_Support>
+    <Program_OS_Support>WinXP,WinVista,WinVista x64,Win7 x32,Win7 x64,Win2000,WinOther,Windows2000,Windows2003,WinServer,Windows Vista Ultimate,Windows Vista Ultimate x64,Windows Media Center Edition 2005,Windows Vista Starter,Windows Vista Home Basic,Windows Vista Home Premium,Windows Vista Business,Windows Vista Enterprise,Windows Vista Home Basic x64,Windows Vista Home Premium x64,Windows Vista Business x64,Windows Vista Enterprise x64</Program_OS_Support>
+    <Program_Language>English,Russian</Program_Language>
+    <Program_Change_Info>Objects: Internet, Network, CheckedListBox;
+Help: Full help about Algorithm 2;
+Video lessons added.</Program_Change_Info>
+    <Program_System_Requirements>No</Program_System_Requirements>
+    <Program_Category_Class>Audio &amp; Multimedia::Multimedia Creation Tools</Program_Category_Class>
+    <File_Info>
+      <File_Size_Bytes>8843264</File_Size_Bytes>
+      <File_Size_K>8636</File_Size_K>
+      <File_Size_MB>8.43</File_Size_MB>
+      <Filename_Versioned></Filename_Versioned>
+      <Filename_Previous></Filename_Previous>
+      <Filename_Generic></Filename_Generic>
+      <Filename_Long></Filename_Long>
+    </File_Info>
+    <Expire_Info>
+      <Has_Expire_Info>N</Has_Expire_Info>
+      <Expire_Based_On>Days</Expire_Based_On>
+      <Expire_Count></Expire_Count>
+      <Expire_Other_Info></Expire_Other_Info>
+      <Expire_Month></Expire_Month>
+      <Expire_Day></Expire_Day>
+      <Expire_Year></Expire_Year>
+    </Expire_Info>
+    <Program_Categories>Hobbies,Development,Editors,Creation,Education,Tools,other,Программирование,Мультимедиа,Мультимедия</Program_Categories>
+    <Limitations>No limitations</Limitations>
+    <Program_Cost_Other_Code></Program_Cost_Other_Code>
+    <Program_Cost_Other></Program_Cost_Other>
+    <Awards></Awards>
+    <Program_Specific_Category></Program_Specific_Category>
+    <Includes_JAVA_VM></Includes_JAVA_VM>
+    <Includes_VB_Runtime></Includes_VB_Runtime>
+    <Includes_DirectX></Includes_DirectX>
+  </Program_Info>
+  <Web_Info>
+    <Application_URLs>
+      <Application_Info_URL>http://www.algorithm2.com/index.php?option=com_content&amp;view=article&amp;id=47&amp;Itemid=58</Application_Info_URL>
+      <Application_Screenshot_URL>http://www.algorithm2.com/images/stories/ScreenEng.jpg</Application_Screenshot_URL>
+      <Application_Icon_URL>http://www.algorithm2.com/templates/rhuk_milkyway/favicon.gif</Application_Icon_URL>
+      <Application_XML_File_URL>http://www.algorithm2.com/download/algoritm_pad_eng.xml</Application_XML_File_URL>
+      <Application_Order_URL>http://www.algorithm2.com/index.php?option=com_content&amp;view=article&amp;id=54&amp;Itemid=65</Application_Order_URL>
+    </Application_URLs>
+    <Download_URLs>
+      <Primary_Download_URL>http://www.algorithm2.com/download/Algoritm2EngLast.exe</Primary_Download_URL>
+      <Secondary_Download_URL></Secondary_Download_URL>
+      <Additional_Download_URL_1></Additional_Download_URL_1>
+      <Additional_Download_URL_2></Additional_Download_URL_2>
+    </Download_URLs>
+  </Web_Info>
+  <Permissions>
+    <Distribution_Permissions>Freeware</Distribution_Permissions>
+    <EULA>ALGORITHM ©
+
+                        The licence for usage and distribution
+
+ALGORITHM License Agreement
+
+ALGORITHM END-USER LICENSE AGREEMENT
+
+IMPORTANT-READ CAREFULLY: This ALGORITHM End-User License Agreement ("EULA") is a
+legal agreement between you (either an individual or a single entity) and 
+Arctic Technology for the SOFTWARE(s) identified above, which includes the User's
+Guide, any associated SOFTWARE components, any media, any printed materials
+other than the User's Guide, and any "online" or electronic documentation
+("SOFTWARE"). By installing, copying, or otherwise using the SOFTWARE, you agree
+to be bound by the terms of this EULA. If you do not agree to the terms of this
+EULA, do not install or use the SOFTWARE. 
+
+1. THIS SOFTWARE IS LICENSED, NOT SOLD. YOU MAY USE THIS SOFTWARE ONLY AS DESCRIBED IN THIS AGREEMENT. 
+
+2. GRANT OF LICENSE. 
+Free License
+You can use this program as long as you wish. However, programs and games compiled through free online 
+compilation service can be used only for private purpose without right to sell it. If you want to sell 
+programs and games that was created with the SOFTWARE you will need to register your copy of the program.
+
+Registered License
+After registration user is given non-exclusive licence to use ALGORITHM for any legal purposes. Licensed 
+copy of ALGORITHM can not be given on lease. None licence payments (except cost of the license itself) 
+connected with your programs distribution are required.
+
+3. DISTRIBUTION.  You are hereby licensed to make copies of the SOFTWARE as you
+wish; give exact copies of the original SOFTWARE to anyone; and distribute the
+SOFTWARE in its unmodified form via electronic means (Internet, BBS's, Shareware
+distribution libraries, CD-ROMs, etc.). You may charge a distribution fee for
+the package, but you must not represent in any way that you are selling the
+SOFTWARE itself. Your distribution of the SOFTWARE will not entitle you to any
+compensation from Arctic Technology.  You must distribute a copy of this EULA
+with any copy of the SOFTWARE and anyone to whom you distribute the SOFTWARE is
+subject to this EULA.
+
+4. RESTRICTIONS.  You may not reverse engineer, de-compile, or disassemble the
+SOFTWARE, except and only to the extent that such activity is expressly
+permitted by applicable law notwithstanding this limitation. You may not rent,
+lease, or lend the SOFTWARE. You may permanently transfer all of your rights
+under this EULA, provided the recipient agrees to the terms of this EULA.  You
+may not use the SOFTWARE to perform any unauthorized transfer of information
+(e.g. transfer of files in violation of a copyright) or for any illegal purpose.
+
+5. SUPPORT SERVICES. Arctic Technology may provide you with support services
+related to the SOFTWARE. Use of Support Services is governed by SmartSoft
+Ltd. polices and programs described in the user manual, in online
+documentation, and/or other materials provided by Arctic Technology, as they
+may be modified from time to time. Any supplemental SOFTWARE code provided to
+you as part of the Support Services shall be considered part of the SOFTWARE and
+subject to the terms and conditions of this EULA. With respect to technical
+information you provide Arctic Technology as part of the Support Services, 
+Arctic Technology may use such information for its business purposes, including for
+product support and development. Arctic Technology will not utilize such
+technical information in a form that personally identifies you.
+
+6. TERMINATION. Without prejudice to any other rights, Arctic Technology may
+terminate this EULA if you fail to comply with the terms and conditions of this
+EULA. In such event, you must destroy all copies of the SOFTWARE.
+
+7. COPYRIGHT. The SOFTWARE is protected by copyright laws and international
+treaty provisions. You acknowledge that no title to the intellectual property in
+the SOFTWARE is transferred to you. You further acknowledge that title and full
+ownership rights to the SOFTWARE will remain the exclusive property of the
+Arctic Technology and you will not acquire any rights to the SOFTWARE except as
+expressly set forth in this license. You agree that any copies of the SOFTWARE
+will contain the same proprietary notices which appear on and in the SOFTWARE.
+
+8. NO WARRANTIES. Arctic Technology expressly disclaims any warranty for the
+SOFTWARE. THE SOFTWARE AND ANY RELATED DOCUMENTATION IS PROVIDED "AS IS" WITHOUT
+WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION,
+THE IMPLIED WARRANTIES OR MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR
+NON INFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR PERFORMANCE OF THE
+SOFTWARE REMAINS WITH YOU.
+
+9. LIMITATION OF LIABILITY. IN NO EVENT SHALL Arctic Technology OR ITS
+SUPPLIERS BE LIABLE TO YOU FOR ANY CONSEQUENTIAL, SPECIAL, INCIDENTAL, OR
+INDIRECT DAMAGES OF ANY KIND ARISING OUT OF THE DELIVERY, PERFORMANCE, OR USE OF
+THE SOFTWARE, EVEN IF Arctic Technology HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES. IN ANY EVENT, Arctic Technology'S LIABILITY FOR ANY CLAIM,
+WHETHER IN CONTRACT, TORT, OR ANY OTHER THEORY OF LIABILITY WILL NOT EXCEED THE
+GREATER OF U.S.$1.00 OR LICENSE FEE PAID BY YOU.
+
+10. SECURITY. You agree that Arctic Technology is not liable to you for security 
+breaches resulting from your use of the SOFTWARE. The security of the SOFTWARE
+depends primarily on you selecting a secure password and keeping it confidential. 
+You should not select a password that may be easily discovered by others.  
+
+11. MISCELLANEOUS. Should you have any questions concerning this EULA, or if you
+desire to contact Arctic Technology for any reason, please contact by
+electronic mail at: support@algorithm2.com.
+
+   Thanks for usage ALGORITHM, Arctic Technology.</EULA>
+  </Permissions>
+  <Program_Descriptions>
+    <English>
+      <Keywords>create your program, How to create your own program, algorithm 2, How to make your software, Programming, Free, without programming, not a strict programming language, RAD environment, exe, exe-file, compiling, program development, soft develop</Keywords>
+      <Char_Desc_45>Free tool for software and game development!</Char_Desc_45>
+      <Char_Desc_80>How to create your own program? Free tool for software development at home!</Char_Desc_80>
+      <Char_Desc_250>Do you want to create your own program? Algorithm2 is a free tool for game and software development at home! With its help anybody can create a program without a knowledge of any programming language.</Char_Desc_250>
+      <Char_Desc_450>Algorithm2 is a fully visual RAD system but it is not a strict programming language. It aims to help anyone create programs without any programming knowledge. Algorithm2 is a development environment where the programmer does not (and may not) write a single line of code, but it programs by setting the behaviours of objects and controls. Algorithm2 has a very good and complete help made by an on-line manual, video tutorials and reference guide.</Char_Desc_450>
+      <Char_Desc_2000>Do you want to create your own program? Algorithm2 is a free tool for game and software development at home. With its help anybody can create a program without a knowledge of any programming language. Up-to-date objects will let you to create your own multimedia players, browsers, text editors, it will provide you with tools for working with file-system, screen, system registry, keyboard and mouse. And it's very easy to work with all these features. You can immediately compile your programm into an exe-file and publish it in internet or start selling it and making money on your own intellect. You can download a programm for software development Algorithm 2 for free.</Char_Desc_2000>
+    </English>
+    <Russian>
+      <Keywords>как создать программу, самомоу, как сделать программу, как написать программу, программа для создания программ, алгоритм 2, создание программ, написание программ, конструктор программ, как сделать игру, как создать игру, без программирования</Keywords>
+      <Char_Desc_45>Разработка программ и игр дома - Алгоритм 2</Char_Desc_45>
+      <Char_Desc_80>Разработка программ самому? Алгоритм - программа для создания программ и игр!</Char_Desc_80>
+      <Char_Desc_250>Разработка программ самому? Алгоритм - программа для создания программ и игр, не требующая знаний языков программирования! Разработанные программы можно сразу же выложить в интернет и зарабатывать на своем уме! Вы узнаете как сделать программу!</Char_Desc_250>
+      <Char_Desc_450>Разработка программного обеспечения самому? На самом деле каждый может создать программу или игру! Алгоритм 2 - программа для создания программ, где не требутся знаний программирования - всё делается мышкой и основано обычной логике.  Разработка программного обеспечения это просто! Ваши творения можно сразу же выложить в интернет и зарабатывать на своем уме! Теперь и вы узнаете как разработать программу!</Char_Desc_450>
+      <Char_Desc_2000>Это программа для разработки программ дома, самостоятельно. 
+
+Как научиться программировать? Создание программ с помощью Алгоритма, не требует никаких знаний программирования. Теперь каждый может создать программу или игру! Всё делается мышкой и  основано обычной логике, присущей каждому человеку. Сделать программу или игру - это просто! Современные объекты позволят вам создавать свои плееры, браузеры, текстовый редакторы, работать с файлами и папками, экраном компьютера, реестром, управлять мышкой и клавиатурой. Со всем этим легко и просто работать. Можно создать программу  в exe-файл и сразу же выложить в интернет или начать продавать, зарабатывая на своем уме! 
+
+Возможно писать программы - станет вашей работой. Программу для создания программ Алгоритм 2 вы можете скачать бесплатно. Программа разработана  в России, имеет русский интерфейс и полную техническую поддержку на официальном сайте и форуме!</Char_Desc_2000>
+    </Russian>
+  </Program_Descriptions>
+</XML_DIZ_INFO>
