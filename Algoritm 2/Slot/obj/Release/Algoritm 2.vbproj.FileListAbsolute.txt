@@ -39,3 +39,42 @@ D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Slot\obj\Relea
 D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Slot\hj\Algoritm 2.exe.config
 D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Slot\obj\Release\GenerateResource-ResGen.read.1.tlog
 D:\Documents\Visual Studio Projects\VB8 проекты\Algoritm 2\Slot\obj\Release\GenerateResource-ResGen.write.1.tlog
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\Algoritm 2.vbprojResolveAssemblyReference.cache
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.ClientServerMy.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.InternetControl.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.About.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Update.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Edu.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Demo.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.OutputFrm.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Uvedomlenie.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.CodeVE.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.intro.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Master.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Bloks.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.CreateCycle.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.CreateIf.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.CreateDeistv.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Argument.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Arguments.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.ShowObject.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.EditProperty.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.MainForm.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Resources.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Blok.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.OptionsForm.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\WindowsApplication1.Progress.resources
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\Algoritm 2.vbproj.GenerateResource.Cache
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\Algoritm 2.exe
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\Algoritm 2.xml
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\Algoritm 2.pdb
+E:\Work\Alg\Algoritm 2\Slot\bin\Release\Algoritm 2.exe.config
+E:\Work\Alg\Algoritm 2\Slot\bin\Release\Algoritm 2.exe.manifest
+E:\Work\Alg\Algoritm 2\Slot\bin\Release\Algoritm 2.application
+E:\Work\Alg\Algoritm 2\Slot\bin\Release\Algoritm 2.exe
+E:\Work\Alg\Algoritm 2\Slot\bin\Release\Algoritm 2.pdb
+E:\Work\Alg\Algoritm 2\Slot\bin\Release\Algoritm 2.xml
+E:\Work\Alg\Algoritm 2\Slot\bin\Release\Kennedy.ManagedHooks.dll
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\Algoritm 2.TrustInfo.xml
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\Algoritm 2.exe.manifest
+E:\Work\Alg\Algoritm 2\Slot\obj\Release\Algoritm 2.application

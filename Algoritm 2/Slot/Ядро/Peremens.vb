@@ -1,4 +1,4 @@
-﻿'#Const Ver = "DebugAll" ' -  DebugAll, DebugFree, Free, All, Http
+﻿'#Const Ver = "DebugAll" ' -  DebugFull, DebugFree, Free, Full, Http
 '#Const Lang = "Ru" ' -  Ru, En
 Imports System.Diagnostics
 
@@ -8,14 +8,14 @@ Public Module peremens
     Public isCompilBest As Boolean  ' ОБОЗНАЧАЕТ ЧТО ИДЕТ СУПЕР-КОМПИЛЯЦИЯ ПРОЕКТА
     Public isRunAlg2Code As Boolean  ' ОБОЗНАЧАЕТ ЧТО ИДЕТ СУПЕР-КОМПИЛЯЦИЯ ПРОЕКТА
 
-#If Ver = "Http" Then
+#If Http Then
     Public IsHttpCompil As Boolean = True ' ОБОЗНАЧАЕТ ЧТО ИСПОЛЬЗУЮТ В КАЧЕСТВЕ ОНЛАЙН-КОМПИЛЯТОРА
 #Else
     Public IsHttpCompil As Boolean = False ' ОБОЗНАЧАЕТ ЧТО НЕ ИСПОЛЬЗУЮТ В КАЧЕСТВЕ ОНЛАЙН-КОМПИЛЯТОРА
 #End If
 
     ' ЯЗЫКОЗАВИСИМЫЕ КОНСТАНТЫ
-#If lang = "Ru" Then
+#If Ru Then
     Public Const AppName As String = "Алгоритм"
     Private Const AlgDirName As String = "Алгоритм 2"
     Public Const IntroImage As String = "AlgorithmRu.jpg"
@@ -35,7 +35,7 @@ Public Module peremens
     Private Const PicturesDirName As String = "Pictures"
     Public lang_def As String = "English" ' язык программирования по умолчанию
     Public lang_interface As String = "English"  ' язык среды разработки
-    Public lastVersionUrl As String = "http://algorithm2.com/api/LastVersionEn.php" 
+    Public lastVersionUrl As String = "http://algorithm2.com/api/LastVersionEn.php"
     Public lastFreeVersionDownloadUrl As String = "http://algorithm2.com/download/Algoritm2EnLast.exe"
 #End If
 
@@ -599,7 +599,7 @@ Public Module peremens
 
     ' Прогресс-Форма
     Sub ProgressFormShow(ByVal txt As String, Optional ByVal val As Integer = 0)
-#If Ver <> "Http" Then
+#If Http = False Then
         ProgressForm.TopMost = True
         ProgressForm.ProgressBarValue = val
         ProgressForm.Label1.Text = txt

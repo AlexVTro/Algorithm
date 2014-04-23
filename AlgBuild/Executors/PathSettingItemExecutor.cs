@@ -1,51 +1,47 @@
 ﻿using System.IO;
 using AlgBuild.BuildSettings;
 using AlgBuild.BuildTypes;
+using AlgBuild.Executors.Item;
 
 namespace AlgBuild.Executors
 {
-    public class PathSettingItemExecutor 
+    public class PathSettingItemExecutor : SettingItemExecutor<PathSettingItem>
     {
-        private readonly PathSettingItem _settingItem;
-
         public PathSettingItemExecutor(PathSettingItem settingItem)
+            : base(settingItem)
         {
-            _settingItem = settingItem;
         }
 
         public void Execute(string fromPath, string toPath, VersionType versionType, Lang lang)
         {
-            if (_settingItem.VersionType != versionType && _settingItem.VersionType != VersionType.All)
+            if (!CanExecute(versionType, lang))
                 return;
 
-            if (_settingItem.Lang != lang && _settingItem.Lang != Lang.All)
-                return;
-
-            var sourcePath = Path.Combine(fromPath, _settingItem.SourcePath);
-            var targetPath = Path.Combine(toPath, _settingItem.TargetPath);
+            var sourcePath = Path.Combine(fromPath, SettingItem.SourcePath);
+            var targetPath = Path.Combine(toPath, SettingItem.TargetPath);
 
             if (!Directory.Exists(targetPath))
             {
                 Directory.CreateDirectory(targetPath);
             }
 
-            if (_settingItem.Directories != null)
-                _settingItem.Directories.ForEach(d =>
-                                                     {
-                                                         var oldFilePath = Path.Combine(sourcePath, GetOldFileName(d));
-                                                         var newFilePath = Path.Combine(targetPath, GetNewFileName(d));
+            if (SettingItem.Directories != null)
+                SettingItem.Directories.ForEach(d =>
+                                                    {
+                                                        var oldFilePath = Path.Combine(sourcePath, GetOldFileName(d));
+                                                        var newFilePath = Path.Combine(targetPath, GetNewFileName(d));
 
-                                                         DirectoryCopy(oldFilePath, newFilePath);
-                                                     });
+                                                        DirectoryCopy(oldFilePath, newFilePath);
+                                                    });
 
-            if (_settingItem.Files != null)
-                _settingItem.Files.ForEach(f =>
-                                               {
-                                                   var oldFilePath = Path.Combine(sourcePath, GetOldFileName(f));
-                                                   var newFilePath = Path.Combine(targetPath, GetNewFileName(f));
+            if (SettingItem.Files != null)
+                SettingItem.Files.ForEach(f =>
+                                              {
+                                                  var oldFilePath = Path.Combine(sourcePath, GetOldFileName(f));
+                                                  var newFilePath = Path.Combine(targetPath, GetNewFileName(f));
 
-                                                   File.Copy(oldFilePath, newFilePath);
-                                               });
+                                                  File.Copy(oldFilePath, newFilePath);
+                                              });
         }
 
         private string GetNewFileName(string filePath)
@@ -54,6 +50,7 @@ namespace AlgBuild.Executors
 
             return items.Length <= 1 ? Path.GetFileName(filePath) : items[1];
         }
+
         private string GetOldFileName(string filePath)
         {
             return filePath.Split('|')[0];

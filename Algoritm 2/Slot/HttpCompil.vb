@@ -8,7 +8,7 @@ Module HttpCompil
     Public OutFile As String = CompilPath & "\Compil.exe"
     Public uid_in, uid_out As String
 
-#If Ver <> "Http" Then
+#If Http = False Then
     Sub Main()
     End Sub
 #Else

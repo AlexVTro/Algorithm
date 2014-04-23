@@ -1,4 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
 <InstallSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
-  <InnoSetupAppPath>C:\Program Files (x86)\Inno Setup 5</InnoSetupAppPath>
+  <InnoSetupCompilerPath>C:\Program Files (x86)\Inno Setup 5</InnoSetupCompilerPath>
 </InstallSetting>

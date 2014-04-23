@@ -5,9 +5,14 @@
         // Common
         public const string SettingFolderName = "Releases";
 
-        public const string PathSettingFileName = "PathSettings.txt";
-        public const string InstallSettingFileName = "InstallSettings.txt";
-        public const string PublishSettingFileName = "PublishSettings.txt";
+        public const string AlgBuildSettingFileName = "AlgBuildSettings.xml";
+        public const string PathSettingFileName = "PathSettings.xml";
+        public const string InstallSettingFileName = "InstallSettings.xml";
+        public const string PublishSettingFileName = "PublishSettings.xml";
+
+        // AlgBuild
+        public const string ExesFolderName = SettingFolderName + @"\Exes";
+        public const string ExesNamePattern = "Algoritm{0}{1}.exe";
 
         // Paths
         public const string UnpackedFolderName = SettingFolderName + @"\Unpacked";

@@ -1,9 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
-using System.Net;
 using AlgBuild.BuildSettings;
 using AlgBuild.BuildTypes;
 using AlgBuild.Engine;
@@ -35,8 +33,14 @@ namespace AlgBuild.Executors
                 Directory.CreateDirectory(Path.Combine(rootPath, Constants.PublishFolderName));
             }
 
-            var filePath = Path.Combine(rootPath, Constants.SettingFolderName, Constants.InstallSettingFileName);
-            UploadFile(filePath, "ftp://algoritm2.ru/" + "www/algoritm2.ru/download/" + Constants.InstallSettingFileName, "alg", "tT2NI2gP");
+            var executors = _publishSetting.PublishSettings.Select(ps => new PublishSettingItemExecutor(ps)).ToList();
+
+            foreach (var neededVersion in NeededVersions)
+            {
+                executors.ForEach(
+                    e =>
+                    e.Execute(rootPath, _publishSetting.PublishFtpSetting, neededVersion.Item1, neededVersion.Item2));
+            }
         }
 
         

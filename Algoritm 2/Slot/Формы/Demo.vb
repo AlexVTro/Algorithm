@@ -20,7 +20,7 @@
         TextBox1.Text = transInfc(TextBox1.Text)
     End Sub
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-#If Ver = "All" Or Ver = "DebugAll" Or Ver = "Http" Then
+#If Full Or DebugFull Or Http Then
         ' Сравниваем
         If PerfomanceProgress(TextBox1.Text) Then
             Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\A" & "l" & "g").SetValue("A" & "c" & "t", "1")

@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Windows.Forms;
-using AlgBuild.BuildSettings;
-using AlgBuild.BuildTypes;
 using AlgBuild.Engine;
 
 namespace AlgBuild
@@ -19,73 +16,50 @@ namespace AlgBuild
         {
             get { return _executor ?? (_executor = new Executor()); }
         }
-        
-        private void ButtonBuildClick(object sender, EventArgs e)
+
+        private void WriteTestSettingsButtonClick(object sender, EventArgs e)
         {
-            //Executor.RunPathSettings();
-            Executor.RunInstallSettings();
+            Executor.WriteTestSettings();
+
+            MessageBox.Show("Write test settings success");
+        }
+        
+        private void MsBuildButtonClick(object sender, EventArgs e)
+        {
+            Executor.RunAlgBuildSettings();
 
             MessageBox.Show("Build success");
         }
 
-        private void ButtonPublishClick(object sender, EventArgs e)
+        private void MoveButtonClick(object sender, EventArgs e)
+        {
+            Executor.RunPathSettings();
+
+            MessageBox.Show("Move success");
+        }
+
+        private void ButtonInstallClick(object sender, EventArgs e)
+        {
+            Executor.RunInstallSettings();
+
+            MessageBox.Show("Install success");
+        }
+
+        private void PublishButton_Click(object sender, EventArgs e)
         {
             Executor.RunPublishSettings();
 
             MessageBox.Show("Publish success");
         }
 
-        private void ButtonWriteTestSettings_Click(object sender, EventArgs e)
+        private void BuildAndPublishButton_Click(object sender, EventArgs e)
         {
-            var testPathSettings = new PathSetting()
-            {
-                PathSettings =
-                    new List<PathSettingItem>
-                                       {
-                                           new PathSettingItem
-                                               {
-                                                   Name = "CompilExe",
-                                                   VersionType = VersionType.All,
-                                                   Lang = Lang.Ru,
-                                                   SourcePath = "sf",
-                                                   TargetPath = "",
-                                                   Directories = new List<string>{"a","b"},
-                                                   Files = new List<string>{"dfa","bdf"},
-                                               }
-                                       }
-            };
+            Executor.RunAlgBuildSettings();
+            Executor.RunPathSettings();
+            Executor.RunInstallSettings();
+            Executor.RunPublishSettings();
 
-            var testInstallSettings = new InstallSetting()
-            {
-                InnoSetupCompilerPath = @"C:\Program Files (x86)\Inno Setup 5"
-            };
-
-            var testPublishSettings = new PublishSetting
-                                          {
-                                              PublishFtpSetting = new PublishFtpSetting
-                                                                      {
-                                                                          FtpUrl = "ftp://algoritm2.ru/www/algoritm2.ru",
-                                                                          FtpUsername = "alg",
-                                                                          FtpPassword = "tT2NI2gP",
-                                                                      },
-
-                                              PublishSettings =
-                                                  new List<PublishSettingItem>
-                                                      {
-                                                          new PublishSettingItem
-                                                              {
-                                                                  VersionType = VersionType.Free,
-                                                                  Lang = Lang.Ru,
-                                                                  TargetPath = "download",
-                                                                  TargetName = "Algoritm2RuLastTest.exe"
-                                                              },
-                                                      }
-                                          };
-
-            SettingsIO.WriteSetting("TestPathSettings.txt", testPathSettings);
-            SettingsIO.WriteSetting("TestInstallSettings.txt", testInstallSettings);
-            SettingsIO.WriteSetting("TestPublishSettings.txt", testPublishSettings);
+            MessageBox.Show("Build & Publish success");
         }
-
     }
 }

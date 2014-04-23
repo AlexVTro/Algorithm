@@ -4269,7 +4269,7 @@ noAccess:
             SaveFileDialog2.FileName = OutFile
         End If
 
-#If Ver = "All" Or Ver = "DebugAll" Or Ver = "Http" Then
+#If Full Or DebugFull Or Http Then
         If PerfomanceProgress() Then
             ' ГЕНЕРАЦИЯ КОДА ПРОГРАММЫ в синтаксисе vb.net и запись его в Code.vb Code2.vb
             Dim cod As String = Perevodi.ToStrCodeFromObj(proj.f)
@@ -4410,7 +4410,7 @@ noAccess:
         ' ЭКСПОРТ
         ProgressFormShow(transInfc("Экспорт") & "...")
 
-#If Ver = "All" Or Ver = "DebugAll" Or Ver = "Http" Then
+#If Full Or DebugFull Or Http Then
         If PerfomanceProgress() Then
             ' ГЕНЕРАЦИЯ КОДА ПРОГРАММЫ в синтаксисе vb.net и запись его в Code.vb Code2.vb
             Dim cod As String = Perevodi.ToStrCodeFromObj(proj.f)

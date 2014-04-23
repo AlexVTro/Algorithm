@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AlgBuildSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <RegeditFrameworkPath>SOFTWARE\Microsoft\MSBuild\ToolsVersions\4.0</RegeditFrameworkPath>
+  <RegeditFrameworkKey>MSBuildToolsPath</RegeditFrameworkKey>
+  <AlgMsBuildSetting>
+    <SolutionPath>Algoritm 2\Algoritm 2.sln</SolutionPath>
+    <BaseMsBuildParams>/p:Configuration=Release /t:Rebuild /m</BaseMsBuildParams>
+    <FinalExePath>Algoritm 2\Slot\bin\Release\Algoritm 2.exe</FinalExePath>
+  </AlgMsBuildSetting>
+  <!-- Alg with build consts -->
+  <BuildSettingItems>
+	<AlgBuildSettingItem VersionType="Free" Lang="Ru">
+      <AddMsBuilsParams>/p:DefineConstants="Free,Ru"</AddMsBuilsParams>
+    </AlgBuildSettingItem>
+	<AlgBuildSettingItem VersionType="Free" Lang="En">
+      <AddMsBuilsParams>/p:DefineConstants="Free,En"</AddMsBuilsParams>
+    </AlgBuildSettingItem>
+	<AlgBuildSettingItem VersionType="Full" Lang="Ru">
+      <AddMsBuilsParams>/p:DefineConstants="Full,Ru"</AddMsBuilsParams>
+    </AlgBuildSettingItem>
+	<AlgBuildSettingItem VersionType="Full" Lang="En">
+      <AddMsBuilsParams>/p:DefineConstants="Full,En"</AddMsBuilsParams>
+    </AlgBuildSettingItem>
+	<AlgBuildSettingItem VersionType="Http" Lang="En">
+      <AddMsBuilsParams>/p:DefineConstants="Http,En"</AddMsBuilsParams>
+    </AlgBuildSettingItem>
+  </BuildSettingItems>
+</AlgBuildSetting>

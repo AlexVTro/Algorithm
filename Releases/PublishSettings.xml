@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PublishSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <PublishFtpSetting>
+    <FtpUrl>ftp://algoritm2.ru/www/algoritm2.ru</FtpUrl>
+    <FtpUsername>alg</FtpUsername>
+    <FtpPassword>tT2NI2gP</FtpPassword>
+  </PublishFtpSetting>
+  <PublishSettings>
+    <PublishSettingItem VersionType="Free" Lang="Ru">
+      <TargetPath>download</TargetPath>
+      <TargetName>Algoritm2RuLastTest.exe</TargetName>
+    </PublishSettingItem>
+    <PublishSettingItem VersionType="Free" Lang="En">
+      <TargetPath>download</TargetPath>
+      <TargetName>Algoritm2EngLastTest.exe</TargetName>
+    </PublishSettingItem>
+    <PublishSettingItem VersionType="Full" Lang="Ru">
+      <TargetPath></TargetPath>
+      <TargetName>Algoritm2_sp_full_ru_lastTest.exe</TargetName>
+    </PublishSettingItem>
+    <PublishSettingItem VersionType="Full" Lang="En">
+      <TargetPath></TargetPath>
+      <TargetName>Algoritm2_sp_full_en_lastTest.exe</TargetName>
+    </PublishSettingItem>
+  </PublishSettings>
+</PublishSetting>

@@ -29,7 +29,10 @@ namespace AlgBuild.Engine
             var fileStream = File.OpenText(filePath);
 
             var ser = new XmlSerializer(typeof(T));
-            return (T)ser.Deserialize(fileStream);
+            var result = (T)ser.Deserialize(fileStream);
+            fileStream.Close();
+
+            return result;
         }
 
         public static void WriteSetting<T>(string filePath, T setting) where T : class
@@ -37,7 +40,8 @@ namespace AlgBuild.Engine
             var fileStream = File.CreateText(filePath);
 
             var ser = new XmlSerializer(typeof(T));
-            ser.Serialize(fileStream, setting); 
+            ser.Serialize(fileStream, setting);
+            fileStream.Close();
         }
     }
 }

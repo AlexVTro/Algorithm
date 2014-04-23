@@ -421,7 +421,7 @@ Module peremens2
     End Function
     ' GetIDFromKey Получение идиентификационного номера пользователя по ключу регистрации
     Function ElapsedTime(ByVal Key As String) As String
-#If Ver = "All" Or Ver = "DebugAll" Or Ver = "Http" Then
+#If Full Or DebugFull Or Http Then
         ' Убираем левые буквы
         Dim i As Integer, k As String = ""
         For i = 0 To Key.Length - 1
@@ -465,7 +465,7 @@ Module peremens2
 
         ' ОБФУСЦИРОВАННЫЙ АЛГОРИТМ
 
-#If Ver = "All" Or Ver = "DebugAll" Or Ver = "Http" Then
+#If Full Or DebugFull Or Http Then
         Dim num As Integer
         Dim str As String
         Dim flag As Boolean

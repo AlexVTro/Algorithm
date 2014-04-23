@@ -4,29 +4,31 @@ using System.Net;
 using AlgBuild.BuildSettings;
 using AlgBuild.BuildTypes;
 using AlgBuild.Engine;
+using AlgBuild.Executors.Item;
 
 namespace AlgBuild.Executors
 {
-    public class PublishSettingItemExecutor
+    public class PublishSettingItemExecutor: SettingItemExecutor<PublishSettingItem>
     {
-        private readonly PublishSettingItem _publishSettingItem;
-
-        public PublishSettingItemExecutor(PublishSettingItem publishSettingItem)
+        public PublishSettingItemExecutor(PublishSettingItem settingItem)
+            : base(settingItem)
         {
-            _publishSettingItem = publishSettingItem;
         }
 
         public void Execute(string rootPath, PublishFtpSetting ftpSetting, VersionType versionType, Lang lang)
         {
+            if (!CanExecute(versionType, lang))
+                return; 
+            
             var sourceFileName = string.Format(Constants.InstallNamePattern, versionType, lang);
             var sourceFilePath = Path.Combine(rootPath, Constants.InstallsFolderName, sourceFileName);
 
-            var destinationFilePath = Path.Combine(rootPath, Constants.PublishFolderName, _publishSettingItem.TargetName);
+            var destinationFilePath = Path.Combine(rootPath, Constants.PublishFolderName, SettingItem.TargetName);
 
-            File.Copy(sourceFilePath, destinationFilePath);
+            File.Copy(sourceFilePath, destinationFilePath, true);
 
             var destinationUri = UriCombine(ftpSetting.FtpUrl,
-                                            _publishSettingItem.TargetPath, _publishSettingItem.TargetName);
+                                            SettingItem.TargetPath, SettingItem.TargetName);
             UploadFile(destinationFilePath, destinationUri, ftpSetting);
         }
 
