@@ -4796,7 +4796,7 @@ noAccess:
         Enableds(True, False, True, True, True)
         Tree.Focus()
     End Sub
-    Private Sub StopMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StopMenu.Click
+    Public Sub StopMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles StopMenu.Click
         ' Выставить флаг чтобы поток вызвал функцию CloseAll т.к. нельзя работать с объектами созданными не в этом потоке
         If RunProj Is Nothing Then GoTo enabli
         If RunProj.isPotok Then

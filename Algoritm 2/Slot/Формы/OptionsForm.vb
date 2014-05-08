@@ -220,11 +220,11 @@
     End Sub
 
     Private Sub Ok_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Ok.Click
-        Dim fl As Boolean = False, flPic As Boolean = False
+        Dim fl As Boolean = False, flStop As Boolean = False, flPic As Boolean = False
 
         ' Язык интерфейса
         If trans(LanguageBox.SelectedItem, True) <> lang_interface Then
-            lang_interface = trans(LanguageBox.SelectedItem, True) : setLangs(False) : fl = True
+            lang_interface = trans(LanguageBox.SelectedItem, True) : setLangs(False) : fl = True : flStop = True
         End If
 
         ' Язык программирования по умолчанию
@@ -281,6 +281,7 @@
         If fl = True Then
             intr = ProgressForm
             ProgressFormShow(transInfc("Применение"))
+            If flStop = True Then MainForm.StopMenu_Click(Nothing, Nothing)
             MainForm.InitializeBeforeProject(True)
             MainForm.InitializeAfterProject(True)
             setLangs()
