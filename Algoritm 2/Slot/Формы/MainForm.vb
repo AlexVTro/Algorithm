@@ -4305,11 +4305,17 @@ noAccess:
                                           , "System.Windows.Forms"}
             Dim import As String = " /imports:" & Join(importy, ",")
             ' иконка проекта
-            Dim icoFl As String = "C:\" & GetUIN(), icon As String = ""
-            If IO.File.Exists(GetMaxPath(proj.pIcon)) Then
-                IO.File.Copy(GetMaxPath(proj.pIcon), icoFl, True)
-                icon = " /win32icon:" & icoFl
+            Dim icoFl As String = Path.GetTempFileName(), icon As String = "" ' "C:\" & GetUIN(), icon As String = ""
+
+            If icoFl.IndexOf(" ") > 0 Then
+                MsgBox(trans("Имя пользователя windows содержит пробелы. Запустите компиляцию от пользователя с именем без пробелов, если хотите, чтобы у приложения была иконка."))
+            Else
+                If File.Exists(GetMaxPath(proj.pIcon)) Then
+                    File.Copy(GetMaxPath(proj.pIcon), icoFl, True)
+                    icon = " /win32icon:" & icoFl
+                End If
             End If
+
             ' ресурсы
             ' reses.Add(" /res:""" & CompilPath & "ClientServer\ClientServer1.resx""")
             ' Dim res As String = "", sourcs, reses As New ArrayList
@@ -4382,13 +4388,13 @@ noAccess:
 #End If
 
 
-        ProgressForm.Hide()
-        If IsHttpCompil = False Then
-            If MsgBox(transInfc("Поздравляем! Проект успешно скомпилирован в готовую программу и расположен по адресу") & ": " & vbCrLf & SaveFileDialog2.FileName & vbCrLf & vbCrLf & transInfc("Открыть папку с программой?"), MsgBoxStyle.Information + MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
-                Diagnostics.Process.Start(newDir & "\")
+            ProgressForm.Hide()
+            If IsHttpCompil = False Then
+                If MsgBox(transInfc("Поздравляем! Проект успешно скомпилирован в готовую программу и расположен по адресу") & ": " & vbCrLf & SaveFileDialog2.FileName & vbCrLf & vbCrLf & transInfc("Открыть папку с программой?"), MsgBoxStyle.Information + MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then
+                    Diagnostics.Process.Start(newDir & "\")
+                End If
+                '            If PerfomanceProgress() = False Then Dim dm As New Demo : dm.Show() : dm.Focus()
             End If
-            '            If PerfomanceProgress() = False Then Dim dm As New Demo : dm.Show() : dm.Focus()
-        End If
 
     End Sub
     Public Sub ExportVBMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExportVBMenu.Click

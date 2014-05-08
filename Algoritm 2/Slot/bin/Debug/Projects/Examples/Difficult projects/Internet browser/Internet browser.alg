@@ -1,5 +1,9 @@
 Language = English
 F
+Allow run copies
+Yes
+Associate with extensions
+
 Auto scroll minSize height
 0
 Auto scroll minSize width
@@ -8,14 +12,14 @@ Auto scroll position X
 0
 Auto scroll position Y
 0
+AutoRun
+No
 Back color
 Sys
 Background image
 Nothing
 Background image layout
 Tile
-Cancel close
-No
 Context menu
 Nothing
 Control box
@@ -24,6 +28,12 @@ Cursor
 Default
 Enabled
 Yes
+Forbid close
+No
+Forbid maximize
+No
+Forbid minimize
+No
 Fore color
 Black
 Form border style
@@ -67,7 +77,9 @@ Yes
 Tag
 
 Text
-Интернет-браузер
+Internet-browser
+ToolTip
+
 TopMost
 No
 Transparentcy key
@@ -169,6 +181,8 @@ Text
 Address:
 Text align
 on right
+ToolTip
+
 Visible
 Yes
 Width
@@ -239,6 +253,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Url
 Nothing
@@ -339,6 +355,8 @@ Obj
 #End
 
 T
+Allow input
+All
 Anchor
 Right_left_top
 Back color
@@ -407,6 +425,8 @@ Text
 Algorithm2.com
 Text position
 On left
+ToolTip
+
 Visible
 Yes
 Width
@@ -526,6 +546,8 @@ Text align
 center
 Text image relation
 Overlay
+ToolTip
+
 Visible
 Yes
 Width
@@ -641,6 +663,8 @@ Text
 Label2
 Text align
 center
+ToolTip
+
 Visible
 Yes
 Width
@@ -703,6 +727,8 @@ Tab index
 Tab stop
 Yes
 Tag
+
+ToolTip
 
 Visible
 Yes
@@ -1156,7 +1182,7 @@ vIhauKUFol
 #ActiveForm
 Window1.Window1[0]
 #ActiveObj
-Window1.ItemForward[0]
+Window1.Window1[0]
 #ImagePath
 \Pictures
 #ImageDefName

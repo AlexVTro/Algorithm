@@ -1800,3 +1800,4 @@ Master~~Master
 Задействовать выделенные действия в работу программы~~Uncomment the selected actions
 Благотворители~~Benefactors
 модераторы~~Moderators
+Имя пользователя windows содержит пробелы. Запустите компиляцию от пользователя с именем без пробелов, если хотите, чтобы у приложения была иконка.~~Username of Windows contains spaces. Please, run the compilation of a user named without spaces if you want to have the application icon will.

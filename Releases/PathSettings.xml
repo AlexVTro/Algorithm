@@ -39,7 +39,7 @@
     </PathSettingItem>
 	
 	<!-- Languages -->
-	<PathSettingItem Name="Languages" VersionType="All" Lang="Ru">
+	<PathSettingItem Name="Languages" VersionType="All" Lang="All">
       <SourcePath>Algoritm 2\Slot\bin\Debug\Data\Languages\Russian</SourcePath>
 	  <TargetPath>Data\Languages\Russian</TargetPath>
 	  <Files>
@@ -47,7 +47,7 @@
         <string>InfoElems.info</string>
       </Files>
     </PathSettingItem> 
-	<PathSettingItem Name="Languages" VersionType="All" Lang="En">
+	<PathSettingItem Name="Languages" VersionType="All" Lang="All">
       <SourcePath>Algoritm 2\Slot\bin\Debug\Data\Languages\English</SourcePath>
 	  <TargetPath>Data\Languages\English</TargetPath>
 	  <Files>
