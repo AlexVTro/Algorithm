@@ -1179,10 +1179,12 @@ LapiUHbYsh
 ItemHome
 vIhauKUFol
 #EndExpands
+#SelNode
+jepVtRtIaN
 #ActiveForm
 Window1.Window1[0]
 #ActiveObj
-Window1.Window1[0]
+Window1.Web browser1[0]
 #ImagePath
 \Pictures
 #ImageDefName

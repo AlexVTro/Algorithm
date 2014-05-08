@@ -946,7 +946,7 @@ No
 Name
 TextPassword
 Password char
-
+*
 Read only
 No
 Scroll bars
@@ -956,7 +956,7 @@ Selected text
 Selection length
 0
 Selection start
-14
+13
 Tab index
 2
 Tab stop
@@ -1571,12 +1571,10 @@ olIPbekIOK
 Button6Loguot
 uADXhvWNJI
 #EndExpands
-#SelNode
-tLUuwfoFvC
 #ActiveForm
 Window1.Window1[0]
 #ActiveObj
-Window1.Button6Loguot[0]
+Window1.TextLogin[0]
 #ImagePath
 Pictures
 #ImageDefName
