@@ -111,9 +111,7 @@ Partial Class OutputFrm
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(910, 32)
         Me.Label4.TabIndex = 6
-        Me.Label4.Text = "Если вы все равно не знаете как исправить ошибку, то скопируйте содержимое этого " & _
-    "окна и отправьте его нам на support@algoritm2.ru - мы быстро решим вашу проблему" & _
-    "!"
+        Me.Label4.Text = resources.GetString("Label4.Text")
         Me.Label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'OutputFrm

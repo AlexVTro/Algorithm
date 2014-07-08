@@ -34,7 +34,7 @@ Public Class Update
 
     Private Sub DownloadButton_Click(sender As Object, e As EventArgs) Handles DownloadButton.Click
         ' Если это бесплатная версия
-        If MnFrm.RegistrMenu.Visible = True Then
+        If PerfomanceProgress() = False Then
             UpdateProgramm(lastFreeVersionDownloadUrl, True)
         Else ' Если это платная версия
             ShowPayPanel()
@@ -44,10 +44,10 @@ Public Class Update
     Private Sub DoneButton_Click(sender As Object, e As EventArgs) Handles DoneButton.Click
         UrlTextBox.Text = Trim(UrlTextBox.Text)
 
-        If UrlTextBox.Text.StartsWith("http://algoritm2.ru") Or _
-           UrlTextBox.Text.StartsWith("http://www.algoritm2.ru") Or _
-           UrlTextBox.Text.StartsWith("http://algorithm2.com") Or _
-           UrlTextBox.Text.StartsWith("http://www.algorithm2.com") Then
+        If UrlTextBox.Text.StartsWith(algDomenRu, StringComparison.InvariantCultureIgnoreCase) Or _
+           UrlTextBox.Text.StartsWith(algDomenRuWww, StringComparison.InvariantCultureIgnoreCase) Or _
+           UrlTextBox.Text.StartsWith(algDomenEn, StringComparison.InvariantCultureIgnoreCase) Or _
+           UrlTextBox.Text.StartsWith(algDomenEnWww, StringComparison.InvariantCultureIgnoreCase) Then
             ' кроссдомен атака проверка пройдена
         Else
             ' кроссдомен атака проверка не пройдена

@@ -20,14 +20,14 @@
         TextBox1.Text = transInfc(TextBox1.Text)
     End Sub
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-#If Full Or DebugFull Or Http Then
+#If Full Or DebugFull Or Http Or DebugHttp Then
         ' Сравниваем
         If PerfomanceProgress(TextBox1.Text) Then
             Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\A" & "l" & "g").SetValue("A" & "c" & "t", "1")
             Microsoft.Win32.Registry.CurrentUser.CreateSubKey("Software\Microsoft\Notepad").SetValue("ShowTimeP", TextBox1.Text)
             MsgBox(transInfc("Продукт успешно зарегистрирован, спасибо!"), MsgBoxStyle.Information)
             Me.Hide()
-            MainForm.RegistrMenu.Visible = False
+            MainForm.HideRegMenu()
         Else
             Dim i As Int16
             While i < 10000 : i += 1 : End While
@@ -38,7 +38,7 @@
         If TextBox1.Text.IndexOf("1") <> -1 Then
             MsgBox(transInfc("Продукт успешно зарегистрирован, спасибо!"), MsgBoxStyle.Information)
             Me.Hide()
-            MainForm.RegistrMenu.Visible = False
+            MainForm.HideRegMenu()
         Else
             Dim i As Int16
             While i < 10000 : i += 1 : End While
@@ -48,25 +48,21 @@
     End Sub
 
     Private Sub LinkLabel3_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel3.LinkClicked
-        If lang_interface = "Russian" Then
-            Diagnostics.Process.Start(SiteAlg & "/index.php?option=com_content&view=article&id=54&Itemid=65&ref=" & referral)
-        Else
-            Diagnostics.Process.Start(SiteAlg & "/index.php?option=com_content&view=article&id=54&Itemid=65")
-        End If
+        'If lang_interface = "Russian" Then
+        '    Diagnostics.Process.Start(SiteAlg & "/index.php?option=com_content&view=article&id=54&Itemid=65&ref=" & referral)
+        'Else
+        '    Diagnostics.Process.Start(SiteAlg & "/index.php?option=com_content&view=article&id=54&Itemid=65")
+        'End If
     End Sub
 
     Private Sub LinkLabel2_LinkClicked(ByVal sender As System.Object, ByVal e As System.Windows.Forms.LinkLabelLinkClickedEventArgs) Handles LinkLabel2.LinkClicked
-        If lang_interface = "Russian" Then
-            Diagnostics.Process.Start(SiteAlg & "/?ref=" & referral)
-        Else
-            Diagnostics.Process.Start(SiteAlg)
-        End If
+        Diagnostics.Process.Start(SiteAlg & GetEndingLink(False))
     End Sub
 
 
     Function regGetBuyURL(ByVal publisher As String, ByVal appName As String, ByVal appVer As String) As String
         If lang_interface = "Russian" Then
-            Return SiteAlg & "/index.php?option=com_content&view=article&id=66&Itemid=66&ref=" & referral
+            Return SiteAlg & buyAlgPath & GetEndingLink(False)
         Else
             ' form the registry key path
             Dim keyPath As String
@@ -85,10 +81,16 @@
 
             If buyURL Is Nothing Then
                 ' BuyURL doesn't exsits in registry, default it
-                buyURL = SiteAlg & "/index.php?option=com_content&view=article&id=66&Itemid=66" '&ref=" & referral
+                buyURL = SiteAlg & buyAlgPath & GetEndingLink(False)
             End If
 
             Return buyURL
         End If
     End Function
+
+    Private Sub TextBox1_MouseDown(sender As Object, e As MouseEventArgs) Handles TextBox1.MouseDown
+        If TextBox1.Text.Contains(" ") Then
+            TextBox1.Text = ""
+        End If
+    End Sub
 End Class

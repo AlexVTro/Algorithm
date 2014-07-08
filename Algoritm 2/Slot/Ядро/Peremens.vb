@@ -1,4 +1,4 @@
-﻿'#Const Ver = "DebugAll" ' -  DebugFull, DebugFree, Free, Full, Http
+﻿'#Const Ver = "DebugAll" ' -  DebugFull, DebugFree, DebugHttp, Free, Full, Http
 '#Const Lang = "Ru" ' -  Ru, En
 Imports System.Diagnostics
 
@@ -8,11 +8,28 @@ Public Module peremens
     Public isCompilBest As Boolean  ' ОБОЗНАЧАЕТ ЧТО ИДЕТ СУПЕР-КОМПИЛЯЦИЯ ПРОЕКТА
     Public isRunAlg2Code As Boolean  ' ОБОЗНАЧАЕТ ЧТО ИДЕТ СУПЕР-КОМПИЛЯЦИЯ ПРОЕКТА
 
-#If Http Then
+#If Http Or DebugHttp Then
     Public IsHttpCompil As Boolean = True ' ОБОЗНАЧАЕТ ЧТО ИСПОЛЬЗУЮТ В КАЧЕСТВЕ ОНЛАЙН-КОМПИЛЯТОРА
 #Else
     Public IsHttpCompil As Boolean = False ' ОБОЗНАЧАЕТ ЧТО НЕ ИСПОЛЬЗУЮТ В КАЧЕСТВЕ ОНЛАЙН-КОМПИЛЯТОРА
 #End If
+
+#If DebugFull Or DebugFree Or DebugHttp Then
+    Public algDomenRu As String = "http://localhost/alg/algoritm2.ru/"
+    Public algDomenEn As String = "http://localhost/alg/algoritm2.ru/"
+    Public algDomenRuWww As String = "http://localhost/alg/algoritm2.ru/"
+    Public algDomenEnWww As String = "http://localhost/alg/algoritm2.ru/"
+#Else
+    Public algDomenRu As String = "http://Algoritm2.ru/"
+    Public algDomenEn As String = "http://Algorithm2.com/"
+    Public algDomenRuWww As String = "http://www.Algoritm2.ru/"
+    Public algDomenEnWww As String = "http://www.Algorithm2.com/"
+#End If
+
+    Public buyAlgPath As String = "index.php#GetMore"
+    Public lessonsAlgPath As String = "index.php/learn/lessons"
+    Public samplesAlgPath As String = "index.php/learn/samples"
+    Public answersAlgPath As String = "index.php/learn/answers"
 
     ' ЯЗЫКОЗАВИСИМЫЕ КОНСТАНТЫ
 #If Ru Then
@@ -24,8 +41,9 @@ Public Module peremens
     Private Const PicturesDirName As String = "Рисунки"
     Public lang_def As String = "Russian" ' язык программирования по умолчанию
     Public lang_interface As String = "Russian"  ' язык среды разработки
-    Public lastVersionUrl As String = "http://algoritm2.ru/api/LastVersionRu.php"
-    Public lastFreeVersionDownloadUrl As String = "http://algoritm2.ru/download/Algoritm2RuLast.exe"
+    Public lastVersionUrl As String = algDomenRu + "api/LastVersionRu.php"
+    Public lastFreeVersionDownloadUrl As String = algDomenRu + "download/Algoritm2RuLast.exe"
+    Public recieveProjectUrl As String = algDomenRu + "api/recieveProject.php" ' Ссылка, куда отправлять проекты на бесплатную компиляцию
 #Else
     Public Const AppName As String = "Algorithm"
     Public Const IntroImage As String = "AlgorithmEn.jpg"
@@ -35,12 +53,13 @@ Public Module peremens
     Private Const PicturesDirName As String = "Pictures"
     Public lang_def As String = "English" ' язык программирования по умолчанию
     Public lang_interface As String = "English"  ' язык среды разработки
-    Public lastVersionUrl As String = "http://algorithm2.com/api/LastVersionEn.php"
-    Public lastFreeVersionDownloadUrl As String = "http://algorithm2.com/download/Algoritm2EnLast.exe"
+    Public lastVersionUrl As String = algDomenEn + "api/LastVersionEn.php"
+    Public lastFreeVersionDownloadUrl As String = algDomenEn + "download/Algoritm2EnLast.exe"
+    Public recieveProjectUrl As String = algDomenEn + "api/recieveProject.php" ' Ссылка, куда отправлять проекты на бесплатную компиляцию
 #End If
 
     Public referral As String
-    Public Version As String = "2.7"
+    Public Version As String = "2.17"
     Public AppNameWithVersion As String = AppName & " " & Version
 
     Public AppPath As String = AppDomain.CurrentDomain.BaseDirectory() ' Папка с программой
@@ -118,7 +137,7 @@ Public Module peremens
     Public isConsole, isTranslate, fromIzmenenieBylo, tokaSohranil As Boolean
     Public runProc As Threading.Thread, timeSleep As Integer = 20, pauseCount As Integer = 5
     Dim tempRich As New RichTextBox
-    Public SiteAlg As String
+    Public SiteAlg As String 
 
     Public helps() As PictureBox
     Public associateError, noSimb As String
@@ -599,7 +618,7 @@ Public Module peremens
 
     ' Прогресс-Форма
     Sub ProgressFormShow(ByVal txt As String, Optional ByVal val As Integer = 0)
-#If Http = False Then
+#If Http = False And DebugHttp = False Then
         ProgressForm.TopMost = True
         ProgressForm.ProgressBarValue = val
         ProgressForm.Label1.Text = txt

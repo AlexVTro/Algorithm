@@ -4219,7 +4219,7 @@ Public Class Propertys
             ShTB = value
         End Set
     End Property
-    Dim StPos As String = trans("Заданная координатами")
+    Dim StPos As String = trans("По центру экрана")
     Overloads Property StartPosition() As String
         Get
             Return StPos

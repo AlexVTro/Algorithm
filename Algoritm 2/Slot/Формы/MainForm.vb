@@ -51,7 +51,9 @@ Public Class MainForm
         If Environment.GetCommandLineArgs().Length >= 2 Then OpenProj(Environment.GetCommandLineArgs()(1))
 
         ' Проверка обновлений
-        CheckNewVersion()
+        If IsHttpCompil = False Then
+            CheckNewVersion()
+        End If
 
         ' Запуск либо обучения, либо демки
         If StartEdu = "Yes" Then
@@ -174,6 +176,9 @@ Public Class MainForm
         Dim newVersion As String = GetRequestResult(lastVersionUrl).Trim()
 
         If String.IsNullOrEmpty(newVersion) Or newVersion = Version Or (newVersion = SkippedVersion And Not ignoreSkipped) Then
+            If String.IsNullOrEmpty(newVersion) And ignoreSkipped Then
+                Throw New Exception(transInfc("Невозможно подключиться к * и проверить обновления программы").Replace("*", SiteAlg))
+            End If
             Return False
         End If
 
@@ -254,9 +259,9 @@ Public Class MainForm
         Me.Visible = False
 
         If lang_interface = "Russian" Then
-            SiteAlg = "http://www.Algoritm2.ru"
+            SiteAlg = algDomenRu
         Else
-            SiteAlg = "http://www.Algorithm2.com"
+            SiteAlg = algDomenEn
         End If
 
         ' ЗАДАНИЯ СПРАВОЧНОЙ ИНФОРМАЦИИ
@@ -418,8 +423,8 @@ Public Class MainForm
         ReDim Preserve HelpObjs(HelpObjs.Length) : HelpObjs(HelpObjs.Length - 1) = NodeBreakpoint
 
 
-        SaveFileDialog1.Filter = transInfc("Проекты Алгоритма") & " (*.alg)" & "|*.alg|" & transInfc("Все файлы") & " (*.*)" & "|*.*"
-        OpenFileDialog1.Filter = SaveFileDialog1.Filter
+        SaveFileDialog1.Filter = transInfc("Проекты Алгоритма") & " (*.alg)" & "|*.alg|" & transInfc("Готовые программы") & " (*.exe)" & "|*.exe|" & transInfc("Все файлы") & " (*.*)" & "|*.*"
+        OpenFileDialog1.Filter = transInfc("Проекты Алгоритма") & " (*.alg)" & "|*.alg|" & transInfc("Все файлы") & " (*.*)" & "|*.*"
         SaveFileDialog2.Filter = transInfc("Готовые программы") & " (*.exe)" & "|*.exe|" & transInfc("Все файлы") & " (*.*)" & "|*.*"
         SaveFileDialog3.Filter = transInfc("Проекты VB.NET") & " (*.vbproj)" & "|*.vbproj|" & transInfc("Все файлы") & " (*.*)" & "|*.*"
         OpenFileDialog1.InitialDirectory = proj.pPath : SaveFileDialog1.InitialDirectory = proj.pPath
@@ -438,8 +443,12 @@ Public Class MainForm
         ' Сортировка меню
         sortMenu(HelpWords)
 
-        If PerfomanceProgress() Then RegistrMenu.Visible = False Else RegistrMenu.Visible = True
-
+        If PerfomanceProgress() Then
+            HideRegMenu()
+        Else
+            RegistrMenu.Visible = True
+            RegistrMenu.Tag = ""
+        End If
 
         '============================
         intr.ProgressBarValue = 100
@@ -507,6 +516,11 @@ Public Class MainForm
         'If fromOptions Then
         '    transObjects(False, True)
         'End If
+    End Sub
+
+    Public Sub HideRegMenu()
+        RegistrMenu.Visible = False
+        RegistrMenu.Tag = "Regs"
     End Sub
 
     ' ОБЕСПЕЧЕНИЕ ДРАГДРОПА
@@ -1612,6 +1626,10 @@ Public Class MainForm
 
     Private Sub HelpPanel_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HelpPanel.Click
         HelpMenu_Click(sender, e)
+    End Sub
+
+    Private Sub AnswersPanel_Click(sender As Object, e As EventArgs) Handles AnswersPanel.Click
+        AnswersMenu_Click(sender, e)
     End Sub
 
     ' Задний фон элементов пенелей инструментов, которые не влезли в размер формы и теперь находятся в списке в конце
@@ -4151,6 +4169,11 @@ cycle:  For i = 0 To nodes.Length - 1
     End Sub
     Private Sub SaveAsMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SaveAsMenu.Click
         If SaveFileDialog1.ShowDialog = Windows.Forms.DialogResult.OK Then
+            If Path.GetExtension(SaveFileDialog1.FileName) = ".exe" Then
+                Errors.MessangeInfo(transInfc("Чтобы создать exe-файл нажмите меню Файл -> Создать готовую программу"))
+                Exit Sub
+            End If
+
             If sender Is SaveAsMenu Then
                 SaveProjInFile(SaveFileDialog1.FileName)
             Else
@@ -4245,32 +4268,31 @@ cycle:  For i = 0 To nodes.Length - 1
     Public Sub BuildProgramMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles BuildMenu.Click
         Dim i As Integer, newDir As String
 
-        ' Если обычный режим, а не режим компитятора
-        If IsHttpCompil = False Then
-            ' Компилирования файлов в ту папку, которую укажут
-            'SaveFileDialog2.InitialDirectory = proj.pPath
-            SaveFileDialog2.FileName = proj.pFileName.Split(".")(0)
-noAccess:
-            If SaveFileDialog2.ShowDialog <> Windows.Forms.DialogResult.OK Then Exit Sub
-            Try ' Проеверка файла на доступность 
-                System.IO.File.AppendAllText(SaveFileDialog2.FileName, "")
-            Catch ex As Exception
-                Errors.FileNoAccess(ex.Message) : GoTo noAccess
-            End Try
-            newDir = IO.Path.GetDirectoryName(SaveFileDialog2.FileName)
-
-            ' СБОРКА ПРОЕКТА - копирование всех нужных файлов (рисунков, библиотек) в папку проекта
-            If Sborka(newDir) = False Then Exit Sub
-
-            ' КОМПИЛЯЦИЯ ПРОЕКТА В КОМПИЛЯТОРЕ VBC.EXE
-            ProgressFormShow(transInfc("Компиляция") & "...")
-        Else
-            newDir = CurDir()
-            SaveFileDialog2.FileName = OutFile
-        End If
-
-#If Full Or DebugFull Or Http Then
+#If Full Or DebugFull Or Http Or DebugHttp Then
         If PerfomanceProgress() Then
+            If IsHttpCompil = False Then
+                ' Компилирования файлов в ту папку, которую укажут
+                'SaveFileDialog2.InitialDirectory = proj.pPath
+                SaveFileDialog2.FileName = proj.pFileName.Split(".")(0)
+noAccess:
+                If SaveFileDialog2.ShowDialog <> Windows.Forms.DialogResult.OK Then Exit Sub
+                Try ' Проеверка файла на доступность 
+                    System.IO.File.AppendAllText(SaveFileDialog2.FileName, "")
+                Catch ex As Exception
+                    Errors.FileNoAccess(ex.Message) : GoTo noAccess
+                End Try
+                newDir = IO.Path.GetDirectoryName(SaveFileDialog2.FileName)
+
+                ' СБОРКА ПРОЕКТА - копирование всех нужных файлов (рисунков, библиотек) в папку проекта
+                If Sborka(newDir) = False Then Exit Sub
+
+                ' КОМПИЛЯЦИЯ ПРОЕКТА В КОМПИЛЯТОРЕ VBC.EXE
+                ProgressFormShow(transInfc("Компиляция") & "...")
+            Else
+                newDir = CurDir()
+                SaveFileDialog2.FileName = OutFile
+            End If
+
             ' ГЕНЕРАЦИЯ КОДА ПРОГРАММЫ в синтаксисе vb.net и запись его в Code.vb Code2.vb
             Dim cod As String = Perevodi.ToStrCodeFromObj(proj.f)
             'Dim razdel As Integer = cod.IndexOf("Module CodeAlg2" & vbCrLf & vbCrLf)
@@ -4304,15 +4326,17 @@ noAccess:
                                           , "System.Drawing", "System.Runtime.InteropServices", "System.Text" _
                                           , "System.Windows.Forms"}
             Dim import As String = " /imports:" & Join(importy, ",")
+
             ' иконка проекта
             Dim icoFl As String = Path.GetTempFileName(), icon As String = "" ' "C:\" & GetUIN(), icon As String = ""
-
-            If icoFl.IndexOf(" ") > 0 Then
-                MsgBox(trans("Имя пользователя windows содержит пробелы. Запустите компиляцию от пользователя с именем без пробелов, если хотите, чтобы у приложения была иконка."))
-            Else
-                If File.Exists(GetMaxPath(proj.pIcon)) Then
-                    File.Copy(GetMaxPath(proj.pIcon), icoFl, True)
-                    icon = " /win32icon:" & icoFl
+            If (IsHttpCompil = False) Then
+                If icoFl.IndexOf(" ") > 0 Then
+                    MsgBox(trans("Имя пользователя windows содержит пробелы. Запустите компиляцию от пользователя с именем без пробелов, если хотите, чтобы у приложения была иконка."))
+                Else
+                    If File.Exists(GetMaxPath(proj.pIcon)) Then
+                        File.Copy(GetMaxPath(proj.pIcon), icoFl, True)
+                        icon = " /win32icon:" & icoFl
+                    End If
                 End If
             End If
 
@@ -4331,7 +4355,7 @@ noAccess:
             If sourcs.Count > 0 Then sourc &= Join(sourcs.ToArray(), "")
 
             ' СОБСТВЕННО ЗАПУСК КОМПИЛЯТОРА
-            Dim args As String = reference & import & icon & othersParam & out & sourc
+            Dim args As String = reference & import & Icon & othersParam & out & sourc
             Dim processprop As New System.Diagnostics.ProcessStartInfo()
             processprop.FileName = vbc
             processprop.Arguments = args
@@ -4354,7 +4378,9 @@ noAccess:
                 'Dim prOth As New PropertysOther(Nothing)
                 'Dim s As String = prOth.RunWithResult(CompilBatFilePath, "", Encoding.GetEncoding(866).CodePage)
                 Output.TextBox1.Text = compilOutput
-                Output.Show()
+                If IsHttpCompil = False Then
+                    Output.Show()
+                End If
                 If IsHttpCompil Then
                     IO.File.Copy(ProjFile, IO.Path.GetDirectoryName(ProjFile) & "\ErrLog\" & uid_in & ".alg")
                     uid_out = "ErrorCompil" & vbCrLf & vbCrLf & Output.TextBox1.Text.Replace(CompilPath, "")
@@ -4378,15 +4404,6 @@ noAccess:
             End Try
 
             If icon <> "" Then IO.File.Delete(icoFl)
-        Else
-            System.IO.File.Copy(ObjectsPath & "\Demo.exe", SaveFileDialog2.FileName, True)
-            IO.File.AppendAllText(SaveFileDialog2.FileName, "referral=" & referral)
-        End If
-#Else
-        System.IO.File.Copy(ObjectsPath & "\Demo.exe", SaveFileDialog2.FileName, True)
-        IO.File.AppendAllText(SaveFileDialog2.FileName, "referral=" & referral)
-#End If
-
 
             ProgressForm.Hide()
             If IsHttpCompil = False Then
@@ -4395,8 +4412,81 @@ noAccess:
                 End If
                 '            If PerfomanceProgress() = False Then Dim dm As New Demo : dm.Show() : dm.Focus()
             End If
-
+        Else
+            Compile()
+        End If
+#Else
+        Compile()
+#End If
     End Sub
+    Private Sub Compile()
+#If Http Or DebugHttp Then
+        MsgBox("Please register license of your Algorithm2")
+#Else
+        Try
+
+            ' Если обычный режим, а не режим компитятора
+            ProgressFormShow(transInfc("Компиляция") & "...")
+
+            Dim code = GetCoding(True, "")
+            Dim header = transInfc("Соединение") & "..."
+            ProgressFormShow(header, 10)
+
+            ' this is what we are sending
+            Dim langPost = "ru"
+            If (lang_name <> "Russian") Then
+                langPost = "en"
+            End If
+            Dim post_data As String = "lang=" & langPost & "&proj=" & code
+
+            ' create a request
+            Dim request As HttpWebRequest = WebRequest.Create(recieveProjectUrl)
+            request.KeepAlive = False
+            request.ProtocolVersion = HttpVersion.Version10
+            request.Method = "POST"
+
+            ' turn our request string into a byte stream
+            Dim postBytes As Byte() = Encoding.UTF8.GetBytes(post_data)
+
+            ' this is important - make sure you specify type this way
+            request.ContentType = "application/x-www-form-urlencoded"
+            request.ContentLength = postBytes.Length
+
+            ' now send it
+            Using requestStream As Stream = request.GetRequestStream()
+                requestStream.Write(postBytes, 0, postBytes.Length)
+            End Using
+
+            ProgressFormShow(header, 80)
+
+            ' and get response
+            Dim uid_in As String = ""
+            Using response As WebResponse = request.GetResponse()
+                Using requestStream As StreamReader = New StreamReader(response.GetResponseStream(), Encoding.UTF8)
+                    uid_in = requestStream.ReadToEnd()
+                End Using
+            End Using
+
+            Dim errorResponse As String = "Error: "
+            If uid_in.StartsWith(errorResponse) Then
+                Dim errorText = uid_in.Substring(errorResponse.Length - 1)
+                ProgressForm.Hide()
+                MessangeCritic(errorText)
+                Exit Sub
+            End If
+
+            ProgressFormShow(header, 90)
+
+            Diagnostics.Process.Start(SiteAlg & "index.php/onlineCompile?Project=" & uid_in & GetEndingLink())
+
+            ProgressForm.Hide()
+        Catch ex As Exception
+            ProgressForm.Hide()
+            Errors.MessangeExclamen(transInfc("Невозможно соединиться с сервером компиляции. Попробуйте позже. Если ошибка повторится, обратитесь, пожалуйста, на support@algoritm2.ru. Подробности ошибки:") & vbCrLf & vbCrLf & ex.Message)
+        End Try
+#End If
+    End Sub
+
     Public Sub ExportVBMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles ExportVBMenu.Click
         Dim i As Integer
 
@@ -4416,7 +4506,7 @@ noAccess:
         ' ЭКСПОРТ
         ProgressFormShow(transInfc("Экспорт") & "...")
 
-#If Full Or DebugFull Or Http Then
+#If Full Or DebugFull Or Http Or DebugHttp Then
         If PerfomanceProgress() Then
             ' ГЕНЕРАЦИЯ КОДА ПРОГРАММЫ в синтаксисе vb.net и запись его в Code.vb Code2.vb
             Dim cod As String = Perevodi.ToStrCodeFromObj(proj.f)
@@ -4876,6 +4966,11 @@ enabli: If Me.InvokeRequired Then
     End Sub
 
     ' ПОМОЩЬ меню
+    Private Sub AnswersMenu_Click(sender As Object, e As EventArgs) Handles AnswersMenu.Click
+        Try
+            Diagnostics.Process.Start(SiteAlg & answersAlgPath & GetEndingLink(True))
+        Catch ex As Exception : MsgBox(ex.Message) : End Try
+    End Sub
     Private Sub HelpMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HelpMenu.Click
         Try
             Diagnostics.Process.Start("iexplore.exe", HelpPath & "\index.html")
@@ -4887,10 +4982,8 @@ enabli: If Me.InvokeRequired Then
         Catch ex As Exception : MsgBox(ex.Message) : End Try
     End Sub
     Public Sub LessonsOthersMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LessonsOthersMenu.Click
-        Dim id As String = "42"
-        If lang_interface = "Russian" Then id = "36"
         Try
-            Diagnostics.Process.Start(SiteAlg & "/index.php?option=com_content&view=category&layout=blog&id=" & id & "&Itemid=71")
+            Diagnostics.Process.Start(SiteAlg & lessonsAlgPath & GetEndingLink(True))
         Catch ex As Exception : MsgBox(ex.Message) : End Try
     End Sub
     Public Sub SamplesBaseMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SamplesBaseMenu.Click
@@ -4905,14 +4998,18 @@ enabli: If Me.InvokeRequired Then
         End If
     End Sub
     Public Sub SamplesOthersMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SamplesOthersMenu.Click
-        Dim id As String = "44"
-        If lang_interface = "Russian" Then id = "39"
         Try
-            Diagnostics.Process.Start(SiteAlg & "/index.php?option=com_content&view=category&layout=blog&id=" & id & "&Itemid=74")
+            Diagnostics.Process.Start(SiteAlg & samplesAlgPath & GetEndingLink(True))
         Catch ex As Exception : MsgBox(ex.Message) : End Try
     End Sub
     Private Sub UpdateMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateMenu.Click
-        CheckNewVersion(True)
+        Try
+            If CheckNewVersion(True) = False Then
+                Errors.MessangeInfo(transInfc("У вас последняя версия программы"))
+            End If
+        Catch ex As Exception
+            Errors.MessangeExclamen(ex.Message)
+        End Try
     End Sub
     Private Sub RegistrMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles RegistrMenu.Click
         Dim dm As New Demo : dm.Show()
@@ -5298,6 +5395,12 @@ enabli: If Me.InvokeRequired Then
                 End If
             Next
         End If
+    End Sub
+
+
+    Private Sub ProjectSettings_Click(sender As Object, e As EventArgs) Handles ProjectSettings.Click
+        OptionsForm.Show()
+        OptionsForm.Tab1.SelectTab(OptionsForm.ProjectTab)
     End Sub
 
 

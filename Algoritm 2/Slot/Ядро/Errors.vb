@@ -12,7 +12,7 @@
         Return trans("Путь * содержит недопустимые символы").Replace("*", str)
     End Function
     Function InvalidFormatRegistry(ByVal str1 As String, ByVal str2 As String) As String
-        If str1 <> "" Then str1 = """" & str1 & """" 
+        If str1 <> "" Then str1 = """" & str1 & """"
         If str2 <> "" Then str2 = """" & str2 & """"
         Return trans("Значение ** имеет недопустимый формат для ключа реестра *.").Replace("**", str1).Replace("*", str2)
     End Function
@@ -273,13 +273,13 @@
         Return trans("Цикл ** повторился более, повторился более * раз. Возможно цикл бесконечный. Вы хотите продолжить выполнение данного цикла?").Replace("**", str1).Replace("*", str2)
     End Function
     Sub MessangeCritic(ByVal str As String)
-        MsgBox(trans("Произошла непредвиденная ошибка") & ": " & str, MsgBoxStyle.Critical)
+        MsgBox(trans("Произошла непредвиденная ошибка") & ": " & str & GetAnswersMessage(), MsgBoxStyle.Critical)
     End Sub
     Sub MessangeInfo(ByVal str As String)
         MsgBox(str, MsgBoxStyle.Information)
     End Sub
     Sub MessangeExclamen(ByVal str As String)
-        MsgBox(str, MsgBoxStyle.Exclamation)
+        MsgBox(str & GetAnswersMessage(), MsgBoxStyle.Exclamation)
     End Sub
     Function InvalidKeys(ByVal str1 As String, ByVal str2 As String) As String
         If str1 <> "" Then str1 = """" & str1 & """"
@@ -289,5 +289,8 @@
     Function InvalidUrl(ByVal str As String) As String
         str = """" & str & """"
         Return trans("Невозможно перейти по ссылке *. Ссылка имеет не верный формат.").Replace("*", str)
+    End Function
+    Function GetAnswersMessage() As String
+        Return vbCrLf & vbCrLf & trans("Если в сложившейся ситуации вам необходима помощь, то поищите ответ или задайте свой вопрос на") + " " + SiteAlg + answersAlgPath
     End Function
 End Module

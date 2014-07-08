@@ -1579,7 +1579,7 @@ _ИЛИ~~_OR
 ОШИБКА КОМПИЛЯЦИИ!~~Compilation error!
 Отчет об ошибке написан ниже. Попробуйте найти в дереве действий подчеркнутые слова, и исправить ситуацию.~~An error report has be opened in textbox below.
 Если вы не знаете как исправить ошибку, то скачайте Visual Studio Express (кнопка ниже), Экспортируйте ваш проект в VB.NET, Запустите получившейся файл *.vbproj в Visual Studio и попробуйте выполнить программу (клавиша F5). Ошибка вам подсветится.~~If you do not know how to fix the error, you can download the Visual Studio Express (button below), Export your project in VB.NET, Run the resulting file *.vbproj in Visual Studio and try to run a program (press F5). Error you highlighted.
-Если вы все равно не знаете как исправить ошибку, то скопируйте содержимое этого окна и отправьте его нам на support@algoritm2.ru - мы быстро решим вашу проблему!~~If you do not know how to fix the problem copy the text of the textbox and send it to us at support@algorithm2.com - we will fix the problem soon.
+Если вы все равно не знаете как исправить ошибку, то скопируйте содержимое этого окна и отправьте его нам на support@algoritm2.ru - мы быстро решим вашу проблему! Также, вы можете поискать ответ или задать вопрос здесь:~~If you do not know how to fix the problem copy the text of the textbox and send it to us at support@algorithm2.com - we will fix the problem soon. Also, you can search for an answer or ask a question here:
 Скачать Visual Studio Express~~Download Visual Studio Express
 Поздравляем! Проект успешно скомпилирован в готовую программу и расположен по адресу~~Congratulations! The project has been successfully compiled into the final program and is located at
 Открыть папку с программой?~~Open the programs folder?
@@ -1615,6 +1615,7 @@ _ИЛИ~~_OR
 #################################################
 ###                GetTrans 2                 ###
 #################################################
+Подробнее о Максимальной версии~~Get more about Algorithm Maximum
 Приобрести лицензионный Алгоритм 2!~~Purchase a license Algorithm 2!
 http://www.Algoritm2.ru~~http://www.Algorithm2.com
 Если вы хотите компилировать готовые программы сразу из среды Алгоритм2 - приобретите программу. Это займет менее 3 минут! Этим вы ОЧЕНЬ поможете нам:~~If you want to compile your programs from Algoritm2 at once - purchase the program. It will take less than 3 minutes! This will GREATLY assist us:
@@ -1627,7 +1628,7 @@ http://www.Algoritm2.ru~~http://www.Algorithm2.com
 Если вы приобрели программу, то введите ключ сюда...~~If you purchased the program, enter the key here...
 Ok~~Ok
 Если вы хотите компилировать готовые программы сразу из среды Алгоритм2 - приобретите программу. Это займет менее 3 минут! И вы ОЧЕНЬ поможете нам:~~If you want to compile your programs from Algoritm2 at once - purchase the program. It will take less than 3 minutes! This will GREATLY assist us:
-При регистрации потребуется ввести ваш УНИКАЛЬНЫЙ ID:~~Your PROGRAM ID:
+Ваш УНИКАЛЬНЫЙ ID~~Your PROGRAM ID:
 БЕСПЛАТНЫЙ On-Line сервис компиляции!~~FREE On-Line compilation service!
 Регистрация~~Registration
 Посмотреть видео урок "Мой первый проект"~~Watch video lesson "My first project"
@@ -1801,3 +1802,8 @@ Master~~Master
 Благотворители~~Benefactors
 модераторы~~Moderators
 Имя пользователя windows содержит пробелы. Запустите компиляцию от пользователя с именем без пробелов, если хотите, чтобы у приложения была иконка.~~Username of Windows contains spaces. Please, run the compilation of a user named without spaces if you want to have the application icon will.
+Невозможно соедениться с сервером компиляции. Попробуйте позже. Если ошибка повторится, обратитесь, пожалуйста, на support@algoritm2.ru. Подробности ошибки:~~Unable to connect to the server of compilations. Please try again later. If the problem persists, please contact support@algorithm2.com. Error Details:
+Чтобы создать exe-файл нажмите меню Файл -> Создать готовую программу~~To make an exe-file please click File -> Compile Executable
+У вас последняя версия программы~~You have the latest version
+Ответы на все вопросы~~Answers to all questions
+Невозможно подключиться к * и проверить обновления программы~~Unable to connect * check program updates

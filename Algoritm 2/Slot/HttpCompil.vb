@@ -8,30 +8,25 @@ Module HttpCompil
     Public OutFile As String = CompilPath & "\Compil.exe"
     Public uid_in, uid_out As String
 
-#If Http = False Then
+#If Http = False And DebugHttp = False Then
     Sub Main()
     End Sub
 #Else
     Dim bProxy As Boolean = True
     Dim sProxyAddress As String = "127.0.0.1", iProxyPort As Integer = 8888
-    Dim Langs() As String = {"Russian", "English"}
-    Dim counter As Integer = 0
+    'Dim Langs() As String = {"Russian", "English"}
+    'Dim counter As Integer = 0
+    Dim SitePath As String = "pages/onlineCompile/server"
 
 
     Dim pp As InternetControl
     Sub Main()
         MainForm.Timer3.Stop()
-        Dim myHttpWebRequest As HttpWebRequest ' = HttpWebRequest.Create("http://www.algoritm2.ru/httpcompil/ochered.php")
-        Dim nowLang As String = Langs(counter Mod 2)
-        counter += 1
+        uid_in = ""
+        uid_out = ""
+        Dim myHttpWebRequest As HttpWebRequest
         Try
-            Dim SitePath As String
-            If nowLang = "Russian" Then
-                SitePath = "httpcompil"
-            Else
-                SitePath = "httpcompileng"
-            End If
-            myHttpWebRequest = HttpWebRequest.Create("http://www.algoritm2.ru/" & SitePath & "/ochered.php")
+            myHttpWebRequest = HttpWebRequest.Create(algDomenRu & SitePath & "/getProject.php")
             ' ПОЛУЧАЕМ ФАЙЛ ПРОЕКТА ИЗ ОЧЕРЕДИ
             myHttpWebRequest.Timeout = 3000
             myHttpWebRequest.KeepAlive = False
@@ -41,9 +36,19 @@ Module HttpCompil
             Dim myStreamReader As New StreamReader(myHttpWebResponse.GetResponseStream, Encoding.GetEncoding(UTF8Encoding.UTF8.CodePage))
             Dim cod As String = myStreamReader.ReadToEnd()
             myHttpWebResponse.Close()
-            If cod.IndexOf("|") <> 15 Or cod.Length <= 15 Then MainForm.Timer3.Start() : Exit Sub
+            If cod.IndexOf("|") <> 17 Or cod.Length <= 17 Then MainForm.Timer3.Start() : Exit Sub
 
-            ' Если проект есть то надо подогнать язык
+            ' Получить язык из имени файла
+            Dim nowLang As String = cod.Substring(0, 2)
+            If nowLang = "ru" Then
+                nowLang = "Russian"
+            ElseIf nowLang = "en" Then
+                nowLang = "English"
+            Else
+                uid_out = "ErrorOpen" : ProgressForm.Hide() : GoTo out
+            End If
+
+            ' Если надо изменить язык компиляции
             If nowLang <> lang_name Then
                 ProgressFormShow(transInfc("Перевод"))
                 ' задание нового языка программирования, старый острается храниться в old'ах
@@ -86,19 +91,16 @@ Module HttpCompil
 
             ' ЗАГРУЖАЕМ НА ФПТ
             uid_out = GetUIN()
-            Upload(OutFile, SitePath)
+#If Http Then
+            Upload(OutFile) 
+#ElseIf DebugHttp Then
+            Diagnostics.Process.Start(CompilPath)
+#End If
 
             ' СООБЩАЕМ ПРОГРАММЕ НОВОЕ ИМЯ ФАЙЛА
 out:
-            'pp = New InternetControl
-            'pp.UrlToGo = "http://www.algoritm2.ru/" & SitePath & "/ochered2.php"
-            'pp.HttpMethod = "POST"
-            'pp.EncodingPage = "utf-8"
-            'pp.ContentQuery = "uid_in=" & uid_in & "&uid_out=" & uid_out
-            'pp.ExecuteQuery(True)
-            'pp.ResultQuery = pp.ResultQuery
 
-            Dim str = "http://www.algoritm2.ru/" & SitePath & "/ochered2.php?uid_in=" & uid_in & "&uid_out=" & uid_out
+            Dim str = algDomenRu & SitePath & "/setProject.php?uid_in=" & uid_in & "&uid_out=" & uid_out
             Dim myHttpWebRequest2 As HttpWebRequest = HttpWebRequest.Create(str)
             myHttpWebRequest2.Timeout = 3000
             myHttpWebRequest2.KeepAlive = False
@@ -114,7 +116,7 @@ out:
         End Try
         MainForm.Timer3.Start()
     End Sub
-    Public Sub Upload(ByVal filename As String, ByVal SitePath As String)
+    Public Sub Upload(ByVal filename As String)
 
         'Dim ftpServerIP As String = "80.90.114.50"
         'Dim ftpUserID As String = "algor140"
@@ -129,7 +131,7 @@ out:
         Dim ftpUserID As String = "alg"
         Dim ftpPassword As String = "tT2NI2gP"
         Dim fileInf As New IO.FileInfo(filename)
-        Dim uri As String = "ftp://" + ftpServerIP + "/" & SitePath & "/compils/"
+        Dim uri As String = "ftp://" + ftpServerIP + "/compiles/"
         Dim reqFTP As System.Net.FtpWebRequest
         '' СОЗДАНИЕ ПАПКИ
         'reqFTP = System.Net.FtpWebRequest.Create(New Uri(uri))
@@ -186,6 +188,6 @@ out:
         End Try
     End Sub
 #End If
-    
+
 
 End Module

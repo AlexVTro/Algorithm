@@ -419,9 +419,26 @@ Module peremens2
         Next
         Return uid
     End Function
+    ' Возвращает окончание для любой ссылки, содержащее ИД алга, реферала...
+    Function GetEndingLink(Optional withAmpOrQuestion As Boolean = True) As String
+        Dim result As String = ""
+
+        If referral <> "" Then
+            result &= "&ref=" & referral
+        End If
+
+        result &= "&AlgId=" & LoadProgress()
+
+        If withAmpOrQuestion = False Then
+            result = result.Remove(0, 1)
+            result = "?" & result
+        End If
+
+        Return result
+    End Function
     ' GetIDFromKey Получение идиентификационного номера пользователя по ключу регистрации
     Function ElapsedTime(ByVal Key As String) As String
-#If Full Or DebugFull Or Http Then
+#If Full Or DebugFull Or Http Or DebugHttp Then
         ' Убираем левые буквы
         Dim i As Integer, k As String = ""
         For i = 0 To Key.Length - 1
@@ -465,7 +482,7 @@ Module peremens2
 
         ' ОБФУСЦИРОВАННЫЙ АЛГОРИТМ
 
-#If Full Or DebugFull Or Http Then
+#If Full Or DebugFull Or Http Or DebugHttp Then
         Dim num As Integer
         Dim str As String
         Dim flag As Boolean

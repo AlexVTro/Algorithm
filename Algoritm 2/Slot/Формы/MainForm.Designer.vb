@@ -48,11 +48,14 @@ Partial Class MainForm
         Me.StepIntoMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.StepOverMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.StepOutMenu = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripMenuItem19 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ProjectSettings = New System.Windows.Forms.ToolStripMenuItem()
         Me.Tools = New System.Windows.Forms.ToolStripMenuItem()
         Me.TraslateProjMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripMenuItem12 = New System.Windows.Forms.ToolStripSeparator()
         Me.OptionsMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.ПомощьToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.AnswersMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.HelpMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.UpdateMenu = New System.Windows.Forms.ToolStripMenuItem()
         Me.RegistrMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -285,6 +288,7 @@ Partial Class MainForm
         Me.SaveFileDialog3 = New System.Windows.Forms.SaveFileDialog()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
+        Me.AnswersPanel = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStripContainer1.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
@@ -516,7 +520,7 @@ Partial Class MainForm
         '
         'ProjectMenu
         '
-        Me.ProjectMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RunMenu, Me.PauseMenu, Me.StopMenu, Me.ToolStripMenuItem11, Me.StepIntoMenu, Me.StepOverMenu, Me.StepOutMenu})
+        Me.ProjectMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.RunMenu, Me.PauseMenu, Me.StopMenu, Me.ToolStripMenuItem11, Me.StepIntoMenu, Me.StepOverMenu, Me.StepOutMenu, Me.ToolStripMenuItem19, Me.ProjectSettings})
         Me.ProjectMenu.ForeColor = System.Drawing.Color.Black
         Me.ProjectMenu.Name = "ProjectMenu"
         Me.ProjectMenu.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded
@@ -572,6 +576,19 @@ Partial Class MainForm
         Me.StepOutMenu.Size = New System.Drawing.Size(214, 22)
         Me.StepOutMenu.Text = "Пошагово (наружу)"
         '
+        'ToolStripMenuItem19
+        '
+        Me.ToolStripMenuItem19.Name = "ToolStripMenuItem19"
+        Me.ToolStripMenuItem19.Size = New System.Drawing.Size(211, 6)
+        '
+        'ProjectSettings
+        '
+        Me.ProjectSettings.Name = "ProjectSettings"
+        Me.ProjectSettings.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
+            Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
+        Me.ProjectSettings.Size = New System.Drawing.Size(214, 22)
+        Me.ProjectSettings.Text = "Настройки"
+        '
         'Tools
         '
         Me.Tools.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.TraslateProjMenu, Me.ToolStripMenuItem12, Me.OptionsMenu})
@@ -584,59 +601,63 @@ Partial Class MainForm
         'TraslateProjMenu
         '
         Me.TraslateProjMenu.Name = "TraslateProjMenu"
-        Me.TraslateProjMenu.Size = New System.Drawing.Size(209, 22)
+        Me.TraslateProjMenu.Size = New System.Drawing.Size(189, 22)
         Me.TraslateProjMenu.Text = "Перевести проект на"
         '
         'ToolStripMenuItem12
         '
         Me.ToolStripMenuItem12.Name = "ToolStripMenuItem12"
-        Me.ToolStripMenuItem12.Size = New System.Drawing.Size(206, 6)
+        Me.ToolStripMenuItem12.Size = New System.Drawing.Size(186, 6)
         '
         'OptionsMenu
         '
         Me.OptionsMenu.Name = "OptionsMenu"
-        Me.OptionsMenu.ShortcutKeys = CType(((System.Windows.Forms.Keys.Control Or System.Windows.Forms.Keys.Shift) _
-            Or System.Windows.Forms.Keys.O), System.Windows.Forms.Keys)
-        Me.OptionsMenu.Size = New System.Drawing.Size(209, 22)
+        Me.OptionsMenu.Size = New System.Drawing.Size(189, 22)
         Me.OptionsMenu.Text = "Настройки"
         '
         'ПомощьToolStripMenuItem
         '
-        Me.ПомощьToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpMenu, Me.UpdateMenu, Me.RegistrMenu, Me.ToolStripMenuItem15, Me.LessonMenu, Me.SamplesMenu, Me.ToolStripMenuItem13, Me.AboutMenu})
+        Me.ПомощьToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.AnswersMenu, Me.HelpMenu, Me.UpdateMenu, Me.RegistrMenu, Me.ToolStripMenuItem15, Me.LessonMenu, Me.SamplesMenu, Me.ToolStripMenuItem13, Me.AboutMenu})
         Me.ПомощьToolStripMenuItem.Name = "ПомощьToolStripMenuItem"
         Me.ПомощьToolStripMenuItem.Overflow = System.Windows.Forms.ToolStripItemOverflow.AsNeeded
         Me.ПомощьToolStripMenuItem.Size = New System.Drawing.Size(68, 20)
         Me.ПомощьToolStripMenuItem.Text = "Помощь"
         '
+        'AnswersMenu
+        '
+        Me.AnswersMenu.Name = "AnswersMenu"
+        Me.AnswersMenu.Size = New System.Drawing.Size(203, 22)
+        Me.AnswersMenu.Text = "Ответы на все вопросы"
+        '
         'HelpMenu
         '
         Me.HelpMenu.Name = "HelpMenu"
         Me.HelpMenu.ShortcutKeys = System.Windows.Forms.Keys.F1
-        Me.HelpMenu.Size = New System.Drawing.Size(182, 22)
+        Me.HelpMenu.Size = New System.Drawing.Size(203, 22)
         Me.HelpMenu.Text = "Справка"
         '
         'UpdateMenu
         '
         Me.UpdateMenu.Name = "UpdateMenu"
-        Me.UpdateMenu.Size = New System.Drawing.Size(182, 22)
+        Me.UpdateMenu.Size = New System.Drawing.Size(203, 22)
         Me.UpdateMenu.Text = "Обновления"
         '
         'RegistrMenu
         '
         Me.RegistrMenu.Name = "RegistrMenu"
-        Me.RegistrMenu.Size = New System.Drawing.Size(182, 22)
+        Me.RegistrMenu.Size = New System.Drawing.Size(203, 22)
         Me.RegistrMenu.Text = "Регистрация"
         '
         'ToolStripMenuItem15
         '
         Me.ToolStripMenuItem15.Name = "ToolStripMenuItem15"
-        Me.ToolStripMenuItem15.Size = New System.Drawing.Size(179, 6)
+        Me.ToolStripMenuItem15.Size = New System.Drawing.Size(200, 6)
         '
         'LessonMenu
         '
         Me.LessonMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.LessonsFirstMenu, Me.ToolStripMenuItem16, Me.LessonsOthersMenu})
         Me.LessonMenu.Name = "LessonMenu"
-        Me.LessonMenu.Size = New System.Drawing.Size(182, 22)
+        Me.LessonMenu.Size = New System.Drawing.Size(203, 22)
         Me.LessonMenu.Text = "Видео-уроки"
         '
         'LessonsFirstMenu
@@ -660,7 +681,7 @@ Partial Class MainForm
         '
         Me.SamplesMenu.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.SamplesBaseMenu, Me.ToolStripMenuItem17, Me.SamplesOthersMenu})
         Me.SamplesMenu.Name = "SamplesMenu"
-        Me.SamplesMenu.Size = New System.Drawing.Size(182, 22)
+        Me.SamplesMenu.Size = New System.Drawing.Size(203, 22)
         Me.SamplesMenu.Text = "Примеры проектов"
         '
         'SamplesBaseMenu
@@ -683,12 +704,12 @@ Partial Class MainForm
         'ToolStripMenuItem13
         '
         Me.ToolStripMenuItem13.Name = "ToolStripMenuItem13"
-        Me.ToolStripMenuItem13.Size = New System.Drawing.Size(179, 6)
+        Me.ToolStripMenuItem13.Size = New System.Drawing.Size(200, 6)
         '
         'AboutMenu
         '
         Me.AboutMenu.Name = "AboutMenu"
-        Me.AboutMenu.Size = New System.Drawing.Size(182, 22)
+        Me.AboutMenu.Size = New System.Drawing.Size(203, 22)
         Me.AboutMenu.Text = "О программе"
         '
         'ToolStripContainer1
@@ -1223,7 +1244,7 @@ Partial Class MainForm
         '
         Me.Apply.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Apply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Apply.Location = New System.Drawing.Point(362, 10)
+        Me.Apply.Location = New System.Drawing.Point(362, 2)
         Me.Apply.Name = "Apply"
         Me.Apply.Size = New System.Drawing.Size(72, 23)
         Me.Apply.TabIndex = 2
@@ -1239,7 +1260,7 @@ Partial Class MainForm
         Me.forEditNodeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forEditNodeText.Location = New System.Drawing.Point(6, 7)
         Me.forEditNodeText.Name = "forEditNodeText"
-        Me.forEditNodeText.Size = New System.Drawing.Size(355, 25)
+        Me.forEditNodeText.Size = New System.Drawing.Size(355, 17)
         Me.forEditNodeText.TabIndex = 5
         '
         'Output
@@ -1484,7 +1505,7 @@ Partial Class MainForm
         Me.TabControl2.Padding = New System.Drawing.Point(3, 3)
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.ShowToolTips = True
-        Me.TabControl2.Size = New System.Drawing.Size(246, 304)
+        Me.TabControl2.Size = New System.Drawing.Size(246, 312)
         Me.TabControl2.TabIndex = 0
         Me.TabControl2.Tag = "Environment/EventPart"
         '
@@ -1498,14 +1519,14 @@ Partial Class MainForm
         Me.sobyts.Margin = New System.Windows.Forms.Padding(0, 0, 3, 3)
         Me.sobyts.Name = "sobyts"
         Me.sobyts.Padding = New System.Windows.Forms.Padding(3)
-        Me.sobyts.Size = New System.Drawing.Size(238, 278)
+        Me.sobyts.Size = New System.Drawing.Size(238, 286)
         Me.sobyts.TabIndex = 0
         Me.sobyts.Text = "TabPage2"
         '
         'help1
         '
         Me.help1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.help1.Location = New System.Drawing.Point(168, 113)
+        Me.help1.Location = New System.Drawing.Point(168, 117)
         Me.help1.Name = "help1"
         Me.help1.Size = New System.Drawing.Size(16, 16)
         Me.help1.TabIndex = 2
@@ -1517,7 +1538,7 @@ Partial Class MainForm
         Me.ComboBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 132)
+        Me.ComboBox1.Location = New System.Drawing.Point(13, 136)
         Me.ComboBox1.MaxDropDownItems = 16
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(213, 21)
@@ -1529,7 +1550,7 @@ Partial Class MainForm
         Me.Label1.AutoEllipsis = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 114)
+        Me.Label1.Location = New System.Drawing.Point(0, 118)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 16)
         Me.Label1.TabIndex = 0
@@ -1545,7 +1566,7 @@ Partial Class MainForm
         Me.deistviya.Location = New System.Drawing.Point(4, 22)
         Me.deistviya.Name = "deistviya"
         Me.deistviya.Padding = New System.Windows.Forms.Padding(3)
-        Me.deistviya.Size = New System.Drawing.Size(238, 278)
+        Me.deistviya.Size = New System.Drawing.Size(238, 286)
         Me.deistviya.TabIndex = 1
         Me.deistviya.Text = "TabPage3"
         Me.deistviya.UseVisualStyleBackColor = True
@@ -1596,7 +1617,7 @@ Partial Class MainForm
         Me.ifs.Location = New System.Drawing.Point(4, 22)
         Me.ifs.Name = "ifs"
         Me.ifs.Padding = New System.Windows.Forms.Padding(3)
-        Me.ifs.Size = New System.Drawing.Size(238, 278)
+        Me.ifs.Size = New System.Drawing.Size(238, 286)
         Me.ifs.TabIndex = 2
         Me.ifs.Text = "TabPage4"
         Me.ifs.UseVisualStyleBackColor = True
@@ -1646,7 +1667,7 @@ Partial Class MainForm
         Me.cycles.Location = New System.Drawing.Point(4, 22)
         Me.cycles.Name = "cycles"
         Me.cycles.Padding = New System.Windows.Forms.Padding(3)
-        Me.cycles.Size = New System.Drawing.Size(238, 278)
+        Me.cycles.Size = New System.Drawing.Size(238, 286)
         Me.cycles.TabIndex = 3
         Me.cycles.Text = "TabPage5"
         Me.cycles.UseVisualStyleBackColor = True
@@ -1697,7 +1718,7 @@ Partial Class MainForm
         Me.comm.Location = New System.Drawing.Point(4, 22)
         Me.comm.Name = "comm"
         Me.comm.Padding = New System.Windows.Forms.Padding(3)
-        Me.comm.Size = New System.Drawing.Size(238, 278)
+        Me.comm.Size = New System.Drawing.Size(238, 286)
         Me.comm.TabIndex = 4
         Me.comm.Text = "TabPage1"
         Me.comm.UseVisualStyleBackColor = True
@@ -1740,7 +1761,7 @@ Partial Class MainForm
         '
         Me.Create1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Create1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Create1.Location = New System.Drawing.Point(3, 1)
+        Me.Create1.Location = New System.Drawing.Point(3, -3)
         Me.Create1.Name = "Create1"
         Me.Create1.Size = New System.Drawing.Size(75, 23)
         Me.Create1.TabIndex = 0
@@ -1750,7 +1771,7 @@ Partial Class MainForm
         'Cancel1
         '
         Me.Cancel1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Cancel1.Location = New System.Drawing.Point(160, 1)
+        Me.Cancel1.Location = New System.Drawing.Point(160, -3)
         Me.Cancel1.Name = "Cancel1"
         Me.Cancel1.Size = New System.Drawing.Size(75, 23)
         Me.Cancel1.TabIndex = 1
@@ -2363,12 +2384,12 @@ Partial Class MainForm
         '
         Me.StandartPanel.AllowDrop = True
         Me.StandartPanel.Dock = System.Windows.Forms.DockStyle.None
-        Me.StandartPanel.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewPanel, Me.OpenPanel, Me.SavePanel, Me.BuildPanel, Me.ToolStripSeparator3, Me.CutPanel, Me.CopyPanel, Me.PastePanel, Me.ToolStripSeparator4, Me.UndoPanel, Me.RedoPanel, Me.ToolStripSeparator1, Me.RunPanel, Me.PausePanel, Me.StopPanel, Me.StepIntoPanel, Me.StepOverPanel, Me.StepOutPanel, Me.ToolStripSeparator2, Me.HelpPanel})
+        Me.StandartPanel.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.NewPanel, Me.OpenPanel, Me.SavePanel, Me.BuildPanel, Me.ToolStripSeparator3, Me.CutPanel, Me.CopyPanel, Me.PastePanel, Me.ToolStripSeparator4, Me.UndoPanel, Me.RedoPanel, Me.ToolStripSeparator1, Me.RunPanel, Me.PausePanel, Me.StopPanel, Me.StepIntoPanel, Me.StepOverPanel, Me.StepOutPanel, Me.ToolStripSeparator2, Me.HelpPanel, Me.AnswersPanel})
         Me.StandartPanel.Location = New System.Drawing.Point(3, 24)
         Me.StandartPanel.Name = "StandartPanel"
         Me.StandartPanel.Padding = New System.Windows.Forms.Padding(0)
         Me.StandartPanel.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.StandartPanel.Size = New System.Drawing.Size(412, 25)
+        Me.StandartPanel.Size = New System.Drawing.Size(466, 25)
         Me.StandartPanel.TabIndex = 0
         '
         'NewPanel
@@ -2732,6 +2753,15 @@ Partial Class MainForm
         '
         Me.Timer3.Interval = 10000
         '
+        'AnswersPanel
+        '
+        Me.AnswersPanel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.AnswersPanel.Image = CType(resources.GetObject("AnswersPanel.Image"), System.Drawing.Image)
+        Me.AnswersPanel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AnswersPanel.Name = "AnswersPanel"
+        Me.AnswersPanel.Size = New System.Drawing.Size(23, 22)
+        Me.AnswersPanel.Text = "Ответы на все вопросы"
+        '
         'MainForm
         '
         Me.AllowDrop = True
@@ -3082,4 +3112,8 @@ Partial Class MainForm
     Friend WithEvents CommMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents UnCommMenu As System.Windows.Forms.ToolStripMenuItem
     Friend WithEvents VisualStudioExpressMenuItem As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents ToolStripMenuItem19 As System.Windows.Forms.ToolStripSeparator
+    Friend WithEvents ProjectSettings As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AnswersMenu As System.Windows.Forms.ToolStripMenuItem
+    Friend WithEvents AnswersPanel As System.Windows.Forms.ToolStripButton
 End Class
