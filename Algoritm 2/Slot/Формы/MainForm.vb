@@ -57,6 +57,7 @@ Public Class MainForm
 
         ' Запуск либо обучения, либо демки
         If StartEdu = "Yes" Then
+            Show()
             Dim ed As New Edu : ed.Show()
         Else
             ' If PerfomanceProgress() = False Then Dim dm As New Demo : dm.TopMost = True : dm.Show()
@@ -4477,7 +4478,7 @@ noAccess:
 
             ProgressFormShow(header, 90)
 
-            Diagnostics.Process.Start(SiteAlg & "index.php/onlineCompile?Project=" & uid_in & GetEndingLink())
+            Diagnostics.Process.Start(SiteAlg & "index.php/onlineCompile?Project=" & uid_in & GetEndingLink(True))
 
             ProgressForm.Hide()
         Catch ex As Exception
@@ -4968,7 +4969,7 @@ enabli: If Me.InvokeRequired Then
     ' ПОМОЩЬ меню
     Private Sub AnswersMenu_Click(sender As Object, e As EventArgs) Handles AnswersMenu.Click
         Try
-            Diagnostics.Process.Start(SiteAlg & answersAlgPath & GetEndingLink(True))
+            Diagnostics.Process.Start(SiteAlg & answersAlgPath & GetEndingLink(False))
         Catch ex As Exception : MsgBox(ex.Message) : End Try
     End Sub
     Private Sub HelpMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles HelpMenu.Click
@@ -4983,7 +4984,7 @@ enabli: If Me.InvokeRequired Then
     End Sub
     Public Sub LessonsOthersMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles LessonsOthersMenu.Click
         Try
-            Diagnostics.Process.Start(SiteAlg & lessonsAlgPath & GetEndingLink(True))
+            Diagnostics.Process.Start(SiteAlg & lessonsAlgPath & GetEndingLink(False))
         Catch ex As Exception : MsgBox(ex.Message) : End Try
     End Sub
     Public Sub SamplesBaseMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SamplesBaseMenu.Click
@@ -4999,7 +5000,7 @@ enabli: If Me.InvokeRequired Then
     End Sub
     Public Sub SamplesOthersMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles SamplesOthersMenu.Click
         Try
-            Diagnostics.Process.Start(SiteAlg & samplesAlgPath & GetEndingLink(True))
+            Diagnostics.Process.Start(SiteAlg & samplesAlgPath & GetEndingLink(False))
         Catch ex As Exception : MsgBox(ex.Message) : End Try
     End Sub
     Private Sub UpdateMenu_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles UpdateMenu.Click

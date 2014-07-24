@@ -2,25 +2,25 @@
 <PublishSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <PublishFtpSetting>
     <FtpUrl>ftp://algoritm2.ru/www/algoritm2.ru</FtpUrl>
-    <FtpUsername>alg</FtpUsername>
-    <FtpPassword>tT2NI2gP</FtpPassword>
+    <FtpUsername>alg3</FtpUsername>
+    <FtpPassword>feRXn0ql</FtpPassword>
   </PublishFtpSetting>
   <PublishSettings>
     <PublishSettingItem VersionType="Free" Lang="Ru">
       <TargetPath>download</TargetPath>
-      <TargetName>Algoritm2RuLastTest.exe</TargetName>
+      <TargetName>Algoritm2RuLast.exe</TargetName>
     </PublishSettingItem>
     <PublishSettingItem VersionType="Free" Lang="En">
       <TargetPath>download</TargetPath>
-      <TargetName>Algoritm2EngLastTest.exe</TargetName>
+      <TargetName>Algoritm2EngLast.exe</TargetName>
     </PublishSettingItem>
     <PublishSettingItem VersionType="Full" Lang="Ru">
       <TargetPath></TargetPath>
-      <TargetName>Algoritm2_sp_full_ru_lastTest.exe</TargetName>
+      <TargetName>AlgorithmFullRu.exe</TargetName>
     </PublishSettingItem>
     <PublishSettingItem VersionType="Full" Lang="En">
       <TargetPath></TargetPath>
-      <TargetName>Algoritm2_sp_full_en_lastTest.exe</TargetName>
+      <TargetName>AlgorithmFullEn.exe</TargetName>
     </PublishSettingItem>
   </PublishSettings>
 </PublishSetting>

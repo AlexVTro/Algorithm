@@ -14,7 +14,7 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", ""}, -1)
+        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", ""}, -1)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ExitMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -256,6 +256,7 @@ Partial Class MainForm
         Me.StepOutPanel = New System.Windows.Forms.ToolStripButton()
         Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
         Me.HelpPanel = New System.Windows.Forms.ToolStripButton()
+        Me.AnswersPanel = New System.Windows.Forms.ToolStripButton()
         Me.EditPrMenu = New System.Windows.Forms.ContextMenuStrip(Me.components)
         Me.HelpWords = New System.Windows.Forms.ToolStripMenuItem()
         Me.ToolStripSeparator5 = New System.Windows.Forms.ToolStripSeparator()
@@ -288,7 +289,6 @@ Partial Class MainForm
         Me.SaveFileDialog3 = New System.Windows.Forms.SaveFileDialog()
         Me.Timer3 = New System.Windows.Forms.Timer(Me.components)
         Me.ToolTip1 = New System.Windows.Forms.ToolTip(Me.components)
-        Me.AnswersPanel = New System.Windows.Forms.ToolStripButton()
         Me.MenuStrip1.SuspendLayout()
         Me.ToolStripContainer1.BottomToolStripPanel.SuspendLayout()
         Me.ToolStripContainer1.ContentPanel.SuspendLayout()
@@ -1244,7 +1244,7 @@ Partial Class MainForm
         '
         Me.Apply.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Apply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Apply.Location = New System.Drawing.Point(362, 2)
+        Me.Apply.Location = New System.Drawing.Point(364, 13)
         Me.Apply.Name = "Apply"
         Me.Apply.Size = New System.Drawing.Size(72, 23)
         Me.Apply.TabIndex = 2
@@ -1258,9 +1258,9 @@ Partial Class MainForm
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.forEditNodeText.BackColor = System.Drawing.Color.Transparent
         Me.forEditNodeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
-        Me.forEditNodeText.Location = New System.Drawing.Point(6, 7)
+        Me.forEditNodeText.Location = New System.Drawing.Point(8, 14)
         Me.forEditNodeText.Name = "forEditNodeText"
-        Me.forEditNodeText.Size = New System.Drawing.Size(355, 17)
+        Me.forEditNodeText.Size = New System.Drawing.Size(355, 21)
         Me.forEditNodeText.TabIndex = 5
         '
         'Output
@@ -1440,7 +1440,7 @@ Partial Class MainForm
         Me.ListView.FullRowSelect = True
         Me.ListView.GridLines = True
         Me.ListView.HideSelection = False
-        Me.ListView.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem2})
+        Me.ListView.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
         Me.ListView.LabelEdit = True
         Me.ListView.Location = New System.Drawing.Point(-2, 20)
         Me.ListView.Margin = New System.Windows.Forms.Padding(10)
@@ -1505,7 +1505,7 @@ Partial Class MainForm
         Me.TabControl2.Padding = New System.Drawing.Point(3, 3)
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.ShowToolTips = True
-        Me.TabControl2.Size = New System.Drawing.Size(246, 312)
+        Me.TabControl2.Size = New System.Drawing.Size(246, 314)
         Me.TabControl2.TabIndex = 0
         Me.TabControl2.Tag = "Environment/EventPart"
         '
@@ -1519,14 +1519,14 @@ Partial Class MainForm
         Me.sobyts.Margin = New System.Windows.Forms.Padding(0, 0, 3, 3)
         Me.sobyts.Name = "sobyts"
         Me.sobyts.Padding = New System.Windows.Forms.Padding(3)
-        Me.sobyts.Size = New System.Drawing.Size(238, 286)
+        Me.sobyts.Size = New System.Drawing.Size(238, 288)
         Me.sobyts.TabIndex = 0
         Me.sobyts.Text = "TabPage2"
         '
         'help1
         '
         Me.help1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.help1.Location = New System.Drawing.Point(168, 117)
+        Me.help1.Location = New System.Drawing.Point(168, 118)
         Me.help1.Name = "help1"
         Me.help1.Size = New System.Drawing.Size(16, 16)
         Me.help1.TabIndex = 2
@@ -1538,7 +1538,7 @@ Partial Class MainForm
         Me.ComboBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 136)
+        Me.ComboBox1.Location = New System.Drawing.Point(13, 137)
         Me.ComboBox1.MaxDropDownItems = 16
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(213, 21)
@@ -1550,7 +1550,7 @@ Partial Class MainForm
         Me.Label1.AutoEllipsis = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 118)
+        Me.Label1.Location = New System.Drawing.Point(0, 119)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 16)
         Me.Label1.TabIndex = 0
@@ -1566,7 +1566,7 @@ Partial Class MainForm
         Me.deistviya.Location = New System.Drawing.Point(4, 22)
         Me.deistviya.Name = "deistviya"
         Me.deistviya.Padding = New System.Windows.Forms.Padding(3)
-        Me.deistviya.Size = New System.Drawing.Size(238, 286)
+        Me.deistviya.Size = New System.Drawing.Size(238, 288)
         Me.deistviya.TabIndex = 1
         Me.deistviya.Text = "TabPage3"
         Me.deistviya.UseVisualStyleBackColor = True
@@ -1617,7 +1617,7 @@ Partial Class MainForm
         Me.ifs.Location = New System.Drawing.Point(4, 22)
         Me.ifs.Name = "ifs"
         Me.ifs.Padding = New System.Windows.Forms.Padding(3)
-        Me.ifs.Size = New System.Drawing.Size(238, 286)
+        Me.ifs.Size = New System.Drawing.Size(238, 288)
         Me.ifs.TabIndex = 2
         Me.ifs.Text = "TabPage4"
         Me.ifs.UseVisualStyleBackColor = True
@@ -1667,7 +1667,7 @@ Partial Class MainForm
         Me.cycles.Location = New System.Drawing.Point(4, 22)
         Me.cycles.Name = "cycles"
         Me.cycles.Padding = New System.Windows.Forms.Padding(3)
-        Me.cycles.Size = New System.Drawing.Size(238, 286)
+        Me.cycles.Size = New System.Drawing.Size(238, 288)
         Me.cycles.TabIndex = 3
         Me.cycles.Text = "TabPage5"
         Me.cycles.UseVisualStyleBackColor = True
@@ -1718,7 +1718,7 @@ Partial Class MainForm
         Me.comm.Location = New System.Drawing.Point(4, 22)
         Me.comm.Name = "comm"
         Me.comm.Padding = New System.Windows.Forms.Padding(3)
-        Me.comm.Size = New System.Drawing.Size(238, 286)
+        Me.comm.Size = New System.Drawing.Size(238, 288)
         Me.comm.TabIndex = 4
         Me.comm.Text = "TabPage1"
         Me.comm.UseVisualStyleBackColor = True
@@ -1761,7 +1761,7 @@ Partial Class MainForm
         '
         Me.Create1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Create1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Create1.Location = New System.Drawing.Point(3, -3)
+        Me.Create1.Location = New System.Drawing.Point(3, 3)
         Me.Create1.Name = "Create1"
         Me.Create1.Size = New System.Drawing.Size(75, 23)
         Me.Create1.TabIndex = 0
@@ -1771,7 +1771,7 @@ Partial Class MainForm
         'Cancel1
         '
         Me.Cancel1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Cancel1.Location = New System.Drawing.Point(160, -3)
+        Me.Cancel1.Location = New System.Drawing.Point(160, 3)
         Me.Cancel1.Name = "Cancel1"
         Me.Cancel1.Size = New System.Drawing.Size(75, 23)
         Me.Cancel1.TabIndex = 1
@@ -2389,7 +2389,7 @@ Partial Class MainForm
         Me.StandartPanel.Name = "StandartPanel"
         Me.StandartPanel.Padding = New System.Windows.Forms.Padding(0)
         Me.StandartPanel.RenderMode = System.Windows.Forms.ToolStripRenderMode.Professional
-        Me.StandartPanel.Size = New System.Drawing.Size(466, 25)
+        Me.StandartPanel.Size = New System.Drawing.Size(435, 25)
         Me.StandartPanel.TabIndex = 0
         '
         'NewPanel
@@ -2593,6 +2593,15 @@ Partial Class MainForm
         Me.HelpPanel.Size = New System.Drawing.Size(23, 22)
         Me.HelpPanel.Text = "Справка"
         '
+        'AnswersPanel
+        '
+        Me.AnswersPanel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.AnswersPanel.Image = CType(resources.GetObject("AnswersPanel.Image"), System.Drawing.Image)
+        Me.AnswersPanel.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.AnswersPanel.Name = "AnswersPanel"
+        Me.AnswersPanel.Size = New System.Drawing.Size(23, 22)
+        Me.AnswersPanel.Text = "Ответы на все вопросы"
+        '
         'EditPrMenu
         '
         Me.EditPrMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.HelpWords, Me.ToolStripSeparator5, Me.UndoMenu5, Me.RedoMenu5, Me.ToolStripSeparator6, Me.CutMenu5, Me.CopyMenu5, Me.PasteMenu5, Me.DelMenu5, Me.ToolStripSeparator7, Me.SelectAllMenu5})
@@ -2752,15 +2761,6 @@ Partial Class MainForm
         'Timer3
         '
         Me.Timer3.Interval = 10000
-        '
-        'AnswersPanel
-        '
-        Me.AnswersPanel.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
-        Me.AnswersPanel.Image = CType(resources.GetObject("AnswersPanel.Image"), System.Drawing.Image)
-        Me.AnswersPanel.ImageTransparentColor = System.Drawing.Color.Magenta
-        Me.AnswersPanel.Name = "AnswersPanel"
-        Me.AnswersPanel.Size = New System.Drawing.Size(23, 22)
-        Me.AnswersPanel.Text = "Ответы на все вопросы"
         '
         'MainForm
         '

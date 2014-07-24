@@ -59,7 +59,7 @@ Public Module peremens
 #End If
 
     Public referral As String
-    Public Version As String = "2.17"
+    Public Version As String = "2.7"
     Public AppNameWithVersion As String = AppName & " " & Version
 
     Public AppPath As String = AppDomain.CurrentDomain.BaseDirectory() ' Папка с программой

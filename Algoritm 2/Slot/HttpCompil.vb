@@ -127,9 +127,9 @@ out:
         'Dim fileInf As New IO.FileInfo(filename)
         'Dim uri As String = "ftp://" + ftpServerIP + "/" & SitePath & "/compils/"
         'Dim reqFTP As System.Net.FtpWebRequest
-        Dim ftpServerIP As String = "algoritm2.ru/public_html"
-        Dim ftpUserID As String = "alg"
-        Dim ftpPassword As String = "tT2NI2gP"
+        Dim ftpServerIP As String = "algoritm2.ru/www/algoritm2.ru"
+        Dim ftpUserID As String = "alg3"
+        Dim ftpPassword As String = "feRXn0ql"
         Dim fileInf As New IO.FileInfo(filename)
         Dim uri As String = "ftp://" + ftpServerIP + "/compiles/"
         Dim reqFTP As System.Net.FtpWebRequest

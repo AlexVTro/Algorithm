@@ -409,18 +409,26 @@ Module peremens2
             ret += AscW(all(i))
         Next
         Dim l As Long = Math.Sin(ret) * 1000000000000000000
-        ' Расставляем левые буквы в псевдослучайном порядке
+        ' Расставляем левые буквы в псевдослучайном порядке (самописным рандомом на основе mod)
         Dim uid As String = Math.Abs(l)
-        Dim rn As New Random(uid.Substring(0, 5))
+        Dim startRnd As UInteger = uid.Substring(0, 5)
+        Dim currentRnd As UInteger = startRnd
+        Dim startSymb = 65 ' A
+        Dim endSymb = 90 ' Z
         For i = 0 To uid.Length - 1
-            Dim ind As Integer = rn.Next(65, 90)
-            Debug.WriteLine(Chr(ind))
-            uid = uid.Insert(rn.Next(0, uid.Length), Chr(ind))
+            Dim ind As Integer = startSymb + currentRnd Mod (endSymb - startSymb)
+            uid = uid.Insert(currentRnd Mod uid.Length, Chr(ind))
+
+            If currentRnd > Integer.MaxValue / 3 Then
+                currentRnd = startRnd / 3
+            End If
+
+            currentRnd *= 3
         Next
         Return uid
     End Function
     ' Возвращает окончание для любой ссылки, содержащее ИД алга, реферала...
-    Function GetEndingLink(Optional withAmpOrQuestion As Boolean = True) As String
+    Function GetEndingLink(ByVal withAmpOrQuestion As Boolean) As String
         Dim result As String = ""
 
         If referral <> "" Then
