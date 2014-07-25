@@ -31,25 +31,32 @@ namespace AlgBuild.Executors
             foreach (var neededVersion in NeededVersions)
             {
                 var installSetupScriptName = string.Format(Constants.InstallsScriptNamePattern,
-                                                           neededVersion.Item1.ToString(),
-                                                           neededVersion.Item2.ToString());
-                var installSetupScript = Path.Combine(rootPath, Constants.InstallsScriptFolderName,
-                                                      installSetupScriptName);
+                                                        neededVersion.Item1.ToString(),
+                                                        neededVersion.Item2.ToString());
 
-                var processStartInfo = new ProcessStartInfo(_installSetting.InnoSetupCompilerPath, installSetupScript);
-                var process = Process.Start(processStartInfo);
+                CreateInstall(rootPath, installSetupScriptName, _installSetting);
+            }
+        }
 
-                process.WaitForExit();
+        public static void CreateInstall(string rootPath, string installSetupScriptName, InstallSetting installSetting)
+        {
+            
+            var installSetupScript = Path.Combine(rootPath, Constants.InstallsScriptFolderName,
+                                                  installSetupScriptName);
 
-                if (process.ExitCode == 1)
-                {
-                    throw new Exception("command line parameters were invalid: " + installSetupScript);
-                }
-                
-                if (process.ExitCode == 2)
-                {
-                    throw new Exception("the compile failed: " + installSetupScript);
-                }
+            var processStartInfo = new ProcessStartInfo(installSetting.InnoSetupCompilerPath, installSetupScript);
+            var process = Process.Start(processStartInfo);
+
+            process.WaitForExit();
+
+            if (process.ExitCode == 1)
+            {
+                throw new Exception("command line parameters were invalid: " + installSetupScript);
+            }
+
+            if (process.ExitCode == 2)
+            {
+                throw new Exception("the compile failed: " + installSetupScript);
             }
         }
     }

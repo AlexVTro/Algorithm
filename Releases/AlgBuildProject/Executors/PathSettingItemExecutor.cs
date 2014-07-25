@@ -56,7 +56,7 @@ namespace AlgBuild.Executors
             return filePath.Split('|')[0];
         }
 
-        protected static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs = true)
+        public static void DirectoryCopy(string sourceDirName, string destDirName, bool copySubDirs = true)
         {
             var dir = new DirectoryInfo(sourceDirName);
             DirectoryInfo[] dirs = dir.GetDirectories();

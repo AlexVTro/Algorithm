@@ -34,6 +34,9 @@
             this.MsBuildButton = new System.Windows.Forms.Button();
             this.PublishButton = new System.Windows.Forms.Button();
             this.BuildAndPublishButton = new System.Windows.Forms.Button();
+            this.publishCustomInstallButton = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.customInstallNameTextbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // MoveButton
@@ -97,11 +100,40 @@
             this.BuildAndPublishButton.UseVisualStyleBackColor = true;
             this.BuildAndPublishButton.Click += new System.EventHandler(this.BuildAndPublishButton_Click);
             // 
+            // publishCustomInstallButton
+            // 
+            this.publishCustomInstallButton.Location = new System.Drawing.Point(471, 206);
+            this.publishCustomInstallButton.Name = "publishCustomInstallButton";
+            this.publishCustomInstallButton.Size = new System.Drawing.Size(75, 23);
+            this.publishCustomInstallButton.TabIndex = 4;
+            this.publishCustomInstallButton.Text = "Publish";
+            this.publishCustomInstallButton.UseVisualStyleBackColor = true;
+            this.publishCustomInstallButton.Click += new System.EventHandler(this.publishCustomInstallButton_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(12, 211);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Create custom install";
+            // 
+            // customInstallNameTextbox
+            // 
+            this.customInstallNameTextbox.Location = new System.Drawing.Point(120, 208);
+            this.customInstallNameTextbox.Name = "customInstallNameTextbox";
+            this.customInstallNameTextbox.Size = new System.Drawing.Size(345, 20);
+            this.customInstallNameTextbox.TabIndex = 6;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(560, 217);
+            this.ClientSize = new System.Drawing.Size(560, 239);
+            this.Controls.Add(this.customInstallNameTextbox);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.publishCustomInstallButton);
             this.Controls.Add(this.BuildAndPublishButton);
             this.Controls.Add(this.WriteTestSettingsButton);
             this.Controls.Add(this.PublishButton);
@@ -111,6 +143,7 @@
             this.Name = "Form1";
             this.Text = "AlgBuild";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -122,6 +155,9 @@
         private System.Windows.Forms.Button MsBuildButton;
         private System.Windows.Forms.Button PublishButton;
         private System.Windows.Forms.Button BuildAndPublishButton;
+        private System.Windows.Forms.Button publishCustomInstallButton;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox customInstallNameTextbox;
     }
 }
 

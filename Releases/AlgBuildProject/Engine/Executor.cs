@@ -48,6 +48,16 @@ namespace AlgBuild.Engine
             executor.Execute(_rootPath);
         }
 
+        public string RunCustomInstallSettings(string referralName)
+        {
+            var customInstallSetting = SettingsIO.ReadSetting<CustomInstallSetting>(Path.Combine(_rootPath, Constants.SettingFolderName, Constants.CustomInstallSettingFileName));
+            var publishSetting = SettingsIO.ReadSetting<PublishSetting>(Path.Combine(_rootPath, Constants.SettingFolderName, Constants.PublishSettingFileName));
+            var installSetting = SettingsIO.ReadSetting<InstallSetting>(Path.Combine(_rootPath, Constants.SettingFolderName, Constants.InstallSettingFileName));
+            var executor = new CustomInstallSettingExecutor(customInstallSetting, publishSetting, installSetting);
+           
+            return executor.Execute(_rootPath, referralName);
+        }
+
         public void WriteTestSettings()
         {
             var testAlgBuildSettings =

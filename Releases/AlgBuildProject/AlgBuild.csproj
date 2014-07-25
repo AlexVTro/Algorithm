@@ -47,6 +47,7 @@
     <Compile Include="BuildSettings\AlgBuildSetting.cs" />
     <Compile Include="BuildSettings\AlgBuildSettingItem.cs" />
     <Compile Include="BuildSettings\AlgMsBuildSetting.cs" />
+    <Compile Include="BuildSettings\CustomInstallSetting.cs" />
     <Compile Include="BuildSettings\Item\SettingItem.cs" />
     <Compile Include="BuildSettings\PublishFtpSetting.cs" />
     <Compile Include="BuildSettings\PublishSettingItem.cs" />
@@ -58,6 +59,7 @@
     <Compile Include="BuildTypes\VersionType.cs" />
     <Compile Include="Executors\AlgBuildSettingExecutor.cs" />
     <Compile Include="Executors\AlgBuildSettingItemExecutor.cs" />
+    <Compile Include="Executors\CustomInstallSettingExecutor.cs" />
     <Compile Include="Executors\Item\SettingItemExecutor.cs" />
     <Compile Include="Executors\PublishSettingItemExecutor.cs" />
     <Compile Include="Executors\PublishSettingExecutor.cs" />

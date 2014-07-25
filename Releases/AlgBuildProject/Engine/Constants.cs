@@ -9,6 +9,7 @@
         public const string PathSettingFileName = "PathSettings.xml";
         public const string InstallSettingFileName = "InstallSettings.xml";
         public const string PublishSettingFileName = "PublishSettings.xml";
+        public const string CustomInstallSettingFileName = "CustomInstallSettings.xml";
 
         // AlgBuild
         public const string ExesFolderName = SettingFolderName + @"\Exes";
@@ -26,6 +27,9 @@
 
         // Publish
         public const string PublishFolderName = SettingFolderName + @"\Publish";
+
+        // CustomInstall
+        public const string CustomInstallsScriptName = "CustomInstallFreeRu.iss";
 
     }
 }

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CustomInstallSetting xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <SourcePath>Unpacked\FreeRu</SourcePath>
+  <DestinationPath>Unpacked\CustomInstallFreeRu</DestinationPath>
+  <ReferralFile>Data\Objects\Referral.txt</ReferralFile>
+  <InstallFile>CustomAlgorithmFreeRu.exe</InstallFile>
+  <PublishPath>download/customs</PublishPath>
+</CustomInstallSetting>

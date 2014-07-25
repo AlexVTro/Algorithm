@@ -32,7 +32,7 @@ namespace AlgBuild.Executors
             UploadFile(destinationFilePath, destinationUri, ftpSetting);
         }
 
-        private static void UploadFile(string sourceFilePath, Uri destinationFileUrl, PublishFtpSetting ftpSetting)
+        public static void UploadFile(string sourceFilePath, Uri destinationFileUrl, PublishFtpSetting ftpSetting)
         {
             var ftpClient = (FtpWebRequest)WebRequest.Create(destinationFileUrl);
             ftpClient.Credentials = new NetworkCredential(ftpSetting.FtpUsername, ftpSetting.FtpPassword);
@@ -61,7 +61,7 @@ namespace AlgBuild.Executors
             uploadResponse.Close();
         }
 
-        private static Uri UriCombine(string path1, string path2, string path3 = "", string path4 = "")
+        public static Uri UriCombine(string path1, string path2, string path3 = "", string path4 = "")
         {
             string path = Path.Combine(path1, path2.TrimStart('\\', '/'), path3.TrimStart('\\', '/'), path4.TrimStart('\\', '/'));
             string url = path.Replace('\\', '/');

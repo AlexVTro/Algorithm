@@ -61,5 +61,13 @@ namespace AlgBuild
 
             MessageBox.Show("Build & Publish success");
         }
+
+        private void publishCustomInstallButton_Click(object sender, EventArgs e)
+        {
+            var customInstallLink = Executor.RunCustomInstallSettings(customInstallNameTextbox.Text);
+            customInstallNameTextbox.Text = "Ваш дистрибутив: " + customInstallLink;
+            MessageBox.Show("Custom Install success. Link copy to clipboard");
+            Clipboard.SetText(customInstallNameTextbox.Text);
+        }
     }
 }
