@@ -14,7 +14,7 @@ Partial Class MainForm
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.components = New System.ComponentModel.Container()
-        Dim ListViewItem1 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", ""}, -1)
+        Dim ListViewItem2 As System.Windows.Forms.ListViewItem = New System.Windows.Forms.ListViewItem(New String() {"", ""}, -1)
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(MainForm))
         Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
         Me.ExitMenu = New System.Windows.Forms.ToolStripMenuItem()
@@ -1244,7 +1244,7 @@ Partial Class MainForm
         '
         Me.Apply.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Apply.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Apply.Location = New System.Drawing.Point(364, 13)
+        Me.Apply.Location = New System.Drawing.Point(364, 11)
         Me.Apply.Name = "Apply"
         Me.Apply.Size = New System.Drawing.Size(72, 23)
         Me.Apply.TabIndex = 2
@@ -1260,7 +1260,7 @@ Partial Class MainForm
         Me.forEditNodeText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.forEditNodeText.Location = New System.Drawing.Point(8, 14)
         Me.forEditNodeText.Name = "forEditNodeText"
-        Me.forEditNodeText.Size = New System.Drawing.Size(355, 21)
+        Me.forEditNodeText.Size = New System.Drawing.Size(355, 19)
         Me.forEditNodeText.TabIndex = 5
         '
         'Output
@@ -1440,7 +1440,7 @@ Partial Class MainForm
         Me.ListView.FullRowSelect = True
         Me.ListView.GridLines = True
         Me.ListView.HideSelection = False
-        Me.ListView.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem1})
+        Me.ListView.Items.AddRange(New System.Windows.Forms.ListViewItem() {ListViewItem2})
         Me.ListView.LabelEdit = True
         Me.ListView.Location = New System.Drawing.Point(-2, 20)
         Me.ListView.Margin = New System.Windows.Forms.Padding(10)
@@ -1505,7 +1505,7 @@ Partial Class MainForm
         Me.TabControl2.Padding = New System.Drawing.Point(3, 3)
         Me.TabControl2.SelectedIndex = 0
         Me.TabControl2.ShowToolTips = True
-        Me.TabControl2.Size = New System.Drawing.Size(246, 314)
+        Me.TabControl2.Size = New System.Drawing.Size(246, 316)
         Me.TabControl2.TabIndex = 0
         Me.TabControl2.Tag = "Environment/EventPart"
         '
@@ -1519,14 +1519,14 @@ Partial Class MainForm
         Me.sobyts.Margin = New System.Windows.Forms.Padding(0, 0, 3, 3)
         Me.sobyts.Name = "sobyts"
         Me.sobyts.Padding = New System.Windows.Forms.Padding(3)
-        Me.sobyts.Size = New System.Drawing.Size(238, 288)
+        Me.sobyts.Size = New System.Drawing.Size(238, 290)
         Me.sobyts.TabIndex = 0
         Me.sobyts.Text = "TabPage2"
         '
         'help1
         '
         Me.help1.Anchor = System.Windows.Forms.AnchorStyles.None
-        Me.help1.Location = New System.Drawing.Point(168, 118)
+        Me.help1.Location = New System.Drawing.Point(168, 119)
         Me.help1.Name = "help1"
         Me.help1.Size = New System.Drawing.Size(16, 16)
         Me.help1.TabIndex = 2
@@ -1538,7 +1538,7 @@ Partial Class MainForm
         Me.ComboBox1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.ComboBox1.FormattingEnabled = True
-        Me.ComboBox1.Location = New System.Drawing.Point(13, 137)
+        Me.ComboBox1.Location = New System.Drawing.Point(13, 138)
         Me.ComboBox1.MaxDropDownItems = 16
         Me.ComboBox1.Name = "ComboBox1"
         Me.ComboBox1.Size = New System.Drawing.Size(213, 21)
@@ -1550,7 +1550,7 @@ Partial Class MainForm
         Me.Label1.AutoEllipsis = True
         Me.Label1.BackColor = System.Drawing.Color.Transparent
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.Label1.Location = New System.Drawing.Point(0, 119)
+        Me.Label1.Location = New System.Drawing.Point(0, 120)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(237, 16)
         Me.Label1.TabIndex = 0
@@ -1566,7 +1566,7 @@ Partial Class MainForm
         Me.deistviya.Location = New System.Drawing.Point(4, 22)
         Me.deistviya.Name = "deistviya"
         Me.deistviya.Padding = New System.Windows.Forms.Padding(3)
-        Me.deistviya.Size = New System.Drawing.Size(238, 288)
+        Me.deistviya.Size = New System.Drawing.Size(238, 290)
         Me.deistviya.TabIndex = 1
         Me.deistviya.Text = "TabPage3"
         Me.deistviya.UseVisualStyleBackColor = True
@@ -1617,7 +1617,7 @@ Partial Class MainForm
         Me.ifs.Location = New System.Drawing.Point(4, 22)
         Me.ifs.Name = "ifs"
         Me.ifs.Padding = New System.Windows.Forms.Padding(3)
-        Me.ifs.Size = New System.Drawing.Size(238, 288)
+        Me.ifs.Size = New System.Drawing.Size(238, 290)
         Me.ifs.TabIndex = 2
         Me.ifs.Text = "TabPage4"
         Me.ifs.UseVisualStyleBackColor = True
@@ -1667,7 +1667,7 @@ Partial Class MainForm
         Me.cycles.Location = New System.Drawing.Point(4, 22)
         Me.cycles.Name = "cycles"
         Me.cycles.Padding = New System.Windows.Forms.Padding(3)
-        Me.cycles.Size = New System.Drawing.Size(238, 288)
+        Me.cycles.Size = New System.Drawing.Size(238, 290)
         Me.cycles.TabIndex = 3
         Me.cycles.Text = "TabPage5"
         Me.cycles.UseVisualStyleBackColor = True
@@ -1718,7 +1718,7 @@ Partial Class MainForm
         Me.comm.Location = New System.Drawing.Point(4, 22)
         Me.comm.Name = "comm"
         Me.comm.Padding = New System.Windows.Forms.Padding(3)
-        Me.comm.Size = New System.Drawing.Size(238, 288)
+        Me.comm.Size = New System.Drawing.Size(238, 290)
         Me.comm.TabIndex = 4
         Me.comm.Text = "TabPage1"
         Me.comm.UseVisualStyleBackColor = True
@@ -1761,7 +1761,7 @@ Partial Class MainForm
         '
         Me.Create1.Anchor = System.Windows.Forms.AnchorStyles.Left
         Me.Create1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.Create1.Location = New System.Drawing.Point(3, 3)
+        Me.Create1.Location = New System.Drawing.Point(3, 2)
         Me.Create1.Name = "Create1"
         Me.Create1.Size = New System.Drawing.Size(75, 23)
         Me.Create1.TabIndex = 0
@@ -1771,7 +1771,7 @@ Partial Class MainForm
         'Cancel1
         '
         Me.Cancel1.Anchor = System.Windows.Forms.AnchorStyles.Right
-        Me.Cancel1.Location = New System.Drawing.Point(160, 3)
+        Me.Cancel1.Location = New System.Drawing.Point(160, 2)
         Me.Cancel1.Name = "Cancel1"
         Me.Cancel1.Size = New System.Drawing.Size(75, 23)
         Me.Cancel1.TabIndex = 1

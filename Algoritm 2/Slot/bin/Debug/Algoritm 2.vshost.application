@@ -11,14 +11,14 @@
     <deploymentProvider codebase="http://alexandertr/Algoritm%202/Algoritm%202.application" />
   </deployment>
   <dependency>
-    <dependentAssembly dependencyType="install" codebase="Algoritm 2.exe.manifest" size="5847">
+    <dependentAssembly dependencyType="install" codebase="Algoritm 2.exe.manifest" size="6595">
       <assemblyIdentity name="Algoritm 2.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="x86" type="win32" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>N+ok199h9Ck07tRfbpbPorWswWU=</dsig:DigestValue>
+        <dsig:DigestValue>hRHqob1B6ilymGaNk5b4k0PVP1Y=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

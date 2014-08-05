@@ -39,6 +39,7 @@
         pPicNameDefDescr.Text = transInfc(pPicNameDefDescr.Text)
         iconLabel.Text = transInfc(iconLabel.Text)
         iconDescr.Text = transInfc(iconDescr.Text)
+        iconDescr2.Text = transInfc(iconDescr2.Text)
         pProgressFormCheckBox.Text = transInfc(pProgressFormCheckBox.Text)
         pProgressFormDescr.Text = transInfc(pProgressFormDescr.Text)
 
@@ -338,4 +339,7 @@
     End Sub
 
 
+    Private Sub LinkLabel1_LinkClicked(sender As Object, e As LinkLabelLinkClickedEventArgs) Handles LinkLabel1.LinkClicked
+        Diagnostics.Process.Start("http://converticon.com/")
+    End Sub
 End Class

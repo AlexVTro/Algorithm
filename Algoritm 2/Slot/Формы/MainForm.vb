@@ -4271,6 +4271,17 @@ cycle:  For i = 0 To nodes.Length - 1
 
 #If Full Or DebugFull Or Http Or DebugHttp Then
         If PerfomanceProgress() Then
+
+            If String.IsNullOrEmpty(proj.pIcon) Then
+                Dim result = MsgBox(transInfc("Создаваемому exe-файлу не назначена иконка. Желаете выбрать иконку в разделе Настройки проекта?") _
+                       , MsgBoxStyle.Information + MsgBoxStyle.YesNo)
+
+                If result = MsgBoxResult.Yes Then
+                    ProjectSettings_Click(Nothing, Nothing)
+                    Exit Sub
+                End If
+            End If
+
             If IsHttpCompil = False Then
                 ' Компилирования файлов в ту папку, которую укажут
                 'SaveFileDialog2.InitialDirectory = proj.pPath
@@ -4356,7 +4367,7 @@ noAccess:
             If sourcs.Count > 0 Then sourc &= Join(sourcs.ToArray(), "")
 
             ' СОБСТВЕННО ЗАПУСК КОМПИЛЯТОРА
-            Dim args As String = reference & import & Icon & othersParam & out & sourc
+            Dim args As String = reference & import & icon & othersParam & out & sourc
             Dim processprop As New System.Diagnostics.ProcessStartInfo()
             processprop.FileName = vbc
             processprop.Arguments = args

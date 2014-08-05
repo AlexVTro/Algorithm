@@ -19,67 +19,69 @@ Partial Class OptionsForm
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.Tab1 = New System.Windows.Forms.TabControl
-        Me.CommonTab = New System.Windows.Forms.TabPage
-        Me.iPathTextDef = New System.Windows.Forms.TextBox
-        Me.Help6 = New System.Windows.Forms.PictureBox
-        Me.iPathDescrDef = New System.Windows.Forms.Label
-        Me.iPathLabelDef = New System.Windows.Forms.Label
-        Me.pPathBrows = New System.Windows.Forms.Button
-        Me.pPathText = New System.Windows.Forms.TextBox
-        Me.Help5 = New System.Windows.Forms.PictureBox
-        Me.pPathDescr = New System.Windows.Forms.Label
-        Me.pPathLabel = New System.Windows.Forms.Label
-        Me.help3 = New System.Windows.Forms.PictureBox
-        Me.Help2 = New System.Windows.Forms.PictureBox
-        Me.help1 = New System.Windows.Forms.PictureBox
-        Me.ScinLabelDescr = New System.Windows.Forms.Label
-        Me.Language2LabelDescr = New System.Windows.Forms.Label
-        Me.Language2Box = New System.Windows.Forms.ComboBox
-        Me.Language2Label = New System.Windows.Forms.Label
-        Me.LanguageLabelDescr = New System.Windows.Forms.Label
-        Me.SkinBox = New System.Windows.Forms.ComboBox
-        Me.ScinLabel = New System.Windows.Forms.Label
-        Me.LanguageBox = New System.Windows.Forms.ComboBox
-        Me.LanguageLabel = New System.Windows.Forms.Label
-        Me.ProjectTab = New System.Windows.Forms.TabPage
-        Me.iconBrows = New System.Windows.Forms.Button
-        Me.iconText = New System.Windows.Forms.TextBox
-        Me.Help10 = New System.Windows.Forms.PictureBox
-        Me.iconDescr = New System.Windows.Forms.Label
-        Me.iconLabel = New System.Windows.Forms.Label
-        Me.pProgressFormDescr = New System.Windows.Forms.Label
-        Me.Help9 = New System.Windows.Forms.PictureBox
-        Me.pProgressFormCheckBox = New System.Windows.Forms.CheckBox
-        Me.pPicNameDefText = New System.Windows.Forms.TextBox
-        Me.Help8 = New System.Windows.Forms.PictureBox
-        Me.pPicNameDefDescr = New System.Windows.Forms.Label
-        Me.pPicNameDefLabel = New System.Windows.Forms.Label
-        Me.iPathText = New System.Windows.Forms.TextBox
-        Me.Help7 = New System.Windows.Forms.PictureBox
-        Me.iPathDescr = New System.Windows.Forms.Label
-        Me.iPathLabel = New System.Windows.Forms.Label
-        Me.ProcessorTab = New System.Windows.Forms.TabPage
-        Me.bistro_StatusLineDescr = New System.Windows.Forms.Label
-        Me.Help14 = New System.Windows.Forms.PictureBox
-        Me.bistro_StatusLineCheckBox = New System.Windows.Forms.CheckBox
-        Me.bistro_podsvKovCheckBox = New System.Windows.Forms.CheckBox
-        Me.bistro_podsvPMsCheckBox = New System.Windows.Forms.CheckBox
-        Me.bistro_podsvObsCheckBox = New System.Windows.Forms.CheckBox
-        Me.bistro_podsvHWCheckBox = New System.Windows.Forms.CheckBox
-        Me.bistro_podsvDescr = New System.Windows.Forms.Label
-        Me.Help13 = New System.Windows.Forms.PictureBox
-        Me.bistro_podsvFunCheckBox = New System.Windows.Forms.CheckBox
-        Me.bistro_UnReDescr = New System.Windows.Forms.Label
-        Me.Help12 = New System.Windows.Forms.PictureBox
-        Me.bistro_UnReCheckBox = New System.Windows.Forms.CheckBox
-        Me.bistro_orfoDescr = New System.Windows.Forms.Label
-        Me.Help11 = New System.Windows.Forms.PictureBox
-        Me.bistro_orfoCheckBox = New System.Windows.Forms.CheckBox
-        Me.Cancel = New System.Windows.Forms.Button
-        Me.Ok = New System.Windows.Forms.Button
-        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog
-        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog
+        Me.Tab1 = New System.Windows.Forms.TabControl()
+        Me.CommonTab = New System.Windows.Forms.TabPage()
+        Me.iPathTextDef = New System.Windows.Forms.TextBox()
+        Me.Help6 = New System.Windows.Forms.PictureBox()
+        Me.iPathDescrDef = New System.Windows.Forms.Label()
+        Me.iPathLabelDef = New System.Windows.Forms.Label()
+        Me.pPathBrows = New System.Windows.Forms.Button()
+        Me.pPathText = New System.Windows.Forms.TextBox()
+        Me.Help5 = New System.Windows.Forms.PictureBox()
+        Me.pPathDescr = New System.Windows.Forms.Label()
+        Me.pPathLabel = New System.Windows.Forms.Label()
+        Me.help3 = New System.Windows.Forms.PictureBox()
+        Me.Help2 = New System.Windows.Forms.PictureBox()
+        Me.help1 = New System.Windows.Forms.PictureBox()
+        Me.ScinLabelDescr = New System.Windows.Forms.Label()
+        Me.Language2LabelDescr = New System.Windows.Forms.Label()
+        Me.Language2Box = New System.Windows.Forms.ComboBox()
+        Me.Language2Label = New System.Windows.Forms.Label()
+        Me.LanguageLabelDescr = New System.Windows.Forms.Label()
+        Me.SkinBox = New System.Windows.Forms.ComboBox()
+        Me.ScinLabel = New System.Windows.Forms.Label()
+        Me.LanguageBox = New System.Windows.Forms.ComboBox()
+        Me.LanguageLabel = New System.Windows.Forms.Label()
+        Me.ProjectTab = New System.Windows.Forms.TabPage()
+        Me.iconBrows = New System.Windows.Forms.Button()
+        Me.iconText = New System.Windows.Forms.TextBox()
+        Me.Help10 = New System.Windows.Forms.PictureBox()
+        Me.iconDescr = New System.Windows.Forms.Label()
+        Me.iconLabel = New System.Windows.Forms.Label()
+        Me.pProgressFormDescr = New System.Windows.Forms.Label()
+        Me.Help9 = New System.Windows.Forms.PictureBox()
+        Me.pProgressFormCheckBox = New System.Windows.Forms.CheckBox()
+        Me.pPicNameDefText = New System.Windows.Forms.TextBox()
+        Me.Help8 = New System.Windows.Forms.PictureBox()
+        Me.pPicNameDefDescr = New System.Windows.Forms.Label()
+        Me.pPicNameDefLabel = New System.Windows.Forms.Label()
+        Me.iPathText = New System.Windows.Forms.TextBox()
+        Me.Help7 = New System.Windows.Forms.PictureBox()
+        Me.iPathDescr = New System.Windows.Forms.Label()
+        Me.iPathLabel = New System.Windows.Forms.Label()
+        Me.ProcessorTab = New System.Windows.Forms.TabPage()
+        Me.bistro_StatusLineDescr = New System.Windows.Forms.Label()
+        Me.Help14 = New System.Windows.Forms.PictureBox()
+        Me.bistro_StatusLineCheckBox = New System.Windows.Forms.CheckBox()
+        Me.bistro_podsvKovCheckBox = New System.Windows.Forms.CheckBox()
+        Me.bistro_podsvPMsCheckBox = New System.Windows.Forms.CheckBox()
+        Me.bistro_podsvObsCheckBox = New System.Windows.Forms.CheckBox()
+        Me.bistro_podsvHWCheckBox = New System.Windows.Forms.CheckBox()
+        Me.bistro_podsvDescr = New System.Windows.Forms.Label()
+        Me.Help13 = New System.Windows.Forms.PictureBox()
+        Me.bistro_podsvFunCheckBox = New System.Windows.Forms.CheckBox()
+        Me.bistro_UnReDescr = New System.Windows.Forms.Label()
+        Me.Help12 = New System.Windows.Forms.PictureBox()
+        Me.bistro_UnReCheckBox = New System.Windows.Forms.CheckBox()
+        Me.bistro_orfoDescr = New System.Windows.Forms.Label()
+        Me.Help11 = New System.Windows.Forms.PictureBox()
+        Me.bistro_orfoCheckBox = New System.Windows.Forms.CheckBox()
+        Me.Cancel = New System.Windows.Forms.Button()
+        Me.Ok = New System.Windows.Forms.Button()
+        Me.FolderBrowserDialog1 = New System.Windows.Forms.FolderBrowserDialog()
+        Me.OpenFileDialog1 = New System.Windows.Forms.OpenFileDialog()
+        Me.iconDescr2 = New System.Windows.Forms.Label()
+        Me.LinkLabel1 = New System.Windows.Forms.LinkLabel()
         Me.Tab1.SuspendLayout()
         Me.CommonTab.SuspendLayout()
         CType(Me.Help6, System.ComponentModel.ISupportInitialize).BeginInit()
@@ -102,8 +104,8 @@ Partial Class OptionsForm
         'Tab1
         '
         Me.Tab1.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
-                    Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Tab1.Controls.Add(Me.CommonTab)
         Me.Tab1.Controls.Add(Me.ProjectTab)
         Me.Tab1.Controls.Add(Me.ProcessorTab)
@@ -148,7 +150,7 @@ Partial Class OptionsForm
         'iPathTextDef
         '
         Me.iPathTextDef.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.iPathTextDef.Location = New System.Drawing.Point(11, 225)
         Me.iPathTextDef.Name = "iPathTextDef"
         Me.iPathTextDef.Size = New System.Drawing.Size(304, 20)
@@ -169,7 +171,7 @@ Partial Class OptionsForm
         'iPathDescrDef
         '
         Me.iPathDescrDef.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.iPathDescrDef.BackColor = System.Drawing.Color.Transparent
         Me.iPathDescrDef.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.iPathDescrDef.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -184,7 +186,7 @@ Partial Class OptionsForm
         'iPathLabelDef
         '
         Me.iPathLabelDef.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.iPathLabelDef.BackColor = System.Drawing.Color.Transparent
         Me.iPathLabelDef.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.iPathLabelDef.ForeColor = System.Drawing.Color.Black
@@ -210,7 +212,7 @@ Partial Class OptionsForm
         'pPathText
         '
         Me.pPathText.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pPathText.Location = New System.Drawing.Point(11, 165)
         Me.pPathText.Name = "pPathText"
         Me.pPathText.Size = New System.Drawing.Size(277, 20)
@@ -231,7 +233,7 @@ Partial Class OptionsForm
         'pPathDescr
         '
         Me.pPathDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pPathDescr.BackColor = System.Drawing.Color.Transparent
         Me.pPathDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.pPathDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -246,7 +248,7 @@ Partial Class OptionsForm
         'pPathLabel
         '
         Me.pPathLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pPathLabel.BackColor = System.Drawing.Color.Transparent
         Me.pPathLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.pPathLabel.ForeColor = System.Drawing.Color.Black
@@ -297,7 +299,7 @@ Partial Class OptionsForm
         'ScinLabelDescr
         '
         Me.ScinLabelDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ScinLabelDescr.BackColor = System.Drawing.Color.Transparent
         Me.ScinLabelDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.ScinLabelDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -312,7 +314,7 @@ Partial Class OptionsForm
         'Language2LabelDescr
         '
         Me.Language2LabelDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Language2LabelDescr.BackColor = System.Drawing.Color.Transparent
         Me.Language2LabelDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.Language2LabelDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -327,7 +329,7 @@ Partial Class OptionsForm
         'Language2Box
         '
         Me.Language2Box.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Language2Box.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.Language2Box.FormattingEnabled = True
         Me.Language2Box.Location = New System.Drawing.Point(149, 54)
@@ -352,7 +354,7 @@ Partial Class OptionsForm
         'LanguageLabelDescr
         '
         Me.LanguageLabelDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LanguageLabelDescr.BackColor = System.Drawing.Color.Transparent
         Me.LanguageLabelDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.LanguageLabelDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -367,7 +369,7 @@ Partial Class OptionsForm
         'SkinBox
         '
         Me.SkinBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.SkinBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.SkinBox.FormattingEnabled = True
         Me.SkinBox.Location = New System.Drawing.Point(149, 101)
@@ -392,7 +394,7 @@ Partial Class OptionsForm
         'LanguageBox
         '
         Me.LanguageBox.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.LanguageBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.LanguageBox.FormattingEnabled = True
         Me.LanguageBox.Location = New System.Drawing.Point(149, 8)
@@ -416,6 +418,8 @@ Partial Class OptionsForm
         '
         'ProjectTab
         '
+        Me.ProjectTab.Controls.Add(Me.LinkLabel1)
+        Me.ProjectTab.Controls.Add(Me.iconDescr2)
         Me.ProjectTab.Controls.Add(Me.iconBrows)
         Me.ProjectTab.Controls.Add(Me.iconText)
         Me.ProjectTab.Controls.Add(Me.Help10)
@@ -444,7 +448,7 @@ Partial Class OptionsForm
         '
         Me.iconBrows.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.iconBrows.Font = New System.Drawing.Font("Microsoft Sans Serif", 6.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.iconBrows.Location = New System.Drawing.Point(292, 153)
+        Me.iconBrows.Location = New System.Drawing.Point(292, 155)
         Me.iconBrows.Name = "iconBrows"
         Me.iconBrows.Size = New System.Drawing.Size(22, 15)
         Me.iconBrows.TabIndex = 57
@@ -454,8 +458,8 @@ Partial Class OptionsForm
         'iconText
         '
         Me.iconText.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.iconText.Location = New System.Drawing.Point(10, 148)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.iconText.Location = New System.Drawing.Point(10, 150)
         Me.iconText.Name = "iconText"
         Me.iconText.Size = New System.Drawing.Size(278, 20)
         Me.iconText.TabIndex = 56
@@ -464,7 +468,7 @@ Partial Class OptionsForm
         '
         Me.Help10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Help10.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Help10.Location = New System.Drawing.Point(299, 130)
+        Me.Help10.Location = New System.Drawing.Point(299, 132)
         Me.Help10.Name = "Help10"
         Me.Help10.Size = New System.Drawing.Size(16, 16)
         Me.Help10.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -475,11 +479,11 @@ Partial Class OptionsForm
         'iconDescr
         '
         Me.iconDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.iconDescr.BackColor = System.Drawing.Color.Transparent
         Me.iconDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.iconDescr.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.iconDescr.Location = New System.Drawing.Point(5, 169)
+        Me.iconDescr.Location = New System.Drawing.Point(5, 171)
         Me.iconDescr.Name = "iconDescr"
         Me.iconDescr.Size = New System.Drawing.Size(308, 18)
         Me.iconDescr.TabIndex = 54
@@ -490,10 +494,10 @@ Partial Class OptionsForm
         'iconLabel
         '
         Me.iconLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.iconLabel.BackColor = System.Drawing.Color.Transparent
         Me.iconLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
-        Me.iconLabel.Location = New System.Drawing.Point(5, 127)
+        Me.iconLabel.Location = New System.Drawing.Point(5, 129)
         Me.iconLabel.Name = "iconLabel"
         Me.iconLabel.Size = New System.Drawing.Size(291, 18)
         Me.iconLabel.TabIndex = 53
@@ -504,11 +508,11 @@ Partial Class OptionsForm
         'pProgressFormDescr
         '
         Me.pProgressFormDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pProgressFormDescr.BackColor = System.Drawing.Color.Transparent
         Me.pProgressFormDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.pProgressFormDescr.ForeColor = System.Drawing.SystemColors.ControlDark
-        Me.pProgressFormDescr.Location = New System.Drawing.Point(5, 212)
+        Me.pProgressFormDescr.Location = New System.Drawing.Point(5, 251)
         Me.pProgressFormDescr.Name = "pProgressFormDescr"
         Me.pProgressFormDescr.Size = New System.Drawing.Size(310, 18)
         Me.pProgressFormDescr.TabIndex = 52
@@ -520,7 +524,7 @@ Partial Class OptionsForm
         '
         Me.Help9.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Help9.Cursor = System.Windows.Forms.Cursors.Hand
-        Me.Help9.Location = New System.Drawing.Point(299, 193)
+        Me.Help9.Location = New System.Drawing.Point(299, 232)
         Me.Help9.Name = "Help9"
         Me.Help9.Size = New System.Drawing.Size(16, 16)
         Me.Help9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage
@@ -531,7 +535,7 @@ Partial Class OptionsForm
         'pProgressFormCheckBox
         '
         Me.pProgressFormCheckBox.AutoSize = True
-        Me.pProgressFormCheckBox.Location = New System.Drawing.Point(10, 192)
+        Me.pProgressFormCheckBox.Location = New System.Drawing.Point(10, 231)
         Me.pProgressFormCheckBox.Name = "pProgressFormCheckBox"
         Me.pProgressFormCheckBox.Size = New System.Drawing.Size(274, 17)
         Me.pProgressFormCheckBox.TabIndex = 50
@@ -541,7 +545,7 @@ Partial Class OptionsForm
         'pPicNameDefText
         '
         Me.pPicNameDefText.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pPicNameDefText.Location = New System.Drawing.Point(10, 89)
         Me.pPicNameDefText.Name = "pPicNameDefText"
         Me.pPicNameDefText.Size = New System.Drawing.Size(304, 20)
@@ -562,7 +566,7 @@ Partial Class OptionsForm
         'pPicNameDefDescr
         '
         Me.pPicNameDefDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pPicNameDefDescr.BackColor = System.Drawing.Color.Transparent
         Me.pPicNameDefDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.pPicNameDefDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -577,7 +581,7 @@ Partial Class OptionsForm
         'pPicNameDefLabel
         '
         Me.pPicNameDefLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.pPicNameDefLabel.BackColor = System.Drawing.Color.Transparent
         Me.pPicNameDefLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.pPicNameDefLabel.Location = New System.Drawing.Point(5, 68)
@@ -591,7 +595,7 @@ Partial Class OptionsForm
         'iPathText
         '
         Me.iPathText.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.iPathText.Location = New System.Drawing.Point(10, 29)
         Me.iPathText.Name = "iPathText"
         Me.iPathText.Size = New System.Drawing.Size(304, 20)
@@ -612,7 +616,7 @@ Partial Class OptionsForm
         'iPathDescr
         '
         Me.iPathDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.iPathDescr.BackColor = System.Drawing.Color.Transparent
         Me.iPathDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.iPathDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -627,7 +631,7 @@ Partial Class OptionsForm
         'iPathLabel
         '
         Me.iPathLabel.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.iPathLabel.BackColor = System.Drawing.Color.Transparent
         Me.iPathLabel.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.iPathLabel.Location = New System.Drawing.Point(5, 8)
@@ -667,7 +671,7 @@ Partial Class OptionsForm
         'bistro_StatusLineDescr
         '
         Me.bistro_StatusLineDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bistro_StatusLineDescr.BackColor = System.Drawing.Color.Transparent
         Me.bistro_StatusLineDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.bistro_StatusLineDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -744,7 +748,7 @@ Partial Class OptionsForm
         'bistro_podsvDescr
         '
         Me.bistro_podsvDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bistro_podsvDescr.BackColor = System.Drawing.Color.Transparent
         Me.bistro_podsvDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.bistro_podsvDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -781,7 +785,7 @@ Partial Class OptionsForm
         'bistro_UnReDescr
         '
         Me.bistro_UnReDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bistro_UnReDescr.BackColor = System.Drawing.Color.Transparent
         Me.bistro_UnReDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.bistro_UnReDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -818,7 +822,7 @@ Partial Class OptionsForm
         'bistro_orfoDescr
         '
         Me.bistro_orfoDescr.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-                    Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.bistro_orfoDescr.BackColor = System.Drawing.Color.Transparent
         Me.bistro_orfoDescr.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
         Me.bistro_orfoDescr.ForeColor = System.Drawing.SystemColors.ControlDark
@@ -879,6 +883,31 @@ Partial Class OptionsForm
         'OpenFileDialog1
         '
         Me.OpenFileDialog1.FileName = "OpenFileDialog1"
+        '
+        'iconDescr2
+        '
+        Me.iconDescr2.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.iconDescr2.BackColor = System.Drawing.Color.Transparent
+        Me.iconDescr2.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(204, Byte))
+        Me.iconDescr2.ForeColor = System.Drawing.SystemColors.ControlDark
+        Me.iconDescr2.Location = New System.Drawing.Point(0, 189)
+        Me.iconDescr2.Name = "iconDescr2"
+        Me.iconDescr2.Size = New System.Drawing.Size(320, 18)
+        Me.iconDescr2.TabIndex = 58
+        Me.iconDescr2.Tag = "1"
+        Me.iconDescr2.Text = "Для создания иконки из рисунка воспользуйтесь сайтом"
+        Me.iconDescr2.TextAlign = System.Drawing.ContentAlignment.TopCenter
+        '
+        'LinkLabel1
+        '
+        Me.LinkLabel1.Location = New System.Drawing.Point(0, 207)
+        Me.LinkLabel1.Name = "LinkLabel1"
+        Me.LinkLabel1.Size = New System.Drawing.Size(320, 14)
+        Me.LinkLabel1.TabIndex = 59
+        Me.LinkLabel1.TabStop = True
+        Me.LinkLabel1.Text = "ConvertIcon.com"
+        Me.LinkLabel1.TextAlign = System.Drawing.ContentAlignment.TopCenter
         '
         'OptionsForm
         '
@@ -976,4 +1005,6 @@ Partial Class OptionsForm
     Friend WithEvents bistro_StatusLineDescr As System.Windows.Forms.Label
     Friend WithEvents Help14 As System.Windows.Forms.PictureBox
     Friend WithEvents bistro_StatusLineCheckBox As System.Windows.Forms.CheckBox
+    Friend WithEvents LinkLabel1 As System.Windows.Forms.LinkLabel
+    Friend WithEvents iconDescr2 As System.Windows.Forms.Label
 End Class

@@ -35,10 +35,14 @@ namespace AlgBuild.Executors
             File.WriteAllText(filePath, referralName);
 
             // Install
+            var customInstallPath = Path.Combine(rootPath, Constants.InstallsFolderName, _customInstallSetting.InstallFile);
+
+            if (File.Exists(customInstallPath))
+                File.Delete(customInstallPath);
+
             InstallSettingExecutor.CreateInstall(rootPath, Constants.CustomInstallsScriptName, _installSetting);
 
             // Publish
-            var customInstallPath = Path.Combine(rootPath, Constants.InstallsFolderName, _customInstallSetting.InstallFile);
             var customInstallPublishFile = "Algoritm_" + referralName + ".exe";
             var customInstallPublishPath = Path.Combine(rootPath, Constants.PublishFolderName, "CustomInstalls",customInstallPublishFile);
             var publishUri = PublishSettingItemExecutor.UriCombine(_publishSetting.PublishFtpSetting.FtpUrl, _customInstallSetting.PublishPath, customInstallPublishFile);
