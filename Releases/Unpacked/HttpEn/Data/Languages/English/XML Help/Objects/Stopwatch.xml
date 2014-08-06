@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Stopwatch</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text><b>Stopwatch</b> is used for counting the <b>time</b> elapsed or for executing actions with the definite 
+        <b>periodicity</b> (for example, in every several seconds).</text>
+      </p>
+      <p>
+        Using <textAll> the property <link2 file="Stopwatch/PropertiesCommands/Interval сount.html">Interval сount</link2> you can get data on how much time has elapsed from the moment of stopwatch activation.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr> 
+              
+              <descrProperties/>
+              
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Object events.html">Object events</link><br/>
+      Other <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful objects</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

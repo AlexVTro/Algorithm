@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Development Environment of Algorithm2</title>
+    <breadcumbs>
+      <link file="Environment.html">Development environment</link>
+    </breadcumbs>
+    <descriptionarticle >
+      <p>
+        <text><b>Development environment</b> is an application window, divided into several parts. Each part is
+        designed for a particular <b>development stage</b>  (graphical interface designing, objects customizing, coding).</text>
+      </p>
+      <textAll>
+        <p>
+          Scheme of the environment :
+        </p>
+        <imgMy src="Environment.jpg"></imgMy>
+      <p>
+        <childlist>
+        </childlist>
+      </p>
+      <p>
+        The program you are creating can be easily <b>run</b> and tested at any stage of the process. To run it select menu items <b>Project -> Run</b>. While running the project you can debug it: pause, flag checkpoints and so on. See more details in the section <link file="Programming/Debug.html">Project debugging</link>
+      </p>
+      <p>
+        When the program is ready you can create *.exe-file of your program which could be run irrespective of the Algorithm development environment. To generate it select <b>File -> Compile Executable</b>. The generated file is your own program and you can do with it whatever you want: <b>share with friends, sell, distribute freeware</b> on the Internet. 
+      </p>
+      </textAll>
+
+
+    </descriptionarticle>
+         <remarks>
+           <text>
+        Development environment can be customized.  See more details in <link file="Environment/Options.html">Development environment customization</link>
+       </text> </remarks> 
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="Environment/Options.html">Development environment customization</link><br/>
+      <link file="Environment/Master.html">Complex operations wizard</link>
+    </seealso>
+  </file>
+</xml>

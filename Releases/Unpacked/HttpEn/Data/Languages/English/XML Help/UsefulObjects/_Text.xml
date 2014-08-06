@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Text</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">Useful Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>The object is used for working with <b>texts</b> and implements such options as text search, replacement,
+        partition of the text, etc.</text>
+      </p>
+      <p>
+        <textAll>
+          The object is a part of the <link file="Environment/Master.html">Complex operation wizard</link>.
+      </textAll>
+    </p>
+    <p>
+      <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      Other <link file="UsefulObjects.html">Useful Objects
+    </link>
+    </seealso>
+  </file>
+</xml>

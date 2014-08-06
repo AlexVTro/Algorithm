@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Interval count</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>Returns the number of intervals passed by a stopwatch . If in the property <b>Interval</b> you'd specify the value of 1000 (i.e. 1 second) then after 5 seconds after activation the property <b>Interval count</b> would return 5 (i.e. five one-second intervals have passed).</text>
+      </p>
+      <p>
+        <textAll>
+	  
+   </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+     
+      <text></text>
+    </remarks>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle></sampletitle>
+        <samplecode>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><li/><propsLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

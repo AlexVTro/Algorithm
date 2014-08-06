@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Tag</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>This property doesn't affect the object. You can specify there anything you want, it is destined specially for <b>you</b>.</text>
+      </p>
+      <textAll>
+        </textAll>
+    </descriptionarticle>
+
+    <remarks>
+      <text>
+        This property is useful, for example, for using in <link file="Programming/Array.html">arrays</link> when objects have different indices, but same names. This property can contain <b>additional</b> information about objects.
+      </text>
+    </remarks>
+    
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

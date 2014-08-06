@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Actions tab</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Development environment</link>
+        ->
+        <link file="Environment/EventPart.html">Actions tab</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Actions</b> are commands
+          (<link file="Objects/Window/PropertiesCommands/Text.html">change a text of the window</link>,
+          <link file="Objects/Button/PropertiesCommands/Back color.html">change button color</link>)
+          executed by the program and programmed by you.
+        </text>
+      </p>
+      <textAll>
+        <p>
+          You can <b>set an action</b> for the object using the Actions tab of
+          <link file="Environment.html">Algorithm2 development environment</link>:
+          <imgMy src="ActionPart.jpg"></imgMy>
+        </p>
+        <p>
+          There you should <b>specify the object</b> intended for executing of your action and <b>select a property</b>
+            which is to be changed.
+            Below you should specify a <b>new value</b> for this property and then press the button <b>Create</b>. In such a way you'll create an action:
+          <imgMy src="EventPart.jpg"></imgMy>
+        </p>
+        <p>
+          So when the object <b>Button</b> has "received" the event <b>Click</b> all actions inside of this event are <b>executed</b>.
+          In this example the text of the window title will change to "Window1"
+        </p>
+      </textAll>
+    </descriptionarticle>
+    
+    <remarks>
+      <text>New values of actions can be not only <b>simple</b> (text, numbers), but also <b>complex</b>
+      (formula, a property value of some other object). To make a complex action use
+      <link file="Environment/Master.html">Complex operations wizard</link> (click on the button with a magic wand on it)
+    </text>
+    </remarks>
+
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development environment</link><br/>
+      <link file="Objects.html">Objects</link>
+    </seealso>
+  </file>
+</xml>

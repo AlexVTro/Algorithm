@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Memory</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>The object <b>saves data</b> specified for the storage in the property
+          <link2 file="Memory/PropertiesCommands/Value.html">Value</link2>.</text>
+      </p>
+      <p>
+        <textAll><b>Memory</b> is hidden in the process of program functioning, but it is saving <b>everything</b> 
+        you specify for it. <b>Events</b> and <b>properties</b> are available for the Memory just like for any other standard objects.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+
+              <descrProperties/>
+
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Object events.html">Object events</link><br/>
+      Other <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful objects</link><br/>
+    </seealso>
+    
+  </file>
+</xml>

@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Open dialog</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          Using <b>Open dialog</b> you can make an option for the user to select any <b>file</b>. The window can be opened by the command <link2 file="Open dialog/PropertiesCommands/Show dialog.html">Show dialog</link2> and the file specified by the user is to be displayed in the property <link2 file="Open dialog/PropertiesCommands/File name.html">File name</link2>.
+        </text>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr> 
+              
+              <descrProperties/>
+              
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Object events.html">Object events</link><br/>
+      Other <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful objects</link><br/>
+    </seealso>
+
+  </file>
+</xml>

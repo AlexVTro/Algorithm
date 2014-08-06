@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Items insert</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>It is used to <b>insert</b> an item into particular place of the list in accordance with the index.</text>
+      </p>
+      <p>
+        <textAll>
+	  The item place corresponds with the item's index. E.g. the first item has index "0", the second - "1", the third - "2", etc. So, to insert a new item as the third item of the list specify "4" into the field "Place to write to the list". 
+   </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <remarks>
+     
+      <text>If such index already exists in the list, the new item will replace it and the existing one will get the following index of the list. </text>
+    </remarks>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle></sampletitle>
+        <samplecode>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <li/><li/><propsLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

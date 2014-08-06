@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Append text</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">
+        <text>Useful Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          This command is used to <b>append</b> text or data into the specified file. 
+          If you want to overwrite a file, then use the command 
+          <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Save in file.html">_Save in file</link>
+        </text>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <seealso>
+      <est/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Save in file.html">_Save in file</link><br/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Save picture.html">_Save picture</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link> such as 
+      <link file="Programming/HelpWords.html#Paths">Paths</link><br/>
+      <link file="UsefulObjects/_Files and paths/PropertiesCommands/_Exist file.html">_Exist file</link><br/>
+      <link file="UsefulObjects.html">UsefulObjects</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+  </file>
+</xml>

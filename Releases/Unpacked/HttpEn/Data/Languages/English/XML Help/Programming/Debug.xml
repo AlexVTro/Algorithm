@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Debugging</title>
+
+    <breadcumbs>
+      <text>
+        <link file="Programming.html">Programming</link>
+        ->
+        <link file="Programming/Debug.html">Debugging</link>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle >
+      <p>
+        <text>
+          You can easily <b>control</b> a program when it is running in the Development Environment of Algorithm2.
+          You can <b>suspend</b> a program at any <b>action</b>, look the value of some <b>property</b> or set another <b>action</b>.
+        </text>
+      </p>
+      <remarks>
+        <i>
+          We'll study debugging by the example of <b>File manager</b>. You can find this project in the folder Algorithm2 is installed into,  in the directory <i>Projects/Examples/File manager</i>. Run it and test all debugging methods while reading these materials.
+        </i>
+      </remarks>
+      <textAll>
+        <p>
+          You can flag any action with a special <b>mark</b> called <b>Checkpoint</b>.
+          To do this click the <b>action</b> in the 
+          <link file="Environment/TreePart.html">Actions tree</link>
+          in <link file="Environment.html">Development Environment of Algorithm2</link> and then click a button with <b>red dot</b> on the <b>left</b> of the Actions tree. Another method is to click an action with the right mouse button and to select in popup menu an item <b>Checkpoint</b>.
+          You can also press <b>F9</b> on the keyboard. A marked action looks like this:
+        </p>
+        <imgMy src="Debug1.png"></imgMy>
+        <p>
+          After you have done this and run the project again, your program would be working <b>only</b> up to this action marked with a <b>checkpoint</b>. There the program <b>is suspended</b> and you are again in the development environment. Here you can <b>change</b> actions, find out what values the <b>properties</b> have at this or that moment and direct program execution in a way you need.
+          When the program is suspended at checkpoint it looks like this:
+        </p>
+        <imgMy src="Debug2.png"></imgMy>
+        <p>
+          At the bottom you can see a new <b>text box</b> where you can input all <b>information about the action</b> 
+          marked in the Actions tree. In the example above <b>Window1.MemoryLine number.Value</b> was automatically specified (it is equal to nothing, i.e. the property value is not set yet) and the value of <b>Window1.Table1._Line number</b> was displayed (it is equal to "0", i.e. the first row was clicked).
+        </p>
+        <p>
+          From this text box you can learn the <b>value</b> of any object's <b>property</b>. To do this input into the text box which is above the necessary property (e.g. Window1.Text1.Text) and then <b>select</b> it with the help of mouse:
+        </p>
+        <imgMy src="Debug3.png"></imgMy>
+        <p>
+          After you have examined everything and changed some actions you can <b>run</b> the project again (use F5) or you can use a method of <b>single-stepping</b>.
+        </p>
+        <p>
+          This means that when the project is run it <b>executes</b> only <b>one</b> action and then automatically  <b>stops</b> what gives you a chance to <b>examine</b> what <b>properies</b> are equal to. You can run this stepping mode 
+          by pressing <b>F11</b> key or by selecting menu items <b>Poject</b> -> <b>Step over</b>. If we would press <b>F11</b>  in that example (remember, we suspended at the checkpoint) then the project would run and execute an action which it was suspended at and it would be suspended again at the <b>next</b> action:
+        </p>
+        <imgMy src="Debug4.png"></imgMy>
+        <p>
+          If you press <b>F11</b> again the <b>current</b> action is executed and the project would  <b>go over to</b> to the next action (<i>If _Useful objects._Files and paths._Exist path(Window1.MemoryFile.Value) Then</i>).
+          But if you want to enter the action 
+          (<i>_Useful objects._Call event.Window1_MemoryCreateFilePath_Changing value</i>),
+          i.e. to use single-stepping for all <b>event's</b> actions (<i>Window1_MemoryCreateFilePath_Changing value</i>)
+          then you should press <b>F10</b> (or select menu items <b>Project</b> -> <b>Step into</b>). You'll automatically enter the necessary event:
+        </p>
+        <imgMy src="Debug5.png"></imgMy>
+        <p>
+          Then you can work with this event step-by-step and when you reach the end of it you are <b>returned</b> into a place you've started with. Besides, by pressing <b>F12</b> (of by selecting menu items <b>Project</b> -> <b>Step out</b>) you can at any moment <b>go from</b> the current tree branch  <b>to</b> a <b>higher level</b>. And all actions are executed, but the program is not suspended on them.
+        </p>
+      </textAll>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development Environment of Algorithm2</link><br/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful Objects</link>
+    </seealso>
+  </file>
+</xml>

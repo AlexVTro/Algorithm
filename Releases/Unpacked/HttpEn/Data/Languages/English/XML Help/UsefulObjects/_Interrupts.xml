@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Interrupts</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">Useful Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>As is obvious from the title, this object is used to <b>interrupt</b> execution of the program (or events, conditions or cycle).
+        <b>To interrupt</b> means <b>not to execute</b> actions which <b>follow</b> the command of interruption.</text>
+      </p>
+      <p>
+        <textAll>
+          For example, if we create a command
+          <link file="UsefulObjects/Interrupts/PropertiesCommands/Break event.html">Break event</link>,
+          then all actions specified in this event <b>after</b> the command  Break event are <b>not</b> to be executed.
+          The command <link file="UsefulObjects/Interrupts/PropertiesCommands/Break application.html">Break application</link> <b> closes</b> your program (Exit).
+        </textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      Other <link file="UsefulObjects.html">Useful Objects
+    </link>
+    </seealso>
+    
+  </file>
+</xml>

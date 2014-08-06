@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Paint</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <eventsLink/>
+      </text>
+      <text>
+        -> <eventLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          The event is called when the object is completely or partially <b>redrawn</b>. This occurs when the object was hidden under some other object and now becomes <b>visible</b>. Or this can occur after the cursor was moved over the object and then left the object's area and the object is redrawn in order to delete <b>cursor</b>image.</text>
+      </p>
+    </descriptionarticle>
+    <exceptions type="eventProperties">   
+    </exceptions>
+
+    <remarks>
+      <textAll>
+        You can force execution of this event by using the following command:
+        <link2 file="../PropertiesCommands/Refresh.html">Refresh</link2>.
+      </textAll>
+    </remarks>
+    
+    <seealso>
+      <est/>
+      Other <eventsLink/> of the object <objLink/><br/>
+      <propsLink/> of the object <objLink/><br/>
+      <link2 file="../PropertiesCommands/Refresh.html">Refresh</link2>.
+    </seealso>
+
+  </file>
+</xml>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Useful Objects</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">Useful Objects</link>
+    </breadcumbs>
+    <descriptionarticle >
+      <p>
+        <text><b>Useful Objects</b> (date, files and paths, registry) function like 
+        <link file="Objects.html">standard objects</link>, but they have no graphic interface and are designed for <b>interaction with the OS "Windows"</b> (in order to open a file, get date and time or cursor coordinates).
+      </text>
+      </p>
+      <textAll>
+        <p>
+          Useful Objects <b>extend</b> substantially  the possibilities of working in Algorithm2. Using them you can get to the core of the OS (for example, you can change
+          <link file="UsefulObjects/_Screen/PropertiesCommands/WallPaper.html">Wall paper</link> of the desktop).  Moreover, they help to simplify some calculations (e.g. calculations of 
+          <link file="UsefulObjects/_Date.html">dates</link>).
+          
+        </p>
+      </textAll>
+      <p>
+        <i>
+          <text>The list of all Useful Objects:</text>
+        </i>
+        <childlist>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link>
+    </seealso>
+  </file>
+</xml>

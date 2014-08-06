@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Dock</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          <b>Stretches</b> an object along a window border (left, bottom). This resizing remains (or the object is stretched even more) when the <b>user</b> changes window sizes.
+        </text>
+      </p>
+      <p>
+        <textAll>
+          All available <b>docks</b> are described in 
+          <link file="Programming/HelpWords.html">Quick fill words</link> ->
+          <link file="Programming/HelpWords.html#Docks">Docks</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how button docks can be set:</sampletitle>
+        <samplecode>
+          <![CDATA[Window1.Button1.Dock = "On left"
+Window1.Button1.Dock = Fill
+Window1.Button1.Dock = Window1.Button2.Dock
+Window1.Button1.Dock = Window1.Text1.Text]]>
+        </samplecode>
+      </sample>
+    </samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link> ->
+      <link file="Programming/HelpWords.html#Docks">Docks</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

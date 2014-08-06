@@ -1,0 +1,1811 @@
+﻿##################################################
+###                   Menus                    ###
+##################################################
+Выделить все~~Select All
+Выделить всё~~Select All
+События~~Events
+Действия~~Actions
+Условия~~Conditions
+Циклы~~Cycles
+Комментарии~~Comments
+Свойства и команды~~Properties and commands
+Комманды~~Сommands
+подУсловие~~other case
+Запустить~~Start debugging
+Приостановить проект~~Break project
+Запустить проект~~Start project
+Сохраниться и запустить~~Save and start
+Запустить активное окно~~Start current window
+Программный код~~Program code
+Посмотреть\изменить программный код элемента~~View\edit program code
+Включить подсветку~~Code highlighting
+
+##################################################
+###                 Programing                 ###
+##################################################
+если~~If
+ИлиЕсли~~ElseIf
+Тогда~~Then
+В остальных случаях~~Else
+Конец условия~~End If
+Повторяться пока~~While
+Конец цикла~~End While
+Создать условие~~Create condition
+Создать подУсловие~~Create otherCases
+Создать раздел: "во всех остальных случаях"~~Create section: "In all other cases"
+Объект~~Object
+Свойство~~Property
+Официальный сайт:~~Official website:
+О программе~~About
+Русский~~Russian
+Английский~~English
+Украинский~~Ukrainian
+
+##################################################
+###               Dop. Functions               ###
+##################################################
+Корень~~Radical
+Корень3~~Radical3
+Квадрат~~Square
+Модуль~~Absolute
+Синус~~Sine
+Косинус~~Cosine
+Тангенс~~Tangent
+АркСинус~~ArcSine
+АркКосинус~~ArcCosine
+АркТангенс~~ArcTangent
+Экспонента~~Exhibitor
+Логарифм~~Logarithm
+Логарифм10~~Logarithm10
+Округлить~~Round
+Округлить денежное~~Round money
+Сменить знак~~Change sign
+Случайное число~~Random number
+Инвертировать~~Invert
+
+##################################################
+###                 Objects                    ###
+##################################################
+Окно события~~Window events
+Объект события~~Object events
+классическая кнопка~~Сlassic button
+кнопка~~Button
+Окно~~Window
+Панель~~Panel
+Память~~Memory
+Двойная панель~~Double panel
+Закладка~~Tab page
+Закладки~~Tab Pages
+#Главное меню~~Main menu
+Меню~~Menu
+Пункт меню~~Menu item
+Медиа~~Media
+Аудио~~Audio
+Текстовое поле~~Text box
+Галочка~~Check
+Точка~~Radio
+Панель инструментов~~Tool panel
+Браузер~~Web browser
+Таблица~~Table
+Список~~Combo box
+Большой список~~List box
+Надпись~~Label
+#Ссылка~~Link label
+Текстовый документ~~Rich document
+Окно цвета~~Color dialog
+Окно шрифта~~Font dialog
+Окно выбора папки~~Path dialog
+Окно выбора цвета~~Color dialog
+Окно папок~~Path dialog
+Окно сохранения~~Save dialog
+Окно открытия~~Open dialog
+#Окно печати~~Print dialog
+Секундомер~~Stopwatch
+Полезные объекты~~Useful objects
+Экран~~Screen
+Файлы и папки~~Files and paths
+Прерывания~~Interrupts
+Система~~System
+Реестр~~Registry
+Вызвать событие~~Call event
+#Текст~~Text
+Показать сообщение~~Show messange
+#Дата~~Date
+Расширенные возможности~~Advanced tools
+Календарь~~Calendar
+Бегунок~~Track bar
+Хозяин~~Owner
+Триал~~Trial
+КлиентСервер~~ClientServer
+Список галочек~~Checked list
+Интернет~~Internet
+Полоса загрузки~~Progress bar
+
+##################################################
+###                 Properties                 ###
+##################################################
+Имя~~Name
+Фоновой рисунок~~Background image
+Фоновой рисунок1~~Background image1
+Фоновой рисунок2~~Background image2
+Цвет~~Back color
+Цвет1~~Back color1
+Цвет2~~Back color2
+Номер~~Index
+Позиция~~Position
+Главная форма~~Main form
+Всплывающее меню~~Context menu
+Всплывающее меню1~~Context menu1
+Всплывающее меню2~~Context menu2
+Запретить закрытие~~Forbid close
+Запретить минимизировать~~Forbid minimize
+Запретить разворачивать~~Forbid maximize
+Ассоциированый принятый файл~~Association passed file
+Ассоциировать с расширениями~~Associate with extensions
+Привязка~~Anchor
+Автотроеточие~~Auto ellipsis
+Стиль фона~~Background image layout
+Стиль фона1~~Background image layout1
+Стиль фона2~~Background image layout2
+Курсор~~Cursor
+Курсор1~~Cursor1
+Курсор2~~Cursor2
+Растяжка~~Dock
+Работает~~Enabled
+Стиль кнопки~~Flat style
+Стиль рамки~~Border style
+Шрифт~~Font family
+Шрифт жирный~~Font bold
+Шрифт курсив~~Font italic
+Шрифт подчеркнутый~~Font underline
+Шрифт зачеркнутый~~Font strikeout
+Шрифт размер~~Font size
+Цвет шрифта~~Fore color
+Рисунок~~Image
+Стиль рисунка~~Size mode
+Положение рисунка~~Image align
+Максимальная ширина~~Maximum width
+Максимальная вышина~~Maximum height
+Минимальная ширина~~Minimum width
+Минимальная вышина~~Minimum height
+Поле слева~~Padding left
+Поле сверху~~Padding top
+Поле справа~~Padding right
+Поле снизу~~Padding bottom
+Ширина~~Width
+Вышина~~Height
+ТабНомер~~Tab index
+ТабСтоп~~Tab stop
+Вспомогательное поле~~Tag
+Текст~~Text
+Положение текста~~Text align
+Расположение текста~~Text position
+Текст и рисунок~~Text image relation
+Видимый~~Visible
+Прокрутка~~Scroll
+Прокрутка1~~Scroll1
+Прокрутка2~~Scroll2
+Фиксированная часть~~Fixed panel
+Фиксированный разделитель~~Fixed splitter
+Ориентация~~Orientation
+Панель1 скрыта~~Panel1 collapsed
+Панель2 скрыта~~Panel2 collapsed
+Ширина разделителя~~Splitter width
+Расстояние разделителя~~Splitter distance
+Инкремент разделителя~~Splitter increment
+Панель1 минимум~~Panel1 minSize
+Панель2 минимум~~Panel2 minSize
+В фокусе~~Focused
+Тип~~Type
+Файл проигрывания~~File name played
+Проигрывается~~Played
+Громкость~~Volume
+Баланс~~Balance
+Звук отключен~~Mute
+Скорость~~Speed
+Длительность общая~~Total position
+Позиция проигрывания~~Play position
+Проигралось времени~~Play time
+Длительность время~~Total time
+Оригинальная вышина~~Original height
+Оригинальная ширина~~Original width
+Скрывать выделение~~Hide selection
+Максимальная длинна~~Maximum length
+Многострочность~~Multiline
+Только для чтения~~Read only
+Полосы прокрутки~~Scroll bars
+Перенос по словам~~Word wrap
+Выделенный текст~~Selected text
+Начало выделения~~Selection start
+Длинна выделения~~Selection length
+Отмечено~~Checked
+Символ пароля~~Password char
+Ориентация инструментов~~Orientation tools
+Расположен слева~~Alignment
+Показывать подсказку~~Auto tooltip
+Отметка по клику~~Check on click
+Стиль отображения~~Display style
+Родительское меню~~Owner menu
+Хозяин объект~~Owner object
+Вложенное всплывающее меню~~Drop down
+Рисунок растянут~~Image scaling
+Прозрачный цвет рисунка~~Image transparent color
+Горячая клавиша~~Shortcut keys
+Отображать горячие клавиши~~Show shortcut keys
+Направление текста~~Text direction
+Всплывающая подсказка~~Tooltip text
+Оконные кнопки и меню~~Control box
+Стиль окна~~Form border style
+Главное меню~~Main menu strip
+Прозрачность~~Opacity
+Показывать иконку~~Show icon
+Отображать в панели задач~~Show in taskbar
+Стартовая позиция~~Start position
+Поверх всех окон~~TopMost
+Статус окна~~Window state
+Прокрутка минимальная ширина~~Auto scroll minSize width
+Прокрутка минимальная вышина~~Auto scroll minSize height
+Прокручено по X~~Auto scroll position X
+Прокручено по Y~~Auto scroll position Y
+Высота заголовка~~Caption height
+Иконка~~Icon
+Прозрачный цвет~~Transparentcy key
+Положение закладок~~Tab alignment
+Номер выделенной закладки~~Selected tab index
+Позиция выделенной закладки~~Selected tab position
+Поле по горизонтали~~Padding X
+Поле по вертикали~~Padding Y
+Значение~~Value
+Высота раскрывающегося списка~~Dropdown height
+Ширина раскрывающегося списка~~Dropdown width
+Список упрощенный~~Drop down style
+Высота записей списка~~Item height
+Записи списка~~Items
+Количество раскрывающихся записей~~Max dropdown items
+Сортирован список~~Sorted
+Список раскрыт~~DroppedDown
+Номер выделенной записи~~Selected index
+Выделенная запись~~Selected item
+Номера выделенных записей~~Selected indices
+Выделенные записи~~Selected items
+Запись по номеру~~Items item
+Найти номер записи~~Items index of
+Количество записей~~Items count
+Ширина колонок списка~~Column width
+Горизонтальная прокрутка~~Horizontal scroll bar
+Многоколонность~~Multi column
+Позволить выбирать записи~~Selection mode list
+Номера отмеченых записей~~Checked indices
+Отмеченные записи~~Checked items
+Цвет активной ссылки~~Active link color
+Цвет нерабочей ссылки~~Disabled link color
+Цвет ссылки~~Link color
+Цвет посещенной ссылки~~Visited link color
+Начало ссылки~~Link start
+Длинна ссылки~~Link length
+Стиль подчеркивания~~Link behavior
+Ссылка посещена~~Link visited
+Ссылка рабочая~~Link enabled
+Переходить в интернет по ссылке~~Internet link
+Ссылка надписи~~Link name
+Подсвечивать ссылки~~Detect urls
+Позволить перенос выделенного~~Enable auto dragdrop
+Масштаб~~Zoom factor
+RTF код документа~~Rtf
+Выделенный RTF~~Selected rtf
+Выделенное положение текста~~Selection alignment
+Выделенный задний фон~~Selection back color
+Выделенный цвет текста~~Selection color
+Выделенный размер красной строки~~Selection hanging indent
+Выделенный отступ слева~~SelectionIndent
+Выделенный отступ справа~~Selection right indent
+Выделенный имеет маркер~~Selection bullet
+Выделенное вертикальное смещение~~Selection char offset
+Выделенный шрифт~~Selection font family
+Выделенный шрифт жирный~~Selection font bold
+Выделенный шрифт курсив~~Selection font italic
+Выделенный шрифт подчеркнутый~~Selection font underline
+Выделенный шрифт зачеркнутый~~Selection font strikeout
+Выделенный шрифт размер~~Selection font size
+Выделенный текст заблокирован~~Selection protected
+Выбранный цвет~~Dialog color
+Позволить выбирать цвет~~Show color
+Позволить выбирать подчеркивания~~Show effects
+Надпись в окне~~Description
+Выбранная папка~~Selected path
+Добавлять расширение файлу~~Default ext
+Проверять наличие файла~~Check file exists
+Проверять наличие папки~~Check path exists
+Имя файла~~File name
+Фильтр файлов~~Filter
+Номер фильтра~~Filter index
+Начальная папка~~Initial directory
+Заголовок~~Title
+Выбор нескольких файлов~~Multi select files
+Текст на печать~~Print text
+Документ на печать~~Print document
+Таблица на печать~~Print table
+Рисунок на печать~~Print picture
+Таблица в центре~~Table on center
+Интервал отсчета~~Interval
+Прошло интервалов~~Interval count
+Переходить по сссылкам~~Allow navigation
+Разрешить перетаскивания~~Allow web browser drop
+Назад возможно~~Can go back
+Вперед возможно~~Can go forward
+Текст страницы~~Document text
+Заголовок страницы~~Document title
+Тип страницы~~Document type
+Браузер занят~~Is busy
+Браузер offline~~Is offline
+всплывающее меню браузера~~isWebBrowserContextMunuEnabled
+Статус готовности~~Ready state
+Статусная строка~~Status text
+Отображать ошибки сценариев~~Script errors suppressed
+Полосы прокрутки активны~~Scroll bars enabled
+Ссылка~~Url
+Открытие ссылок нового окна~~Open new windowLink
+Горячие клавиши работают~~Web browser shortcuts enabled
+Кодировка~~Document encoding
+Кодировка по умолчанию~~Encoding default
+Куки~~Cookie
+Родительский пункт~~Owner item
+Отображать в трее~~Show in tray
+Свернуть в трей~~Minimize to tray
+Развернуть из трея~~Maximize from tray
+На весь экран~~On full screen
+Вышина строк~~Height of rows
+Вышина строки~~Rows height
+
+# TABLE
+Позволить добавлять строки~~AllowUserToAddRows
+Позволить удалять строки~~AllowUserToDeleteRows
+Позволить переставлять столбцы~~AllowUserToOrderColumns
+Позволить растягивать столбцы~~AllowUserToResizeColumns
+Позволить растягивать строки~~AllowUserToResizeRows
+Стиль рамки ячейки~~Cell border style
+Отображать заголовки столбцов~~Column headers visible
+Вышина заголовков столбцов~~Column headers height
+Столбцы~~Columns
+Строки~~Rows
+Цвет фона ячеек~~DefaultCellStyleBackColor
+Цвет фона выделенных ячеек~~DefaultCellStyleSelectionBackColor
+Цвет шрифта ячеек~~DefaultCellStyleForeColor
+Цвет шрифта выделенных ячеек~~DefaultCellStyleSelectionForeColor
+Режим редактирования~~Edit mode
+Цвет сетки~~Grid color
+Выбор нескольких ячеек~~Multi select
+Только для чтения таблица~~Read only table
+Режим выделения~~Selection mode
+Номера выделенных строк~~Selected rows
+Номера выделенных столбцов~~Selected columns
+Количество строк таблицы~~Rows count
+Количество столбцов~~Columns count
+Значение ячейки~~Item value
+Ячейка выделена~~Item selected
+Строка только для чтения~~Rows read only
+Столбец только для чтения~~Column read only
+Ячейка только для чтения~~Item read only
+Ширина столбца~~Columns width
+Номер первой строки~~Get first row
+Номер последней строки~~Get last row
+Номер следующей строки~~Get next row
+Номер предыдущей строки~~Get previous row
+Значение по координатам~~Hit test
+Номер строки по координатам~~Hit test row
+Номер столбца по координатам~~Hit test column
+Количество выделенных строк~~Selected rows count
+Количество выделенных столбцов~~Selected columns count
+Значение выделеных ячеек~~Selected items value
+Поиск в таблице~~Search in table
+Поиск в выделеных ячейках~~Search in selected cells
+Поиск с выделением~~Search with select
+Высота строк~~Rows height
+
+# PATH and FILES
+Скрытый~~Hider
+Архивный~~Archive
+Папка~~Folder
+Зашифрованный~~Encrypted
+Не индексируется~~Not indexer
+Системный~~Sys
+Временный~~Temp
+Время создания~~Create time
+Время доступа~~Access time
+Время изменения~~Edit time
+Существует файл~~Exist file
+Существует папка~~Exist path
+Получить файлы~~Get files
+Получить папки~~Get paths
+Получить диски~~Get drives
+Определить корневую~~Get root
+Определить родительскую~~Get parent
+Определить имя папки~~Get path name
+Определить имя файла~~Get file name
+Определить расширение~~Get extension
+Определить без расширения~~Get file name without extension
+Поиск файлов~~Find file
+Определить размер файла~~Get file size
+#Только для чтения~~Read only
+Количество файлов~~Files count
+Количество папок~~Directories count
+
+# EKRAN
+Рисунок рабочего стола~~Wall paper
+Стиль рабочего стола~~Desktop style
+Разрешение экрана~~Desktop resolution
+Частота экрана~~Desktop frequency
+Качество цветопередачи~~Desktop bits
+Заставка~~Screen saver
+Сделать скриншот~~Screenshot to clipboard
+Скриншот~~Screenshot
+Скриншот объекта~~Screenshot of object
+Сделать скриншот объекта~~Screenshot of object to clipboard
+Объект на печать~~Print object
+Объект съемки~~Shooting object
+
+# SYSTEM
+Мышь X~~Mouse X
+Мышь Y~~Mouse Y
+Клавиша клавиатуры~~Keyboard key
+Нажат альт~~Keyboard alt
+Нажат шифт~~Keyboard shift
+Нажат контрол~~Keyboard control
+Нажата мыши левая~~Mouse left
+Нажата мыши правая~~Mouse right
+Рисунок буфера обмена~~Clipboard picture
+Текст буфера обмена~~Clipboard text
+Значение реестра~~Key
+Ключ существует~~Exist key
+Папка существует~~Exist sub key
+Тип ключа~~Type key
+Выполнить с результатом~~Run with result
+Процессы системы~~Processes list
+Процесс убить~~Kill process
+Окна системы~~Windows list
+Окно в фокусе~~Window in focus
+Невозможно перехватить нажатия клавиш~~It is impossible to hook key press and mouse movement
+
+
+# TEXT BOKS
+Номер символа по координатам~~GetCharIndexFromPosition
+Номер первого символа строки~~GetFirstCharIndexFromLine
+Номер первого символа текущей строки~~GetFirstCharIndexOfCurrentLine
+Номер строки по номеру символа~~GetLineFromCharIndex
+X по номеру символа~~GetXFromCharIndex
+Y по номеру символа~~GetYFromCharIndex
+Строка~~Line
+Символ~~Chars
+Количество символов~~Chars length
+
+# TEXTS POLEZNIE
+Символ по номеру~~Chars
+Сравнить тексты~~Compare
+Поиск номера строки~~Index of line
+Поиск в тексте~~Index of ignore case
+Поиск с учетом регистра~~Index of
+Поиск в тексте с конца~~Last index of ignore case
+Поиск с регулярными выражениями~~Index of regular
+Разбить на части~~Split
+Количество частей текста~~Split count
+Взять кусок текста~~Substring
+Кавычки убрать~~Delete quotes
+Кавычками обособить~~Put in quotes
+Поиск без кавычек~~Index of without quotes
+Разбить на части без кавычек~~Split without quotes
+Количество частей без кавычек~~Split without quotes count
+Текст содержит~~Consist
+Текст не содержит~~Consist no
+Строка по номеру~~Line
+Количество строк~~Lines count
+#Количество символов~~Chars length
+Вставить символы в текст~~Insert
+Удалить кусок текста~~Remove
+Заменить~~Replace one
+Заменить все~~Replace all
+Сделать буквы прописными~~To lower
+Сделать буквы заглавными~~To upper
+Убрать пробелы~~Trim all
+Убрать пробелы в начале~~Trim start
+Убрать пробелы в конце~~Trim end
+Текст есть число~~Is number text
+Текст есть цифры~~Is numeric text
+Текст состоит из~~Consist all
+Зашифровать текст~~Encrypt text
+Расшифровать текст~~Decrypt text
+Ключ шифрования текста~~Key encryption text
+абвгд12345~~abcd12345
+
+# MESSAGE
+Была нажата Отмена~~Was cancel
+Была нажата Ок~~Was ok
+Была нажата Повторить~~Was retry
+Была нажата Да~~Was yes
+Была нажата Нет~~Was no
+Была нажата Прервать~~Was abort
+Была нажата Пропустить~~Was ignore
+Была нажата Справка~~Was help
+
+# DATE
+День месяца~~Day of month
+День года~~Day of year
+День в неделе~~Day of week
+Час~~Hour
+Минута~~Minute
+Секунда~~Second
+Квартал~~Quarter
+Неделя в году~~Week of year
+Год~~Year
+Месяц~~Month
+Секунд всего в дате~~Ticks
+Дней в месяце~~Days in month
+Сейчас~~Now
+Сегодня~~Today
+Прибавить дни~~Date add day
+Прибавить часы~~Date add hour
+Прибавить минуты~~Date add minute
+Прибавить секунды~~Date add second
+Прибавить кварталы~~Date add quarter
+Прибавить недели~~Date add week
+Прибавить годы~~Date add year
+Прибавить месяцы~~Date add month
+Разница в днях~~Date diff day
+Разница в часах~~Date diff hour
+Разница в минутах~~Date diff minute
+Разница в секундах~~Date diff second
+Разница в кварталах~~Date diff quarter
+Разница в неделях~~Date diff week
+Разница в годах~~Date diff year
+Разница в месяцах~~Date diff month
+День недели~~Weekday name
+Название месяца~~Month name
+Дата в определенном формате~~Get date time formats
+Формат даты~~Calendar date format
+Формат даты по выбору~~Custom date format
+
+Кнопки вверх вниз~~Show up down
+Выбранная дата~~Selected date
+Сдвиг большой~~Large change
+Сдвиг малый~~Small change
+Максимум~~Maximum
+Минимум~~Minimum
+Стиль бегунка~~Tick style
+Частота отметок~~Tick frequency
+
+# TRIAL
+Текст кнопки~~Text button
+Сообщение успешной активации~~Message valid
+Сообщение неудачной активации~~Message invalid
+ID пользователя~~Id user
+ID программы~~Id program
+ID в реестре~~Id registry program
+Ключ шифрования~~Key encryption
+Дней триала всего~~Days all
+Дней триала осталось~~Days left
+Активирована~~Activation
+Ключ активации выдать~~Key issue
+Ключ активации проверить~~Key validation
+Триальный период запустить~~Trial start
+Активацию отменить~~Activation cancel
+Примечание~~Remark
+Триальный период запущен~~Trial started
+Текст поля~~Text field
+
+Подсказка~~ToolTip
+Добавить в автозагрузку~~AutoRun
+Разрешить запуск копий~~Allow run copies
+Программа уже запущена~~The program is already started
+Разрешить вводить~~Allow input
+Выбор нескольких записей~~Multi select items
+
+# ClientServer
+Файл отправляется~~File is sent
+Обозначение команд~~Command symbol
+Принятая команда~~Received command
+Принятый текст~~Received text
+Принятый файл~~Received file
+Отправленная команда~~Sent command
+Отправленый текст~~Sent text
+Отправленый файл~~Sent file
+Имя в сети~~Name in network
+IP для соединения~~Remote host
+Порт для соединения~~Remote port
+Папка для загрузок~~Path for downloads
+Тип клиент сервера~~Client server type
+Имена клиентов~~Clients names
+Текст поля ввода~~Text box string
+Текст поля лога~~Text box log
+Ip клиентов~~Clients IPs
+Ip клиента~~Get client Ip
+Было клиентов~~Old count
+Стало клиентов~~New count
+Ошибка приема~~Receive error 
+Процент переданного~~Sent percent
+Ip получателя~~Destination IP
+Всего байт~~Bytes total
+Отправлено байт~~Bytes sent
+Получено байт~~Bytes received
+Процент полученного~~Received percent
+Ip источника~~Source IP
+Старый статус~~Old state
+Новый статус~~New state
+Скрыть отправку файлов~~Hide sending files 
+Скрыть отправку текста~~Hide sending text
+Скрыть список~~Hide combo box
+
+# Internet
+Удерживать соединение~~Keep alive
+Автоматически перенаправляться~~Allow auto redirect
+Ссылка запроса~~Url to go
+Ссылка откуда пришли~~Url referer
+Ссылка перенаправления~~Url redirect
+Тип браузера~~User agent
+Принимать~~Accept
+Прокси IP~~Proxy IP
+Прокси порт~~Proxy port
+Кодировка страницы~~Encoding page
+Язык страницы~~Language page
+Содержимое запроса~~Content query
+Тип содержимого~~Content type
+Длинна содержимого~~Content length
+Метод запроса~~Http method   
+Код результата~~Result code
+Таймаут~~Time out
+Время задержки~~Time delay
+Заголовки запроса~~Headers
+Куки запросов~~Cookies queries
+Результат запроса~~Result query
+Размер буфера~~Buffer size
+Скачивается файл~~File downloading
+Скачка пауза~~Download pause
+Наличие соединения~~Check connect
+    
+# ProgressBar
+Стиль загрузки~~Style progress
+Скорость анимации~~Marquee animation speed
+Шаг загрузки~~Step progress
+Справа налево~~Right to left layout
+
+Страница начала печати~~From page
+Страница конца печати~~To page
+Число копий~~Copies
+Ширина столбцов~~Width of columns
+
+##################################################
+###                  Commands                  ###
+##################################################
+Добавить строку~~Rows add
+Обновить~~Refresh
+Получить фокус~~Focus
+Перенести наперед~~Bring to front
+Перенести назад~~Send to back
+Очистить~~Clear
+Вырезать~~Cut
+Копировать~~Copy
+Переименовать~~Rename
+Вставить~~Paste
+Отменить~~Undo
+Повторить~~Redo
+Назад~~Go back
+Вперед~~Go forward
+Домой~~Go home
+Страница поиска~~Go search
+Печать~~Printing
+Пункт~~Item
+Окно параметров страницы~~Show page setup dialog
+Окно печати~~Print dialog
+Окно предварительного просмотра~~Show print preview dialog
+Окно свойств~~Show properties dialog
+Окно сохранить~~Show save as dialog
+Остановить~~Stop
+Скрыть~~Hide
+Закрыть~~Close
+Показать~~Show
+Очистить таблицу~~Clear table
+Перейти в интернет по ссылке~~Go internet link
+Прокрутить до курсора~~Scroll to caret
+Запустить окно~~Show dialog
+Запустить предварительный просмотр~~ShowPrevDialog
+Запустить настройки страницы~~ShowPageDialog
+Запустить окно печати~~ShowPrinDialog
+Напечатать~~Print
+Старт~~Start
+Стоп~~Stop
+Открыть в новом окне~~Navigate new page
+Открыть в фрейме~~Navigate in frame
+#Обновить страницу~~Refresh page
+Сохранить документ~~Save file
+Открыть документ~~Open file
+
+# TABLE
+Добавить копию строк~~Rows add copies
+Вставить строку~~Rows insert
+Вставить копию строк~~Rows insert copies
+Удалить строку~~Rows remove
+Сохранить таблицу~~Save table
+Открыть таблицу~~Open table
+Отображать специальный столбец~~Row headers visible
+Открыть Access~~Open Access
+Открыть Excel~~Open Excel
+Сохранить Access~~Save Access
+Добавить столбец~~Columns add
+Вставить столбец~~Columns insert
+Удалить столбец~~Columns remove
+SQL запрос выборки~~SQL query select
+SQL запрос изменения~~SQL query into
+Сортировать~~Sort table
+# SPISOK
+Добавить запись~~Items add
+Вставить запись~~Items insert
+Удалить запись~~Items remove
+Удалить запись по номеру~~Items remove at
+# FILE AND PATHS
+Сохранить в файле~~Save in file
+Добавить текст~~Append text
+Сохранить рисунок~~Save picture
+#Открыть файл~~Open file
+#Копировать~~Copy
+Переместить~~Move
+Зашифровать~~Encrypt
+Расшифровать~~Decrypt
+Удалить~~Delete
+Создать папку~~Create directory
+# MEDIA
+Плей~~Play movie
+Открыть медиафайл~~Open movie
+Открыть файл~~Open file
+Закрыть файл~~Close movie
+Стоп медиа~~Stop movie
+Пауза~~Pause movie
+Выполнить~~Run
+Очистить буфер обмена~~Clipboard clear
+Вращать колесико~~Wheel run
+Выключить компьютер~~Shut down
+Перезагрузить компьютер~~Restart
+Набрать текст~~Type text
+Удалить значение~~Delete key
+Удалить папку~~Delete subKey
+Создать подпапку~~Create subKey
+Создать ключ~~Create key
+# SOOBSHENIE
+Запустить сообщение~~Show message
+# DATE
+Изменить время компьютера~~Set system data
+# RASSHIR
+Выполнить код VBScript~~run VBScript
+Выполнить код Алгоритма2~~run Algoritm2
+Выполнить код VBNet~~run VBNet
+Выполнить код CSharp~~run CSharp
+# PRERIVANIYA
+Завершить программу~~Break application
+Завершить событие~~Break event
+Завершить цикл~~Break loop
+Завершить условие~~Break if
+Пропускать ошибки~~Ignore errors
+
+# ClientServer
+Отправить серверу~~Send to server
+Отправить файл серверу~~Send file to server
+Отправить клиентам~~Send to clients
+Отправить клиентам кроме~~Send to clientsBut
+Отправить клиенту~~Send to client
+Отправить файл клиентам~~Send file to clients
+Отправить файл клиентам кроме~~Send file to clients but
+Отправить файл клиенту~~Send file to client
+Добавить в лог~~Log
+Соединиться с сервером~~Connect to server
+Создать сервер~~Create server
+Начать прослушку~~Begin listen
+Отключить сервер~~Close server
+Отключить прослушку~~Close listener
+Отключиться~~Close client
+
+# Internet
+Получить код страницы~~Get source code page
+Скачать файл~~Download file
+Выполнить запрос~~Execute query
+Очистить куки~~Clear cookie
+Тип файла~~File type
+Скачка отменить~~Download cancel
+Скачка возобновить~~Download resume
+Открыть папку~~Open directory
+
+#################################################
+###                 Arguments                 ###
+#################################################
+Путь к файлу~~The path to the file
+Что сохранять~~What to save
+#Кодировка текста~~Text encoding
+Рисунок для сохранения~~Figure to save
+Команда Windows или имя файла~~Windows command or file name
+Аргументы~~Arguments
+Симулировать набор следующего текста~~Simulate the next set of text
+Размер вращения~~The amount of rotation
+Путь к папке~~The path to the folder
+Исходный текст~~Original text
+Что искать~~Search
+Только активное окно~~Only active window
+Новый путь к файлу~~A new path to the file
+Путь к файлу или папке~~The path to the file or folder
+Значение атрибута~~Attribute value
+Новое имя~~New name
+Время~~Time
+Куда сохранить~~Where to save
+Путь реестра~~Registry Path
+Значение ключа~~Key Value
+#Тип ключа~~Type key
+
+Порядковый номер строки~~Number lines
+Порядковый номер символа~~Number symbol
+Номера строк через запятую~~Line numbers separated by commas
+Номера столбцов через запятую~~Column numbers separated by commas
+Номер столбца куда вставлять~~Column where to insert
+Текст заголовка столбца~~The text of the column header
+Название таблицы~~Table name
+SQL запрос выборки из базы данных~~SQL query sample from the database
+SQL запрос изменения базы данных~~SQL query changes in the database
+Номер строки~~Line number
+Номер столбца~~Column
+Содержимое для столбца~~The content for the column
+Начальная строка копирования~~Start line copy
+Количество строк для копирования~~Count rows to copy
+Область выборки~~Field sampling
+Номер начальной строки~~Number first lines
+Номер строки куда вставлять~~Line number where to insert
+Что искать в таблице~~Search string
+C учетом регистра~~Match case
+#Слово целиком~~Match whole word
+Строка откуда начинать поиск~~Row from which to start search
+Столбец откуда начинать поиск~~Column from which to start search
+                                    
+Сортировать по возрастанию~~Sort ascending
+Номер записи в списке~~Number of entries in the list
+Запись из списка~~Recording from the list
+Текст записи~~Text record
+Место для записи в списке~~Place to write to the list
+Порядковый номер символа в тексте~~Serial number of the character in the text
+Текст с которым сравнивать~~The text with which to compare
+Что искать в тексте~~Search text
+Номер символа откуда начинать поиск~~Number of character from which to start search
+Шаблон регулярного выражения~~Regular Expression Pattern
+Номер нужной части~~The number of correct
+Номер символа начала куска~~Character number beginning piece
+Длинна куска~~Length of piece
+Символ разделения частей~~The symbol of the division of
+Подряд символы которые должен содержать текст~~Contracting symbols which must contain the text
+Подряд символы которые не должен содержать текст~~Contracting symbols which should not contain text
+Порядковый номер строки в тексте~~Record number of lines in the text
+Номер символа куда вставлять~~Character number where to insert
+Текст который надо вставить~~The text which should be inserted
+Что заменять~~As a substitute
+На что заменять~~At that replace
+Подряд символы из которых должен состоять текст~~Contracting character of which must be text
+Текст сообщения~~Your message
+#Кнопки сообщения~~Buttons message
+#Тип сообщения~~Message type
+#Заголовок~~Title
+Дата из которой брать~~Date from which to take
+Дата к которой прибавлять~~Date to which add
+Сколько прибавить~~How to add
+Дата1 которую вычитать~~Data1 to deduct
+Дата2 из которой вычитать~~Data2 from which to deduct
+Дата~~Date
+Номер формата вывода (от 1 до 52)~~Number of output format (from 1 to 52)
+Новая дата и время~~A new date and time
+Код VBScript~~VBScript code
+Код Алгоритма 2~~Algorithm 2 code
+Код VBNet~~VBNet code
+Код CSharp~~CSharp code
+#ID пользователя~~Id user
+Ключ активации~~Activation key
+Показать в окне~~Show in window
+
+#КЛИЕНТСРЕВЕР
+Имя клиента~~Name of client
+Содержимое сообщения~~Text to send
+Имена клиентов, которым не отправлять~~Names of clients to which should not send
+#Имена клиентов~~Clients names
+Добавляемый текст~~Text to add
+Команда~~Command
+Ждать пока скачается~~Wait for download
+
+Имя процесса~~Name of process
+Заголовок окна~~Window title
+
+##################################
+###    HelpWords Categories    ###
+##################################
+цвета~~Colors
+прочие~~Others
+папки~~Paths
+кнопки мыши~~Mouse buttons
+клавиши~~Keys
+привязки~~Anchors
+курсоры~~Cursors
+растяжки~~Docks
+#стиль кнопки~~Flat style
+#шрифт~~Font
+положения~~Alignments
+#текст к рисунку~~Text image relation
+фиксированная панель~~Fixed panel
+#стиль рамки~~Border style
+стили кнопки~~Flat styles
+#ориентация панелей~~Orientation panels
+#стиль рабочего стола~~Desktop style
+#разрешение экрана~~Desctop resolution
+тип ключа реестра~~Registry value kind
+#расположение текста~~Text position
+#полосы прокрутки~~Scroll bars
+#стиль отображения~~Display style
+#направление текста~~Text direction
+#статус готовности~~Ready states
+#кодировка~~Encodings
+обновить страницу~~Refresh page
+#стиль окна~~Window style
+#стартовая позиция~~Start positions
+#статус окна~~Window state
+#положение закладок~~Tab alignment
+#стиль рамки ячейки~~Cell border style
+#режим редактирования~~Edit mode
+#режим выделения~~Selection mode
+фильтры~~Filters
+#стиль подчеркивания~~Link behavior
+кнопки сообщения~~Message buttons
+тип сообщения~~Message type
+Тип базы данных~~Data base type
+Формат даты календаря~~Calendar date format 
+#Стиль бегунка~~Tick style
+Кодировка текста~~Text encoding
+#Стиль рисунка~~Size mode
+Тип ввода~~Input type
+Статус клиент сервера~~Client server states
+#Тип клиент сервера~~Client server type
+#Тип содержимого~~Content type
+#Метод запроса~~Http method
+#Стиль~~Style
+
+#################################################
+###                 HelpWords                 ###
+#################################################
+Да~~Yes
+Нет~~No
+Все~~All
+
+аква~~Aqua
+черный~~Black
+синий~~Blue
+коричневый~~Brown
+шоколадный~~Chocolate
+кораловый~~Coral
+серый~~Gray
+салатовый~~GreenYellow
+индиго~~Indigo
+лайм~~Lime
+розовый~~Magenta
+фиолетовый~~Violet
+серебряный~~Silver
+оранжевый~~Orange
+хаки~~DarkKhaki
+море~~Teal
+ярко-синий~~DodgerBlue
+пурпурный~~Purple
+системный темный~~SystemDark
+белый~~White
+красный~~Red
+зеленый~~Green
+желтый~~Yellow
+
+Никакой~~Nothing
+Слева~~On left
+Справа~~On right
+Сверху~~On top
+Снизу~~On bottom
+Слева_Сверху~~Left_top
+Слева_Снизу~~Left_bottom
+Справа_Слева~~Right_left
+Справа_Сверху~~Right_top
+Справа_Снизу~~Right_bottom
+Сверху_Снизу~~Top_bottom
+Слева_Сверху_Снизу~~Left_top_bottom
+Справа_Сверху_Снизу~~Right_top_bottom
+Справа_Слева_Сверху~~Right_left_top
+Справа_Слева_Снизу~~Right_left_bottom
+Справа_Слева_Сверху_Снизу~~Right_letf_top_bottom
+
+Плитка~~Tile
+По центру~~Centered
+Растянутый~~Stretch
+Масштабированный~~Zoom
+
+Обычный~~Default
+
+Старт приложения~~Appication starting
+Пересечение~~Cross
+Рука~~Hand
+Помощь~~Help
+Горизонтальный разделитель~~Horizontal split
+Текстовый~~IBeam
+Запрещающий~~Impossible
+Запрещающий перемещение~~No Move 2D
+Запрещающий по горизонтали~~No Move Horizontal
+Запрещающий по вертикали~~No Move Vertical
+Направление восток~~Pan East
+Направление СВ~~Pan NE
+Направление север~~Pan North
+Направление СЗ~~Pan NW
+Направление ЮВ~~Pan SE
+Направление юг~~Pan South
+Направление ЮЗ~~Pan SW
+Направление запад~~Pan West
+Растянивание везде~~Size All
+Растянивание СВЮЗ~~Size NESW
+Растянивание СЮ~~Size NS
+Растянивание СЗЮВ~~Size NWSE
+Растянивание ЗВ~~Size WE
+Стрелка вверх~~Up arrow
+Вертикальный разделитель~~Vertical split
+Ожидание~~Wait cursor
+
+По верху~~Top
+По низу~~Bottom
+Везде~~Fill
+
+Плоский~~Flat
+Поднимающийся~~Popup
+
+Верх слева~~Top left
+Верх~~Top center
+Верх справа~~Top right
+Низ слева~~Bottom left
+Низ~~Bottom center
+Низ справа~~Bottom right
+
+Поверх~~Overlay
+
+Линия~~Line
+Объем~~3D
+
+Панель1~~Panel1
+Панель2~~Panel2
+
+Папка проекта~~Project path
+Рисунки проекта~~Project pictures
+#Куки~~Cookies
+Рабочий стол~~Desktop
+Избранное~~Favorites
+Журнал~~History
+Интернет кэш~~Internet cache
+Мои документы~~My documents
+Мой компьютер~~My computer
+Моя музыка~~My music
+Мои рисунки~~My pictures
+Пуск-программы~~Programs
+Недавние файлы~~Recent
+Отправить~~Send to
+Пуск~~Start menu
+Автозагрузка~~Startup
+Временная папка~~Temp path
+Временный файл~~Temp file name
+Папка пользователя~~User profile
+Все пользователи~~All users profile
+# ДЛЯ ТИПА КЛЮЧА РЕГИСТРА
+Двоичное число~~Binary
+Число~~Number
+Расширенная строка~~Expand string
+Мультистрока~~Multi string
+Большое число~~Large number
+#Строка~~String
+
+Горизонтальная~~Horizontal
+Вертикальная~~Vertical
+Обе~~Both
+
+Рисунок и текст~~Image and text
+
+Горизонтальный~~Horizontal0
+Вертикальный 90~~Vertical 90
+Вертикальный 270~~Vertical 270
+
+Страницы нет~~Page uninitialized
+Страница загружается~~File download
+Страница загружена~~Page loaded
+Пользователькая активность~~Interactive
+Страница полностью готова~~Complete
+# ОБНОВЛЕНИЯ
+Обычно~~Normal
+Полностью~~Completely
+Если устарела~~If expired
+# СТИЛЯ ОКН
+Фиксированное простое~~Fixed single
+Фиксированное объемное~~Fixed 3D
+Фиксированное окно~~Fixed dialog
+Окно инструментов~~Tool window
+Фиксированное окно инструментов~~Fixed tool window
+# СТАРТОВОЙ ПОЗИЦИИ
+Заданная координатами~~Specified coordinates
+По центру экрана~~Center screen
+Размер по умолчанию~~Default bounds
+Расположение по умолчанию~~Default location
+# СТАТУС ОКНА
+Нормальный~~Normal
+Свернуто~~Minimized
+Развернуто~~Maximized
+# СТИЛЯ РАМКИ ЯЧЕЙКИ
+Выпуклый~~Raised
+Выпуклый вертикальный~~Raised vertical
+Выпуклый горизонтальный~~Raised horizontal
+Обычный вертикальный~~Single vertical
+Обычный горизонтальный~~Single horizontal
+Вогнутый~~Sunken
+Вогнутый вертикальный~~Sunken vertical
+Вогнутый горизонтальный~~Sunken horizontal
+# РЕЖИМА РЕДАКТИРОВАНИЯ
+При получении фокуса~~Edit on enter
+По клавише F2~~Edit on F2
+Обычный и F2~~Defaut or F2
+# РЕЖИМА ВЫДЕЛЕНИЯ
+Ячейки~~Cell select
+#Строки~~Full row select
+Ячейки и строки~~Row header select
+# РЕЖИМА ВЫДЕЛЕНИЯ
+Вся таблица~~whole table
+Отображаемое на экране~~Displayed
+Выделенные стоки~~Selected
+# РЕЖИМА ВЫДЕЛЕНИЯ
+По умолчанию~~Default
+Всегда~~Always
+При наведении~~Hover
+Никогда~~Never
+# КНОПОК СООБЩЕНИЯ
+Прервать Поворить Пропустить~~Abort Retry Ignore
+Ок Справка~~Ok Help
+Ок Отмена~~Ok Cancel
+Повторить Отмена~~Retry Cancel
+Да Нет~~Yes No
+Да Нет Отмена~~Yes No Cancel
+# ТИП СООБЩЕНИЯ
+#Обычный~~Default
+Ошибка~~Critical
+Внимание~~Exclamation
+Информационное~~Information
+Вопросительное~~Question
+В данном браузере~~InCurrentBrowser
+# СТИЛЬ РИСУНКА
+#По умолчанию~~Default
+#Растянутый~~Stretch
+Авторазмер~~Auto size
+#По центру~~Centered
+#Масштабированный~~Zoom
+#ТИП ВВОДА
+#Все~~All
+Только цифры~~Only digits 
+Только буквы~~Only characters
+Только латинские буквы~~Only Latin characters
+Только буквы и цифры~~Only characters and digits
+Только латинские буквы и цифры~~Only Latin characters and digits
+#Клиент-сервер
+Закрыт~~ClosedConnection
+Прослушивается~~Listening
+Вычисляется хост~~ResolvingHost
+Вычислился хост~~HostResolved
+Соединение~~Connecting
+Соединился~~Connected
+Клиент~~Client
+Сервер~~Server
+# Полоса загрузки
+Блоки~~Blocks
+Непрерывность~~Continuous
+Анимация~~Marquee
+
+#################################################
+###                  Events                   ###
+#################################################
+Клик~~Click
+Нажатие кнопки мыши~~Mouse down
+Отжатие кнопки мыши~~Mouse up
+Наведение курсора~~Mouse enter
+Отведение курсора~~Mouse leave
+Курсор на объекте~~Mouse hover
+Движение курсора~~Mouse move
+Двойной клик~~Double click
+Вращение колесика~~Mouse wheel
+# Клавиатура
+Нажатие клавиатуры~~Key press
+Нажатие вниз кнопки~~Key down
+Отжатие кнопки~~Key up
+# Прочие
+Изменение текста~~Text changed
+Получение фокуса~~Got focus
+Потеря фокуса~~Lost focus
+Прорисовка~~Paint
+#Прокрутка~~Scroll
+Изменение размеров~~Resize
+Закрытие окна~~Form closing
+Изменились размеры~~Size changed
+# Браузер
+Назад можно изменилось~~Can go back changed
+Вперед можно изменилось~~Can go forward changed
+Страница загрузилась~~Document completed
+#Страница загружается~~File download
+Перешел по ссылке~~Navigated
+Переходит по ссылке~~Navigating
+Открытие в новом окне~~New window
+Статусная строка изменилась~~Status text changed
+# табпейдж
+Снялось выделение закладки~~Deselected tab
+Снимается выделение закладки~~Deselecting tab
+Выделили закладку~~Selected tab
+Выделяют закладку~~Selecting tab
+# таблица
+Изменилось выделение~~Selection changed
+Начало редактирования ячейки~~Cell begin edit
+Клик по ячейке~~Cell click
+Двойной клик по ячейке~~Cell double click
+Конец редактирования ячеки~~Cell end edit
+Ячейка в фокусе~~Cell enter
+Ячека потеряла фокус~~Cell leave
+Столбец переместили~~Column moved
+Клик по заголовку столбца~~Column header mouse click
+Двойной клик по заголовку столбца~~Column header mouse double click
+Сортировка столбца~~Column sort mode changed
+Изменилась ширина столбца~~Column width changed
+Клик по заголовку строки~~Row header mouse click
+Изменилась вышина строки~~Row height changed
+Добавли строку~~Rows added
+Удалили строку~~Rows removed
+Клик по выделенной ячейке~~Selected cell click
+# список
+Изменение выбранной записи~~Selected index changed
+# Редкие
+Конец проигрывания~~On end
+Изменение отметки~~Checked changed
+Изменение значения~~Changing value
+Изменилось значение~~Changed value
+Клик по ссылке~~Link clicked
+#Горизонтальная прокрутка~~Horizontal scroll bar
+Вертикальная прокрутка~~Vertical scroll bar
+Клик по ссылке документа~~Link document clicked
+Тикнул~~Tick
+Создание~~Created
+# Уникальные для разных объектов
+Разделитель перемещен~~Splitter moved
+Разделитель перемещается~~Splitter moving
+Вложенное меню закрылось~~Drop down closed
+Вложенное меню открылось~~Drop down opened
+Вложенное меню открывается~~Drop down opening
+Календарь закрылся~~Close up
+Календарь раскрылся~~Drop down
+Значение изменилось~~Value changed
+Движение бегунка~~Scroll bar
+Открытие~~Opening
+Открылось~~Opened
+Закрытие~~Closing
+Закрылось~~Closed
+Клик кнопки~~Click button
+Активация успешная~~Activation successul
+Активация неудачная~~Activation failed
+Сворачивание~~Minimize
+Двойной клик по трею~~Double click tray
+# КлиентСервер
+Присоединились к серверу~~Connected to server
+Присоединился клиент~~Connection client
+Изменилось число клиентов~~Count changed
+Пришел текст~~Text received
+Пришла команда~~Command received
+Пришел файл~~File received
+Отключение~~Disconnected
+Произошла ошибка~~Error received
+Отправился текст~~Send text complete
+Отправился файл~~Send file complete
+Идет отправление~~Send progress
+Идет прием данных~~Receive progress
+Изменился статус~~State changed
+Изменилась видимость~~Visible changed
+# Internet
+Отправляется запрос~~Sending query
+Отправился запрос~~Sent query
+Пришел ответ~~Received response
+Загрузка отменена~~Download cancelled
+
+#################################################
+###            Events Properties              ###
+#################################################
+Кнопка мыши~~Mouse button
+#Мышь X~~Mouse X
+#Мышь Y~~Mouse Y
+Прокручено колесиком~~Mouse delta
+Количество кликов~~Mouse clicks
+
+Введенный символ~~Key char
+Отменить ввод~~Cancel press
+
+Нажатая клавиша~~Key pressed
+#Нажат альт~~Keyboard alt
+#Нажат шифт~~Keyboard shift
+#Нажат контрол~~Keyboard control
+
+Разделитель X~~Split X
+Разделитель Y~~Split Y
+Отменить перемещение~~Split cancel
+
+#Ссылка~~Url
+
+Отменить в новом окне~~New window cancel
+
+#Номер выделенной закладки~~Selected tab index
+Отменить событие~~Event cancel
+
+#Номер строки~~Line number
+#Номер столбца~~Column
+
+#Номер начальной строки~~Number first lines
+#Количество строк~~Lines count
+
+Текст ссылки~~Url text
+
+
+
+
+
+
+
+
+#################################################
+###                GetTrans 1                 ###
+#################################################
+И~~AND
+ИЛИ~~OR
+Файл * не существует~~File * does not exist 
+Внимение! Программа запущена НЕ от имени Администратора. Это может повлечь ограничение некоторых функций программы и ошибки. Настоятельно рекомендуем запустить программу от имени Администратора. Для этого кликните правой кнопкой мыши по Алгоритм2.ехе и выберите пункт "Запуск от имени Администратора"~~Warning! This program is running not under Administrator's account. This can lead to limitation of certain functions of the program and errors. We strongly recommend to run this program under Administrator's account. To do this, do right click on Algoritm2.exe and select "Run as Administrator"
+Ключ или папка * не существует в реестре~~Key or folder * does not exist in the registry
+Путь * содержит недопустимые символы~~Pathname * contains illegal characters
+Значение ** имеет недопустимый формат для ключа реестра *.~~Value ** is incompatible with the registry key *.
+Невозможно обратиться к файлу. Проверьте правильность написания пути. Ошибка:~~Unable to access a file. Check the pathname. Error:
+Проект "*" не найден~~Unable to find the project "*"
+Попытка деления на 0 в действии "*". По правилам арифметики это запрещено!~~An attempt to divide by 0 in the action "*".
+* не существует. Проверьте правильность написания. Доступны следующие варианты:~~* does not exist. Check your spelling. The following choices are:
+Подробнее в пункте меню~~More in the menu item
+Вспомогательные слова~~Quick fill
+Также цвета можно задать перечисляя через точку с запятой интенсивности красного, зеленого, синего. Интенсивности задаются в диапазоне от 0 до 255.~~Also you can set the color by enumerating values of red, green and blue components. You can choose these values from 0 up to 255.
+Данное свойство может принимать только значения "Да", либо "Нет". А вы ввели *.~~This property can take the values "Yes" or "No" only. You entered *.
+Инверсия может принимать только значения "Да", "Нет", "1", "0". А вы ввели *.~~Inversion can take the values "Yes", "No", "1", "0" only. You entered *.
+Для того чтобы сохранить файл Access, нужно его сначала открыть командой "Открыть Access".~~In order to save file to Access file format, it must be opened at first by the "Open Access" command.
+Строка * не является символом. Свойству требуется только символ.~~String * is not a symbol. This property requires only a symbol.
+Передано недостаточное количество информация для свойства *. Вы указали не все данные что нужны ему.~~Insufficient amount of information for * property. You passed not all data that it needs.
+В свойстве ** был указан слишком большой номер записи *. В списке меньше, чем * записей.~~** Too large number of record (*) was specified in the property **. There is less than * records in the list.
+В свойстве ** был указан слишком большой номер строки *. В таблице меньше, чем * строк.~~** Too large row number (*) was specified in the property **. There is less than * strings in the table.
+В свойстве ** был указан слишком большой номер столбца *. В таблице меньше, чем * столбцов.~~** Too large column number (*) was specified in the property **. There is less than * columns in the table.
+Не понятно, что имеется ввиду выражением *.~~It is not clear what does the expression * mean
+В свойстве * нужно было указать строку из таблицы. А в таблице меньше чем ** строк.~~* You had to specify a row from the table in the property *. The table contains less than ** rows.
+В свойстве * нужно было указать столбец из таблицы. А в таблице меньше чем ** столбцов.~~* You had to specify a column from the table in the property *. The table contains less than ** column.
+** не является целым числом, либо слишком велико. А свойство * может принимать только целые числовые значения.~~** is not an integer value or it is too large. Property * can take only integer values.
+В свойстве *** невозможно добраться до символа номер *, т.к. строка ** имеет длинну ****.~~Impossible to get to character number * in the property ***, since string length is ****.
+** не является числом, либо слишком велико. А функция * работает только с числами.~~** is not a number, or it is too large. Function * works only with numbers.
+** не является положительным числом. А свойство * может принимать только положительные числовые значения.~~** is not a positive number. Property * can take only positive numeric values.
+Дата *** должна быть в диапазоне от ** до *~~Date *** should be in range from ** to *
+** отрицательное число. А свойство * не может принимать отрицательные числа.~~** is negative number. Property * can not take negative numbers.
+Строка * не возвращает никакого значения.~~String * returns no value.
+Файл * не является иконкой.~~File * is not an icon.
+Невозможно получить доступ к файлу, укажите другой файл. Произошла ошибка:~~Unable to access the file, specify another one. Error occured:
+Файл или папка * не существует, проверьте правильность пути~~File or folder * does not exist, check the pathname
+Файл * не существует, проверьте правильность пути~~File * does not exist, check the pathname
+Папка * не существует, проверьте правильность пути~~Folder * does not exist, check the pathname
+Нельзя изменять свойство *, оно доступно только для чтения.~~Unable to change property *, it is read-only.
+Значение * не может перевестись в дату и время. Допустимы следующие варианты:~~Value * can not be transformed to the date and time. Valid options are:
+Значение * не может перевестись во временной интервал. Допустимый формат ЧЧ:ММ:СС.мм~~Value * can not be transformed into the time interval. A valid format is HH:MM:SS.mm
+Ошибка шрифта *. Возможно шрифт не сочетается со стилем (жирность, курсив, подчеркивание и т.д.), задайте другие параметры стиля и попробуйте еще раз выбрать данный шрифт:~~Error in font *. Apparently the font is not compatible with the style (bold, italic, underline, etc.), set another style settings and try to choose the font again:
+Объект с индексом * уже существует, задайте другой индекс~~Object with index * already exists, specify a different index
+Раздел "В остальных случаях" уже присутствует в данном условии. В условии может быть только один такой раздел~~The "Else" section is already present in this conditional construction. Only one such section can be present in conditional construction 
+Имя * задано неверно. Объект не может иметь такое имя.~~Name * is invalid. Object can not have such name.
+Имя объекта не может отсутствовать~~Name of the object can not be missing
+Имя объекта не может начинаться с побела~~Object's name can not begin with whitewashed
+Имя объекта не может начинаться с цифры~~The object's name can not begin with numeral
+Не известно, что означает одинарная кавычка~~It is unknown what does that single quote mean
+Не верно задано свойство или метод объекта~~Object's property or method specified illegally
+Такой объект не существует~~Such object does not exist
+Объект * не существует~~Object * does not exist
+Не известно, что означают несколько знаков равно( "=" ). Используйте скобки, чтобы указать программе как интерпритировать эти знаки.~~It is unclear what several characters ( "=" ) mean. Use parentheses to tell the program how to interpret these characters.
+Не найдено завершение условия *. Условия должны заканчиваться действием "Конец условия".~~Unable to find condition's ending (*). Conditional construction should end with the action "End of the condition."
+У данного объекта не существует свойства или метода *. Проверьте правильность его написания.~~Object does not has property or method *. Please check the spelling.
+Отсутствует обязательный класс MainClass, с которого начинает выполняться код. Ошибочный код:*~~There is no mandatory class MainClass, from which code execution begins. Error in code: *
+Невозможно выполнить строку *. Выполняться могут только Действия, Условия и Циклы.~~Unable execute line *. Only Actions, Conditions and Loops can be executed.
+Контектсного меню с именем **, заданного для объекта * не существует~~Context menu ** of the object * does not exist
+Браузера с именем * не существует~~There is no browser named *
+Вызов функцией ** самой себя, повторился более * раз. Возможно рекурсия бесконечная. Дальнейшая работа может быть крайне нестабильна. Вы хотите продолжить выполнение данной рекурсии?~~Recursive call of the function ** repeated more than * times. Perhaps it is an infinite recursion. Further execution can be unstable. Do you want to continue execution?
+Цикл ** повторился более, повторился более * раз. Возможно цикл бесконечный. Вы хотите продолжить выполнение данного цикла?~~Cycle ** repeated more than * times. Perhaps it's an infinite loop. Do you want to continue execution?
+Произошла непредвиденная ошибка~~ Unhandled error
+Невозможно назначить комбинацию клавиш **, объекту *~~Unable to assign ** key combination to object *
+Невозможно перейти по ссылке *. Ссылка имеет не верный формат.~~Unable to follow the link *. Illegal link format.
+Объект с именем *уже существует, хотите создать массив объектов?~~Object named * already exists. Do you want to create objects array?
+Объект с именем *уже существует, задайте другое имя~~Object named * already exists. Specify a different name
+Имя *содержит недопустимые символы. В написании имени объектов можно использовать только буквы, цифры и пробелы~~Name * contains invalid characters. In the objects name you can use only letters, numbers and spaces
+В программе существует функция с именем *, задайте другое имя.~~Function named * already exists. Specify a different name
+В программе существует вспомогательное слово *, задайте другое имя.~~Quick fill item named * already exists. Specify a different name
+Данный объект можно разместить только на объектах такого же типа, как он сам.~~This object can be placed only on the objects of the same type as himself. 
+У вас два объекта с одинаковым именем ** и номером *. Чтобы запустить программу сначала сделайте имена объектов разными, либо измените их свойства Номер, либо удалите ненужный объект.~~You have 2 objects with the same name ** and number *. In oder to run the program set different names for objects, change their property Number or delete one of them.
+Неожиданное действие **. Ожидалось действие следующего типа(ов): *. Другими словами, вы ошиблись в структуре условий. Исправьте их, чтобы запустить проект.~~Unexpected action **. Action of such type was expected: *. You have made a mistake in condition's structure. Correct them to run the program.
+X~~X
+Y~~Y
+Свойства~~Properties
+команды~~Commands
+Объекты~~Objects
+Вращается колесико~~Mouse scroll
+Страница~~Page
+Центр~~Center
+Рисунки~~Pictures
+Все файлы~~All files
+по выбору~~Custom
+Нижний~~Bottom
+Включить триальный отсчет~~Enable trial countdown
+Активировать~~Activate
+Ключ шифрования публичный~~Public encryption key
+Ключ шифрования личный~~Personal encryption key
+Вы хотите разместить объект на первой из двух панелей?~~Do you want to place the object on the first panel?
+Столбец~~Column
+Запись~~Record
+Действие~~Action
+Событие~~Event
+Файл~~File
+Произошла ошибка, при выполнении проекта~~An error occurred during project execution
+Непредвиденная ошибка~~Unhandled error
+Ошибка в строке~~Error in line
+Описание ошибки~~Error Description
+Копирование~~Copy
+ДаНет~~Yes\No
+Положение~~Position
+"Да"~~"Yes"
+Добавьте сюда действия~~Add actions here
+Загрузка~~Load
+АЛГОРИТМ 2~~Algorithm 2
+есть в мастере сложных действий~~present in the complex actions wizard
+Создать массив~~Create an array
+Объединение элементов одним именем. Различаться они будут по индексам.~~Elements union under one name. They differ in index.
+Создать подмассив~~Create a subarray
+Создать массив, в уже существующем массиве.~~Create an array in the existing one.
+Работа с массивами~~Work with arrays
+Функции для удобного редактирования ваших массивов.~~Options for easy arrays edition.
+Объединить в подмассиве~~Join into the subarray
+Объединить объекты в одном индексе массива.~~Merge objects under one array index.
+Выделить массив~~Select array
+Выделятся все объекты, с которыми данный объект находится в массиве.~~All objects will be selected that this object is in the array with.
+Выделить подмассив~~Select subarray
+Выделятся все объекты, с которыми данный объект находится в подмассиве.~~All objects will be selected that this object is in the subarray with.
+Добавить в массив~~Add into the array
+Добавить объект в уже существующий массив.~~Add object into an already existing array.
+Исключить из массива~~Exclude from the array
+Объекту присвоится новое имя, и обнулится индекс.~~Assign a new name to object and set index to zero.
+Перенести~~Move
+Переместить на другой объект-контейнер.~~Move to another container object.
+Создать событие для~~Create an event for
+Создать действие, для события~~Create an action for the event
+объекта~~Object
+Создать условие, для события~~Create a condition for the event
+Создать цикл, для события~~Create a loop for the event
+Левая~~Left
+Правая~~Right
+Колесико~~Wheel
+ДопКнопка1~~AdditionalButton1
+ДопКнопка2~~AdditionalButton2
+Советуем воспользоваться более надежным методом, таким как "_Копировать"~~We recommend to use a more reliable method such as "_Copy"
+Выполнялось~~Performed
+В строке~~In line
+Microsoft Sans Serif~~Microsoft Sans Serif
+Невозможно открыть/воспроизвести файл~~Unable to open/play the file
+Возможно, формат файла не поддерживается и требуется установить кодеки. Либо файл не существует.~~Perhaps the file format is not supported and you have to install codecs. Or file does not exist.
+Соединение к БД закрыто~~Connection to the database is closed
+Ошибка в написании RTF кода.~~Error in RTF code.
+Ключ верный!~~The key is valid!
+Ключ неверный.~~The key is invalid.
+Ваш ключ активации~~Your activation key
+Триальный период еще не запускался, либо был удален.~~The trial period has not been run yet, or has been overpassed.
+Попытка удалить триальный период.~~Attempt to overpass the trial period.
+Поледний запуск был после окончания триального периода.~~Last execution was after the end of the trial period.
+Системное время было изменено на более раннее.~~The system time has been changed to earlier one.
+Заменять совпадающие файлы~~Overwrite files
+Этот текст печатает программа~~This text is printed by the program
+HKEY_CURRENT_USER\Control Panel\Mouse~~HKEY_CURRENT_USER\Control Panel\Mouse
+У~~Y
+0~~0
+Подряд символы которые должен не содержать текст~~Characters that should not be in the text
+Ок~~Ok
+Привет~~Hello
+Класс MainClass и функция Main должны обязательно присутствовать~~Class MainClass and Main function must be present
+яркосиний~~lightblue
+Длинная дата~~Long Date
+Короткая дата~~Short date
+Верхний~~Top
+Средний~~Medium
+Юникод~~Unicode
+Символ новой строки~~Newline
+Сменить знак (+/-)~~Change sign (+/-)
+Инвертировать (Да/Нет)~~Invert (Yes / No)
+Случайное число (от 1 до введенного)~~Random number (between 1 and specified)
+_И~~_AND
+_ИЛИ~~_OR
+Сложить~~Summation
+Вычесть~~Subtraction
+Умножить~~Multiplication
+Разделить~~Division
+Разделить нацело~~Integer division
+Остаток деления~~Remainder of the division
+Возведение в степень~~Exponentiation
+Склеить строки~~Concatenate strings
+Если равно~~If equal
+Равно c учетом регистра~~Equally match case
+Если неравно~~If unequally
+Если больше~~If more
+Если меньше~~If less
+Больше либо равно~~If more or equal
+Меньше либо равно~~If less or equal
+Лишнее действие "Конец условия"~~Extra action "end condition"
+Эти значения не равны~~These values are not equal
+Эти значения одинаковы~~These values are equal
+это не число~~It is not a number
+Не известно, что означают несколько знаков равно("="~~Meaning of several "=" is unknown
+на следующее значение~~to the following value
+Изменить~~Change
+Изменить следующее свойство~~Change the following property
+Выполнить следующую команду~~Run the following command
+Все рисунки~~All pictures
+Все аудиофайлы~~All audio
+Все видеофайлы~~All video
+Продукт успешно зарегистрирован, спасибо!~~The product has been successfully registered, thank you!
+Ключ неверен~~The key is wrong
+Примеры~~Examples
+Простые проекты~~Simple projects
+Сложные проекты~~Difficult projects
+Невозможно записать информацию в реестр об ассоциации файлов *.alg c программой Алгоритм. Если вам вам нужна такая связь, разрешите программе обратиться к реестру. Ошибка:~Unable to associate files *.alg with program Algorithm. If you you need a connection, allow the program to use the registry. Error:
+Проект~~Project
+Ваш пояснительный комментарий~~Your explanatory comment
+Создать~~Create
+Добавить~~Add
+Для исправления ошибки скопируйте в папку с файлом который только что запустили библиотеки Kennedy.ManagedHooks.dll и SystemHookCore.dll. Они находятся в корне папки с Алгоритмом 2.~~To fix this problem, copy Kennedy.ManagedHooks.dll and SystemHookCore.dll libraries to the folder with the file you have just executed. These libraries are in the root folder of Algorithm 2.
+Подробнее~~More
+Хозяин~Owner object
+Хозяин меню~~Owner Menu
+Значения~~Values
+Применить~~Apply
+Проекты Алгоритма~~Algorithms Projects
+Готовые программы~~Ready program
+Проекты VB.NET~~VB.NET Projects
+Отменение~~Cancellation
+Повторение~~Repetition
+уже существует, замените его?~~already exists. Do you want to replace it?
+Вставка~~Past
+Удаление~~Delete
+не улавливается объектом~~is not detected by the object
+Сохранение~~Save
+Компиляция~~Compile
+ОШИБКА КОМПИЛЯЦИИ!~~Compilation error!
+Отчет об ошибке написан ниже. Попробуйте найти в дереве действий подчеркнутые слова, и исправить ситуацию.~~An error report has be opened in textbox below.
+Если вы не знаете как исправить ошибку, то скачайте Visual Studio Express (кнопка ниже), Экспортируйте ваш проект в VB.NET, Запустите получившейся файл *.vbproj в Visual Studio и попробуйте выполнить программу (клавиша F5). Ошибка вам подсветится.~~If you do not know how to fix the error, you can download the Visual Studio Express (button below), Export your project in VB.NET, Run the resulting file *.vbproj in Visual Studio and try to run a program (press F5). Error you highlighted.
+Если вы все равно не знаете как исправить ошибку, то скопируйте содержимое этого окна и отправьте его нам на support@algoritm2.ru - мы быстро решим вашу проблему! Также, вы можете поискать ответ или задать вопрос здесь:~~If you do not know how to fix the problem copy the text of the textbox and send it to us at support@algorithm2.com - we will fix the problem soon. Also, you can search for an answer or ask a question here:
+Скачать Visual Studio Express~~Download Visual Studio Express
+Поздравляем! Проект успешно скомпилирован в готовую программу и расположен по адресу~~Congratulations! The project has been successfully compiled into the final program and is located at
+Открыть папку с программой?~~Open the programs folder?
+Экспорт~~Export
+Поздравляем! Проект успешно экспортирован в VB.NET-проект и расположен по адресу~~Congratulations! The project has been successfully exported to a VB.NET-Project and is located at
+Открыть папку с проектом?~~Open the projects folder?
+Сборка~~Build
+Проект сейчас запущен, для продолжения его надо прервать. Остановить проект?~~The project is running now, in order to continue execution must be terminated. Terminate project execution?
+Сохранить изменения перед закрытием данного проекта?~~Save changes to this project?
+Проект запущен. Остановить выполнение проекта?~~The project is running. Terminate project execution?
+Внимание! Данная функция переводит только свойства объектов, значения свойств, события и некоторые ветки дерева программы. И не переводит основную часть программного кода дерева программы, ее вам следует переводить уже самостоятельно. Настоятельно рекомендуется сделать сначала резервную копию проекта. Все равно продолжить?~~Warning! This function translates only the properties of objects, the values of properties, events, and some branches of program's tree. The main part of program's tree code is not translated, you should translate it yourself. It is strongly recommended that you make a backup copy of the project. Continue anyway?
+Перевод~~Translation
+Мастер сложных действий~~Complex operations wizard
+Иконки~~Icons
+Применение~~Applying
+Отключить справочную статусную строку~~Disable status bar
+Рекомендуется для медленных машин~~It is recommended for slow computers
+Доступна новая версия программы - *! Загрузить её сейчас?~~A new version of the program is available - *! Download it now?
+Загрузить~~Download
+Напомнить позже~~Remind me later
+Пропустить это обновление~~Skip this update
+Обновление~~Update
+Введите, пожалуйста, ссылку для скачивания Алгоритма, которая вам пришла в пункте 2 в письме с ключем для Алгоритма~~Please enter the download link of the Algorithm 2 that you received in a letter with a key, in paragraph 2
+Готово~~Ok
+Загрузка...~~Downloading...
+Неверная ссылка. Если проблема повторяется, обратитесь, пожалуйста, в support@algoritm2.ru~~Link is invalid. If the problem persists, please contact support@algorithm2.com
+Невозможно скачать программу. Если проблема повторяется, обратитесь, пожалуйста, в support@algoritm2.ru~~Unable to download the program. If the problem persists, please contact support@algorithm2.com
+Для дальнейшей установки необходимо закрыть программу Алгоритм~~For further installation is necessary to close the program algorithm
+Установка обновления была отменена~~Installing the update was canceled
+
+
+
+#################################################
+###                GetTrans 2                 ###
+#################################################
+Подробнее о Максимальной версии~~Get more about Algorithm Maximum
+Приобрести лицензионный Алгоритм 2!~~Purchase a license Algorithm 2!
+http://www.Algoritm2.ru~~http://www.Algorithm2.com
+Если вы хотите компилировать готовые программы сразу из среды Алгоритм2 - приобретите программу. Это займет менее 3 минут! Этим вы ОЧЕНЬ поможете нам:~~If you want to compile your programs from Algoritm2 at once - purchase the program. It will take less than 3 minutes! This will GREATLY assist us:
+Создать готовую программу БЕСПЛАТНО!~~Compile your program for FREE!
+Бесплатная версия~~Free version
+Аргумент1~~Argument1
+Доп. функция~~ Extra function
+Повторяться пока выполняется условие:~~Repeat until the following condition is true:
+Приобрести Алгоритм 2 сейчас!~~Buy Algorithm 2 now!
+Если вы приобрели программу, то введите ключ сюда...~~If you purchased the program, enter the key here...
+Ok~~Ok
+Если вы хотите компилировать готовые программы сразу из среды Алгоритм2 - приобретите программу. Это займет менее 3 минут! И вы ОЧЕНЬ поможете нам:~~If you want to compile your programs from Algoritm2 at once - purchase the program. It will take less than 3 minutes! This will GREATLY assist us:
+Ваш УНИКАЛЬНЫЙ ID~~Your PROGRAM ID:
+БЕСПЛАТНЫЙ On-Line сервис компиляции!~~FREE On-Line compilation service!
+Регистрация~~Registration
+Посмотреть видео урок "Мой первый проект"~~Watch video lesson "My first project"
+Прочитать "Первый урок"~~Read "The first lesson"
+Не выводить это окно больше~~Do not show this box again
+Знакомство с Алгоритмом~~Getting started with the Algorithm
+Новый проект~~New Project
+Открыть проект~~Open Project
+Сохранить проект~~Save Project
+Сохранить как...~~Save As...
+Создать готовую программу~~Compile Executable
+Экспорт в VB.NET-проект~~Export to VB.NET-Project
+Последние проекты~~Recent Projects
+Выход~~Exit
+Правка~~Edit
+Запустить программу~~Run
+Пошагово (внутрь)~~Step into
+Пошагово~~Step over
+Пошагово (наружу)~~Step out
+Инструменты~~Tools
+Перевести проект на~~Translate project into
+Настройки~~Settings
+Справка~~Help
+Обновления~~Updates
+Видео-уроки~~Video Lessons
+Видео-урок "Мой первый проект"~~Video lesson "My first project"
+Еще видео-уроки...~~More video lessons...
+Примеры проектов~~Project examples
+Примеры проектов базовые~~Base project examples
+Еще примеры проектов...~~More project examples...
+ToolStripContainer1~~ToolStripContainer1
+Выполнить действие~~Execute the action
+Выбранное действие принудительно выполнится, когда вы запустите проект из режима паузы~~Selected action will be executed after resuming the project
+Не выполнять действие~~Do not execute
+Выбранное действие принудительно не выполнится, когда вы запустите проект из режима паузы~~Selected action will not be executed after resuming the project
+В этом окне вы можете создавать действия любой сложности. Подробнее о Мастере сложных действий~~In this window you can set operations of any complexity. More about Complex Operations Wizard
+Редактировать~~Edit
+Выделение~~Select
+Выделить действие/объект~~Select action/object
+Выделить все действия~~Select all actions
+Убрать выделения~~Remove selection
+Развернуть внутри~~Expand inside
+Свернуть внутри~~Collapse inside
+Развернуть все~~Expand All
+Свернуть все~~Collapse all
+Контрольная точка~~Checkpoint
+Выше~~Move up
+Ниже~~Move down
+TabPage2~~TabPage2
+Создать событие~~Create event
+TabPage3~~TabPage3
+Создание действия~~Create action
+TabPage4~~TabPage4
+Создание условие~~Create condition
+TabPage5~~TabPage5
+Создание циклических повторений~~Create cyclic repetitions
+TabPage1~~TabPage1
+Сделать пояснительный комментарий~~Wtrite an explanatory comment
+Отмена~~Cancel
+Peremeschatel~~Peremeschatel
+Уровни~~Levels
+Преимущественное расположение объекта, относительно других объектов~~Preferential location of the object relative to other objects
+На передний план~~Bring to front
+На уровень выше~~One level up
+На уровень ниже~~One level down
+На задний план~~Send to back
+ToolStripButton1~~ToolStripButton1
+Закончить выполнение программы~~Stop the program
+Выполнять программу, прерываясь на каждом действии~~Run the program, stopping at each step
+Выполнять программу, прерываясь на каждом действии, не заходя во внутрь их~~Run the program, stopping at each step without stepping into them
+Выполнять программу, прерываясь на каждом выходе из блока действии~~Run the program, stopping at each action block end
+Шрифты~~Fonts
+Текст к рисунку~~Picture caption position
+Ориентация панелей~~Panels orientation 
+Form1~~Form1
+В этом окне вы можете создавать действия любой сложности. Подробнее о Мастере действий.~~In this window, you can create of any complexity. More about Complex Operations Wizard.
+Master~~Master
+Общие~~General
+Папка в проекте, куда будут сохраняться рисунки проекта~~Folder which will contain project images
+Папка с рисунками проекта по умолчанию~~Default folder with project images
+Папка, в которую по умолчанию сохраняются проекты~~Default project folder
+Папка с проектами~~Project Folder
+Стиль оформления среды разработки Алгоритм 2~~Algorithm 2 IDE skin
+На котором по умолчанию программируют в Алгоритме2~~At which by default are programmed in Algoritm2
+Язык программирования~~Programming Language
+Язык среды разработки Алгоритм2~~Algoritm2 IDE language
+Скин~~Skin
+Язык интерфейса~~Language
+Настройки проекта~~Project Settings
+Значок exe-файла вашей будущей программы~~Exe-file icon for your program
+Иконка программы~~Program's icon
+Окно загрузки появляется при запуске вашей программы~~Loading window appears when you start your program
+Показывать окно загрузки при запуске проекта~~Show loading window at the project start
+В папке рисунков проекта будут файлы с такими именами~~Project images folder will contain files named
+Имя для файлов рисунков по умолчанию~~Default image filename
+Папка в проекте, куда сохраняются рисунки проекта~~Folder which will contain project images
+Папка с рисунками этого проекта~~Current project's images folder
+Быстродействие~~Performance
+Отключить подсветку текста в кавычках~~Disable quoted text highlighting
+Отключить подсветку свойств и команд~~Disable properties and commands highlighting
+Отключить подсветку имен объектов~~Disable object name highlighting
+Отключить подсветку вспомогательных слов~~Disable quick fill highlighting
+Ускоряет создание действий благодаря отсутствию цветов~~Increases performance because of 
+Отключить подсветку дополнительных функций~~Disable additional functions highlighting
+Ускорит при вставке большого количества объектов~~Increases performance of large number of objects inserting
+Отключить возможность Отменить/Повторить~~Disable Undo/Redo functions
+Перед созданием действий не будет провряться верность~~Disable correctness verification before creation of action
+Отключить проверку написания команд и кода~~Disable checking of commands and code spelling
+Данное свойство или команда "*" создана, чтобы возвращать результат, поэтому если вы хотите воспользоваться результатом работы "*", то выберите его находять с мастере сложных действий.~~This property or command "*" is designed to return the result, so if you want to use the result of "*" select it in Complex Operations Wizard.
+Вызвать его можно нажав на такую кнопку ->~~It can be opened by clicking on this button ->
+Уведомление~~Notification
+Добро пожаловать в среду разработки Алгоритм 2!~~Welcome to Algorithm 2!
+Для знакомства с Алгоритмом, рекумендумем вам воспользоваться одним из следующих вариантов:~~For getting started with Algorithm we recommend you to choose one of the variants:
+
+Вы используете БЕСПЛАТНУЮ версию программы Алгоритм 2. ЕДИНСТВЕННОЕ её неудобство - ваши проекты будут компилироваться в отдельный exe-файл через специальный On-Line сервис, с необходимостью просмотра рекламы:~~You are using a FREE version of Algorithm 2. The ONLY its disadvantage is that your projects will be compiled into an exe-file via special on-line service with advertisement viewing.
+
+#################################################
+###                GetTrans 3                 ###
+#################################################
+Имя не может содержать~~The name cannot contain
+Имя не может состоять только из цифр~~The name cannot consist only of digits
+Стоп поиск~~Stop listening
+Стоп сервер~~Stop server
+Присоединиться~~Connect
+Запрос соединения~~Connction request
+Запрос отвергнут~~Request rejected
+#Отключиться
+Неверный IP~~Bad IP
+Пришли данные~~Data arrival
+Получено~~Received
+Файл получен~~File received
+Отмена получения файла~~Cancel file receive
+Отключился клиент~~Client disconnected
+Соединение разорвано~~Connection is broken off
+Прослушка~~Listen
+Статус соединения~~Status connection
+Клиентов~~Clients
+Новый клиент~~New client
+Отправлен серверу текст~~To server was sent text
+Отправлен серверу файл~~To server was sent file
+Отправлен клиентам текст~~To clients was sent text
+Отправлен клиентам, кроме *, текст~~To clients (but *) was sent text
+Отправлен клиенту *, текст~~To client * was sent text
+Отправлен клиентам файл~~To clients was sent file
+Отправлен клиентам, кроме *, файл~~To clients (but *) was sent file
+Отправлен клиенту *, файл~~To client * was sent file
+Соединяемся~~Connecting to server
+Слушать~~Listening
+Отправить текст~~Send text
+Отправить файл~~Send file
+Уже идет скачивание файла. Сначала дождитесь его завершения~~Already there is a file downloading. At first wait its completions
+Перенаправление~~Redirect
+Папка с временными файлами переполнена! Очистите её. Она откроется, когда вы нажмете Ok.~~Temp directory full!
+Поиск~~Search
+Найти~~Find
+Слово целиком~~Whole word
+#Везде~~Everywhere
+В текущем окне~~In current window
+В текущем объекте~~In current object
+В текущем событии~~In current event
+На текущем уровне и ниже~~At current level and more low
+Ключ шифрования должен обязательно присутствовать!~~Key must be exist!
+Ошибка при дешифрации. Либо неверный ключ шифрования, либо данные для дешифрации некорректны.~~Error descrypt key or data
+Кодировка * не поддерживается~~Encoding * is invalid
+Невозможно сфотографировать объект *, так как такого объекта не существует!~~Object * is nothing!
+Мягкая оптимизация (рекомендуется!)~~Recommended optimize
+Исключить~~Comment
+Задействовать~~Uncomment
+Исключить выделенные действия из работы программы~~Comment out the selected actions
+Задействовать выделенные действия в работу программы~~Uncomment the selected actions
+Благотворители~~Benefactors
+модераторы~~Moderators
+Имя пользователя windows содержит пробелы. Запустите компиляцию от пользователя с именем без пробелов, если хотите, чтобы у приложения была иконка.~~Username of Windows contains spaces. Please, run the compilation of a user named without spaces if you want to have the application icon will.
+Невозможно соедениться с сервером компиляции. Попробуйте позже. Если ошибка повторится, обратитесь, пожалуйста, на support@algoritm2.ru. Подробности ошибки:~~Unable to connect to the server of compilations. Please try again later. If the problem persists, please contact support@algorithm2.com. Error Details:
+Чтобы создать exe-файл нажмите меню Файл -> Создать готовую программу~~To make an exe-file please click File -> Compile Executable
+У вас последняя версия программы~~You have the latest version
+Ответы на все вопросы~~Answers to all questions
+Невозможно подключиться к * и проверить обновления программы~~Unable to connect * check program updates
+Для создания иконки из рисунка воспользуйтесь сайтом~~To create icons from images use the site
+Создаваемому exe-файлу не назначена иконка. Желаете выбрать иконку в разделе Настройки проекта?~~The exe-file has no icon. Would you like to select an icon in the Project settings?

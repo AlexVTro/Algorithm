@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Objects panel</title>
+    
+    <breadcumbs>
+      <text>
+        <link file="Environment.html">Development environment</link>
+        ->
+        <link file="Environment/ObjectsPart.html">Objects panel</link>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle >
+      <p>
+        <text>
+          <b>Objects panel</b> is designed for creating main functional elements of the program - 
+          <link file="Objects.html">Objects</link> (buttons, labels, windows).
+        </text>
+      </p>
+      <textAll>
+        <p>
+          <b>All available objects</b> locate on this panel (except for <link file="UsefulObjects.html">Useful Objects</link>). Learn more about each object in the section <link file="Objects.html">Objects</link>.
+        </p>
+      </textAll>
+    </descriptionarticle>
+   
+    <seealso>
+      <est/>
+      <link file="Environment.html">Development environment</link><br/>
+      <link file="Objects.html">Objects</link><br/>
+    </seealso>
+  </file>
+</xml>

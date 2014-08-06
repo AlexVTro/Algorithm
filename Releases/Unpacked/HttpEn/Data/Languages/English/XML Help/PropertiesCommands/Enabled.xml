@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Enabled</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        <text>Objects</text>
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text>
+          At any time you can <b>disable</b> some objects. The disabled object is displayed in the window, but the <b>user</b> can do nothing with it (e.g. he cannot press it, edit text, change size, etc.).
+        </text>
+      </p>
+      <textAll>
+        <p>
+          You can <b>enable</b> an object again by setting "Yes" for this property.
+        </p>
+        <codesnip>
+          <![CDATA[Window1.Button1.Enabled = Yes]]>
+        </codesnip>
+      </textAll>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      Other <propsLink/> of the object <objLink/>
+    </seealso>
+
+  </file>
+</xml>

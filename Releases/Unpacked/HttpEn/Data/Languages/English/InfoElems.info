@@ -1,0 +1,22 @@
+﻿forShowObj~~Choose the object that you want to apply the action to.
+forEditPr~~Enter here the value that previous value of the property will be replaced with. 
+ListView~~OBJECT SETTINGS SECTION. Here you can set up any object.
+TreeView~~PROGRAM'S TREE. Here all programs structure (including objects, events and actions) is contained.
+sobyts~~EVENTS SECTION. Here you can create an event. Event occures on user's interaction with the program. It can be captured and used for Actions execution.
+deistviya~~ACTIONS SECTION. Here you can create an action. Action is a comand that will be executed when some Event occurs. 
+ifs~~CONDITIONS SECTION. Here you can create conditional constructions. Conditional construction checks some condition and if it's true - some actions after it are executed.
+cycles~~LOOPS SECTIONS. Here you can create loops. All actions that placed inside the loop will be repeated until loop condition is true. 
+comm~~COMMENTS SECTION. Here you can write your comments. Comments are small records that are placed into the program's tree. You can write anything in them - it won't be executed.
+ifUsuallyPanel~~Create a simple action like: "If some value is equal to some other value then execute action".
+IfPodIfPanel~~Create a sub-condition, i.e. if condition is false then sub-condition is checked.
+IfElsePanel~~I this block you can add actions that will be executed if all other conditions are false.
+WhilePanel~~Specify a condition here and the loop will be executed while condition is true.
+forEditNodeText~~Here you can modify any program's element that is selected in the program's tree. If you need to create a new line - press Ctrl+Enter.
+Palka~~Via this operations wizard you can create an operation of any complexity.
+InfoPropsLabel~~Information about selected event or property.
+NodeEdit~~Button for selected program's tree item editing.
+NodeDel~~Button for selected program's tree items deleting. 
+NodeUp~~Button for moving selected program's tree items upwards.
+NodeDown~~Button for moving selected program's tree items downwards.
+NodeBreakpoint~~Select program's tree item in such way that program will be interrupted when selected tree node is reached. 
+Help~~Help for this item.

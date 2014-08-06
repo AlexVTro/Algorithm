@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Properties and Commands</title>
+    <breadcumbs>
+      <link file="Objects.html">
+        Объекты
+      </link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+    </breadcumbs>
+    <descriptionarticle only="true">
+     <text>
+	  <p>
+          <b>Properties</b> are settings of <link file="Objects.html">objects</link> (color, text, size). By changing them you can set the object in a way you need. Objects can also execute some actions which are called <b>commands</b> and relate to them.
+      </p>
+      <p>
+          You can change properties manually in <link file="Environment/PropertiesPart.html">Properties panel</link> or program their changes in <link file="Environment/ActionPart.html">Actions tab</link>.
+          In the second case in the <link file="Environment/EventPart.html">Events tab</link> the <link2 file="Events.html">event</link2> is created for the object  and under this event the given property is changed.
+          Examples of how to use properties and commands in Actions tab:</p>
+		  </text>
+        <codesnip>
+<![CDATA[Window1.Object1.Text = "New text1"
+Window1.Object2.Image = "C:\Pic.jpg"
+Window1.Object2.Focus]]>
+        </codesnip>
+      
+      <p>
+        <i>
+          <text>
+            </text>
+        </i>
+        <childlist type="property">
+        </childlist>
+      </p>
+    </descriptionarticle>
+    <seealso>
+      <est/>
+      <link2 file="Events.html">Events</link2> of the object <objLink/>
+    </seealso>
+  </file>
+</xml>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Anchor</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+      <text>
+        -> <propsLink/>
+      </text>
+      <text>
+        -> <propLink/>
+      </text>
+    </breadcumbs>
+
+    <descriptionarticle only="false">
+      <p>
+        <text><b>Anchor</b> helps to arrange objects in the window when <b>sizes of window are changed</b> by the user.</text>
+      </p>
+      <p>
+        <textAll>
+          You can anchor an objet to some edge of the window and when sizes are changed the object is following that edge. All available <b>anchors</b> are described in <link file="Programming/HelpWords.html">Quick fill words</link> ->
+		      <link file="Programming/HelpWords.html#Anchors">Anchors</link>.
+        </textAll>
+      </p>
+    </descriptionarticle>
+    <exceptions>
+    </exceptions>
+
+    <samples>
+      <sample lang="Algorithm2">
+        <sampletitle>Variants of how button anchors can be set:</sampletitle>
+        <samplecode>
+<![CDATA[Window1.Button1.Anchor = "On left"
+Window1.Button1.Anchor = Right_top_bottom
+Window1.Button1.Anchor = Window1.Button2.Anchor
+Window1.Button1.Anchor = Window1.Text1.Text]]>
+</samplecode>
+</sample>
+</samples>
+
+    <seealso>
+      <est/>
+      <link file="Objects.html">Objects</link><br/>
+      <link file="Programming/HelpWords.html">Quick fill words</link> ->
+      <link file="Programming/HelpWords.html#Anchors">Anchors</link><br/>
+      Other <propsLink/> of the object <objLink/><br/>
+    </seealso>
+
+  </file>
+</xml>

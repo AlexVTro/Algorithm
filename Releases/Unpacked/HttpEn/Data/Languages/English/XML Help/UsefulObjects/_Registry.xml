@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Registry</title>
+    <breadcumbs>
+      <link file="UsefulObjects.html">Useful Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>The object gives an access to the <b>registry</b> of the operational system <b>Windows</b>. You can edit it, create or delete keys and so on.</text>
+      </p>
+      <p>
+        <textAll>
+          <b>All settings</b> of OS Windows are stored in the registry, that's why you get both a great <b>potential</b> of programming and <b>risks</b>. 
+          Remember that the settings of OS can be <b>easily failed</b>.
+        </textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr>
+              <descrProperties/>
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+    
+    <seealso>
+      <est/>
+      Other <link file="UsefulObjects.html">Useful Objects
+    </link>
+    </seealso>
+    
+  </file>
+</xml>

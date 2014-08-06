@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xml>
+  <file>
+    <title>Window</title>
+    <breadcumbs>
+      <link file="Objects.html">Objects</link>
+      <text>
+        -> <objLink/>
+      </text>
+    </breadcumbs>
+    
+    <descriptionarticle only="false">
+      <p>
+        <text>This is the <b>main</b> object of the program. <b>Windows</b> contain <b>all</b> other objects.</text>
+      </p>
+      <p>
+        <textAll><b>Window</b> is a standard object of the program for which you can set <b>events</b> and <b>properties</b>.
+          It's destined for arrangement of all other objects on it. The number of windows in the program is
+          <b>unlimited</b>. To assign one of the window as the <b>main</b> one you should set the property <link2 file="Window/PropertiesCommands/Main window.html">Main window</link2>.</textAll>
+      </p>
+      <p>
+        <i>
+          <text>Features of the object:</text>
+        </i>
+        <childlist>
+          <child icon="0" fileMy="Events.html">
+            <name>Events</name>
+            <descr>
+              <descrEvents/>   
+            </descr>
+          </child>
+          <child icon="27" fileMy="PropertiesCommands.html">
+            <name>Properties and Commands</name>
+            <descr> 
+              
+              <descrProperties/>
+              
+            </descr>
+          </child>
+        </childlist>
+      </p>
+    </descriptionarticle>
+
+    <seealso>
+      <est/>
+      <link2 file="Window/PropertiesCommands/Main window.html">Main window</link2><br/>
+      <link file="UsefulObjects/_Object events.html">Object events</link><br/>
+      Other <link file="Objects.html">Objects</link><br/>
+      <link file="UsefulObjects.html">Useful objects</link><br/>
+    </seealso>
+    
+  </file>
+</xml>
