@@ -9,4 +9,4 @@
 
         Если вы хотите использовать виртуализацию файлов и реестра для обратной
              совместимости, удалите узел requestedExecutionLevel.
- --><requestedExecutionLevel level="asInvoker" uiAccess="false" /></requestedPrivileges></security></trustInfo>
+    --><requestedExecutionLevel level="asInvoker" uiAccess="false" /></requestedPrivileges></security></trustInfo>

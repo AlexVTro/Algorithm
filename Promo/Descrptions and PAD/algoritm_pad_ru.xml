@@ -8,11 +8,11 @@
   </MASTER_PAD_VERSION_INFO>
   <RoboSoft>
     <Company_UIN>CMP-009B1262C8F</Company_UIN>
-    <Company_Description>Do you want to easy create your own soft and apps? Algorithm2 is a free tool for game and software development. Automate your business processes by yourself!</Company_Description>
-    <Product_UIN>APP-009B12FC00</Product_UIN>
-    <Search_String>Algorithm</Search_String>
+    <Company_Description>Создание программ и игр самостоятельно. Без программирования. Быстро и мощно.</Company_Description>
+    <Product_UIN>APP-00E80AA3C5D</Product_UIN>
+    <Search_String>Алгоритм</Search_String>
     <Publish_on_CD>FALSE</Publish_on_CD>
-    <Backlink>http://algorithm2.com/links.html</Backlink>
+    <Backlink>http://algoritm2.ru/links.html</Backlink>
     <RSProductType></RSProductType>
     <Press_Release_Search_String></Press_Release_Search_String>
     <NewsFeed_Search_String></NewsFeed_Search_String>
@@ -33,15 +33,15 @@
     <Contact_Info>
       <Contact_First_Name>Alexander</Contact_First_Name>
       <Contact_Last_Name>Trofimov</Contact_Last_Name>
-      <Contact_Email>support@algorithm2.com</Contact_Email>
+      <Contact_Email>support@algoritm2.ru</Contact_Email>
       <Author_First_Name>Alexander</Author_First_Name>
       <Author_Last_Name>Trofimov</Author_Last_Name>
-      <Author_Email>support@algorithm2.com</Author_Email>
+      <Author_Email>support@algoritm2.ru</Author_Email>
     </Contact_Info>
     <Support_Info>
-      <Sales_Email>support@algorithm2.com</Sales_Email>
-      <Support_Email>support@algorithm2.com</Support_Email>
-      <General_Email>support@algorithm2.com</General_Email>
+      <Sales_Email>support@algoritm2.ru</Sales_Email>
+      <Support_Email>support@algoritm2.ru</Support_Email>
+      <General_Email>support@algoritm2.ru</General_Email>
       <Sales_Phone></Sales_Phone>
       <Support_Phone></Support_Phone>
       <General_Phone></General_Phone>
@@ -53,57 +53,23 @@
     <FacebookCompanyPage></FacebookCompanyPage>
     <CompanyStorePage>http://algorithm2.com/index.php#GetMore</CompanyStorePage>
   </Company_Info>
-  <NewsFeed>
-    <NewsFeed_FORM>Y</NewsFeed_FORM>
-    <NewsFeed_VERSION>1.0</NewsFeed_VERSION>
-    <NewsFeed_URL>http://Submit-Everywhere.com/extensions/NewsFeed.htm</NewsFeed_URL>
-    <NewsFeed_Type>RSS 0.90</NewsFeed_Type>
-    <NewsFeed_Language>English</NewsFeed_Language>
-    <NewsFeed_Purpose>News</NewsFeed_Purpose>
-    <NewsFeed_Author_Email>support@algorithm2.com</NewsFeed_Author_Email>
-    <NewsFeed_Author_First_Name>Alexander</NewsFeed_Author_First_Name>
-    <NewsFeed_Author_Last_Name>Trofimov</NewsFeed_Author_Last_Name>
-    <NewsFeed_DESCRIPTION>This PAD extension allows you to add your RSS and Atom news feeds info into your PAD file. This info can be used by RSS feed submission software or by feed directories themselves.</NewsFeed_DESCRIPTION>
-    <NewsFeed_Feed_URL></NewsFeed_Feed_URL>
-    <NewsFeed_Site_Name></NewsFeed_Site_Name>
-    <NewsFeed_Site_URL></NewsFeed_Site_URL>
-    <NewsFeed_Title></NewsFeed_Title>
-    <NewsFeed_Description_70></NewsFeed_Description_70>
-    <NewsFeed_Description_250></NewsFeed_Description_250>
-  </NewsFeed>
-  <Site>
-    <Site_FORM>Y</Site_FORM>
-    <Site_VERSION>1.0</Site_VERSION>
-    <Site_URL>http://Submit-Everywhere.com/extensions/Site.htm</Site_URL>
-    <Site_DESCRIPTION>This PAD extension allows you to add your site info into your PAD file. This info can be used by site submission software or by web directories themselves.</Site_DESCRIPTION>
-    <Site_Contact_Email>support@algorithm2.com</Site_Contact_Email>
-    <Site_Contact_First_Name>Alexander</Site_Contact_First_Name>
-    <Site_Contact_Last_Name>Trofimov</Site_Contact_Last_Name>
-    <Site_Site_Title>Algorithm</Site_Site_Title>
-    <Site_Site_URL>http://www.algorithm2.com/index.php/en</Site_Site_URL>
-    <Site_Description_100>How to create your own program? Free tool for software development at home!</Site_Description_100>
-    <Site_Description_250>Do you want to create your own program? Algorithm2 is a free tool for game and software development at home! With its help anybody can create a program without a knowledge of any programming language.</Site_Description_250>
-    <Site_Description_450>Algorithm is a program for software development. With it's help anyone can create programs without any programming knowledge. Up-to-date objects will let you to create your own multimedia players, browsers, text editors, it will provide you with tools for working with file-system, screen, system registry, keyboard and mouse. You can immediately compile your program into an exe-file and publish it in internet or start selling it and making money!</Site_Description_450>
-    <Site_Keywords>create your program, How to create your own program, algorithm 2, How to make your software, Programming, Free</Site_Keywords>
-  </Site>
-  <Press_Release>
-    <Press_Release>Algorithm2 is a fully visual RAD system but it is not a strict programming language. It aims to help anyone create programs without any programming knowledge. Algorithm2 is a development environment where the programmer does not (and may not) write a single line of code, but it programs by setting the behaviours of objects and controls. Algorithm2 has as really good RAD environment and a very good and complete help made by an online manual, video tutorials and reference guide. The language offers a rich set of tools, objects and controls with which the user may create a variety of applications, work with file-system, screen, system registry, keyboard and mouse or handle multimedia and graphics. Algorithm2 comes in two versions: a freeware version and a pay version. The difference between them is that the free version may create stand alone EXEs only through a online builder. The user uploads - for free - its application to Algorithm2 web site's and the online builder outputs a stand alone EXE after a 90 seconds delay. The pay version has a built in compiler. The resulting EXE has an overhead of about 950Kb. Algorithm2 needs Microsoft Framework 2.0 to work. Unfortunately the well built RAD interface responds quite slowly to the user's input and this, in my opinion, affects the fun of programming. As Algorithm2 does not offer the programmer any classic programming structure it may not be considered a typical programming language nor a Basic-like language, but due to the fact that Algorithm2 may export the sources to VisualBasic.NET projects - so that the program can be finished in a real programming language - I think it could be interesting to take a look at it.</Press_Release>
-    <Headline>How to create your own program? Get Algorithm 2 now!</Headline>
-    <Summary>Algorithm2 is a free tool for game and software development at home!</Summary>
-    <Keywords>create your program, How to create your own program, algorithm 2, How to make your software, Programming, Free, without programming, not a strict programming language, RAD environment, exe, exe-file, compiling, program development, soft develop</Keywords>
-    <Related_URL>http://basic.mindteq.com/index.php/component/content/article/40-reviews/index.php?option=com_content&amp;view=article&amp;id=154:algorithm2&amp;catid=40:reviews</Related_URL>
-    <Press_Release_Plain></Press_Release_Plain>
-  </Press_Release>
+  <PAD_Certification_Promotion>
+    <Apply_For_Certification>N</Apply_For_Certification>
+  </PAD_Certification_Promotion>
+  <Dynamic_PAD>
+    <Dynamic_Distributive>N</Dynamic_Distributive>
+  </Dynamic_PAD>
+  <ASBMPlannerID1stRound>11</ASBMPlannerID1stRound>
+  <Issues>4</Issues>
   <Affiliates>
     <Affiliates_FORM>Y</Affiliates_FORM>
     <Affiliates_FORM_VER>1.4</Affiliates_FORM_VER>
     <Affiliates_VERSION>1.4</Affiliates_VERSION>
     <Affiliates_URL>http://www.asp-shareware.org/pad/extensions/Affiliates.htm</Affiliates_URL>
-    <Affiliates_Regnow_Product_ID>24231-3</Affiliates_Regnow_Product_ID>
-    <Affiliates_Regnow_Maximum_Commission_Rate>50%</Affiliates_Regnow_Maximum_Commission_Rate>
     <Affiliates_Regnow_Vendor_ID>24231</Affiliates_Regnow_Vendor_ID>
-    <Affiliates_Regnow_Order_Page>https://shopper.mycommerce.com/checkout/cart/add/24231-3</Affiliates_Regnow_Order_Page>
-    <Affiliates_Information_Page>https://admin.mycommerce.com/app/cp/vendors/relationships/24231</Affiliates_Information_Page>
+    <Affiliates_Regnow_Product_ID>24231-3</Affiliates_Regnow_Product_ID>
+    <Affiliates_Regnow_Maximum_Commission_Rate>50</Affiliates_Regnow_Maximum_Commission_Rate>
+    <Affiliates_Information_Page></Affiliates_Information_Page>
     <Affiliates_Avangate_Order_Page></Affiliates_Avangate_Order_Page>
     <Affiliates_Avangate_Vendor_ID></Affiliates_Avangate_Vendor_ID>
     <Affiliates_Avangate_Product_ID></Affiliates_Avangate_Product_ID>
@@ -176,6 +142,7 @@
     <Affiliates_Regnet_Vendor_ID></Affiliates_Regnet_Vendor_ID>
     <Affiliates_Regnet_Product_ID></Affiliates_Regnet_Product_ID>
     <Affiliates_Regnet_Maximum_Commission_Rate></Affiliates_Regnet_Maximum_Commission_Rate>
+    <Affiliates_Regnow_Order_Page></Affiliates_Regnow_Order_Page>
     <Affiliates_Regsoft_Order_Page></Affiliates_Regsoft_Order_Page>
     <Affiliates_Regsoft_Vendor_ID></Affiliates_Regsoft_Vendor_ID>
     <Affiliates_Regsoft_Product_ID></Affiliates_Regsoft_Product_ID>
@@ -205,30 +172,41 @@
     <Affiliates_iPortis_Product_ID></Affiliates_iPortis_Product_ID>
     <Affiliates_iPortis_Maximum_Commission_Rate></Affiliates_iPortis_Maximum_Commission_Rate>
   </Affiliates>
-  <OnlineShops>
-    <OnlineShops_FORM>Y</OnlineShops_FORM>
-    <OnlineShops_VERSION>1.0</OnlineShops_VERSION>
-    <OnlineShops_URL>http://Submit-Everywhere.com/extensions/OnlineShops.htm</OnlineShops_URL>
-    <OnlineShops_DESCRIPTION>This PAD extension allows you to check these sites distribution agreements and decide wether you wish to sell your product through them</OnlineShops_DESCRIPTION>
-    <OnlineShops_PalmGear>off</OnlineShops_PalmGear>
-    <OnlineShops_PocketLand>off</OnlineShops_PocketLand>
-    <OnlineShops_PDAssi>off</OnlineShops_PDAssi>
-    <OnlineShops_PDATopSoft>off</OnlineShops_PDATopSoft>
-    <OnlineShops_PocketGear>off</OnlineShops_PocketGear>
-    <OnlineShops_Softahead>on</OnlineShops_Softahead>
-    <OnlineShops_Softonic>on</OnlineShops_Softonic>
-    <OnlineShops_SoftSearch>on</OnlineShops_SoftSearch>
-    <OnlineShops_Winowin>on</OnlineShops_Winowin>
-    <OnlineShops_Handango>on</OnlineShops_Handango>
-  </OnlineShops>
-  <PAD_Certification_Promotion>
-    <Apply_For_Certification>N</Apply_For_Certification>
-  </PAD_Certification_Promotion>
-  <Dynamic_PAD>
-    <Dynamic_Distributive>N</Dynamic_Distributive>
-  </Dynamic_PAD>
+  <NewsFeed>
+    <NewsFeed_FORM>Y</NewsFeed_FORM>
+    <NewsFeed_VERSION>1.0</NewsFeed_VERSION>
+    <NewsFeed_URL>http://Submit-Everywhere.com/extensions/NewsFeed.htm</NewsFeed_URL>
+    <NewsFeed_DESCRIPTION>This PAD extension allows you to add your RSS and Atom news feeds info into your PAD file. This info can be used by RSS feed submission software or by feed directories themselves.</NewsFeed_DESCRIPTION>
+    <NewsFeed_Type>RSS 0.90</NewsFeed_Type>
+    <NewsFeed_Language>English</NewsFeed_Language>
+    <NewsFeed_Purpose>News</NewsFeed_Purpose>
+    <NewsFeed_Author_Email>support@algoritm2.ru</NewsFeed_Author_Email>
+    <NewsFeed_Author_First_Name>Alexander</NewsFeed_Author_First_Name>
+    <NewsFeed_Author_Last_Name>Trofimov</NewsFeed_Author_Last_Name>
+    <NewsFeed_Feed_URL></NewsFeed_Feed_URL>
+    <NewsFeed_Site_Name></NewsFeed_Site_Name>
+    <NewsFeed_Site_URL></NewsFeed_Site_URL>
+    <NewsFeed_Title></NewsFeed_Title>
+    <NewsFeed_Description_70></NewsFeed_Description_70>
+    <NewsFeed_Description_250></NewsFeed_Description_250>
+  </NewsFeed>
+  <Site>
+    <Site_FORM>Y</Site_FORM>
+    <Site_VERSION>1.0</Site_VERSION>
+    <Site_URL>http://Submit-Everywhere.com/extensions/Site.htm</Site_URL>
+    <Site_DESCRIPTION>This PAD extension allows you to add your site info into your PAD file. This info can be used by site submission software or by web directories themselves.</Site_DESCRIPTION>
+    <Site_Contact_Email>support@algoritm2.ru</Site_Contact_Email>
+    <Site_Contact_First_Name>Alexander</Site_Contact_First_Name>
+    <Site_Contact_Last_Name>Trofimov</Site_Contact_Last_Name>
+    <Site_Site_Title>Создание программ для дома и безнеса</Site_Site_Title>
+    <Site_Site_URL>http://algoritm2.ru/index.php/ru</Site_Site_URL>
+    <Site_Description_100>Создание программ и игр самостоятельно. Без программирования. Быстро и мощно.</Site_Description_100>
+    <Site_Description_250>Создание программ и игр, без знаний языков программирования! Сделайте приложение и используйте его в своем бизнесе или выкладывайте в интернет и зарабатывайте на интеллекте.</Site_Description_250>
+    <Site_Description_450>Каждый может создать приложение или игру! Алгоритм 2 - программа для создания приложений, где не требутся знаний программирования - всё делается мышкой и основано обычной логике. Это просто! Но очень мощно. Сделайте приложение и используйте его в своем бизнесе или выложите в интернет и зарабатывайте на интеллекте.</Site_Description_450>
+    <Site_Keywords>как создать программу самому, как сделать программу, как написать программу, автоматизация бизнеса самостоятельно, алгоритм 2, создание программ, написание программ, конструктор программ, как сделать</Site_Keywords>
+  </Site>
   <Program_Info>
-    <Program_Name>Algorithm</Program_Name>
+    <Program_Name>Алгоритм</Program_Name>
     <Program_Version>2.7</Program_Version>
     <Program_Release_Month>08</Program_Release_Month>
     <Program_Release_Day>07</Program_Release_Day>
@@ -238,16 +216,16 @@
     <Program_Release_Status>Major Update</Program_Release_Status>
     <Program_Install_Support>Install and Uninstall</Program_Install_Support>
     <Program_OS_Support>WinXP,WinVista,WinVista x64,Win7 x32,Win7 x64,Win2000,WinOther,Windows2000,Windows2003,WinServer,Windows Vista Ultimate,Windows Vista Ultimate x64,Windows Media Center Edition 2005,Windows Vista Starter,Windows Vista Home Basic,Windows Vista Home Premium,Windows Vista Business,Windows Vista Enterprise,Windows Vista Home Basic x64,Windows Vista Home Premium x64,Windows Vista Business x64,Windows Vista Enterprise x64,Windows 8,Windows Server 2012</Program_OS_Support>
-    <Program_Language>English,Russian</Program_Language>
-    <Program_Change_Info>Microsoft Excel and Access integration
-Answers to all questions section
-Optimization for Windows 8</Program_Change_Info>
-    <Program_System_Requirements>No</Program_System_Requirements>
+    <Program_Language>Russian</Program_Language>
+    <Program_Change_Info>Microsoft Excel и Access интеграция
+Раздел Ответы на все вопросы
+Оптимизация под Windows 8</Program_Change_Info>
+    <Program_System_Requirements>Нет</Program_System_Requirements>
     <Program_Category_Class>Development::Other</Program_Category_Class>
     <File_Info>
-      <File_Size_Bytes>8940544</File_Size_Bytes>
-      <File_Size_K>8731</File_Size_K>
-      <File_Size_MB>8.53</File_Size_MB>
+      <File_Size_Bytes>7564288</File_Size_Bytes>
+      <File_Size_K>7387</File_Size_K>
+      <File_Size_MB>7.21</File_Size_MB>
       <Filename_Versioned></Filename_Versioned>
       <Filename_Previous></Filename_Previous>
       <Filename_Generic></Filename_Generic>
@@ -263,9 +241,9 @@ Optimization for Windows 8</Program_Change_Info>
       <Expire_Year></Expire_Year>
     </Expire_Info>
     <Program_Categories>Hobbies,Development,Editors,Creation,Education,Tools,other,Программирование,Мультимедиа,Мультимедия</Program_Categories>
-    <Limitations>No limitations</Limitations>
-    <Program_Cost_Other_Code></Program_Cost_Other_Code>
-    <Program_Cost_Other></Program_Cost_Other>
+    <Limitations>Нет</Limitations>
+    <Program_Cost_Other>0</Program_Cost_Other>
+    <Program_Cost_Other_Code>RUB</Program_Cost_Other_Code>
     <Awards></Awards>
     <Program_Specific_Category></Program_Specific_Category>
     <Includes_JAVA_VM></Includes_JAVA_VM>
@@ -276,15 +254,15 @@ Optimization for Windows 8</Program_Change_Info>
   </Program_Info>
   <Web_Info>
     <Application_URLs>
-      <Application_Info_URL>http://algorithm2.com/index.php/en</Application_Info_URL>
-      <Application_Order_URL>http://algorithm2.com/index.php/en/#GetMore</Application_Order_URL>
-      <Application_Screenshot_URL>http://algorithm2.com/images/product/ScreenEng.jpg</Application_Screenshot_URL>
-      <Application_Icon_URL>http://algorithm2.com/images/favicon.gif</Application_Icon_URL>
-      <Application_XML_File_URL>http://algorithm2.com/download/algoritm_pad_eng.xml</Application_XML_File_URL>
+      <Application_Info_URL>http://algoritm2.ru/index.php/ru</Application_Info_URL>
+      <Application_Order_URL>http://algoritm2.ru/index.php/ru/#GetMore</Application_Order_URL>
+      <Application_Screenshot_URL>http://algoritm2.ru/images/product/ScreenFullRu.jpg</Application_Screenshot_URL>
+      <Application_Icon_URL>http://algoritm2.ru/images/favicon.gif</Application_Icon_URL>
+      <Application_XML_File_URL>http://algoritm2.ru/download/algoritm_pad_ru.xml</Application_XML_File_URL>
     </Application_URLs>
     <Download_URLs>
-      <Primary_Download_URL>http://algorithm2.com/download/Algoritm2EngLast.exe</Primary_Download_URL>
-      <Secondary_Download_URL>http://download.web-kss.ru/Algoritm2EngLast.exe</Secondary_Download_URL>
+      <Primary_Download_URL>http://algoritm2.ru/download/Algoritm2RuLast.exe</Primary_Download_URL>
+      <Secondary_Download_URL>http://download.web-kss.ru/Algoritm2RuLast.exe</Secondary_Download_URL>
       <Additional_Download_URL_1></Additional_Download_URL_1>
       <Additional_Download_URL_2></Additional_Download_URL_2>
     </Download_URLs>
@@ -389,9 +367,7 @@ electronic mail at: support@algorithm2.com.
 
    Thanks for usage ALGORITHM, Arctic Technology.</EULA>
   </Permissions>
-  <ASBMPlannerID1stRound>3</ASBMPlannerID1stRound>
-  <Issues>11</Issues>
-  <ASBMPlannerID2ndRound>4</ASBMPlannerID2ndRound>
+  <ASBMPlannerID2ndRound>12</ASBMPlannerID2ndRound>
   <AppStore>
     <AppStore_AppID></AppStore_AppID>
     <AppStore_Category></AppStore_Category>
@@ -426,7 +402,7 @@ You can immediately compile your project into an exe-file and publish it in inte
       <Char_Desc_450>Каждый может создать приложение или игру! Алгоритм 2 - программа для создания приложений, где не требутся знаний программирования - всё делается мышкой и основано обычной логике. Это просто! Но очень мощно. Сделайте приложение и используйте его в своем бизнесе или выложите в интернет и зарабатывайте на интеллекте.</Char_Desc_450>
       <Char_Desc_2000>Быстрая разработка приложений самостоятельно без программирования. 
 
-Как научиться программировать? Создание приложений с помощью Алгоритма, не требует никаких знаний программирования. Теперь каждый может создать программу или игру! Всё делается мышкой и основано на обычной логике, присущей каждому человеку. Сделать программу или игру - это просто! Современные объекты позволят вам создавать свои плееры, браузеры, текстовый редакторы, работать с файлами и папками, экраном компьютера, реестром, управлять мышкой, клавиатурой, вашим сайтом и многое другое. Со всеми компонентами легко и просто работать. Можно создать программу в exe-файл и сразу же выложить в интернет и начать продавать, зарабатывая на своем уме! А можно использовать в своем бизнесе.
+Как научиться программировать? Как автоматизировать свой бизнес самому? Создание приложений с помощью Алгоритма, не требует никаких знаний программирования. Теперь каждый может создать программу или игру! Всё делается мышкой и основано на обычной логике, присущей каждому человеку. Сделать программу или игру - это просто! Современные объекты позволят вам создавать свои плееры, браузеры, текстовый редакторы, работать с файлами и папками, экраном компьютера, реестром, управлять мышкой, клавиатурой, вашим сайтом и многое другое. Со всеми компонентами легко и просто работать. Можно создать программу в exe-файл и сразу же выложить в интернет и начать продавать. А можно использовать в своем бизнесе.
 
 Программу для создания программ Алгоритм 2 вы можете скачать бесплатно. Алгоритм 2 имеет русский интерфейс и полную техническую поддержку на официальном сайте и форуме!</Char_Desc_2000>
     </Russian>

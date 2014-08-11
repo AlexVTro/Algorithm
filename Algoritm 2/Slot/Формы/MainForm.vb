@@ -4272,17 +4272,17 @@ cycle:  For i = 0 To nodes.Length - 1
 #If Full Or DebugFull Or Http Or DebugHttp Then
         If PerfomanceProgress() Then
 
-            If String.IsNullOrEmpty(proj.pIcon) Then
-                Dim result = MsgBox(transInfc("Создаваемому exe-файлу не назначена иконка. Желаете выбрать иконку в разделе Настройки проекта?") _
-                       , MsgBoxStyle.Information + MsgBoxStyle.YesNo)
-
-                If result = MsgBoxResult.Yes Then
-                    ProjectSettings_Click(Nothing, Nothing)
-                    Exit Sub
-                End If
-            End If
-
             If IsHttpCompil = False Then
+                If String.IsNullOrEmpty(proj.pIcon) Then
+                    Dim result = MsgBox(transInfc("Создаваемому exe-файлу не назначена иконка. Желаете выбрать иконку в разделе Настройки проекта?") _
+                           , MsgBoxStyle.Information + MsgBoxStyle.YesNo)
+
+                    If result = MsgBoxResult.Yes Then
+                        ProjectSettings_Click(Nothing, Nothing)
+                        Exit Sub
+                    End If
+                End If
+
                 ' Компилирования файлов в ту папку, которую укажут
                 'SaveFileDialog2.InitialDirectory = proj.pPath
                 SaveFileDialog2.FileName = proj.pFileName.Split(".")(0)

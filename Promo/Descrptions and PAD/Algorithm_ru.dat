@@ -1,0 +1,2247 @@
+[General]
+RoboSoft/Product_UIN=APP-00E80AA3C5D
+RoboSoft/Company_UIN=CMP-009B1262C8F
+MASTER_PAD_VERSION_INFO/MASTER_PAD_EDITOR_URL=http://robosoft.rudenko.com
+Program_Descriptions/Russian/Keywords=%D0%BA%D0%B0%D0%BA %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83 %D1%81%D0%B0%D0%BC%D0%BE%D0%BC%D1%83, %D0%BA%D0%B0%D0%BA %D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83, %D0%BA%D0%B0%D0%BA %D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83, %D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F %D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0 %D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE, %D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2, %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC, %D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC, %D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC, %D0%BA%D0%B0%D0%BA %D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C %D0%B8%D0%B3%D1%80%D1%83, %D0%BA%D0%B0%D0%BA %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C %D0%B8%D0%B3%D1%80%D1%83, %D0%B1%D0%B5%D0%B7 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F
+Program_Descriptions/Russian/Char_Desc_45=%D0%A0%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC %D0%B8 %D0%B8%D0%B3%D1%80 %D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE
+Program_Descriptions/Russian/Char_Desc_80=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC %D0%B8 %D0%B8%D0%B3%D1%80 %D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE. %D0%91%D0%B5%D0%B7 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F. %D0%91%D1%8B%D1%81%D1%82%D1%80%D0%BE %D0%B8 %D0%BC%D0%BE%D1%89%D0%BD%D0%BE.
+Program_Descriptions/Russian/Char_Desc_250=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC %D0%B8 %D0%B8%D0%B3%D1%80, %D0%B1%D0%B5%D0%B7 %D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9 %D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F! %D0%A1%D0%B4%D0%B5%D0%BB%D0%B0%D0%B9%D1%82%D0%B5 %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5 %D0%B8 %D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5 %D0%B5%D0%B3%D0%BE %D0%B2 %D1%81%D0%B2%D0%BE%D0%B5%D0%BC %D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B5 %D0%B8%D0%BB%D0%B8 %D0%B2%D1%8B%D0%BA%D0%BB%D0%B0%D0%B4%D1%8B%D0%B2%D0%B0%D0%B9%D1%82%D0%B5 %D0%B2 %D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82 %D0%B8 %D0%B7%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D1%82%D1%8B%D0%B2%D0%B0%D0%B9%D1%82%D0%B5 %D0%BD%D0%B0 %D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B5.
+Program_Descriptions/Russian/Char_Desc_450=%D0%9A%D0%B0%D0%B6%D0%B4%D1%8B%D0%B9 %D0%BC%D0%BE%D0%B6%D0%B5%D1%82 %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5 %D0%B8%D0%BB%D0%B8 %D0%B8%D0%B3%D1%80%D1%83! %D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2 - %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0 %D0%B4%D0%BB%D1%8F %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9, %D0%B3%D0%B4%D0%B5 %D0%BD%D0%B5 %D1%82%D1%80%D0%B5%D0%B1%D1%83%D1%82%D1%81%D1%8F %D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F - %D0%B2%D1%81%D1%91 %D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D1%82%D1%81%D1%8F %D0%BC%D1%8B%D1%88%D0%BA%D0%BE%D0%B9 %D0%B8 %D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE %D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D0%BE%D0%B9 %D0%BB%D0%BE%D0%B3%D0%B8%D0%BA%D0%B5. %D0%AD%D1%82%D0%BE %D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE! %D0%9D%D0%BE %D0%BE%D1%87%D0%B5%D0%BD%D1%8C %D0%BC%D0%BE%D1%89%D0%BD%D0%BE. %D0%A1%D0%B4%D0%B5%D0%BB%D0%B0%D0%B9%D1%82%D0%B5 %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5 %D0%B8 %D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5 %D0%B5%D0%B3%D0%BE %D0%B2 %D1%81%D0%B2%D0%BE%D0%B5%D0%BC %D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B5 %D0%B8%D0%BB%D0%B8 %D0%B2%D1%8B%D0%BB%D0%BE%D0%B6%D0%B8%D1%82%D0%B5 %D0%B2 %D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82 %D0%B8 %D0%B7%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D1%82%D1%8B%D0%B2%D0%B0%D0%B9%D1%82%D0%B5 %D0%BD%D0%B0 %D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B5.
+Program_Descriptions/Russian/Char_Desc_2000=%D0%91%D1%8B%D1%81%D1%82%D1%80%D0%B0%D1%8F %D1%80%D0%B0%D0%B7%D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%BA%D0%B0 %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9 %D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE %D0%B1%D0%B5%D0%B7 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F. %0D%0A%0D%0A%D0%9A%D0%B0%D0%BA %D0%BD%D0%B0%D1%83%D1%87%D0%B8%D1%82%D1%8C%D1%81%D1%8F %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C? %D0%9A%D0%B0%D0%BA %D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D1%82%D1%8C %D1%81%D0%B2%D0%BE%D0%B9 %D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81 %D1%81%D0%B0%D0%BC%D0%BE%D0%BC%D1%83? %D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9 %D1%81 %D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E %D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D0%B0, %D0%BD%D0%B5 %D1%82%D1%80%D0%B5%D0%B1%D1%83%D0%B5%D1%82 %D0%BD%D0%B8%D0%BA%D0%B0%D0%BA%D0%B8%D1%85 %D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F. %D0%A2%D0%B5%D0%BF%D0%B5%D1%80%D1%8C %D0%BA%D0%B0%D0%B6%D0%B4%D1%8B%D0%B9 %D0%BC%D0%BE%D0%B6%D0%B5%D1%82 %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83 %D0%B8%D0%BB%D0%B8 %D0%B8%D0%B3%D1%80%D1%83! %D0%92%D1%81%D1%91 %D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D1%82%D1%81%D1%8F %D0%BC%D1%8B%D1%88%D0%BA%D0%BE%D0%B9 %D0%B8 %D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE %D0%BD%D0%B0 %D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D0%BE%D0%B9 %D0%BB%D0%BE%D0%B3%D0%B8%D0%BA%D0%B5, %D0%BF%D1%80%D0%B8%D1%81%D1%83%D1%89%D0%B5%D0%B9 %D0%BA%D0%B0%D0%B6%D0%B4%D0%BE%D0%BC%D1%83 %D1%87%D0%B5%D0%BB%D0%BE%D0%B2%D0%B5%D0%BA%D1%83. %D0%A1%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83 %D0%B8%D0%BB%D0%B8 %D0%B8%D0%B3%D1%80%D1%83 - %D1%8D%D1%82%D0%BE %D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE! %D0%A1%D0%BE%D0%B2%D1%80%D0%B5%D0%BC%D0%B5%D0%BD%D0%BD%D1%8B%D0%B5 %D0%BE%D0%B1%D1%8A%D0%B5%D0%BA%D1%82%D1%8B %D0%BF%D0%BE%D0%B7%D0%B2%D0%BE%D0%BB%D1%8F%D1%82 %D0%B2%D0%B0%D0%BC %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C %D1%81%D0%B2%D0%BE%D0%B8 %D0%BF%D0%BB%D0%B5%D0%B5%D1%80%D1%8B, %D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D1%8B, %D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%B2%D1%8B%D0%B9 %D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D1%8B, %D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%82%D1%8C %D1%81 %D1%84%D0%B0%D0%B9%D0%BB%D0%B0%D0%BC%D0%B8 %D0%B8 %D0%BF%D0%B0%D0%BF%D0%BA%D0%B0%D0%BC%D0%B8, %D1%8D%D0%BA%D1%80%D0%B0%D0%BD%D0%BE%D0%BC %D0%BA%D0%BE%D0%BC%D0%BF%D1%8C%D1%8E%D1%82%D0%B5%D1%80%D0%B0, %D1%80%D0%B5%D0%B5%D1%81%D1%82%D1%80%D0%BE%D0%BC, %D1%83%D0%BF%D1%80%D0%B0%D0%B2%D0%BB%D1%8F%D1%82%D1%8C %D0%BC%D1%8B%D1%88%D0%BA%D0%BE%D0%B9, %D0%BA%D0%BB%D0%B0%D0%B2%D0%B8%D0%B0%D1%82%D1%83%D1%80%D0%BE%D0%B9, %D0%B2%D0%B0%D1%88%D0%B8%D0%BC %D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%BC %D0%B8 %D0%BC%D0%BD%D0%BE%D0%B3%D0%BE%D0%B5 %D0%B4%D1%80%D1%83%D0%B3%D0%BE%D0%B5. %D0%A1%D0%BE %D0%B2%D1%81%D0%B5%D0%BC%D0%B8 %D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%B0%D0%BC%D0%B8 %D0%BB%D0%B5%D0%B3%D0%BA%D0%BE %D0%B8 %D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE %D1%80%D0%B0%D0%B1%D0%BE%D1%82%D0%B0%D1%82%D1%8C. %D0%9C%D0%BE%D0%B6%D0%BD%D0%BE %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83 %D0%B2 exe-%D1%84%D0%B0%D0%B9%D0%BB %D0%B8 %D1%81%D1%80%D0%B0%D0%B7%D1%83 %D0%B6%D0%B5 %D0%B2%D1%8B%D0%BB%D0%BE%D0%B6%D0%B8%D1%82%D1%8C %D0%B2 %D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82 %D0%B8 %D0%BD%D0%B0%D1%87%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D1%8C. %D0%90 %D0%BC%D0%BE%D0%B6%D0%BD%D0%BE %D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D0%BE%D0%B2%D0%B0%D1%82%D1%8C %D0%B2 %D1%81%D0%B2%D0%BE%D0%B5%D0%BC %D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B5.%0D%0A%0D%0A%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83 %D0%B4%D0%BB%D1%8F %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC %D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2 %D0%B2%D1%8B %D0%BC%D0%BE%D0%B6%D0%B5%D1%82%D0%B5 %D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D1%8C %D0%B1%D0%B5%D1%81%D0%BF%D0%BB%D0%B0%D1%82%D0%BD%D0%BE. %D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2 %D0%B8%D0%BC%D0%B5%D0%B5%D1%82 %D1%80%D1%83%D1%81%D1%81%D0%BA%D0%B8%D0%B9 %D0%B8%D0%BD%D1%82%D0%B5%D1%80%D1%84%D0%B5%D0%B9%D1%81 %D0%B8 %D0%BF%D0%BE%D0%BB%D0%BD%D1%83%D1%8E %D1%82%D0%B5%D1%85%D0%BD%D0%B8%D1%87%D0%B5%D1%81%D0%BA%D1%83%D1%8E %D0%BF%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%BA%D1%83 %D0%BD%D0%B0 %D0%BE%D1%84%D0%B8%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D0%BE%D0%BC %D1%81%D0%B0%D0%B9%D1%82%D0%B5 %D0%B8 %D1%84%D0%BE%D1%80%D1%83%D0%BC%D0%B5!
+Delphi/FORM=Y
+Delphi/D1=FALSE
+Delphi/D2=FALSE
+Delphi/D3=FALSE
+Delphi/D4=FALSE
+Delphi/D5=FALSE
+Delphi/D6=FALSE
+Delphi/D7=FALSE
+Delphi/BCB1=FALSE
+Delphi/BCB3=FALSE
+Delphi/BCB4=FALSE
+Delphi/BCB5=FALSE
+Delphi/BCB6=FALSE
+Delphi/K1=FALSE
+Delphi/K2=FALSE
+Delphi/K3=FALSE
+Delphi/Type=Freeware
+Delphi/Source=Included
+Delphi/File_Location=Uploaded or will be soon
+PAD_Certification_Promotion/Apply_For_Certification=N
+Dynamic_PAD/Dynamic_Distributive=N
+RoboSoft/ASBMInfo=SubmissionCount=7%0D%0ASubmissionDate=41861%0D%0AProductVersion=2.7%0D%0ALAvailable=745%0D%0ALSelected=9%0D%0ALProcessed=9%0D%0ALSubmitted=3%0D%0A
+Program_Descriptions/Czech/Keywords=jak vytvo%C5%99it program sami, jak podat %C5%BE%C3%A1dost, jak napsat program, automatizace byznys samostatn%C4%9B, algoritmus 2, aplikace, psan%C3%AD aplikace, programy, jak ud%C4%9Blat hru jako, vytvo%C5%99it hru bez programov%C3%A1n%C3%AD
+Program_Descriptions/Czech/Char_Desc_45=Rozvojov%C3%A9 programy a hry se - Algoritmus 2
+Program_Descriptions/Czech/Char_Desc_80=Tvorba program%C5%AF a her na vlastn%C3%AD p%C4%9Bst. Bez programov%C3%A1n%C3%AD.
+Program_Descriptions/Czech/Char_Desc_250=Tvorba program%C5%AF a her bez znalosti programov%C3%A1n%C3%AD! Podat %C5%BE%C3%A1dost a pou%C5%BE%C3%ADt ji ve sv%C3%A9m podnik%C3%A1n%C3%AD, nebo d%C3%A1t na internetu a vyd%C4%9Bl%C3%A1vat na inteligenci.
+Program_Descriptions/Czech/Char_Desc_450=Ka%C5%BEd%C3%BD si m%C5%AF%C5%BEe vytvo%C5%99it aplikaci nebo hru! Algoritmus 2 - software pro tvorbu aplikac%C3%AD, kter%C3%A9 mus%C3%AD b%C3%BDt pod%C3%A1v%C3%A1ny %C5%BE%C3%A1dn%C3%A9 znalosti programov%C3%A1n%C3%AD - v%C5%A1e je provedeno s my%C5%A1%C3%AD, a je zalo%C5%BEen konven%C4%8Dn%C3%AD logiku. Je to snadn%C3%A9! Ale je to velmi siln%C3%BD. Podat %C5%BE%C3%A1dost a pou%C5%BE%C3%ADt ji ve sv%C3%A9m podnik%C3%A1n%C3%AD nebo zve%C5%99ejn%C4%9Bny na internetu a vyd%C4%9Blat pen%C3%ADze na inteligenci.
+Program_Descriptions/Czech/Char_Desc_2000=Rychl%C3%BD v%C3%BDvoj aplikac%C3%AD na vlastn%C3%AD p%C4%9Bst bez jak%C3%A9hokoli programov%C3%A1n%C3%AD. %0D%0A%0D%0AJak se nau%C4%8Dit programovat? Vytv%C3%A1%C5%99en%C3%AD aplikac%C3%AD s algoritmy, kter%C3%A9 nevy%C5%BEaduj%C3%AD znalost programov%C3%A1n%C3%AD. Nyn%C3%AD si ka%C5%BEd%C3%BD m%C5%AF%C5%BEe vytvo%C5%99it program nebo hra! V%C5%A1e je provedeno s my%C5%A1%C3%AD, a je zalo%C5%BEen na obvykl%C3%A9 logice, kter%C3%A1 je vlastn%C3%AD ka%C5%BEd%C3%A9 lidsk%C3%A9 bytosti. Chcete-li program nebo hru - je to snadn%C3%A9! Modern%C3%AD vybaven%C3%AD v%C3%A1m umo%C5%BEn%C3%AD vytvo%C5%99it si vlastn%C3%AD hr%C3%A1%C4%8De, prohl%C3%AD%C5%BEe%C4%8De, textov%C3%A9 editory, pr%C3%A1ce se soubory a slo%C5%BEkami, na obrazovce po%C4%8D%C3%ADta%C4%8De, registru, ovl%C3%A1d%C3%A1n%C3%AD my%C5%A1i, kl%C3%A1vesnice, va%C5%A1e webov%C3%A9 str%C3%A1nky a dal%C5%A1%C3%AD. Se v%C5%A1emi komponenty snadn%C3%A9 a jednoduch%C3%A9 ovl%C3%A1d%C3%A1n%C3%AD. M%C5%AF%C5%BEete vytvo%C5%99it program exe-soubor a okam%C5%BEit%C4%9B na internetu a za%C4%8D%C3%ADt prod%C3%A1vat, vyd%C4%9Bl%C3%A1vat na mysli! A m%C5%AF%C5%BEete vyu%C5%BE%C3%ADt ve va%C5%A1em podnik%C3%A1n%C3%AD. %0D%0A%0D%0AProgram na vytvo%C5%99en%C3%AD programov%C3%A9ho algoritmu 2, m%C5%AF%C5%BEete si st%C3%A1hnout zdarma.
+Program_Descriptions/Ukrainian/Char_Desc_2000=%D0%A8%D0%B2%D0%B8%D0%B4%D0%BA%D0%B0 %D1%80%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BA%D0%B0 %D0%B4%D0%BE%D0%B4%D0%B0%D1%82%D0%BA%D1%96%D0%B2 %D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D1%96%D0%B9%D0%BD%D0%BE %D0%B1%D0%B5%D0%B7 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F. %0D%0A%0D%0A%D0%AF%D0%BA %D0%BD%D0%B0%D0%B2%D1%87%D0%B8%D1%82%D0%B8%D1%81%D1%8F %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D1%82%D0%B8? %D0%A1%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F %D0%B4%D0%BE%D0%B4%D0%B0%D1%82%D0%BA%D1%96%D0%B2 %D0%B7%D0%B0 %D0%B4%D0%BE%D0%BF%D0%BE%D0%BC%D0%BE%D0%B3%D0%BE%D1%8E %D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC%D1%83, %D0%BD%D0%B5 %D0%B2%D0%B8%D0%BC%D0%B0%D0%B3%D0%B0%D1%94 %D0%BD%D1%96%D1%8F%D0%BA%D0%B8%D1%85 %D0%B7%D0%BD%D0%B0%D0%BD%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F. %D0%A2%D0%B5%D0%BF%D0%B5%D1%80 %D0%BA%D0%BE%D0%B6%D0%B5%D0%BD %D0%BC%D0%BE%D0%B6%D0%B5 %D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D1%82%D0%B8 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83 %D0%B0%D0%B1%D0%BE %D0%B3%D1%80%D1%83! %D0%92%D1%81%D0%B5 %D1%80%D0%BE%D0%B1%D0%B8%D1%82%D1%8C%D1%81%D1%8F %D0%BC%D0%B8%D1%88%D0%BA%D0%BE%D1%8E %D1%96 %D0%B7%D0%B0%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE %D0%BD%D0%B0 %D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D1%96%D0%B9 %D0%BB%D0%BE%D0%B3%D1%96%D1%86%D1%96, %D0%BF%D1%80%D0%B8%D1%82%D0%B0%D0%BC%D0%B0%D0%BD%D0%BD%D0%BE%D1%8E %D0%BA%D0%BE%D0%B6%D0%BD%D1%96%D0%B9 %D0%BB%D1%8E%D0%B4%D0%B8%D0%BD%D1%96. %D0%97%D1%80%D0%BE%D0%B1%D0%B8%D1%82%D0%B8 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83 %D0%B0%D0%B1%D0%BE %D0%B3%D1%80%D1%83 - %D1%86%D0%B5 %D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE! %D0%A1%D1%83%D1%87%D0%B0%D1%81%D0%BD%D1%96 %D0%BE%D0%B1'%D1%94%D0%BA%D1%82%D0%B8 %D0%B4%D0%BE%D0%B7%D0%B2%D0%BE%D0%BB%D1%8F%D1%82%D1%8C %D0%B2%D0%B0%D0%BC %D1%81%D1%82%D0%B2%D0%BE%D1%80%D1%8E%D0%B2%D0%B0%D1%82%D0%B8 %D1%81%D0%B2%D0%BE%D1%97 %D0%BF%D0%BB%D0%B5%D1%94%D1%80%D0%B8, %D0%B1%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80%D0%B8, %D1%82%D0%B5%D0%BA%D1%81%D1%82%D0%BE%D0%B2%D0%B8%D0%B9 %D1%80%D0%B5%D0%B4%D0%B0%D0%BA%D1%82%D0%BE%D1%80%D0%B8, %D0%BF%D1%80%D0%B0%D1%86%D1%8E%D0%B2%D0%B0%D1%82%D0%B8 %D0%B7 %D1%84%D0%B0%D0%B9%D0%BB%D0%B0%D0%BC%D0%B8 %D1%96 %D0%BF%D0%B0%D0%BF%D0%BA%D0%B0%D0%BC%D0%B8, %D0%B5%D0%BA%D1%80%D0%B0%D0%BD%D0%BE%D0%BC %D0%BA%D0%BE%D0%BC%D0%BF'%D1%8E%D1%82%D0%B5%D1%80%D0%B0, %D1%80%D0%B5%D1%94%D1%81%D1%82%D1%80%D0%BE%D0%BC, %D0%BA%D0%B5%D1%80%D1%83%D0%B2%D0%B0%D1%82%D0%B8 %D0%BC%D0%B8%D1%88%D0%BA%D0%BE%D1%8E, %D0%BA%D0%BB%D0%B0%D0%B2%D1%96%D0%B0%D1%82%D1%83%D1%80%D0%BE%D1%8E, %D0%B2%D0%B0%D1%88%D0%B8%D0%BC %D1%81%D0%B0%D0%B9%D1%82%D0%BE%D0%BC %D1%96 %D0%B1%D0%B0%D0%B3%D0%B0%D1%82%D0%BE %D1%96%D0%BD%D1%88%D0%BE%D0%B3%D0%BE. %D0%97 %D1%83%D1%81%D1%96%D0%BC%D0%B0 %D0%BA%D0%BE%D0%BC%D0%BF%D0%BE%D0%BD%D0%B5%D0%BD%D1%82%D0%B0%D0%BC%D0%B8 %D0%BB%D0%B5%D0%B3%D0%BA%D0%BE %D1%96 %D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE %D0%BF%D1%80%D0%B0%D1%86%D1%8E%D0%B2%D0%B0%D1%82%D0%B8. %D0%9C%D0%BE%D0%B6%D0%BD%D0%B0 %D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D1%82%D0%B8 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83 %D0%B2 exe-%D1%84%D0%B0%D0%B9%D0%BB %D1%96 %D0%B2%D1%96%D0%B4%D1%80%D0%B0%D0%B7%D1%83 %D0%B6 %D0%B2%D0%B8%D0%BA%D0%BB%D0%B0%D1%81%D1%82%D0%B8 %D0%B2 %D1%96%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82 %D1%96 %D0%BF%D0%BE%D1%87%D0%B0%D1%82%D0%B8 %D0%BF%D1%80%D0%BE%D0%B4%D0%B0%D0%B2%D0%B0%D1%82%D0%B8, %D0%B7%D0%B0%D1%80%D0%BE%D0%B1%D0%BB%D1%8F%D1%8E%D1%87%D0%B8 %D0%BD%D0%B0 %D1%81%D0%B2%D0%BE%D1%94%D0%BC%D1%83 %D1%80%D0%BE%D0%B7%D1%83%D0%BC%D1%96! %D0%90 %D0%BC%D0%BE%D0%B6%D0%BD%D0%B0 %D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B2%D0%B0%D1%82%D0%B8 %D1%83 %D1%81%D0%B2%D0%BE%D1%94%D0%BC%D1%83 %D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%D1%96. %D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83 %D0%B4%D0%BB%D1%8F %D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC %D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2 %D0%B2%D0%B8 %D0%BC%D0%BE%D0%B6%D0%B5%D1%82%D0%B5 %D1%81%D0%BA%D0%B0%D1%87%D0%B0%D1%82%D0%B8 %D0%B1%D0%B5%D0%B7%D0%BA%D0%BE%D1%88%D1%82%D0%BE%D0%B2%D0%BD%D0%BE. %0D%0A%0D%0A%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2 %D0%BC%D0%B0%D1%94 %D0%BF%D0%BE%D0%B2%D0%BD%D1%83 %D1%82%D0%B5%D1%85%D0%BD%D1%96%D1%87%D0%BD%D1%83 %D0%BF%D1%96%D0%B4%D1%82%D1%80%D0%B8%D0%BC%D0%BA%D1%83 %D0%BD%D0%B0 %D0%BE%D1%84%D1%96%D1%86%D1%96%D0%B9%D0%BD%D0%BE%D0%BC%D1%83 %D1%81%D0%B0%D0%B9%D1%82%D1%96 %D1%82%D0%B0 %D1%84%D0%BE%D1%80%D1%83%D0%BC%D1%96!
+Program_Descriptions/Ukrainian/Char_Desc_450=%D0%9A%D0%BE%D0%B6%D0%B5%D0%BD %D0%BC%D0%BE%D0%B6%D0%B5 %D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D1%82%D0%B8 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83 %D0%B0%D0%B1%D0%BE %D0%B3%D1%80%D1%83! %D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2 - %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%B0 %D0%B4%D0%BB%D1%8F %D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F %D0%B4%D0%BE%D0%B4%D0%B0%D1%82%D0%BA%D1%96%D0%B2, %D0%B4%D0%B5 %D0%BD%D0%B5 %D1%82%D1%80%D0%B5%D0%B1%D1%83%D1%82%D1%81%D1%8F %D0%B7%D0%BD%D0%B0%D0%BD%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F - %D0%B2%D1%81%D0%B5 %D1%80%D0%BE%D0%B1%D0%B8%D1%82%D1%8C%D1%81%D1%8F %D0%BC%D0%B8%D1%88%D0%BA%D0%BE%D1%8E %D1%96 %D0%B7%D0%B0%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE %D0%B7%D0%B2%D0%B8%D1%87%D0%B0%D0%B9%D0%BD%D1%96%D0%B9 %D0%BB%D0%BE%D0%B3%D1%96%D1%86%D1%96. %D0%A6%D0%B5 %D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE! %D0%90%D0%BB%D0%B5 %D0%B4%D1%83%D0%B6%D0%B5 %D0%BF%D0%BE%D1%82%D1%83%D0%B6%D0%BD%D0%BE. %D0%97%D1%80%D0%BE%D0%B1%D1%96%D1%82%D1%8C %D0%B4%D0%BE%D0%B4%D0%B0%D1%82%D0%BE%D0%BA %D1%96 %D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5 %D0%B9%D0%BE%D0%B3%D0%BE %D0%B2 %D1%81%D0%B2%D0%BE%D1%94%D0%BC%D1%83 %D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%D1%96 %D0%B0%D0%B1%D0%BE %D0%B2%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D1%96%D1%82%D1%8C %D0%B2 %D1%96%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82 %D1%96 %D0%B7%D0%B0%D1%80%D0%BE%D0%B1%D0%BB%D1%8F%D0%B9%D1%82%D0%B5 %D0%BD%D0%B0 %D1%96%D0%BD%D1%82%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%96.
+Program_Descriptions/Ukrainian/Char_Desc_250=%D0%A1%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC %D1%82%D0%B0 %D1%96%D0%B3%D0%BE%D1%80, %D0%B1%D0%B5%D0%B7 %D0%B7%D0%BD%D0%B0%D0%BD%D1%8C %D0%BC%D0%BE%D0%B2 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F! %D0%97%D1%80%D0%BE%D0%B1%D1%96%D1%82%D1%8C %D0%B4%D0%BE%D0%B4%D0%B0%D1%82%D0%BE%D0%BA %D1%96 %D0%B2%D0%B8%D0%BA%D0%BE%D1%80%D0%B8%D1%81%D1%82%D0%BE%D0%B2%D1%83%D0%B9%D1%82%D0%B5 %D0%B9%D0%BE%D0%B3%D0%BE %D0%B2 %D1%81%D0%B2%D0%BE%D1%94%D0%BC%D1%83 %D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%D1%96 %D0%B0%D0%B1%D0%BE %D0%B2%D0%B8%D0%BA%D0%BB%D0%B0%D0%B4%D0%B0%D0%B9%D1%82%D0%B5 %D0%B2 %D1%96%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82 %D1%96 %D0%B7%D0%B0%D1%80%D0%BE%D0%B1%D0%BB%D1%8F%D0%B9%D1%82%D0%B5 %D0%BD%D0%B0 %D1%96%D0%BD%D1%82%D0%B5%D0%BB%D0%B5%D0%BA%D1%82%D1%96.
+Program_Descriptions/Ukrainian/Char_Desc_80=%D0%A1%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC %D1%82%D0%B0 %D1%96%D0%B3%D0%BE%D1%80 %D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D1%96%D0%B9%D0%BD%D0%BE. %D0%91%D0%B5%D0%B7 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F. %D0%A8%D0%B2%D0%B8%D0%B4%D0%BA%D0%BE %D1%96 %D0%BF%D0%BE%D1%82%D1%83%D0%B6%D0%BD%D0%BE.
+Program_Descriptions/Ukrainian/Char_Desc_45=%D0%A0%D0%BE%D0%B7%D1%80%D0%BE%D0%B1%D0%BA%D0%B0 %D0%B4%D0%BE%D0%B4%D0%B0%D1%82%D0%BA%D1%96%D0%B2 %D1%82%D0%B0 %D1%96%D0%B3%D0%BE%D1%80 %D1%81%D0%B0%D0%BC%D0%BE%D0%BC%D1%83
+Program_Descriptions/Ukrainian/Keywords=%D1%8F%D0%BA %D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D1%82%D0%B8 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83 %D1%81%D0%B0%D0%BC%D0%BE%D0%BC%D1%83, %D1%8F%D0%BA %D0%B7%D1%80%D0%BE%D0%B1%D0%B8%D1%82%D0%B8 %D0%B4%D0%BE%D0%B4%D0%B0%D1%82%D0%BE%D0%BA, %D1%8F%D0%BA %D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D0%B8 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83, %D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D1%96%D1%8F %D0%B1%D1%96%D0%B7%D0%BD%D0%B5%D1%81%D1%83 %D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D1%96%D0%B9%D0%BD%D0%BE, %D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2, %D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B5%D0%BD%D0%BD%D1%8F %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC, %D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%BD%D1%8F %D0%B4%D0%BE%D0%B4%D0%B0%D1%82%D0%BE%D0%BA, %D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC, %D1%8F%D0%BA %D0%B7%D1%80%D0%BE%D0%B1%D0%B8%D1%82%D0%B8 %D0%B3%D1%80%D1%83, %D1%8F%D0%BA %D1%81%D1%82%D0%B2%D0%BE%D1%80%D0%B8%D1%82%D0%B8 %D0%B3%D1%80%D1%83, %D0%B1%D0%B5%D0%B7 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D1%83%D0%B2%D0%B0%D0%BD%D0%BD%D1%8F
+Program_Descriptions/Polish/Keywords=jak stworzy%C4%87, program samodzielnie, jak z%C5%82o%C5%BCy%C4%87 wniosek, jak napisa%C4%87 program, automatyzacj%C4%99 dzia%C5%82alno%C5%9Bci, niezale%C5%BCnie algorytm 2, tworzenie program%C3%B3w, pisania aplikacji, program%C3%B3w markowe, jak zrobi%C4%87 gr%C4%99, aby stworzy%C4%87, gr%C4%99 bez programowania
+Program_Descriptions/Polish/Char_Desc_45=Programy rozwoju i gry na w%C5%82asn%C4%85 r%C4%99k%C4%99
+Program_Descriptions/Polish/Char_Desc_80=Tworzenie program%C3%B3w i gier na w%C5%82asn%C4%85 r%C4%99k%C4%99. Bez programowania. Szybko i mocno.
+Program_Descriptions/Polish/Char_Desc_250=Tworzenie program%C3%B3w i gier, bez znajomo%C5%9Bci programowania! Z%C5%82%C3%B3%C5%BC wniosek i u%C5%BCywa%C4%87 go w celach biznesowych lub umie%C5%9Bci%C4%87 w Internecie i zarabia%C4%87 na inteligencj%C4%99.
+Program_Descriptions/Polish/Char_Desc_450=Ka%C5%BCdy mo%C5%BCe stworzy%C4%87 aplikacj%C4%99 lub gr%C4%99! Algorytm 2 - oprogramowanie do tworzenia aplikacji, kt%C3%B3re musz%C4%85 by%C4%87 podawane bez znajomo%C5%9Bci programowania - wszystko odbywa si%C4%99 za pomoc%C4%85 myszki, a opiera si%C4%99 konwencjonaln%C4%85 logik%C4%99. To proste! Ale to jest bardzo silny. Z%C5%82%C3%B3%C5%BC wniosek i u%C5%BCywa%C4%87 go w swojej dzia%C5%82alno%C5%9Bci lub umieszczone w Internecie i zarabia%C4%87 na inteligencj%C4%99.
+Program_Descriptions/Polish/Char_Desc_2000=Szybkiego tworzenia aplikacji na w%C5%82asn%C4%85 r%C4%99k%C4%99, bez konieczno%C5%9Bci programowania. %0D%0A%0D%0AJak nauczy%C4%87 si%C4%99 programowa%C4%87? Budowanie aplikacji z algorytm%C3%B3w, kt%C3%B3re nie wymagaj%C4%85 %C5%BCadnej wiedzy programistycznej. Teraz ka%C5%BCdy mo%C5%BCe stworzy%C4%87 program lub gr%C4%99! Wszystko odbywa si%C4%99 za pomoc%C4%85 myszki, a opiera si%C4%99 na zwyk%C5%82ej logiki nieod%C5%82%C4%85czne w ka%C5%BCdym cz%C5%82owieku. Aby program lub gr%C4%99 - to proste! Nowoczesne urz%C4%85dzenia pozwalaj%C4%85 na tworzenie w%C5%82asnych graczy, przegl%C4%85darek, edytor%C3%B3w tekstu, pracy z plikami i folderami, na ekranie komputera, w rejestrze, kontrola myszy, klawiatury, witryny i wi%C4%99cej. Ze wszystkie elementy %C5%82atwe i proste w obs%C5%82udze. Mo%C5%BCesz stworzy%C4%87 plik exe programu i natychmiast umie%C5%9Bci%C4%87 w Internecie i zacz%C4%85%C4%87 sprzedawa%C4%87, zarabia%C4%87 na g%C5%82owie! I mo%C5%BCna go u%C5%BCywa%C4%87 w firmie. %0D%0A%0D%0AProgram do tworzenia algorytmu program 2, mo%C5%BCna pobra%C4%87 za darmo. Algorytm 2 ma pe%C5%82ne wsparcie techniczne na oficjalnej stronie i forum!
+Program_Descriptions/Romanian/Char_Desc_2000=Nu dori%C8%9Bi s%C4%83 crea%C8%9Bi propriile aplica%C8%9Bii? Cum de a automatiza procesele mele de afaceri de unul singur? Algorithm2 este un instrument gratuit pentru joc %C8%99i de dezvoltare de software la domiciliu. Cu ajutorul oricine sa poate crea un program f%C4%83r%C4%83 o cunoa%C8%99tere de orice limbaj de programare. P%C3%A2n%C4%83 la data de componente va permite s%C4%83 v%C4%83 crea%C8%9Bi propriile multimedia playere, browsere, editoare de text, v%C4%83 va oferi cu instrumente pentru lucrul cu fi%C8%99iere de sistem, ecran, registru de sistem, tastatura %C8%99i mouse-ul. %0D%0A%0D%0A%C8%98i este foarte u%C8%99or de a lucra cu toate aceste caracteristici. Pute%C8%9Bi compila imediat proiectul dumneavoastr%C4%83 %C3%AEntr-un fi%C8%99ier exe %C8%99i o public%C4%83 %C3%AEn internet sau inceperea comercializarii acestuia %C8%99i de a face bani pe cont propriu intelect. Sau l foloseasc%C4%83 %C3%AEn afacerea dumneavoastr%C4%83. Pute%C8%9Bi desc%C4%83rca %C8%99i folosi o aplica%C8%9Bie de dezvoltare de software Algorithm 2 pentru gratuit.
+Program_Descriptions/Romanian/Keywords=crea aplica%C8%9Biile dvs., cum de a crea propriul moale, algoritmul 2, modul de a face software-ul, programare, gratuit, f%C4%83r%C4%83 programare, limbaj de programare, nu de codificare, mediu RAD, exe, exe-file, compilarea, dezvoltare de programe, automatizare d
+Program_Descriptions/Romanian/Char_Desc_45=Instrument gratuit pentru software-ul %C8%99i dezv
+Program_Descriptions/Romanian/Char_Desc_80=Cum de a crea propriile aplicatii? Instrument gratuit de dezvoltare de software
+Program_Descriptions/Romanian/Char_Desc_250=Nu dori%C8%9Bi s%C4%83 crea%C8%9Bi propriile aplica%C8%9Bii? Algorithm2 este un instrument gratuit pentru joc %C8%99i de dezvoltare de software la domiciliu. Automatizarea proceselor de afaceri de unul singur! Algorithm2 ajuta cineva pentru a crea aplica%C8%9Bii cu nici o codific
+Program_Descriptions/Romanian/Char_Desc_450=Instrument gratuit pentru joc %C8%99i de dezvoltare de software de unul singur. Acesta are ca scop de a ajuta pe cineva crea programe fara cunostinte de programare. Nu de codificare, nu limbaje de programare necesare pentru a crea aplica%C8%9Bii cu algoritmul. Ea are un foarte bun %C8%99i complet de ajutor realizate de un manual on-line, tutoriale video %C8%99i ghid. Rezultat aplica%C8%9Bii au o mul%C8%9Bime de capabilit%C4%83%C8%9Bi.
+Program_Descriptions/Danish/Keywords=oprette dine apps, hvordan du opretter din egen bl%C3%B8de, algoritme 2, hvordan du g%C3%B8r din software, Programmering, gratis, uden programmering, programmeringssprog, ingen kodning, exe, exe-fil, kompilering, program udvikling, erhvervslivet automatisering
+Program_Descriptions/Danish/Char_Desc_45=Gratis v%C3%A6rkt%C3%B8j til software og spiludvikling!
+Program_Descriptions/Danish/Char_Desc_80=S%C3%A5dan opretter du dine egne programmer? Gratis v%C3%A6rkt%C3%B8j til softwareudvikling der
+Program_Descriptions/Danish/Char_Desc_250=%C3%98nsker du at oprette dine egne apps? Algorithm2 er et gratis v%C3%A6rkt%C3%B8j til spil og software udvikling derhjemme. Automatiser dine forretningsprocesser ved dig selv! Algorithm2 hj%C3%A6lper nogen til at skabe apps uden kodning. Distribuere og s%C3%A6lge din bl%C3%B8d
+Program_Descriptions/Danish/Char_Desc_450=Gratis v%C3%A6rkt%C3%B8j til spil og software udvikling af dig selv. Det sigter mod at hj%C3%A6lpe nogen lave programmer uden kendskab til programmering. Ingen kodning, ingen programmeringssprog er n%C3%B8dvendige for at skabe applikationer med algoritme. Det har en meget god og komplet hj%C3%A6lp fra en on-line manual, video tutorials og vejledning. Resultatregnearkene apps har en masse muligheder.
+Program_Descriptions/Danish/Char_Desc_2000=%C3%98nsker du at oprette dine egne apps? Hvordan til at automatisere mine forretningsprocesser ved mig selv? %0D%0A%0D%0AAlgorithm2 er et gratis v%C3%A6rkt%C3%B8j til spil og software udvikling derhjemme. Med dens hj%C3%A6lp nogen kan lave et program uden et kendskab til alle programmeringssprog. Up-to-date komponenter vil lade dig at oprette din egen multimedia-afspillere, browsere teksteditorer, vil det give dig v%C3%A6rkt%C3%B8jer til at arbejde med fil-systemet, sk%C3%A6rm, systemets registreringsdatabase, tastatur og mus. Og det er meget nemt at arbejde med alle disse funktioner. Du kan straks kompilere dit projekt ind i en exe-fil og offentligg%C3%B8r den i internettet eller begynde at s%C3%A6lge det og tjene penge p%C3%A5 din egen intellekt. %0D%0A%0D%0AEller bruge det i din virksomhed. Du kan downloade og bruge en ans%C3%B8gning om udvikling af software algoritme 2 gratis.
+Program_Descriptions/French/Keywords=business automation, create your apps, how to create your own soft, algorithm 2, how to make your software, Programming, Free, without programming, programming language, no coding, exe, exe-file, compiling, program development
+Program_Descriptions/French/Char_Desc_45=Outil gratuit pour les logiciels et le d%C3%A9velo
+Program_Descriptions/French/Char_Desc_80=Comment faire pour cr%C3%A9er vos propres applications? Outil gratuit pour le d%C3%A9velop
+Program_Descriptions/French/Char_Desc_250=Voulez-vous cr%C3%A9er vos propres applications? Algorithm2 est un outil gratuit pour le jeu et le d%C3%A9veloppement de logiciels %C3%A0 la maison. Automatisez vos processus d'affaires par vous-m%C3%AAme! Algorithm aide %C3%A0 quiconque de cr%C3%A9er des applications sans codage
+Program_Descriptions/French/Char_Desc_450=Outil gratuit pour le jeu et le d%C3%A9veloppement de logiciels par vous-m%C3%AAme. Il vise %C3%A0 aider quiconque de cr%C3%A9er des programmes sans aucune connaissance en programmation. Pas de code, pas de langages de programmation n%C3%A9cessaires pour cr%C3%A9er des applications avec l'algorithme. Il a un tr%C3%A8s bon et complet de l'aide faite par un manuel en ligne, des didacticiels vid%C3%A9o et le guide de r%C3%A9f%C3%A9rence. Les applications de r%C3%A9sultats ont beaucoup de capacit%C3%A9s.
+Program_Descriptions/French/Char_Desc_2000=Voulez-vous cr%C3%A9er vos propres applications? Comment faire pour automatiser mon processus d'affaires par moi-m%C3%AAme? %0D%0A%0D%0AAlgorithm2 est un outil gratuit pour le jeu et le d%C3%A9veloppement de logiciels %C3%A0 la maison. Avec son aide tout le monde peut cr%C3%A9er un programme sans conna%C3%AEtre aucun langage de programmation. Up-to-date de composants vous permettra de cr%C3%A9er vos propres joueurs, les navigateurs, les %C3%A9diteurs de texte multim%C3%A9dia, il vous fournira des outils pour travailler avec les fichiers syst%C3%A8me, l'%C3%A9cran, le registre syst%C3%A8me, du clavier et de la souris. Et il est tr%C3%A8s facile de travailler avec toutes ces caract%C3%A9ristiques. Vous pouvez imm%C3%A9diatement compiler votre projet dans un fichier ex%C3%A9cutable et de le publier sur internet ou commencer %C3%A0 vendre et gagner de l'argent sur %E2%80%8B%E2%80%8Bvotre propre intelligence. Ou utilisez dans votre entreprise. %0D%0A%0D%0AVous pouvez t%C3%A9l%C3%A9charger et utiliser une application pour l'algorithme de d%C3%A9veloppement de logiciels 2 gratuitement.
+Program_Descriptions/Arabic/Char_Desc_2000=%D9%87%D9%84 %D8%AA%D8%B1%D9%8A%D8%AF %D8%A5%D9%86%D8%B4%D8%A7%D8%A1 %D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA %D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9 %D8%A8%D9%83%D8%9F %D9%83%D9%8A%D9%81 %D9%84%D8%A3%D8%AA%D9%85%D8%AA%D8%A9 %D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA %D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84 %D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9 %D8%A8%D9%8A %D9%88%D8%AD%D8%AF%D9%8A%D8%9F Algorithm2 %D9%87%D9%88 %D8%A3%D8%AF%D8%A7%D8%A9 %D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9 %D9%84%D8%B9%D8%A8%D8%A9 %D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1 %D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D8%A7%D8%AA %D9%81%D9%8A %D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84. %D8%A8%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9 %D8%A3%D9%8A %D8%B4%D8%AE%D8%B5 %D9%8A%D9%85%D9%83%D9%86 %D9%84%D9%87%D8%A7 %D8%A5%D9%86%D8%B4%D8%A7%D8%A1 %D8%A8%D8%B1%D9%86%D8%A7%D9%85%D8%AC %D8%AF%D9%88%D9%86 %D9%85%D8%B9%D8%B1%D9%81%D8%A9 %D8%A3%D9%8A %D9%84%D8%BA%D8%A9 %D8%A8%D8%B1%D9%85%D8%AC%D8%A9. %D9%85%D8%A7 %D9%8A%D8%B5%D9%84 %D8%A5%D9%84%D9%89 %D8%AA%D8%A7%D8%B1%D9%8A%D8%AE %D9%85%D9%83%D9%88%D9%86%D8%A7%D8%AA %D8%B3%D9%88%D9%81 %D8%AA%D8%AA%D9%8A%D8%AD %D9%84%D9%83 %D9%84%D8%AE%D9%84%D9%82 %D8%A8%D9%86%D9%81%D8%B3%D9%83 %D8%A7%D9%84%D9%88%D8%B3%D8%A7%D8%A6%D8%B7 %D8%A7%D9%84%D9%85%D8%AA%D8%B9%D8%AF%D8%AF%D8%A9 %D8%A7%D9%84%D9%84%D8%A7%D8%B9%D8%A8%D9%8A%D9%86%D8%8C %D8%A7%D9%84%D9%85%D8%AA%D8%B5%D9%81%D8%AD%D8%A7%D8%AA%D8%8C %D8%A8%D8%B1%D8%A7%D9%85%D8%AC %D8%AA%D8%AD%D8%B1%D9%8A%D8%B1 %D8%A7%D9%84%D9%86%D8%B5%D9%88%D8%B5 %D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9 %D8%A8%D9%83%D8%8C %D9%88%D8%B3%D9%88%D9%81 %D8%AA%D9%88%D9%81%D8%B1 %D9%84%D9%83 %D9%85%D8%B9 %D8%A3%D8%AF%D9%88%D8%A7%D8%AA %D9%84%D9%84%D8%B9%D9%85%D9%84 %D9%85%D8%B9 %D9%86%D8%B8%D8%A7%D9%85 %D8%A7%D9%84%D9%85%D9%84%D9%81%D8%A7%D8%AA%D8%8C %D8%B4%D8%A7%D8%B4%D8%A9%D8%8C %D9%86%D8%B8%D8%A7%D9%85 %D8%A7%D9%84%D8%AA%D8%B3%D8%AC%D9%8A%D9%84%D8%8C %D9%84%D9%88%D8%AD%D8%A9 %D8%A7%D9%84%D9%85%D9%81%D8%A7%D8%AA%D9%8A%D8%AD %D9%88%D8%A7%D9%84%D9%81%D8%A3%D8%B1%D8%A9. %D9%88%D8%A3%D9%86%D9%87 %D9%85%D9%86 %D8%A7%D9%84%D8%B3%D9%87%D9%84 %D8%AC%D8%AF%D8%A7 %D9%84%D9%84%D8%B9%D9%85%D9%84 %D9%85%D8%B9 %D9%83%D9%84 %D9%87%D8%B0%D9%87 %D8%A7%D9%84%D9%85%D9%8A%D8%B2%D8%A7%D8%AA. %D9%8A%D9%85%D9%83%D9%86%D9%83 %D8%AA%D8%AC%D9%85%D9%8A%D8%B9 %D9%81%D9%88%D8%B1%D8%A7 %D9%85%D8%B4%D8%B1%D9%88%D8%B9%D9%83 %D8%A7%D9%84%D9%89 %D9%85%D9%84%D9%81 EXE %D9%88%D9%86%D8%B4%D8%B1%D9%87%D8%A7 %D9%81%D9%8A %D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA %D8%A3%D9%88 %D8%A7%D8%B6%D8%A7%D9%81%D8%A9 %D8%A8%D9%8A%D8%B9%D9%87%D8%A7 %D9%88%D9%83%D8%B3%D8%A8 %D8%A7%D9%84%D9%85%D8%A7%D9%84 %D8%B9%D9%84%D9%89 %D8%A7%D9%84%D9%81%D9%83%D8%B1 %D8%A7%D9%84%D8%AE%D8%A7%D8%B5 %D8%A8%D9%83. %D8%A3%D9%88 %D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85%D9%87%D8%A7 %D9%81%D9%8A %D8%B9%D9%85%D9%84%D9%83. %D9%8A%D9%85%D9%83%D9%86%D9%83 %D8%AA%D8%AD%D9%85%D9%8A%D9%84 %D9%88%D8%A7%D8%B3%D8%AA%D8%AE%D8%AF%D8%A7%D9%85 %D8%AA%D8%B7%D8%A8%D9%8A%D9%82 %D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A9 %D9%84%D8%AA%D8%B7%D9%88%D9%8A%D8%B1 %D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D8%A7%D8%AA 2 %D9%85%D8%AC%D8%A7%D9%86%D8%A7.
+Program_Descriptions/Arabic/Keywords=%D8%AE%D9%84%D9%82 %D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA, %D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9 %D8%A8%D9%83%D8%8C %D9%88%D9%83%D9%8A%D9%81%D9%8A%D8%A9 %D8%A5%D9%86%D8%B4%D8%A7%D8%A1 ,%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9 %D8%A8%D9%83 %D9%84%D9%8A%D9%86%D8%A9%D8%8C, %D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A9 2%D8%8C, %D9%88%D9%83%D9%8A%D9%81%D9%8A%D8%A9 %D8%AC%D8%B9%D9%84, %D8%A8%D8%B1%D8%A7%D9%85%D8%AC%D9%83%D8%8C %D8%A8%D8%B1%D9%85%D8%AC%D8%A9%D8%8C, %D8%A7%D9%84%D8%AD%D8%B1%D8%A9%D8%8C %D8%AF%D9%88,%D9%86 %D8%A7%D9%84%D8%AD%D8%A7%D8%AC%D8%A9 %D8%A5%D9%84%D9%89, %D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9 %D9%88%D9%84%D8%BA%D8%A9 %D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9%D8%8C %D9%84%D8%A7 ,%D8%A7%D9%84%D8%AA%D8%B1%D9%85%D9%8A%D8%B2%D8%8C %D8%A8%D9%8A%D8%A6%D8%A9 RAD%D8%8C %D8%A5%D9%83%D8%B3%D8%8C %D8%A5%D9%83%D8%B3 ,%D9%85%D9%84%D9%81 %D9%88%D8%AA%D8%B5%D9%86%D9%8A%D9%81 %D9%88%D9%88%D8%B6%D8%B9 %D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%85%D8%AC %D9%88%D8%A3%D8%AA%D9%85%D8%AA%D8%A9, %D8%A7%D9%84%D8%A3%D8%B9%D9%85%D8%A7%D9%84
+Program_Descriptions/Arabic/Char_Desc_45=%D8%A3%D8%AF%D8%A7%D8%A9 %D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9 %D9%84%D8%A8%D8%B1%D8%A7%D9%85%D8%AC %D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1 %D8%A7%D9%84%D9%84%D8%B9%D8%A8%D8%A9!
+Program_Descriptions/Arabic/Char_Desc_80=%D9%83%D9%8A%D9%81%D9%8A%D8%A9 %D8%A5%D9%86%D8%B4%D8%A7%D8%A1 %D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA %D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9 %D8%A8%D9%83%D8%9F %D8%A3%D8%AF%D8%A7%D8%A9 %D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9 %D9%84%D8%AA%D8%B7%D9%88%D9%8A%D8%B1 %D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D8%A7%D8%AA %D9%81%D9%8A %D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84!
+Program_Descriptions/Arabic/Char_Desc_250=%D9%87%D9%84 %D8%AA%D8%B1%D9%8A%D8%AF %D8%A5%D9%86%D8%B4%D8%A7%D8%A1 %D8%A7%D9%84%D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA %D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9 %D8%A8%D9%83%D8%9F Algorithm2 %D9%87%D9%88 %D8%A3%D8%AF%D8%A7%D8%A9 %D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9 %D9%84%D8%B9%D8%A8%D8%A9 %D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1 %D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D8%A7%D8%AA %D9%81%D9%8A %D8%A7%D9%84%D9%85%D9%86%D8%B2%D9%84. %D8%A3%D8%AA%D9%85%D8%AA%D8%A9 %D8%A7%D9%84%D8%B9%D9%85%D9%84%D9%8A%D8%A7%D8%AA %D8%A7%D9%84%D8%AA%D8%AC%D8%A7%D8%B1%D9%8A%D8%A9 %D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9 %D8%A8%D9%83 %D8%B9%D9%86 %D8%B7%D8%B1%D9%8A%D9%82 %D9%86%D9%81%D8%B3%D9%83! Algorithm2 %D9%8A%D8%B3%D8%A7%D8%B9%D8%AF %D8%A3%D9%8A %D8%B4%D8%AE%D8%B5 %D9%84%D8%A5%D9%86%D8%B4%D8%A7%D8%A1 %D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA %D9%85%D8%B9 %D8%A3%D9%8A %D8%AA%D8%B1%D9%85%D9%8A%D8%B2. %D8%AA%D9%88%D8%B2%D9%8A%D8%B9 %D9%88%D8%A8%D9%8A%D8%B9 %D9%84%D9%8A%D9%86%D8%A9 %D8%A7%D9%84%D8%AE%D8%A7%D8%B5 %D8%A8%D9%83 %D9%81%D9%8A %D8%A7%D9%84%D8%A5%D9%86%D8%AA%D8%B1%D9%86%D8%AA!
+Program_Descriptions/Arabic/Char_Desc_450=%D8%A3%D8%AF%D8%A7%D8%A9 %D9%85%D8%AC%D8%A7%D9%86%D9%8A%D8%A9 %D9%84%D8%B9%D8%A8%D8%A9 %D9%88%D8%AA%D8%B7%D9%88%D9%8A%D8%B1 %D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D9%8A%D8%A7%D8%AA %D9%85%D9%86 %D9%82%D8%A8%D9%84 %D9%86%D9%81%D8%B3%D9%83. %D8%A7%D9%86%D9%87%D8%A7 %D8%AA%D9%87%D8%AF%D9%81 %D9%84%D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9 %D8%A3%D9%8A %D8%B4%D8%AE%D8%B5 %D8%AE%D9%84%D9%82 %D8%A7%D9%84%D8%A8%D8%B1%D8%A7%D9%85%D8%AC %D8%AF%D9%88%D9%86 %D8%A3%D9%8A %D9%85%D8%B9%D8%B1%D9%81%D8%A9 %D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9. %D9%84%D8%A7 %D8%A7%D9%84%D8%AA%D8%B1%D9%85%D9%8A%D8%B2%D8%8C %D8%A3%D9%8A %D9%84%D8%BA%D8%A7%D8%AA %D8%A7%D9%84%D8%A8%D8%B1%D9%85%D8%AC%D8%A9 %D8%A7%D9%84%D9%84%D8%A7%D8%B2%D9%85%D8%A9 %D9%84%D8%A5%D9%86%D8%B4%D8%A7%D8%A1 %D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA %D9%85%D8%B9 %D8%AE%D9%88%D8%A7%D8%B1%D8%B2%D9%85%D9%8A%D8%A9. %D9%84%D8%AF%D9%8A%D9%87 %D9%85%D8%B3%D8%A7%D8%B9%D8%AF%D8%A9 %D8%AC%D9%8A%D8%AF%D8%A9 %D8%AC%D8%AF%D8%A7 %D9%88%D9%83%D8%A7%D9%85%D9%84%D8%A9 %D8%A7%D9%84%D8%AA%D9%8A %D8%A3%D8%AF%D9%84%D9%89 %D8%A8%D9%87%D8%A7 %D8%AF%D9%84%D9%8A%D9%84 %D8%B9%D9%84%D9%89 %D8%A7%D9%84%D8%AE%D8%B7%D8%8C %D8%AF%D8%B1%D9%88%D8%B3 %D8%A7%D9%84%D9%81%D9%8A%D8%AF%D9%8A%D9%88 %D9%88%D8%AF%D9%84%D9%8A%D9%84 %D9%85%D8%B1%D8%AC%D8%B9%D9%8A. %D8%AA%D8%B7%D8%A8%D9%8A%D9%82%D8%A7%D8%AA %D9%86%D8%AA%D9%8A%D8%AC%D8%A9 %D9%84%D8%AF%D9%8A%D9%87%D9%85 %D8%A7%D9%84%D9%83%D8%AB%D9%8A%D8%B1 %D9%85%D9%86 %D8%A7%D9%84%D9%82%D8%AF%D8%B1%D8%A7%D8%AA.
+Program_Descriptions/Spanish/Keywords=automatizaci%C3%B3n de negocios, crear sus aplicaciones, c%C3%B3mo crear su propia suave, algoritmo 2, c%C3%B3mo hacer que su software, programaci%C3%B3n, libre, sin necesidad de programaci%C3%B3n, lenguaje de programaci%C3%B3n, sin la codificaci%C3%B3n, el medio ambiente RAD, exe
+Program_Descriptions/Spanish/Char_Desc_45=Herramienta para el desarrollo de software!
+Program_Descriptions/Spanish/Char_Desc_80=Herramienta gratuita para el desarrollo de software en el pa%C3%ADs!
+Program_Descriptions/Spanish/Char_Desc_250=%C2%BFQuieres crear tus propias aplicaciones? Algorithm2 es una herramienta gratuita para el juego y el desarrollo de software en el pa%C3%ADs. Automatice sus procesos de negocio por ti mismo! Algorithm ayuda a nadie para crear aplicaciones sin la codificaci%C3%B3n
+Program_Descriptions/Spanish/Char_Desc_450=Herramienta gratuita para el juego y el desarrollo de software por s%C3%AD mismo. Su objetivo es ayudar a cualquiera crear programas sin ning%C3%BAn conocimiento de programaci%C3%B3n. Sin Codificar, hay lenguajes de programaci%C3%B3n necesarios para crear aplicaciones con el algoritmo. Cuenta con una ayuda muy buena y completa realizada por un manual en l%C3%ADnea, tutoriales en v%C3%ADdeo y gu%C3%ADa de referencia. Las aplicaciones de resultado tienen una gran cantidad de capacid
+Program_Descriptions/Spanish/Char_Desc_2000=%C2%BFQuieres crear tus propias aplicaciones? C%C3%B3mo automatizar mis procesos de negocio por mi cuenta? %0D%0A%0D%0AAlgorithm2 es una herramienta gratuita para el juego y el desarrollo de software en el pa%C3%ADs. Con su ayuda cualquiera puede crear un programa sin un conocimiento de cualquier lenguaje de programaci%C3%B3n. Hasta a la fecha de componentes le permitir%C3%A1 crear sus propios multimedia jugadores, navegadores, editores de texto, que le proporcionar%C3%A1 herramientas para trabajar con el sistema de archivos, la pantalla, el registro del sistema, el teclado y el rat%C3%B3n. Y es muy f%C3%A1cil de trabajar con todas estas caracter%C3%ADsticas. %0D%0A%0D%0APuede compilar inmediatamente tu proyecto en un archivo EXE y publicarla en Internet o comenzar a venderlo y ganar dinero en su propio intelecto. O utilizarlo en su negocio. Usted puede descargar y utilizar una aplicaci%C3%B3n para el algoritmo de desarrollo de software 2 de forma gratuita.
+Program_Descriptions/Portuguese/Keywords=automa%C3%A7%C3%A3o comercial, criar seus aplicativos, como criar seu pr%C3%B3prio macio, o algoritmo 2, como fazer o seu software, programa%C3%A7%C3%A3o, gratuito, sem necessidade de programa%C3%A7%C3%A3o, linguagem de programa%C3%A7%C3%A3o, nenhuma codifica%C3%A7%C3%A3o, o ambiente RAD, exe, exe-arquiv
+Program_Descriptions/Portuguese/Char_Desc_45=Ferramenta para desenvolvimento de software!
+Program_Descriptions/Portuguese/Char_Desc_80=Ferramenta gratuita para desenvolvimento de software em casa!
+Program_Descriptions/Portuguese/Char_Desc_250=Voc%C3%AA quer criar seus pr%C3%B3prios aplicativos? Algorithm2 %C3%A9 uma ferramenta gratuita para o jogo e desenvolvimento de software em casa. Automatizar seus processos de neg%C3%B3cios por si mesmo! Ele ajuda qualquer um a criar aplicativos com nenhuma codifica%C3%A7%C3%A3o.
+Program_Descriptions/Portuguese/Char_Desc_450=Ferramenta gr%C3%A1tis para o jogo e desenvolvimento de software por si mesmo. Destina-se a ajudar a qualquer um criar programas sem nenhum conhecimento de programa%C3%A7%C3%A3o. No Coding, nenhuma das linguagens de programa%C3%A7%C3%A3o necess%C3%A1rias para criar aplicativos com o Algoritmo. Tem um muito bom e completo ajuda feito por um manual on-line, tutoriais em v%C3%ADdeo e guia de refer%C3%AAncia. Os aplicativos de resultados tem um monte de recursos.
+Program_Descriptions/Portuguese/Char_Desc_2000=Voc%C3%AA quer criar seus pr%C3%B3prios aplicativos? Como automatizar os meus processos de neg%C3%B3cios por mim? %0D%0A%0D%0AAlgorithm2 %C3%A9 uma ferramenta gratuita para o jogo e desenvolvimento de software em casa. Com sua ajuda qualquer um pode criar um programa sem o conhecimento de qualquer linguagem de programa%C3%A7%C3%A3o. Up-to-date componentes permitem que voc%C3%AA crie seus pr%C3%B3prios jogadores, browsers, editores de texto multim%C3%ADdia, ele ir%C3%A1 lhe fornecer ferramentas para trabalhar com sistema de arquivos, tela, registro do sistema, teclado e mouse. E %C3%A9 muito f%C3%A1cil de trabalhar com todas estas caracter%C3%ADsticas. %0D%0A%0D%0AVoc%C3%AA pode compilar imediatamente o seu projeto em um arquivo exe e public%C3%A1-lo na internet ou come%C3%A7ar a vender e ganhar dinheiro em seu pr%C3%B3prio intelecto. Ou us%C3%A1-lo em seu neg%C3%B3cio. Voc%C3%AA pode baixar e usar um aplicativo para o algoritmo de desenvolvimento de software 2 gratuitamente.
+Program_Descriptions/Turkish/Char_Desc_2000=Kendi uygulamalar%C4%B1 olu%C5%9Fturmak istiyor musunuz? Nas%C4%B1l kendim i%C5%9F s%C3%BCre%C3%A7lerini otomatikle%C5%9Ftirmek i%C3%A7in? %0D%0A%0D%0AAlgorithm2 evde oyun ve yaz%C4%B1l%C4%B1m geli%C5%9Ftirme i%C3%A7in %C3%BCcretsiz bir ara%C3%A7t%C4%B1r. Onun yard%C4%B1m kimseyle herhangi bir programlama dili bir bilgisi olmadan bir program olu%C5%9Fturabilirsiniz. Bile%C5%9Fenleri kendi multimedya %C3%A7alarlar, taray%C4%B1c%C4%B1lar, metin edit%C3%B6rleri olu%C5%9Fturmak i%C3%A7in izin verir up-to-date, bu dosya sistemi, ekran, sistem kay%C4%B1t defteri, klavye ve fare ile %C3%A7al%C4%B1%C5%9Fmak i%C3%A7in ara%C3%A7lar sa%C4%9Flayacakt%C4%B1r. Ve t%C3%BCm bu %C3%B6zellikleri ile %C3%A7al%C4%B1%C5%9Fmak %C3%A7ok kolay. %0D%0A%0D%0AHemen bir exe dosyas%C4%B1 i%C3%A7ine proje derlemek ve internette yay%C4%B1mlamak veya satmak ve kendi akl%C4%B1na para kazanmaya ba%C5%9Flayabilirsiniz. Ya da i%C5%9Finizde kullanabilirsiniz. Indirebilir ve %C3%BCcretsiz yaz%C4%B1l%C4%B1m geli%C5%9Ftirme Algoritma 2 i%C3%A7in bir uygulamay%C4%B1 kullanabilirsiniz.
+Program_Descriptions/Turkish/Keywords=i%C5%9F otomasyon, uygulamalar%C4%B1n%C4%B1z%C4%B1 olu%C5%9Fturabilir, nas%C4%B1l kendi yumu%C5%9Fak, algoritmas%C4%B1 2, yaz%C4%B1l%C4%B1m nas%C4%B1l, Programlama, %C3%9Ccretsiz, programlama olmadan, programlama dili, hi%C3%A7bir kodlama, RAD ortam%C4%B1, exe, exe dosyas%C4%B1, derleme, program geli%C5%9Ftirme
+Program_Descriptions/Turkish/Char_Desc_45=Yaz%C4%B1l%C4%B1m ve oyun geli%C5%9Ftirme Arac%C4%B1!
+Program_Descriptions/Turkish/Char_Desc_80=Nas%C4%B1l kendi uygulamalar%C4%B1 yaratmak i%C3%A7in? Evde yaz%C4%B1l%C4%B1m geli%C5%9Ftirme i%C3%A7in %C3%BCcretsiz.
+Program_Descriptions/Turkish/Char_Desc_250=Kendi uygulamalar%C4%B1 olu%C5%9Fturmak istiyor musunuz? Algorithm2 evde oyun ve yaz%C4%B1l%C4%B1m geli%C5%9Ftirme i%C3%A7in %C3%BCcretsiz bir ara%C3%A7t%C4%B1r. Kendiniz i%C5%9F s%C3%BCre%C3%A7lerini otomatikle%C5%9Ftirmek! Algorithm2 herkes hi%C3%A7bir kodlama ile uygulamalar%C4%B1 olu%C5%9Fturmak i%C3%A7in yard%C4%B1mc%C4%B1 olur.
+Program_Descriptions/Turkish/Char_Desc_450=Kendiniz oyun ve yaz%C4%B1l%C4%B1m geli%C5%9Ftirme i%C3%A7in %C3%BCcretsiz bir ara%C3%A7. Herkes herhangi bir programlama bilgisi olmadan programlar%C4%B1 olu%C5%9Fturmak yard%C4%B1mc%C4%B1 olmay%C4%B1 ama%C3%A7lamaktad%C4%B1r. Hi%C3%A7bir kodlama, Algoritma ile uygulamalar%C4%B1 olu%C5%9Fturmak i%C3%A7in gerekli hi%C3%A7bir programlama dilleri. Bu bir on-line k%C4%B1lavuzuna, video dersler ve ba%C5%9Fvuru k%C4%B1lavuzu taraf%C4%B1ndan yap%C4%B1lan bir %C3%A7ok iyi ve eksiksiz yard%C4%B1m%C4%B1 vard%C4%B1r.Sonu%C3%A7 uygulamalar yetenekleri bir s%C3%BCr%C3%BC var.
+Program_Descriptions/German/Keywords=Automatisierung der Gesch%C3%A4ftsprozesse, erstellen Sie Ihre Apps, wie man Ihre eigenen weichen, Algorithmus 2, wie Sie Ihre Software, Programmierung, kostenlos, ohne Programmierung, Programmiersprache, ohne Codierung, exe, exe-Datei, Zusammenstellung
+Program_Descriptions/German/Char_Desc_45=Kostenloses Tool f%C3%BCr die Software-Entwicklung
+Program_Descriptions/German/Char_Desc_80=Kostenloses Tool f%C3%BCr die Software-Entwicklung zu Hause!
+Program_Descriptions/German/Char_Desc_250=Haben Sie eigene Apps erstellen? Algorithm2 ist ein kostenloses Tool f%C3%BCr Spiele-und Software-Entwicklung zu Hause. Automatisieren Sie Ihre Gesch%C3%A4ftsprozesse durch die Sie sich selbst! Algorithm hilft niemandem, um Anwendungen ohne Codierung erstellen
+Program_Descriptions/German/Char_Desc_450=Kostenloses Tool f%C3%BCr Spiele-und Software-Entwicklung alleine. Es zielt darauf ab, jedermann ohne Programmierkenntnisse Programme zu erstellen. Keine Programmierung, keine Programmiersprachen ben%C3%B6tigt, um Anwendungen mit Algorithmus erstellen. Es hat eine sehr gute und vollst%C3%A4ndige Hilfe von einem Online-Handbuch, Video-Tutorials und Referenzhandbuch gemacht. Die Ergebnis-Apps haben eine Menge von Funktionen.
+Program_Descriptions/German/Char_Desc_2000=Haben Sie eigene Apps erstellen? Wie ich meine Gesch%C3%A4ftsprozesse von mir zu automatisieren? %0D%0A%0D%0AAlgorithm2 ist ein kostenloses Tool f%C3%BCr Spiele-und Software-Entwicklung zu Hause. Mit ihrer Hilfe kann jeder ein Programm ohne Kenntnis einer Programmiersprache erstellen. Up-to-date-Komponenten lassen Sie Ihre eigenen Multimedia-Player, Browser, Texteditoren erstellen, wird es Sie mit Tools bieten f%C3%BCr die Arbeit mit Datei-, Leinwand, System-Registry, Tastatur und Maus. Und es ist sehr einfach, mit all diesen Features arbeiten. Sie k%C3%B6nnen Ihr Projekt sofort zu kompilieren in eine exe-Datei und ver%C3%B6ffentlicht sie im Internet oder startet den Verkauf und Geld auf Ihrem eigenen Intellekt. %0D%0A%0D%0AOder verwenden Sie es in Ihrem Unternehmen. Sie k%C3%B6nnen herunterladen und verwenden Sie eine Anwendung f%C3%BCr die Softwareentwicklung Algorithmus 2 kostenlos.
+ASBMPlannerID1stRound=11
+Issues=4
+Affiliates/Affiliates_FORM=Y
+Affiliates/Affiliates_FORM_VER=1.4
+Affiliates/Affiliates_VERSION=1.4
+Affiliates/Affiliates_URL=http://www.asp-shareware.org/pad/extensions/Affiliates.htm
+NewsFeed/NewsFeed_FORM=Y
+NewsFeed/NewsFeed_VERSION=1.0
+NewsFeed/NewsFeed_URL=http://Submit-Everywhere.com/extensions/NewsFeed.htm
+NewsFeed/NewsFeed_DESCRIPTION=This PAD extension allows you to add your RSS and Atom news feeds info into your PAD file. This info can be used by RSS feed submission software or by feed directories themselves.
+NewsFeed/NewsFeed_Type=RSS 0.90
+NewsFeed/NewsFeed_Language=English
+NewsFeed/NewsFeed_Purpose=News
+OnlineShops/OnlineShops_FORM=Y
+OnlineShops/OnlineShops_VERSION=1.0
+OnlineShops/OnlineShops_URL=http://Submit-Everywhere.com/extensions/OnlineShops.htm
+OnlineShops/OnlineShops_DESCRIPTION=This PAD extension allows you to check these sites distribution agreements and decide wether you wish to sell your product through them
+OnlineShops/OnlineShops_PalmGear=off
+OnlineShops/OnlineShops_PocketLand=off
+OnlineShops/OnlineShops_PDAssi=off
+OnlineShops/OnlineShops_PDATopSoft=off
+OnlineShops/OnlineShops_PocketGear=off
+OnlineShops/OnlineShops_Softahead=off
+OnlineShops/OnlineShops_Softonic=off
+OnlineShops/OnlineShops_SoftSearch=off
+OnlineShops/OnlineShops_Winowin=off
+OnlineShops/OnlineShops_Handango=off
+Site/Site_FORM=Y
+Site/Site_VERSION=1.0
+Site/Site_URL=http://Submit-Everywhere.com/extensions/Site.htm
+Site/Site_DESCRIPTION=This PAD extension allows you to add your site info into your PAD file. This info can be used by site submission software or by web directories themselves.
+Affiliates/Affiliates_Regnow_Vendor_ID=24231
+Affiliates/Affiliates_Regnow_Product_ID=24231-3
+Affiliates/Affiliates_Regnow_Maximum_Commission_Rate=50
+RoboSoft/Search_String=%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC
+RoboSoft/Publish_on_CD=FALSE
+RoboSoft/Backlink=http://algoritm2.ru/links.html
+Company_Info/Contact_Info/Author_First_Name=Alexander
+Company_Info/Contact_Info/Author_Last_Name=Trofimov
+Company_Info/Contact_Info/Author_Email=support@algoritm2.ru
+Program_Info/Program_Name=%D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC
+Program_Info/Program_Version=2.7
+Program_Info/Program_Release_Month=08
+Program_Info/Program_Release_Day=07
+Program_Info/Program_Release_Year=2014
+Program_Info/Program_Cost_Dollars=0.00
+Program_Info/Program_Type=Freeware
+Program_Info/Program_Release_Status=Major Update
+Program_Info/Program_Install_Support=Install and Uninstall
+Program_Info/Program_OS_Support=WinXP,WinVista,WinVista x64,Win7 x32,Win7 x64,Win2000,WinOther,Windows2000,Windows2003,WinServer,Windows Vista Ultimate,Windows Vista Ultimate x64,Windows Media Center Edition 2005,Windows Vista Starter,Windows Vista Home Basic,Windows Vista Home Premium,Windows Vista Business,Windows Vista Enterprise,Windows Vista Home Basic x64,Windows Vista Home Premium x64,Windows Vista Business x64,Windows Vista Enterprise x64,Windows 8,Windows Server 2012
+Program_Info/Program_Language=Russian
+Program_Info/Program_Change_Info=Microsoft Excel %D0%B8 Access %D0%B8%D0%BD%D1%82%D0%B5%D0%B3%D1%80%D0%B0%D1%86%D0%B8%D1%8F%0D%0A%D0%A0%D0%B0%D0%B7%D0%B4%D0%B5%D0%BB %D0%9E%D1%82%D0%B2%D0%B5%D1%82%D1%8B %D0%BD%D0%B0 %D0%B2%D1%81%D0%B5 %D0%B2%D0%BE%D0%BF%D1%80%D0%BE%D1%81%D1%8B%0D%0A%D0%9E%D0%BF%D1%82%D0%B8%D0%BC%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F %D0%BF%D0%BE%D0%B4 Windows 8
+Program_Info/Program_System_Requirements=%D0%9D%D0%B5%D1%82
+Program_Info/Program_Category_Class=Development::Other
+Program_Info/File_Info/File_Size_Bytes=7564288
+Program_Info/File_Info/File_Size_K=7387
+Program_Info/File_Info/File_Size_MB=7.21
+Program_Info/Expire_Info/Has_Expire_Info=N
+Program_Info/Expire_Info/Expire_Based_On=Days
+Program_Descriptions/English/Keywords=create your apps, how to create your own soft, algorithm 2, how to make your software, Programming, Free, without programming, programming language, no coding, RAD environment, exe, exe-file, compiling, program development, business automation
+Program_Descriptions/English/Char_Desc_45=Free tool for software and game development!
+Program_Descriptions/English/Char_Desc_80=How to create your own applications? Free tool for software development at home!
+Program_Descriptions/English/Char_Desc_250=Do you want to create your own apps? Algorithm2 is a free tool for game and software development at home. Automate your business processes by yourself! Algorithm2 helps anybody to create apps with no coding. Distribute and sell your soft in Internet!
+Program_Descriptions/English/Char_Desc_450=Free tool for game and software development by yourself. It aims to help anyone create programs without any programming knowledge. No coding, no programming languages needed to create applications with Algorithm. It has a very good and complete help made by an on-line manual, video tutorials and reference guide. The result apps have a lot of capabilities.
+Program_Descriptions/English/Char_Desc_2000=Do you want to create your own apps? How to automate my business processes by myself?%0D%0A%0D%0AAlgorithm2 is a free tool for game and software development at home. With its help anybody can create a program without a knowledge of any programming language. Up-to-date components will let you to create your own multimedia players, browsers, text editors, it will provide you with tools for working with file-system, screen, system registry, keyboard and mouse. And it's very easy to work with all these features. %0D%0A%0D%0AYou can immediately compile your project into an exe-file and publish it in internet or start selling it and making money on your own intellect. Or use it in your business. You can download and use a application for software development Algorithm 2 for free.
+Web_Info/Application_URLs/Application_Info_URL=http://algoritm2.ru/index.php/ru
+Web_Info/Application_URLs/Application_Order_URL=http://algoritm2.ru/index.php/ru/#GetMore
+Web_Info/Application_URLs/Application_Screenshot_URL=http://algoritm2.ru/images/product/ScreenFullRu.jpg
+Web_Info/Application_URLs/Application_Icon_URL=http://algoritm2.ru/images/favicon.gif
+Web_Info/Application_URLs/Application_XML_File_URL=http://algoritm2.ru/download/algoritm_pad_ru.xml
+Web_Info/Download_URLs/Primary_Download_URL=http://algoritm2.ru/download/Algoritm2RuLast.exe
+Web_Info/Download_URLs/Secondary_Download_URL=http://download.web-kss.ru/Algoritm2RuLast.exe
+Permissions/Distribution_Permissions=Freeware
+Program_Info/Program_Categories=Hobbies,Development,Editors,Creation,Education,Tools,other,%D0%9F%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5,%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BC%D0%B5%D0%B4%D0%B8%D0%B0,%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%BC%D0%B5%D0%B4%D0%B8%D1%8F
+Program_Info/Limitations=%D0%9D%D0%B5%D1%82
+Permissions/EULA=ALGORITHM %C2%A9%0D%0A%0D%0A                        The licence for usage and distribution%0D%0A%0D%0AALGORITHM License Agreement%0D%0A%0D%0AALGORITHM END-USER LICENSE AGREEMENT%0D%0A%0D%0AIMPORTANT-READ CAREFULLY: This ALGORITHM End-User License Agreement ("EULA") is a%0D%0Alegal agreement between you (either an individual or a single entity) and %0D%0AArctic Technology for the SOFTWARE(s) identified above, which includes the User's%0D%0AGuide, any associated SOFTWARE components, any media, any printed materials%0D%0Aother than the User's Guide, and any "online" or electronic documentation%0D%0A("SOFTWARE"). By installing, copying, or otherwise using the SOFTWARE, you agree%0D%0Ato be bound by the terms of this EULA. If you do not agree to the terms of this%0D%0AEULA, do not install or use the SOFTWARE. %0D%0A%0D%0A1. THIS SOFTWARE IS LICENSED, NOT SOLD. YOU MAY USE THIS SOFTWARE ONLY AS DESCRIBED IN THIS AGREEMENT. %0D%0A%0D%0A2. GRANT OF LICENSE. %0D%0AFree License%0D%0AYou can use this program as long as you wish. However, programs and games compiled through free online %0D%0Acompilation service can be used only for private purpose without right to sell it. If you want to sell %0D%0Aprograms and games that was created with the SOFTWARE you will need to register your copy of the program.%0D%0A%0D%0ARegistered License%0D%0AAfter registration user is given non-exclusive licence to use ALGORITHM for any legal purposes. Licensed %0D%0Acopy of ALGORITHM can not be given on lease. None licence payments (except cost of the license itself) %0D%0Aconnected with your programs distribution are required.%0D%0A%0D%0A3. DISTRIBUTION.  You are hereby licensed to make copies of the SOFTWARE as you%0D%0Awish; give exact copies of the original SOFTWARE to anyone; and distribute the%0D%0ASOFTWARE in its unmodified form via electronic means (Internet, BBS's, Shareware%0D%0Adistribution libraries, CD-ROMs, etc.). You may charge a distribution fee for%0D%0Athe package, but you must not represent in any way that you are selling the%0D%0ASOFTWARE itself. Your distribution of the SOFTWARE will not entitle you to any%0D%0Acompensation from Arctic Technology.  You must distribute a copy of this EULA%0D%0Awith any copy of the SOFTWARE and anyone to whom you distribute the SOFTWARE is%0D%0Asubject to this EULA.%0D%0A%0D%0A4. RESTRICTIONS.  You may not reverse engineer, de-compile, or disassemble the%0D%0ASOFTWARE, except and only to the extent that such activity is expressly%0D%0Apermitted by applicable law notwithstanding this limitation. You may not rent,%0D%0Alease, or lend the SOFTWARE. You may permanently transfer all of your rights%0D%0Aunder this EULA, provided the recipient agrees to the terms of this EULA.  You%0D%0Amay not use the SOFTWARE to perform any unauthorized transfer of information%0D%0A(e.g. transfer of files in violation of a copyright) or for any illegal purpose.%0D%0A%0D%0A5. SUPPORT SERVICES. Arctic Technology may provide you with support services%0D%0Arelated to the SOFTWARE. Use of Support Services is governed by SmartSoft%0D%0ALtd. polices and programs described in the user manual, in online%0D%0Adocumentation, and/or other materials provided by Arctic Technology, as they%0D%0Amay be modified from time to time. Any supplemental SOFTWARE code provided to%0D%0Ayou as part of the Support Services shall be considered part of the SOFTWARE and%0D%0Asubject to the terms and conditions of this EULA. With respect to technical%0D%0Ainformation you provide Arctic Technology as part of the Support Services, %0D%0AArctic Technology may use such information for its business purposes, including for%0D%0Aproduct support and development. Arctic Technology will not utilize such%0D%0Atechnical information in a form that personally identifies you.%0D%0A%0D%0A6. TERMINATION. Without prejudice to any other rights, Arctic Technology may%0D%0Aterminate this EULA if you fail to comply with the terms and conditions of this%0D%0AEULA. In such event, you must destroy all copies of the SOFTWARE.%0D%0A%0D%0A7. COPYRIGHT. The SOFTWARE is protected by copyright laws and international%0D%0Atreaty provisions. You acknowledge that no title to the intellectual property in%0D%0Athe SOFTWARE is transferred to you. You further acknowledge that title and full%0D%0Aownership rights to the SOFTWARE will remain the exclusive property of the%0D%0AArctic Technology and you will not acquire any rights to the SOFTWARE except as%0D%0Aexpressly set forth in this license. You agree that any copies of the SOFTWARE%0D%0Awill contain the same proprietary notices which appear on and in the SOFTWARE.%0D%0A%0D%0A8. NO WARRANTIES. Arctic Technology expressly disclaims any warranty for the%0D%0ASOFTWARE. THE SOFTWARE AND ANY RELATED DOCUMENTATION IS PROVIDED "AS IS" WITHOUT%0D%0AWARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING, WITHOUT LIMITATION,%0D%0ATHE IMPLIED WARRANTIES OR MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR%0D%0ANON INFRINGEMENT. THE ENTIRE RISK ARISING OUT OF USE OR PERFORMANCE OF THE%0D%0ASOFTWARE REMAINS WITH YOU.%0D%0A%0D%0A9. LIMITATION OF LIABILITY. IN NO EVENT SHALL Arctic Technology OR ITS%0D%0ASUPPLIERS BE LIABLE TO YOU FOR ANY CONSEQUENTIAL, SPECIAL, INCIDENTAL, OR%0D%0AINDIRECT DAMAGES OF ANY KIND ARISING OUT OF THE DELIVERY, PERFORMANCE, OR USE OF%0D%0ATHE SOFTWARE, EVEN IF Arctic Technology HAS BEEN ADVISED OF THE POSSIBILITY OF%0D%0ASUCH DAMAGES. IN ANY EVENT, Arctic Technology'S LIABILITY FOR ANY CLAIM,%0D%0AWHETHER IN CONTRACT, TORT, OR ANY OTHER THEORY OF LIABILITY WILL NOT EXCEED THE%0D%0AGREATER OF U.S.$1.00 OR LICENSE FEE PAID BY YOU.%0D%0A%0D%0A10. SECURITY. You agree that Arctic Technology is not liable to you for security %0D%0Abreaches resulting from your use of the SOFTWARE. The security of the SOFTWARE%0D%0Adepends primarily on you selecting a secure password and keeping it confidential. %0D%0AYou should not select a password that may be easily discovered by others.  %0D%0A%0D%0A11. MISCELLANEOUS. Should you have any questions concerning this EULA, or if you%0D%0Adesire to contact Arctic Technology for any reason, please contact by%0D%0Aelectronic mail at: support@algorithm2.com.%0D%0A%0D%0A   Thanks for usage ALGORITHM, Arctic Technology.
+NewsFeed/NewsFeed_Author_Email=support@algoritm2.ru
+Site/Site_Contact_Email=support@algoritm2.ru
+NewsFeed/NewsFeed_Author_First_Name=Alexander
+NewsFeed/NewsFeed_Author_Last_Name=Trofimov
+Site/Site_Contact_First_Name=Alexander
+Site/Site_Contact_Last_Name=Trofimov
+Program_Info/Program_Cost_Other=0
+Program_Info/Program_Cost_Other_Code=RUB
+Site/Site_Site_Title=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC %D0%B4%D0%BB%D1%8F %D0%B4%D0%BE%D0%BC%D0%B0 %D0%B8 %D0%B1%D0%B5%D0%B7%D0%BD%D0%B5%D1%81%D0%B0
+Site/Site_Site_URL=http://algoritm2.ru/index.php/ru
+Site/Site_Description_100=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC %D0%B8 %D0%B8%D0%B3%D1%80 %D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE. %D0%91%D0%B5%D0%B7 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F. %D0%91%D1%8B%D1%81%D1%82%D1%80%D0%BE %D0%B8 %D0%BC%D0%BE%D1%89%D0%BD%D0%BE.
+Site/Site_Description_250=%D0%A1%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC %D0%B8 %D0%B8%D0%B3%D1%80, %D0%B1%D0%B5%D0%B7 %D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9 %D1%8F%D0%B7%D1%8B%D0%BA%D0%BE%D0%B2 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F! %D0%A1%D0%B4%D0%B5%D0%BB%D0%B0%D0%B9%D1%82%D0%B5 %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5 %D0%B8 %D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5 %D0%B5%D0%B3%D0%BE %D0%B2 %D1%81%D0%B2%D0%BE%D0%B5%D0%BC %D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B5 %D0%B8%D0%BB%D0%B8 %D0%B2%D1%8B%D0%BA%D0%BB%D0%B0%D0%B4%D1%8B%D0%B2%D0%B0%D0%B9%D1%82%D0%B5 %D0%B2 %D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82 %D0%B8 %D0%B7%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D1%82%D1%8B%D0%B2%D0%B0%D0%B9%D1%82%D0%B5 %D0%BD%D0%B0 %D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B5.
+Site/Site_Description_450=%D0%9A%D0%B0%D0%B6%D0%B4%D1%8B%D0%B9 %D0%BC%D0%BE%D0%B6%D0%B5%D1%82 %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5 %D0%B8%D0%BB%D0%B8 %D0%B8%D0%B3%D1%80%D1%83! %D0%90%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2 - %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0 %D0%B4%D0%BB%D1%8F %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D1%8F %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B9, %D0%B3%D0%B4%D0%B5 %D0%BD%D0%B5 %D1%82%D1%80%D0%B5%D0%B1%D1%83%D1%82%D1%81%D1%8F %D0%B7%D0%BD%D0%B0%D0%BD%D0%B8%D0%B9 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F - %D0%B2%D1%81%D1%91 %D0%B4%D0%B5%D0%BB%D0%B0%D0%B5%D1%82%D1%81%D1%8F %D0%BC%D1%8B%D1%88%D0%BA%D0%BE%D0%B9 %D0%B8 %D0%BE%D1%81%D0%BD%D0%BE%D0%B2%D0%B0%D0%BD%D0%BE %D0%BE%D0%B1%D1%8B%D1%87%D0%BD%D0%BE%D0%B9 %D0%BB%D0%BE%D0%B3%D0%B8%D0%BA%D0%B5. %D0%AD%D1%82%D0%BE %D0%BF%D1%80%D0%BE%D1%81%D1%82%D0%BE! %D0%9D%D0%BE %D0%BE%D1%87%D0%B5%D0%BD%D1%8C %D0%BC%D0%BE%D1%89%D0%BD%D0%BE. %D0%A1%D0%B4%D0%B5%D0%BB%D0%B0%D0%B9%D1%82%D0%B5 %D0%BF%D1%80%D0%B8%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5 %D0%B8 %D0%B8%D1%81%D0%BF%D0%BE%D0%BB%D1%8C%D0%B7%D1%83%D0%B9%D1%82%D0%B5 %D0%B5%D0%B3%D0%BE %D0%B2 %D1%81%D0%B2%D0%BE%D0%B5%D0%BC %D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B5 %D0%B8%D0%BB%D0%B8 %D0%B2%D1%8B%D0%BB%D0%BE%D0%B6%D0%B8%D1%82%D0%B5 %D0%B2 %D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%BD%D0%B5%D1%82 %D0%B8 %D0%B7%D0%B0%D1%80%D0%B0%D0%B1%D0%B0%D1%82%D1%8B%D0%B2%D0%B0%D0%B9%D1%82%D0%B5 %D0%BD%D0%B0 %D0%B8%D0%BD%D1%82%D0%B5%D0%BB%D0%BB%D0%B5%D0%BA%D1%82%D0%B5.
+Site/Site_Keywords=%D0%BA%D0%B0%D0%BA %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83 %D1%81%D0%B0%D0%BC%D0%BE%D0%BC%D1%83, %D0%BA%D0%B0%D0%BA %D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83, %D0%BA%D0%B0%D0%BA %D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D1%82%D1%8C %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%83, %D0%B0%D0%B2%D1%82%D0%BE%D0%BC%D0%B0%D1%82%D0%B8%D0%B7%D0%B0%D1%86%D0%B8%D1%8F %D0%B1%D0%B8%D0%B7%D0%BD%D0%B5%D1%81%D0%B0 %D1%81%D0%B0%D0%BC%D0%BE%D1%81%D1%82%D0%BE%D1%8F%D1%82%D0%B5%D0%BB%D1%8C%D0%BD%D0%BE, %D0%B0%D0%BB%D0%B3%D0%BE%D1%80%D0%B8%D1%82%D0%BC 2, %D1%81%D0%BE%D0%B7%D0%B4%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC, %D0%BD%D0%B0%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC, %D0%BA%D0%BE%D0%BD%D1%81%D1%82%D1%80%D1%83%D0%BA%D1%82%D0%BE%D1%80 %D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC, %D0%BA%D0%B0%D0%BA %D1%81%D0%B4%D0%B5%D0%BB%D0%B0%D1%82%D1%8C
+ASBMPlannerID2ndRound=12
+
+[Site Login]
+SITE-00B31F916CB=%E0%DD%AE>%DE%00t4f
+SITE-003C0EE79A0=%F2Y%DE4%9C%07%85%B7%AA%92%F2[V%C7@%AFB%81%BFV%91%D2
+SITE-005107C7D15=%F2Y%DE4%9C%07%85%B7%AA%92%F2[V%C7@%AA%0A%EEH%AA
+SITE-00541547473=%F2Y%DE4%9C%07%85%B7%AA%92%F2[V%C7@%AFB%81%BFV%91%D2
+
+[Site Password]
+SITE-00B31F916CB=%FB%DB:%CE%0F%D6n%9A%1D%B1
+SITE-003C0EE79A0=%FB%DB:%CE%0F%D6n%9A%1D%B1
+SITE-00541547473=%FB%DB:%CE%0F%D6n%9A%1D%B1
+
+[Comments]
+SITE-00960136489=10.08.2014 23:04: This site has rejected your PAD file. You may want to check your PAD file for empty fields and other issues.%0D%0A
+SITE-00DC0AA4982=10.08.2014 23:37: Publication in the Global PAD Repository (http://repository.appvisor.com/) is required.
+SITE-00541547473=10.08.2014 23:04: Waiting for the site to send the login info (support@algorithm2.com)%0D%0A
+SITE-001B19826E2=10.08.2014 23:39: This site has for some reason rejected the submission
+
+[Version Listed]
+SITE-00B31F916CB=2.7
+
+[Version Submitted]
+SITE-00C40D1A849=2.7
+SITE-00B31F916CB=2.7
+SITE-008C06EEF2D=2.7
+SITE-00B906664F1=2.7
+SITE-003C0EE79A0=2.7
+SITE-003C05DDD4=2.7
+SITE-00960136489=2.7
+SITE-00541547473=2.7
+
+[Version Autofound]
+SITE-0088143BE19=2.1
+SITE-005107C7D15=2.5.6
+
+[Date Submitted]
+SITE-00C40D1A849=10-08-2014 23:04:37
+SITE-00B31F916CB=10-08-2014 23:06:05
+SITE-008C06EEF2D=10-08-2014 23:04:50
+SITE-00B906664F1=10-08-2014 23:05:05
+SITE-003C0EE79A0=10-08-2014 23:10:42
+SITE-003C05DDD4=10-08-2014 23:37:07
+SITE-00960136489=10-08-2014 23:37:01
+SITE-00541547473=10-08-2014 23:37:19
+
+[Search Results Short]
+SITE-0037047F4A8=Not found
+SITE-00960136489=Please, use manual search on this site
+SITE-00C40D1A849=Please, use manual search on this site
+SITE-00DC0AA4982=Please, use manual search on this site
+SITE-008C06EEF2D=Please, use manual search on this site
+SITE-001B19826E2=Not found
+SITE-003C0EE79A0=Please, use manual search on this site
+SITE-0088143BE19=%25C0%25EB%25E3%25EE%25F0%25E8%25F2%25EC [2.1] (10-Aug-2014) - %25DD%25F2%25EE %25EF%25F0%25EE%25E3%25F0%25E0%25EC%25EC%25E0 %25E4%25EB%25FF %25F1%25EE%25E7%25E4%25E0%25ED%25E8%25FF %25EF%25F0%25EE%25E3%25F0%25E0%25EC%25EC. %25CA%25E0%25EA...
+SITE-00541547473=Not found
+SITE-005107C7D15=%25C0%25EB%25E3%25EE%25F0%25E8%25F2%25EC [2.5.6]
+SITE-00B906664F1=Not found
+SITE-00B31F916CB=Please, use manual search on this site
+SITE-003B1DEEB93=Please, use manual search on this site
+SITE-009109A90D4=Incorrect HTML page
+SITE-00C40BDADAD=Custom "not found" string match
+SITE-00D7095224F=Incorrect HTML page
+SITE-00E807322CF=Not found
+SITE-0099032A0BA=Please, use manual search on this site
+SITE-00C70B572B3=Incorrect HTML page
+SITE-00E807A26EA=Not found
+SITE-00571FA560A=Custom "not found" string match
+SITE-00E80126D8=Please, use manual search on this site
+SITE-00E807DBA6A=Not found
+SITE-00C11EF60EA=Default "not found" string match
+SITE-007317EF8A=Incorrect HTML page
+SITE-0073135C07A=Incorrect HTML page
+SITE-00680218DC9=Custom "not found" string match
+SITE-00711E1EC8=Custom "not found" string match
+SITE-00E50EB4779=Not found
+SITE-00A40D2B65E=Not found
+SITE-00A40D4F0C4=Not found
+SITE-00B11B9EFF4=Not found
+SITE-00A40D2A62E=Not found
+SITE-00520F6D50F=Incorrect HTML page
+SITE-006B0789B72=Custom "not found" string match
+SITE-00BB12BDFAF=Custom "not found" string match
+SITE-008C0C280D9=Not found
+SITE-00520F5E0E0=Custom "not found" string match
+SITE-008B12EE401=Not found
+SITE-00C11EFCCC2=Not found
+SITE-00510E86EB4=Incorrect HTML page
+SITE-002B0825721=Custom "not found" string match
+SITE-00D7081F5EF=Incorrect HTML page
+SITE-008517B70B0=Custom "not found" string match
+SITE-005B1A74AD4=Default "not found" string match
+SITE-00A10B1D48A=Incorrect HTML page
+SITE-009A0F59EF7=Default "not found" string match
+SITE-00D80643ECB=Incorrect HTML page
+SITE-01A12C6278=Incorrect HTML page
+SITE-005C10E6BB=Not found
+SITE-0056119C548=Not found
+SITE-00331D99DD4=Custom "not found" string match
+SITE-001C028BE7B=Custom "not found" string match
+SITE-00320C6667A=Custom "not found" string match
+SITE-00DA03B7C3E=Not found
+SITE-00B3171F1F2=Incorrect HTML page
+SITE-00B204BE91E=Custom "not found" string match
+SITE-00DC0A306A5=Incorrect HTML page
+SITE-00E61099817=Incorrect HTML page
+SITE-00680E2480C=Custom "not found" string match
+SITE-00420B78EF8=Please, use manual search on this site
+SITE-00291692A60=Custom "not found" string match
+SITE-00B10EC1140=Incorrect HTML page
+SITE-0099199FD39=Custom "not found" string match
+SITE-00E702D280=Incorrect HTML page
+SITE-0091065F5C8=Incorrect HTML page
+SITE-008717A86FB=Custom "not found" string match
+SITE-00CA09C59FE=Please, use manual search on this site
+SITE-00D80650DAE=Custom "not found" string match
+SITE-00971A44306=Not found
+SITE-00D60DFF970=Custom "not found" string match
+SITE-001B0E249DF=Custom "not found" string match
+SITE-00CA0A969A1=Incorrect HTML page
+SITE-00DA029B941=Please, use manual search on this site
+SITE-00C40BD793A=Not found
+SITE-00D30B915FC=Incorrect HTML page
+SITE-00990B89329=Custom "not found" string match
+SITE-00A40D6136B=Not found
+SITE-00D9179D43F=Custom "not found" string match
+SITE-00971BE1412=Please, use manual search on this site
+SITE-00D70B7664E=Please, use manual search on this site
+SITE-00960A53C93=Incorrect HTML page
+SITE-00711E9BEE3=Incorrect HTML page
+SITE-00B207FE660=Custom "not found" string match
+SITE-001B1232127=Incorrect HTML page
+SITE-007A0991FB=Not found
+SITE-00971B964C4=Incorrect HTML page
+SITE-00991998BAE=Custom "not found" string match
+SITE-00931443FC=Custom "not found" string match
+SITE-00DA0940CF8=Incorrect HTML page
+SITE-00C5122C0D5=Not found
+SITE-00571977B8B=Custom "not found" string match
+SITE-00C9046BC24=Custom "not found" string match
+SITE-00DB06C94B0=Not found
+SITE-007A09B1C23=Custom "not found" string match
+SITE-008515F1520=Incorrect HTML page
+SITE-00A611B2AED=Please, use manual search on this site
+SITE-003313EC8EC=Custom "not found" string match
+SITE-00D304AF762=Please, use manual search on this site
+SITE-00E21B5A702=Incorrect HTML page
+SITE-00C5036E5DE=Not found
+SITE-00AB0C4CBCF=Custom "not found" string match
+SITE-00E51EC7146=Custom "not found" string match
+SITE-00720EF44B=Incorrect HTML page
+SITE-00D51C6F78C=Please, use manual search on this site
+SITE-00D60D7EA79=Please, use manual search on this site
+SITE-008704D5889=Not found
+SITE-00440B23E3A=Not found
+SITE-00C71754634=Custom "not found" string match
+SITE-0042178F3D5=Please, use manual search on this site
+SITE-0078046C923=Please, use manual search on this site
+SITE-00B50A77A75=Custom "not found" string match
+SITE-00841022DD=Custom "not found" string match
+SITE-00641DF7D22=Not found
+SITE-008318E5BE=Please, use manual search on this site
+SITE-0076036DA5C=Custom "not found" string match
+SITE-00A8028291F=Custom "not found" string match
+SITE-0073039E44=Custom "not found" string match
+SITE-00971A919E8=Please, use manual search on this site
+SITE-00531A10E90=Custom "not found" string match
+SITE-00B20949A9D=Custom "not found" string match
+SITE-008C0590D59=Custom "not found" string match
+SITE-008318C7750=Incorrect HTML page
+SITE-00BC1A8DB92=Incorrect HTML page
+SITE-00D903599C2=Not found
+SITE-0099180928=Custom "not found" string match
+SITE-00B20972EF4=Custom "not found" string match
+SITE-0028041CD57=Custom "not found" string match
+SITE-0027186CA29=Custom "not found" string match
+SITE-008B0ED3AF7=Custom "not found" string match
+SITE-009918B15B8=Incorrect HTML page
+SITE-00A40D2DEAD=Not found
+SITE-00D11FF739E=Incorrect HTML page
+SITE-005C068F0EF=Incorrect HTML page
+SITE-00B416B2F6F=Not found
+SITE-00D9179C0B=Custom "not found" string match
+SITE-00840FB7B17=Not found
+SITE-00311657C30=Not found
+SITE-00BC1A455C8=Custom "not found" string match
+SITE-00910FC5AEC=Not found
+SITE-00A30353BE1=Not found
+SITE-001C0A4EEAC=Custom "not found" string match
+SITE-00A21A1D057=Not found
+SITE-00960A9508F=Custom "not found" string match
+SITE-00E70E7885=Please, use manual search on this site
+SITE-001B0D1ED7D=Custom "not found" string match
+SITE-00381B4BBDB=Custom "not found" string match
+SITE-00611B52E75=Incorrect HTML page
+SITE-007303BF3F6=Custom "not found" string match
+SITE-00891D2E030=Not found
+SITE-0057015BA32=Custom "not found" string match
+SITE-00840FD6B99=Not found
+SITE-00C40B1702E=Not found
+SITE-007A1D5C28F=%25C0%25EB%25E3%25EE%25F0%25E8%25F2%25EC // File(s): () Search Mode: Phrase In A
+SITE-00391E7F8E4=Custom "not found" string match
+SITE-00840E2E2DD=Incorrect HTML page
+SITE-0073036C889=Custom "not found" string match
+SITE-009918A984C=Incorrect HTML page
+SITE-009A01F45F4=Not found
+SITE-00A40DC944E=Not found
+SITE-007C1A7A0B6=Not found
+SITE-00E11CF25EC=Custom "not found" string match
+SITE-00C91876C8A=Please, use manual search on this site
+SITE-00850E9035B=Incorrect HTML page
+SITE-00891D59E9C=Custom "not found" string match
+SITE-00E30EC9105=Please, use manual search on this site
+SITE-008B12DD8F2=Custom "not found" string match
+SITE-00C51C2F7AB=Incorrect HTML page
+SITE-00DB16CC8FB=%25C0%25EB%25E3%25EE%25F0%25E8%25F2%25EC Search results Total 0 records Total 0
+SITE-00E21B8CFCF=Not found
+SITE-003A035FBF8=Custom "not found" string match
+SITE-0099129CCFE=Custom "not found" string match
+SITE-00C90C74920=Custom "not found" string match
+SITE-009912D78EB=Custom "not found" string match
+SITE-00811673094=Custom "not found" string match
+SITE-00991217ABF=Incorrect HTML page
+SITE-0057152E493=Custom "not found" string match
+SITE-00A81237F01=Custom "not found" string match
+SITE-00710BE0A30=Not found
+SITE-001C0493652=Incorrect HTML page
+SITE-00BA07058F=Not found
+SITE-00731BE8C75=Custom "not found" string match
+SITE-00C60F847E0=Incorrect HTML page
+SITE-00991223A23=Custom "not found" string match
+SITE-00DB12C1834=Incorrect HTML page
+SITE-00B90509EA=Please, use manual search on this site
+SITE-00E51D6117A=Custom "not found" string match
+SITE-009514ED5D4=Custom "not found" string match
+SITE-00A60944F3=Not found
+SITE-00C40CF4AB4=Incorrect HTML page
+SITE-007303A2415=Please, use manual search on this site
+SITE-00840B6526D=Not found
+SITE-00E4186C775=Custom "not found" string match
+SITE-00BA196EB1=Custom "not found" string match
+SITE-0096092EECA=Incorrect HTML page
+SITE-0073156DB55=Custom "not found" string match
+SITE-00DB0CED5F7=Not found
+SITE-00DB0CE1CFB=Custom "not found" string match
+SITE-00DB06799D7=Not found
+SITE-00DC0423FB3=Not found
+SITE-00AA051D286=Incorrect HTML page
+SITE-00D31D5C0BA=Incorrect HTML page
+SITE-006A14774EC=Custom "not found" string match
+SITE-003A17E6BE6=Incorrect HTML page
+SITE-00840BDD46=Please, use manual search on this site
+SITE-00D21658417=Not found
+SITE-00AB01FC160=Please, use manual search on this site
+SITE-00C811876B8=Custom "not found" string match
+SITE-006708EB09C=Custom "not found" string match
+SITE-0073159BDDD=Custom "not found" string match
+SITE-00D903E8A8D=Incorrect HTML page
+SITE-004504295A2=Custom "not found" string match
+SITE-008409FCFB5=Not found
+SITE-00AA0C19B6D=Not found
+SITE-00D60622DE5=Please, use manual search on this site
+SITE-00E418ABDB1=Incorrect HTML page
+SITE-00D60D6DC8E=Custom "not found" string match
+SITE-0073106D40F=Custom "not found" string match
+SITE-00D9123C78D=Not found
+SITE-00A303F2E30=Please, use manual search on this site
+SITE-008C0552778=Custom "not found" string match
+SITE-002219AF5ED=Custom "not found" string match
+SITE-00D9051483F=Custom "not found" string match
+SITE-009515DC3EA=Custom "not found" string match
+SITE-0078043CA30=Custom "not found" string match
+SITE-0099032D5EF=Incorrect HTML page
+SITE-00D11C1074A=Not found
+SITE-00A21AE03BD=Incorrect HTML page
+SITE-008318673F6=Please, use manual search on this site
+SITE-00841B8E3E6=Custom "not found" string match
+SITE-00DB06F384D=Not found
+SITE-005B088DCB3=Custom "not found" string match
+SITE-00C515C4D57=Not found
+SITE-00A611F1AC5=Custom "not found" string match
+SITE-001C0EE1261=Custom "not found" string match
+SITE-005A143D873=Custom "not found" string match
+SITE-00691D2F06D=Custom "not found" string match
+SITE-0084189B69D=Not found
+SITE-00C918BDD78=Not found
+SITE-008409A49B2=Custom "not found" string match
+SITE-009A02EF3C6=Incorrect HTML page
+SITE-00991272C6F=Custom "not found" string match
+SITE-005B0B79272=Please, use manual search on this site
+SITE-00C612207D5=Not found
+SITE-00A40DC0749=Not found
+SITE-001C032D97D=Custom "not found" string match
+SITE-00971A733C0=Not found
+SITE-00B11B3CEA8=Not found
+SITE-00D3049BA68=Please, use manual search on this site
+SITE-00971A8EFC8=Not found
+SITE-00E40911449=Incorrect HTML page
+SITE-00990BB1CC8=Incorrect HTML page
+SITE-007C05B1DFC=Default "not found" string match
+SITE-007C06A28AE=Custom "not found" string match
+SITE-005C132FB3E=Custom "not found" string match
+SITE-00B11BE7CE2=Custom "not found" string match
+SITE-00D60EAF0FC=Please, use manual search on this site
+SITE-00B3174DF87=Custom "not found" string match
+SITE-00A40D4D403=Not found
+SITE-00D2152D373=Not found
+SITE-00A21A29B2=Custom "not found" string match
+SITE-00E20C5ABD0=Incorrect HTML page
+SITE-00D10E28456=Incorrect HTML page
+SITE-004C0E8A618=Custom "not found" string match
+SITE-007804B9E4=Please, use manual search on this site
+SITE-00B8089FA76=Please, use manual search on this site
+SITE-0041186C98F=Custom "not found" string match
+SITE-00B30722A76=Custom "not found" string match
+SITE-00E11B6D919=Custom "not found" string match
+SITE-002C1F21F56=Custom "not found" string match
+SITE-00BA07EBE27=Not found
+SITE-0058061893D=Incorrect HTML page
+SITE-00310B6467D=Please, use manual search on this site
+SITE-007804A1EDA=Custom "not found" string match
+SITE-007B1BA91F1=Custom "not found" string match
+SITE-01AA21152=Custom "not found" string match
+SITE-00D51C67E52=Please, use manual search on this site
+SITE-00920D82E2=Incorrect HTML page
+SITE-009602D02E3=Incorrect HTML page
+SITE-00C21B9B1A8=Incorrect HTML page
+SITE-009217EE961=Custom "not found" string match
+SITE-008605A509A=Custom "not found" string match
+SITE-00BC1BAB563=Custom "not found" string match
+SITE-0049146CA1A=Custom "not found" string match
+SITE-00521530970=Not found
+SITE-00DB0678BAA=Not found
+SITE-00990BD7CAB=Incorrect HTML page
+SITE-00C71782E78=Custom "not found" string match
+SITE-00B4168D2DC=Custom "not found" string match
+SITE-00E71E4F95F=Custom "not found" string match
+SITE-00B317CF9A0=Custom "not found" string match
+SITE-0084083F9D1=Custom "not found" string match
+SITE-00731B5698F=Please, use manual search on this site
+SITE-00A802FBBF0=Not found
+SITE-006A0A159DE=Custom "not found" string match
+SITE-0032099C7CC=Incorrect HTML page
+SITE-007310DE455=Incorrect HTML page
+SITE-006A14F6BDB=Custom "not found" string match
+SITE-00D304A177=Incorrect HTML page
+SITE-00D91AA7CC5=Custom "not found" string match
+SITE-00A21A5F5EE=Custom "not found" string match
+SITE-00550B76C58=Custom "not found" string match
+SITE-00C61310A20=Incorrect HTML page
+SITE-00CB179282B=Custom "not found" string match
+SITE-002C16DC620=Incorrect HTML page
+SITE-00E61073905=Custom "not found" string match
+SITE-00D90574FB2=Incorrect HTML page
+SITE-00C10A2B00D=Incorrect HTML page
+SITE-00D90AB0533=Incorrect HTML page
+SITE-00DB14F3DD0=Custom "not found" string match
+SITE-005B088FEFC=Not found
+SITE-001B0BF6E19=Custom "not found" string match
+SITE-0035159B27F=Not found
+SITE-00921B797F1=Custom "not found" string match
+SITE-00920DF827C=Custom "not found" string match
+SITE-0095144DB55=Please, use manual search on this site
+SITE-006A14B4608=Not found
+SITE-00C5126DFD6=Custom "not found" string match
+SITE-0092055FFCF=Incorrect HTML page
+SITE-00E1178EBBD=Incorrect HTML page
+SITE-00B10EB707F=Custom "not found" string match
+SITE-006604C7EAE=Please, use manual search on this site
+SITE-00E21B5766A=Custom "not found" string match
+SITE-0078068C4B6=Custom "not found" string match
+SITE-00D304205C7=Incorrect HTML page
+SITE-001C05BF654=Not found
+SITE-00E5083F2CB=Custom "not found" string match
+SITE-00D11CE8C36=Incorrect HTML page
+SITE-00D31D6331D=Please, use manual search on this site
+SITE-00D50758682=Please, use manual search on this site
+SITE-00DB1226D91=Not found
+SITE-00A21AB421=Custom "not found" string match
+SITE-00520EFA971=Custom "not found" string match
+SITE-00640913F2E=Custom "not found" string match
+SITE-00A40DCE470=Not found
+SITE-00DB06B9338=Not found
+SITE-002B0E69AC6=Custom "not found" string match
+SITE-008408197BB=Please, use manual search on this site
+SITE-001B0D761D1=Not found
+SITE-00640BDE49=Custom "not found" string match
+SITE-006C1A98340=Custom "not found" string match
+SITE-00651E7BD08=Custom "not found" string match
+SITE-009819C0DC0=Not found
+SITE-00B41B3BA2D=Custom "not found" string match
+SITE-00670A34B34=Custom "not found" string match
+SITE-00DB06C9474=Not found
+SITE-00910C7B93A=Custom "not found" string match
+SITE-007510EBB2=Custom "not found" string match
+SITE-00C9033140B=Please, use manual search on this site
+SITE-00DB06BE14D=Not found
+SITE-00B81D6509B=Incorrect HTML page
+SITE-006708900D0=Custom "not found" string match
+SITE-00D905C0DBB=Custom "not found" string match
+SITE-00E71532321=Please, use manual search on this site
+SITE-00891A197B8=Not found
+SITE-00981196A24=Custom "not found" string match
+SITE-001C013C2B2=Custom "not found" string match
+SITE-00DC03B44C5=Custom "not found" string match
+SITE-007318D6289=Custom "not found" string match
+SITE-005901F4EDC=Custom "not found" string match
+SITE-00990B1EF66=Custom "not found" string match
+SITE-00461973E8D=Custom "not found" string match
+SITE-00D31D79B85=Custom "not found" string match
+SITE-001B0AB7D57=Custom "not found" string match
+SITE-00B90F8B0B1=Please, use manual search on this site
+SITE-00D408144F=Custom "not found" string match
+SITE-0035166B2BB=Custom "not found" string match
+SITE-005B168A7B8=Custom "not found" string match
+SITE-00BB191FAF9=Incorrect HTML page
+SITE-005319DC359=Custom "not found" string match
+SITE-00DC0AAD306=Custom "not found" string match
+SITE-009A0C2FB60=Custom "not found" string match
+SITE-00BC1AEEA3E=Custom "not found" string match
+SITE-00C810C4774=Custom "not found" string match
+SITE-00891EE8746=Not found
+SITE-005704CF496=Custom "not found" string match
+SITE-00B41627CC4=Custom "not found" string match
+SITE-00611E4D7A3=Incorrect HTML page
+SITE-009918525CA=Custom "not found" string match
+SITE-00A50C7C4EA=Custom "not found" string match
+SITE-00950E6774B=Custom "not found" string match
+SITE-0078044665E=Please, use manual search on this site
+SITE-009A02DB43=Custom "not found" string match
+SITE-007C1AC1421=Custom "not found" string match
+SITE-00B4161F4C0=Custom "not found" string match
+SITE-00B4027F612=Custom "not found" string match
+SITE-00831223232=Custom "not found" string match
+SITE-00891E8C2FE=Custom "not found" string match
+SITE-00AA1489FA7=Custom "not found" string match
+SITE-009605AE056=Custom "not found" string match
+SITE-005613D504=Custom "not found" string match
+SITE-0096053F500=Custom "not found" string match
+SITE-00960AB6FC1=Custom "not found" string match
+SITE-00DC0A4891D=Please, use manual search on this site
+SITE-007513BC51F=Custom "not found" string match
+SITE-00A917D48BC=Custom "not found" string match
+SITE-005A16D6126=Please, use manual search on this site
+SITE-00341B842E5=Custom "not found" string match
+SITE-00D70B66380=Custom "not found" string match
+SITE-008505AFE3F=Please, use manual search on this site
+SITE-00DC0AA63B1=Custom "not found" string match
+SITE-00C216B101F=Custom "not found" string match
+SITE-00DC0AA9068=Custom "not found" string match
+SITE-009A01E18A=Custom "not found" string match
+SITE-00C417F7123=Custom "not found" string match
+SITE-00DC0A328D6=Custom "not found" string match
+SITE-00E117CB96C=Custom "not found" string match
+SITE-001C08167C3=Custom "not found" string match
+SITE-00641D93C60=Custom "not found" string match
+SITE-009912936DD=Not found
+SITE-00211945FF5=Not found
+SITE-001C0A4E3C2=Custom "not found" string match
+SITE-006A0ACF979=Custom "not found" string match
+SITE-00DA1F1EE81=Custom "not found" string match
+SITE-00971B6D7C5=Custom "not found" string match
+SITE-00AC0D7008A=Custom "not found" string match
+SITE-00DB1CDF7CC=Incorrect HTML page
+SITE-0073037DB4=Custom "not found" string match
+SITE-00C71F9A111=Custom "not found" string match
+SITE-00E1114C632=Custom "not found" string match
+SITE-003C05507B9=Custom "not found" string match
+SITE-00DC0AB9097=Custom "not found" string match
+SITE-00AA0D5639F=Please, use manual search on this site
+SITE-00DC0AA297A=Custom "not found" string match
+SITE-00E11767F83=Please, use manual search on this site
+SITE-00E117B5EF7=Please, use manual search on this site
+SITE-00E117FFAAD=Incorrect HTML page
+SITE-00D11C9D3C0=Custom "not found" string match
+SITE-00E118357A2=Please, use manual search on this site
+SITE-009302A950F=Custom "not found" string match
+SITE-00A50CD6CA1=Custom "not found" string match
+SITE-00211060C7A=Custom "not found" string match
+SITE-00DA03A2253=Not found
+SITE-00D21960D44=Custom "not found" string match
+SITE-006801E27F2=Incorrect HTML page
+SITE-00D605C3F6F=Please, use manual search on this site
+SITE-00851749970=Custom "not found" string match
+SITE-00DB0E9B03A=Incorrect HTML page
+SITE-00A812D1AB0=Incorrect HTML page
+SITE-00CA037A8CE=Custom "not found" string match
+SITE-004A0C8C41=Custom "not found" string match
+SITE-004A042DE98=Custom "not found" string match
+SITE-0056068BA31=Custom "not found" string match
+SITE-005819EC186=Custom "not found" string match
+SITE-002B06ECFA4=Custom "not found" string match
+SITE-00C60E38F65=Custom "not found" string match
+SITE-00410D51D69=Custom "not found" string match
+SITE-007303D1D39=Custom "not found" string match
+SITE-00650E66B41=Custom "not found" string match
+SITE-007313A42E2=Custom "not found" string match
+SITE-00971A15C6A=Custom "not found" string match
+SITE-008C0C15E07=Not found
+SITE-00B601A1A22=Please, use manual search on this site
+SITE-00D9173A458=Custom "not found" string match
+SITE-005C1CA29EE=Custom "not found" string match
+SITE-00C9158DC2D=Custom "not found" string match
+SITE-00670948FF3=Custom "not found" string match
+SITE-006502DFF86=Custom "not found" string match
+SITE-005A07A1C71=Custom "not found" string match
+SITE-00B11B2D4E6=Please, use manual search on this site
+SITE-00680AD51C7=Custom "not found" string match
+SITE-00AA0C7C352=Please, use manual search on this site
+SITE-00C801E34B2=Incorrect HTML page
+SITE-00E109E55FB=Not found
+SITE-00C71A78E85=Please, use manual search on this site
+SITE-00C10AC5A9F=Not found
+SITE-00B11A7BC48=Please, use manual search on this site
+SITE-00E1092CB99=Custom "not found" string match
+SITE-00D60DD25F5=Custom "not found" string match
+SITE-00DA1F49540=Not found
+SITE-00E716B973E=Custom "not found" string match
+SITE-00E11733380=Please, use manual search on this site
+SITE-008416A0759=Not found
+SITE-00E70E1990C=Please, use manual search on this site
+SITE-005A049AC11=Custom "not found" string match
+SITE-007C0BB9FB3=Not found
+SITE-00B11A2BEA1=Incorrect HTML page
+SITE-00DB0C2DE2=Custom "not found" string match
+SITE-00C403C9176=Not found
+SITE-00E1094E7B0=Custom "not found" string match
+SITE-00B413CC0AF=Not found
+SITE-009206F5F93=Custom "not found" string match
+SITE-00E1181912F=Please, use manual search on this site
+SITE-00E4188F7D8=Custom "not found" string match
+SITE-00951C12DEB=Custom "not found" string match
+SITE-00A10B88CBC=Custom "not found" string match
+SITE-008409CBDB2=Custom "not found" string match
+SITE-007A0BA46C5=Custom "not found" string match
+SITE-00BB096A4B6=Not found
+SITE-004A03E754=Please, use manual search on this site
+SITE-00D80639B7E=Not found
+SITE-00D212A9C35=Not found
+SITE-009A07BF0EF=Not found
+SITE-006212B9A68=Not found
+SITE-00811C83D42=Please, use manual search on this site
+SITE-00E5085023=Not found
+SITE-005B03CDE14=Please, use manual search on this site
+SITE-00D80229B62=Custom "not found" string match
+SITE-00E41842F1B=Please, use manual search on this site
+SITE-00C717B7759=Custom "not found" string match
+SITE-00E31C5232A=Not found
+SITE-001C07C2DD7=Custom "not found" string match
+SITE-00C80AC5E58=Please, use manual search on this site
+SITE-003307BDF28=Custom "not found" string match
+SITE-00611C9C98D=Custom "not found" string match
+SITE-00E51DACEDB=Not found
+SITE-007317C31B9=Please, use manual search on this site
+SITE-00D31DF33D4=Default "not found" string match
+SITE-005B13ED764=Custom "not found" string match
+SITE-00B10E6029B=Not found
+SITE-003A0FABDE8=Custom "not found" string match
+SITE-008401CF192=Custom "not found" string match
+SITE-009303804DE=Custom "not found" string match
+SITE-003C05DDD4=Please, use manual search on this site
+SITE-003A0FE7EA9=Please, use manual search on this site
+SITE-0052042CDE9=Please, use manual search on this site
+SITE-00E6104B51B=Custom "not found" string match
+SITE-00E702F6CD6=Default "not found" string match
+SITE-0024096B567=Please, use manual search on this site
+SITE-008505B798=Custom "not found" string match
+SITE-00D919F61F3=Please, use manual search on this site
+SITE-00DA095A978=Custom "not found" string match
+SITE-00A90766993=Custom "not found" string match
+SITE-00290D9C655=Custom "not found" string match
+SITE-008C0B85563=Custom "not found" string match
+SITE-00A212C4E1A=Custom "not found" string match
+SITE-004B0DB3518=Custom "not found" string match
+SITE-001C0585B85=Custom "not found" string match
+SITE-007806C8698=Custom "not found" string match
+SITE-00E6100676=Please, use manual search on this site
+SITE-009907BCF7=Custom "not found" string match
+SITE-00DA097E141=Custom "not found" string match
+SITE-001B0CBA0BC=Custom "not found" string match
+SITE-00E610CD4A1=Custom "not found" string match
+SITE-00591A56F61=Please, use manual search on this site
+SITE-00CA182EF96=Custom "not found" string match
+SITE-004215B042B=Incorrect HTML page
+SITE-00E6199D24D=Custom "not found" string match
+SITE-00E111BD4E1=Custom "not found" string match
+SITE-00D21BEADE8=Custom "not found" string match
+SITE-009B1C88328=Custom "not found" string match
+SITE-009B19170B2=Please, use manual search on this site
+SITE-002A0FC9607=Not found
+SITE-00430958A87=Custom "not found" string match
+SITE-00C40C7F883=Not found
+SITE-00E312B7F8C=Custom "not found" string match
+SITE-00DB13A99B7=Custom "not found" string match
+SITE-00AA12DD2BA=Please, use manual search on this site
+SITE-00E4189305=Not found
+SITE-00C710E9528=Not found
+SITE-00E702D925B=Custom "not found" string match
+SITE-00B9057FD6C=Incorrect HTML page
+SITE-007C0BDBA17=Custom "not found" string match
+SITE-0066048FACB=Incorrect HTML page
+SITE-00371ABE71B=Custom "not found" string match
+SITE-00C40CF54AD=Not found
+SITE-001C052C9B1=Custom "not found" string match
+SITE-00BC092B834=Not found
+SITE-00D21667DBD=Incorrect HTML page
+SITE-00E211FF13C=Incorrect HTML page
+SITE-00B41622963=Incorrect HTML page
+SITE-00AB1A13558=Incorrect HTML page
+SITE-00DB1CE5942=Custom "not found" string match
+SITE-0062105F9D6=Custom "not found" string match
+SITE-00A10B4B551=Custom "not found" string match
+SITE-00DB1C5C3BF=Custom "not found" string match
+SITE-00E702F7E28=Custom "not found" string match
+SITE-00D30B20A72=Custom "not found" string match
+SITE-0095123A547=Not found
+SITE-008C0B9D5EA=Not found
+SITE-00C1054EE67=Incorrect HTML page
+SITE-008A1B3BE89=Custom "not found" string match
+SITE-00DA1F9F0F3=Not found
+SITE-004807FA64D=Custom "not found" string match
+SITE-00470C6D032=Custom "not found" string match
+SITE-009811E829D=Not found
+SITE-00CB13BC3CB=Incorrect HTML page
+SITE-005A1A88021=Custom "not found" string match
+SITE-00891DA883D=Custom "not found" string match
+SITE-00B81D8E7E1=Custom "not found" string match
+SITE-007A0DC40D8=Custom "not found" string match
+SITE-008318EB0CC=Incorrect HTML page
+SITE-00951CADC61=Custom "not found" string match
+SITE-00421AB88F5=Custom "not found" string match
+SITE-00C911A8053=Please, use manual search on this site
+SITE-004B01EC20C=Custom "not found" string match
+SITE-00C61399325=Not found
+SITE-00891D6C8D6=Not found
+SITE-00971A1E259=Custom "not found" string match
+SITE-003301C41F=Custom "not found" string match
+SITE-00891D401D7=Custom "not found" string match
+SITE-00A10BA3547=Custom "not found" string match
+SITE-00D110FC577=Custom "not found" string match
+SITE-00981144DC5=Not found
+SITE-00C61594021=Custom "not found" string match
+SITE-007902CF545=Custom "not found" string match
+SITE-00561B4CCAB=Custom "not found" string match
+SITE-007315B09FA=Custom "not found" string match
+SITE-00CA08B5DDF=Incorrect HTML page
+SITE-00B51EDDB81=Custom "not found" string match
+SITE-00710B5C095=Please, use manual search on this site
+SITE-00C31442F6E=Not found
+SITE-006A0A12C2D=Not found
+SITE-00C7178169=Incorrect HTML page
+
+[Search Flag]
+SITE-0037047F4A8=NOT FOUND
+SITE-00960136489=MANUAL
+SITE-00C40D1A849=MANUAL
+SITE-00DC0AA4982=MANUAL
+SITE-008C06EEF2D=MANUAL
+SITE-001B19826E2=NOT FOUND
+SITE-003C0EE79A0=MANUAL
+SITE-0088143BE19=FOUND
+SITE-00541547473=NOT FOUND
+SITE-005107C7D15=FOUND
+SITE-00B906664F1=NOT FOUND
+SITE-00B31F916CB=MANUAL
+SITE-003B1DEEB93=MANUAL
+SITE-00210FA919D=NOT SUPPORTED
+SITE-006801C0AD9=NOT SUPPORTED
+SITE-00411BE7FA=NOT SUPPORTED
+SITE-001C09D68C2=NOT SUPPORTED
+SITE-00A31847554=NOT SUPPORTED
+SITE-00E603C934C=NOT SUPPORTED
+SITE-00681C200C6=NOT SUPPORTED
+SITE-00520EB3529=NOT SUPPORTED
+SITE-003607D1F55=NOT SUPPORTED
+SITE-0039022DF45=NOT SUPPORTED
+SITE-00681CE1272=NOT SUPPORTED
+SITE-00481D976F4=NOT SUPPORTED
+SITE-00321CB5644=NOT SUPPORTED
+SITE-00D212FAA13=NOT SUPPORTED
+SITE-00520E6CD80=NOT SUPPORTED
+SITE-0084152C11B=NOT SUPPORTED
+SITE-00520EC200A=NOT SUPPORTED
+SITE-008409671F2=NOT SUPPORTED
+SITE-0042161DBE7=NOT SUPPORTED
+SITE-005B11BBED0=NOT SUPPORTED
+SITE-00611C9AAA7=NOT SUPPORTED
+SITE-0022013A76B=NOT SUPPORTED
+SITE-00881196968=NOT SUPPORTED
+SITE-00D70A28247=NOT SUPPORTED
+SITE-002A0D163BA=NOT SUPPORTED
+SITE-00D1155A093=NOT FOUND (A)
+SITE-009109A90D4=ERROR
+SITE-00610A9F117=NOT FOUND (A)
+SITE-009602F04DC=NOT FOUND (A)
+SITE-00C80E7D644=NOT FOUND (A)
+SITE-00C40BDADAD=NOT FOUND (A)
+SITE-00E7194F7B5=NOT FOUND (A)
+SITE-00D7095224F=ERROR
+SITE-00E807322CF=NOT FOUND
+SITE-006109DAB3C=NOT FOUND (A)
+SITE-00C80EB0CB=NOT FOUND (A)
+SITE-0099032A0BA=MANUAL
+SITE-00C70B572B3=ERROR
+SITE-00C80E310CC=NOT FOUND (A)
+SITE-009408B5C2A=NOT FOUND (A)
+SITE-00E807A26EA=NOT FOUND
+SITE-00571FA560A=NOT FOUND
+SITE-00E80126D8=MANUAL
+SITE-00E807DBA6A=NOT FOUND
+SITE-00C11EF60EA=NOT FOUND (A)
+SITE-00D1161372A=NOT FOUND (A)
+SITE-00C60B5A3D4=NOT FOUND (A)
+SITE-00C60BE90F6=NOT FOUND (A)
+SITE-007317EF8A=ERROR
+SITE-008C1999F85=NOT FOUND (A)
+SITE-0073135C07A=ERROR
+SITE-008B13C688B=NOT FOUND (A)
+SITE-00E1142C67D=NOT FOUND (A)
+SITE-00981B73B6A=NOT FOUND (A)
+SITE-00C913CC857=NOT FOUND (A)
+SITE-00680218DC9=NOT FOUND
+SITE-00C70B5DCE2=NOT FOUND (A)
+SITE-0089033AE71=NOT FOUND (A)
+SITE-007613B673C=NOT FOUND (A)
+SITE-00711E1EC8=NOT FOUND
+SITE-00E50EB4779=NOT FOUND
+SITE-00C70B4D894=NOT FOUND (A)
+SITE-00C914B6DA=NOT FOUND (A)
+SITE-00A40D2B65E=NOT FOUND (A)
+SITE-00A40D4F0C4=NOT FOUND
+SITE-00B11B9EFF4=NOT FOUND (A)
+SITE-00A40D2A62E=NOT FOUND
+SITE-00520F6D50F=ERROR
+SITE-006B0789B72=NOT FOUND
+SITE-00BB12BDFAF=NOT FOUND
+SITE-008C0C280D9=NOT FOUND
+SITE-00520F5E0E0=NOT FOUND
+SITE-008B12EE401=NOT FOUND
+SITE-00C11EFCCC2=NOT FOUND
+SITE-00510E86EB4=ERROR
+SITE-00881AF5C5D=NOT FOUND (A)
+SITE-0024121659C=NOT FOUND (A)
+SITE-00651D40D9C=NOT FOUND (A)
+SITE-002B0825721=NOT FOUND
+SITE-00C80E8BC26=NOT FOUND (A)
+SITE-00D7081F5EF=ERROR
+SITE-008517B70B0=NOT FOUND
+SITE-0024126B33D=NOT FOUND (A)
+SITE-005B1A74AD4=NOT FOUND (A)
+SITE-00A10B1D48A=ERROR
+SITE-009A0F59EF7=NOT FOUND (A)
+SITE-00740B93068=NOT FOUND (A)
+SITE-00610AA1126=NOT FOUND (A)
+SITE-0088122BF4D=NOT FOUND (A)
+SITE-00990484588=NOT FOUND (A)
+SITE-00880EFBBC4=NOT FOUND (A)
+SITE-005C1E6C3FE=NOT FOUND (A)
+SITE-00D719E64C8=NOT FOUND (A)
+SITE-00871F1693A=NOT FOUND (A)
+SITE-00D7098EBCF=NOT FOUND (A)
+SITE-00B71CFA4D9=NOT FOUND (A)
+SITE-00871F9F6F4=NOT FOUND (A)
+SITE-00C919C376D=NOT FOUND (A)
+SITE-00981C1604A=NOT FOUND (A)
+SITE-002B0F5A233=NOT FOUND (A)
+SITE-00C70B3667D=NOT FOUND (A)
+SITE-00981F853E5=NOT FOUND (A)
+SITE-00E41188B1=NOT FOUND (A)
+SITE-008718F2F48=NOT FOUND (A)
+SITE-00E4121E3C2=NOT FOUND (A)
+SITE-008B131CE3B=NOT FOUND (A)
+SITE-008718305CD=NOT FOUND (A)
+SITE-00E419CBE2=NOT FOUND (A)
+SITE-00E41995359=NOT FOUND (A)
+SITE-00860BC7315=NOT FOUND (A)
+SITE-00D80643ECB=ERROR
+SITE-01A12C6278=ERROR
+SITE-00DA092D16=NOT FOUND (A)
+SITE-00860AA6B76=NOT FOUND (A)
+SITE-005C10E6BB=NOT FOUND
+SITE-0056119C548=NOT FOUND
+SITE-00331D99DD4=NOT FOUND
+SITE-001C028BE7B=NOT FOUND
+SITE-00320C6667A=NOT FOUND
+SITE-00DA03B7C3E=NOT FOUND
+SITE-00B3171F1F2=ERROR
+SITE-00B204BE91E=NOT FOUND
+SITE-00DC0A306A5=ERROR
+SITE-00E61099817=ERROR
+SITE-00680E2480C=NOT FOUND
+SITE-00420B78EF8=MANUAL
+SITE-00291692A60=NOT FOUND
+SITE-00B10EC1140=ERROR
+SITE-0099199FD39=NOT FOUND
+SITE-00E702D280=ERROR
+SITE-0091065F5C8=ERROR
+SITE-008717A86FB=NOT FOUND
+SITE-00891E8E361=NOT FOUND (A)
+SITE-00CA09C59FE=MANUAL
+SITE-00D80650DAE=NOT FOUND
+SITE-00971A44306=NOT FOUND
+SITE-00D60DFF970=NOT FOUND
+SITE-001B0E249DF=NOT FOUND
+SITE-00CA0A969A1=ERROR
+SITE-00DA029B941=MANUAL
+SITE-00C40BD793A=NOT FOUND
+SITE-00D30B915FC=ERROR
+SITE-00990B89329=NOT FOUND
+SITE-00A40D6136B=NOT FOUND
+SITE-00D9179D43F=NOT FOUND
+SITE-00971BE1412=MANUAL
+SITE-00D70B7664E=MANUAL
+SITE-00960A53C93=ERROR
+SITE-00711E9BEE3=ERROR
+SITE-00B207FE660=NOT FOUND
+SITE-001B1232127=ERROR
+SITE-007A0991FB=NOT FOUND
+SITE-00971B964C4=ERROR
+SITE-00991998BAE=NOT FOUND
+SITE-00931443FC=NOT FOUND
+SITE-00DA0940CF8=ERROR
+SITE-00C5122C0D5=NOT FOUND
+SITE-00571977B8B=NOT FOUND
+SITE-00C9046BC24=NOT FOUND
+SITE-00DB06C94B0=NOT FOUND
+SITE-007A09B1C23=NOT FOUND
+SITE-008515F1520=ERROR
+SITE-00A611B2AED=MANUAL
+SITE-003313EC8EC=NOT FOUND
+SITE-00D304AF762=MANUAL
+SITE-00E21B5A702=ERROR
+SITE-00C5036E5DE=NOT FOUND
+SITE-00AB0C4CBCF=NOT FOUND
+SITE-0085175A6FB=NOT FOUND (A)
+SITE-00E51EC7146=NOT FOUND
+SITE-00720EF44B=ERROR
+SITE-00D51C6F78C=MANUAL
+SITE-00D60D7EA79=MANUAL
+SITE-008704D5889=NOT FOUND (A)
+SITE-00440B23E3A=NOT FOUND
+SITE-00C71754634=NOT FOUND
+SITE-0042178F3D5=MANUAL
+SITE-0078046C923=MANUAL
+SITE-00B50A77A75=NOT FOUND
+SITE-00841022DD=NOT FOUND
+SITE-00641DF7D22=NOT FOUND
+SITE-008318E5BE=MANUAL
+SITE-0084102DF40=NOT FOUND (A)
+SITE-0076036DA5C=NOT FOUND
+SITE-00A8028291F=NOT FOUND
+SITE-0073039E44=NOT FOUND
+SITE-00971A919E8=MANUAL
+SITE-00531A10E90=NOT FOUND
+SITE-00B20949A9D=NOT FOUND
+SITE-008C0590D59=NOT FOUND
+SITE-008318C7750=ERROR
+SITE-00BC1A8DB92=ERROR
+SITE-00D903599C2=NOT FOUND
+SITE-0099180928=NOT FOUND
+SITE-00B20972EF4=NOT FOUND
+SITE-0028041CD57=NOT FOUND
+SITE-0027186CA29=NOT FOUND
+SITE-008B0ED3AF7=NOT FOUND
+SITE-009918B15B8=ERROR
+SITE-00A40D2DEAD=NOT FOUND
+SITE-00D11FF739E=ERROR
+SITE-005C068F0EF=ERROR
+SITE-00B416B2F6F=NOT FOUND
+SITE-00D9179C0B=NOT FOUND
+SITE-00840FB7B17=NOT FOUND
+SITE-00311657C30=NOT FOUND
+SITE-00BC1A455C8=NOT FOUND
+SITE-00910FC5AEC=NOT FOUND
+SITE-00A30353BE1=NOT FOUND
+SITE-001C0A4EEAC=NOT FOUND
+SITE-00A21A1D057=NOT FOUND (A)
+SITE-00960A9508F=NOT FOUND
+SITE-00E70E7885=MANUAL
+SITE-001B0D1ED7D=NOT FOUND
+SITE-00381B4BBDB=NOT FOUND
+SITE-00611B52E75=ERROR
+SITE-007303BF3F6=NOT FOUND
+SITE-001C045FEA6=NOT FOUND (A)
+SITE-00891D2E030=NOT FOUND
+SITE-0057015BA32=NOT FOUND
+SITE-00840FD6B99=NOT FOUND
+SITE-00C40B1702E=NOT FOUND
+SITE-007A1D5C28F=FOUND (A)
+SITE-00391E7F8E4=NOT FOUND
+SITE-00840E2E2DD=ERROR
+SITE-0073036C889=NOT FOUND
+SITE-009918A984C=ERROR
+SITE-009A01F45F4=NOT FOUND
+SITE-00A40DC944E=NOT FOUND
+SITE-007C1A7A0B6=NOT FOUND
+SITE-00E11CF25EC=NOT FOUND
+SITE-00C91876C8A=MANUAL
+SITE-00850E9035B=ERROR
+SITE-00891D59E9C=NOT FOUND
+SITE-00E30EC9105=MANUAL
+SITE-008B12DD8F2=NOT FOUND
+SITE-00C51C2F7AB=ERROR
+SITE-00DB16CC8FB=FOUND (A)
+SITE-00E21B8CFCF=NOT FOUND
+SITE-003A035FBF8=NOT FOUND
+SITE-0099129CCFE=NOT FOUND
+SITE-00C90C74920=NOT FOUND
+SITE-009912D78EB=NOT FOUND
+SITE-00811673094=NOT FOUND
+SITE-00991217ABF=ERROR
+SITE-0057152E493=NOT FOUND
+SITE-00A81237F01=NOT FOUND
+SITE-00710BE0A30=NOT FOUND
+SITE-001C0493652=ERROR
+SITE-00BA07058F=NOT FOUND (A)
+SITE-00731BE8C75=NOT FOUND
+SITE-00C60F847E0=ERROR
+SITE-00991223A23=NOT FOUND
+SITE-00DB12C1834=ERROR
+SITE-00B90509EA=MANUAL
+SITE-00E51D6117A=NOT FOUND
+SITE-009514ED5D4=NOT FOUND
+SITE-00A60944F3=NOT FOUND
+SITE-00C40CF4AB4=ERROR
+SITE-007303A2415=MANUAL
+SITE-00840B6526D=NOT FOUND
+SITE-00E4186C775=NOT FOUND
+SITE-00BA196EB1=NOT FOUND
+SITE-0096092EECA=ERROR
+SITE-0073156DB55=NOT FOUND
+SITE-00DB0CED5F7=NOT FOUND
+SITE-00DB0CE1CFB=NOT FOUND
+SITE-00DB06799D7=NOT FOUND
+SITE-00DC0423FB3=NOT FOUND
+SITE-00AA051D286=ERROR
+SITE-00D31D5C0BA=ERROR
+SITE-006A14774EC=NOT FOUND
+SITE-003A17E6BE6=ERROR
+SITE-00840BDD46=MANUAL
+SITE-00D21658417=NOT FOUND
+SITE-00AB01FC160=MANUAL
+SITE-00C811876B8=NOT FOUND
+SITE-006708EB09C=NOT FOUND
+SITE-0073159BDDD=NOT FOUND
+SITE-00D903E8A8D=ERROR
+SITE-004504295A2=NOT FOUND
+SITE-008409FCFB5=NOT FOUND
+SITE-00AA0C19B6D=NOT FOUND
+SITE-00D60622DE5=MANUAL
+SITE-00E418ABDB1=ERROR
+SITE-008603FC840=NOT FOUND (A)
+SITE-00D60D6DC8E=NOT FOUND
+SITE-0073106D40F=NOT FOUND
+SITE-00D9123C78D=NOT FOUND
+SITE-00A303F2E30=MANUAL
+SITE-008C0552778=NOT FOUND
+SITE-002219AF5ED=NOT FOUND
+SITE-00D9051483F=NOT FOUND
+SITE-009515DC3EA=NOT FOUND
+SITE-0078043CA30=NOT FOUND
+SITE-0099032D5EF=ERROR
+SITE-00D11C1074A=NOT FOUND
+SITE-00A21AE03BD=ERROR
+SITE-008318673F6=MANUAL
+SITE-00841B8E3E6=NOT FOUND
+SITE-00DB06F384D=NOT FOUND
+SITE-005B088DCB3=NOT FOUND
+SITE-00C515C4D57=NOT FOUND
+SITE-00A611F1AC5=NOT FOUND
+SITE-001C0EE1261=NOT FOUND
+SITE-005A143D873=NOT FOUND
+SITE-00691D2F06D=NOT FOUND
+SITE-0084189B69D=NOT FOUND
+SITE-00C918BDD78=NOT FOUND
+SITE-008409A49B2=NOT FOUND
+SITE-009A02EF3C6=ERROR
+SITE-00991272C6F=NOT FOUND
+SITE-005B0B79272=MANUAL
+SITE-00C612207D5=NOT FOUND
+SITE-00A40DC0749=NOT FOUND
+SITE-001C032D97D=NOT FOUND
+SITE-00971A733C0=NOT FOUND
+SITE-00B11B3CEA8=NOT FOUND (A)
+SITE-00D3049BA68=MANUAL
+SITE-00971A8EFC8=NOT FOUND
+SITE-00E40911449=ERROR
+SITE-00990BB1CC8=ERROR
+SITE-007C05B1DFC=NOT FOUND (A)
+SITE-007C06A28AE=NOT FOUND
+SITE-005C132FB3E=NOT FOUND
+SITE-00B11BE7CE2=NOT FOUND
+SITE-00D60EAF0FC=MANUAL
+SITE-00B3174DF87=NOT FOUND
+SITE-00A40D4D403=NOT FOUND
+SITE-00D2152D373=NOT FOUND
+SITE-00A21A29B2=NOT FOUND
+SITE-00E20C5ABD0=ERROR
+SITE-00D10E28456=ERROR
+SITE-004C0E8A618=NOT FOUND
+SITE-007804B9E4=MANUAL
+SITE-00B8089FA76=MANUAL
+SITE-0041186C98F=NOT FOUND
+SITE-00B30722A76=NOT FOUND
+SITE-00E11B6D919=NOT FOUND
+SITE-002C1F21F56=NOT FOUND
+SITE-00840892E3A=NOT FOUND (A)
+SITE-00BA07EBE27=NOT FOUND (A)
+SITE-0058061893D=ERROR
+SITE-00310B6467D=MANUAL
+SITE-007804A1EDA=NOT FOUND
+SITE-007B1BA91F1=NOT FOUND
+SITE-01AA21152=NOT FOUND
+SITE-00D51C67E52=MANUAL
+SITE-00920D82E2=ERROR
+SITE-009602D02E3=ERROR
+SITE-00C21B9B1A8=ERROR
+SITE-009217EE961=NOT FOUND
+SITE-008605A509A=NOT FOUND
+SITE-00BC1BAB563=NOT FOUND
+SITE-0049146CA1A=NOT FOUND
+SITE-00521530970=NOT FOUND
+SITE-00DB0678BAA=NOT FOUND
+SITE-00990BD7CAB=ERROR
+SITE-00C71782E78=NOT FOUND
+SITE-00B4168D2DC=NOT FOUND
+SITE-00E71E4F95F=NOT FOUND
+SITE-00B317CF9A0=NOT FOUND
+SITE-0084083F9D1=NOT FOUND
+SITE-00731B5698F=MANUAL
+SITE-00A802FBBF0=NOT FOUND
+SITE-006A0A159DE=NOT FOUND
+SITE-0032099C7CC=ERROR
+SITE-007310DE455=ERROR
+SITE-006A14F6BDB=NOT FOUND
+SITE-00D304A177=ERROR
+SITE-00D91AA7CC5=NOT FOUND
+SITE-00A21A5F5EE=NOT FOUND
+SITE-00550B76C58=NOT FOUND
+SITE-00C61310A20=ERROR
+SITE-00CB179282B=NOT FOUND
+SITE-002C16DC620=ERROR
+SITE-00E61073905=NOT FOUND
+SITE-00D90574FB2=ERROR
+SITE-00C10A2B00D=ERROR
+SITE-00D90AB0533=ERROR
+SITE-00DB14F3DD0=NOT FOUND
+SITE-005B088FEFC=NOT FOUND
+SITE-001B0BF6E19=NOT FOUND
+SITE-0035159B27F=NOT FOUND
+SITE-00921B797F1=NOT FOUND
+SITE-00920DF827C=NOT FOUND
+SITE-0095144DB55=MANUAL
+SITE-006A14B4608=NOT FOUND
+SITE-00C5126DFD6=NOT FOUND
+SITE-0092055FFCF=ERROR
+SITE-00E1178EBBD=ERROR
+SITE-00B10EB707F=NOT FOUND
+SITE-006604C7EAE=MANUAL
+SITE-00E21B5766A=NOT FOUND
+SITE-0078068C4B6=NOT FOUND
+SITE-00D304205C7=ERROR
+SITE-001C05BF654=NOT FOUND
+SITE-00E5083F2CB=NOT FOUND
+SITE-00D11CE8C36=ERROR
+SITE-00D31D6331D=MANUAL
+SITE-00D50758682=MANUAL
+SITE-00DB1226D91=NOT FOUND (A)
+SITE-00A21AB421=NOT FOUND
+SITE-00520EFA971=NOT FOUND
+SITE-00640913F2E=NOT FOUND
+SITE-00A40DCE470=NOT FOUND
+SITE-00DB06B9338=NOT FOUND
+SITE-002B0E69AC6=NOT FOUND
+SITE-008408197BB=MANUAL
+SITE-001B0D761D1=NOT FOUND
+SITE-00640BDE49=NOT FOUND
+SITE-006C1A98340=NOT FOUND
+SITE-00651E7BD08=NOT FOUND
+SITE-009819C0DC0=NOT FOUND
+SITE-00B41B3BA2D=NOT FOUND
+SITE-00670A34B34=NOT FOUND
+SITE-00DB06C9474=NOT FOUND
+SITE-00910C7B93A=NOT FOUND
+SITE-007510EBB2=NOT FOUND
+SITE-00C9033140B=MANUAL
+SITE-00DB06BE14D=NOT FOUND
+SITE-00B81D6509B=ERROR
+SITE-006708900D0=NOT FOUND
+SITE-00D905C0DBB=NOT FOUND
+SITE-00E71532321=MANUAL
+SITE-00891A197B8=NOT FOUND
+SITE-00981196A24=NOT FOUND
+SITE-001C013C2B2=NOT FOUND
+SITE-00DC03B44C5=NOT FOUND
+SITE-007318D6289=NOT FOUND
+SITE-005901F4EDC=NOT FOUND
+SITE-00990B1EF66=NOT FOUND
+SITE-00461973E8D=NOT FOUND
+SITE-00D31D79B85=NOT FOUND
+SITE-001B0AB7D57=NOT FOUND
+SITE-00B90F8B0B1=MANUAL
+SITE-00D408144F=NOT FOUND
+SITE-0035166B2BB=NOT FOUND
+SITE-005B168A7B8=NOT FOUND
+SITE-00BB191FAF9=ERROR
+SITE-005319DC359=NOT FOUND
+SITE-00DC0AAD306=NOT FOUND
+SITE-009A0C2FB60=NOT FOUND
+SITE-00BC1AEEA3E=NOT FOUND
+SITE-00C810C4774=NOT FOUND
+SITE-00891EE8746=NOT FOUND
+SITE-005704CF496=NOT FOUND
+SITE-00B41627CC4=NOT FOUND
+SITE-00611E4D7A3=ERROR
+SITE-009918525CA=NOT FOUND
+SITE-00A50C7C4EA=NOT FOUND
+SITE-00950E6774B=NOT FOUND
+SITE-0078044665E=MANUAL
+SITE-009A02DB43=NOT FOUND
+SITE-007C1AC1421=NOT FOUND
+SITE-00B4161F4C0=NOT FOUND
+SITE-00B4027F612=NOT FOUND
+SITE-00831223232=NOT FOUND
+SITE-00891E8C2FE=NOT FOUND
+SITE-00AA1489FA7=NOT FOUND
+SITE-009605AE056=NOT FOUND
+SITE-005613D504=NOT FOUND
+SITE-0096053F500=NOT FOUND
+SITE-00960AB6FC1=NOT FOUND
+SITE-00DC0A4891D=MANUAL
+SITE-007513BC51F=NOT FOUND
+SITE-008717CB1EC=NOT FOUND (A)
+SITE-00A917D48BC=NOT FOUND
+SITE-005A16D6126=MANUAL
+SITE-00341B842E5=NOT FOUND
+SITE-00D70B66380=NOT FOUND
+SITE-008505AFE3F=MANUAL
+SITE-00DC0AA63B1=NOT FOUND
+SITE-00C216B101F=NOT FOUND
+SITE-00DC0AA9068=NOT FOUND
+SITE-009A01E18A=NOT FOUND
+SITE-00C417F7123=NOT FOUND
+SITE-00DC0A328D6=NOT FOUND
+SITE-00E117CB96C=NOT FOUND
+SITE-001C08167C3=NOT FOUND
+SITE-00641D93C60=NOT FOUND
+SITE-009912936DD=NOT FOUND (A)
+SITE-00211945FF5=NOT FOUND
+SITE-001C0A4E3C2=NOT FOUND
+SITE-006A0ACF979=NOT FOUND
+SITE-00DA1F1EE81=NOT FOUND
+SITE-00971B6D7C5=NOT FOUND
+SITE-00AC0D7008A=NOT FOUND
+SITE-00DB1CDF7CC=ERROR
+SITE-0073037DB4=NOT FOUND
+SITE-00C71F9A111=NOT FOUND
+SITE-00E1114C632=NOT FOUND
+SITE-003C05507B9=NOT FOUND
+SITE-00DC0AB9097=NOT FOUND
+SITE-00AA0D5639F=MANUAL
+SITE-00DC0AA297A=NOT FOUND
+SITE-00E11767F83=MANUAL
+SITE-00E117B5EF7=MANUAL
+SITE-00E117FFAAD=ERROR
+SITE-00D11C9D3C0=NOT FOUND
+SITE-00E118357A2=MANUAL
+SITE-009302A950F=NOT FOUND
+SITE-00A50CD6CA1=NOT FOUND
+SITE-00211060C7A=NOT FOUND
+SITE-00DA03A2253=NOT FOUND
+SITE-00D21960D44=NOT FOUND
+SITE-006801E27F2=ERROR
+SITE-00D605C3F6F=MANUAL
+SITE-00851749970=NOT FOUND
+SITE-00DB0E9B03A=ERROR
+SITE-00A812D1AB0=ERROR
+SITE-00CA037A8CE=NOT FOUND
+SITE-004A0C8C41=NOT FOUND
+SITE-004A042DE98=NOT FOUND
+SITE-0056068BA31=NOT FOUND
+SITE-005819EC186=NOT FOUND
+SITE-002B06ECFA4=NOT FOUND
+SITE-008C0A17D0C=NOT FOUND (A)
+SITE-00C60E38F65=NOT FOUND
+SITE-00410D51D69=NOT FOUND
+SITE-007303D1D39=NOT FOUND
+SITE-00650E66B41=NOT FOUND
+SITE-007313A42E2=NOT FOUND
+SITE-00971A15C6A=NOT FOUND
+SITE-008C0C15E07=NOT FOUND
+SITE-00B601A1A22=MANUAL
+SITE-00D9173A458=NOT FOUND
+SITE-005C1CA29EE=NOT FOUND
+SITE-00C9158DC2D=NOT FOUND
+SITE-00670948FF3=NOT FOUND
+SITE-006502DFF86=NOT FOUND
+SITE-005A07A1C71=NOT FOUND
+SITE-00B11B2D4E6=MANUAL
+SITE-00680AD51C7=NOT FOUND
+SITE-00AA0C7C352=MANUAL
+SITE-00C801E34B2=ERROR
+SITE-00E109E55FB=NOT FOUND
+SITE-00C71A78E85=MANUAL
+SITE-00C10AC5A9F=NOT FOUND
+SITE-00B11A7BC48=MANUAL
+SITE-00E1092CB99=NOT FOUND
+SITE-00D60DD25F5=NOT FOUND
+SITE-00DA1F49540=NOT FOUND
+SITE-00E716B973E=NOT FOUND
+SITE-00E11733380=MANUAL
+SITE-008416A0759=NOT FOUND
+SITE-00E70E1990C=MANUAL
+SITE-005A049AC11=NOT FOUND
+SITE-007C0BB9FB3=NOT FOUND
+SITE-00B11A2BEA1=ERROR
+SITE-00DB0C2DE2=NOT FOUND
+SITE-00C403C9176=NOT FOUND (A)
+SITE-00E1094E7B0=NOT FOUND
+SITE-00B413CC0AF=NOT FOUND
+SITE-009206F5F93=NOT FOUND
+SITE-00E1181912F=MANUAL
+SITE-00E4188F7D8=NOT FOUND
+SITE-00951C12DEB=NOT FOUND
+SITE-00A10B88CBC=NOT FOUND
+SITE-008409CBDB2=NOT FOUND
+SITE-007A0BA46C5=NOT FOUND
+SITE-00BB096A4B6=NOT FOUND
+SITE-004A03E754=MANUAL
+SITE-00D80639B7E=NOT FOUND (A)
+SITE-00D212A9C35=NOT FOUND
+SITE-009A07BF0EF=NOT FOUND (A)
+SITE-006212B9A68=NOT FOUND
+SITE-00811C83D42=MANUAL
+SITE-00E5085023=NOT FOUND (A)
+SITE-005B03CDE14=MANUAL
+SITE-00D80229B62=NOT FOUND
+SITE-00E41842F1B=MANUAL
+SITE-00C717B7759=NOT FOUND
+SITE-00E31C5232A=NOT FOUND
+SITE-001C07C2DD7=NOT FOUND
+SITE-00C80AC5E58=MANUAL
+SITE-003307BDF28=NOT FOUND
+SITE-00611C9C98D=NOT FOUND
+SITE-00E51DACEDB=NOT FOUND
+SITE-007317C31B9=MANUAL
+SITE-00D31DF33D4=NOT FOUND (A)
+SITE-005B13ED764=NOT FOUND
+SITE-00B10E6029B=NOT FOUND (A)
+SITE-003A0FABDE8=NOT FOUND
+SITE-008401CF192=NOT FOUND
+SITE-009303804DE=NOT FOUND
+SITE-003C05DDD4=MANUAL
+SITE-003A0FE7EA9=MANUAL
+SITE-0052042CDE9=MANUAL
+SITE-00E6104B51B=NOT FOUND
+SITE-00E702F6CD6=NOT FOUND (A)
+SITE-0024096B567=MANUAL
+SITE-008505B798=NOT FOUND
+SITE-00D919F61F3=MANUAL
+SITE-00DA095A978=NOT FOUND
+SITE-00A90766993=NOT FOUND
+SITE-00290D9C655=NOT FOUND
+SITE-008C0B85563=NOT FOUND
+SITE-00A212C4E1A=NOT FOUND
+SITE-004B0DB3518=NOT FOUND
+SITE-001C0585B85=NOT FOUND
+SITE-007806C8698=NOT FOUND
+SITE-00E6100676=MANUAL
+SITE-009907BCF7=NOT FOUND
+SITE-00DA097E141=NOT FOUND
+SITE-001B0CBA0BC=NOT FOUND
+SITE-00E610CD4A1=NOT FOUND
+SITE-00591A56F61=MANUAL
+SITE-00CA182EF96=NOT FOUND
+SITE-004215B042B=ERROR
+SITE-00E6199D24D=NOT FOUND
+SITE-00960568247=NOT FOUND (A)
+SITE-00E111BD4E1=NOT FOUND
+SITE-00D21BEADE8=NOT FOUND
+SITE-009B1C88328=NOT FOUND
+SITE-009B19170B2=MANUAL
+SITE-002A0FC9607=NOT FOUND
+SITE-00430958A87=NOT FOUND
+SITE-00C40C7F883=NOT FOUND
+SITE-00E312B7F8C=NOT FOUND
+SITE-00DB13A99B7=NOT FOUND
+SITE-00AA12DD2BA=MANUAL
+SITE-00E4189305=NOT FOUND
+SITE-00C710E9528=NOT FOUND
+SITE-00E702D925B=NOT FOUND
+SITE-00B9057FD6C=ERROR
+SITE-007C0BDBA17=NOT FOUND
+SITE-0066048FACB=ERROR
+SITE-00371ABE71B=NOT FOUND
+SITE-00C40CF54AD=NOT FOUND (A)
+SITE-001C052C9B1=NOT FOUND
+SITE-00BC092B834=NOT FOUND
+SITE-00D21667DBD=ERROR
+SITE-00E211FF13C=ERROR
+SITE-00B41622963=ERROR
+SITE-00AB1A13558=ERROR
+SITE-00DB1CE5942=NOT FOUND
+SITE-0062105F9D6=NOT FOUND
+SITE-00A10B4B551=NOT FOUND
+SITE-00DB1C5C3BF=NOT FOUND
+SITE-00E702F7E28=NOT FOUND
+SITE-00D30B20A72=NOT FOUND
+SITE-0095123A547=NOT FOUND
+SITE-008C0B9D5EA=NOT FOUND
+SITE-00C1054EE67=ERROR
+SITE-008A1B3BE89=NOT FOUND
+SITE-00DA1F9F0F3=NOT FOUND
+SITE-004807FA64D=NOT FOUND
+SITE-00470C6D032=NOT FOUND
+SITE-009811E829D=NOT FOUND (A)
+SITE-00CB13BC3CB=ERROR
+SITE-005A1A88021=NOT FOUND
+SITE-00891DA883D=NOT FOUND
+SITE-00B81D8E7E1=NOT FOUND
+SITE-007A0DC40D8=NOT FOUND
+SITE-008318EB0CC=ERROR
+SITE-00951CADC61=NOT FOUND
+SITE-00421AB88F5=NOT FOUND
+SITE-00C911A8053=MANUAL
+SITE-004B01EC20C=NOT FOUND
+SITE-00C61399325=NOT FOUND
+SITE-00951DCC5EA=NOT FOUND (A)
+SITE-00891D6C8D6=NOT FOUND
+SITE-00971A1E259=NOT FOUND
+SITE-003301C41F=NOT FOUND
+SITE-00891D401D7=NOT FOUND
+SITE-00A10BA3547=NOT FOUND
+SITE-00D110FC577=NOT FOUND
+SITE-00981144DC5=NOT FOUND
+SITE-00C61594021=NOT FOUND
+SITE-007902CF545=NOT FOUND
+SITE-00561B4CCAB=NOT FOUND
+SITE-007315B09FA=NOT FOUND
+SITE-009A0268967=NOT FOUND (A)
+SITE-00CA08B5DDF=ERROR
+SITE-00B51EDDB81=NOT FOUND
+SITE-00710B5C095=MANUAL
+SITE-00C31442F6E=NOT FOUND (A)
+SITE-006A0A12C2D=NOT FOUND
+SITE-00C7178169=ERROR
+
+[Program Category]
+SITE-008C06EEF2D=4=$CF$F0$EE$E3$F0$E0$EC$EC$E8$F0$EE$E2$E0$ED$E8$E5
+SITE-0037047F4A8=105=$CF$F0$EE$F7$E8$E9$20$EF$EE$EB$E5$E7$ED$FB$E9$20$E4$EB$FF$20$E1$E8$E7$ED$E5$F1$E0$20$F1$EE$F4$F2
+SITE-00B31F916CB=Windows$5FBusiness$5FPersonal$2DInfo$2DManagers=$A0$A0$20$7C$20$A0$A0$20$7C$A0$2D$20$CB$E8$F7$ED$FB$E5$20$CC$E5$ED$E5$E4$E6$E5$F0$FB
+SITE-005107C7D15=106=$C4$EE$EC$E0$F8$ED$E8$E9$20$EA$EE$EC$EF$FC$FE$F2$E5$F0$3A$3A$CF$EE$EB$E5$E7$ED$EE$F1$F2$E8
+SITE-003C0EE79A0=48=$CF$F0$EE$E3$F0$E0$EC$EC$E8$F0$EE$E2$E0$ED$E8$E5$3A$3A$C4$F0$F3$E3$EE$E5
+SITE-001B19826E2=53=$C1$E8$E7$ED$E5$F1$3A$3A$CF$F0$EE$E3$F0$E0$EC$EC$E8$F0$EE$E2$E0$ED$E8$E5
+SITE-00B906664F1=110=$C4$EE$EC$20$E8$20$F3$E2$EB$E5$F7$E5$ED$E8$FF$3A$3A$C4$F0$F3$E3$EE$E5
+SITE-00541547473=512=$A0$A0$A0$C4$F0$F3$E3$E8$E5
+
+[StatusOverride]
+SITE-00DC0AA4982=Failed
+SITE-001B19826E2=Failed
+
+[Product Listings]
+SITE-0088143BE19=http://ska4ay.ru/s_i/8242-%2525C0%2525EB%2525E3%2525EE%2525F0%2525E8%2525F2%2525EC%2525202.1.html
+SITE-005107C7D15=http://www.1001soft.com/soft/algoritm-3291.html
+SITE-00B31F916CB=http://reviewsoft.ru/Windows/Business/Personal-Info-Managers/Algoritm/
+
+[Dynamic_PAD]
+
+[Autosearch Info]
+SITE-0037047F4A8=%B0]%D7%EB'%13%D4%82%B1^%DEx%D6c7%A8%91%04%EF%DF%95%FE%C1
+SITE-00960136489=%B0]%D7%EB'%13%D4%82%B1^%DEx%D6c7%A8%91%04%EF%DF%95%FE%C1
+SITE-00C40D1A849=%B0]%D7%EB'%13%D2k6D%04h%07`T%B6%0B>%B0%B1%FB%07%EB%85%CFY%FBv%BC>%BD%A2
+SITE-00DC0AA4982=%B0]%D7%EB'%13%D4%82%B1^%DEx%D6c7%A8%91%04%EF%DF%95%FE%C1
+SITE-008C06EEF2D=%B0]%D7%EB'%13%D2k6D%04h%07`T%B6%0B>%B0%B1%FB%07%EA%B1K)v%D0%04\a
+SITE-001B19826E2=%B0]%D7%EB'%13%D4%82%B1^%DEx%D6c7%A8%91%04%EF%DF%95%FE%C1
+SITE-003C0EE79A0=%B0]%D7%EB'%13%D2k6D%04h%07`T%B6%0B>%B0%B1%FB%07%E9a%CCd%DD%A1C%D5%F3%9D
+SITE-0088143BE19=%B0]%D7%EB'%13%D4%82%B1^%DEx%D6c7%A8%91%04%EF%DF%95%FE%C1
+SITE-00541547473=%B0]%D7%EB'%13%D4%82%B1^%DEx%D6c7%A8%91%04%EF%DF%95%FE%C1
+SITE-005107C7D15=%B0]%D7%EB'%13%D4%82%B1^%DEx%D6c7%A8%91%04%EF%DF%95%FE%C1
+SITE-00B906664F1=%B0]%D7%EB'%13%D2k6D%04h%07`T%B6%0B>%B0%B1%FB%07%EB%87lm%C1%9E%99%07%01%CF
+SITE-00B31F916CB=%B0]%D7%EB'%13%D4%82%B1^%DEx%D6c7%A8%91%04%EF%DF%95%FE%C1
+SITE-003B1DEEB93=%B0]%D7%EB'%13%D4%82%B1^%DEx%D6c7%A8%91%04%EF%DF%95%FE%C1
+SITE-00D1155A093=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009109A90D4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00610A9F117=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009602F04DC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C80E7D644=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C40BDADAD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E7194F7B5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D7095224F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E807322CF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006109DAB3C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C80EB0CB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0099032A0BA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C70B572B3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C80E310CC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009408B5C2A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E807A26EA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00571FA560A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E80126D8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E807DBA6A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C11EF60EA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D1161372A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C60B5A3D4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C60BE90F6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007317EF8A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008C1999F85=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0073135C07A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008B13C688B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E1142C67D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00981B73B6A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C913CC857=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00680218DC9=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C70B5DCE2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0089033AE71=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007613B673C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00711E1EC8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E50EB4779=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C70B4D894=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C914B6DA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A40D2B65E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A40D4F0C4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B11B9EFF4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A40D2A62E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00520F6D50F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006B0789B72=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BB12BDFAF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008C0C280D9=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00520F5E0E0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008B12EE401=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C11EFCCC2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00510E86EB4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00881AF5C5D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0024121659C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00651D40D9C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-002B0825721=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C80E8BC26=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D7081F5EF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008517B70B0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0024126B33D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005B1A74AD4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A10B1D48A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009A0F59EF7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00740B93068=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00610AA1126=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0088122BF4D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00990484588=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00880EFBBC4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005C1E6C3FE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D719E64C8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00871F1693A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D7098EBCF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B71CFA4D9=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00871F9F6F4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C919C376D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00981C1604A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-002B0F5A233=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C70B3667D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00981F853E5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E41188B1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008718F2F48=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E4121E3C2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008B131CE3B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008718305CD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E419CBE2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E41995359=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00860BC7315=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D80643ECB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-01A12C6278=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA092D16=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00860AA6B76=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005C10E6BB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0056119C548=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00331D99DD4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C028BE7B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00320C6667A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA03B7C3E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B3171F1F2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B204BE91E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC0A306A5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E61099817=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00680E2480C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00420B78EF8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00291692A60=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B10EC1140=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0099199FD39=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E702D280=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0091065F5C8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008717A86FB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00891E8E361=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00CA09C59FE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D80650DAE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00971A44306=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D60DFF970=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001B0E249DF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00CA0A969A1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA029B941=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C40BD793A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D30B915FC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00990B89329=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A40D6136B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D9179D43F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00971BE1412=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D70B7664E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00960A53C93=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00711E9BEE3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B207FE660=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001B1232127=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007A0991FB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00971B964C4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00991998BAE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00931443FC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA0940CF8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C5122C0D5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00571977B8B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C9046BC24=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB06C94B0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007A09B1C23=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008515F1520=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A611B2AED=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-003313EC8EC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D304AF762=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E21B5A702=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C5036E5DE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AB0C4CBCF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0085175A6FB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E51EC7146=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00720EF44B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D51C6F78C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D60D7EA79=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008704D5889=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00440B23E3A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C71754634=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0042178F3D5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0078046C923=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B50A77A75=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00841022DD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00641DF7D22=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008318E5BE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0084102DF40=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0076036DA5C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A8028291F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0073039E44=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00971A919E8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00531A10E90=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B20949A9D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008C0590D59=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008318C7750=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BC1A8DB92=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D903599C2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0099180928=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B20972EF4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0028041CD57=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0027186CA29=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008B0ED3AF7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009918B15B8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A40D2DEAD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D11FF739E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005C068F0EF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B416B2F6F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D9179C0B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00840FB7B17=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00311657C30=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BC1A455C8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00910FC5AEC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A30353BE1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C0A4EEAC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A21A1D057=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00960A9508F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E70E7885=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001B0D1ED7D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00381B4BBDB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00611B52E75=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007303BF3F6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C045FEA6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00891D2E030=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0057015BA32=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00840FD6B99=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C40B1702E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007A1D5C28F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00391E7F8E4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00840E2E2DD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0073036C889=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009918A984C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009A01F45F4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A40DC944E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007C1A7A0B6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E11CF25EC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C91876C8A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00850E9035B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00891D59E9C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E30EC9105=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008B12DD8F2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C51C2F7AB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB16CC8FB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E21B8CFCF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-003A035FBF8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0099129CCFE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C90C74920=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009912D78EB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00811673094=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00991217ABF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0057152E493=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A81237F01=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00710BE0A30=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C0493652=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BA07058F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00731BE8C75=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C60F847E0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00991223A23=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB12C1834=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B90509EA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E51D6117A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009514ED5D4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A60944F3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C40CF4AB4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007303A2415=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00840B6526D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E4186C775=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BA196EB1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0096092EECA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0073156DB55=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB0CED5F7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB0CE1CFB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB06799D7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC0423FB3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AA051D286=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D31D5C0BA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006A14774EC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-003A17E6BE6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00840BDD46=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D21658417=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AB01FC160=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C811876B8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006708EB09C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0073159BDDD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D903E8A8D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-004504295A2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008409FCFB5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AA0C19B6D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D60622DE5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E418ABDB1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008603FC840=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D60D6DC8E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0073106D40F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D9123C78D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A303F2E30=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008C0552778=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-002219AF5ED=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D9051483F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009515DC3EA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0078043CA30=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0099032D5EF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D11C1074A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A21AE03BD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008318673F6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00841B8E3E6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB06F384D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005B088DCB3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C515C4D57=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A611F1AC5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C0EE1261=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005A143D873=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00691D2F06D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0084189B69D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C918BDD78=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008409A49B2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009A02EF3C6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00991272C6F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005B0B79272=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C612207D5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A40DC0749=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C032D97D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00971A733C0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B11B3CEA8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D3049BA68=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00971A8EFC8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E40911449=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00990BB1CC8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007C05B1DFC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007C06A28AE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005C132FB3E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B11BE7CE2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D60EAF0FC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B3174DF87=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A40D4D403=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D2152D373=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A21A29B2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E20C5ABD0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D10E28456=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-004C0E8A618=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007804B9E4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B8089FA76=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0041186C98F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B30722A76=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E11B6D919=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-002C1F21F56=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00840892E3A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BA07EBE27=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0058061893D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00310B6467D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007804A1EDA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007B1BA91F1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-01AA21152=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D51C67E52=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00920D82E2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009602D02E3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C21B9B1A8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009217EE961=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008605A509A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BC1BAB563=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0049146CA1A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00521530970=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB0678BAA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00990BD7CAB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C71782E78=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B4168D2DC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E71E4F95F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B317CF9A0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0084083F9D1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00731B5698F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A802FBBF0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006A0A159DE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0032099C7CC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007310DE455=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006A14F6BDB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D304A177=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D91AA7CC5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A21A5F5EE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00550B76C58=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C61310A20=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00CB179282B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-002C16DC620=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E61073905=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D90574FB2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C10A2B00D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D90AB0533=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB14F3DD0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005B088FEFC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001B0BF6E19=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0035159B27F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00921B797F1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00920DF827C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0095144DB55=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006A14B4608=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C5126DFD6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0092055FFCF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E1178EBBD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B10EB707F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006604C7EAE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E21B5766A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0078068C4B6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D304205C7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C05BF654=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E5083F2CB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D11CE8C36=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D31D6331D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D50758682=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB1226D91=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A21AB421=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00520EFA971=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00640913F2E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A40DCE470=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB06B9338=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-002B0E69AC6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008408197BB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001B0D761D1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00640BDE49=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006C1A98340=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00651E7BD08=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009819C0DC0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B41B3BA2D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00670A34B34=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB06C9474=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00910C7B93A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007510EBB2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C9033140B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB06BE14D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B81D6509B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006708900D0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D905C0DBB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E71532321=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00891A197B8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00981196A24=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C013C2B2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC03B44C5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007318D6289=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005901F4EDC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00990B1EF66=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00461973E8D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D31D79B85=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001B0AB7D57=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B90F8B0B1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D408144F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0035166B2BB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005B168A7B8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BB191FAF9=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005319DC359=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC0AAD306=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009A0C2FB60=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BC1AEEA3E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C810C4774=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00891EE8746=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005704CF496=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B41627CC4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00611E4D7A3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009918525CA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A50C7C4EA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00950E6774B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0078044665E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009A02DB43=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007C1AC1421=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B4161F4C0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B4027F612=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00831223232=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00891E8C2FE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AA1489FA7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009605AE056=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005613D504=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0096053F500=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00960AB6FC1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC0A4891D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007513BC51F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008717CB1EC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A917D48BC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005A16D6126=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00341B842E5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D70B66380=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008505AFE3F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC0AA63B1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C216B101F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC0AA9068=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009A01E18A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C417F7123=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC0A328D6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E117CB96C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C08167C3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00641D93C60=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009912936DD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00211945FF5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C0A4E3C2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006A0ACF979=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA1F1EE81=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00971B6D7C5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AC0D7008A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB1CDF7CC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0073037DB4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C71F9A111=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E1114C632=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-003C05507B9=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC0AB9097=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AA0D5639F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DC0AA297A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E11767F83=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E117B5EF7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E117FFAAD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D11C9D3C0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E118357A2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009302A950F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A50CD6CA1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00211060C7A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA03A2253=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D21960D44=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006801E27F2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D605C3F6F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00851749970=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB0E9B03A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A812D1AB0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00CA037A8CE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-004A0C8C41=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-004A042DE98=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0056068BA31=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005819EC186=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-002B06ECFA4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008C0A17D0C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C60E38F65=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00410D51D69=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007303D1D39=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00650E66B41=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007313A42E2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00971A15C6A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008C0C15E07=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B601A1A22=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D9173A458=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005C1CA29EE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C9158DC2D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00670948FF3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006502DFF86=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005A07A1C71=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B11B2D4E6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00680AD51C7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AA0C7C352=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C801E34B2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E109E55FB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C71A78E85=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C10AC5A9F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B11A7BC48=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E1092CB99=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D60DD25F5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA1F49540=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E716B973E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E11733380=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008416A0759=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E70E1990C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005A049AC11=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007C0BB9FB3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B11A2BEA1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB0C2DE2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C403C9176=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E1094E7B0=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B413CC0AF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009206F5F93=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E1181912F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E4188F7D8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00951C12DEB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A10B88CBC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008409CBDB2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007A0BA46C5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BB096A4B6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-004A03E754=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D80639B7E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D212A9C35=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009A07BF0EF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006212B9A68=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00811C83D42=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E5085023=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005B03CDE14=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D80229B62=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E41842F1B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C717B7759=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E31C5232A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C07C2DD7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C80AC5E58=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-003307BDF28=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00611C9C98D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E51DACEDB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007317C31B9=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D31DF33D4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005B13ED764=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B10E6029B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-003A0FABDE8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008401CF192=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009303804DE=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-003C05DDD4=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-003A0FE7EA9=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0052042CDE9=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E6104B51B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E702F6CD6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0024096B567=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008505B798=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D919F61F3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA095A978=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A90766993=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00290D9C655=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008C0B85563=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A212C4E1A=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-004B0DB3518=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C0585B85=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007806C8698=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E6100676=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009907BCF7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA097E141=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001B0CBA0BC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E610CD4A1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00591A56F61=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00CA182EF96=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-004215B042B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E6199D24D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00960568247=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E111BD4E1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D21BEADE8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009B1C88328=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009B19170B2=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-002A0FC9607=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00430958A87=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C40C7F883=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E312B7F8C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB13A99B7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AA12DD2BA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E4189305=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C710E9528=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E702D925B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B9057FD6C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007C0BDBA17=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0066048FACB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00371ABE71B=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C40CF54AD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-001C052C9B1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00BC092B834=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D21667DBD=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E211FF13C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B41622963=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00AB1A13558=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB1CE5942=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0062105F9D6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A10B4B551=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DB1C5C3BF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00E702F7E28=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D30B20A72=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-0095123A547=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008C0B9D5EA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C1054EE67=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008A1B3BE89=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00DA1F9F0F3=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-004807FA64D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00470C6D032=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009811E829D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00CB13BC3CB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-005A1A88021=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00891DA883D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B81D8E7E1=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007A0DC40D8=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-008318EB0CC=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00951CADC61=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00421AB88F5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C911A8053=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-004B01EC20C=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C61399325=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00951DCC5EA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00891D6C8D6=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00971A1E259=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-003301C41F=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00891D401D7=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00A10BA3547=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00D110FC577=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00981144DC5=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C61594021=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007902CF545=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00561B4CCAB=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-007315B09FA=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-009A0268967=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00CA08B5DDF=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00B51EDDB81=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00710B5C095=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C31442F6E=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-006A0A12C2D=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+SITE-00C7178169=%B0]%D7%EB'%13%D2n%A8%AD%96%15%BC%FC%97uC%C3%BD%99LT=
+
+[ASBM Info]
+Site Categories=General Shareware;Web Directories;News Feed Directories;Search Engines;Affiliates Only;Business;Education;Freeware;Graphics Software only;Messaging;Multimedia;Software Development;Web Development
+Site Languages=Russian
+Verification Index=41861
+
+[Last ASBM Result]
+SITE-00960136489=L/RS=1%0D%0AL/RSTR=OK%0D%0AL/RD=4%0D%0AL/D=10-08-2014 23:37:01%0D%0AL/Ver=2.7%0D%0AL/Status=1%0D%0AL/Result=0%0D%0A
+SITE-00DC0AA4982=L/RS=2%0D%0AL/RSTR=%25D0%25A1%25D0%25B0%25D0%25B9%25D1%2582 %25D0%25BF%25D1%2580%25D0%25BE%25D0%25BF%25D1%2583%25D1%2589%25D0%25B5%25D0%25BD:  Publication in the Global PAD Repository (http://repository.appvisor.com/) is required.%0D%0AL/RD=0%0D%0AL/D=10-08-2014 23:37:11%0D%0AL/Ver=2.7%0D%0AL/Status=2%0D%0AL/Result=100%0D%0A
+SITE-00C40D1A849=L/RS=1%0D%0AL/RSTR=OK%0D%0AL/RD=16%0D%0AL/D=10-08-2014 23:04:37%0D%0AL/Ver=2.7%0D%0AL/Status=1%0D%0AL/Result=0%0D%0A
+SITE-003B1DEEB93=L/RS=2%0D%0AL/RSTR=%25D0%259D%25D0%25B5%25D1%2583%25D0%25B4%25D0%25B0%25D1%2587%25D0%25BD%25D0%25B0%25D1%258F %25D0%25BF%25D0%25BE%25D0%25BF%25D1%258B%25D1%2582%25D0%25BA%25D0%25B0 %25D0%25B0%25D0%25B2%25D1%2582%25D0%25BE%25D1%2580%25D0%25B8%25D0%25B7%25D0%25B0%25D1%2586%25D0%25B8%25D0%25B8.  %25D0%259D%25D0%25B5%25D0%25BE%25D0%25B1%25D1%2585%25D0%25BE%25D0%25B4%25D0%25B8%25D0%25BC %25D0%25BB%25D0%25BE%25D0%25B3%25D0%25B8%25D0%25BD %25D0%25B8 %25D0%25BF%25D0%25B0%25D1%2580%25D0%25BE%25D0%25BB%25D1%258C %25D0%25B4%25D0%25BB%25D1%258F %25D0%25B4%25D0%25B0%25D0%25BD%25D0%25BD%25D0%25BE%25D0%25B3%25D0%25BE %25D1%2581%25D0%25B0%25D0%25B9%25D1%2582%25D0%25B0.%250D%250A%25D0%259F%25D0%25BE%25D0%25B6%25D0%25B0%25D0%25BB%25D1%2583%25D0%25B9%25D1%2581%25D1%2582%25D0%25B0, %25D1%2581%25D0%25BE%25D0%25B7%25D0%25B4%25D0%25B0%25D0%25B9%25D1%2582%25D0%25B5 %25D0%25B0%25D0%25BA%25D0%25BA%25D0%25B0%25D1%2583%25D0%25BD%25D1%2582 %25D1%2581%25D0%25B0%25D0%25BC%25D0%25BE%25D1%2581%25D1%2582%25D0%25BE%25D1%258F%25D1%2582%25D0%25B5%25D0%25BB%25D1%258C%25D0%25BD%25D0%25BE %25D0%25B8%25D0%25BB%25D0%25B8 %25D0%25B2%25D0%25B2%25D0%25B5%25D0%25B4%25D0%25B8%25D1%2582%25D0%25B5 %25D0%25BB%25D0%25BE%25D0%25B3%25D0%25B8%25D0%25BD %25D0%25B8 %25D0%25BF%25D0%25B0%25D1%2580%25D0%25BE%25D0%25BB%25D1%258C, %25D0%25B5%25D1%2581%25D0%25BB%25D0%25B8%250D%250A%25D0%25B0%25D0%25BA%25D0%25BA%25D0%25B0%25D1%2583%25D0%25BD%25D1%2582 %25D1%2583%25D0%25B6%25D0%25B5 %25D1%2581%25D1%2583%25D1%2589%25D0%25B5%25D1%2581%25D1%2582%25D0%25B2%25D1%2583%25D0%25B5%25D1%2582. %25D0%259F%25D0%25BE%25D1%2581%25D0%25BB%25D0%25B5 %25D1%258D%25D1%2582%25D0%25BE%25D0%25B3%25D0%25BE %25D0%25BF%25D0%25BE%25D0%25B2%25D1%2582%25D0%25BE%25D1%2580%25D0%25B8%25D1%2582%25D0%25B5 %25D0%25B7%25D0%25B0%25D0%25BF%25D1%2583%25D1%2581%25D0%25BA %25D0%2592%25D0%25B8%25D0%25B7%25D0%25B0%25D1%2580%25D0%25B4%25D0%25B0. %0D%0AL/RD=64%0D%0AL/D=10-08-2014 23:38:08%0D%0AL/Ver=2.7%0D%0AL/Status=2%0D%0AL/Result=36%0D%0A
+SITE-00541547473=L/RS=1%0D%0AL/RSTR=OK%0D%0AL/RD=4%0D%0AL/D=10-08-2014 23:37:19%0D%0AL/Ver=2.7%0D%0AL/Status=1%0D%0AL/Result=0%0D%0A
+SITE-008C06EEF2D=L/RS=1%0D%0AL/RSTR=OK%0D%0AL/RD=16%0D%0AL/D=10-08-2014 23:04:50%0D%0AL/Ver=2.7%0D%0AL/Status=1%0D%0AL/Result=0%0D%0A
+SITE-00B906664F1=L/RS=1%0D%0AL/RSTR=OK%0D%0AL/RD=4%0D%0AL/D=10-08-2014 23:05:05%0D%0AL/Ver=2.7%0D%0AL/Status=1%0D%0AL/Result=0%0D%0A
+SITE-0037047F4A8=L/RS=-1%0D%0AL/RSTR=%25D0%259F%25D1%2580%25D0%25B5%25D1%2580%25D0%25B2%25D0%25B0%25D0%25BD%25D0%25BE. %25D0%259D%25D0%25B5%25D1%2580%25D0%25B0%25D1%2581%25D0%25BF%25D0%25BE%25D0%25B7%25D0%25BD%25D0%25B0%25D0%25B2%25D0%25B0%25D0%25B5%25D0%25BC%25D1%258B%25D0%25B9 %25D0%25BE%25D1%2582%25D0%25B2%25D0%25B5%25D1%2582 %25D1%2581%25D0%25B0%25D0%25B9%25D1%2582%25D0%25B0. %25D0%25A1%25D0%25BE%25D0%25BE%25D0%25B1%25D1%2589%25D0%25B5%25D0%25BD%25D0%25B8%25D0%25B5 %25D0%25BE%25D0%25B1 %25D0%25BE%25D1%2588%25D0%25B8%25D0%25B1%25D0%25BA%25D0%25B5%250D%250A%25D0%25B4%25D0%25BE%25D0%25B1%25D0%25B0%25D0%25B2%25D0%25BB%25D0%25B5%25D0%25BD%25D0%25BE %25D0%25B2 %25D0%25BB%25D0%25BE%25D0%25B3 %25D0%25B8 %25D0%25B1%25D1%2583%25D0%25B4%25D0%25B5%25D1%2582 %25D0%25BF%25D1%2580%25D0%25BE%25D0%25B2%25D0%25B5%25D1%2580%25D0%25B5%25D0%25BD%25D0%25BE %25D1%2580%25D0%25B0%25D0%25B7%25D1%2580%25D0%25B0%25D0%25B1%25D0%25BE%25D1%2582%25D1%2587%25D0%25B8%25D0%25BA%25D0%25B0%25D0%25BC%25D0%25B8.%0D%0AL/RD=0%0D%0AL/D=10-08-2014 23:38:49%0D%0AL/Ver=2.7%0D%0AL/Status=2%0D%0AL/Result=21%0D%0A
+SITE-00B31F916CB=L/RS=1%0D%0AL/RSTR=OK%0D%0AL/RD=8%0D%0AL/D=10-08-2014 23:06:05%0D%0AL/Ver=2.7%0D%0AL/Status=1%0D%0AL/Result=0%0D%0A
+SITE-0088143BE19=L/RS=2%0D%0AL/RSTR=%25D0%259D%25D0%25B5%25D1%2583%25D0%25B4%25D0%25B0%25D1%2587%25D0%25BD%25D0%25B0%25D1%258F %25D0%25BF%25D0%25BE%25D0%25BF%25D1%258B%25D1%2582%25D0%25BA%25D0%25B0 %25D0%25B0%25D0%25B2%25D1%2582%25D0%25BE%25D1%2580%25D0%25B8%25D0%25B7%25D0%25B0%25D1%2586%25D0%25B8%25D0%25B8 %25D0%25B8 %25D0%25B7%25D0%25B0%25D0%25BF%25D1%2580%25D0%25BE%25D1%2581%25D0%25B0 %25D0%25BF%25D0%25B0%25D1%2580%25D0%25BE%25D0%25BB%25D1%258F.  %25D0%2595%25D1%2581%25D1%2582%25D1%258C %25D0%25BF%25D1%2580%25D0%25B8%25D0%25B7%25D0%25BD%25D0%25B0%25D0%25BA%25D0%25B8 %25D0%25BF%25D1%2580%25D0%25B8%25D1%2581%25D1%2583%25D1%2582%25D1%2581%25D1%2582%25D0%25B2%25D0%25B8%25D1%258F %25D0%25B2%25D0%25B0%25D1%2588%25D0%25B5%25D0%25B3%25D0%25BE %25D0%25B0%25D0%25BA%25D0%25BA%25D0%25B0%25D1%2583%25D0%25BD%25D1%2582%25D0%25B0 %25D0%25BD%25D0%25B0 %25D1%2581%25D0%25B0%25D0%25B9%25D1%2582%25D0%25B5. %25D0%259F%25D0%25BE%25D0%25B6%25D0%25B0%25D0%25BB%25D1%2583%25D0%25B9%25D1%2581%25D1%2582%25D0%25B0, %25D0%25BE%25D1%2582%25D0%25BA%25D1%2580%25D0%25BE%25D0%25B9%25D1%2582%25D0%25B5 %25D0%25B4%25D0%25B0%25D0%25BD%25D0%25BD%25D1%258B%25D0%25B9 %25D1%2581%25D0%25B0%25D0%25B9%25D1%2582 %25D0%25B2 %25D0%25BE%25D0%25BA%25D0%25BD%25D0%25B5 Browser %25D0%25B8 %25D1%2580%25D0%25B5%25D1%2588%25D0%25B8%25D1%2582%25D0%25B5 %25D0%25B4%25D0%25B0%25D0%25BD%25D0%25BD%25D1%2583%25D1%258E %25D0%25BF%25D1%2580%25D0%25BE%25D0%25B1%25D0%25BB%25D0%25B5%25D0%25BC%25D1%2583 %25D1%2581%25D0%25B0%25D0%25BC%25D0%25BE%25D1%2581%25D1%2582%25D0%25BE%25D1%258F%25D1%2582%25D0%25B5%25D0%25BB%25D1%258C%25D0%25BD%25D0%25BE.%0D%0AL/RD=0%0D%0AL/D=10-08-2014 23:38:07%0D%0AL/Ver=2.7%0D%0AL/Status=2%0D%0AL/Result=45%0D%0A
+SITE-001B19826E2=L/RS=2%0D%0AL/RSTR=%25D0%25A1%25D0%25B0%25D0%25B9%25D1%2582 %25D0%25BF%25D1%2580%25D0%25BE%25D0%25BF%25D1%2583%25D1%2589%25D0%25B5%25D0%25BD:  This site has for some reason rejected the submission%0D%0AL/RD=128%0D%0AL/D=10-08-2014 23:39:33%0D%0AL/Ver=2.7%0D%0AL/Status=2%0D%0AL/Result=100%0D%0A
+SITE-005107C7D15=L/RS=-1%0D%0AL/RSTR=%25D0%259F%25D1%2580%25D0%25B5%25D1%2580%25D0%25B2%25D0%25B0%25D0%25BD%25D0%25BE. %25D0%259D%25D0%25B5%25D1%2580%25D0%25B0%25D1%2581%25D0%25BF%25D0%25BE%25D0%25B7%25D0%25BD%25D0%25B0%25D0%25B2%25D0%25B0%25D0%25B5%25D0%25BC%25D1%258B%25D0%25B9 %25D0%25BE%25D1%2582%25D0%25B2%25D0%25B5%25D1%2582 %25D1%2581%25D0%25B0%25D0%25B9%25D1%2582%25D0%25B0. %25D0%25A1%25D0%25BE%25D0%25BE%25D0%25B1%25D1%2589%25D0%25B5%25D0%25BD%25D0%25B8%25D0%25B5 %25D0%25BE%25D0%25B1 %25D0%25BE%25D1%2588%25D0%25B8%25D0%25B1%25D0%25BA%25D0%25B5%250D%250A%25D0%25B4%25D0%25BE%25D0%25B1%25D0%25B0%25D0%25B2%25D0%25BB%25D0%25B5%25D0%25BD%25D0%25BE %25D0%25B2 %25D0%25BB%25D0%25BE%25D0%25B3 %25D0%25B8 %25D0%25B1%25D1%2583%25D0%25B4%25D0%25B5%25D1%2582 %25D0%25BF%25D1%2580%25D0%25BE%25D0%25B2%25D0%25B5%25D1%2580%25D0%25B5%25D0%25BD%25D0%25BE %25D1%2580%25D0%25B0%25D0%25B7%25D1%2580%25D0%25B0%25D0%25B1%25D0%25BE%25D1%2582%25D1%2587%25D0%25B8%25D0%25BA%25D0%25B0%25D0%25BC%25D0%25B8.%0D%0AL/RD=0%0D%0AL/D=10-08-2014 23:38:16%0D%0AL/Ver=2.7%0D%0AL/Status=2%0D%0AL/Result=21%0D%0A
+SITE-003C0EE79A0=L/RS=1%0D%0AL/RSTR=OK%0D%0AL/RD=133%0D%0AL/D=10-08-2014 23:10:42%0D%0AL/Ver=2.7%0D%0AL/Status=1%0D%0AL/Result=0%0D%0A
+SITE-003C05DDD4=L/RS=1%0D%0AL/RSTR=OK%0D%0AL/RD=8%0D%0AL/D=10-08-2014 23:37:07%0D%0AL/Ver=2.7%0D%0AL/Status=1%0D%0AL/Result=0%0D%0A
+
