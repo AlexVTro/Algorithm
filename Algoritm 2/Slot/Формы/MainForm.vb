@@ -4394,7 +4394,7 @@ noAccess:
                     Output.Show()
                 End If
                 If IsHttpCompil Then
-                    IO.File.Copy(ProjFile, IO.Path.GetDirectoryName(ProjFile) & "\ErrLog\" & uid_in & ".alg")
+                    IO.File.Copy(ProjFile, IO.Path.GetDirectoryName(ProjFile) & "\ErrLog\" & uid_in & ".alg", True)
                     uid_out = "ErrorCompil" & vbCrLf & vbCrLf & Output.TextBox1.Text.Replace(CompilPath, "")
                 End If
                 If icon <> "" Then IO.File.Delete(icoFl)

@@ -86,7 +86,7 @@ Module HttpCompil
                 MainForm.BuildProgramMenu_Click(Nothing, Nothing)
                 If uid_out.IndexOf("ErrorCompil") = 0 Then ProgressForm.Hide() : GoTo out
             Catch ex As Exception
-                uid_out = "ErrorCompil" : ProgressForm.Hide() : GoTo out
+                uid_out = "ErrorCompil " + ex.Message : ProgressForm.Hide() : GoTo out
             End Try
 
             ' ЗАГРУЖАЕМ НА ФПТ
@@ -99,16 +99,14 @@ Module HttpCompil
 
             ' СООБЩАЕМ ПРОГРАММЕ НОВОЕ ИМЯ ФАЙЛА
 out:
+            Dim strUrl = algDomenRu & SitePath & "/setProject.php?uid_in=" & uid_in
+            Dim strData = uid_out
 
-            Dim str = algDomenRu & SitePath & "/setProject.php?uid_in=" & uid_in & "&uid_out=" & uid_out
-            Dim myHttpWebRequest2 As HttpWebRequest = HttpWebRequest.Create(str)
-            myHttpWebRequest2.Timeout = 3000
-            myHttpWebRequest2.KeepAlive = False
+            Dim myHttpWebRequest2 As HttpWebRequest = PostData(strUrl, strData)
+
             Dim myHttpWebResponse2 As HttpWebResponse = myHttpWebRequest2.GetResponse()
             myHttpWebRequest2.Abort()
             myHttpWebResponse2.Close()
-            Dim a = 1
-
         Catch ex As Exception
             myHttpWebRequest.Abort()
             'myHttpWebRequest2.Abort()
@@ -116,6 +114,28 @@ out:
         End Try
         MainForm.Timer3.Start()
     End Sub
+    Private Function PostData(url As String, data As String) As HttpWebRequest
+        ' create a request
+        Dim request As HttpWebRequest = HttpWebRequest.Create(url)
+        request.Timeout = 3000
+        request.KeepAlive = False
+        request.ProtocolVersion = HttpVersion.Version10
+        request.Method = "POST"
+
+        ' turn our request string into a byte stream
+        Dim postBytes As Byte() = Encoding.UTF8.GetBytes(data)
+
+        ' this is important - make sure you specify type this way
+        request.ContentType = "application/x-www-form-urlencoded"
+        request.ContentLength = postBytes.Length
+
+        ' now send it
+        Using requestStream As Stream = request.GetRequestStream()
+            requestStream.Write(postBytes, 0, postBytes.Length)
+        End Using
+
+        Return request
+    End Function
     Public Sub Upload(ByVal filename As String)
 
         'Dim ftpServerIP As String = "80.90.114.50"
