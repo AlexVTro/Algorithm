@@ -131,6 +131,13 @@
         <string>Slot\Ядро\Run.vb</string>
       </Files>
 	</PathSettingItem>
+	<PathSettingItem Name="Compil" VersionType="Full" Lang="All">
+      <SourcePath>Algoritm 2\Slot\bin\Debug\Data\Compil</SourcePath>
+	  <TargetPath>Data\Compil</TargetPath>
+	  <Files>
+        <string>Export.vbproj</string>
+      </Files>
+	</PathSettingItem>
 	<!-- Http compil getting with hack data from Full -->
 	<PathSettingItem Name="Compil" VersionType="Http" Lang="All">
       <SourcePath>Releases\Unpacked\FullEn\Data</SourcePath>

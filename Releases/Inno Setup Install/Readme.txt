@@ -1,0 +1,1 @@
+Положить в C:\Program Files (x86)
