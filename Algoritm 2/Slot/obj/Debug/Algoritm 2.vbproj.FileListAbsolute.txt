@@ -116,3 +116,7 @@ E:\Work\Alg\Algoritm 2\Slot\bin\Debug\Algoritm 2.pdb
 E:\Work\Alg\Algoritm 2\Slot\bin\Debug\Algoritm 2.xml
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.application
 E:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.vbprojResolveAssemblyReference.cache
+D:\Work\Alg\Algoritm 2\Slot\bin\Debug\Algoritm 2.exe.config
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.exe
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.xml
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.pdb
