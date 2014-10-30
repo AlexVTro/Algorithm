@@ -2,9 +2,9 @@
     Implements IWinSockEvents
 
 #Region " Events "
-    Friend WithEvents wskListen As New Winsock
-    Friend WithEvents wskClient As New Winsock
-    Friend WithEvents wskClients As New WinsockCollection
+    Friend WithEvents wskListen As New Winsock With {.LegacySupport = True}
+    Friend WithEvents wskClient As New Winsock With {.LegacySupport = True}
+    Friend WithEvents wskClients As New WinsockCollection 
     Friend WithEvents dlgSave As New System.Windows.Forms.SaveFileDialog
     Friend WithEvents dlgOpen As New System.Windows.Forms.OpenFileDialog
     ''' <summary>
@@ -134,11 +134,11 @@
 
             Dim key As String = GetUIN()
             wskClients.Accept(e.Client, key)
+            wskClients.Item(key).LegacySupport = True
             SendToClient(key.ToString, CommandSymbol & "Name" & Spl(0) & key.ToString)
             SendToClient(key.ToString, CommandSymbol & "IPs" & Spl(0) & ClientsIPs)
             SendToClient(key.ToString, CommandSymbol & "Names" & Spl(0) & ClientsNames)
             wskClients.Item(key).BufferSize = wskClient.BufferSize
-            'wskClients.Item(key).LegacySupport = True
             'wskClients.Item(key).MaxPendingConnections = 3
             AddHandler wskClients.Item(key).ReceiveProgress, AddressOf wskServer_ReceiveProgress
             'AddHandler wskClients.Item(key).Disposed, AddressOf wskClient_Disposed
@@ -175,6 +175,10 @@
             If obj.GetType() Is GetType(String) Then
                 ' Получаем строку
                 ReceivStr = CStr(obj)
+                Log(trans("Получено") & ": " & """" & ReceivStr & """")
+                RunCommand(ReceivStr)
+            ElseIf obj.GetType() Is GetType(Byte()) Then
+                ReceivStr = System.Text.Encoding.UTF8.GetString(obj)
                 Log(trans("Получено") & ": " & """" & ReceivStr & """")
                 RunCommand(ReceivStr)
             Else
