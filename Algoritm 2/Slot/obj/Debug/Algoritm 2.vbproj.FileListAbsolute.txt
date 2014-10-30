@@ -120,3 +120,36 @@ D:\Work\Alg\Algoritm 2\Slot\bin\Debug\Algoritm 2.exe.config
 D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.exe
 D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.xml
 D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.pdb
+D:\Work\Alg\Algoritm 2\Slot\bin\Debug\Algoritm 2.exe.manifest
+D:\Work\Alg\Algoritm 2\Slot\bin\Debug\Algoritm 2.application
+D:\Work\Alg\Algoritm 2\Slot\bin\Debug\Algoritm 2.exe
+D:\Work\Alg\Algoritm 2\Slot\bin\Debug\Algoritm 2.pdb
+D:\Work\Alg\Algoritm 2\Slot\bin\Debug\Algoritm 2.xml
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.ClientServerMy.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.InternetControl.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.About.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Update.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Edu.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Demo.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.OutputFrm.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Uvedomlenie.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.CodeVE.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.intro.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Master.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Bloks.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.CreateCycle.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.CreateIf.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.CreateDeistv.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Argument.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Arguments.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.ShowObject.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.EditProperty.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.MainForm.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Resources.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Blok.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.OptionsForm.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\WindowsApplication1.Progress.resources
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.vbproj.GenerateResource.Cache
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.TrustInfo.xml
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.exe.manifest
+D:\Work\Alg\Algoritm 2\Slot\obj\Debug\Algoritm 2.application

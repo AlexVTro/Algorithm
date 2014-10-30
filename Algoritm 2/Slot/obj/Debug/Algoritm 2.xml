@@ -6,7 +6,607 @@ Algoritm2
 </name>
 </assembly>
 <members>
-<member name="E:WindowsApplication1.ClientServerMy.ConnectedToServer">
+<member name="E:WindowsApplication1.IWinSockEvents.ConnectedToServer">
+	<summary>
+ Occurs when connection is achieved (client and server).
+ </summary>
+</member><member name="E:WindowsApplication1.IWinSockEvents.CountChanged">
+	<summary>
+ Occurs when the number of items in the collection has changed.
+ </summary>
+</member><member name="E:WindowsApplication1.IWinSockEvents.TextReceived">
+	<summary>
+ Occurs when data arrives on the socket.
+ </summary>
+	<remarks>Raised only after all parts of the data have been collected.</remarks>
+</member><member name="E:WindowsApplication1.IWinSockEvents.Disconnected">
+	<summary>
+ Occurs when disconnected from the remote computer (client and server).
+ </summary>
+</member><member name="E:WindowsApplication1.IWinSockEvents.ErrorReceived">
+	<summary>
+ Occurs when an error is detected in the socket.
+ </summary>
+	<remarks>May also be raised on disconnected (depending on disconnect circumstance).</remarks>
+</member><member name="E:WindowsApplication1.IWinSockEvents.SendTextComplete">
+	<summary>
+ Occurs when sending of data is completed.
+ </summary>
+</member><member name="E:WindowsApplication1.IWinSockEvents.SendProgress">
+	<summary>
+ Occurs when the send buffer has been sent but not all the data has been sent yet.
+ </summary>
+</member><member name="E:WindowsApplication1.IWinSockEvents.StateChanged">
+	<summary>
+ Occurs when the state of the socket changes.
+ </summary>
+</member><member name="F:WindowsApplication1.Deque.llList">
+	<summary>
+ Stores the list of items within this instance.
+ </summary>
+</member><member name="M:WindowsApplication1.Deque.#ctor">
+	<summary>
+ Initializes a new instance of the Deque class that is empty and has the default initial capacity.
+ </summary>
+</member><member name="M:WindowsApplication1.Deque.#ctor(System.Collections.ICollection)">
+	<summary>
+ Initializes a new instance of the Deque class that contains elements copied from the specified collection and has sufficient capacity to accommodate the number of elements copied.
+ </summary>
+	<param name="col">The collection whose elements are copied to the new Deque.</param>
+</member><member name="M:WindowsApplication1.Deque.CopyTo(System.Array,System.Int32)">
+	<summary>
+ Copies the entire Deque to a compatible one-dimensional array, starting at the specified index of the target array.
+ </summary>
+	<param name="array">The one-dimensional Array that is the destination of the elements copied from Deque. The Array must have zero-based indexing.</param>
+	<param name="index">The zero-based index in array at which copying begins.</param>
+</member><member name="P:WindowsApplication1.Deque.Count">
+	<summary>
+ Gets the number of elements actually contained in the Deque.
+ </summary>
+	<value>The number of elements actually contained in the Deque.</value>
+</member><member name="P:WindowsApplication1.Deque.IsSynchronized">
+	<summary>
+ Gets a value indicating whether access to the ICollection is synchronized (thread safe).
+ </summary>
+	<value>true if access to the ICollection is synchronized (thread safe); otherwise, false. In the default implementation of List, this property always returns false.</value>
+</member><member name="P:WindowsApplication1.Deque.SyncRoot">
+	<summary>
+ Gets an object that can be used to synchronize access to the ICollection.
+ </summary>
+	<value>An object that can be used to synchronize access to the ICollection. In the default implementation of List, this property always returns the current instance.</value>
+</member><member name="M:WindowsApplication1.Deque.GetEnumerator">
+	<summary>
+ Returns an enumerator that iterates through the Queue.
+ </summary>
+</member><member name="M:WindowsApplication1.Deque.Clone">
+	<summary>
+ Creates a shallow copy of the Queue.
+ </summary>
+</member><member name="M:WindowsApplication1.Deque.Clear">
+	<summary>
+ Removes all elements from the Deque.
+ </summary>
+</member><member name="M:WindowsApplication1.Deque.Contains(System.Object)">
+	<summary>
+ Determines whether an element is in the Deque.
+ </summary>
+	<param name="obj">The object to locate in the Deque. The value can be a null reference (Nothing in Visual Basic) for reference types.</param>
+</member><member name="M:WindowsApplication1.Deque.Peek``1">
+	<summary>
+ Returns the object at the beginning (top) of the Deque without removing it.
+ </summary>
+	<returns>The object at the beginning (top) of the Deque.</returns>
+</member><member name="M:WindowsApplication1.Deque.ToArray">
+	<summary>
+ Copies the elements of the Deque to a new array.
+ </summary>
+	<returns>An array containing copies of the elements of the Deque.</returns>
+</member><member name="M:WindowsApplication1.Deque.ToString">
+	<summary>
+ Returns a String that represents the current Object.
+ </summary>
+	<returns>A String that represents the current Object.</returns>
+</member><member name="M:WindowsApplication1.Deque.Dequeue``1">
+	<summary>
+ Removes and returns the object at the beginning of the Deque.
+ </summary>
+	<returns>The object that is removed from the beginning of the Deque.</returns>
+	<remarks>Synonymous with Pop().</remarks>
+</member><member name="M:WindowsApplication1.Deque.Enqueue(System.Object)">
+	<summary>
+ Adds an object to the end of the Deque.
+ </summary>
+	<param name="obj">The object to add to the Deque. The value can be a null reference (Nothing in Visual Basic).</param>
+</member><member name="M:WindowsApplication1.Deque.Pop``1">
+	<summary>
+ Removes and returns the object at the top of the Deque.
+ </summary>
+	<returns>The Object removed from the top of the Deque.</returns>
+	<remarks>Synonymous with Dequeue().</remarks>
+</member><member name="M:WindowsApplication1.Deque.Push(System.Object)">
+	<summary>
+ Inserts an object at the top of the Deque.
+ </summary>
+	<param name="obj">The Object to push onto the Deque. The value can be a null reference (Nothing in Visual Basic).</param>
+</member><member name="T:WindowsApplication1.Deque">
+	<summary>
+ Represents both a last-in, first-out (LIFO) and a first-in, first-out (FIFO) non-generic collection of objects.
+ </summary>
+	<remarks>
+ While the System.Collections.Stack and the System.Collections.Queue
+ have seemingly different ways of operating, they can be combined easily
+ by just manipulating the way in which an item in inserted into the list.
+ 
+ This allows the removal from the list to remain the same, whether you
+ are treating this class like a Stack or a Queue.  The also allows the
+ Peek() method to work for both at the same time.
+ 
+ Helping tidbit - Deque is pronounced like "deck."
+ </remarks>
+</member><member name="M:WindowsApplication1.Winsock.RaiseEventSafe(System.Delegate,System.Object[]@)">
+	<summary>
+ Triggers an event declared at module level within a class, form, or document in a thread-safe manner.
+ </summary>
+	<param name="ev">The event to be raised.</param>
+	<param name="args">The arguements for the event.</param>
+</member><member name="E:WindowsApplication1.Winsock.Connected">
+	<summary>
+ Occurs when connection is achieved (client and server).
+ </summary>
+</member><member name="E:WindowsApplication1.Winsock.ConnectionRequest">
+	<summary>
+ Occurs on the server when a client is attempting to connect.
+ </summary>
+	<remarks>Client registers connected at this point. Server must Accept in order for it to be connected.</remarks>
+</member><member name="E:WindowsApplication1.Winsock.DataArrival">
+	<summary>
+ Occurs when data arrives on the socket.
+ </summary>
+	<remarks>Raised only after all parts of the data have been collected.</remarks>
+</member><member name="E:WindowsApplication1.Winsock.Disconnected">
+	<summary>
+ Occurs when disconnected from the remote computer (client and server).
+ </summary>
+</member><member name="E:WindowsApplication1.Winsock.ErrorReceived">
+	<summary>
+ Occurs when an error is detected in the socket.
+ </summary>
+	<remarks>May also be raised on disconnected (depending on disconnect circumstance).</remarks>
+</member><member name="E:WindowsApplication1.Winsock.ReceiveProgress">
+	<summary>
+ Occurs while the receive buffer is being filled with data.
+ </summary>
+</member><member name="E:WindowsApplication1.Winsock.SendComplete">
+	<summary>
+ Occurs when sending of data is completed.
+ </summary>
+</member><member name="E:WindowsApplication1.Winsock.SendProgress">
+	<summary>
+ Occurs when the send buffer has been sent but not all the data has been sent yet.
+ </summary>
+</member><member name="E:WindowsApplication1.Winsock.StateChanged">
+	<summary>
+ Occurs when the state of the socket changes.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.OnConnected(WindowsApplication1.WinsockConnectedEventArgs)">
+	<summary>
+ Raises the Connected event.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.OnConnectionRequest(WindowsApplication1.WinsockConnectionRequestEventArgs)">
+	<summary>
+ Raises the ConnectionRequest event.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.OnDataArrival(WindowsApplication1.WinsockDataArrivalEventArgs)">
+	<summary>
+ Raises the DataArrival event.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.OnDisconnected">
+	<summary>
+ Raises the Disconnected event.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.OnErrorReceived(WindowsApplication1.WinsockErrorReceivedEventArgs)">
+	<summary>
+ Raises the ErrorReceived event.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.OnReceiveProgress(WindowsApplication1.WinsockReceiveProgressEventArgs)">
+	<summary>
+ Raises the ReceiveProgress event.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.OnSendComplete(WindowsApplication1.WinsockSendEventArgs)">
+	<summary>
+ Raises the SendComplete event.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.OnSendProgress(WindowsApplication1.WinsockSendEventArgs)">
+	<summary>
+ Raises the SendProgress event.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.OnStateChanged(WindowsApplication1.WinsockStateChangedEventArgs)">
+	<summary>
+ Raises the StateChanged event.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.ChangeState(WindowsApplication1.WinsockStates)">
+	<summary>
+ Encapsulates the OnStateChanged methods so the AsyncSocket
+ doesn't have to build the EventArgs parameter all the time.
+ </summary>
+	<param name="new_state">The new state of the Winsock.</param>
+</member><member name="M:WindowsApplication1.Winsock.ChangeLocalPort(System.Int32)">
+	<summary>
+ When the port is set dynamically by using port 0, the socket can now update the property of the component.
+ </summary>
+	<param name="new_port">The port we are now listening on.</param>
+</member><member name="P:WindowsApplication1.Winsock.BufferSize">
+	<summary>
+ Gets or sets a value indicating the interal size of the byte buffers.
+ </summary>
+</member><member name="P:WindowsApplication1.Winsock.HasData">
+	<summary>
+ Gets a value indicating whether the buffer has data for retrieval.
+ </summary>
+</member><member name="P:WindowsApplication1.Winsock.LegacySupport">
+	<summary>
+ Gets or sets a value indicating if Legacy support should be used or not.
+ </summary>
+	<remarks>Legacy support is to support older winsock style connections.</remarks>
+</member><member name="P:WindowsApplication1.Winsock.LocalIP">
+	<summary>
+ Gets the local machine's IP address(es).
+ </summary>
+</member><member name="P:WindowsApplication1.Winsock.LocalPort">
+	<summary>
+ Gets or sets a value indicating the port the <see cref="T:WindowsApplication1.Winsock"/> control should listen on.
+ </summary>
+	<remarks>Cannot change while listening, connected, or connecting - but can change while closing.</remarks>
+</member><member name="P:WindowsApplication1.Winsock.MaxPendingConnections">
+	<summary>
+ Gets or sets a value that control the length of the maximum length of the pending connections queue.
+ </summary>
+	<remarks>Cannot change while listening.</remarks>
+</member><member name="P:WindowsApplication1.Winsock.NetworkStream">
+	<summary>
+ Gets a NetworkStream that this Winsock object is based on.
+ </summary>
+</member><member name="P:WindowsApplication1.Winsock.Protocol">
+	<summary>
+ Gets or sets the winsock protocol to use when communicating with the remote computer.
+ </summary>
+</member><member name="P:WindowsApplication1.Winsock.RemoteHost">
+	<summary>
+ Gets or sets a value that determines what remote computer to connect to, or is currently connected to.
+ </summary>
+	<remarks>Can only change if closed or listening.</remarks>
+</member><member name="P:WindowsApplication1.Winsock.RemotePort">
+	<summary>
+ Gets or sets a value that determines which port on the remote computer to connect on, or is currently connected on.
+ </summary>
+	<remarks>Can only change if closed or listening.</remarks>
+</member><member name="P:WindowsApplication1.Winsock.State">
+	<summary>
+ Gets the state of the <see cref="T:WindowsApplication1.Winsock">Winsock</see> control.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.Listen">
+	<summary>
+ Places a <see cref="T:WindowsApplication1.Winsock">Winsock</see> in a listening state.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.Listen(System.Int32)">
+	<summary>
+ Places a <see cref="T:WindowsApplication1.Winsock">Winsock</see> in a listening state.
+ </summary>
+	<param name="port">The port <see cref="T:WindowsApplication1.Winsock">Winsock</see> should listen on.</param>
+</member><member name="M:WindowsApplication1.Winsock.Listen(System.String)">
+	<summary>
+ Places a <see cref="T:WindowsApplication1.Winsock">Winsock</see> in a listening state.
+ </summary>
+	<param name="ip">The IP address the <see cref="T:WindowsApplication1.Winsock">Winsock</see> should listen on.  This must be an ip address.</param>
+</member><member name="M:WindowsApplication1.Winsock.Listen(System.String,System.Int32)">
+	<summary>
+ Places a <see cref="T:WindowsApplication1.Winsock">Winsock</see> in a listening state.
+ </summary>
+	<param name="ip">The IP address the <see cref="T:WindowsApplication1.Winsock">Winsock</see> should listen on.</param>
+	<param name="port">The port <see cref="T:WindowsApplication1.Winsock">Winsock</see> should listen on.</param>
+</member><member name="M:WindowsApplication1.Winsock.Accept(System.Net.Sockets.Socket)">
+	<summary>
+ Accepts a client connect as valid and begins to monitor it for incoming data.
+ </summary>
+	<param name="client">A <see cref="T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</see> that represents the client being accepted.</param>
+</member><member name="M:WindowsApplication1.Winsock.AcceptNew(System.Net.Sockets.Socket)">
+	<summary>
+ Creates an new <see cref="T:WindowsApplication1.Winsock">Winsock</see> and accepts the client connection on it.
+ </summary>
+	<param name="client">A <see cref="T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</see> that represents the client being accepted.</param>
+	<remarks>
+ This was created to be used by the listener, to keep the listener listening while
+ also accepting a connection.
+ </remarks>
+</member><member name="M:WindowsApplication1.Winsock.Close">
+	<summary>
+ Closes an open <see cref="T:WindowsApplication1.Winsock">Winsock</see> connection.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.Connect">
+	<summary>
+ Establishes a connection to a remote host.
+ </summary>
+</member><member name="M:WindowsApplication1.Winsock.Connect(System.String,System.Int32)">
+	<summary>
+ Establishes a connection to a remote host.
+ </summary>
+	<param name="remoteHostOrIP">A <see cref="T:System.String">System.String</see> containing the Hostname or IP address of the remote host.</param>
+	<param name="remote_port">A value indicating the port on the remote host to connect to.</param>
+</member><member name="M:WindowsApplication1.Winsock.Send(System.Object)">
+	<summary>
+ Sends an object to a connected socket on a remote computer.
+ </summary>
+	<param name="data">The object to send.</param>
+	<remarks>
+ The object is first serialized using a BinaryFormatter - unless
+ it is already a byte array, in which case it just sends the byte array.
+ </remarks>
+</member><member name="M:WindowsApplication1.Winsock.SendFile(System.String)">
+	<summary>
+ Sends a file to a connected socket on a remote computer.
+ </summary>
+	<param name="filename">The full path to the file you want to send.</param>
+	<remarks>
+ Creates a special file object to send, so the receiving end knows what to do with it.
+ </remarks>
+</member><member name="M:WindowsApplication1.Winsock.Get">
+	<summary>
+ Gets the next object from the buffer, removing it from the buffer.
+ </summary>
+	<returns>
+ A Deserialized object or if it can't be deserialized the byte array.
+ </returns>
+</member><member name="M:WindowsApplication1.Winsock.Get``1">
+	<summary>
+ Gets the next object from the buffer as the supplied type, removing it from the buffer.
+ </summary>
+	<typeparam name="dataType">The System.Type you wish to have the data returned as.</typeparam>
+	<returns>
+ A Deserialized object converted to the data type you wish.
+ </returns>
+	<remarks>
+ This function was added to make it easier for Option Strict users.
+ It allows for easier conversion instead of the user using CType, DirectCast, or the like.
+ Can throw an error if you specify the wrong type.
+ </remarks>
+</member><member name="M:WindowsApplication1.Winsock.Peek">
+	<summary>
+ Gets the next object from the buffer, leaving it ing the buffer.
+ </summary>
+	<returns>
+ A Deserialized object or if it can't be deserialized the byte array.
+ </returns>
+</member><member name="M:WindowsApplication1.Winsock.Peek``1">
+	<summary>
+ Gets the next object from the buffer as the supplied type, leaving it in the buffer.
+ </summary>
+	<typeparam name="dataType">The System.Type you wish to have the data returned as.</typeparam>
+	<returns>
+ A Deserialized object converted to the data type you wish.
+ </returns>
+	<remarks>
+ This function was added to make it easier for Option Strict users.
+ It allows for easier conversion instead of the user using CType, DirectCast, or the like.
+ Can throw an error if you specify the wrong type.
+ </remarks>
+</member><member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:WindowsApplication1.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:WindowsApplication1.My.Resources.Resources.String1">
+	<summary>
+  Looks up a localized string similar to 0.
+</summary>
+</member><member name="T:WindowsApplication1.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:WindowsApplication1.SharedMethods.RaiseError(WindowsApplication1.IWinsock@,System.String)">
+	<summary>
+ Raises an error on the parent Winsock object.
+ </summary>
+	<param name="iParent">The parent Winsock object to raise the error on.</param>
+	<param name="msg">A String containing a message describing the error being raised.</param>
+</member><member name="M:WindowsApplication1.SharedMethods.RaiseError(WindowsApplication1.IWinsock@,System.String,System.String)">
+	<summary>
+ Raises an error on the parent Winsock object.
+ </summary>
+	<param name="iParent">The parent Winsock object to raise the error on.</param>
+	<param name="msg">A String containing a message describing the error being raised.</param>
+	<param name="details">A String containing extra details describing the error being raised.</param>
+</member><member name="M:WindowsApplication1.SharedMethods.RaiseError(WindowsApplication1.IWinsock@,System.String,System.String,System.Net.Sockets.SocketError)">
+	<summary>
+ Raises an error on the parent Winsock object.
+ </summary>
+	<param name="iParent">The parent Winsock object to raise the error on.</param>
+	<param name="msg">A String containing a message describing the error being raised.</param>
+	<param name="details">A String containing extra details describing the error being raised.</param>
+	<param name="errCode">A value containing the socket's error code.</param>
+</member><member name="M:WindowsApplication1.SharedMethods.ShrinkArray``1(``0[]@,System.Int32)">
+	<summary>
+ Removes items from the beginning of an array.
+ </summary>
+</member><member name="T:WindowsApplication1.SharedMethods">
+	<summary>
+ This call contains shared methods that any class can use.
+ </summary>
+</member><member name="M:WindowsApplication1.WinsockFileData.#ctor">
+	<summary>
+ Initializes a new instance of the WinsockFileData class.
+ </summary>
+</member><member name="P:WindowsApplication1.WinsockFileData.FileName">
+	<summary>
+ Gets or sets the name of the file.
+ </summary>
+</member><member name="P:WindowsApplication1.WinsockFileData.FileData">
+	<summary>
+ Gets or sets the contents of the file.
+ </summary>
+</member><member name="M:WindowsApplication1.WinsockFileData.SaveFile(System.String,System.Boolean)">
+	<summary>
+ Saves the file to the specified path.
+ </summary>
+	<param name="save_path">The full path of the file to save to.</param>
+	<param name="append">Whether you want to append the data to the end of an existing file or not.</param>
+</member><member name="M:WindowsApplication1.WinsockFileData.ReadFile(System.String)">
+	<summary>
+ Reads a file into the WinsockFileData class.
+ </summary>
+	<param name="file_path">The full path of the file you want to read.</param>
+</member><member name="T:WindowsApplication1.WinsockFileData">
+	<summary>
+ A class that wraps a file allowing you to serialize it for transport.
+ </summary>
+</member><member name="M:WindowsApplication1.ObjectPacker.GetBytes(System.Object)">
+	<summary>
+ Serializes an object to a byte array.
+ </summary>
+	<param name="obj">The object to be serialized.</param>
+</member><member name="M:WindowsApplication1.ObjectPacker.GetObject(System.Byte[])">
+	<summary>
+ Deserializes an object from a byte array.
+ </summary>
+	<param name="byt">The byte array from which to obtain the object.</param>
+</member><member name="T:WindowsApplication1.ObjectPacker">
+	<summary>
+ Contains function for serializing/deserializing an object to and from a byte array.
+ </summary>
+</member><member name="E:WindowsApplication1.IWinsock.Connected">
+	<summary>
+ Occurs when connection is achieved (client and server).
+ </summary>
+</member><member name="E:WindowsApplication1.IWinsock.ConnectionRequest">
+	<summary>
+ Occurs on the server when a client is attempting to connect.
+ </summary>
+	<remarks>Client registers connected at this point. Server must Accept in order for it to be connected.</remarks>
+</member><member name="E:WindowsApplication1.IWinsock.DataArrival">
+	<summary>
+ Occurs when data arrives on the socket.
+ </summary>
+	<remarks>Raised only after all parts of the data have been collected.</remarks>
+</member><member name="E:WindowsApplication1.IWinsock.Disconnected">
+	<summary>
+ Occurs when disconnected from the remote computer (client and server).
+ </summary>
+</member><member name="E:WindowsApplication1.IWinsock.ErrorReceived">
+	<summary>
+ Occurs when an error is detected in the socket.
+ </summary>
+	<remarks>May also be raised on disconnected (depending on disconnect circumstance).</remarks>
+</member><member name="E:WindowsApplication1.IWinsock.ReceiveProgress">
+	<summary>
+ Occurs while the receive buffer is being filled with data.
+ </summary>
+</member><member name="E:WindowsApplication1.IWinsock.SendComplete">
+	<summary>
+ Occurs when sending of data is completed.
+ </summary>
+</member><member name="E:WindowsApplication1.IWinsock.SendProgress">
+	<summary>
+ Occurs when the send buffer has been sent but not all the data has been sent yet.
+ </summary>
+</member><member name="E:WindowsApplication1.IWinsock.StateChanged">
+	<summary>
+ Occurs when the state of the socket changes.
+ </summary>
+</member><member name="M:WindowsApplication1.IWinsock.OnConnected(WindowsApplication1.WinsockConnectedEventArgs)">
+	<summary>
+ Raises the Connected event.
+ </summary>
+</member><member name="M:WindowsApplication1.IWinsock.OnConnectionRequest(WindowsApplication1.WinsockConnectionRequestEventArgs)">
+	<summary>
+ Raises the ConnectionRequest event.
+ </summary>
+</member><member name="M:WindowsApplication1.IWinsock.OnDataArrival(WindowsApplication1.WinsockDataArrivalEventArgs)">
+	<summary>
+ Raises the DataArrival event.
+ </summary>
+</member><member name="M:WindowsApplication1.IWinsock.OnDisconnected">
+	<summary>
+ Raises the Disconnected event.
+ </summary>
+</member><member name="M:WindowsApplication1.IWinsock.OnErrorReceived(WindowsApplication1.WinsockErrorReceivedEventArgs)">
+	<summary>
+ Raises the ErrorReceived event.
+ </summary>
+</member><member name="M:WindowsApplication1.IWinsock.OnReceiveProgress(WindowsApplication1.WinsockReceiveProgressEventArgs)">
+	<summary>
+ Raises the ReceiveProgress event.
+ </summary>
+</member><member name="M:WindowsApplication1.IWinsock.OnSendComplete(WindowsApplication1.WinsockSendEventArgs)">
+	<summary>
+ Raises the SendComplete event.
+ </summary>
+</member><member name="M:WindowsApplication1.IWinsock.OnSendProgress(WindowsApplication1.WinsockSendEventArgs)">
+	<summary>
+ Raises the SendProgress event.
+ </summary>
+</member><member name="P:WindowsApplication1.IWinsock.State">
+	<summary>
+ Gets the state of the <see cref="T:WindowsApplication1.Winsock">Winsock</see> control.
+ </summary>
+</member><member name="M:WindowsApplication1.IWinsock.ChangeState(WindowsApplication1.WinsockStates)">
+	<summary>
+ Encapsulates the OnStateChanged methods so the AsyncSocket
+ doesn't have to build the EventArgs parameter all the time.
+ </summary>
+	<param name="new_state">The new state of the Winsock.</param>
+</member><member name="M:WindowsApplication1.IWinsock.ChangeLocalPort(System.Int32)">
+	<summary>
+ When the port is set dynamically by using port 0, the socket can now update the property of the component.
+ </summary>
+	<param name="new_port">The port we are now listening on.</param>
+</member><member name="F:WindowsApplication1.WinsockProtocol.Tcp">
+	<summary>
+ Transmission Control Protocol - a connection oriented protocol.
+ </summary>
+</member><member name="F:WindowsApplication1.WinsockProtocol.Udp">
+	<summary>
+ User Datagram Protocol - a connection-less protocol.
+ </summary>
+</member><member name="T:WindowsApplication1.WinsockProtocol">
+	<summary>
+ Enumeration containing the various supported network protocols.
+ </summary>
+</member><member name="F:WindowsApplication1.WinsockStates.Closed">
+	<summary>
+ The Winsock is closed.
+ </summary>
+</member><member name="F:WindowsApplication1.WinsockStates.Listening">
+	<summary>
+ The Winsock is listening (TCP for connections, UDP for data).
+ </summary>
+</member><member name="F:WindowsApplication1.WinsockStates.ResolvingHost">
+	<summary>
+ The Winsock is attempting the resolve the remote host.
+ </summary>
+</member><member name="F:WindowsApplication1.WinsockStates.HostResolved">
+	<summary>
+ The remote host has been resolved to IP address.
+ </summary>
+</member><member name="F:WindowsApplication1.WinsockStates.Connecting">
+	<summary>
+ The Winsock is attempting to connect to the remote host.
+ </summary>
+</member><member name="F:WindowsApplication1.WinsockStates.Connected">
+	<summary>
+ The Winsock is connected to a remote source (client or server).
+ </summary>
+</member><member name="F:WindowsApplication1.WinsockStates.Closing">
+	<summary>
+ The Winsock is attempting to close the connection.
+ </summary>
+</member><member name="T:WindowsApplication1.WinsockStates">
+	<summary>
+ Enumeration containing the various Winsock states.
+ </summary>
+</member><member name="E:WindowsApplication1.ClientServerMy.ConnectedToServer">
 	<summary>
  Occurs when connection is achieved (client and server).
  </summary>
@@ -40,23 +640,6 @@ Algoritm2
 	<summary>
  Occurs when the state of the socket changes.
  </summary>
-</member><member name="P:WindowsApplication1.My.Resources.Resources.ResourceManager">
-	<summary>
-  Returns the cached ResourceManager instance used by this class.
-</summary>
-</member><member name="P:WindowsApplication1.My.Resources.Resources.Culture">
-	<summary>
-  Overrides the current thread's CurrentUICulture property for all
-  resource lookups using this strongly typed resource class.
-</summary>
-</member><member name="P:WindowsApplication1.My.Resources.Resources.String1">
-	<summary>
-  Looks up a localized string similar to 0.
-</summary>
-</member><member name="T:WindowsApplication1.My.Resources.Resources">
-	<summary>
-  A strongly-typed resource class, for looking up localized strings, etc.
-</summary>
 </member><member name="M:WindowsApplication1.WinsockCollection.#ctor(System.Boolean,System.Boolean)">
 	<summary>
  Initializes a new instance of the WinsockCollection class.
@@ -306,109 +889,6 @@ Algoritm2
 	<summary>
  A collection of Winsock objects.
  </summary>
-</member><member name="F:WindowsApplication1.Deque.llList">
-	<summary>
- Stores the list of items within this instance.
- </summary>
-</member><member name="M:WindowsApplication1.Deque.#ctor">
-	<summary>
- Initializes a new instance of the Deque class that is empty and has the default initial capacity.
- </summary>
-</member><member name="M:WindowsApplication1.Deque.#ctor(System.Collections.ICollection)">
-	<summary>
- Initializes a new instance of the Deque class that contains elements copied from the specified collection and has sufficient capacity to accommodate the number of elements copied.
- </summary>
-	<param name="col">The collection whose elements are copied to the new Deque.</param>
-</member><member name="M:WindowsApplication1.Deque.CopyTo(System.Array,System.Int32)">
-	<summary>
- Copies the entire Deque to a compatible one-dimensional array, starting at the specified index of the target array.
- </summary>
-	<param name="array">The one-dimensional Array that is the destination of the elements copied from Deque. The Array must have zero-based indexing.</param>
-	<param name="index">The zero-based index in array at which copying begins.</param>
-</member><member name="P:WindowsApplication1.Deque.Count">
-	<summary>
- Gets the number of elements actually contained in the Deque.
- </summary>
-	<value>The number of elements actually contained in the Deque.</value>
-</member><member name="P:WindowsApplication1.Deque.IsSynchronized">
-	<summary>
- Gets a value indicating whether access to the ICollection is synchronized (thread safe).
- </summary>
-	<value>true if access to the ICollection is synchronized (thread safe); otherwise, false. In the default implementation of List, this property always returns false.</value>
-</member><member name="P:WindowsApplication1.Deque.SyncRoot">
-	<summary>
- Gets an object that can be used to synchronize access to the ICollection.
- </summary>
-	<value>An object that can be used to synchronize access to the ICollection. In the default implementation of List, this property always returns the current instance.</value>
-</member><member name="M:WindowsApplication1.Deque.GetEnumerator">
-	<summary>
- Returns an enumerator that iterates through the Queue.
- </summary>
-</member><member name="M:WindowsApplication1.Deque.Clone">
-	<summary>
- Creates a shallow copy of the Queue.
- </summary>
-</member><member name="M:WindowsApplication1.Deque.Clear">
-	<summary>
- Removes all elements from the Deque.
- </summary>
-</member><member name="M:WindowsApplication1.Deque.Contains(System.Object)">
-	<summary>
- Determines whether an element is in the Deque.
- </summary>
-	<param name="obj">The object to locate in the Deque. The value can be a null reference (Nothing in Visual Basic) for reference types.</param>
-</member><member name="M:WindowsApplication1.Deque.Peek``1">
-	<summary>
- Returns the object at the beginning (top) of the Deque without removing it.
- </summary>
-	<returns>The object at the beginning (top) of the Deque.</returns>
-</member><member name="M:WindowsApplication1.Deque.ToArray">
-	<summary>
- Copies the elements of the Deque to a new array.
- </summary>
-	<returns>An array containing copies of the elements of the Deque.</returns>
-</member><member name="M:WindowsApplication1.Deque.ToString">
-	<summary>
- Returns a String that represents the current Object.
- </summary>
-	<returns>A String that represents the current Object.</returns>
-</member><member name="M:WindowsApplication1.Deque.Dequeue``1">
-	<summary>
- Removes and returns the object at the beginning of the Deque.
- </summary>
-	<returns>The object that is removed from the beginning of the Deque.</returns>
-	<remarks>Synonymous with Pop().</remarks>
-</member><member name="M:WindowsApplication1.Deque.Enqueue(System.Object)">
-	<summary>
- Adds an object to the end of the Deque.
- </summary>
-	<param name="obj">The object to add to the Deque. The value can be a null reference (Nothing in Visual Basic).</param>
-</member><member name="M:WindowsApplication1.Deque.Pop``1">
-	<summary>
- Removes and returns the object at the top of the Deque.
- </summary>
-	<returns>The Object removed from the top of the Deque.</returns>
-	<remarks>Synonymous with Dequeue().</remarks>
-</member><member name="M:WindowsApplication1.Deque.Push(System.Object)">
-	<summary>
- Inserts an object at the top of the Deque.
- </summary>
-	<param name="obj">The Object to push onto the Deque. The value can be a null reference (Nothing in Visual Basic).</param>
-</member><member name="T:WindowsApplication1.Deque">
-	<summary>
- Represents both a last-in, first-out (LIFO) and a first-in, first-out (FIFO) non-generic collection of objects.
- </summary>
-	<remarks>
- While the System.Collections.Stack and the System.Collections.Queue
- have seemingly different ways of operating, they can be combined easily
- by just manipulating the way in which an item in inserted into the list.
- 
- This allows the removal from the list to remain the same, whether you
- are treating this class like a Stack or a Queue.  The also allows the
- Peek() method to work for both at the same time.
- 
- Helping tidbit - Deque is pronounced like "deck."
- </remarks>
 </member><member name="P:WindowsApplication1.AsyncSocket.RemoteIP">
 	<summary>
  Gets a value containing the remote IP address.
@@ -681,322 +1161,6 @@ Algoritm2
 	<summary>
  A special collection class to act as a byte buffer.
  </summary>
-</member><member name="M:WindowsApplication1.Winsock.RaiseEventSafe(System.Delegate,System.Object[]@)">
-	<summary>
- Triggers an event declared at module level within a class, form, or document in a thread-safe manner.
- </summary>
-	<param name="ev">The event to be raised.</param>
-	<param name="args">The arguements for the event.</param>
-</member><member name="E:WindowsApplication1.Winsock.Connected">
-	<summary>
- Occurs when connection is achieved (client and server).
- </summary>
-</member><member name="E:WindowsApplication1.Winsock.ConnectionRequest">
-	<summary>
- Occurs on the server when a client is attempting to connect.
- </summary>
-	<remarks>Client registers connected at this point. Server must Accept in order for it to be connected.</remarks>
-</member><member name="E:WindowsApplication1.Winsock.DataArrival">
-	<summary>
- Occurs when data arrives on the socket.
- </summary>
-	<remarks>Raised only after all parts of the data have been collected.</remarks>
-</member><member name="E:WindowsApplication1.Winsock.Disconnected">
-	<summary>
- Occurs when disconnected from the remote computer (client and server).
- </summary>
-</member><member name="E:WindowsApplication1.Winsock.ErrorReceived">
-	<summary>
- Occurs when an error is detected in the socket.
- </summary>
-	<remarks>May also be raised on disconnected (depending on disconnect circumstance).</remarks>
-</member><member name="E:WindowsApplication1.Winsock.ReceiveProgress">
-	<summary>
- Occurs while the receive buffer is being filled with data.
- </summary>
-</member><member name="E:WindowsApplication1.Winsock.SendComplete">
-	<summary>
- Occurs when sending of data is completed.
- </summary>
-</member><member name="E:WindowsApplication1.Winsock.SendProgress">
-	<summary>
- Occurs when the send buffer has been sent but not all the data has been sent yet.
- </summary>
-</member><member name="E:WindowsApplication1.Winsock.StateChanged">
-	<summary>
- Occurs when the state of the socket changes.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.OnConnected(WindowsApplication1.WinsockConnectedEventArgs)">
-	<summary>
- Raises the Connected event.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.OnConnectionRequest(WindowsApplication1.WinsockConnectionRequestEventArgs)">
-	<summary>
- Raises the ConnectionRequest event.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.OnDataArrival(WindowsApplication1.WinsockDataArrivalEventArgs)">
-	<summary>
- Raises the DataArrival event.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.OnDisconnected">
-	<summary>
- Raises the Disconnected event.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.OnErrorReceived(WindowsApplication1.WinsockErrorReceivedEventArgs)">
-	<summary>
- Raises the ErrorReceived event.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.OnReceiveProgress(WindowsApplication1.WinsockReceiveProgressEventArgs)">
-	<summary>
- Raises the ReceiveProgress event.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.OnSendComplete(WindowsApplication1.WinsockSendEventArgs)">
-	<summary>
- Raises the SendComplete event.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.OnSendProgress(WindowsApplication1.WinsockSendEventArgs)">
-	<summary>
- Raises the SendProgress event.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.OnStateChanged(WindowsApplication1.WinsockStateChangedEventArgs)">
-	<summary>
- Raises the StateChanged event.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.ChangeState(WindowsApplication1.WinsockStates)">
-	<summary>
- Encapsulates the OnStateChanged methods so the AsyncSocket
- doesn't have to build the EventArgs parameter all the time.
- </summary>
-	<param name="new_state">The new state of the Winsock.</param>
-</member><member name="M:WindowsApplication1.Winsock.ChangeLocalPort(System.Int32)">
-	<summary>
- When the port is set dynamically by using port 0, the socket can now update the property of the component.
- </summary>
-	<param name="new_port">The port we are now listening on.</param>
-</member><member name="P:WindowsApplication1.Winsock.BufferSize">
-	<summary>
- Gets or sets a value indicating the interal size of the byte buffers.
- </summary>
-</member><member name="P:WindowsApplication1.Winsock.HasData">
-	<summary>
- Gets a value indicating whether the buffer has data for retrieval.
- </summary>
-</member><member name="P:WindowsApplication1.Winsock.LegacySupport">
-	<summary>
- Gets or sets a value indicating if Legacy support should be used or not.
- </summary>
-	<remarks>Legacy support is to support older winsock style connections.</remarks>
-</member><member name="P:WindowsApplication1.Winsock.LocalIP">
-	<summary>
- Gets the local machine's IP address(es).
- </summary>
-</member><member name="P:WindowsApplication1.Winsock.LocalPort">
-	<summary>
- Gets or sets a value indicating the port the <see cref="T:WindowsApplication1.Winsock"/> control should listen on.
- </summary>
-	<remarks>Cannot change while listening, connected, or connecting - but can change while closing.</remarks>
-</member><member name="P:WindowsApplication1.Winsock.MaxPendingConnections">
-	<summary>
- Gets or sets a value that control the length of the maximum length of the pending connections queue.
- </summary>
-	<remarks>Cannot change while listening.</remarks>
-</member><member name="P:WindowsApplication1.Winsock.NetworkStream">
-	<summary>
- Gets a NetworkStream that this Winsock object is based on.
- </summary>
-</member><member name="P:WindowsApplication1.Winsock.Protocol">
-	<summary>
- Gets or sets the winsock protocol to use when communicating with the remote computer.
- </summary>
-</member><member name="P:WindowsApplication1.Winsock.RemoteHost">
-	<summary>
- Gets or sets a value that determines what remote computer to connect to, or is currently connected to.
- </summary>
-	<remarks>Can only change if closed or listening.</remarks>
-</member><member name="P:WindowsApplication1.Winsock.RemotePort">
-	<summary>
- Gets or sets a value that determines which port on the remote computer to connect on, or is currently connected on.
- </summary>
-	<remarks>Can only change if closed or listening.</remarks>
-</member><member name="P:WindowsApplication1.Winsock.State">
-	<summary>
- Gets the state of the <see cref="T:WindowsApplication1.Winsock">Winsock</see> control.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.Listen">
-	<summary>
- Places a <see cref="T:WindowsApplication1.Winsock">Winsock</see> in a listening state.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.Listen(System.Int32)">
-	<summary>
- Places a <see cref="T:WindowsApplication1.Winsock">Winsock</see> in a listening state.
- </summary>
-	<param name="port">The port <see cref="T:WindowsApplication1.Winsock">Winsock</see> should listen on.</param>
-</member><member name="M:WindowsApplication1.Winsock.Listen(System.String)">
-	<summary>
- Places a <see cref="T:WindowsApplication1.Winsock">Winsock</see> in a listening state.
- </summary>
-	<param name="ip">The IP address the <see cref="T:WindowsApplication1.Winsock">Winsock</see> should listen on.  This must be an ip address.</param>
-</member><member name="M:WindowsApplication1.Winsock.Listen(System.String,System.Int32)">
-	<summary>
- Places a <see cref="T:WindowsApplication1.Winsock">Winsock</see> in a listening state.
- </summary>
-	<param name="ip">The IP address the <see cref="T:WindowsApplication1.Winsock">Winsock</see> should listen on.</param>
-	<param name="port">The port <see cref="T:WindowsApplication1.Winsock">Winsock</see> should listen on.</param>
-</member><member name="M:WindowsApplication1.Winsock.Accept(System.Net.Sockets.Socket)">
-	<summary>
- Accepts a client connect as valid and begins to monitor it for incoming data.
- </summary>
-	<param name="client">A <see cref="T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</see> that represents the client being accepted.</param>
-</member><member name="M:WindowsApplication1.Winsock.AcceptNew(System.Net.Sockets.Socket)">
-	<summary>
- Creates an new <see cref="T:WindowsApplication1.Winsock">Winsock</see> and accepts the client connection on it.
- </summary>
-	<param name="client">A <see cref="T:System.Net.Sockets.Socket">System.Net.Sockets.Socket</see> that represents the client being accepted.</param>
-	<remarks>
- This was created to be used by the listener, to keep the listener listening while
- also accepting a connection.
- </remarks>
-</member><member name="M:WindowsApplication1.Winsock.Close">
-	<summary>
- Closes an open <see cref="T:WindowsApplication1.Winsock">Winsock</see> connection.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.Connect">
-	<summary>
- Establishes a connection to a remote host.
- </summary>
-</member><member name="M:WindowsApplication1.Winsock.Connect(System.String,System.Int32)">
-	<summary>
- Establishes a connection to a remote host.
- </summary>
-	<param name="remoteHostOrIP">A <see cref="T:System.String">System.String</see> containing the Hostname or IP address of the remote host.</param>
-	<param name="remote_port">A value indicating the port on the remote host to connect to.</param>
-</member><member name="M:WindowsApplication1.Winsock.Send(System.Object)">
-	<summary>
- Sends an object to a connected socket on a remote computer.
- </summary>
-	<param name="data">The object to send.</param>
-	<remarks>
- The object is first serialized using a BinaryFormatter - unless
- it is already a byte array, in which case it just sends the byte array.
- </remarks>
-</member><member name="M:WindowsApplication1.Winsock.SendFile(System.String)">
-	<summary>
- Sends a file to a connected socket on a remote computer.
- </summary>
-	<param name="filename">The full path to the file you want to send.</param>
-	<remarks>
- Creates a special file object to send, so the receiving end knows what to do with it.
- </remarks>
-</member><member name="M:WindowsApplication1.Winsock.Get">
-	<summary>
- Gets the next object from the buffer, removing it from the buffer.
- </summary>
-	<returns>
- A Deserialized object or if it can't be deserialized the byte array.
- </returns>
-</member><member name="M:WindowsApplication1.Winsock.Get``1">
-	<summary>
- Gets the next object from the buffer as the supplied type, removing it from the buffer.
- </summary>
-	<typeparam name="dataType">The System.Type you wish to have the data returned as.</typeparam>
-	<returns>
- A Deserialized object converted to the data type you wish.
- </returns>
-	<remarks>
- This function was added to make it easier for Option Strict users.
- It allows for easier conversion instead of the user using CType, DirectCast, or the like.
- Can throw an error if you specify the wrong type.
- </remarks>
-</member><member name="M:WindowsApplication1.Winsock.Peek">
-	<summary>
- Gets the next object from the buffer, leaving it ing the buffer.
- </summary>
-	<returns>
- A Deserialized object or if it can't be deserialized the byte array.
- </returns>
-</member><member name="M:WindowsApplication1.Winsock.Peek``1">
-	<summary>
- Gets the next object from the buffer as the supplied type, leaving it in the buffer.
- </summary>
-	<typeparam name="dataType">The System.Type you wish to have the data returned as.</typeparam>
-	<returns>
- A Deserialized object converted to the data type you wish.
- </returns>
-	<remarks>
- This function was added to make it easier for Option Strict users.
- It allows for easier conversion instead of the user using CType, DirectCast, or the like.
- Can throw an error if you specify the wrong type.
- </remarks>
-</member><member name="M:WindowsApplication1.ObjectPacker.GetBytes(System.Object)">
-	<summary>
- Serializes an object to a byte array.
- </summary>
-	<param name="obj">The object to be serialized.</param>
-</member><member name="M:WindowsApplication1.ObjectPacker.GetObject(System.Byte[])">
-	<summary>
- Deserializes an object from a byte array.
- </summary>
-	<param name="byt">The byte array from which to obtain the object.</param>
-</member><member name="T:WindowsApplication1.ObjectPacker">
-	<summary>
- Contains function for serializing/deserializing an object to and from a byte array.
- </summary>
-</member><member name="M:WindowsApplication1.WinsockFileData.#ctor">
-	<summary>
- Initializes a new instance of the WinsockFileData class.
- </summary>
-</member><member name="P:WindowsApplication1.WinsockFileData.FileName">
-	<summary>
- Gets or sets the name of the file.
- </summary>
-</member><member name="P:WindowsApplication1.WinsockFileData.FileData">
-	<summary>
- Gets or sets the contents of the file.
- </summary>
-</member><member name="M:WindowsApplication1.WinsockFileData.SaveFile(System.String,System.Boolean)">
-	<summary>
- Saves the file to the specified path.
- </summary>
-	<param name="save_path">The full path of the file to save to.</param>
-	<param name="append">Whether you want to append the data to the end of an existing file or not.</param>
-</member><member name="M:WindowsApplication1.WinsockFileData.ReadFile(System.String)">
-	<summary>
- Reads a file into the WinsockFileData class.
- </summary>
-	<param name="file_path">The full path of the file you want to read.</param>
-</member><member name="T:WindowsApplication1.WinsockFileData">
-	<summary>
- A class that wraps a file allowing you to serialize it for transport.
- </summary>
-</member><member name="M:WindowsApplication1.SharedMethods.RaiseError(WindowsApplication1.IWinsock@,System.String)">
-	<summary>
- Raises an error on the parent Winsock object.
- </summary>
-	<param name="iParent">The parent Winsock object to raise the error on.</param>
-	<param name="msg">A String containing a message describing the error being raised.</param>
-</member><member name="M:WindowsApplication1.SharedMethods.RaiseError(WindowsApplication1.IWinsock@,System.String,System.String)">
-	<summary>
- Raises an error on the parent Winsock object.
- </summary>
-	<param name="iParent">The parent Winsock object to raise the error on.</param>
-	<param name="msg">A String containing a message describing the error being raised.</param>
-	<param name="details">A String containing extra details describing the error being raised.</param>
-</member><member name="M:WindowsApplication1.SharedMethods.RaiseError(WindowsApplication1.IWinsock@,System.String,System.String,System.Net.Sockets.SocketError)">
-	<summary>
- Raises an error on the parent Winsock object.
- </summary>
-	<param name="iParent">The parent Winsock object to raise the error on.</param>
-	<param name="msg">A String containing a message describing the error being raised.</param>
-	<param name="details">A String containing extra details describing the error being raised.</param>
-	<param name="errCode">A value containing the socket's error code.</param>
-</member><member name="M:WindowsApplication1.SharedMethods.ShrinkArray``1(``0[]@,System.Int32)">
-	<summary>
- Removes items from the beginning of an array.
- </summary>
-</member><member name="T:WindowsApplication1.SharedMethods">
-	<summary>
- This call contains shared methods that any class can use.
- </summary>
 </member><member name="M:WindowsApplication1.WinsockErrorReceivedEventArgs.#ctor(System.String)">
 	<summary>
  Initializes a new instance of the WinsockErrorEventArgs class.
@@ -1196,170 +1360,6 @@ Algoritm2
 </member><member name="T:WindowsApplication1.WinsockReceiveProgressEventArgs">
 	<summary>
  Provides data for the Winsock.ReceiveProgress event.
- </summary>
-</member><member name="E:WindowsApplication1.IWinSockEvents.ConnectedToServer">
-	<summary>
- Occurs when connection is achieved (client and server).
- </summary>
-</member><member name="E:WindowsApplication1.IWinSockEvents.CountChanged">
-	<summary>
- Occurs when the number of items in the collection has changed.
- </summary>
-</member><member name="E:WindowsApplication1.IWinSockEvents.TextReceived">
-	<summary>
- Occurs when data arrives on the socket.
- </summary>
-	<remarks>Raised only after all parts of the data have been collected.</remarks>
-</member><member name="E:WindowsApplication1.IWinSockEvents.Disconnected">
-	<summary>
- Occurs when disconnected from the remote computer (client and server).
- </summary>
-</member><member name="E:WindowsApplication1.IWinSockEvents.ErrorReceived">
-	<summary>
- Occurs when an error is detected in the socket.
- </summary>
-	<remarks>May also be raised on disconnected (depending on disconnect circumstance).</remarks>
-</member><member name="E:WindowsApplication1.IWinSockEvents.SendTextComplete">
-	<summary>
- Occurs when sending of data is completed.
- </summary>
-</member><member name="E:WindowsApplication1.IWinSockEvents.SendProgress">
-	<summary>
- Occurs when the send buffer has been sent but not all the data has been sent yet.
- </summary>
-</member><member name="E:WindowsApplication1.IWinSockEvents.StateChanged">
-	<summary>
- Occurs when the state of the socket changes.
- </summary>
-</member><member name="E:WindowsApplication1.IWinsock.Connected">
-	<summary>
- Occurs when connection is achieved (client and server).
- </summary>
-</member><member name="E:WindowsApplication1.IWinsock.ConnectionRequest">
-	<summary>
- Occurs on the server when a client is attempting to connect.
- </summary>
-	<remarks>Client registers connected at this point. Server must Accept in order for it to be connected.</remarks>
-</member><member name="E:WindowsApplication1.IWinsock.DataArrival">
-	<summary>
- Occurs when data arrives on the socket.
- </summary>
-	<remarks>Raised only after all parts of the data have been collected.</remarks>
-</member><member name="E:WindowsApplication1.IWinsock.Disconnected">
-	<summary>
- Occurs when disconnected from the remote computer (client and server).
- </summary>
-</member><member name="E:WindowsApplication1.IWinsock.ErrorReceived">
-	<summary>
- Occurs when an error is detected in the socket.
- </summary>
-	<remarks>May also be raised on disconnected (depending on disconnect circumstance).</remarks>
-</member><member name="E:WindowsApplication1.IWinsock.ReceiveProgress">
-	<summary>
- Occurs while the receive buffer is being filled with data.
- </summary>
-</member><member name="E:WindowsApplication1.IWinsock.SendComplete">
-	<summary>
- Occurs when sending of data is completed.
- </summary>
-</member><member name="E:WindowsApplication1.IWinsock.SendProgress">
-	<summary>
- Occurs when the send buffer has been sent but not all the data has been sent yet.
- </summary>
-</member><member name="E:WindowsApplication1.IWinsock.StateChanged">
-	<summary>
- Occurs when the state of the socket changes.
- </summary>
-</member><member name="M:WindowsApplication1.IWinsock.OnConnected(WindowsApplication1.WinsockConnectedEventArgs)">
-	<summary>
- Raises the Connected event.
- </summary>
-</member><member name="M:WindowsApplication1.IWinsock.OnConnectionRequest(WindowsApplication1.WinsockConnectionRequestEventArgs)">
-	<summary>
- Raises the ConnectionRequest event.
- </summary>
-</member><member name="M:WindowsApplication1.IWinsock.OnDataArrival(WindowsApplication1.WinsockDataArrivalEventArgs)">
-	<summary>
- Raises the DataArrival event.
- </summary>
-</member><member name="M:WindowsApplication1.IWinsock.OnDisconnected">
-	<summary>
- Raises the Disconnected event.
- </summary>
-</member><member name="M:WindowsApplication1.IWinsock.OnErrorReceived(WindowsApplication1.WinsockErrorReceivedEventArgs)">
-	<summary>
- Raises the ErrorReceived event.
- </summary>
-</member><member name="M:WindowsApplication1.IWinsock.OnReceiveProgress(WindowsApplication1.WinsockReceiveProgressEventArgs)">
-	<summary>
- Raises the ReceiveProgress event.
- </summary>
-</member><member name="M:WindowsApplication1.IWinsock.OnSendComplete(WindowsApplication1.WinsockSendEventArgs)">
-	<summary>
- Raises the SendComplete event.
- </summary>
-</member><member name="M:WindowsApplication1.IWinsock.OnSendProgress(WindowsApplication1.WinsockSendEventArgs)">
-	<summary>
- Raises the SendProgress event.
- </summary>
-</member><member name="P:WindowsApplication1.IWinsock.State">
-	<summary>
- Gets the state of the <see cref="T:WindowsApplication1.Winsock">Winsock</see> control.
- </summary>
-</member><member name="M:WindowsApplication1.IWinsock.ChangeState(WindowsApplication1.WinsockStates)">
-	<summary>
- Encapsulates the OnStateChanged methods so the AsyncSocket
- doesn't have to build the EventArgs parameter all the time.
- </summary>
-	<param name="new_state">The new state of the Winsock.</param>
-</member><member name="M:WindowsApplication1.IWinsock.ChangeLocalPort(System.Int32)">
-	<summary>
- When the port is set dynamically by using port 0, the socket can now update the property of the component.
- </summary>
-	<param name="new_port">The port we are now listening on.</param>
-</member><member name="F:WindowsApplication1.WinsockProtocol.Tcp">
-	<summary>
- Transmission Control Protocol - a connection oriented protocol.
- </summary>
-</member><member name="F:WindowsApplication1.WinsockProtocol.Udp">
-	<summary>
- User Datagram Protocol - a connection-less protocol.
- </summary>
-</member><member name="T:WindowsApplication1.WinsockProtocol">
-	<summary>
- Enumeration containing the various supported network protocols.
- </summary>
-</member><member name="F:WindowsApplication1.WinsockStates.Closed">
-	<summary>
- The Winsock is closed.
- </summary>
-</member><member name="F:WindowsApplication1.WinsockStates.Listening">
-	<summary>
- The Winsock is listening (TCP for connections, UDP for data).
- </summary>
-</member><member name="F:WindowsApplication1.WinsockStates.ResolvingHost">
-	<summary>
- The Winsock is attempting the resolve the remote host.
- </summary>
-</member><member name="F:WindowsApplication1.WinsockStates.HostResolved">
-	<summary>
- The remote host has been resolved to IP address.
- </summary>
-</member><member name="F:WindowsApplication1.WinsockStates.Connecting">
-	<summary>
- The Winsock is attempting to connect to the remote host.
- </summary>
-</member><member name="F:WindowsApplication1.WinsockStates.Connected">
-	<summary>
- The Winsock is connected to a remote source (client or server).
- </summary>
-</member><member name="F:WindowsApplication1.WinsockStates.Closing">
-	<summary>
- The Winsock is attempting to close the connection.
- </summary>
-</member><member name="T:WindowsApplication1.WinsockStates">
-	<summary>
- Enumeration containing the various Winsock states.
  </summary>
 </member>
 </members>
