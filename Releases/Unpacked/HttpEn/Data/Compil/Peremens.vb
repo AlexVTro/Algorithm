@@ -3,6 +3,7 @@
 Imports System.Diagnostics
 
 Public Module peremens
+    Public Version As String = "2.7.1"
     Public isDevelop As Boolean = True ' ОБОЗНАЧАЕТ ЧТО ИДЕТ РАЗРАБОТКА ПРОЕКТА А НЕ ВЫПОЛНЕНИЕ ГОТОВОЙ ПРОГРАММЫ
     Public isHelp As Boolean  ' ОБОЗНАЧАЕТ ЧТО ИДЕТ РАЗРАБОТКА ПРОЕКТА А НЕ ВЫПОЛНЕНИЕ ГОТОВОЙ ПРОГРАММЫ
     Public isCompilBest As Boolean  ' ОБОЗНАЧАЕТ ЧТО ИДЕТ СУПЕР-КОМПИЛЯЦИЯ ПРОЕКТА
@@ -59,7 +60,6 @@ Public Module peremens
 #End If
 
     Public referral As String
-    Public Version As String = "2.7"
     Public AppNameWithVersion As String = AppName & " " & Version
 
     Public AppPath As String = AppDomain.CurrentDomain.BaseDirectory() ' Папка с программой

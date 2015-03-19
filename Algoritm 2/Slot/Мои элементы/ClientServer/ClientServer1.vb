@@ -2,8 +2,8 @@
     Implements IWinSockEvents
 
 #Region " Events "
-    Friend WithEvents wskListen As New Winsock With {.LegacySupport = True}
-    Friend WithEvents wskClient As New Winsock With {.LegacySupport = True}
+    Friend WithEvents wskListen As New Winsock
+    Friend WithEvents wskClient As New Winsock
     Friend WithEvents wskClients As New WinsockCollection 
     Friend WithEvents dlgSave As New System.Windows.Forms.SaveFileDialog
     Friend WithEvents dlgOpen As New System.Windows.Forms.OpenFileDialog
@@ -495,7 +495,12 @@
         End If
     End Sub
 
+    Private Sub SetDefaults()
+        wskListen.LegacySupport = True
+        wskClient.LegacySupport = True
+    End Sub
     Public Sub ConnectToServer()
+        SetDefaults()
         RemoteHost = RemoteHost
         RemotePort = RemotePort
         Log(trans("Соединяемся") & " (" & wskClient.RemoteHost & ")...")
@@ -503,10 +508,12 @@
         cmdClose.Text = trans("Отключиться")
     End Sub
     Public Sub CreateServer()
+        SetDefaults()
         wskListen.Listen()
         cmdClose.Text = trans("Стоп поиск")
     End Sub
     Public Sub BeginListen()
+        SetDefaults()
         wskListen.Listen()
         cmdClose.Text = trans("Стоп поиск")
     End Sub

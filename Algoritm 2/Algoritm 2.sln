@@ -1,6 +1,8 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "Algoritm 2", "Slot\Algoritm 2.vbproj", "{7CF52108-59A9-4C8D-94F8-6978E80833E7}"
 EndProject
 Global
@@ -9,8 +11,8 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7CF52108-59A9-4C8D-94F8-6978E80833E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7CF52108-59A9-4C8D-94F8-6978E80833E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CF52108-59A9-4C8D-94F8-6978E80833E7}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{7CF52108-59A9-4C8D-94F8-6978E80833E7}.Debug|Any CPU.Build.0 = Release|Any CPU
 		{7CF52108-59A9-4C8D-94F8-6978E80833E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7CF52108-59A9-4C8D-94F8-6978E80833E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection

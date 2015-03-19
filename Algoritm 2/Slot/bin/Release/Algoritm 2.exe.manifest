@@ -43,14 +43,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Algoritm 2.exe" size="1589248">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Algoritm 2.exe" size="1590272">
       <assemblyIdentity name="Algoritm 2" version="2.5.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>tl7NC5NgOG42p+KqDH3E7wMlWtQ=</dsig:DigestValue>
+        <dsig:DigestValue>h4MVWwZmgNYjL/8J/9K+NO7Dn5I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

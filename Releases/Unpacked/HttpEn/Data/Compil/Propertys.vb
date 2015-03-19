@@ -2204,6 +2204,9 @@ Public Class PropertysOther
             Exit Sub
         End If
 
+        ' Добавить длл-ки с помощью моего ключего слова include
+        args(0) = AddReferences(objCompilerParameters, args(0))
+
         Dim objAssembly As System.Reflection.Assembly = objCompileResults.CompiledAssembly
         ' создаем сборку
         ' выполнение программы начнется с класса MainClass
@@ -2234,6 +2237,9 @@ Public Class PropertysOther
         objCompilerParameters.GenerateInMemory = True
         ' а также укажем что это все надо генерировать в памяти
 
+        ' Добавить длл-ки с помощью моего ключего слова include
+        args(0) = AddReferences(objCompilerParameters, args(0))
+
         Dim objCompileResults As System.CodeDom.Compiler.CompilerResults = _
         objCodeCompiler.CompileAssemblyFromSource(objCompilerParameters, args(0))
         ' попытаемся скомпилировать все это дело
@@ -2258,11 +2264,26 @@ Public Class PropertysOther
         Try
             objTheClass.GetType.InvokeMember("Main", System.Reflection.BindingFlags.InvokeMethod, Nothing, objTheClass, Nothing)
         Catch ex As Exception
-            If IgnorEr = False Then MsgBox("Error:" & ex.Message)
+            If IgnorEr = False Then MsgBox("Error:" & ex.Message & IIf(ex.InnerException Is Nothing, "", ex.InnerException.Message))
         End Try
     End Sub
 
+    Function AddReferences(objCompilerParameters As System.CodeDom.Compiler.CompilerParameters, code As String) As String
+        Dim includes As String() = code.Trim().Split(Environment.NewLine)
+        Dim i As Integer
+        For i = 0 To includes.Length - 1
+            includes(i) = includes(i).Trim()
+            If includes(i).StartsWith("include ") Then
+                Dim assembly As String = includes(i).Substring("include ".Length)
+                objCompilerParameters.ReferencedAssemblies.Add(assembly)
+                code = code.Remove(0, code.IndexOf(Environment.NewLine, StringComparison.Ordinal) + Environment.NewLine.Length)
+            Else
+                Exit For
+            End If
+        Next
 
+        Return code
+    End Function
 End Class
 
 Public Class Propertys

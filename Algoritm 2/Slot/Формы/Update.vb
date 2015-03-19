@@ -55,6 +55,11 @@ Public Class Update
             Exit Sub
         End If
 
+        ' Для исключения ошибок редиректа, надо явно указать язык
+        If UrlTextBox.Text.Contains("index.php/ru") = False And UrlTextBox.Text.Contains("index.php/en") = False Then
+            UrlTextBox.Text = UrlTextBox.Text.Replace("index.php/", "index.php/ru/")
+        End If
+
         PayLink = UrlTextBox.Text : MnFrm.SaveParametrs()
         UpdateProgramm(UrlTextBox.Text, False)
     End Sub
